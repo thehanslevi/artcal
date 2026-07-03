@@ -291,11 +291,11 @@
           "where": "Pioneer Works, Red Hook",
           "cost": "$24",
           "category": "sound",
-          "flag": "urgent",
+          "flag": null,
           "mode": "watch",
           "start": "19:30",
           "end": null,
-          "note": "Going fast. Lynch sound collaborator. Live to picture.",
+          "note": "Tickets bought. Lynch sound collaborator. Live to picture.",
           "url": "https://pioneerworks.org/programs/false-harmonics-27-dean-hurley-c-lavender"
         },
         {
@@ -325,20 +325,6 @@
           "end": null,
           "note": "Hip hop history.",
           "url": "https://summerstage.org"
-        },
-        {
-          "day": "Fri",
-          "date": "Jul 31",
-          "event": "Dan Deacon + Macula Dog + MSHR",
-          "where": "Pioneer Works, Red Hook",
-          "cost": "$36–47",
-          "category": "tech",
-          "flag": "urgent",
-          "mode": "watch",
-          "start": "20:00",
-          "end": null,
-          "note": "Going fast. Go for MSHR — handmade synthesis + video feedback, live.",
-          "url": "https://pioneerworks.org/programs/dan-deacon"
         },
         {
           "day": "Sat",
