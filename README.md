@@ -19,7 +19,7 @@ I wanted a personalized instrument for moving through the artworld and my own ar
 
 ## What it is
 
-- A weekly calendar of ~170 dated events across ~45 NYC venues — theater, dance, film, music, workshops, readings, community.
+- A weekly calendar of dated events across venues — theater, dance, film, music, workshops, readings, and more.
 - Two modes: **Practice** (classes and workshops, `mode: make`) and **Attend** (shows and screenings, `mode: witness`).
 - A picks / shortlist system with passphrase-based cross-device sync — star on my phone, see it on my laptop.
 - A self-updating ICS feed so the whole thing lives in Google Calendar alongside everything else.
