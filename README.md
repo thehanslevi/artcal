@@ -15,11 +15,11 @@ Subscribe from Google Calendar or Apple Calendar:
 
 ## Why I built it
 
-I wanted to leave a summer of analyzing / consuming / reacting to art and enter a summer of doing and making it. That meant more classes, more open studios, more participatory work — and the discipline to see fewer concerts so the balance actually shifted.
+The tools that catalog NYC's arts programming — Time Out, Broadway World, DoNYC, Stage Spotlight — are listing sites. Impressive in scope, impossible to hold. None of them let me carry my own map of the city: my anchors, my picks, the venues I keep returning to, the horizon I'm planning toward.
 
-Every existing tool for NYC arts programming is a listing site. Time Out has everything. Broadway World, DoNYC, StageSpotlightNYC. None of them let me hold my own map: my anchors, my picks, the venues I keep returning to, the fall horizon I'm planning toward. None of them let me *see* how much of a given week is watching vs. making.
+I wanted the widest possible awareness of what's happening here, held in a shape I can actually see through. I wanted to walk into a week already knowing which nights feed the work and which feed the practice.
 
-So this is that map. It's specific to me. The shape of it — mode-first, venue-first, picks-first — could work for anyone else running a single-user creative practice plan, but the data would need to be rewritten.
+So this is a personal instrument — built to widen what's possible for one working practice, and to stay legible enough that I can use it every day.
 
 ## What it is
 
@@ -62,12 +62,9 @@ Each shows in a distinct color so I can scan a week in a second.
 
 ## How it's specific to me
 
-- **Crown Heights-anchored.** Notes flag which venues are walkable or bikeable from my neighborhood; anything past 30 minutes gets an honest travel note.
-- **Dance is narrow and personal.** Only breaking, voguing, afro, house, waacking, k-pop, heels. No contemporary, no modern, no partner dance (I already know bachata / salsa / tango).
-- **Attend tilts avant-garde, downtown, experimental.** The theater ecosystem I care about is The Brick, The Tank, HERE, Target Margin, JACK, Wendy's Subway, Bushwick Starr, and the constellation around them.
-- **The fall / winter horizon points at Prototype, Under the Radar, Exponential, PhysFest** — the January festival cluster is treated as a roadmap, not just a note.
+The engine is generic; the map is not. What's on the calendar is drawn to my own practice — not to a market. The point of a personal instrument is to fit one hand.
 
-Fork it and the engine will still work; the map won't. Rewrite the JSON.
+Fork the code, rewrite the JSON.
 
 ## How it's built
 
