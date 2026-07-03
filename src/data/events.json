@@ -63,20 +63,6 @@
         {
           "day": "Fri",
           "date": "Jul 10",
-          "event": "K-Pulse: Random Play Dance",
-          "where": "Manhattan (venue rotates — check kpulse.nyc IG)",
-          "cost": "FREE",
-          "category": "dance",
-          "flag": "priority",
-          "mode": "make",
-          "start": "18:00",
-          "end": null,
-          "note": "Free K-pop dance meet-up. Registration required at kpulsenyc.com. Only truly participatory dance event this month.",
-          "url": "https://kpulsenyc.com/"
-        },
-        {
-          "day": "Fri",
-          "date": "Jul 10",
           "event": "No Fun Night 2: Raven Chacon, Lee Ranaldo, KFW + more",
           "where": "Roulette, 509 Atlantic Ave, Brooklyn",
           "cost": "$25",
@@ -489,20 +475,6 @@
           "end": null,
           "note": null,
           "url": "https://summerstage.org"
-        },
-        {
-          "day": "Tue",
-          "date": "Aug 18",
-          "event": "Bushwick Starr Summer Arts Festival — curated by Oye Group",
-          "where": "The Bushwick Starr, Eldert Street",
-          "cost": "FREE",
-          "category": "stage",
-          "flag": "priority",
-          "mode": "watch",
-          "start": null,
-          "end": null,
-          "note": "Modesto Flako Jimenez's Oye Group collective — theater, dance, poetry, film on immigration, gentrification. Some pieces are participatory.",
-          "url": "https://www.thebushwickstarr.org/"
         }
       ]
     },
