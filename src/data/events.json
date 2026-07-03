@@ -5,6 +5,76 @@
       "label": "Jul 6–12",
       "events": [
         {
+          "day": "Mon",
+          "date": "Jul 6",
+          "event": "Dixon Place: HOT Festival Opening Night Party (34th annual)",
+          "where": "Dixon Place, 161A Chrystie St, LES",
+          "cost": "TBD",
+          "category": "stage",
+          "flag": "priority",
+          "mode": "watch",
+          "start": "19:30",
+          "end": null,
+          "note": "Kickoff for the 34th annual HOT Festival + 40 years of Dixon Place.",
+          "url": "https://dixonplace.org/"
+        },
+        {
+          "day": "Mon",
+          "date": "Jul 6",
+          "event": "HERE Arts: Bryan Safi — Are You Mad At Me??",
+          "where": "HERE Arts Center, 145 6th Ave, Manhattan",
+          "cost": "TBD",
+          "category": "stage",
+          "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
+          "note": "Solo comedy, hit run from Edinburgh Fringe. Long run through Aug 16.",
+          "url": "https://here.org/shows/"
+        },
+        {
+          "day": "Tue",
+          "date": "Jul 7",
+          "event": "Dixon Place: FOOGA!",
+          "where": "Dixon Place, 161A Chrystie St, LES",
+          "cost": "TBD",
+          "category": "stage",
+          "flag": null,
+          "mode": "watch",
+          "start": "19:30",
+          "end": null,
+          "note": "\"Like if the Lorax did the Vagina Monologues.\" HOT Festival.",
+          "url": "https://dixonplace.org/"
+        },
+        {
+          "day": "Tue",
+          "date": "Jul 7",
+          "event": "Dixon Place: Mixed Fruit — Queer Variety 2026",
+          "where": "Dixon Place, 161A Chrystie St, LES",
+          "cost": "TBD",
+          "category": "stage",
+          "flag": null,
+          "mode": "watch",
+          "start": "19:30",
+          "end": null,
+          "note": "HOT Festival. Mixed bag of performance, personality, pleasure.",
+          "url": "https://dixonplace.org/"
+        },
+        {
+          "day": "Sun",
+          "date": "Jul 5",
+          "event": "Danspace Project: Dorrance Dance — SOUNDspace",
+          "where": "Danspace, St. Mark's Church, 131 E 10th St",
+          "cost": "$35",
+          "category": "dance",
+          "flag": "priority",
+          "mode": "watch",
+          "start": "20:00",
+          "end": null,
+          "note": "Runs Jul 5–11 (Jul 2–4 were cancelled due to heat).",
+          "url": "https://danspaceproject.org/calendar/"
+        },
+        {
           "day": "Wed",
           "date": "Jul 8",
           "event": "Interference Archive: Collections Management Working Group",
@@ -91,6 +161,34 @@
         {
           "day": "Thu",
           "date": "Jul 9",
+          "event": "Brooklyn Art Haus: FOLKUS (singer/songwriter night)",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "sound",
+          "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
+          "note": "Recurring Thursday. Also Jul 16.",
+          "url": "https://www.bkarthaus.com/shows-events"
+        },
+        {
+          "day": "Thu",
+          "date": "Jul 9",
+          "event": "Brooklyn Art Haus: Cirkus Moxie Lab (variety/circus)",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "stage",
+          "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
+          "note": "Runs Jul 9–12. Variety/circus performance.",
+          "url": "https://www.bkarthaus.com/shows-events"
+        },
+        {
+          "day": "Thu",
+          "date": "Jul 9",
           "event": "The Brick: GOODBYE HORSES — an unauthorized retelling of Silence of the Lambs",
           "where": "The Brick, 579 Metropolitan Ave, Williamsburg",
           "cost": "$35–45",
@@ -157,6 +255,34 @@
           "end": null,
           "note": "Matinee. Runs Jul 11–12.",
           "url": "https://thetanknyc.org/tankcalendar"
+        },
+        {
+          "day": "Fri",
+          "date": "Jul 10",
+          "event": "Brooklyn Art Haus: January 6th the Musical",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "stage",
+          "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
+          "note": "Runs Jul 10–11.",
+          "url": "https://www.bkarthaus.com/shows-events"
+        },
+        {
+          "day": "Sat",
+          "date": "Jul 11",
+          "event": "Brooklyn Art Haus: Hot Takes & Nerdy Topics (comedy)",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "stage",
+          "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
+          "note": "Stand-up comedy.",
+          "url": "https://www.bkarthaus.com/shows-events"
         },
         {
           "day": "Sat",
@@ -260,6 +386,48 @@
           "end": null,
           "note": "Drama involving a curse and relationship conflict. Runs Jul 13–14.",
           "url": "https://thetanknyc.org/tankcalendar"
+        },
+        {
+          "day": "Tue",
+          "date": "Jul 14",
+          "event": "Brooklyn Art Haus: Star Vehicle (EdFest)",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "stage",
+          "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
+          "note": "EdFest — Edinburgh Fringe preview series.",
+          "url": "https://www.bkarthaus.com/shows-events"
+        },
+        {
+          "day": "Tue",
+          "date": "Jul 14",
+          "event": "Brooklyn Art Haus: Judy Garland is Fat at Carnegie Hall (EdFest)",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "stage",
+          "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
+          "note": "EdFest — Edinburgh Fringe preview series.",
+          "url": "https://www.bkarthaus.com/shows-events"
+        },
+        {
+          "day": "Wed",
+          "date": "Jul 15",
+          "event": "Brooklyn Art Haus: Emoji — The Hieroglyphs of Our Time (EdFest)",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "stage",
+          "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
+          "note": "EdFest.",
+          "url": "https://www.bkarthaus.com/shows-events"
         },
         {
           "day": "Tue",
@@ -372,6 +540,34 @@
           "end": "23:00",
           "note": "Immersive spiritual service focused on the ocean's healing properties.",
           "url": "https://thetanknyc.org/tankcalendar"
+        },
+        {
+          "day": "Thu",
+          "date": "Jul 16",
+          "event": "Brooklyn Art Haus: FOLKUS (singer/songwriter night)",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "sound",
+          "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://www.bkarthaus.com/shows-events"
+        },
+        {
+          "day": "Fri",
+          "date": "Jul 17",
+          "event": "Abrons Arts Center: Summer in the Plaza opens",
+          "where": "Abrons Arts Center, 466 Grand St, LES",
+          "cost": "FREE",
+          "category": "circle",
+          "flag": null,
+          "mode": "watch",
+          "start": "18:00",
+          "end": "20:00",
+          "note": "Free outdoor plaza programming, 6–8pm. Runs Jul 17 – Aug 15.",
+          "url": "https://www.abronsartscenter.org/performing-arts"
         },
         {
           "day": "Thu",
@@ -897,6 +1093,20 @@
       "label": "Aug 10–23",
       "events": [
         {
+          "day": "Sat",
+          "date": "Aug 15",
+          "event": "Abrons Arts: Summer in the Plaza closes",
+          "where": "Abrons Arts Center, 466 Grand St, LES",
+          "cost": "FREE",
+          "category": "circle",
+          "flag": null,
+          "mode": "watch",
+          "start": "18:00",
+          "end": "20:00",
+          "note": "Final day of the free outdoor plaza series.",
+          "url": "https://www.abronsartscenter.org/performing-arts"
+        },
+        {
           "day": "Sun",
           "date": "Aug 16",
           "event": "Taiwanese Waves 10th: 9m88 + ØZI + YELLOW / Mong Tong + more",
@@ -915,6 +1125,20 @@
     {
       "label": "Aug 24–30",
       "events": [
+        {
+          "day": "Sat",
+          "date": "Aug 22",
+          "event": "Abrons Arts: The Rock It, Don't Stop It Double Dutch Showcase",
+          "where": "Abrons Arts Center, 466 Grand St, LES",
+          "cost": "TBD",
+          "category": "dance",
+          "flag": "priority",
+          "mode": "watch",
+          "start": "13:00",
+          "end": "17:00",
+          "note": "Double dutch culture, community-rooted.",
+          "url": "https://www.abronsartscenter.org/performing-arts"
+        },
         {
           "day": "Fri",
           "date": "Aug 28",
@@ -1005,6 +1229,34 @@
           "url": "http://mononoawarefilm.com/community-workshops"
         },
         {
+          "day": "Thu",
+          "date": "Sep 10",
+          "event": "New York Live Arts: Bill T. Jones — Curriculum IV: Spin and Spin! Turn! Turn! Turn!",
+          "where": "New York Live Arts, 219 W 19th St, Chelsea",
+          "cost": "TBD",
+          "category": "dance",
+          "flag": "priority",
+          "mode": "watch",
+          "start": "19:30",
+          "end": null,
+          "note": "Music by Samora Pinderhughes. Runs Sep 10 + 12–13.",
+          "url": "https://newyorklivearts.org/calendar/"
+        },
+        {
+          "day": "Fri",
+          "date": "Sep 11",
+          "event": "Abrons Arts: Everyday Royalty exhibition opens (Henry Street Settlement)",
+          "where": "Abrons Arts Center, 466 Grand St, LES",
+          "cost": "FREE",
+          "category": "make",
+          "flag": null,
+          "mode": "watch",
+          "start": "16:00",
+          "end": null,
+          "note": "Opening reception 4pm. Runs Sep 11 – Oct 18.",
+          "url": "https://www.abronsartscenter.org/performing-arts"
+        },
+        {
           "day": "Sat",
           "date": "Sep 12",
           "event": "Mono No Aware: Test It Yourself — Super 8MM Camera Testing",
@@ -1050,6 +1302,34 @@
           "end": "21:30",
           "note": null,
           "url": "http://mononoawarefilm.com/community-workshops"
+        },
+        {
+          "day": "Wed",
+          "date": "Sep 16",
+          "event": "New York Live Arts: Hank Willis Thomas — Opening Reception",
+          "where": "New York Live Arts, 219 W 19th St, Chelsea",
+          "cost": "FREE",
+          "category": "make",
+          "flag": null,
+          "mode": "watch",
+          "start": "17:30",
+          "end": null,
+          "note": "Visual artist installation opens at NYLA.",
+          "url": "https://newyorklivearts.org/calendar/"
+        },
+        {
+          "day": "Thu",
+          "date": "Sep 17",
+          "event": "HERE Arts: Arias with a Twist opens (Joey Arias + Basil Twist)",
+          "where": "HERE Arts Center, 145 6th Ave, Manhattan",
+          "cost": "TBD",
+          "category": "stage",
+          "flag": "priority",
+          "mode": "watch",
+          "start": null,
+          "end": null,
+          "note": "Legendary musical extravaganza returns. Runs Sep 17 – Nov 1.",
+          "url": "https://here.org/shows/"
         },
         {
           "day": "Thu",
@@ -1232,6 +1512,133 @@
           "end": "21:30",
           "note": null,
           "url": "http://mononoawarefilm.com/community-workshops"
+        }
+      ]
+    },
+    {
+      "label": "Oct 1–15",
+      "events": [
+        {
+          "day": "Fri",
+          "date": "Oct 2",
+          "event": "New York Live Arts: Bill Chats — Bill T. Jones, Joanna Kotze & guests",
+          "where": "New York Live Arts, 219 W 19th St, Chelsea",
+          "cost": "TBD",
+          "category": "dance",
+          "flag": null,
+          "mode": "watch",
+          "start": "19:00",
+          "end": null,
+          "note": null,
+          "url": "https://newyorklivearts.org/calendar/"
+        },
+        {
+          "day": "Fri",
+          "date": "Oct 2",
+          "event": "Abrons Arts: Broadway Does Punk",
+          "where": "Abrons Arts Center, 466 Grand St, LES",
+          "cost": "TBD",
+          "category": "stage",
+          "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
+          "note": "Runs Oct 2–3.",
+          "url": "https://www.abronsartscenter.org/performing-arts"
+        },
+        {
+          "day": "Thu",
+          "date": "Oct 8",
+          "event": "New York Live Arts: Allegra — Benjamin Akio Kimitch",
+          "where": "New York Live Arts, 219 W 19th St, Chelsea",
+          "cost": "TBD",
+          "category": "dance",
+          "flag": null,
+          "mode": "watch",
+          "start": "19:30",
+          "end": null,
+          "note": "Runs Oct 8–10.",
+          "url": "https://newyorklivearts.org/calendar/"
+        }
+      ]
+    },
+    {
+      "label": "Oct 16–31",
+      "events": [
+        {
+          "day": "Sat",
+          "date": "Oct 17",
+          "event": "Abrons Arts: Fall Festival",
+          "where": "Abrons Arts Center, 466 Grand St, LES",
+          "cost": "FREE",
+          "category": "circle",
+          "flag": null,
+          "mode": "watch",
+          "start": "12:00",
+          "end": "16:00",
+          "note": "Free community fall festival.",
+          "url": "https://www.abronsartscenter.org/performing-arts"
+        },
+        {
+          "day": "Fri",
+          "date": "Oct 23",
+          "event": "New York Live Arts: Toi, moi, Tituba — Dorothée Munyaneza / Kadidi Company",
+          "where": "New York Live Arts, 219 W 19th St, Chelsea",
+          "cost": "TBD",
+          "category": "dance",
+          "flag": "priority",
+          "mode": "watch",
+          "start": "19:30",
+          "end": null,
+          "note": "Runs Oct 23–24. International commission.",
+          "url": "https://newyorklivearts.org/calendar/"
+        }
+      ]
+    },
+    {
+      "label": "Nov 1–15",
+      "events": [
+        {
+          "day": "Thu",
+          "date": "Nov 5",
+          "event": "Abrons Arts: Natalia Lassalle-Morillo — En Parábola / Conversations on Tragedy opens",
+          "where": "Abrons Arts Center, 466 Grand St, LES",
+          "cost": "TBD",
+          "category": "stage",
+          "flag": "priority",
+          "mode": "watch",
+          "start": null,
+          "end": null,
+          "note": "Long run Nov 5 – Dec 20.",
+          "url": "https://www.abronsartscenter.org/performing-arts"
+        },
+        {
+          "day": "Fri",
+          "date": "Nov 6",
+          "event": "New York Live Arts: this is the beginning, this is the end — Joanna Kotze",
+          "where": "New York Live Arts, 219 W 19th St, Chelsea",
+          "cost": "TBD",
+          "category": "dance",
+          "flag": null,
+          "mode": "watch",
+          "start": "19:30",
+          "end": null,
+          "note": "Runs Nov 6–7, 11–14.",
+          "url": "https://newyorklivearts.org/calendar/"
+        },
+        {
+          "day": "Thu",
+          "date": "Nov 12",
+          "event": "Abrons Arts: Cherrie Yu — Daily Diversions (World Premiere)",
+          "where": "Abrons Arts Center, 466 Grand St, LES",
+          "cost": "TBD",
+          "category": "dance",
+          "flag": "priority",
+          "mode": "watch",
+          "start": "19:30",
+          "end": null,
+          "note": "Runs Nov 12–14. World premiere.",
+          "url": "https://www.abronsartscenter.org/performing-arts"
         }
       ]
     }

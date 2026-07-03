@@ -96,6 +96,142 @@
     "url": "https://thetanknyc.org/calendar"
   },
   {
+    "name": "HERE Arts Center",
+    "category": "stage",
+    "mode": "watch",
+    "description": "Independent multi-disciplinary venue · 145 6th Ave, Manhattan",
+    "note": "Long runs by solo performers, hybrid + puppet + music-theater. 2026/27 season 'Choose Wonder' starts September.",
+    "url": "https://here.org/shows/"
+  },
+  {
+    "name": "La MaMa Experimental Theatre Club",
+    "category": "stage",
+    "mode": "both",
+    "description": "Downtown avant-garde institution · 66 E 4th St, East Village",
+    "note": "Ellen Stewart Theatre + Community Arts Space + Great Jones Studios. Cheap tickets, radical work. Calendar on OvationTix.",
+    "url": "https://www.lamama.org/whats-on"
+  },
+  {
+    "name": "Joe's Pub",
+    "category": "sound",
+    "mode": "watch",
+    "description": "Cabaret + song at The Public Theater · 425 Lafayette, Manhattan",
+    "note": "Nightly cabaret, spoken word, experimental music. Ticket prices vary; some cheap seats.",
+    "url": "https://publictheater.org/joes-pub"
+  },
+  {
+    "name": "St. Ann's Warehouse",
+    "category": "stage",
+    "mode": "watch",
+    "description": "Curated international avant-garde · DUMBO",
+    "note": "Big-budget experimental work. Season lineups posted at stannswarehouse.org.",
+    "url": "https://stannswarehouse.org/"
+  },
+  {
+    "name": "National Sawdust",
+    "category": "sound",
+    "mode": "watch",
+    "description": "New-music venue · 80 N 6th St, Williamsburg",
+    "note": "Contemporary classical, opera, experimental music. Ticket prices vary.",
+    "url": "https://nationalsawdust.org/calendar"
+  },
+  {
+    "name": "Brooklyn Art Haus",
+    "category": "stage",
+    "mode": "both",
+    "description": "Multi-genre performance + incubator · 25 Marcy Ave, Williamsburg",
+    "note": "Comedy, singer-songwriter (FOLKUS), circus, EdFest previews, drag. Cheap tickets, dense weekly programming.",
+    "url": "https://www.bkarthaus.com/shows-events"
+  },
+  {
+    "name": "LIFE WORLD",
+    "category": "stage",
+    "mode": "watch",
+    "description": "Experimental performance + community space · 563 Johnson Ave, Bushwick",
+    "note": "Multimedia art, indie animation screenings, queer independent theater, cabaret, community dinners. $20-ish or donation.",
+    "url": "https://cometolifeworld.com/"
+  },
+  {
+    "name": "Loading Dock Theatre",
+    "category": "stage",
+    "mode": "watch",
+    "description": "Playwright-run company · 170 Tillary St, Downtown Brooklyn",
+    "note": "Emotional, character-driven plays with experimental edge. Current: The Trojans. Small runs. Exponential Fest 2027 venue.",
+    "url": "https://www.loadingdocktheatre.org/shows/"
+  },
+  {
+    "name": "Mercury Store",
+    "category": "stage",
+    "mode": "make",
+    "description": "Theatre R&D lab · Gowanus",
+    "note": "Project Weeks for directors, choreographers, devisers. Public showings occasionally. Big Exponential Fest 2027 venue.",
+    "url": "https://www.mercurystore.com/programs"
+  },
+  {
+    "name": "The Kitchen",
+    "category": "stage",
+    "mode": "watch",
+    "description": "Cross-disciplinary experimental arts · Chelsea (currently touring venues during renovation)",
+    "note": "Video, performance, music, dance intersections. Check thekitchen.org for current programming venues.",
+    "url": "https://thekitchen.org/"
+  },
+  {
+    "name": "New York Live Arts",
+    "category": "dance",
+    "mode": "watch",
+    "description": "Bill T. Jones' home + presenting venue · 219 W 19th St, Chelsea",
+    "note": "Experimental dance + performance. Fall 2026 season Sept–Nov. Ticket prices vary.",
+    "url": "https://newyorklivearts.org/calendar/"
+  },
+  {
+    "name": "Chocolate Factory Theater",
+    "category": "stage",
+    "mode": "watch",
+    "description": "Experimental performance · Long Island City",
+    "note": "Deep-form experimental work. Small runs. Upcoming: Moriah Evans, Jasmine Hearn.",
+    "url": "https://chocolatefactorytheater.org/"
+  },
+  {
+    "name": "Dixon Place",
+    "category": "stage",
+    "mode": "watch",
+    "description": "Experimental + LGBTQ+ performance · 161A Chrystie St, LES",
+    "note": "34th annual HOT Festival every July. Cabaret, queer variety, works-in-progress.",
+    "url": "https://dixonplace.org/"
+  },
+  {
+    "name": "Danspace Project",
+    "category": "dance",
+    "mode": "watch",
+    "description": "Experimental dance in a church · St. Mark's, 131 E 10th St",
+    "note": "Curated experimental dance. Sanctuary space. Prices typically $20–35.",
+    "url": "https://danspaceproject.org/calendar/"
+  },
+  {
+    "name": "Abrons Arts Center",
+    "category": "stage",
+    "mode": "both",
+    "description": "Henry Street Settlement's arts wing · 466 Grand St, LES",
+    "note": "Performance + exhibitions + community. Free Summer in the Plaza (Jul–Aug), Fall Festival (Oct), programming through Dec.",
+    "url": "https://www.abronsartscenter.org/performing-arts"
+  },
+  {
+    "name": "Culture Lab LIC",
+    "category": "stage",
+    "mode": "watch",
+    "description": "Multi-arts community space · Long Island City",
+    "note": "Music, theater, dance, visual art. NYMS synth events hosted here. Check calendar.",
+    "url": "https://culturelablic.org/events/"
+  },
+  {
+    "name": "Ars Nova",
+    "category": "stage",
+    "mode": "watch",
+    "description": "New-work theater + music · 511 W 54th St, Hell's Kitchen",
+    "note": "ANT Fest (August), Showgasm, new plays + musicals. Cheap tickets.",
+    "url": "https://arsnovanyc.com/whats-on/"
+  },
+  {
     "name": "Clubbed Thumb",
     "category": "stage",
     "mode": "watch",
