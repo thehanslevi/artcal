@@ -15,7 +15,7 @@ Subscribe from Google Calendar or Apple Calendar:
 
 ## Why I built it
 
-I wanted the widest possible awareness of what's happening in this city, in a form I can use every day. So this is a personal instrument for how I move through art in New York.
+I wanted a personalized instrument for moving through the artworld and my own art practice in New York.
 
 ## What it is
 
