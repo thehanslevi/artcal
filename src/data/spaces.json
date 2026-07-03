@@ -454,5 +454,69 @@
     "description": "New American plays · 416 W 42nd St, Theater Row",
     "note": "2026/27 season: Degenerates, ripple/wave, HOLE!, Wold Meteor, Annunciation, Feast of Rabbits. Dates TBA.",
     "url": "https://www.playwrightshorizons.org/shows/"
+  },
+  {
+    "name": "ISSUE Project Room",
+    "category": "sound",
+    "mode": "watch",
+    "description": "Experimental music + performance · 22 Boerum Pl, Downtown Brooklyn · ~15 min",
+    "note": "Deep-listen experimental music. Suzanne Fiol Curatorial Fellowship, Artist-in-Residence program. Small hall, curated.",
+    "url": "https://issueprojectroom.org/calendar"
+  },
+  {
+    "name": "Nitehawk Cinema",
+    "category": "film",
+    "mode": "watch",
+    "description": "Dinner + drinks cinema · Prospect Park + Williamsburg locations",
+    "note": "First-run + special series (Nitecap, brunch, midnight). Both branches accessible.",
+    "url": "https://nitehawkcinema.com/"
+  },
+  {
+    "name": "Socrates Sculpture Park",
+    "category": "make",
+    "mode": "both",
+    "description": "Free outdoor sculpture park + programming · Astoria waterfront",
+    "note": "Free daily 9am–sunset. Free yoga (through Sep 27), sunset meditation (through Aug 27), outdoor performances, kayaking. Homecoming: Chakaia Booker on view through Apr 2027.",
+    "url": "https://socratessculpturepark.org/"
+  },
+  {
+    "name": "MoMA + MoMA PS1",
+    "category": "make",
+    "mode": "watch",
+    "description": "Modern art institution · Midtown + Long Island City",
+    "note": "Performance, film series, and public programs alongside exhibits. MoMA PS1 Warm Up series (summer Saturdays, LIC). Check moma.org/calendar for dates.",
+    "url": "https://www.moma.org/calendar/"
+  },
+  {
+    "name": "Whitney Museum",
+    "category": "make",
+    "mode": "watch",
+    "description": "American art museum · 99 Gansevoort, Meatpacking",
+    "note": "Free Friday Nights (5–10pm) — free admission + programming. Currently: Whitney Biennial 2026. Regular performance + film in the theater.",
+    "url": "https://whitney.org/events"
+  },
+  {
+    "name": "New Museum",
+    "category": "make",
+    "mode": "watch",
+    "description": "Contemporary art · 235 Bowery, LES",
+    "note": "Performance series + New INC incubator. Reopening after renovation; check calendar for programming.",
+    "url": "https://www.newmuseum.org/calendar"
+  },
+  {
+    "name": "Performa Biennial",
+    "category": "stage",
+    "mode": "watch",
+    "description": "Live-art biennial across NYC · citywide",
+    "note": "Every two years, Nov 2025 was the last. Next biennial Nov 2027. Site publishes performances closer to event.",
+    "url": "https://www.performa-arts.org/calendar"
+  },
+  {
+    "name": "Caveat NYC",
+    "category": "word",
+    "mode": "watch",
+    "description": "Comedy + intellectual + variety · LES basement",
+    "note": "Nerdy comedy, science, storytelling. Cheap tickets ($15–25).",
+    "url": "https://caveat.nyc/events/"
   }
 ]

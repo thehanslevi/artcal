@@ -259,6 +259,20 @@
         {
           "day": "Fri",
           "date": "Jul 10",
+          "event": "ISSUE Project Room: Webb Crawford — Spiriting Off (Artist-in-Residence)",
+          "where": "ISSUE Project Room, 22 Boerum Pl, Downtown Brooklyn",
+          "cost": "TBD",
+          "category": "sound",
+          "flag": "priority",
+          "mode": "watch",
+          "start": "20:00",
+          "end": null,
+          "note": "New solo work: electric guitar, tenor banjo, five-string banjo.",
+          "url": "https://issueprojectroom.org/calendar"
+        },
+        {
+          "day": "Fri",
+          "date": "Jul 10",
           "event": "Film Forum: REMAKE — Ross McElwee opens",
           "where": "Film Forum, 209 W Houston St",
           "cost": "$12–18",
@@ -750,6 +764,20 @@
           "end": null,
           "note": "Screening run opens.",
           "url": "https://www.bam.org/"
+        },
+        {
+          "day": "Sat",
+          "date": "Jul 18",
+          "event": "ISSUE Project Room: Matana Roberts / Ben Vida + Sara Magenheimer",
+          "where": "ISSUE Project Room, 22 Boerum Pl, Downtown Brooklyn",
+          "cost": "TBD",
+          "category": "sound",
+          "flag": "priority",
+          "mode": "watch",
+          "start": "20:00",
+          "end": null,
+          "note": "Matana Roberts (2009 AIR) + Ben Vida (2013 AIR) performing from Oblivion Seekers.",
+          "url": "https://issueprojectroom.org/calendar"
         },
         {
           "day": "Sat",
