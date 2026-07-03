@@ -19,7 +19,7 @@ I wanted a personalized instrument for moving through the artworld and my own ar
 
 ## What it is
 
-- A weekly calendar of dated events across venues — theater, dance, film, music, workshops, readings, and more.
+- A weekly calendar of dated events across venues including theater, dance, film, music, workshops, readings, and more.
 - Two modes: **Practice** (classes and workshops, `mode: make`) and **Attend** (shows and screenings, `mode: witness`).
 - A picks / shortlist system with passphrase-based cross-device sync — star on my phone, see it on my laptop.
 - A self-updating ICS feed so the whole thing lives in Google Calendar alongside everything else.
@@ -37,14 +37,14 @@ I wanted a personalized instrument for moving through the artworld and my own ar
 
 ## The categories
 
-- **sound** — concerts, experimental music, opera
+- **sound** — concerts, sound art, opera
 - **dance** — dance shows and classes
-- **film** — screenings, workshops, cinemas
+- **film** — screenings, workshops
 - **tech** — live-coding, generative visuals, AI, hardware
 - **make** — printmaking, book arts, woodworking, darkroom
-- **stage** — theater, performance, clown
-- **word** — writing groups, readings, poetry
-- **circle** — social practice, hospitality, contemplation
+- **stage** — theatre, performance
+- **word** — writing groups, readings
+- **circle** — social practice, hospitality, meditation
 
 Each shows in a distinct color so I can scan a week in a second.
 
@@ -56,7 +56,7 @@ Each shows in a distinct color so I can scan a week in a second.
 
 ## How it's specific to me
 
-The engine is generic. What's on the calendar reflects my own practice, not a general audience.
+The engine is generic. What's on the calendar reflects my personal practice and preferences.
 
 Fork the code, rewrite the JSON.
 
