@@ -10,6 +10,8 @@ export type Category =
 export type Flag = "urgent" | "priority" | "decide" | null;
 export type CategoryFilter = "all" | Category;
 
+export type Mode = "make" | "watch";
+
 export interface CalEvent {
   day: string;
   date: string;
@@ -18,6 +20,9 @@ export interface CalEvent {
   cost: string;
   category: Category;
   flag: Flag;
+  mode: Mode;
+  start: string | null;
+  end: string | null;
   note: string | null;
   url: string | null;
 }

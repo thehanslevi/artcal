@@ -5,6 +5,7 @@ import { Anchors } from "./components/Anchors";
 import { BuyNow } from "./components/BuyNow";
 import { Calendar } from "./components/Calendar";
 import { Decisions } from "./components/Decisions";
+import { ExportButton } from "./components/ExportButton";
 import { FallHorizon } from "./components/FallHorizon";
 import { FilterBar } from "./components/FilterBar";
 import { Spaces } from "./components/Spaces";
@@ -26,7 +27,10 @@ function App() {
       <BuyNow />
       <Decisions />
       <Anchors />
-      <FilterBar active={filter} onChange={setFilter} />
+      <div className="filter-row">
+        <FilterBar active={filter} onChange={setFilter} />
+        <ExportButton filter={filter} />
+      </div>
       <Spaces filter={filter} />
       <Calendar filter={filter} />
       <FallHorizon />

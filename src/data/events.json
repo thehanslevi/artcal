@@ -12,7 +12,10 @@
           "cost": "FREE",
           "category": "circle",
           "flag": null,
-          "note": "7–8pm. Sort donation requests, cataloging projects. Low-lift way to meet the collective.",
+          "mode": "make",
+          "start": "19:00",
+          "end": "20:00",
+          "note": "Sort donation requests, cataloging projects. Low-lift way to meet the collective.",
           "url": "https://interferencearchive.org/events/"
         },
         {
@@ -23,6 +26,9 @@
           "cost": "FREE",
           "category": "sound",
           "flag": null,
+          "mode": "watch",
+          "start": "18:00",
+          "end": null,
           "note": null,
           "url": "https://summerstage.org"
         },
@@ -34,7 +40,10 @@
           "cost": "FREE",
           "category": "sound",
           "flag": null,
-          "note": "6pm — walkable from Crown Heights, leads into Roulette",
+          "mode": "watch",
+          "start": "18:00",
+          "end": null,
+          "note": "Walkable from Crown Heights, leads into Roulette",
           "url": "https://summerstage.org"
         },
         {
@@ -45,8 +54,25 @@
           "cost": "$25",
           "category": "sound",
           "flag": null,
+          "mode": "watch",
+          "start": "20:00",
+          "end": null,
           "note": "Doors 7:30pm, music 8pm",
           "url": "https://roulette.org/event/no-fun-new-perspectives-night-1/"
+        },
+        {
+          "day": "Fri",
+          "date": "Jul 10",
+          "event": "K-Pulse: Random Play Dance",
+          "where": "Manhattan (venue rotates — check kpulse.nyc IG)",
+          "cost": "FREE",
+          "category": "dance",
+          "flag": "priority",
+          "mode": "make",
+          "start": "18:00",
+          "end": null,
+          "note": "Free K-pop dance meet-up. Registration required at kpulsenyc.com. Only truly participatory dance event this month.",
+          "url": "https://kpulsenyc.com/"
         },
         {
           "day": "Fri",
@@ -56,6 +82,9 @@
           "cost": "$25",
           "category": "sound",
           "flag": "priority",
+          "mode": "watch",
+          "start": "20:00",
+          "end": null,
           "note": "Go for Raven Chacon — Diné composer, Pulitzer 2022",
           "url": "https://roulette.org/event/no-fun-new-perspectives-night-2/"
         },
@@ -67,7 +96,10 @@
           "cost": "$300",
           "category": "tech",
           "flag": "decide",
-          "note": "1–4pm. Decision still open.",
+          "mode": "make",
+          "start": "13:00",
+          "end": "16:00",
+          "note": "Workshop on consent + technology ethics. Decision still open.",
           "url": "https://sfpc.study"
         },
         {
@@ -78,8 +110,25 @@
           "cost": "FREE",
           "category": "sound",
           "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
           "note": "Fits between SFPC (ends 4pm) and Roulette Night 3 (8pm)",
           "url": "https://summerstage.org"
+        },
+        {
+          "day": "Sat",
+          "date": "Jul 11",
+          "event": "Bushwick Community Darkroom: Winol — developing film with red wine",
+          "where": "334 Himrod St, Bushwick",
+          "cost": "TBD",
+          "category": "make",
+          "flag": null,
+          "mode": "make",
+          "start": "18:00",
+          "end": "21:00",
+          "note": "Bring an exposed roll of film. Alt-process chemistry — develop in red wine. Conflicts with Roulette Night 3.",
+          "url": "https://www.bushwickcommunitydarkroom.com/events"
         },
         {
           "day": "Sat",
@@ -89,7 +138,10 @@
           "cost": "$25",
           "category": "sound",
           "flag": null,
-          "note": "8pm. Dense day: SFPC → HVK → Roulette all work without conflict",
+          "mode": "watch",
+          "start": "20:00",
+          "end": null,
+          "note": "Dense day. Conflicts with BCD Winol workshop.",
           "url": "https://roulette.org/event/no-fun-new-perspectives-night-3/"
         },
         {
@@ -100,7 +152,10 @@
           "cost": "FREE",
           "category": "tech",
           "flag": "priority",
-          "note": "12–6pm. ANIMAL [a listening gym] on view. Juma Sultan live 4–6pm. RSVP at pioneerworks.org",
+          "mode": "make",
+          "start": "12:00",
+          "end": "18:00",
+          "note": "ANIMAL [a listening gym] on view. Juma Sultan live 4–6pm. RSVP at pioneerworks.org",
           "url": "https://pioneerworks.org/programs/second-sundays-july-2026"
         }
       ]
@@ -116,7 +171,10 @@
           "cost": "$24",
           "category": "sound",
           "flag": null,
-          "note": "7:30pm. Same night as Mono No Aware Producing Fundamentals — pick one.",
+          "mode": "watch",
+          "start": "19:30",
+          "end": null,
+          "note": "Same night as Mono No Aware Producing Fundamentals — pick one.",
           "url": "https://pioneerworks.org/programs/false-harmonics-26-conrad-tao-aaron-turner-and-randall-dunn-charmaine-lee"
         },
         {
@@ -127,7 +185,10 @@
           "cost": "FREE",
           "category": "sound",
           "flag": null,
-          "note": "5pm",
+          "mode": "watch",
+          "start": "17:00",
+          "end": null,
+          "note": null,
           "url": "https://summerstage.org"
         },
         {
@@ -138,7 +199,10 @@
           "cost": "TBD",
           "category": "tech",
           "flag": "priority",
-          "note": "Rare milestone event. Live-coding collective, algorithmic sets projected onto walls.",
+          "mode": "make",
+          "start": null,
+          "end": null,
+          "note": "Rare milestone event. Live-coding collective, algorithmic sets projected onto walls. Bring a laptop.",
           "url": "https://livecode.nyc/events.html"
         },
         {
@@ -149,6 +213,9 @@
           "cost": "FREE",
           "category": "tech",
           "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
           "note": null,
           "url": "https://sfpc.study"
         },
@@ -160,7 +227,10 @@
           "cost": "TBD",
           "category": "film",
           "flag": null,
-          "note": "4–10pm. One seat left. Advanced territory — not a beginner workshop.",
+          "mode": "make",
+          "start": "16:00",
+          "end": "22:00",
+          "note": "One seat left. Advanced territory — not a beginner workshop.",
           "url": "http://mononoawarefilm.com/community-workshops"
         },
         {
@@ -171,7 +241,10 @@
           "cost": "TBD",
           "category": "film",
           "flag": null,
-          "note": "4–10pm",
+          "mode": "make",
+          "start": "16:00",
+          "end": "22:00",
+          "note": null,
           "url": "http://mononoawarefilm.com/community-workshops"
         }
       ]
@@ -187,8 +260,25 @@
           "cost": "FREE",
           "category": "dance",
           "flag": "priority",
+          "mode": "watch",
+          "start": null,
+          "end": null,
           "note": "Best free dance viewing of the summer. Don't miss.",
           "url": "https://summerstage.org"
+        },
+        {
+          "day": "Fri",
+          "date": "Jul 24",
+          "event": "UnionDocs: The Magical Image — Special Effects as Documentary Method",
+          "where": "UnionDocs, Ridgewood",
+          "cost": "TBD",
+          "category": "film",
+          "flag": "decide",
+          "mode": "make",
+          "start": "10:00",
+          "end": "16:30",
+          "note": "3-day intensive Jul 24–26, 10am–4:30pm daily. Faculty: Elsaesser, Stephens, Sharon Lockhart, Kienitz Wilkins, Cardone. Big commitment — decide fast.",
+          "url": "https://uniondocs.org/events/category/workshops/list/"
         },
         {
           "day": "Sun",
@@ -197,7 +287,10 @@
           "where": "314 7th St, Park Slope",
           "cost": "sliding scale",
           "flag": null,
-          "note": "7:30–9pm. Experimental audio making — record yourself reading archive materials. Small group.",
+          "mode": "make",
+          "start": "19:30",
+          "end": "21:00",
+          "note": "Experimental audio making — record yourself reading archive materials. Small group.",
           "url": "https://interferencearchive.org/events/"
         },
         {
@@ -208,6 +301,9 @@
           "cost": "FREE",
           "category": "sound",
           "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
           "note": null,
           "url": "https://summerstage.org"
         }
@@ -224,6 +320,9 @@
           "cost": "$24",
           "category": "sound",
           "flag": "urgent",
+          "mode": "watch",
+          "start": "19:30",
+          "end": null,
           "note": "Going fast. Lynch sound collaborator. Live to picture.",
           "url": "https://pioneerworks.org/programs/false-harmonics-27-dean-hurley-c-lavender"
         },
@@ -235,7 +334,10 @@
           "cost": "FREE",
           "category": "sound",
           "flag": null,
-          "note": "5pm. LAMC.",
+          "mode": "watch",
+          "start": "17:00",
+          "end": null,
+          "note": "LAMC.",
           "url": "https://summerstage.org"
         },
         {
@@ -246,7 +348,10 @@
           "cost": "FREE",
           "category": "sound",
           "flag": null,
-          "note": "6pm. Hip hop history.",
+          "mode": "watch",
+          "start": "18:00",
+          "end": null,
+          "note": "Hip hop history.",
           "url": "https://summerstage.org"
         },
         {
@@ -257,6 +362,9 @@
           "cost": "$36–47",
           "category": "tech",
           "flag": "urgent",
+          "mode": "watch",
+          "start": "20:00",
+          "end": null,
           "note": "Going fast. Go for MSHR — handmade synthesis + video feedback, live.",
           "url": "https://pioneerworks.org/programs/dan-deacon"
         },
@@ -268,6 +376,9 @@
           "cost": "FREE",
           "category": "circle",
           "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
           "note": "Local vendor market — prints, ceramics, clothing. Kicks off Summers at the Starr.",
           "url": "https://www.thebushwickstarr.org/"
         }
@@ -284,6 +395,9 @@
           "cost": "FREE",
           "category": "tech",
           "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
           "note": null,
           "url": "https://sfpc.study"
         },
@@ -295,7 +409,10 @@
           "cost": "$10 sliding",
           "category": "make",
           "flag": null,
-          "note": "6–10pm. Green woodworking meetup. No one turned away. RSVP nycspoonclub@gmail.com. Conflicts with Summer Sings Aug 3.",
+          "mode": "make",
+          "start": "18:00",
+          "end": "22:00",
+          "note": "Green woodworking meetup. No one turned away. RSVP nycspoonclub@gmail.com. Conflicts with Summer Sings.",
           "url": "https://makeville.com/events/2026-3-23-nyc-spoon-club"
         },
         {
@@ -306,6 +423,9 @@
           "cost": "$53",
           "category": "sound",
           "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
           "note": null,
           "url": "https://pioneerworks.org"
         },
@@ -317,6 +437,9 @@
           "cost": "FREE",
           "category": "film",
           "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
           "note": null,
           "url": "https://pioneerworks.org"
         },
@@ -328,6 +451,9 @@
           "cost": "FREE",
           "category": "sound",
           "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
           "note": null,
           "url": "https://summerstage.org"
         },
@@ -339,6 +465,9 @@
           "cost": "FREE",
           "category": "sound",
           "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
           "note": null,
           "url": "https://summerstage.org"
         }
@@ -355,6 +484,9 @@
           "cost": "FREE",
           "category": "sound",
           "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
           "note": null,
           "url": "https://summerstage.org"
         },
@@ -366,6 +498,9 @@
           "cost": "FREE",
           "category": "sound",
           "flag": "priority",
+          "mode": "watch",
+          "start": null,
+          "end": null,
           "note": null,
           "url": "https://summerstage.org"
         },
@@ -377,6 +512,9 @@
           "cost": "FREE",
           "category": "sound",
           "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
           "note": null,
           "url": "https://summerstage.org"
         },
@@ -388,6 +526,9 @@
           "cost": "FREE",
           "category": "sound",
           "flag": "priority",
+          "mode": "watch",
+          "start": null,
+          "end": null,
           "note": null,
           "url": "https://summerstage.org"
         }
