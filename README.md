@@ -63,16 +63,16 @@ Fork the code, rewrite the JSON.
 ## How it's built
 
 - **Vite + React + TypeScript**, strict mode, no CSS framework — hand-written stylesheet on CSS custom properties.
-- **All events in JSON** — `src/data/events.json`, `spaces.json`, `anchors.json`, `decisions.json`, `fall.json`. I edit these directly in GitHub's web editor and commit — no admin UI, no forms.
+- **All events in JSON** — `src/data/events.json`, `spaces.json`, `fall.json`. I edit these directly in GitHub's web editor and commit — no admin UI, no forms.
 - **Supabase for picks sync.** SHA-256 hash of a user-chosen passphrase is the row key. The passphrase is never sent to the server, only its hash. Nothing else is stored in the backend.
 - **Build-time ICS generation.** A `tsx` script (`scripts/generate-feeds.ts`) runs after Vite build and emits three `.ics` files into `dist/`, served with `Content-Type: text/calendar` from Vercel via `vercel.json`.
 - **Stable event UIDs** derived from date + slug of event name, so calendar apps update existing events instead of duplicating them on each refresh.
-- **Today-aware everywhere.** Days-until countdowns on events and decisions, current-week highlight, past-event dimming — all keyed to `today()` at load.
+- **Today-aware everywhere.** Days-until countdowns on events, current-week highlight, past-event dimming — all keyed to `today()` at load.
 - **Deployed on Vercel** with continuous deploy from `main`. Editing JSON on GitHub triggers a Vercel rebuild within a minute; GCal picks up feed changes on its next refresh (typically 12–24 hours).
 
 ## Editing
 
-Any event, venue, decision, or fall-horizon item lives in `src/data/`. Edit in the GitHub web editor, click Commit — Vercel rebuilds automatically and your subscribed calendar reflects the change on its next refresh cycle.
+Any event, venue, or fall-horizon item lives in `src/data/`. Edit in the GitHub web editor, click Commit — Vercel rebuilds automatically and your subscribed calendar reflects the change on its next refresh cycle.
 
 ## Where it lives
 
