@@ -4,37 +4,44 @@
     {
       "text": "Ailey Extension — book one trial class (vogue or heels) → ailey.org/classes",
       "url": "https://ailey.org/classes",
-      "date": null
+      "date": null,
+      "mode": "make"
     },
     {
       "text": "Roulette No Fun Jul 9–11 — $25/night",
       "url": "https://roulette.org",
-      "date": "Jul 9"
+      "date": "Jul 9",
+      "mode": "watch"
     },
     {
       "text": "UnionDocs Magical Image (Jul 24–26, 10am–4:30pm daily) — 3-day intensive, decide fast",
       "url": "https://uniondocs.org/events/category/workshops/list/",
-      "date": "Jul 24"
+      "date": "Jul 24",
+      "mode": "make"
     },
     {
       "text": "Mono No Aware Sept slate — pick 1–2. Sep 20 Positive Print (one-day, take-home film) is the strongest beginner entry.",
       "url": "http://mononoawarefilm.com/community-workshops",
-      "date": "Sep 20"
+      "date": "Sep 20",
+      "mode": "make"
     },
     {
       "text": "NYC Resistor Synthesizer Night — check last Friday of July/Aug on nycresistor.com/calendar",
       "url": "https://www.nycresistor.com/calendar/",
-      "date": null
+      "date": null,
+      "mode": "make"
     },
     {
       "text": "Watching: @datlabnyc on Instagram for Event 17 date · onx.studio for ONX Showcase 2026",
       "url": null,
-      "date": null
+      "date": null,
+      "mode": "watch"
     },
     {
       "text": "Waiting: MGC summer semester reply · Humanist Project fall 2026 dates",
       "url": null,
-      "date": null
+      "date": null,
+      "mode": "make"
     }
   ]
 }

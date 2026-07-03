@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import eventsData from "../data/events.json";
-import type { CalEvent, CategoryFilter, EventsData } from "../types";
+import type { CalEvent, CategoryFilter, EventsData, TabMode } from "../types";
 import { findConflicts } from "../lib/conflicts";
 import {
   daysUntil as daysUntilFn,
@@ -11,6 +11,7 @@ import {
   parseWeekRange,
   today,
 } from "../lib/dates";
+import { matchesTab } from "../lib/tab";
 import { EventRow } from "./EventRow";
 import { WeekSummary } from "./WeekSummary";
 
@@ -18,9 +19,10 @@ const data = eventsData as EventsData;
 
 interface Props {
   filter: CategoryFilter;
+  tab: TabMode;
 }
 
-export function Calendar({ filter }: Props) {
+export function Calendar({ filter, tab }: Props) {
   const [showPast, setShowPast] = useState(false);
   const now = useMemo(() => today(), []);
   const currentWeekRef = useRef<HTMLElement | null>(null);
@@ -57,10 +59,9 @@ export function Calendar({ filter }: Props) {
         const past = range ? isPastWeek(range, now) : false;
         const current = range ? isCurrentWeek(range, now) : false;
         if (past && !showPast) return null;
-        const visible =
-          filter === "all"
-            ? week.events
-            : week.events.filter((e) => e.category === filter);
+        const visible = week.events
+          .filter((e) => filter === "all" || e.category === filter)
+          .filter((e) => matchesTab(tab, e.mode as "make" | "watch"));
         if (visible.length === 0) return null;
         const conflicts = findConflicts(visible);
         return (
@@ -76,7 +77,7 @@ export function Calendar({ filter }: Props) {
                   <span className="current-chip">This week</span>
                 ) : null}
               </h3>
-              <WeekSummary events={visible} />
+              <WeekSummary events={visible} tab={tab} />
             </div>
             {visible.map((event, idx) => {
               const d = parseEventDate(event.date);

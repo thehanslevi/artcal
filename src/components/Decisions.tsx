@@ -1,22 +1,28 @@
 import decisionsData from "../data/decisions.json";
-import type { DecisionsData } from "../types";
+import type { DecisionsData, TabMode } from "../types";
 import {
   daysUntil as daysUntilFn,
   formatDaysUntil,
   parseEventDate,
   today,
 } from "../lib/dates";
+import { matchesTab } from "../lib/tab";
 
 const data = decisionsData as DecisionsData;
 
-export function Decisions() {
-  if (data.open.length === 0) return null;
+interface Props {
+  tab: TabMode;
+}
+
+export function Decisions({ tab }: Props) {
+  const items = data.open.filter((it) => matchesTab(tab, it.mode));
+  if (items.length === 0) return null;
   const now = today();
   return (
     <section className="decisions" aria-label="Open decisions">
       <h2 className="decisions-title">Open decisions</h2>
       <ol className="decisions-list">
-        {data.open.map((item, idx) => {
+        {items.map((item, idx) => {
           const d = item.date ? parseEventDate(item.date) : null;
           const du = d ? daysUntilFn(d, now) : null;
           return (

@@ -49,6 +49,20 @@
         {
           "day": "Thu",
           "date": "Jul 9",
+          "event": "The Brick: GOODBYE HORSES — an unauthorized retelling of Silence of the Lambs",
+          "where": "The Brick, 579 Metropolitan Ave, Williamsburg",
+          "cost": "$35–45",
+          "category": "stage",
+          "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
+          "note": "Opens Jul 9, runs through Jul 25. 70 min. Presale $35 through Jun 15.",
+          "url": "https://www.bricktheater.com/"
+        },
+        {
+          "day": "Thu",
+          "date": "Jul 9",
           "event": "No Fun Night 1: Giffoni, Charmaine Lee, Twig Harper + more",
           "where": "Roulette, 509 Atlantic Ave, Brooklyn",
           "cost": "$25",
@@ -206,6 +220,20 @@
           "url": "http://mononoawarefilm.com/community-workshops"
         },
         {
+          "day": "Sat",
+          "date": "Jul 18",
+          "event": "Wendy's Subway: Maybe Sometimes — a reading",
+          "where": "Wendy's Subway, Bushwick/Ridgewood border",
+          "cost": "sliding scale",
+          "category": "word",
+          "flag": null,
+          "mode": "watch",
+          "start": "19:00",
+          "end": null,
+          "note": "Jo Barchi, Ted Dodson + others reading. Free/sliding.",
+          "url": "https://www.wendyssubway.com/programs"
+        },
+        {
           "day": "Sun",
           "date": "Jul 19",
           "event": "Mono No Aware: Optical Printing Day 2 / Titles Workshop",
@@ -239,6 +267,20 @@
           "url": "https://summerstage.org"
         },
         {
+          "day": "Thu",
+          "date": "Jul 23",
+          "event": "Wendy's Subway: Bi-Weekly Writing Night",
+          "where": "Wendy's Subway, Bushwick/Ridgewood border",
+          "cost": "sliding scale",
+          "category": "word",
+          "flag": null,
+          "mode": "make",
+          "start": "19:30",
+          "end": "20:30",
+          "note": "Show up with a project; write for an hour alongside others.",
+          "url": "https://www.wendyssubway.com/programs"
+        },
+        {
           "day": "Fri",
           "date": "Jul 24",
           "event": "UnionDocs: The Magical Image — Special Effects as Documentary Method",
@@ -251,6 +293,20 @@
           "end": "16:30",
           "note": "3-day intensive Jul 24–26, 10am–4:30pm daily. Faculty: Elsaesser, Stephens, Sharon Lockhart, Kienitz Wilkins, Cardone. Big commitment — decide fast.",
           "url": "https://uniondocs.org/events/category/workshops/list/"
+        },
+        {
+          "day": "Sat",
+          "date": "Jul 25",
+          "event": "Wendy's Subway: Basic Instincts and Pure Desires — workshop with Nico Vela Page",
+          "where": "Wendy's Subway, Bushwick/Ridgewood border",
+          "cost": "sliding scale",
+          "category": "word",
+          "flag": null,
+          "mode": "make",
+          "start": "12:00",
+          "end": "14:30",
+          "note": "Generative writing workshop.",
+          "url": "https://www.wendyssubway.com/programs"
         },
         {
           "day": "Sun",
@@ -325,6 +381,20 @@
           "end": null,
           "note": "Hip hop history.",
           "url": "https://summerstage.org"
+        },
+        {
+          "day": "Thu",
+          "date": "Jul 30",
+          "event": "The Brick Aux: Strange Men",
+          "where": "Brick Aux, 628 Metropolitan Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "stage",
+          "flag": null,
+          "mode": "watch",
+          "start": null,
+          "end": null,
+          "note": "Opens Jul 30, runs through Aug 2. 100 min. Dark comedy on masculinity + vulnerability.",
+          "url": "https://www.bricktheater.com/"
         },
         {
           "day": "Sat",
@@ -590,6 +660,34 @@
           "url": "http://mononoawarefilm.com/community-workshops"
         },
         {
+          "day": "Thu",
+          "date": "Sep 17",
+          "event": "Wendy's Subway: Bi-Weekly Writing Night",
+          "where": "Wendy's Subway, Bushwick/Ridgewood border",
+          "cost": "sliding scale",
+          "category": "word",
+          "flag": null,
+          "mode": "make",
+          "start": "19:00",
+          "end": "20:30",
+          "note": "Fall series resumes.",
+          "url": "https://www.wendyssubway.com/programs"
+        },
+        {
+          "day": "Thu",
+          "date": "Sep 17",
+          "event": "Roulette: Katherine Young — BIOMES (album release)",
+          "where": "Roulette, 509 Atlantic Ave, Brooklyn",
+          "cost": "$25",
+          "category": "sound",
+          "flag": null,
+          "mode": "watch",
+          "start": "20:00",
+          "end": null,
+          "note": "Bassoonist/composer w/ Olivia Block, Ben LaMar Gay, Brian Chase, Yarn/Wire. Conflicts with Wendy's Subway writing night.",
+          "url": "https://roulette.org/calendar"
+        },
+        {
           "day": "Wed",
           "date": "Sep 17",
           "event": "Mono No Aware: Intro to 16MM + Bolex Rex5 (S2 of 5)",
@@ -688,6 +786,20 @@
           "url": "http://mononoawarefilm.com/community-workshops"
         },
         {
+          "day": "Thu",
+          "date": "Sep 24",
+          "event": "Roulette: The Scores Project — book release + Rise of the Novel",
+          "where": "Roulette, 509 Atlantic Ave, Brooklyn",
+          "cost": "$25",
+          "category": "sound",
+          "flag": null,
+          "mode": "watch",
+          "start": "20:00",
+          "end": null,
+          "note": "Scholars of experimental notation discuss + members of Rise of the Novel perform.",
+          "url": "https://roulette.org/calendar"
+        },
+        {
           "day": "Sat",
           "date": "Sep 26",
           "event": "Mono No Aware: Blow Ups — 16MM to 120 Medium Format",
@@ -700,6 +812,20 @@
           "end": "16:00",
           "note": "Only 6 seats. Optically enlarge a single 16mm frame to medium format.",
           "url": "http://mononoawarefilm.com/community-workshops"
+        },
+        {
+          "day": "Sun",
+          "date": "Sep 27",
+          "event": "Roulette: John Zorn's Alea Iacta Est (World Premiere)",
+          "where": "Roulette, 509 Atlantic Ave, Brooklyn",
+          "cost": "$35",
+          "category": "sound",
+          "flag": "priority",
+          "mode": "watch",
+          "start": "20:00",
+          "end": null,
+          "note": "World premiere of Zorn's piano concerto — four trusted interpreters.",
+          "url": "https://roulette.org/calendar"
         },
         {
           "day": "Tue",

@@ -1,22 +1,28 @@
 import decisionsData from "../data/decisions.json";
-import type { DecisionsData } from "../types";
+import type { DecisionsData, TabMode } from "../types";
 import {
   daysUntil as daysUntilFn,
   formatDaysUntil,
   parseEventDate,
   today,
 } from "../lib/dates";
+import { matchesTab } from "../lib/tab";
 
 const data = decisionsData as DecisionsData;
 
-export function BuyNow() {
-  if (data.urgent.length === 0) return null;
+interface Props {
+  tab: TabMode;
+}
+
+export function BuyNow({ tab }: Props) {
+  const items = data.urgent.filter((it) => matchesTab(tab, it.mode));
+  if (items.length === 0) return null;
   const now = today();
   return (
     <section className="band band-danger" aria-label="Buy now">
       <h2 className="band-title">Buy now</h2>
       <ul className="band-list">
-        {data.urgent.map((item, idx) => {
+        {items.map((item, idx) => {
           const d = item.date ? parseEventDate(item.date) : null;
           const du = d ? daysUntilFn(d, now) : null;
           return (

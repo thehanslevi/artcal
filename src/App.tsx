@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import eventsData from "./data/events.json";
-import type { CategoryFilter, EventsData } from "./types";
+import type { CategoryFilter, EventsData, TabMode } from "./types";
 import { today } from "./lib/dates";
 import { Anchors } from "./components/Anchors";
 import { BuyNow } from "./components/BuyNow";
@@ -10,6 +10,7 @@ import { ExportButton } from "./components/ExportButton";
 import { FallHorizon } from "./components/FallHorizon";
 import { FilterBar } from "./components/FilterBar";
 import { Spaces } from "./components/Spaces";
+import { TabBar } from "./components/TabBar";
 
 const data = eventsData as EventsData;
 
@@ -20,6 +21,7 @@ const TODAY_FMT = new Intl.DateTimeFormat("en-US", {
 });
 
 function App() {
+  const [tab, setTab] = useState<TabMode>("all");
   const [filter, setFilter] = useState<CategoryFilter>("all");
   const todayLabel = useMemo(() => TODAY_FMT.format(today()), []);
 
@@ -34,16 +36,17 @@ function App() {
           Today {todayLabel} · last verified {data.lastVerified}
         </p>
       </header>
-      <BuyNow />
-      <Decisions />
-      <Anchors />
+      <TabBar active={tab} onChange={setTab} />
+      <BuyNow tab={tab} />
+      <Decisions tab={tab} />
+      <Anchors tab={tab} />
       <div className="filter-row">
         <FilterBar active={filter} onChange={setFilter} />
-        <ExportButton filter={filter} />
+        <ExportButton filter={filter} tab={tab} />
       </div>
-      <Spaces filter={filter} />
-      <Calendar filter={filter} />
-      <FallHorizon />
+      <Spaces filter={filter} tab={tab} />
+      <Calendar filter={filter} tab={tab} />
+      <FallHorizon tab={tab} />
     </div>
   );
 }

@@ -1,14 +1,16 @@
 [
   {
     "name": "Ailey Extension",
-    "description": "Vogue / heels / afro · 405 W 55th, Midtown · ~$18–22/class",
-    "note": "Book through Mindbody at ailey.org/classes",
-    "url": "https://ailey.org/classes"
+    "description": "Vogue / heels / afro / house · 405 W 55th, Midtown · ~$18–22/class",
+    "note": "Weekly evening classes on Mindbody. Vogue with Luz Guzman, Heels, Afro'Dance with Angel Kaba, West African with live drums. Book at ailey.org/classes.",
+    "url": "https://ailey.org/classes",
+    "mode": "make"
   },
   {
     "name": "Summer Sings",
     "description": "Drop-in choral singing · (most) Mondays 7:30pm · Judson Memorial Church, 243 Thompson St · $20/night ($15 student) or $120 season ($80 student)",
     "note": "Runs Jul 6 – Aug 31. Jul 13 CANCELLED for venue scheduling. No audition; conductor walks you through the piece.",
-    "url": "https://westvillagechorale.org/summer-sings/"
+    "url": "https://westvillagechorale.org/summer-sings/",
+    "mode": "make"
   }
 ]

@@ -1,27 +1,56 @@
 [
   {
-    "title": "Humanist Project",
+    "title": "Humanist Project (fall)",
     "detail": "8-week clown, Mondays 7–10pm, Houghton Hall, Manhattan, ~$450. Fall 2026 dates not yet posted. Email thehumanistproject.org/contact.",
-    "url": "https://www.thehumanistproject.org"
+    "url": "https://www.thehumanistproject.org",
+    "mode": "make"
   },
   {
-    "title": "Fire Ensemble",
-    "detail": "Free weekly gospel/R&B choir, BIPOC + queer-centered. Fall session TBD. RSVP at fireensemble.com/choir-form now.",
-    "url": "https://www.fireensemble.com"
+    "title": "Fire Ensemble (fall)",
+    "detail": "Free weekly gospel/R&B choir, BIPOC + queer-centered. Fall session TBD. RSVP submitted at fireensemble.com/choir-form.",
+    "url": "https://www.fireensemble.com",
+    "mode": "make"
   },
   {
-    "title": "Mono No Aware — September",
-    "detail": "Beginner slate opens: Super 8mm, 16mm Color Neg w/ Bolex, Steenbeck Flatbed. Check mononoawarefilm.com when August ends.",
-    "url": "http://mononoawarefilm.com"
-  },
-  {
-    "title": "MGC printmaking",
+    "title": "MGC printmaking (fall semester)",
     "detail": "322 3rd Ave, Gowanus. Email mgc@powerhousearts.org for fall semester. Sliding scale; membership adds open studio + 25% off.",
-    "url": "https://mgc.powerhousearts.org"
+    "url": "https://mgc.powerhousearts.org",
+    "mode": "make"
   },
   {
-    "title": "Brooklynite Choir",
+    "title": "Brooklynite Choir (fall cycle)",
     "detail": "On waitlist. No audition, no sheet music, learn by ear, ~$22/session. Fall cycle likely opens August.",
-    "url": "https://nychoirproject.com/brooklynite-choir"
+    "url": "https://nychoirproject.com/brooklynite-choir",
+    "mode": "make"
+  },
+  {
+    "title": "Target Margin fall 2026 season",
+    "detail": "Doxsee Theater, Sunset Park. TMT Laboratory (writer-director development) runs Sept–Oct. Full fall season TBA.",
+    "url": "https://www.targetmargin.org/",
+    "mode": "watch"
+  },
+  {
+    "title": "PhysFest NYC 2027 (Jan)",
+    "detail": "Physical Theater Festival — 10 days, ~50 shows + free workshops. Stella Adler Center for the Arts. 2026 ran Jan 8–18; 2027 dates TBA.",
+    "url": "https://www.physfestnyc.org/",
+    "mode": "both"
+  },
+  {
+    "title": "Under the Radar Festival (Jan 2027)",
+    "detail": "Public Theater's annual international avant-garde theater festival. Typically mid-January (2026 ran Jan 14–25). 2027 dates TBA.",
+    "url": "https://utrfest.org/",
+    "mode": "watch"
+  },
+  {
+    "title": "Prototype Festival (Jan 13–23, 2027)",
+    "detail": "Contemporary opera + music-theater festival. HERE, La MaMa, Joe's Pub, St. Ann's Warehouse, National Sawdust, and more.",
+    "url": "https://www.prototypefestival.org/",
+    "mode": "watch"
+  },
+  {
+    "title": "Exponential Festival 2027 (January)",
+    "detail": "12th annual month-long experimental performance festival across 8 Brooklyn venues: Brick Aux, Brooklyn Art Haus, JACK, Life World, Loading Dock, Mercury Store, Target Margin's Doxsee, The Brick. 19+ NYC artists. Curated by Jillian Jetton & Matthew Antoci.",
+    "url": "https://www.theexponentialfestival.org/",
+    "mode": "watch"
   }
 ]

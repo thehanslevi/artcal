@@ -2,13 +2,15 @@
   {
     "name": "Bushwick Community Darkroom",
     "category": "make",
-    "description": "Photo darkroom · Himrod St, Bushwick · ~15 min from Crown Heights",
-    "note": "Public open hours Tues–Sat 12–8pm. Rolling workshops for beginners.",
-    "url": "https://bushwickcommunitydarkroom.com/"
+    "mode": "make",
+    "description": "Photo darkroom · 334 Himrod St, Bushwick · ~15 min from Crown Heights",
+    "note": "Public open hours Tues–Sat 12–8pm. Rolling workshops (Intro to Camera, Cyanotype, Winol alt-process).",
+    "url": "https://www.bushwickcommunitydarkroom.com/"
   },
   {
     "name": "Gowanus Darkroom",
     "category": "make",
+    "mode": "make",
     "description": "Photo darkroom · 119 8th St, Gowanus · ~12 min by bike",
     "note": "$12/hr rental. Monthly group critique — $5 to show, free to attend. Email to RSVP.",
     "url": "https://www.gowanusdarkroom.com/"
@@ -16,6 +18,7 @@
   {
     "name": "Shoestring Press",
     "category": "make",
+    "mode": "make",
     "description": "Community print shop · 640 Classon Ave, Crown Heights/Bed-Stuy border · walkable",
     "note": "Screenprinting, etching, litho, relief. Tiered monthly membership. Classes on rotating weekends.",
     "url": "https://www.shoestring.press/"
@@ -23,27 +26,31 @@
   {
     "name": "Interference Archive",
     "category": "circle",
+    "mode": "both",
     "description": "Activist archive + volunteer collective · 314 7th St, Park Slope · ~15 min",
-    "note": "Open Thu–Sun. Volunteer at Collections Work Parties; monthly Zine Club and Fiber Friends. Free.",
+    "note": "Open Thu–Sun. Volunteer Collections Work Parties; monthly Zine Club, Fiber Friends. Occasional workshops. Free.",
     "url": "https://interferencearchive.org/"
   },
   {
     "name": "Pioneer Works Synth Library",
     "category": "sound",
+    "mode": "make",
     "description": "Free instrument access · 604 Van Brunt St, Red Hook",
-    "note": "Free hands-on time with modular synths, patch bays, wave generators. No gear required. Confirm current hours before going.",
+    "note": "Free hands-on time with modular synths, patch bays, wave generators. No gear required. Confirm hours before going.",
     "url": "https://pioneerworks.org"
   },
   {
     "name": "Harvestworks · Outside Linear Time",
     "category": "tech",
+    "mode": "both",
     "description": "Art & tech exhibition + weekend performances · Nolan Park Bldg 10a, Governors Island",
-    "note": "Runs through Aug 23. Open Sat/Sun 11am–5pm. Free entry. TIP masterclasses rotate — check the archive.",
+    "note": "Runs through Aug 23. Open Sat/Sun 11am–5pm. Free entry. TIP masterclasses rotate.",
     "url": "https://www.harvestworks.org/"
   },
   {
     "name": "LiveCode.NYC",
     "category": "tech",
+    "mode": "make",
     "description": "Live-coding collective · monthly meetups at BPL Central, 10 Grand Army Pl · walkable",
     "note": "Bring a laptop + headphones. Hydra, Orca, TidalCycles hack sessions. Free. 10th Anniversary Algorave Jul 18.",
     "url": "https://livecode.nyc/events.html"
@@ -51,41 +58,103 @@
   {
     "name": "JACK",
     "category": "stage",
+    "mode": "both",
     "description": "Storefront performance venue · 20 Putnam Ave, Clinton Hill · ~10 min",
-    "note": "Independent rehearsal space at $10/hr — cheapest in Brooklyn. Watch summer 2026 season.",
+    "note": "Independent rehearsal space at $10/hr — cheapest in Brooklyn. Also hosts shows. Venue for Exponential Fest 2027.",
     "url": "https://jackny.org/"
   },
   {
     "name": "The Bushwick Starr",
     "category": "stage",
+    "mode": "both",
     "description": "Independent theater · Eldert St, Bushwick · ~15 min",
-    "note": "Summers at the Starr programming all August 2026. Free community workshops, senior storytelling, devised-work tracks.",
+    "note": "Aug 1 Bazaar + Aug 17–28 Theater Camp (kids). Fall mainstage from Oct. Occasional community workshops.",
     "url": "https://www.thebushwickstarr.org/"
+  },
+  {
+    "name": "Target Margin Theater",
+    "category": "stage",
+    "mode": "both",
+    "description": "Experimental theater · Doxsee Theater, Sunset Park",
+    "note": "TMT Laboratory Sept–Oct; TMT Hosts + Institute + Young Artists tracks year-round. Fall 2026 season TBA. Venue for Exponential Fest 2027.",
+    "url": "https://www.targetmargin.org/"
+  },
+  {
+    "name": "The Brick / Brick Aux",
+    "category": "stage",
+    "mode": "watch",
+    "description": "Storefront experimental theater · 579 + 628 Metropolitan Ave, Williamsburg · G train ~20 min",
+    "note": "Radical, counter-cultural performance. Tickets typically $25–45. Also a venue for Exponential Fest 2027.",
+    "url": "https://www.bricktheater.com/"
+  },
+  {
+    "name": "The Tank",
+    "category": "stage",
+    "mode": "watch",
+    "description": "New-work incubator · 312 W 36th St, Midtown West",
+    "note": "20+ shows a month. Cheap tickets, tiny room, experimental everything. Residencies for developing work. Check their calendar page.",
+    "url": "https://thetanknyc.org/calendar"
+  },
+  {
+    "name": "Clubbed Thumb",
+    "category": "stage",
+    "mode": "watch",
+    "description": "New American plays · SUMMERWORKS annual at The Wild Project · Lower East Side",
+    "note": "SUMMERWORKS 2026 (past): May 14 – Jun 30. Fall/winter programming TBA. Watch for the next SUMMERWORKS.",
+    "url": "https://www.clubbedthumb.org/"
+  },
+  {
+    "name": "Wendy's Subway",
+    "category": "word",
+    "mode": "both",
+    "description": "Reading room + writing space + publisher · Bushwick/Ridgewood border · ~20 min",
+    "note": "Bi-Weekly Writing Night is the ongoing anchor (Thursdays 7–8:30pm). Occasional workshops + readings. Sliding scale.",
+    "url": "https://www.wendyssubway.com/programs"
+  },
+  {
+    "name": "The Poetry Project",
+    "category": "word",
+    "mode": "both",
+    "description": "Avant-garde reading + writing space · 131 E 10th St, East Village",
+    "note": "Summer Learning workshops sliding-scale. Reading series Mon/Wed/Thu/Fri in fall. Free membership tiers.",
+    "url": "https://www.poetryproject.org/events"
+  },
+  {
+    "name": "Spectacle Theater",
+    "category": "film",
+    "mode": "both",
+    "description": "Collective-run micro-cinema · 124 S 3rd St, Williamsburg · G train ~25 min",
+    "note": "$10 screenings 7 days a week — overlooked films, midnight programming, live performance. Join the collective to program, translate, host.",
+    "url": "https://www.spectacletheater.com/"
+  },
+  {
+    "name": "Millennium Film Workshop",
+    "category": "film",
+    "mode": "both",
+    "description": "Experimental cinema hub · 167 Wilson Ave, Bushwick",
+    "note": "Weekly screenings + monthly Open Screenings (bring films <20 min). Works in Progress last Sunday of each month.",
+    "url": "https://www.millenniumfilm.org/calendar"
   },
   {
     "name": "Makeville Studio",
     "category": "make",
+    "mode": "make",
     "description": "Community woodshop · 119 8th St, Gowanus · ~12 min by bike",
     "note": "NYC Spoon Club meets monthly on Mondays 6–10pm, $10 sliding. Shop Share sessions periodic.",
     "url": "https://makeville.com/events"
   },
   {
-    "name": "The Poetry Project",
-    "category": "word",
-    "description": "Avant-garde reading + writing space · 131 E 10th St, East Village",
-    "note": "Summer Learning workshops sliding-scale. Monday/Wednesday/Thursday/Friday reading series in fall. Free membership tiers available.",
-    "url": "https://www.poetryproject.org/events"
-  },
-  {
     "name": "Brooklyn Meetinghouse Community Dinner",
     "category": "circle",
+    "mode": "make",
     "description": "Volunteer cooking + serving · 110 Schermerhorn, Downtown Brooklyn · ~15 min",
-    "note": "One Sunday afternoon per month. Free to attend. Bring apron + towel. Expanding to weekly meals in 2026.",
+    "note": "One Sunday afternoon per month. Free. Bring apron + towel. Expanding to weekly meals in 2026.",
     "url": "https://nycquakers.org/blog/brooklyns-community-dinner-looking-to-expand"
   },
   {
     "name": "Brooklyn Zen Center",
     "category": "circle",
+    "mode": "make",
     "description": "Soto Zen sangha · Cobble Hill · ~15–20 min by bike",
     "note": "Daily zazen (donation), weekly Dhamma of Love & Justice course, monthly sanghas. Sliding scale.",
     "url": "https://www.brooklynzen.org/"
@@ -93,13 +162,15 @@
   {
     "name": "Fire Ensemble",
     "category": "sound",
+    "mode": "make",
     "description": "Intergenerational choir, BIPOC + queer-centered · rehearses Judson Memorial Church · ~20 min",
-    "note": "Spring 2026 ran Apr 6 – June (Mondays 6–8pm). Between sessions now; fall 2026 TBD. Fill out choir form to be notified.",
+    "note": "Spring 2026 ran Apr 6–June (Mondays 6–8pm). Between sessions now; fall 2026 TBD. Fall RSVP submitted.",
     "url": "https://www.fireensemble.com/choir-form"
   },
   {
     "name": "NYC Resistor",
     "category": "sound",
+    "mode": "make",
     "description": "Hacker collective · 87 3rd Ave, Boerum Hill · ~15 min",
     "note": "Monthly Synthesizer Night — pay-what-you-wish ($8 suggested). Bring your synth or come empty-handed to jam. Hardware Reincarnation workshops rotate.",
     "url": "https://www.nycresistor.com/calendar/"
@@ -107,6 +178,7 @@
   {
     "name": "Mover's Bodega",
     "category": "dance",
+    "mode": "make",
     "description": "Street-dance studio · Long Island City · G train ~25–30 min",
     "note": "House, waacking, breaking, hip hop, popping, jersey club. $20 single class, $55/3, $108/6. Schedule at sutrapro.com/modega.",
     "url": "https://moversbodega.com/"

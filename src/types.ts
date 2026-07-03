@@ -11,6 +11,8 @@ export type Flag = "urgent" | "priority" | "decide" | null;
 export type CategoryFilter = "all" | Category;
 
 export type Mode = "make" | "watch";
+export type SpaceMode = Mode | "both";
+export type TabMode = "practice" | "attend" | "all";
 
 export interface CalEvent {
   day: string;
@@ -41,6 +43,7 @@ export interface Decision {
   text: string;
   url: string | null;
   date?: string | null;
+  mode?: Mode;
 }
 
 export interface DecisionsData {
@@ -53,12 +56,14 @@ export interface Anchor {
   description: string;
   note: string;
   url: string | null;
+  mode?: SpaceMode;
 }
 
 export interface FallItem {
   title: string;
   detail: string;
   url: string | null;
+  mode?: SpaceMode;
 }
 
 export interface Space {
@@ -67,4 +72,5 @@ export interface Space {
   description: string;
   note: string;
   url: string | null;
+  mode?: SpaceMode;
 }

@@ -1,15 +1,21 @@
 import fallData from "../data/fall.json";
-import type { FallItem } from "../types";
+import type { FallItem, TabMode } from "../types";
+import { matchesTab } from "../lib/tab";
 
 const data = fallData as FallItem[];
 
-export function FallHorizon() {
-  if (data.length === 0) return null;
+interface Props {
+  tab: TabMode;
+}
+
+export function FallHorizon({ tab }: Props) {
+  const items = data.filter((f) => matchesTab(tab, f.mode));
+  if (items.length === 0) return null;
   return (
-    <section className="band band-pro" aria-label="Fall horizon">
-      <h2 className="band-title">Fall 2026 horizon</h2>
+    <section className="band band-pro" aria-label="Fall / winter horizon">
+      <h2 className="band-title">Fall 2026 → Winter 2027 horizon</h2>
       <ul className="band-list">
-        {data.map((item) => (
+        {items.map((item) => (
           <li key={item.title} className="fall-item">
             <span className="fall-title">
               {item.url ? (
