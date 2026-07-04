@@ -55,9 +55,9 @@
   --free: #1A8C5A;
   --paid: #1A1A18;
 
-  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-display: "Iowan Old Style", "Palatino Linotype", "Palatino", Georgia, serif;
-  --font-mono: ui-monospace, "SFMono-Regular", "Courier New", monospace;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Bricolage Grotesque", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -527,16 +527,16 @@ a:hover {
 
 .app-title {
   font-family: var(--font-display);
-  font-size: 68px;
-  font-weight: 700;
-  font-style: italic;
-  margin: 0 0 12px;
-  letter-spacing: -0.03em;
-  line-height: 0.9;
+  font-size: 72px;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "wdth" 90;
+  margin: 0 0 14px;
+  letter-spacing: -0.035em;
+  line-height: 0.88;
   color: var(--text-1);
-  max-width: 780px;
+  max-width: 820px;
   position: relative;
-  padding-left: 4px;
 }
 
 .app-title::first-letter {
@@ -545,11 +545,12 @@ a:hover {
 
 .app-subtitle {
   color: var(--text-2);
-  font-size: 14px;
+  font-size: 15px;
   margin: 0;
   line-height: 1.5;
   font-family: var(--font-body);
-  max-width: 480px;
+  font-weight: 500;
+  max-width: 520px;
 }
 
 .verified {
@@ -623,10 +624,12 @@ a:hover {
 .tab-label {
   font-family: var(--font-display);
   font-size: 22px;
-  font-weight: 400;
-  font-style: italic;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 85;
+  letter-spacing: -0.02em;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 .tab-sub {
@@ -1026,13 +1029,15 @@ a:hover {
 
 .week-header {
   font-family: var(--font-display);
-  font-size: 34px;
-  font-weight: 400;
-  font-style: italic;
-  letter-spacing: -0.015em;
+  font-size: 38px;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 85;
+  letter-spacing: -0.03em;
   color: var(--text-1);
   margin: 0;
-  line-height: 0.95;
+  line-height: 0.9;
+  text-transform: none;
 }
 
 .is-current-week .week-head {
@@ -1415,11 +1420,11 @@ a:hover {
 
 .event-title {
   font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 19px;
+  font-weight: 600;
   color: var(--text-1);
-  line-height: 1.25;
-  letter-spacing: -0.005em;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
 }
 
 .event-title a {
