@@ -89,7 +89,6 @@ export function EventRow({
           )}
           {modeChip ? <span className="mode-chip">make</span> : null}
         </div>
-        {event.note ? <div className="event-note">{event.note}</div> : null}
         <div className="event-where">{event.where}</div>
       </div>
       <div className={`event-cost${isFree ? " free" : ""}`}>{event.cost}</div>
