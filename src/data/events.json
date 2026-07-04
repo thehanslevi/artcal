@@ -1160,6 +1160,20 @@
           "end": null,
           "note": null,
           "url": "https://summerstage.org"
+        },
+        {
+          "day": "Sun",
+          "date": "Jul 26",
+          "event": "Audio Collage Workshop: Exploring the Archive through Audio",
+          "where": "314 7th St, Park Slope",
+          "cost": "FREE",
+          "category": "sound",
+          "flag": null,
+          "mode": "make",
+          "start": "19:30",
+          "end": null,
+          "note": null,
+          "url": "https://interferencearchive.org/event/audio-collage-workshop-exploring-the-archive-through-audio/"
         }
       ]
     },

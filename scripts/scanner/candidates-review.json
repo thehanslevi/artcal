@@ -1,1 +1,128 @@
-[]
+[
+  {
+    "venue": "Interference Archive",
+    "event": "Collections Management Working Group Meeting",
+    "date": "Jul 8",
+    "reason": "bad start time",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Art Haus",
+    "event": "FOLKUS",
+    "date": "Jul 9",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Art Haus",
+    "event": "Cirkus Moxie Lab",
+    "date": "Jul 9",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Art Haus",
+    "event": "January 6th the Musical",
+    "date": "Jul 10",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Art Haus",
+    "event": "January 6th the Musical",
+    "date": "Jul 11",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Art Haus",
+    "event": "Hot Takes & Nerdy Topics",
+    "date": "Jul 11",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Art Haus",
+    "event": "Cirkus Moxie Lab",
+    "date": "Jul 12",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Art Haus",
+    "event": "Star Vehicle",
+    "date": "Jul 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Art Haus",
+    "event": "Judy Garland is Fat at Carnegie Hall",
+    "date": "Jul 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Art Haus",
+    "event": "Emoji: The Hieroglyphs of Our Time...",
+    "date": "Jul 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Art Haus",
+    "event": "FOLKUS",
+    "date": "Jul 16",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "UnionDocs",
+    "event": "The Magical Image: &lt;br&gt; Special Effects as Documentary Method",
+    "date": "Jul 24",
+    "reason": "duplicate of existing event",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Roulette",
+    "event": "No Fun New Perspectives: Bill Nace, Carlos Giffoni, Charmaine Lee, Twig Harper, and more (Night 1)",
+    "date": "Jul 9",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Roulette",
+    "event": "No Fun New Perspectives: Carlos Giffoni, Lee Ranaldo, Raven Chacon, Keith Fullerton Whitman, and more (Night 2)",
+    "date": "Jul 10",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Roulette",
+    "event": "No Fun New Perspectives: NIKA, Nate Wooley, Zeena Parkins, Ryan Sawyer, and more (Night 3)",
+    "date": "Jul 11",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Roulette",
+    "event": "Katherine Young: BIOMES (Album Release)",
+    "date": "Sep 17",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Roulette",
+    "event": "The Scores Project: A Book Release Show w/ The Rise of the Novel",
+    "date": "Sep 24",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Roulette",
+    "event": "John Zorn’s Alea Iacta Est (World Premiere)",
+    "date": "Sep 27",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  }
+]
