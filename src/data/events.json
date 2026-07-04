@@ -5,6 +5,20 @@
       "label": "Jul 6–12",
       "events": [
         {
+          "day": "Sun",
+          "date": "Jul 5",
+          "event": "Danspace Project: Dorrance Dance — SOUNDspace",
+          "where": "Danspace, St. Mark's Church, 131 E 10th St",
+          "cost": "$35",
+          "category": "dance",
+          "flag": "priority",
+          "mode": "witness",
+          "start": "20:00",
+          "end": null,
+          "note": "Runs Jul 5–11 (Jul 2–4 were cancelled due to heat).",
+          "url": "https://danspaceproject.org/calendar/"
+        },
+        {
           "day": "Mon",
           "date": "Jul 6",
           "event": "Dixon Place: HOT Festival Opening Night Party (34th annual)",
@@ -61,34 +75,6 @@
           "url": "https://dixonplace.org/"
         },
         {
-          "day": "Sun",
-          "date": "Jul 5",
-          "event": "Danspace Project: Dorrance Dance — SOUNDspace",
-          "where": "Danspace, St. Mark's Church, 131 E 10th St",
-          "cost": "$35",
-          "category": "dance",
-          "flag": "priority",
-          "mode": "witness",
-          "start": "20:00",
-          "end": null,
-          "note": "Runs Jul 5–11 (Jul 2–4 were cancelled due to heat).",
-          "url": "https://danspaceproject.org/calendar/"
-        },
-        {
-          "day": "Wed",
-          "date": "Jul 8",
-          "event": "Interference Archive: Collections Management Working Group",
-          "where": "314 7th St, Park Slope (hybrid — Zoom option)",
-          "cost": "FREE",
-          "category": "community",
-          "flag": null,
-          "mode": "make",
-          "start": "19:00",
-          "end": "20:00",
-          "note": "Sort donation requests, cataloging projects. Low-lift way to meet the collective.",
-          "url": "https://interferencearchive.org/events/"
-        },
-        {
           "day": "Tue",
           "date": "Jul 7",
           "event": "The Tank: The Battle of Guadalcanal",
@@ -105,6 +91,20 @@
         {
           "day": "Wed",
           "date": "Jul 8",
+          "event": "Interference Archive: Collections Management Working Group",
+          "where": "314 7th St, Park Slope (hybrid — Zoom option)",
+          "cost": "FREE",
+          "category": "community",
+          "flag": null,
+          "mode": "make",
+          "start": "19:00",
+          "end": "20:00",
+          "note": "Sort donation requests, cataloging projects. Low-lift way to meet the collective.",
+          "url": "https://interferencearchive.org/events/"
+        },
+        {
+          "day": "Wed",
+          "date": "Jul 8",
           "event": "Spoon / Ratboys / Bodega / Alisa Ali",
           "where": "Central Park",
           "cost": "FREE",
@@ -115,6 +115,34 @@
           "end": null,
           "note": null,
           "url": "https://summerstage.org"
+        },
+        {
+          "day": "Wed",
+          "date": "Jul 8",
+          "event": "Collections Management Working Group Meeting",
+          "where": "314 7th St, Park Slope",
+          "cost": "FREE",
+          "category": "community",
+          "flag": null,
+          "mode": "make",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://interferencearchive.org/event/collections-management-working-group-meeting-6/"
+        },
+        {
+          "day": "Wed",
+          "date": "Jul 8",
+          "event": "SHERMAN’S MARCH Q&A with Filmmaker Ross McElwee",
+          "where": "Film Forum, 209 W Houston St",
+          "cost": "$12-18",
+          "category": "film",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://filmforum.org/events/event/shermans-march-july-8"
         },
         {
           "day": "Thu",
@@ -215,6 +243,48 @@
           "url": "https://roulette.org/event/no-fun-new-perspectives-night-1/"
         },
         {
+          "day": "Thu",
+          "date": "Jul 9",
+          "event": "FOLKUS",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "sound",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://www.eventbrite.com/e/folkus-tickets-1979084278352?aff=oddtdtcreator"
+        },
+        {
+          "day": "Thu",
+          "date": "Jul 9",
+          "event": "Cirkus Moxie Lab",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "theatre",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://www.eventbrite.com/e/cirkus-moxie-lab-tickets-1992029994337?aff=oddtdtcreator"
+        },
+        {
+          "day": "Thu",
+          "date": "Jul 9",
+          "event": "SHERMAN’S MARCH Pre-screening conversation with Filmmaker Ross McElwee and Film Director Mira Nair",
+          "where": "Film Forum, 209 W Houston St",
+          "cost": "$12-18",
+          "category": "film",
+          "flag": null,
+          "mode": "witness",
+          "start": "19:00",
+          "end": null,
+          "note": null,
+          "url": "https://filmforum.org/events/event/shermans-march-july-9"
+        },
+        {
           "day": "Fri",
           "date": "Jul 10",
           "event": "The Tank: Golden Child",
@@ -241,20 +311,6 @@
           "end": null,
           "note": "Go for Raven Chacon — Diné composer, Pulitzer 2022",
           "url": "https://roulette.org/event/no-fun-new-perspectives-night-2/"
-        },
-        {
-          "day": "Sat",
-          "date": "Jul 11",
-          "event": "The Tank: Alternative Medicine",
-          "where": "The Tank, 312 W 36th St, Midtown West",
-          "cost": "TBD",
-          "category": "theatre",
-          "flag": null,
-          "mode": "witness",
-          "start": "15:00",
-          "end": null,
-          "note": "Matinee. Runs Jul 11–12.",
-          "url": "https://thetanknyc.org/tankcalendar"
         },
         {
           "day": "Fri",
@@ -341,6 +397,34 @@
           "url": "https://www.bkarthaus.com/shows-events"
         },
         {
+          "day": "Fri",
+          "date": "Jul 10",
+          "event": "January 6th the Musical",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "theatre",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://www.eventbrite.com/e/january-6th-the-musical-tickets-1990835917822?aff=oddtdtcreator"
+        },
+        {
+          "day": "Sat",
+          "date": "Jul 11",
+          "event": "The Tank: Alternative Medicine",
+          "where": "The Tank, 312 W 36th St, Midtown West",
+          "cost": "TBD",
+          "category": "theatre",
+          "flag": null,
+          "mode": "witness",
+          "start": "15:00",
+          "end": null,
+          "note": "Matinee. Runs Jul 11–12.",
+          "url": "https://thetanknyc.org/tankcalendar"
+        },
+        {
           "day": "Sat",
           "date": "Jul 11",
           "event": "BRIC Celebrate Brooklyn!: Community Joy Day",
@@ -411,6 +495,34 @@
           "url": "https://roulette.org/event/no-fun-new-perspectives-night-3/"
         },
         {
+          "day": "Sat",
+          "date": "Jul 11",
+          "event": "January 6th the Musical",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "theatre",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://www.eventbrite.com/e/january-6th-the-musical-tickets-1990835917822?aff=oddtdtcreator"
+        },
+        {
+          "day": "Sat",
+          "date": "Jul 11",
+          "event": "Hot Takes & Nerdy Topics",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "theatre",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://www.eventbrite.com/e/hot-takes-nerdy-topics-tickets-1990020276216?aff=oddtdtcreator"
+        },
+        {
           "day": "Sun",
           "date": "Jul 12",
           "event": "Pioneer Works Second Sundays — LaJuné McMillian open studio",
@@ -423,6 +535,20 @@
           "end": "18:00",
           "note": "ANIMAL [a listening gym] on view. Juma Sultan live 4–6pm. RSVP at pioneerworks.org",
           "url": "https://pioneerworks.org/programs/second-sundays-july-2026"
+        },
+        {
+          "day": "Sun",
+          "date": "Jul 12",
+          "event": "Cirkus Moxie Lab",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "theatre",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://www.eventbrite.com/e/cirkus-moxie-lab-tickets-1992029994337?aff=oddtdtcreator"
         }
       ]
     },
@@ -500,20 +626,6 @@
           "url": "https://www.bkarthaus.com/shows-events"
         },
         {
-          "day": "Wed",
-          "date": "Jul 15",
-          "event": "Brooklyn Art Haus: Emoji — The Hieroglyphs of Our Time (EdFest)",
-          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
-          "cost": "TBD",
-          "category": "theatre",
-          "flag": null,
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": "EdFest.",
-          "url": "https://www.bkarthaus.com/shows-events"
-        },
-        {
           "day": "Tue",
           "date": "Jul 14",
           "event": "The Tank: The Devil You Know",
@@ -570,6 +682,48 @@
           "url": "https://thetanknyc.org/tankcalendar"
         },
         {
+          "day": "Tue",
+          "date": "Jul 14",
+          "event": "Star Vehicle",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "theatre",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://www.eventbrite.com/e/star-vehicle-tickets-1990933536803?aff=oddtdtcreator"
+        },
+        {
+          "day": "Tue",
+          "date": "Jul 14",
+          "event": "Judy Garland is Fat at Carnegie Hall",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "theatre",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://www.eventbrite.com/e/judy-garland-is-fat-at-carnegie-hall-tickets-1990934647124?aff=oddtdtcreator"
+        },
+        {
+          "day": "Wed",
+          "date": "Jul 15",
+          "event": "Brooklyn Art Haus: Emoji — The Hieroglyphs of Our Time (EdFest)",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "theatre",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": "EdFest.",
+          "url": "https://www.bkarthaus.com/shows-events"
+        },
+        {
           "day": "Wed",
           "date": "Jul 15",
           "event": "The Tank: DIM",
@@ -596,6 +750,20 @@
           "end": "23:00",
           "note": "Interactive invitation to audience participation.",
           "url": "https://thetanknyc.org/tankcalendar"
+        },
+        {
+          "day": "Wed",
+          "date": "Jul 15",
+          "event": "Emoji: The Hieroglyphs of Our Time...",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "theatre",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://www.eventbrite.com/e/emoji-the-hieroglyphs-of-our-time-tickets-1990935735379?aff=oddtdtcreator"
         },
         {
           "day": "Thu",
@@ -640,20 +808,6 @@
           "url": "https://www.bkarthaus.com/shows-events"
         },
         {
-          "day": "Fri",
-          "date": "Jul 17",
-          "event": "Abrons Arts Center: Summer in the Plaza opens",
-          "where": "Abrons Arts Center, 466 Grand St, LES",
-          "cost": "FREE",
-          "category": "community",
-          "flag": null,
-          "mode": "witness",
-          "start": "18:00",
-          "end": "20:00",
-          "note": "Free outdoor plaza programming, 6–8pm. Runs Jul 17 – Aug 15.",
-          "url": "https://www.abronsartscenter.org/performing-arts"
-        },
-        {
           "day": "Thu",
           "date": "Jul 16",
           "event": "Mavis Staples / Brother Wallace",
@@ -666,6 +820,48 @@
           "end": null,
           "note": null,
           "url": "https://summerstage.org"
+        },
+        {
+          "day": "Thu",
+          "date": "Jul 16",
+          "event": "BAM: The Odyssey opens (film)",
+          "where": "BAM Rose Cinemas, 30 Lafayette Ave",
+          "cost": "TBD",
+          "category": "film",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": "Screening run opens.",
+          "url": "https://www.bam.org/"
+        },
+        {
+          "day": "Thu",
+          "date": "Jul 16",
+          "event": "FOLKUS",
+          "where": "Brooklyn Art Haus, 25 Marcy Ave, Williamsburg",
+          "cost": "TBD",
+          "category": "sound",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://www.eventbrite.com/e/folkus-tickets-1979084278352?aff=oddtdtcreator"
+        },
+        {
+          "day": "Fri",
+          "date": "Jul 17",
+          "event": "Abrons Arts Center: Summer in the Plaza opens",
+          "where": "Abrons Arts Center, 466 Grand St, LES",
+          "cost": "FREE",
+          "category": "community",
+          "flag": null,
+          "mode": "witness",
+          "start": "18:00",
+          "end": "20:00",
+          "note": "Free outdoor plaza programming, 6–8pm. Runs Jul 17 – Aug 15.",
+          "url": "https://www.abronsartscenter.org/performing-arts"
         },
         {
           "day": "Fri",
@@ -752,20 +948,6 @@
           "url": "http://mononoawarefilm.com/community-workshops"
         },
         {
-          "day": "Thu",
-          "date": "Jul 16",
-          "event": "BAM: The Odyssey opens (film)",
-          "where": "BAM Rose Cinemas, 30 Lafayette Ave",
-          "cost": "TBD",
-          "category": "film",
-          "flag": null,
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": "Screening run opens.",
-          "url": "https://www.bam.org/"
-        },
-        {
           "day": "Sat",
           "date": "Jul 18",
           "event": "ISSUE Project Room: Matana Roberts / Ben Vida + Sara Magenheimer",
@@ -820,6 +1002,34 @@
           "end": null,
           "note": "Jo Barchi, Ted Dodson + others reading. Free/sliding.",
           "url": "https://www.wendyssubway.com/programs"
+        },
+        {
+          "day": "Sat",
+          "date": "Jul 18",
+          "event": "Marion Davies - The Cardboard Lover",
+          "where": "Symphony Space, Upper West Side",
+          "cost": "TBD",
+          "category": "film",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://www.symphonyspace.org/events/marion-davies-the-cardboard-lover"
+        },
+        {
+          "day": "Sat",
+          "date": "Jul 18",
+          "event": "Maybe Sometimes: A Reading With Jo Barchi, Ted Dodson, Kristen Gallagher, Matt Longabucco, and Caroline Rayner",
+          "where": "Wendy's Subway, Bushwick/Ridgewood border",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "witness",
+          "start": "19:00",
+          "end": null,
+          "note": null,
+          "url": "https://www.wendyssubway.com/programs/events/maybe-sometimes-reading"
         },
         {
           "day": "Sun",
@@ -1023,6 +1233,20 @@
           "url": "https://thetanknyc.org/tankcalendar"
         },
         {
+          "day": "Thu",
+          "date": "Jul 23",
+          "event": "Bi-Weekly Writing Night",
+          "where": "Wendy's Subway, Bushwick/Ridgewood border",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "make",
+          "start": "19:30",
+          "end": null,
+          "note": null,
+          "url": "https://www.wendyssubway.com/programs/events/writing-night"
+        },
+        {
           "day": "Fri",
           "date": "Jul 24",
           "event": "BRIC Celebrate Brooklyn!: Cindy Blackman Santana Group + Patricia Brennan Septet + Lucía (jazz)",
@@ -1119,6 +1343,20 @@
           "end": "14:30",
           "note": "Generative writing workshop.",
           "url": "https://www.wendyssubway.com/programs"
+        },
+        {
+          "day": "Sat",
+          "date": "Jul 25",
+          "event": "Basic Instincts and Pure Desires: Workshop with Nico Vela Page",
+          "where": "Wendy's Subway, Bushwick/Ridgewood border",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "make",
+          "start": "12:00",
+          "end": null,
+          "note": null,
+          "url": "https://www.wendyssubway.com/programs/workshops/basic-instincts-and-pure-desires"
         },
         {
           "day": "Sun",
@@ -1429,20 +1667,6 @@
           "url": "https://www.filmforum.org/now-playing"
         },
         {
-          "day": "Fri",
-          "date": "Aug 21",
-          "event": "Film Forum: COPPOLA 3-week retrospective (25 films) opens",
-          "where": "Film Forum, 209 W Houston St",
-          "cost": "$12–18",
-          "category": "film",
-          "flag": "priority",
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": "Massive Coppola retrospective. Runs Aug 21 – Sep 10.",
-          "url": "https://www.filmforum.org/now-playing"
-        },
-        {
           "day": "Sat",
           "date": "Aug 15",
           "event": "Symphony Space: NT Live — Inter Alia (Encore)",
@@ -1471,20 +1695,6 @@
           "url": "https://www.symphonyspace.org/"
         },
         {
-          "day": "Sun",
-          "date": "Aug 23",
-          "event": "Symphony Space: NT Live — All My Sons",
-          "where": "Symphony Space, Upper West Side",
-          "cost": "TBD",
-          "category": "film",
-          "flag": null,
-          "mode": "witness",
-          "start": "18:00",
-          "end": null,
-          "note": "NT Live screening.",
-          "url": "https://www.symphonyspace.org/"
-        },
-        {
           "day": "Sat",
           "date": "Aug 15",
           "event": "Abrons Arts: Summer in the Plaza closes",
@@ -1499,6 +1709,34 @@
           "url": "https://www.abronsartscenter.org/performing-arts"
         },
         {
+          "day": "Sat",
+          "date": "Aug 15",
+          "event": "NT Live: Inter Alia (Encore)",
+          "where": "Symphony Space, Upper West Side",
+          "cost": "TBD",
+          "category": "film",
+          "flag": null,
+          "mode": "witness",
+          "start": "15:00",
+          "end": null,
+          "note": null,
+          "url": "https://www.symphonyspace.org/events/nt-live-inter-alia-encore"
+        },
+        {
+          "day": "Sat",
+          "date": "Aug 15",
+          "event": "NT Live: Les Liaisons Dangereuses",
+          "where": "Symphony Space, Upper West Side",
+          "cost": "TBD",
+          "category": "film",
+          "flag": null,
+          "mode": "witness",
+          "start": "18:00",
+          "end": null,
+          "note": null,
+          "url": "https://www.symphonyspace.org/events/nt-live-les-liaisons-dangereuses-2"
+        },
+        {
           "day": "Sun",
           "date": "Aug 16",
           "event": "Taiwanese Waves 10th: 9m88 + ØZI + YELLOW / Mong Tong + more",
@@ -1511,6 +1749,48 @@
           "end": null,
           "note": null,
           "url": "https://summerstage.org"
+        },
+        {
+          "day": "Fri",
+          "date": "Aug 21",
+          "event": "Film Forum: COPPOLA 3-week retrospective (25 films) opens",
+          "where": "Film Forum, 209 W Houston St",
+          "cost": "$12–18",
+          "category": "film",
+          "flag": "priority",
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": "Massive Coppola retrospective. Runs Aug 21 – Sep 10.",
+          "url": "https://www.filmforum.org/now-playing"
+        },
+        {
+          "day": "Sun",
+          "date": "Aug 23",
+          "event": "Symphony Space: NT Live — All My Sons",
+          "where": "Symphony Space, Upper West Side",
+          "cost": "TBD",
+          "category": "film",
+          "flag": null,
+          "mode": "witness",
+          "start": "18:00",
+          "end": null,
+          "note": "NT Live screening.",
+          "url": "https://www.symphonyspace.org/"
+        },
+        {
+          "day": "Sun",
+          "date": "Aug 23",
+          "event": "NT Live: All My Sons",
+          "where": "Symphony Space, Upper West Side",
+          "cost": "TBD",
+          "category": "film",
+          "flag": null,
+          "mode": "witness",
+          "start": "18:00",
+          "end": null,
+          "note": null,
+          "url": "https://www.symphonyspace.org/events/nt-live-all-my-sons-3"
         }
       ]
     },
@@ -1607,6 +1887,20 @@
           "url": "http://mononoawarefilm.com/community-workshops"
         },
         {
+          "day": "Tue",
+          "date": "Sep 8",
+          "event": "BAM: The Ford/Hill Project opens (theater)",
+          "where": "BAM Harvey Theater, 651 Fulton St",
+          "cost": "TBD",
+          "category": "theatre",
+          "flag": "priority",
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": "Runs Sep 8 – 20. BAM fall opener.",
+          "url": "https://www.bam.org/"
+        },
+        {
           "day": "Wed",
           "date": "Sep 9",
           "event": "Mono No Aware: Time Lapse on 16MM",
@@ -1618,20 +1912,6 @@
           "start": "19:00",
           "end": "22:00",
           "note": "Only 4 seats. Frame-by-frame time-lapse work + week-long rental after.",
-          "url": "http://mononoawarefilm.com/community-workshops"
-        },
-        {
-          "day": "Wed",
-          "date": "Sep 10",
-          "event": "Mono No Aware: Intro to 16MM + Bolex Rex5 (S1 of 5)",
-          "where": "Downtown Brooklyn",
-          "cost": "sliding scale",
-          "category": "film",
-          "flag": null,
-          "mode": "make",
-          "start": "19:00",
-          "end": "21:30",
-          "note": "Full professional workflow beginning and ending on 16mm. Continues Sep 17 & Oct 1, 8, + Sat Sep 19 (9am–5pm).",
           "url": "http://mononoawarefilm.com/community-workshops"
         },
         {
@@ -1649,32 +1929,18 @@
           "url": "https://www.nytw.org/2026-27-season/"
         },
         {
-          "day": "Tue",
-          "date": "Sep 8",
-          "event": "BAM: The Ford/Hill Project opens (theater)",
-          "where": "BAM Harvey Theater, 651 Fulton St",
-          "cost": "TBD",
-          "category": "theatre",
-          "flag": "priority",
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": "Runs Sep 8 – 20. BAM fall opener.",
-          "url": "https://www.bam.org/"
-        },
-        {
-          "day": "Sat",
-          "date": "Sep 12",
-          "event": "Symphony Space: R.F. Kuang — Taipei Story",
-          "where": "Symphony Space, Upper West Side",
-          "cost": "TBD",
-          "category": "literature",
+          "day": "Wed",
+          "date": "Sep 10",
+          "event": "Mono No Aware: Intro to 16MM + Bolex Rex5 (S1 of 5)",
+          "where": "Downtown Brooklyn",
+          "cost": "sliding scale",
+          "category": "film",
           "flag": null,
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": "Author appearance.",
-          "url": "https://www.symphonyspace.org/"
+          "mode": "make",
+          "start": "19:00",
+          "end": "21:30",
+          "note": "Full professional workflow beginning and ending on 16mm. Continues Sep 17 & Oct 1, 8, + Sat Sep 19 (9am–5pm).",
+          "url": "http://mononoawarefilm.com/community-workshops"
         },
         {
           "day": "Thu",
@@ -1721,6 +1987,20 @@
         {
           "day": "Sat",
           "date": "Sep 12",
+          "event": "Symphony Space: R.F. Kuang — Taipei Story",
+          "where": "Symphony Space, Upper West Side",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": "Author appearance.",
+          "url": "https://www.symphonyspace.org/"
+        },
+        {
+          "day": "Sat",
+          "date": "Sep 12",
           "event": "Mono No Aware: Test It Yourself — Super 8MM Camera Testing",
           "where": "Downtown Brooklyn",
           "cost": "$25+ sliding",
@@ -1745,6 +2025,20 @@
           "end": "21:00",
           "note": "Only 4 seats. Advanced high-speed camera work.",
           "url": "http://mononoawarefilm.com/community-workshops"
+        },
+        {
+          "day": "Sat",
+          "date": "Sep 12",
+          "event": "R.F. Kuang, Taipei Story",
+          "where": "Symphony Space, Upper West Side",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": "Acclaimed #1 New York Times bestselling author of Katabasis and Yellowface returns with her dazzling new novel.",
+          "url": "https://www.symphonyspace.org/events/r-f-kuang-taipei-story-at-symphony-space"
         }
       ]
     },
@@ -1822,34 +2116,6 @@
           "url": "https://roulette.org/calendar"
         },
         {
-          "day": "Fri",
-          "date": "Sep 18",
-          "event": "Film Forum: MY BROTHER'S WEDDING (Charles Burnett, 4K) opens",
-          "where": "Film Forum, 209 W Houston St",
-          "cost": "$12–18",
-          "category": "film",
-          "flag": "priority",
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": "Burnett restoration. Runs Sep 18–24.",
-          "url": "https://www.filmforum.org/now-playing"
-        },
-        {
-          "day": "Fri",
-          "date": "Sep 25",
-          "event": "Film Forum: UNZIPPED (Isaac Mizrahi, 4K) opens",
-          "where": "Film Forum, 209 W Houston St",
-          "cost": "$12–18",
-          "category": "film",
-          "flag": null,
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": "Runs Sep 25 – Oct 1.",
-          "url": "https://www.filmforum.org/now-playing"
-        },
-        {
           "day": "Wed",
           "date": "Sep 17",
           "event": "Mono No Aware: Intro to 16MM + Bolex Rex5 (S2 of 5)",
@@ -1862,6 +2128,34 @@
           "end": "21:30",
           "note": null,
           "url": "http://mononoawarefilm.com/community-workshops"
+        },
+        {
+          "day": "Thu",
+          "date": "Sep 17",
+          "event": "Bi-Weekly Writing Night",
+          "where": "Wendy's Subway, Bushwick/Ridgewood border",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "make",
+          "start": "19:00",
+          "end": null,
+          "note": null,
+          "url": "https://www.wendyssubway.com/programs/events/writing-night"
+        },
+        {
+          "day": "Fri",
+          "date": "Sep 18",
+          "event": "Film Forum: MY BROTHER'S WEDDING (Charles Burnett, 4K) opens",
+          "where": "Film Forum, 209 W Houston St",
+          "cost": "$12–18",
+          "category": "film",
+          "flag": "priority",
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": "Burnett restoration. Runs Sep 18–24.",
+          "url": "https://www.filmforum.org/now-playing"
         },
         {
           "day": "Sat",
@@ -1962,6 +2256,34 @@
           "url": "https://roulette.org/calendar"
         },
         {
+          "day": "Thu",
+          "date": "Sep 24",
+          "event": "Baryshnikov Arts: \"I Believed It Too\" — Kashia Kancey (director/choreographer)",
+          "where": "Baryshnikov Arts Center, 450 W 37th St",
+          "cost": "TBD",
+          "category": "dance",
+          "flag": "priority",
+          "mode": "witness",
+          "start": "19:00",
+          "end": null,
+          "note": "Boisterous, sweaty, glamorous. Runs Sep 24–26.",
+          "url": "https://baryshnikovarts.org/"
+        },
+        {
+          "day": "Fri",
+          "date": "Sep 25",
+          "event": "Film Forum: UNZIPPED (Isaac Mizrahi, 4K) opens",
+          "where": "Film Forum, 209 W Houston St",
+          "cost": "$12–18",
+          "category": "film",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": "Runs Sep 25 – Oct 1.",
+          "url": "https://www.filmforum.org/now-playing"
+        },
+        {
           "day": "Sat",
           "date": "Sep 26",
           "event": "Mono No Aware: Blow Ups — 16MM to 120 Medium Format",
@@ -1990,20 +2312,6 @@
           "url": "https://roulette.org/calendar"
         },
         {
-          "day": "Thu",
-          "date": "Sep 24",
-          "event": "Baryshnikov Arts: \"I Believed It Too\" — Kashia Kancey (director/choreographer)",
-          "where": "Baryshnikov Arts Center, 450 W 37th St",
-          "cost": "TBD",
-          "category": "dance",
-          "flag": "priority",
-          "mode": "witness",
-          "start": "19:00",
-          "end": null,
-          "note": "Boisterous, sweaty, glamorous. Runs Sep 24–26.",
-          "url": "https://baryshnikovarts.org/"
-        },
-        {
           "day": "Mon",
           "date": "Sep 28",
           "event": "Symphony Space: Kyle MacLachlan — Fictional Selves",
@@ -2018,6 +2326,20 @@
           "url": "https://www.symphonyspace.org/"
         },
         {
+          "day": "Mon",
+          "date": "Sep 28",
+          "event": "Kyle MacLachlan, Fictional Selves",
+          "where": "Symphony Space, Upper West Side",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": "Actor Kyle MacLachlan joins us for an evening of conversation about his highly anticipated memoir, Fictional Selves.",
+          "url": "https://www.symphonyspace.org/events/kyle-maclachlan-fictional-selves"
+        },
+        {
           "day": "Tue",
           "date": "Sep 29",
           "event": "Mono No Aware: Super 8mm on Ektachrome (S3 of 4)",
@@ -2030,6 +2352,20 @@
           "end": "21:30",
           "note": null,
           "url": "http://mononoawarefilm.com/community-workshops"
+        },
+        {
+          "day": "Tue",
+          "date": "Sep 29",
+          "event": "NT Live: Les Liaisons Dangereuses",
+          "where": "Symphony Space, Upper West Side",
+          "cost": "TBD",
+          "category": "film",
+          "flag": null,
+          "mode": "witness",
+          "start": "15:30",
+          "end": null,
+          "note": null,
+          "url": "https://www.symphonyspace.org/events/nt-live-les-liaisons-dangereuses-2"
         }
       ]
     },
@@ -2037,60 +2373,18 @@
       "label": "Oct 1–15",
       "events": [
         {
-          "day": "Mon",
-          "date": "Oct 5",
-          "event": "Baryshnikov Arts Fall Fête — Laurie Anderson performance",
-          "where": "Baryshnikov Arts Center, 450 W 37th St",
-          "cost": "TBD",
-          "category": "sound",
-          "flag": "priority",
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": "Special performance by Laurie Anderson at BAC's annual fête. Rare.",
-          "url": "https://baryshnikovarts.org/"
-        },
-        {
-          "day": "Wed",
-          "date": "Oct 7",
-          "event": "BAM: Hewa Rwanda — Letter to the absent",
-          "where": "BAM Fisher, 321 Ashland Pl",
-          "cost": "TBD",
-          "category": "theatre",
-          "flag": "priority",
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": "Runs Oct 7–11. Theater + music.",
-          "url": "https://www.bam.org/"
-        },
-        {
-          "day": "Tue",
-          "date": "Oct 13",
-          "event": "BAM: VIBE — Secrets of Strong Connections in a Lonely World (talk)",
-          "where": "BAM, 30 Lafayette Ave",
+          "day": "Thu",
+          "date": "Oct 1",
+          "event": "Bi-Weekly Writing Night",
+          "where": "Wendy's Subway, Bushwick/Ridgewood border",
           "cost": "TBD",
           "category": "literature",
           "flag": null,
-          "mode": "witness",
-          "start": null,
+          "mode": "make",
+          "start": "19:00",
           "end": null,
           "note": null,
-          "url": "https://www.bam.org/"
-        },
-        {
-          "day": "Tue",
-          "date": "Oct 13",
-          "event": "BAM: PRELUDE (free outdoor)",
-          "where": "BAM outdoor plaza, 30 Lafayette Ave",
-          "cost": "FREE",
-          "category": "theatre",
-          "flag": "priority",
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": "FREE outdoor theater. Runs Oct 13–15.",
-          "url": "https://www.bam.org/"
+          "url": "https://www.wendyssubway.com/programs/events/writing-night"
         },
         {
           "day": "Fri",
@@ -2121,6 +2415,34 @@
           "url": "https://www.abronsartscenter.org/performing-arts"
         },
         {
+          "day": "Mon",
+          "date": "Oct 5",
+          "event": "Baryshnikov Arts Fall Fête — Laurie Anderson performance",
+          "where": "Baryshnikov Arts Center, 450 W 37th St",
+          "cost": "TBD",
+          "category": "sound",
+          "flag": "priority",
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": "Special performance by Laurie Anderson at BAC's annual fête. Rare.",
+          "url": "https://baryshnikovarts.org/"
+        },
+        {
+          "day": "Wed",
+          "date": "Oct 7",
+          "event": "BAM: Hewa Rwanda — Letter to the absent",
+          "where": "BAM Fisher, 321 Ashland Pl",
+          "cost": "TBD",
+          "category": "theatre",
+          "flag": "priority",
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": "Runs Oct 7–11. Theater + music.",
+          "url": "https://www.bam.org/"
+        },
+        {
           "day": "Thu",
           "date": "Oct 8",
           "event": "New York Live Arts: Allegra — Benjamin Akio Kimitch",
@@ -2133,12 +2455,68 @@
           "end": null,
           "note": "Runs Oct 8–10.",
           "url": "https://newyorklivearts.org/calendar/"
+        },
+        {
+          "day": "Tue",
+          "date": "Oct 13",
+          "event": "BAM: VIBE — Secrets of Strong Connections in a Lonely World (talk)",
+          "where": "BAM, 30 Lafayette Ave",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://www.bam.org/"
+        },
+        {
+          "day": "Tue",
+          "date": "Oct 13",
+          "event": "BAM: PRELUDE (free outdoor)",
+          "where": "BAM outdoor plaza, 30 Lafayette Ave",
+          "cost": "FREE",
+          "category": "theatre",
+          "flag": "priority",
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": "FREE outdoor theater. Runs Oct 13–15.",
+          "url": "https://www.bam.org/"
+        },
+        {
+          "day": "Thu",
+          "date": "Oct 15",
+          "event": "Bi-Weekly Writing Night",
+          "where": "Wendy's Subway, Bushwick/Ridgewood border",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "make",
+          "start": "19:00",
+          "end": null,
+          "note": null,
+          "url": "https://www.wendyssubway.com/programs/events/writing-night"
         }
       ]
     },
     {
       "label": "Oct 16–31",
       "events": [
+        {
+          "day": "Sat",
+          "date": "Oct 17",
+          "event": "Abrons Arts: Fall Festival",
+          "where": "Abrons Arts Center, 466 Grand St, LES",
+          "cost": "FREE",
+          "category": "community",
+          "flag": null,
+          "mode": "witness",
+          "start": "12:00",
+          "end": "16:00",
+          "note": "Free community fall festival.",
+          "url": "https://www.abronsartscenter.org/performing-arts"
+        },
         {
           "day": "Mon",
           "date": "Oct 19",
@@ -2182,6 +2560,20 @@
           "url": "https://baryshnikovarts.org/"
         },
         {
+          "day": "Fri",
+          "date": "Oct 23",
+          "event": "New York Live Arts: Toi, moi, Tituba — Dorothée Munyaneza / Kadidi Company",
+          "where": "New York Live Arts, 219 W 19th St, Chelsea",
+          "cost": "TBD",
+          "category": "dance",
+          "flag": "priority",
+          "mode": "witness",
+          "start": "19:30",
+          "end": null,
+          "note": "Runs Oct 23–24. International commission.",
+          "url": "https://newyorklivearts.org/calendar/"
+        },
+        {
           "day": "Sat",
           "date": "Oct 24",
           "event": "BAM: I Guess It Was My Destiny To Live So Long (poetry)",
@@ -2196,52 +2588,24 @@
           "url": "https://www.bam.org/"
         },
         {
-          "day": "Sat",
-          "date": "Oct 17",
-          "event": "Abrons Arts: Fall Festival",
-          "where": "Abrons Arts Center, 466 Grand St, LES",
-          "cost": "FREE",
-          "category": "community",
-          "flag": null,
-          "mode": "witness",
-          "start": "12:00",
-          "end": "16:00",
-          "note": "Free community fall festival.",
-          "url": "https://www.abronsartscenter.org/performing-arts"
-        },
-        {
-          "day": "Fri",
-          "date": "Oct 23",
-          "event": "New York Live Arts: Toi, moi, Tituba — Dorothée Munyaneza / Kadidi Company",
-          "where": "New York Live Arts, 219 W 19th St, Chelsea",
+          "day": "Thu",
+          "date": "Oct 29",
+          "event": "Bi-Weekly Writing Night",
+          "where": "Wendy's Subway, Bushwick/Ridgewood border",
           "cost": "TBD",
-          "category": "dance",
-          "flag": "priority",
-          "mode": "witness",
-          "start": "19:30",
+          "category": "literature",
+          "flag": null,
+          "mode": "make",
+          "start": "19:00",
           "end": null,
-          "note": "Runs Oct 23–24. International commission.",
-          "url": "https://newyorklivearts.org/calendar/"
+          "note": null,
+          "url": "https://www.wendyssubway.com/programs/events/writing-night"
         }
       ]
     },
     {
       "label": "Nov 1–15",
       "events": [
-        {
-          "day": "Sat",
-          "date": "Nov 7",
-          "event": "Roulette: M³ Festival 2026 (5th annual)",
-          "where": "Roulette, 509 Atlantic Ave, Brooklyn",
-          "cost": "TBD",
-          "category": "sound",
-          "flag": "priority",
-          "mode": "witness",
-          "start": "19:00",
-          "end": null,
-          "note": "5th annual M³ festival — innovative music.",
-          "url": "https://roulette.org/calendar"
-        },
         {
           "day": "Wed",
           "date": "Nov 4",
@@ -2255,6 +2619,48 @@
           "end": null,
           "note": "Runs Nov 4–7.",
           "url": "https://www.bam.org/"
+        },
+        {
+          "day": "Thu",
+          "date": "Nov 5",
+          "event": "Abrons Arts: Natalia Lassalle-Morillo — En Parábola / Conversations on Tragedy opens",
+          "where": "Abrons Arts Center, 466 Grand St, LES",
+          "cost": "TBD",
+          "category": "theatre",
+          "flag": "priority",
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": "Long run Nov 5 – Dec 20.",
+          "url": "https://www.abronsartscenter.org/performing-arts"
+        },
+        {
+          "day": "Fri",
+          "date": "Nov 6",
+          "event": "New York Live Arts: this is the beginning, this is the end — Joanna Kotze",
+          "where": "New York Live Arts, 219 W 19th St, Chelsea",
+          "cost": "TBD",
+          "category": "dance",
+          "flag": null,
+          "mode": "witness",
+          "start": "19:30",
+          "end": null,
+          "note": "Runs Nov 6–7, 11–14.",
+          "url": "https://newyorklivearts.org/calendar/"
+        },
+        {
+          "day": "Sat",
+          "date": "Nov 7",
+          "event": "Roulette: M³ Festival 2026 (5th annual)",
+          "where": "Roulette, 509 Atlantic Ave, Brooklyn",
+          "cost": "TBD",
+          "category": "sound",
+          "flag": "priority",
+          "mode": "witness",
+          "start": "19:00",
+          "end": null,
+          "note": "5th annual M³ festival — innovative music.",
+          "url": "https://roulette.org/calendar"
         },
         {
           "day": "Wed",
@@ -2286,34 +2692,6 @@
         },
         {
           "day": "Thu",
-          "date": "Nov 5",
-          "event": "Abrons Arts: Natalia Lassalle-Morillo — En Parábola / Conversations on Tragedy opens",
-          "where": "Abrons Arts Center, 466 Grand St, LES",
-          "cost": "TBD",
-          "category": "theatre",
-          "flag": "priority",
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": "Long run Nov 5 – Dec 20.",
-          "url": "https://www.abronsartscenter.org/performing-arts"
-        },
-        {
-          "day": "Fri",
-          "date": "Nov 6",
-          "event": "New York Live Arts: this is the beginning, this is the end — Joanna Kotze",
-          "where": "New York Live Arts, 219 W 19th St, Chelsea",
-          "cost": "TBD",
-          "category": "dance",
-          "flag": null,
-          "mode": "witness",
-          "start": "19:30",
-          "end": null,
-          "note": "Runs Nov 6–7, 11–14.",
-          "url": "https://newyorklivearts.org/calendar/"
-        },
-        {
-          "day": "Thu",
           "date": "Nov 12",
           "event": "Abrons Arts: Cherrie Yu — Daily Diversions (World Premiere)",
           "where": "Abrons Arts Center, 466 Grand St, LES",
@@ -2325,6 +2703,20 @@
           "end": null,
           "note": "Runs Nov 12–14. World premiere.",
           "url": "https://www.abronsartscenter.org/performing-arts"
+        },
+        {
+          "day": "Thu",
+          "date": "Nov 12",
+          "event": "Bi-Weekly Writing Night",
+          "where": "Wendy's Subway, Bushwick/Ridgewood border",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "make",
+          "start": "19:00",
+          "end": null,
+          "note": null,
+          "url": "https://www.wendyssubway.com/programs/events/writing-night"
         }
       ]
     },
