@@ -19,7 +19,7 @@ I wanted a personalized instrument for moving through the artworld and my own ar
 
 ## What it is
 
-- A weekly calendar of dated events across venues including theater, dance, film, music, workshops, readings, and more.
+- A weekly calendar of events across venues including theatre, dance, film, music, workshops, readings, and more.
 - Two modes: **Practice** (classes and workshops, `mode: make`) and **Attend** (shows and screenings, `mode: witness`).
 - A picks / shortlist system with passphrase-based cross-device sync — star on my phone, see it on my laptop.
 - A self-updating ICS feed so the whole thing lives in Google Calendar alongside everything else.
@@ -43,7 +43,7 @@ I wanted a personalized instrument for moving through the artworld and my own ar
 - **make** — printmaking, book arts, woodworking, darkroom
 - **stage** — theatre, performance
 - **word** — writing groups, readings
-- **circle** — social practice, hospitality, meditation
+- **circle** — social practice, communal meals, meditation
 
 Each shows in a distinct color so I can scan a week in a second.
 
