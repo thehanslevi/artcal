@@ -1,0 +1,48 @@
+name: Scan events
+
+on:
+  schedule:
+    - cron: "0 12 * * 0"  # Sundays at 12:00 UTC (~7am ET / 8am ET DST)
+  workflow_dispatch:      # allow manual runs from the Actions tab
+
+concurrency:
+  group: scan-events
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run scanner
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npx tsx scripts/scan-events.ts
+
+      - name: Commit changes
+        run: |
+          git config user.name  "calendar-scanner[bot]"
+          git config user.email "calendar-scanner@users.noreply.github.com"
+          git add src/data/events.json scripts/scanner/candidates-review.json scripts/scanner/last-run.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            SUMMARY=$(node -e "const s=require('./scripts/scanner/last-run.json'); console.log('accepted '+s.acceptedTotal+' · flagged '+s.rejectedTotal);")
+            git commit -m "Auto-scan: $SUMMARY"
+            git push
+          fi
