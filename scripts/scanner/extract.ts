@@ -1,13 +1,15 @@
-import Anthropic from "@anthropic-ai/sdk";
+import { GoogleGenerativeAI, SchemaType } from "@google/generative-ai";
 import type { CalEvent } from "../../src/types";
+import { extractJsonLdEvents } from "./extract-jsonld.ts";
 import type { Venue } from "./venues";
 
-const MODEL = "claude-sonnet-5";
+const MODEL = "gemini-1.5-flash";
 
 export interface Candidate {
   event: CalEvent;
   venue: Venue;
   sourceHtml: string;
+  source: "json-ld" | "llm";
 }
 
 const SYSTEM_PROMPT = `You extract dated cultural events from raw HTML into strict JSON.
@@ -36,31 +38,49 @@ Mode (pick one):
 - witness (audience-only — show, screening, concert, reading)
 
 Flag (pick one or null):
-- "urgent" (venue explicitly says "going fast" / "sold out soon")
-- "priority" (rare, milestone, world premiere, one-of-a-kind)
-- "decide" (event happens soon and requires a decision)
+- "urgent" if the venue explicitly says "going fast" or "sold out soon"
+- "priority" if the event is rare, milestone, world premiere, one-of-a-kind
+- "decide" if the event is imminent and requires a decision
 - null (default)
 
-Output strict JSON with this shape (no prose, no markdown fences):
+For each event: fill day, date, event title verbatim, where (fall back to venue's provided location if none in source), cost ("FREE" / "$X" / "$X-Y" / "TBD"), category, mode, start/end HH:MM or null, short note (or null), url (canonical event URL or fall back to venue page).`;
 
-{
-  "events": [
-    {
-      "day": "Wed",
-      "date": "Jul 8",
-      "event": "Event title verbatim from source",
-      "where": "provided venue string",
-      "cost": "FREE" or "$X" or "$X–Y" or "TBD",
-      "category": "one of the above",
-      "flag": null,
-      "mode": "make" or "witness",
-      "start": "19:00" or null,
-      "end": "20:30" or null,
-      "note": "short one-line context (optional)",
-      "url": "canonical URL for this event (or the venue page if none)"
-    }
-  ]
-}`;
+const RESPONSE_SCHEMA = {
+  type: SchemaType.OBJECT,
+  properties: {
+    events: {
+      type: SchemaType.ARRAY,
+      items: {
+        type: SchemaType.OBJECT,
+        properties: {
+          day: { type: SchemaType.STRING },
+          date: { type: SchemaType.STRING },
+          event: { type: SchemaType.STRING },
+          where: { type: SchemaType.STRING },
+          cost: { type: SchemaType.STRING },
+          category: { type: SchemaType.STRING },
+          flag: { type: SchemaType.STRING, nullable: true },
+          mode: { type: SchemaType.STRING },
+          start: { type: SchemaType.STRING, nullable: true },
+          end: { type: SchemaType.STRING, nullable: true },
+          note: { type: SchemaType.STRING, nullable: true },
+          url: { type: SchemaType.STRING },
+        },
+        required: [
+          "day",
+          "date",
+          "event",
+          "where",
+          "cost",
+          "category",
+          "mode",
+          "url",
+        ],
+      },
+    },
+  },
+  required: ["events"],
+};
 
 export async function extractFromVenue(
   venue: Venue,
@@ -69,7 +89,34 @@ export async function extractFromVenue(
   const html = await fetchHtml(venue.url);
   if (!html) return [];
 
-  const client = new Anthropic();
+  // First pass: try JSON-LD structured data (free, deterministic)
+  const jsonLd = extractJsonLdEvents(html, venue, todayISO);
+  if (jsonLd.length > 0) {
+    return jsonLd.map((event) => ({
+      event,
+      venue,
+      sourceHtml: html,
+      source: "json-ld" as const,
+    }));
+  }
+
+  // Fallback: LLM extraction on the unstructured HTML
+  if (!process.env.GOOGLE_API_KEY) {
+    console.warn(`   no JSON-LD and no GOOGLE_API_KEY — skipping ${venue.name}`);
+    return [];
+  }
+
+  const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
+  const model = genAI.getGenerativeModel({
+    model: MODEL,
+    systemInstruction: SYSTEM_PROMPT,
+    generationConfig: {
+      responseMimeType: "application/json",
+      responseSchema: RESPONSE_SCHEMA,
+      temperature: 0,
+    },
+  });
+
   const userPrompt = `Venue: ${venue.name}
 Venue location string: ${venue.whereTemplate}
 Venue's default category: ${venue.category}
@@ -79,19 +126,8 @@ Today's date (skip anything before): ${todayISO}
 HTML (truncated to 40k chars):
 ${html.slice(0, 40000)}`;
 
-  const response = await client.messages.create({
-    model: MODEL,
-    max_tokens: 4096,
-    system: SYSTEM_PROMPT,
-    messages: [{ role: "user", content: userPrompt }],
-  });
-
-  const text = response.content
-    .filter((b): b is Anthropic.TextBlock => b.type === "text")
-    .map((b) => b.text)
-    .join("\n")
-    .trim();
-
+  const response = await model.generateContent(userPrompt);
+  const text = response.response.text();
   const parsed = safeParse(text);
   if (!parsed?.events) return [];
 
@@ -99,7 +135,7 @@ ${html.slice(0, 40000)}`;
   for (const raw of parsed.events) {
     const event = normalize(raw, venue);
     if (!event) continue;
-    candidates.push({ event, venue, sourceHtml: html });
+    candidates.push({ event, venue, sourceHtml: html, source: "llm" });
   }
   return candidates;
 }
@@ -126,8 +162,7 @@ function safeParse(text: string): { events?: unknown[] } | null {
     .replace(/\s*```\s*$/i, "")
     .trim();
   try {
-    const parsed = JSON.parse(cleaned) as { events?: unknown[] };
-    return parsed;
+    return JSON.parse(cleaned) as { events?: unknown[] };
   } catch {
     return null;
   }

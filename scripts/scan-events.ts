@@ -15,12 +15,16 @@ interface Rejection {
   event: string;
   date: string;
   reason: string;
+  source: "json-ld" | "llm";
 }
 
 async function main(): Promise<void> {
-  if (!process.env.ANTHROPIC_API_KEY) {
-    console.error("ANTHROPIC_API_KEY not set — cannot scan.");
-    process.exit(1);
+  // GOOGLE_API_KEY is only required for LLM fallback.
+  // Venues with JSON-LD structured data work without it.
+  if (!process.env.GOOGLE_API_KEY) {
+    console.warn(
+      "GOOGLE_API_KEY not set — LLM fallback disabled. Will only ingest venues with JSON-LD data.",
+    );
   }
 
   const events = JSON.parse(readFileSync(EVENTS_PATH, "utf8")) as EventsData;
@@ -31,14 +35,27 @@ async function main(): Promise<void> {
   const runGate = makeGateRunner(events, todayISO, year);
   const accepted: CalEvent[] = [];
   const rejected: Rejection[] = [];
-  const perVenue: Record<string, { accepted: number; rejected: number; error?: string }> = {};
+  const perVenue: Record<
+    string,
+    {
+      accepted: number;
+      rejected: number;
+      source: "json-ld" | "llm" | "none";
+      error?: string;
+    }
+  > = {};
 
   for (const venue of VENUES) {
     console.log(`→ ${venue.name} · ${venue.url}`);
-    perVenue[venue.name] = { accepted: 0, rejected: 0 };
+    perVenue[venue.name] = { accepted: 0, rejected: 0, source: "none" };
     try {
       const candidates = await extractFromVenue(venue, todayISO);
-      console.log(`   extracted ${candidates.length} candidates`);
+      if (candidates.length > 0) {
+        perVenue[venue.name].source = candidates[0].source;
+      }
+      console.log(
+        `   extracted ${candidates.length} candidates (${perVenue[venue.name].source})`,
+      );
       for (const c of candidates) {
         const gate = runGate(c);
         if (gate.pass) {
@@ -50,6 +67,7 @@ async function main(): Promise<void> {
             event: c.event.event,
             date: c.event.date,
             reason: gate.reason ?? "unknown",
+            source: c.source,
           });
           perVenue[venue.name].rejected += 1;
         }
