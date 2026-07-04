@@ -1,6 +1,31 @@
 import type { CalEvent, EventsData } from "../../src/types";
 import type { Candidate } from "./extract";
 
+const STOP_WORDS = new Set([
+  "the", "a", "an", "and", "or", "at", "on", "in", "of", "to", "for",
+  "with", "by", "from", "as", "is", "are", "was", "were", "presents",
+  "meeting", "event", "night",
+]);
+
+const SIMILARITY_THRESHOLD = 0.5;
+
+function titleTokens(title: string): Set<string> {
+  return new Set(
+    title
+      .toLowerCase()
+      .replace(/[^a-z0-9 ]+/g, " ")
+      .split(/\s+/)
+      .filter((t) => t.length >= 3 && !STOP_WORDS.has(t)),
+  );
+}
+
+function jaccard(a: Set<string>, b: Set<string>): number {
+  if (a.size === 0 || b.size === 0) return 0;
+  const intersection = new Set([...a].filter((x) => b.has(x)));
+  const union = new Set([...a, ...b]);
+  return intersection.size / union.size;
+}
+
 const VALID_CATEGORIES = new Set<CalEvent["category"]>([
   "sound",
   "dance",
@@ -34,22 +59,16 @@ export interface GateResult {
   reason?: string;
 }
 
-export function slug(s: string): string {
-  return s
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 60);
-}
-
-function existingKeys(existing: EventsData): Set<string> {
-  const keys = new Set<string>();
+function buildDateIndex(existing: EventsData): Map<string, CalEvent[]> {
+  const byDate = new Map<string, CalEvent[]>();
   for (const w of existing.weeks) {
     for (const e of w.events) {
-      keys.add(`${e.date}|${slug(e.event)}`);
+      const arr = byDate.get(e.date) ?? [];
+      arr.push(e);
+      byDate.set(e.date, arr);
     }
   }
-  return keys;
+  return byDate;
 }
 
 export function makeGateRunner(
@@ -57,7 +76,7 @@ export function makeGateRunner(
   todayISO: string,
   year: number,
 ) {
-  const seen = existingKeys(existing);
+  const dateIndex = buildDateIndex(existing);
   const today = new Date(todayISO);
 
   return function runGates(candidate: Candidate): GateResult {
@@ -86,9 +105,18 @@ export function makeGateRunner(
     maxAhead.setMonth(maxAhead.getMonth() + 18);
     if (eventDate > maxAhead) return fail("date more than 18 months out");
 
-    // Duplicate check
-    const key = `${event.date}|${slug(event.event)}`;
-    if (seen.has(key)) return fail("duplicate of existing event");
+    // Duplicate check: same date + significant title overlap
+    const existingOnDate = dateIndex.get(event.date) ?? [];
+    const candidateTokens = titleTokens(event.event);
+    for (const existingEvent of existingOnDate) {
+      const existingTokens = titleTokens(existingEvent.event);
+      const sim = jaccard(candidateTokens, existingTokens);
+      if (sim >= SIMILARITY_THRESHOLD) {
+        return fail(
+          `duplicate of existing (${sim.toFixed(2)} similarity to "${existingEvent.event}")`,
+        );
+      }
+    }
 
     // Anti-hallucination: the date should be discoverable in the source HTML.
     const html = sourceHtml.toLowerCase();
@@ -137,8 +165,10 @@ export function makeGateRunner(
     if (event.start && !isHhmm(event.start)) return fail("bad start time");
     if (event.end && !isHhmm(event.end)) return fail("bad end time");
 
-    // Register so later candidates don't re-add the same date+slug
-    seen.add(key);
+    // Register in the date index so later candidates this run don't dup either
+    const arr = dateIndex.get(event.date) ?? [];
+    arr.push(event);
+    dateIndex.set(event.date, arr);
 
     return { pass: true };
   };
