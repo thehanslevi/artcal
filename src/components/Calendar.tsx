@@ -96,7 +96,16 @@ export function Calendar({
   // Auto-select current/next week if user hasn't chosen
   const autoIndex = (() => {
     const currentIdx = shownWeeks.findIndex((w) => w.current);
-    if (currentIdx !== -1) return currentIdx;
+    if (currentIdx !== -1) {
+      // On the week's final day (Sunday), most of it is behind us — focus
+      // next week instead; the arrows still reach today.
+      const endsToday =
+        daysUntilFn(shownWeeks[currentIdx].range.end, now) <= 0;
+      if (endsToday && currentIdx + 1 < shownWeeks.length) {
+        return currentIdx + 1;
+      }
+      return currentIdx;
+    }
     const futureIdx = shownWeeks.findIndex((w) => w.range.start >= now);
     if (futureIdx !== -1) return futureIdx;
     return 0;
