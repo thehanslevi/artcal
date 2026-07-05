@@ -29,6 +29,19 @@ export function savePassphrase(passphrase: string | null): void {
   }
 }
 
+/** Unguessable, retypeable token (~62 bits) used as an auto-generated passphrase. */
+export function generateToken(): string {
+  const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+  const bytes = new Uint8Array(12);
+  crypto.getRandomValues(bytes);
+  let out = "";
+  for (let i = 0; i < bytes.length; i++) {
+    if (i === 4 || i === 8) out += "-";
+    out += chars[bytes[i]! % chars.length];
+  }
+  return out;
+}
+
 export async function hashPassphrase(passphrase: string): Promise<string> {
   const encoder = new TextEncoder();
   const data = encoder.encode(passphrase.trim());

@@ -11,6 +11,7 @@ import { today } from "./lib/dates";
 import { loadPicks, pickId, savePicks } from "./lib/picks";
 import {
   fetchPicks,
+  generateToken,
   loadPassphrase,
   savePassphrase,
   uploadPicks,
@@ -43,6 +44,7 @@ function App() {
   const [picks, setPicks] = useState<Set<string>>(() => loadPicks());
   const [passphrase, setPassphrase] = useState<string | null>(() => loadPassphrase());
   const [syncStatus, setSyncStatus] = useState<SyncStatus>({ kind: "idle" });
+  const [subscribeOpen, setSubscribeOpen] = useState(false);
   const todayLabel = useMemo(() => TODAY_FMT.format(today()), []);
   const uploadTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const skipNextUpload = useRef(false);
@@ -124,6 +126,17 @@ function App() {
     }
   }, []);
 
+  // One-click personal calendar: mint a secret token as the passphrase if
+  // none exists (the sync effect then uploads picks), and show the feed URL.
+  const handleCreateLink = useCallback(() => {
+    if (!passphrase) {
+      const token = generateToken();
+      savePassphrase(token);
+      setPassphrase(token);
+    }
+    setSubscribeOpen(true);
+  }, [passphrase]);
+
   const handleSyncNow = useCallback(async () => {
     if (!passphrase) return;
     setSyncStatus({ kind: "syncing" });
@@ -164,29 +177,64 @@ function App() {
 
   return (
     <div className="app">
-      <header className="app-header">
-        <div className="app-header-row">
-          <div>
-            <h1 className="app-title">NYC Art Practice &amp; Programming Calendar</h1>
-            <p className="app-subtitle">
-              Summer–Fall 2026 — classes, studios, shows across NYC.
-            </p>
-            <p className="verified">
-              Today {todayLabel} · last verified {data.lastVerified}
-            </p>
+      <header className="zone zone-header">
+        <div className="zone-inner">
+          <div className="app-header-row">
+            <div>
+              <h1 className="app-title">NYC Art Practice &amp; Programming Calendar</h1>
+              <p className="app-subtitle">
+                Summer–Fall 2026 — classes, studios, shows across NYC.
+              </p>
+              <p className="verified">
+                Today {todayLabel} · last verified {data.lastVerified}
+              </p>
+            </div>
+            <div className="header-actions">
+              <SubscribePanel
+                open={subscribeOpen}
+                onOpenChange={setSubscribeOpen}
+                passphrase={passphrase}
+                pickCount={picks.size}
+                onCreateLink={handleCreateLink}
+              />
+              <SyncPanel
+                passphrase={passphrase}
+                onSet={handleSetPassphrase}
+                onSyncNow={handleSyncNow}
+                status={syncStatus}
+              />
+            </div>
           </div>
-          <div className="header-actions">
-            <SubscribePanel />
-            <SyncPanel
-              passphrase={passphrase}
-              onSet={handleSetPassphrase}
-              onSyncNow={handleSyncNow}
-              status={syncStatus}
-            />
-          </div>
+          <ol className="howto">
+            <li className="howto-step">
+              <span className="howto-num howto-num-1">1</span>
+              Star <span className="howto-star">★</span> the events you want
+            </li>
+            <li className="howto-step">
+              <span className="howto-num howto-num-2">2</span>
+              <button
+                type="button"
+                className="howto-link"
+                onClick={handleCreateLink}
+              >
+                Get your calendar link
+              </button>
+              — one click, no account
+            </li>
+            <li className="howto-step">
+              <span className="howto-num howto-num-3">3</span>
+              Subscribe in Google/Apple Cal — it updates itself
+            </li>
+          </ol>
         </div>
       </header>
-      <TabBar active={tab} onChange={setTab} />
+      <nav className="zone zone-band">
+        <div className="zone-inner">
+          <TabBar active={tab} onChange={setTab} />
+        </div>
+      </nav>
+      <main className="zone zone-main">
+        <div className="zone-inner">
       <div className="filter-row">
         <FilterBar active={filter} onChange={setFilter} counts={counts} />
         <button
@@ -233,7 +281,23 @@ function App() {
         freeOnly={freeOnly}
         onTogglePick={togglePick}
       />
-      <Spaces filter={filter} tab={tab} />
+        </div>
+      </main>
+      <footer className="zone zone-footer">
+        <div className="zone-inner">
+          <Spaces filter={filter} tab={tab} />
+          <div className="footer-bar">
+            <span>NYC Art Practice &amp; Programming Calendar</span>
+            <a
+              className="footer-submit"
+              href="mailto:thehanslevi@proton.me?subject=Event%20for%20the%20calendar&body=What%3A%0AWhen%3A%0AWhere%3A%0ACost%3A%0ALink%3A%0A"
+            >
+              Submit an event
+            </a>
+            <span>Last verified {data.lastVerified}</span>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

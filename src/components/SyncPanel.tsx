@@ -17,12 +17,28 @@ export function SyncPanel({ passphrase, onSet, onSyncNow, status }: Props) {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [saving, setSaving] = useState(false);
+  const [feedCopied, setFeedCopied] = useState(false);
 
   useEffect(() => {
     setInput(passphrase ?? "");
   }, [passphrase]);
 
   const syncing = status.kind === "syncing" || saving;
+
+  const feedUrl = passphrase
+    ? `${typeof window === "undefined" ? "" : window.location.origin}/api/feed?key=${encodeURIComponent(passphrase)}`
+    : null;
+
+  const handleCopyFeed = async () => {
+    if (!feedUrl || !navigator.clipboard) return;
+    try {
+      await navigator.clipboard.writeText(feedUrl);
+      setFeedCopied(true);
+      setTimeout(() => setFeedCopied(false), 1600);
+    } catch {
+      /* denied */
+    }
+  };
 
   const handleSave = async () => {
     const trimmed = input.trim();
@@ -45,7 +61,7 @@ export function SyncPanel({ passphrase, onSet, onSyncNow, status }: Props) {
     }
   };
 
-  const label = passphrase ? "Sync: on" : "Sync: off";
+  const label = passphrase ? "Synced ✓" : "Device sync";
   const badgeClass = passphrase ? "sync-badge on" : "sync-badge off";
 
   return (
@@ -64,9 +80,10 @@ export function SyncPanel({ passphrase, onSet, onSyncNow, status }: Props) {
         <div className="sync-popover" role="dialog">
           <p className="sync-title">Cross-device sync</p>
           <p className="sync-copy">
-            Set a passphrase on each device you use. Any device with the same
-            passphrase shares the same picks. It's a shared secret — not an
-            account, not tied to email.
+            Your picks live under a secret code — enter the same code on
+            another device to share picks between them. It's a shared secret,
+            not an account. Heads up: changing the code also changes your
+            calendar link.
           </p>
           <div className="sync-input-row">
             <input
@@ -105,6 +122,25 @@ export function SyncPanel({ passphrase, onSet, onSyncNow, status }: Props) {
               >
                 Turn off sync
               </button>
+            </div>
+          ) : null}
+          {passphrase && feedUrl ? (
+            <div className="sync-feed">
+              <div className="subscribe-item-head">
+                <span className="subscribe-item-label">Your picks feed</span>
+                <button
+                  type="button"
+                  className={`subscribe-copy-btn${feedCopied ? " copied" : ""}`}
+                  onClick={handleCopyFeed}
+                >
+                  {feedCopied ? "Copied ✓" : "Copy URL"}
+                </button>
+              </div>
+              <div className="subscribe-item-desc">
+                Subscribe in Google/Apple Calendar — it updates automatically
+                as you star picks on any synced device.
+              </div>
+              <code className="subscribe-item-url">{feedUrl}</code>
             </div>
           ) : null}
           <p className="sync-status-line">
