@@ -694,5 +694,45 @@
     "description": "Interreligious community + arts hub · 23 Marcus Garvey Blvd, Bed-Stuy",
     "note": "Founded 1891 as Beth Shalom. Sanctuary hall + fellowship + community room. Concerts, sound baths, workshops, celebrations. Peace Cafe on site.",
     "url": "https://brooklynpeace.center/"
+  },
+  {
+    "name": "Soho Playhouse",
+    "category": "theatre",
+    "mode": "witness",
+    "description": "Off-Broadway venue · 15 Vandam St, Hudson Square",
+    "note": "Cabaret + solo + off-Broadway plays. Hosts the annual Fringe Encore Series.",
+    "url": "https://sohoplayhouse.com/"
+  },
+  {
+    "name": "Atlantic Theater Company",
+    "category": "theatre",
+    "mode": "witness",
+    "description": "New American plays · Linda Gross Theater + Stage 2 · 336 W 20th St, Chelsea",
+    "note": "Founded by David Mamet + William H. Macy. Consistently sharp new-work programming. Full mainstage + Stage 2 for developing work.",
+    "url": "https://atlantictheater.org/"
+  },
+  {
+    "name": "ERF Gallery",
+    "category": "making",
+    "mode": "both",
+    "description": "Artist-studio + rotating exhibitions · 349 Suydam St + 94 Bogart St, Brooklyn",
+    "note": "Private artist-studio community with 24/7 access, screenprint lab, photo studio. Gallery hosts residents + invited artists.",
+    "url": "https://www.erf.nyc/galleries"
+  },
+  {
+    "name": "Bedlam",
+    "category": "theatre",
+    "mode": "witness",
+    "description": "Ensemble theater company · rotating venues in NYC",
+    "note": "4-actor ensemble reimagining classic + new work at the seams (Hamlet, Peter Pan, Persuasion). Small-scale, high-intensity productions.",
+    "url": "https://www.bedlam.org/"
+  },
+  {
+    "name": "FRIGID NY (Under St. Marks)",
+    "category": "theatre",
+    "mode": "both",
+    "description": "Experimental theater + festivals · 94 St. Marks Place, East Village",
+    "note": "45-seat basement black-box, experimental since the 70s. FRIGID Fest + 7 other annual festivals, monthly programming, artist residency. Left Kraine Theater in 2023.",
+    "url": "https://frigid.nyc/"
   }
 ]
