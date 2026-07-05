@@ -574,5 +574,45 @@
     "description": "New interdisciplinary space · 1 Knickerbocker Ave, Brooklyn",
     "note": "Opened Jan 31 2026. 1,000 sq ft rehearsal + performance space. Two monthly programs: experimental live arts (2nd Thu), emerging dance (4th Thu). Membership open.",
     "url": "https://supromen.com/events/"
+  },
+  {
+    "name": "Francis Kite Club",
+    "category": "sound",
+    "mode": "witness",
+    "description": "Bar + social club + event space · 40 Loisaida Ave (Ave C), LES",
+    "note": "Live music, punk, art galas, birthdays. Cocktails with names like 'Annie's Sprinkles.' Open Wed–Sun eve.",
+    "url": "https://www.franciskiteclub.com/"
+  },
+  {
+    "name": "The Windjammer",
+    "category": "sound",
+    "mode": "witness",
+    "description": "Neighborhood bar with arts programming · 552 Grandview Ave, Ridgewood",
+    "note": "Programming via Footlight Presents: open mics, workshops, live music, dance, theatre. Star Trek pinball + pool table.",
+    "url": "https://www.footlightunderground.com/"
+  },
+  {
+    "name": "Telepathy",
+    "category": "theatre",
+    "mode": "witness",
+    "description": "Arts education + programming platform · Brooklyn",
+    "note": "Run by Jonathan Sims. Tickets + calendar on Pools. Programming eclectic — performance, arts education.",
+    "url": "https://pools.events/o/telepathy/"
+  },
+  {
+    "name": "Performance Space New York",
+    "category": "theatre",
+    "mode": "both",
+    "description": "Avant-garde downtown institution · 150 First Ave at 9th St, East Village",
+    "note": "Founded 1980 as PS 122 in an abandoned school. Queer, radical, formal-experimental. Full theatre season + open workshops.",
+    "url": "https://performancespacenewyork.org/"
+  },
+  {
+    "name": "Chez Bushwick",
+    "category": "dance",
+    "mode": "make",
+    "description": "Affordable rehearsal + class studio · Bushwick",
+    "note": "Some of the lowest-cost dance rehearsal rates in NYC. Occasional showings + workshops.",
+    "url": "https://www.chezbushwick.net/"
   }
 ]
