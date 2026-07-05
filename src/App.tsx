@@ -288,15 +288,14 @@ function App() {
           <div className="about">
             <p className="about-title">About</p>
             <p className="about-text">
-              A hand-checked calendar of NYC's artist-run corners — workshops,
-              small-room theatre, riso and print, noise shows, readings. The
-              filter: things you do or see up close, mostly cheap, never an
-              arena. Kept by Hans — AI builder, film- and theatre-maker, funny
-              philosopher; recently, a black metal choral musical.{" "}
+              Curated calendar of opportunities to both deepen one's artistic
+              practice and experience some of the best of what's on offer in
+              NYC. Maintained by H.R. Levinson (AI builder, film- and
+              theatre-maker, funny philosopher, Prospect Heights denizen).{" "}
               <a href="mailto:thehanslevi@proton.me?subject=Event%20for%20the%20calendar&body=What%3A%0AWhen%3A%0AWhere%3A%0ACost%3A%0ALink%3A%0A">
-                Send me things worth listing
-              </a>
-              .
+                Share what you want to see or what you're working on
+              </a>{" "}
+              and I'll include it here and in the newsletter.
             </p>
           </div>
           <Spaces filter={filter} tab={tab} />
