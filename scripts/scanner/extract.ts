@@ -1,6 +1,7 @@
 import { GoogleGenerativeAI, SchemaType } from "@google/generative-ai";
 import type { CalEvent } from "../../src/types";
 import { extractJsonLdEvents } from "./extract-jsonld.ts";
+import { fetchHtml, type FetchStrategy } from "./fetchers.ts";
 import type { Venue } from "./venues";
 
 // gemini-flash-latest currently resolves to gemini-3.5-flash which has a 20/day
@@ -88,7 +89,33 @@ export async function extractFromVenue(
   venue: Venue,
   todayISO: string,
 ): Promise<Candidate[]> {
-  const html = await fetchHtml(venue.url);
+  // Try primary URL with the venue's declared strategy
+  const primary = await tryUrl(venue.url, venue.fetch ?? "static", venue, todayISO);
+  if (primary.length > 0) return primary;
+
+  // Fall back to alternate sources (donyc, BrooklynVegan, etc.)
+  if (venue.altSources) {
+    for (const alt of venue.altSources) {
+      const results = await tryUrl(
+        alt.url,
+        alt.fetch ?? "static",
+        venue,
+        todayISO,
+      );
+      if (results.length > 0) return results;
+    }
+  }
+
+  return [];
+}
+
+async function tryUrl(
+  url: string,
+  strategy: FetchStrategy,
+  venue: Venue,
+  todayISO: string,
+): Promise<Candidate[]> {
+  const html = await fetchHtml(url, strategy);
   if (!html) return [];
 
   // First pass: try JSON-LD structured data (free, deterministic)
@@ -143,22 +170,6 @@ ${html.slice(0, 40000)}`;
     candidates.push({ event, venue, sourceHtml: html, source: "llm" });
   }
   return candidates;
-}
-
-async function fetchHtml(url: string): Promise<string | null> {
-  try {
-    const res = await fetch(url, {
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (compatible; NYCArtCalendarBot/1.0; +https://nyc-art-practice-programming.vercel.app)",
-        Accept: "text/html,application/xhtml+xml",
-      },
-    });
-    if (!res.ok) return null;
-    return await res.text();
-  } catch {
-    return null;
-  }
 }
 
 function safeParse(text: string): { events?: unknown[] } | null {

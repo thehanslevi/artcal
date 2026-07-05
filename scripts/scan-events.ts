@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import type { CalEvent, EventsData } from "../src/types.ts";
 import { extractFromVenue } from "./scanner/extract.ts";
+import { closeBrowser } from "./scanner/fetchers.ts";
 import { makeGateRunner } from "./scanner/gates.ts";
 import { mergeIntoEvents } from "./scanner/merge.ts";
 import { VENUES } from "./scanner/venues.ts";
@@ -102,7 +103,11 @@ async function main(): Promise<void> {
   );
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+main()
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  })
+  .finally(async () => {
+    await closeBrowser();
+  });

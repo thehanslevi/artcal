@@ -1,4 +1,5 @@
 import type { Category, Mode } from "../../src/types";
+import type { FetchStrategy } from "./fetchers";
 
 export interface Venue {
   name: string;
@@ -6,6 +7,8 @@ export interface Venue {
   category: Category;
   defaultMode: Mode;
   whereTemplate: string;
+  fetch?: FetchStrategy;
+  altSources?: { url: string; fetch?: FetchStrategy }[];
   notes?: string;
 }
 
@@ -242,5 +245,127 @@ export const VENUES: Venue[] = [
     category: "theatre",
     defaultMode: "witness",
     whereTemplate: "FourOneOne, 411 Kent Ave, Williamsburg",
+  },
+
+  // ── Previously blocked / widget-hidden calendars — unblocked via headless
+  // Chromium (Playwright). Adds ~1min of workflow time.
+  {
+    name: "La MaMa",
+    url: "https://www.lamama.org/whats-on",
+    category: "theatre",
+    defaultMode: "witness",
+    whereTemplate: "La MaMa, 66 E 4th St, East Village",
+    fetch: "playwright",
+    altSources: [{ url: "https://donyc.com/venues/la-mama-etc" }],
+  },
+  {
+    name: "The Public Theater",
+    url: "https://publictheater.org/",
+    category: "theatre",
+    defaultMode: "witness",
+    whereTemplate: "The Public Theater, 425 Lafayette, Manhattan",
+    fetch: "playwright",
+    altSources: [{ url: "https://donyc.com/venues/the-public-theater" }],
+  },
+  {
+    name: "Joe's Pub",
+    url: "https://publictheater.org/joes-pub/",
+    category: "sound",
+    defaultMode: "witness",
+    whereTemplate: "Joe's Pub, 425 Lafayette, Manhattan",
+    fetch: "playwright",
+    altSources: [{ url: "https://donyc.com/venues/joe-s-pub" }],
+  },
+  {
+    name: "St. Ann's Warehouse",
+    url: "https://stannswarehouse.org/",
+    category: "theatre",
+    defaultMode: "witness",
+    whereTemplate: "St. Ann's Warehouse, DUMBO",
+    fetch: "playwright",
+  },
+  {
+    name: "National Sawdust",
+    url: "https://nationalsawdust.org/calendar",
+    category: "sound",
+    defaultMode: "witness",
+    whereTemplate: "National Sawdust, 80 N 6th St, Williamsburg",
+    fetch: "playwright",
+    altSources: [
+      { url: "https://donyc.com/venues/national-sawdust" },
+    ],
+  },
+  {
+    name: "Ars Nova",
+    url: "https://arsnovanyc.com/whats-on/",
+    category: "theatre",
+    defaultMode: "witness",
+    whereTemplate: "Ars Nova, 511 W 54th St, Hell's Kitchen",
+    fetch: "playwright",
+  },
+  {
+    name: "Metrograph",
+    url: "https://metrograph.com/",
+    category: "film",
+    defaultMode: "witness",
+    whereTemplate: "Metrograph, 7 Ludlow St, LES",
+    fetch: "playwright",
+  },
+  {
+    name: "Film at Lincoln Center",
+    url: "https://www.filmlinc.org/calendar/",
+    category: "film",
+    defaultMode: "witness",
+    whereTemplate: "Film at Lincoln Center, Walter Reade + EBM · Lincoln Center",
+    fetch: "playwright",
+  },
+  {
+    name: "Mercury Store",
+    url: "https://www.mercurystore.com/programs",
+    category: "theatre",
+    defaultMode: "make",
+    whereTemplate: "Mercury Store, Gowanus",
+    fetch: "playwright",
+  },
+  {
+    name: "Nuyorican Poets Cafe",
+    url: "https://www.nuyorican.org/events",
+    category: "literature",
+    defaultMode: "witness",
+    whereTemplate: "Nuyorican Poets Cafe, 236 E 3rd St, LES",
+    fetch: "playwright",
+  },
+  {
+    name: "Kraine Theater / Under St. Marks",
+    url: "https://www.horsetrade.info/kraine",
+    category: "theatre",
+    defaultMode: "witness",
+    whereTemplate: "Kraine Theater / Under St. Marks, East Village",
+    fetch: "playwright",
+  },
+  {
+    name: "BAM",
+    url: "https://www.bam.org/whats-on",
+    category: "theatre",
+    defaultMode: "witness",
+    whereTemplate: "BAM, 30 Lafayette Ave, Fort Greene",
+    fetch: "playwright",
+    altSources: [{ url: "https://donyc.com/venues/bam-brooklyn-academy-of-music" }],
+  },
+  {
+    name: "The Bushwick Starr",
+    url: "https://www.thebushwickstarr.org/",
+    category: "theatre",
+    defaultMode: "witness",
+    whereTemplate: "The Bushwick Starr, Eldert Street, Bushwick",
+    fetch: "playwright",
+  },
+  {
+    name: "Target Margin Theater",
+    url: "https://www.targetmargin.org/",
+    category: "theatre",
+    defaultMode: "witness",
+    whereTemplate: "Target Margin, Doxsee Theater, Sunset Park",
+    fetch: "playwright",
   },
 ];

@@ -29,10 +29,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
       - name: Run scanner
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: npx tsx scripts/scan-events.ts
+        timeout-minutes: 20
 
       - name: Commit changes
         run: |
