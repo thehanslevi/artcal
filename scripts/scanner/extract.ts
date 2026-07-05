@@ -3,7 +3,9 @@ import type { CalEvent } from "../../src/types";
 import { extractJsonLdEvents } from "./extract-jsonld.ts";
 import type { Venue } from "./venues";
 
-const MODEL = "gemini-flash-latest";
+// gemini-flash-latest currently resolves to gemini-3.5-flash which has a 20/day
+// free-tier request cap; pinning to 2.5-flash for a higher separate quota.
+const MODEL = "gemini-2.5-flash";
 
 export interface Candidate {
   event: CalEvent;
@@ -126,6 +128,9 @@ Today's date (skip anything before): ${todayISO}
 HTML (truncated to 40k chars):
 ${html.slice(0, 40000)}`;
 
+  // Small delay to be gentle on per-minute rate limits when the scanner
+  // is looping through many venues in a row.
+  await new Promise((r) => setTimeout(r, 2000));
   const response = await model.generateContent(userPrompt);
   const text = response.response.text();
   const parsed = safeParse(text);

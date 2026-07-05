@@ -518,5 +518,61 @@
     "description": "Comedy + intellectual + variety · LES basement",
     "note": "Nerdy comedy, science, storytelling. Cheap tickets ($15–25).",
     "url": "https://caveat.nyc/events/"
+  },
+  {
+    "name": "CATCH!",
+    "category": "theatre",
+    "mode": "witness",
+    "description": "Itinerant experimental performance series · rotating Brooklyn venues",
+    "note": "Obie-winning series since 2003. Every couple months, ten or eleven artists get seven minutes each. Recent homes: The Invisible Dog, Chocolate Factory, PSNY, CPR.",
+    "url": "https://catchseries.org/"
+  },
+  {
+    "name": "Wavefield",
+    "category": "tech",
+    "mode": "both",
+    "description": "Polymedia video-art space · Brooklyn",
+    "note": "Interdisciplinary DIY space focused on video art + polymedia. Events + education. RSVP via Withfriends.",
+    "url": "https://wavefield.media/events"
+  },
+  {
+    "name": "Ridgewood Commons (formerly Woodbine)",
+    "category": "community",
+    "mode": "both",
+    "description": "Community center · Ridgewood, Queens",
+    "note": "Year-round classes (yoga, meditation, writing), debate watch parties, film screenings, community dinners. Ridgewood Farmshare partner.",
+    "url": "https://ridgewoodcommons.org/"
+  },
+  {
+    "name": "The Arts Center at Governors Island (LMCC)",
+    "category": "theatre",
+    "mode": "both",
+    "description": "40,000 sq ft residency + presentation venue · Building 110, Governors Island",
+    "note": "Adaptive-reuse of an 1870s munitions warehouse. Year-round residencies + summer public program (talks, workshops, Take Care Series). All events free.",
+    "url": "https://lmcc.net/lmcc-arts-center-at-governors-island/"
+  },
+  {
+    "name": "Rubulad",
+    "category": "community",
+    "mode": "witness",
+    "description": "Long-running underground event + mixed-media arts space · Bushwick",
+    "note": "Been going since '93. Costumed parties + kids days + community suppers + movie nights + rehearsals. \"Burning Man of Brooklyn.\" No public website — @rub_ulad on IG.",
+    "url": "https://www.instagram.com/rub_ulad/"
+  },
+  {
+    "name": "DADA",
+    "category": "sound",
+    "mode": "witness",
+    "description": "Artist-owned music + art bar · 6047 Myrtle Ave, Ridgewood",
+    "note": "Jazz, DJs, burlesque, vinyl sets, tarot readings. Espresso bar + garden by day, program by night.",
+    "url": "https://dadabar.nyc/program"
+  },
+  {
+    "name": "SUPR OMEN",
+    "category": "theatre",
+    "mode": "both",
+    "description": "New interdisciplinary space · 1 Knickerbocker Ave, Brooklyn",
+    "note": "Opened Jan 31 2026. 1,000 sq ft rehearsal + performance space. Two monthly programs: experimental live arts (2nd Thu), emerging dance (4th Thu). Membership open.",
+    "url": "https://supromen.com/events/"
   }
 ]
