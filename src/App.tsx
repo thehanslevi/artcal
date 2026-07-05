@@ -285,6 +285,20 @@ function App() {
       </main>
       <footer className="zone zone-footer">
         <div className="zone-inner">
+          <div className="about">
+            <p className="about-title">About</p>
+            <p className="about-text">
+              A hand-checked calendar of NYC's artist-run corners — workshops,
+              small-room theatre, riso and print, noise shows, readings. The
+              filter: things you do or see up close, mostly cheap, never an
+              arena. Kept by Hans — AI builder, film- and theatre-maker, funny
+              philosopher; recently, a black metal choral musical.{" "}
+              <a href="mailto:thehanslevi@proton.me?subject=Event%20for%20the%20calendar&body=What%3A%0AWhen%3A%0AWhere%3A%0ACost%3A%0ALink%3A%0A">
+                Send me things worth listing
+              </a>
+              .
+            </p>
+          </div>
           <Spaces filter={filter} tab={tab} />
           <div className="footer-bar">
             <span>NYC Art Practice &amp; Programming Calendar</span>
