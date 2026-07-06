@@ -1,13 +1,13 @@
 {
-  "ranAt": "2026-07-05T23:55:25.501Z",
-  "acceptedTotal": 23,
-  "rejectedTotal": 47,
+  "ranAt": "2026-07-06T01:27:55.529Z",
+  "acceptedTotal": 0,
+  "rejectedTotal": 36,
   "duplicatesSkipped": [],
   "perVenue": {
     "Interference Archive": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 2,
+      "source": "llm"
     },
     "The Tank": {
       "accepted": 0,
@@ -91,7 +91,7 @@
     },
     "DADA": {
       "accepted": 0,
-      "rejected": 10,
+      "rejected": 9,
       "source": "json-ld"
     },
     "SUPR OMEN": {
@@ -101,7 +101,7 @@
     },
     "The Arts Center at Governors Island": {
       "accepted": 0,
-      "rejected": 8,
+      "rejected": 6,
       "source": "ics"
     },
     "Francis Kite Club": {
@@ -185,9 +185,9 @@
       "source": "none"
     },
     "St. Ann's Warehouse": {
-      "accepted": 23,
-      "rejected": 10,
-      "source": "json-ld"
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
     },
     "National Sawdust": {
       "accepted": 0,

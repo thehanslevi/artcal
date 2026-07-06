@@ -1,5 +1,19 @@
 [
   {
+    "venue": "Interference Archive",
+    "event": "Collections Management Working Group Meeting",
+    "date": "Jul 8",
+    "reason": "duplicate of existing \"Interference Archive: Collections Management Working Group\"",
+    "source": "llm"
+  },
+  {
+    "venue": "Interference Archive",
+    "event": "Audio Collage Workshop: Exploring the Archive through Audio",
+    "date": "Jul 26",
+    "reason": "duplicate of existing \"Interference Archive: Audio Collage Workshop\"",
+    "source": "llm"
+  },
+  {
     "venue": "Symphony Space",
     "event": "Kyle MacLachlan, Fictional Selves",
     "date": "Sep 28",
@@ -60,13 +74,6 @@
     "event": "Winol: Developing film with red wine",
     "date": "Jul 11",
     "reason": "duplicate of existing \"Bushwick Community Darkroom: Winol — developing film with red wine\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "DADA",
-    "event": "JAZZ - Joel Viera Trio",
-    "date": "Jul 5",
-    "reason": "duplicate of existing \"JAZZ - Joel Viera Trio\"",
     "source": "json-ld"
   },
   {
@@ -134,20 +141,6 @@
   },
   {
     "venue": "The Arts Center at Governors Island",
-    "event": "CATCHBALL",
-    "date": "Jul 5",
-    "reason": "duplicate of existing \"CATCHBALL\"",
-    "source": "ics"
-  },
-  {
-    "venue": "The Arts Center at Governors Island",
-    "event": "CATCH Performance Series",
-    "date": "Jul 5",
-    "reason": "duplicate of existing \"CATCH Performance Series\"",
-    "source": "ics"
-  },
-  {
-    "venue": "The Arts Center at Governors Island",
     "event": "July Open Studios",
     "date": "Jul 25",
     "reason": "duplicate of existing \"July Open Studios\"",
@@ -212,8 +205,8 @@
   {
     "venue": "Delight Factory",
     "event": "Drone Lab + Open Projector",
-    "date": "Jul 17",
-    "reason": "duplicate of existing \"Drone Lab + Open Projector\"",
+    "date": "Jul 18",
+    "reason": "date not literally in source HTML",
     "source": "json-ld"
   },
   {
@@ -256,76 +249,6 @@
     "event": "Ego Free Jam",
     "date": "Sep 5",
     "reason": "duplicate of existing \"Ego Free Jam\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "St. Ann's Warehouse",
-    "event": "KRAMER/FAUCI",
-    "date": "Sep 27",
-    "reason": "duplicate of existing \"KRAMER/FAUCI\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "St. Ann's Warehouse",
-    "event": "KRAMER/FAUCI",
-    "date": "Oct 24",
-    "reason": "duplicate of existing \"KRAMER/FAUCI\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "St. Ann's Warehouse",
-    "event": "KRAMER/FAUCI",
-    "date": "Oct 21",
-    "reason": "duplicate of existing \"KRAMER/FAUCI\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "St. Ann's Warehouse",
-    "event": "KRAMER/FAUCI",
-    "date": "Oct 18",
-    "reason": "duplicate of existing \"KRAMER/FAUCI\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "St. Ann's Warehouse",
-    "event": "KRAMER/FAUCI",
-    "date": "Oct 17",
-    "reason": "duplicate of existing \"KRAMER/FAUCI\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "St. Ann's Warehouse",
-    "event": "KRAMER/FAUCI",
-    "date": "Oct 10",
-    "reason": "duplicate of existing \"KRAMER/FAUCI\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "St. Ann's Warehouse",
-    "event": "KRAMER/FAUCI",
-    "date": "Oct 7",
-    "reason": "duplicate of existing \"KRAMER/FAUCI\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "St. Ann's Warehouse",
-    "event": "KRAMER/FAUCI",
-    "date": "Oct 4",
-    "reason": "duplicate of existing \"KRAMER/FAUCI\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "St. Ann's Warehouse",
-    "event": "KRAMER/FAUCI",
-    "date": "Oct 3",
-    "reason": "duplicate of existing \"KRAMER/FAUCI\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "St. Ann's Warehouse",
-    "event": "KRAMER/FAUCI",
-    "date": "Sep 27",
-    "reason": "duplicate of existing \"KRAMER/FAUCI\"",
     "source": "json-ld"
   }
 ]
