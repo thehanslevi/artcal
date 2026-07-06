@@ -1,29 +1,9 @@
 {
-  "ranAt": "2026-07-06T04:10:38.489Z",
-  "acceptedTotal": 14,
-  "rejectedTotal": 47,
+  "ranAt": "2026-07-06T04:20:45.237Z",
+  "acceptedTotal": 0,
+  "rejectedTotal": 57,
   "duplicatesSkipped": [],
   "perVenue": {
-    "Brooklyn Art Haus": {
-      "accepted": 0,
-      "rejected": 7,
-      "source": "llm"
-    },
-    "New York Live Arts": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Abrons Arts Center": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Baryshnikov Arts Center": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
     "Symphony Space": {
       "accepted": 0,
       "rejected": 6,
@@ -36,8 +16,8 @@
     },
     "Wendy's Subway": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 3,
+      "source": "llm"
     },
     "UnionDocs": {
       "accepted": 0,
@@ -270,8 +250,8 @@
       "source": "none"
     },
     "Greenwich House Pottery": {
-      "accepted": 4,
-      "rejected": 5,
+      "accepted": 0,
+      "rejected": 9,
       "source": "json-ld"
     },
     "Brooklyn Glass": {
@@ -310,8 +290,8 @@
       "source": "none"
     },
     "Flux Factory": {
-      "accepted": 1,
-      "rejected": 0,
+      "accepted": 0,
+      "rejected": 1,
       "source": "json-ld"
     },
     "UrbanGlass": {
@@ -405,8 +385,8 @@
       "source": "none"
     },
     "Materials for the Arts": {
-      "accepted": 2,
-      "rejected": 0,
+      "accepted": 0,
+      "rejected": 2,
       "source": "json-ld"
     },
     "Millennium Film Workshop": {
@@ -425,8 +405,8 @@
       "source": "none"
     },
     "Wonderville": {
-      "accepted": 7,
-      "rejected": 1,
+      "accepted": 0,
+      "rejected": 8,
       "source": "json-ld"
     },
     "Harvestworks": {
@@ -470,6 +450,26 @@
       "source": "none"
     },
     "The Tank": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Brooklyn Art Haus": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "New York Live Arts": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Abrons Arts Center": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Baryshnikov Arts Center": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
