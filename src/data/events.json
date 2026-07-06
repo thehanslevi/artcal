@@ -117,6 +117,20 @@
           "url": "https://wordupbooks.com/event/2026-07-07/no-name-super-story-party"
         },
         {
+          "day": "Tue",
+          "date": "Jul 7",
+          "event": "Venture Bond Jazz Quintet Concert",
+          "where": "Greenwich House Music School · 46 Barrow Street, New York",
+          "cost": "FREE",
+          "category": "making",
+          "flag": null,
+          "mode": "make",
+          "start": "20:00",
+          "end": "20:00",
+          "note": null,
+          "url": "https://greenwichhouse.org/event/venture-bond-jazz-quintet-concert/"
+        },
+        {
           "day": "Wed",
           "date": "Jul 8",
           "event": "JAZZ - The Sean Temme Group",
@@ -129,6 +143,20 @@
           "end": null,
           "note": null,
           "url": "https://dadabar.nyc/event/6636729/769106038/jazz-the-sean-temme-group"
+        },
+        {
+          "day": "Wed",
+          "date": "Jul 8",
+          "event": "Intro to Printmaking II with Julia Elsas",
+          "where": "Lower East Side Printshop, 306 W 37th St, Garment District",
+          "cost": "$425",
+          "category": "making",
+          "flag": null,
+          "mode": "make",
+          "start": "18:00",
+          "end": "21:00",
+          "note": "4 Wednesdays",
+          "url": "https://printshop.org/classes-workshops/intro-to-printmaking-ii"
         },
         {
           "day": "Thu",
@@ -227,6 +255,20 @@
           "end": null,
           "note": null,
           "url": "https://dadabar.nyc/event/6644913/770008241/house-dj-r-dubbs"
+        },
+        {
+          "day": "Sat",
+          "date": "Jul 11",
+          "event": "Consensual Hacking",
+          "where": "National Academy of Design",
+          "cost": "TBD",
+          "category": "tech",
+          "flag": null,
+          "mode": "make",
+          "start": "13:00",
+          "end": "16:00",
+          "note": "with Melanie Hoff",
+          "url": "https://sfpc.study/sessions/future-schools/consensual-hacking"
         }
       ]
     },
@@ -1303,6 +1345,48 @@
           "url": "https://sfpc.study"
         },
         {
+          "day": "Sat",
+          "date": "Jul 18",
+          "event": "Pochoir and Relief Workshop with Andrew Betancourt",
+          "where": "Lower East Side Printshop, 306 W 37th St, Garment District",
+          "cost": "$175",
+          "category": "making",
+          "flag": null,
+          "mode": "make",
+          "start": "10:00",
+          "end": "16:00",
+          "note": null,
+          "url": "https://printshop.org/classes-workshops/pochoir-workshop-with-andrew-betancourt"
+        },
+        {
+          "day": "Sat",
+          "date": "Jul 18",
+          "event": "The Origin of the Word",
+          "where": "National Academy of Design",
+          "cost": "FREE",
+          "category": "tech",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": "Melanie Hoff",
+          "url": "https://withfriends.events/event/ahNbaM8n/the-origin-of-the-word-free-public-talk/"
+        },
+        {
+          "day": "Sat",
+          "date": "Jul 18",
+          "event": "Introduction to Silk Screen Printing Class",
+          "where": "Works in Progress NYC, East Village",
+          "cost": "TBD",
+          "category": "making",
+          "flag": null,
+          "mode": "make",
+          "start": "10:00",
+          "end": "14:00",
+          "note": null,
+          "url": "https://www.worksinprogressnyc.org/works-in-progress-shop/p/introduction-to-silk-screen-printing-class"
+        },
+        {
           "day": "Sun",
           "date": "Jul 19",
           "event": "Art x Embodiment",
@@ -1630,6 +1714,20 @@
           "url": "https://www.filmforum.org/now-playing"
         },
         {
+          "day": "Fri",
+          "date": "Jul 24",
+          "event": "Extending Poetry Through Computation",
+          "where": "National Academy of Design",
+          "cost": "TBD",
+          "category": "tech",
+          "flag": null,
+          "mode": "make",
+          "start": "18:00",
+          "end": "21:00",
+          "note": "Two-day workshop, continues Sat Jul 25, 1-4pm ET. With Omayeli Arenyeka.",
+          "url": "https://sfpc.study/sessions/future-schools/extending-poetry-through-computation"
+        },
+        {
           "day": "Sat",
           "date": "Jul 25",
           "event": "Wendy's Subway: Basic Instincts and Pure Desires — workshop with Nico Vela Page",
@@ -1787,6 +1885,20 @@
           "end": null,
           "note": "Tickets bought. Lynch sound collaborator. Live to picture.",
           "url": "https://pioneerworks.org/programs/false-harmonics-27-dean-hurley-c-lavender"
+        },
+        {
+          "day": "Tue",
+          "date": "Jul 28",
+          "event": "Relief Printmaking with Anat Keinan",
+          "where": "Lower East Side Printshop, 306 W 37th St, Garment District",
+          "cost": "$425",
+          "category": "making",
+          "flag": null,
+          "mode": "make",
+          "start": "18:00",
+          "end": "21:00",
+          "note": "4 Tuesdays",
+          "url": "https://printshop.org/classes-workshops/relief-printmaking-with-anat-keinan"
         },
         {
           "day": "Wed",
@@ -1969,6 +2081,20 @@
           "end": "16:00",
           "note": null,
           "url": "https://creativemusic.org/event/creative-music-workshop-with-joe-mcpherson-2026/"
+        },
+        {
+          "day": "Sat",
+          "date": "Aug 1",
+          "event": "Handmade Datasets",
+          "where": "National Academy of Design",
+          "cost": "FREE",
+          "category": "tech",
+          "flag": null,
+          "mode": "witness",
+          "start": "13:30",
+          "end": "15:00",
+          "note": "Aarati Akkapeddi",
+          "url": "https://withfriends.events/event/NXWa8sJw/handmade-datasets-free-public-talk/"
         }
       ]
     },
@@ -2102,6 +2228,20 @@
           "url": "https://summerstage.org"
         },
         {
+          "day": "Fri",
+          "date": "Aug 7",
+          "event": "Becoming Hypertext",
+          "where": "National Academy of Design",
+          "cost": "TBD",
+          "category": "tech",
+          "flag": null,
+          "mode": "make",
+          "start": "13:00",
+          "end": "18:00",
+          "note": "Two-day workshop, continues Sat Aug 8, 1-4pm ET. With Chia Amisola.",
+          "url": "https://sfpc.study/sessions/future-schools/becoming-hypertext"
+        },
+        {
           "day": "Sat",
           "date": "Aug 8",
           "event": "esperanza spalding: In Concert",
@@ -2114,6 +2254,34 @@
           "end": "21:00",
           "note": null,
           "url": "https://lmcc.net/events/esperanza-spalding-in-concert/"
+        },
+        {
+          "day": "Sat",
+          "date": "Aug 8",
+          "event": "Chine-Collé Weekend Workshop with Alejandra Arias Sevilla",
+          "where": "Lower East Side Printshop, 306 W 37th St, Garment District",
+          "cost": "$160",
+          "category": "making",
+          "flag": null,
+          "mode": "make",
+          "start": "12:00",
+          "end": "16:00",
+          "note": "Drypoint with Chine Collé",
+          "url": "https://printshop.org/classes-workshops/chine-colle-workshop-with-alejandra-arias-sevilla"
+        },
+        {
+          "day": "Sun",
+          "date": "Aug 9",
+          "event": "Chine-Collé Weekend Workshop with Alejandra Arias Sevilla",
+          "where": "Lower East Side Printshop, 306 W 37th St, Garment District",
+          "cost": "$160",
+          "category": "making",
+          "flag": null,
+          "mode": "make",
+          "start": "12:00",
+          "end": "16:00",
+          "note": "Chine Collé: Printing, Seaming, Mounting & Collaging",
+          "url": "https://printshop.org/classes-workshops/chine-colle-workshop-with-alejandra-arias-sevilla"
         }
       ]
     },
@@ -2203,6 +2371,20 @@
           "end": "18:00",
           "note": null,
           "url": "https://elmuseo.org/event/family-program-art-book-make/"
+        },
+        {
+          "day": "Sat",
+          "date": "Aug 15",
+          "event": "Double Tap, Long Press: Writing Device-Body Contaminations",
+          "where": "National Academy of Design",
+          "cost": "TBD",
+          "category": "tech",
+          "flag": null,
+          "mode": "make",
+          "start": null,
+          "end": null,
+          "note": "with Ahana Ganguly",
+          "url": "https://sfpc.study/sessions/future-schools/double-tap-long-press"
         },
         {
           "day": "Sun",
@@ -3229,6 +3411,20 @@
           "url": "https://www.bushwickcommunitydarkroom.com/events/2026/11/2/intro-to-darkroom-printing-bw-film-nov-2"
         },
         {
+          "day": "Tue",
+          "date": "Nov 3",
+          "event": "Memoir Writing II",
+          "where": "Gotham Writers Workshop, 555 8th Ave, Midtown",
+          "cost": "$495",
+          "category": "literature",
+          "flag": null,
+          "mode": "make",
+          "start": "10:00",
+          "end": "12:00",
+          "note": null,
+          "url": "https://www.writingclasses.com/classes/nyc/memoir-writing-ii-in-person-fall-2026"
+        },
+        {
           "day": "Wed",
           "date": "Nov 4",
           "event": "BAM: Turn. Turning. TURNT. (dance)",
@@ -3470,6 +3666,25 @@
           "end": null,
           "note": "Nicole Taylor / John Tiffany. Runs Nov 24 – Jan 10, 2027.",
           "url": "https://www.nytw.org/2026-27-season/"
+        }
+      ]
+    },
+    {
+      "label": "Dec 6–12",
+      "events": [
+        {
+          "day": "Sun",
+          "date": "Dec 6",
+          "event": "Novel Writing III",
+          "where": "Gotham Writers Workshop, 555 8th Ave, Midtown",
+          "cost": "$550",
+          "category": "literature",
+          "flag": null,
+          "mode": "make",
+          "start": "13:00",
+          "end": "15:00",
+          "note": null,
+          "url": "https://www.writingclasses.com/classes/nyc/novel-writing-iii-in-person-fall-2026"
         }
       ]
     }

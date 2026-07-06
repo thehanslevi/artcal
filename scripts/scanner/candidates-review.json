@@ -191,8 +191,8 @@
   {
     "venue": "Delight Factory",
     "event": "Drone Lab + Open Projector",
-    "date": "Jul 18",
-    "reason": "date not literally in source HTML",
+    "date": "Jul 17",
+    "reason": "duplicate of existing \"Drone Lab + Open Projector\"",
     "source": "json-ld"
   },
   {
@@ -260,13 +260,6 @@
   },
   {
     "venue": "Greenwich House Pottery",
-    "event": "Venture Bond Jazz Quintet Concert",
-    "date": "Jul 8",
-    "reason": "date not literally in source HTML",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Greenwich House Pottery",
     "event": "&lt;em&gt;Ceramics Now&lt;/em&gt;, Lizzy Chemel, Amir Hariri, Melissa Joseph",
     "date": "Jul 23",
     "reason": "duplicate of existing \"&lt;em&gt;Ceramics Now&lt;/em&gt;, Lizzy Chemel, Amir Hariri, Melissa Joseph\"",
@@ -322,142 +315,408 @@
     "source": "json-ld"
   },
   {
-    "venue": "Wonderville",
-    "event": "BUGGED an album release party [presented by SLEAZURE]",
-    "date": "Jul 6",
-    "reason": "duplicate of existing \"BUGGED an album release party [presented by SLEAZURE]\"",
-    "source": "json-ld"
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (Online)",
+    "date": "Jan 12",
+    "reason": "date is in the past",
+    "source": "llm"
   },
   {
-    "venue": "Wonderville",
-    "event": "Unregistered HyperCam: Tales From the Aughts",
-    "date": "Jul 7",
-    "reason": "date not literally in source HTML",
-    "source": "json-ld"
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (In-Person)",
+    "date": "Jan 13",
+    "reason": "date is in the past",
+    "source": "llm"
   },
   {
-    "venue": "Wonderville",
-    "event": "THE FORT90 BROADCAST SYSTEM presents THE FORT90 FILM CLUB: \"GOD BLESS THIS MESS\"",
-    "date": "Jul 7",
-    "reason": "duplicate of existing \"THE FORT90 BROADCAST SYSTEM presents THE FORT90 FILM CLUB: \"GOD BLESS THIS MESS\"\"",
-    "source": "json-ld"
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (Online)",
+    "date": "Jan 14",
+    "reason": "date is in the past",
+    "source": "llm"
   },
   {
-    "venue": "Wonderville",
-    "event": "Play Scrapeboard!",
-    "date": "Jul 7",
-    "reason": "duplicate of existing \"Play Scrapeboard!\"",
-    "source": "json-ld"
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (In-Person)",
+    "date": "Jan 15",
+    "reason": "date is in the past",
+    "source": "llm"
   },
   {
-    "venue": "Wonderville",
-    "event": "Killer Queen Open Hive Night",
-    "date": "Jul 9",
-    "reason": "duplicate of existing \"Killer Queen Open Hive Night\"",
-    "source": "json-ld"
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (Online)",
+    "date": "Jan 16",
+    "reason": "date is in the past",
+    "source": "llm"
   },
   {
-    "venue": "Wonderville",
-    "event": "QMA Presents: NYC Electric Vocal Artist Showcase",
-    "date": "Jul 10",
-    "reason": "duplicate of existing \"QMA Presents: NYC Electric Vocal Artist Showcase\"",
-    "source": "json-ld"
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (In-Person)",
+    "date": "Jan 17",
+    "reason": "date is in the past",
+    "source": "llm"
   },
   {
-    "venue": "Wonderville",
-    "event": "Party Like It’s 2009",
-    "date": "Jul 10",
-    "reason": "duplicate of existing \"Party Like It’s 2009\"",
-    "source": "json-ld"
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (Online)",
+    "date": "Apr 13",
+    "reason": "date is in the past",
+    "source": "llm"
   },
   {
-    "venue": "Wonderville",
-    "event": "In Bass We Trust",
-    "date": "Jul 11",
-    "reason": "duplicate of existing \"In Bass We Trust\"",
-    "source": "json-ld"
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (In-Person)",
+    "date": "Apr 14",
+    "reason": "date is in the past",
+    "source": "llm"
   },
   {
-    "venue": "Creative Music Studio",
-    "event": "Creative Music Workshop with Joe McPherson",
-    "date": "Aug 2",
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (Online)",
+    "date": "Apr 15",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (In-Person)",
+    "date": "Apr 16",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (Online)",
+    "date": "Apr 17",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (In-Person)",
+    "date": "Apr 18",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (Online)",
+    "date": "Jul 13",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Creative Music Studio",
-    "event": "Improvisation and Composition with Tomeka Reid",
-    "date": "Sep 12",
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (Online)",
+    "date": "Jul 14",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Creative Music Studio",
-    "event": "Improvisation and Composition with Tomeka Reid",
-    "date": "Sep 13",
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (In-Person)",
+    "date": "Jul 14",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Creative Music Studio",
-    "event": "Improvisation and Composition with Tomeka Reid",
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (In-Person)",
+    "date": "Jul 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (Online)",
+    "date": "Jul 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (Online)",
+    "date": "Jul 16",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (In-Person)",
+    "date": "Jul 16",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (In-Person)",
+    "date": "Jul 17",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (Online)",
+    "date": "Jul 17",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (Online)",
+    "date": "Jul 18",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (In-Person)",
+    "date": "Jul 18",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (In-Person)",
+    "date": "Jul 19",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (Online)",
+    "date": "Oct 13",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (In-Person)",
+    "date": "Oct 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (Online)",
+    "date": "Oct 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (In-Person)",
+    "date": "Oct 16",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (Online)",
+    "date": "Oct 17",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "International Center of Photography",
+    "event": "The Art of the Photobook (In-Person)",
+    "date": "Oct 18",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Fiction Writing I",
+    "date": "Jan 11",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Memoir Writing I",
+    "date": "Jan 12",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Screenwriting I",
+    "date": "Jan 13",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Fiction Writing I",
     "date": "Sep 14",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Creative Music Studio",
-    "event": "Rhythm and Groove Workshop with Marcus Gilmore",
-    "date": "Oct 23",
+    "venue": "Gotham Writers Workshop",
+    "event": "Memoir Writing I",
+    "date": "Sep 15",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Creative Music Studio",
-    "event": "Rhythm and Groove Workshop with Marcus Gilmore",
-    "date": "Oct 24",
+    "venue": "Gotham Writers Workshop",
+    "event": "Screenwriting I",
+    "date": "Sep 16",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Creative Music Studio",
-    "event": "Vocal Improvisation with Fay Victor",
-    "date": "Nov 6",
+    "venue": "Gotham Writers Workshop",
+    "event": "Poetry Writing I",
+    "date": "Sep 17",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Creative Music Studio",
-    "event": "Vocal Improvisation with Fay Victor",
+    "venue": "Gotham Writers Workshop",
+    "event": "Novel Writing I",
+    "date": "Sep 18",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Creative Nonfiction I",
+    "date": "Sep 19",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Short Story Writing I",
+    "date": "Sep 20",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Business Writing",
+    "date": "Oct 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Writing for Children",
+    "date": "Oct 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Playwriting I",
+    "date": "Oct 7",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "TV Writing I",
+    "date": "Oct 8",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Standup Comedy Writing",
+    "date": "Oct 9",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Writing for Video Games",
+    "date": "Oct 10",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Novel Writing II",
+    "date": "Oct 11",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Fiction Writing II",
+    "date": "Nov 2",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Screenwriting II",
+    "date": "Nov 4",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Poetry Writing II",
+    "date": "Nov 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Creative Nonfiction II",
     "date": "Nov 7",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Creative Music Studio",
-    "event": "Vocal Improvisation with Fay Victor",
+    "venue": "Gotham Writers Workshop",
+    "event": "Short Story Writing II",
     "date": "Nov 8",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Creative Music Studio",
-    "event": "Electronic Music Production with Matana Roberts",
-    "date": "Dec 4",
+    "venue": "Gotham Writers Workshop",
+    "event": "Fiction Writing III",
+    "date": "Dec 7",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Creative Music Studio",
-    "event": "Electronic Music Production with Matana Roberts",
-    "date": "Dec 5",
+    "venue": "Gotham Writers Workshop",
+    "event": "Memoir Writing III",
+    "date": "Dec 8",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Creative Music Studio",
-    "event": "Electronic Music Production with Matana Roberts",
-    "date": "Dec 6",
+    "venue": "Gotham Writers Workshop",
+    "event": "Screenwriting III",
+    "date": "Dec 9",
+    "reason": "title tokens missing from source",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Poetry Writing III",
+    "date": "Dec 10",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Creative Nonfiction III",
+    "date": "Dec 12",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Gotham Writers Workshop",
+    "event": "Short Story Writing III",
+    "date": "Dec 13",
     "reason": "date not literally in source HTML",
     "source": "llm"
   }

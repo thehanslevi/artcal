@@ -1,7 +1,7 @@
 {
-  "ranAt": "2026-07-06T16:26:53.913Z",
-  "acceptedTotal": 3,
-  "rejectedTotal": 66,
+  "ranAt": "2026-07-06T19:17:30.379Z",
+  "acceptedTotal": 15,
+  "rejectedTotal": 103,
   "duplicatesSkipped": [],
   "perVenue": {
     "Symphony Space": {
@@ -35,8 +35,8 @@
       "source": "json-ld"
     },
     "Greenwich House Pottery": {
-      "accepted": 0,
-      "rejected": 9,
+      "accepted": 1,
+      "rejected": 8,
       "source": "json-ld"
     },
     "Flux Factory": {
@@ -44,55 +44,10 @@
       "rejected": 1,
       "source": "json-ld"
     },
-    "Choplet Ceramic Studio": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
     "Materials for the Arts": {
       "accepted": 0,
       "rejected": 2,
       "source": "json-ld"
-    },
-    "DCTV": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Wonderville": {
-      "accepted": 0,
-      "rejected": 8,
-      "source": "json-ld"
-    },
-    "Center for Fiction": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Gotham Writers Workshop": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Fat Cat Fab Lab": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Socrates Sculpture Park": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Word Up Community Bookshop": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "El Museo del Barrio": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
     },
     "Interference Archive": {
       "accepted": 0,
@@ -380,9 +335,9 @@
       "source": "none"
     },
     "Lower East Side Printshop": {
-      "accepted": 0,
+      "accepted": 5,
       "rejected": 0,
-      "source": "none"
+      "source": "llm"
     },
     "Robert Blackburn Printmaking Workshop": {
       "accepted": 0,
@@ -410,6 +365,11 @@
       "source": "none"
     },
     "Artshack Brooklyn": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Choplet Ceramic Studio": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
@@ -446,8 +406,8 @@
     },
     "International Center of Photography": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 30,
+      "source": "llm"
     },
     "Loop of the Loom": {
       "accepted": 0,
@@ -464,10 +424,15 @@
       "rejected": 0,
       "source": "none"
     },
-    "School for Poetic Computation": {
+    "DCTV": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
+    },
+    "School for Poetic Computation": {
+      "accepted": 6,
+      "rejected": 0,
+      "source": "llm"
     },
     "Harvestworks": {
       "accepted": 0,
@@ -478,6 +443,16 @@
       "accepted": 0,
       "rejected": 0,
       "source": "none"
+    },
+    "Center for Fiction": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Gotham Writers Workshop": {
+      "accepted": 2,
+      "rejected": 28,
+      "source": "llm"
     },
     "NY Writers Coalition": {
       "accepted": 0,
@@ -505,9 +480,9 @@
       "source": "none"
     },
     "Works in Progress NYC": {
-      "accepted": 0,
+      "accepted": 1,
       "rejected": 0,
-      "source": "none"
+      "source": "llm"
     },
     "Manny Cantor Center": {
       "accepted": 0,
@@ -534,6 +509,11 @@
       "rejected": 0,
       "source": "none"
     },
+    "Fat Cat Fab Lab": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
     "Hack Manhattan": {
       "accepted": 0,
       "rejected": 0,
@@ -549,7 +529,17 @@
       "rejected": 0,
       "source": "none"
     },
+    "Socrates Sculpture Park": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
     "Studio Museum in Harlem": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Word Up Community Bookshop": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
@@ -560,9 +550,9 @@
       "source": "none"
     },
     "Creative Music Studio": {
-      "accepted": 3,
-      "rejected": 12,
-      "source": "llm"
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
     },
     "BKC": {
       "accepted": 0,
@@ -575,6 +565,11 @@
       "source": "none"
     },
     "Museum of the Moving Image": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "El Museo del Barrio": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
