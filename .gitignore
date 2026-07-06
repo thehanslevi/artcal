@@ -26,3 +26,6 @@ dist-ssr
 # Personal working notes — kept local, not in the deployed repo
 creative-calendar-chat-log-*.md
 creative-pursuit-log.md
+
+# Scanner run result — reconciled by CI, not committed
+scripts/scanner/.scan-result.json

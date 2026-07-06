@@ -51,20 +51,23 @@ jobs:
         run: |
           git config user.name  "calendar-scanner[bot]"
           git config user.email "calendar-scanner@users.noreply.github.com"
-          git add src/data/events.json scripts/scanner/candidates-review.json scripts/scanner/last-run.json
-          if git diff --staged --quiet; then
-            echo "No changes to commit."
-          else
+          # The scan is additive: re-apply its accepted events onto the latest
+          # main each attempt, so events.json never hits a merge conflict.
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            npx tsx scripts/reconcile-scan.ts
+            git add src/data/events.json scripts/scanner/candidates-review.json scripts/scanner/last-run.json scripts/scanner/scan-state.json
+            if git diff --staged --quiet; then
+              echo "No changes to commit."
+              exit 0
+            fi
             SUMMARY=$(node -e "const s=require('./scripts/scanner/last-run.json'); console.log('accepted '+s.acceptedTotal+' · flagged '+s.rejectedTotal);")
             git commit -m "Auto-scan: $SUMMARY"
-            # Handle race with concurrent pushes to main (up to 3 attempts)
-            for i in 1 2 3; do
-              if git push; then
-                exit 0
-              fi
-              echo "Push $i failed; pulling and retrying..."
-              git pull --rebase --autostash
-            done
-            echo "Could not push after 3 attempts."
-            exit 1
-          fi
+            if git push; then
+              exit 0
+            fi
+            echo "Push attempt $i failed (main moved); reconciling onto new main..."
+          done
+          echo "Could not push after 5 attempts."
+          exit 1

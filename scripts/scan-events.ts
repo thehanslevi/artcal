@@ -5,14 +5,12 @@ import { extractFromEmail } from "./scanner/extract-email.ts";
 import { extractFromVenue, getLlmAttempts } from "./scanner/extract.ts";
 import { closeBrowser } from "./scanner/fetchers.ts";
 import { makeGateRunner } from "./scanner/gates.ts";
-import { collapseRuns } from "./scanner/dedupe.ts";
-import { mergeIntoEvents } from "./scanner/merge.ts";
 import { VENUES } from "./scanner/venues.ts";
+import { writeScanOutputs, type ScanResult } from "./scanner/write-outputs.ts";
 
 const EVENTS_PATH = resolve("src/data/events.json");
-const REVIEW_PATH = resolve("scripts/scanner/candidates-review.json");
-const SUMMARY_PATH = resolve("scripts/scanner/last-run.json");
 const STATE_PATH = resolve("scripts/scanner/scan-state.json");
+const RESULT_PATH = resolve("scripts/scanner/.scan-result.json");
 
 interface Rejection {
   venue: string;
@@ -132,41 +130,22 @@ async function main(): Promise<void> {
   for (const name of getLlmAttempts()) {
     scanState[name] = now.toISOString();
   }
-  writeFileSync(STATE_PATH, JSON.stringify(scanState, null, 2) + "\n", "utf8");
 
-  const { data: mergedRaw, skippedDuplicates } = mergeIntoEvents(
-    events,
+  const result: ScanResult = {
+    ranAt: now.toISOString(),
     accepted,
-    year,
-  );
-  const { data: merged, collapsed } = collapseRuns(mergedRaw, year);
-  for (const c of collapsed) {
-    console.log(`   collapsed run: ${c.kept.event} (+${c.dropped} more dates)`);
-  }
-  writeFileSync(EVENTS_PATH, JSON.stringify(merged, null, 2) + "\n", "utf8");
-  writeFileSync(REVIEW_PATH, JSON.stringify(rejected, null, 2) + "\n", "utf8");
-  writeFileSync(
-    SUMMARY_PATH,
-    JSON.stringify(
-      {
-        ranAt: now.toISOString(),
-        acceptedTotal: accepted.length - skippedDuplicates.length,
-        rejectedTotal: rejected.length,
-        duplicatesSkipped: skippedDuplicates.map((s) => ({
-          event: s.event.event,
-          date: s.event.date,
-          duplicateOf: s.duplicateOf.event,
-        })),
-        perVenue,
-      },
-      null,
-      2,
-    ) + "\n",
-    "utf8",
-  );
+    rejected,
+    perVenue,
+    scanState,
+  };
+  // Persist the raw result (untracked) so CI can reconcile it onto the
+  // latest main before pushing, avoiding events.json merge conflicts.
+  writeFileSync(RESULT_PATH, JSON.stringify(result) + "\n", "utf8");
+
+  const { acceptedTotal } = writeScanOutputs(events, result);
 
   console.log(
-    `\nDONE · accepted ${accepted.length - skippedDuplicates.length} · skipped ${skippedDuplicates.length} duplicates · flagged ${rejected.length} for review`,
+    `\nDONE · accepted ${acceptedTotal} · flagged ${rejected.length} for review`,
   );
 }
 
