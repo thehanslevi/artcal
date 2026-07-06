@@ -45,7 +45,7 @@ jobs:
           IMAP_HOST: ${{ secrets.IMAP_HOST }}
           IMAP_FOLDER: ${{ secrets.IMAP_FOLDER }}
         run: npx tsx scripts/scan-events.ts
-        timeout-minutes: 45
+        timeout-minutes: 60
 
       - name: Commit changes
         run: |

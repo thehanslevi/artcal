@@ -71,8 +71,17 @@ export async function extractFromVenue(
     }
   }
 
-  // Try primary URL with the venue's declared strategy
-  const primary = await tryUrl(venue.url, venue.fetch ?? "static", venue, todayISO);
+  // Making venues are mostly JS-rendered studio sites, so default them to
+  // playwright — the rendered DOM feeds the deterministic extractors
+  // (JSON-LD / detail-crawl / platform parsers), no LLM/quota needed.
+  const defaultStrategy: FetchStrategy =
+    venue.defaultMode === "make" ? "playwright" : "static";
+  const primary = await tryUrl(
+    venue.url,
+    venue.fetch ?? defaultStrategy,
+    venue,
+    todayISO,
+  );
   if (primary.length > 0) return primary;
 
   // Fall back to alternate sources (donyc, BrooklynVegan, etc.)

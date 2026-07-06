@@ -57,13 +57,15 @@ async function fetchHtmlPlaywright(url: string): Promise<string | null> {
   try {
     await page.goto(url, {
       waitUntil: "domcontentloaded",
-      timeout: 30000,
+      timeout: 25000,
     });
-    // Give client-rendered content a moment to hydrate
-    await page.waitForLoadState("networkidle", { timeout: 20000 }).catch(() => {
+    // Give client-rendered content a moment to hydrate. Many sites never
+    // reach networkidle (analytics/beacons), so cap the wait low — the DOM
+    // is usually painted well before then — and add a short settle.
+    await page.waitForLoadState("networkidle", { timeout: 6000 }).catch(() => {
       /* fine if some XHRs never settle */
     });
-    await page.waitForTimeout(1500);
+    await page.waitForTimeout(1200);
     return await page.content();
   } catch (err) {
     console.error(
