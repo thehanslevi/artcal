@@ -38,7 +38,9 @@ const TODAY_FMT = new Intl.DateTimeFormat("en-US", {
 const UPLOAD_DEBOUNCE_MS = 1500;
 
 function App() {
-  const [tab, setTab] = useState<TabMode>("all");
+  // Default to Making — the calendar's reason for being is creative practice,
+  // and the venue mix skews heavily toward witness events, so lead with making.
+  const [tab, setTab] = useState<TabMode>("practice");
   const [filter, setFilter] = useState<CategoryFilter>("all");
   const [picksOnly, setPicksOnly] = useState(false);
   const [freeOnly, setFreeOnly] = useState(false);
