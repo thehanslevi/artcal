@@ -12,6 +12,23 @@ const EVENTS_PATH = resolve("src/data/events.json");
 const STATE_PATH = resolve("scripts/scanner/scan-state.json");
 const RESULT_PATH = resolve("scripts/scanner/.scan-result.json");
 
+// Max witness (audience-only) events kept per venue per run, so a single
+// theater/cinema season can't swamp the making-focused calendar. Making
+// events are never capped.
+const WITNESS_PER_VENUE_CAP = 8;
+
+const MONTHS: Record<string, number> = {
+  Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+  Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11,
+};
+
+function eventSortKey(e: CalEvent): number {
+  const [mo, day] = e.date.trim().split(/\s+/);
+  const m = MONTHS[mo ?? ""] ?? 0;
+  const d = Number(day) || 0;
+  return m * 100 + d;
+}
+
 interface Rejection {
   venue: string;
   event: string;
@@ -71,11 +88,23 @@ async function main(): Promise<void> {
       console.log(
         `   extracted ${candidates.length} candidates (${perVenue[venue.name].source})`,
       );
+      // Keep the earliest events when a single venue floods the calendar.
+      candidates.sort((a, b) => eventSortKey(a.event) - eventSortKey(b.event));
+      let venueWitnessKept = 0;
       for (const c of candidates) {
+        // Cap witness events per venue so one theater's whole season can't
+        // drown out making. Making (participatory) events are never capped.
+        if (
+          c.event.mode === "witness" &&
+          venueWitnessKept >= WITNESS_PER_VENUE_CAP
+        ) {
+          continue;
+        }
         const gate = runGate(c);
         if (gate.pass) {
           accepted.push(c.event);
           perVenue[venue.name].accepted += 1;
+          if (c.event.mode === "witness") venueWitnessKept += 1;
         } else {
           rejected.push({
             venue: venue.name,
