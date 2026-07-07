@@ -35,15 +35,20 @@ interface Parsed {
 
 function toEvent(p: Parsed, venue: Venue): CalEvent {
   const when = new Date(p.y, p.mo, p.d);
+  const { mode, category } = classifyEvent(
+    p.title,
+    venue.defaultMode,
+    venue.category,
+  );
   return {
     day: DAY_ABBR[when.getDay()] ?? "",
     date: `${MONTH_ABBR[p.mo]} ${p.d}`,
     event: p.title,
     where: venue.whereTemplate,
     cost: "TBD",
-    category: venue.category,
+    category,
     flag: null,
-    mode: venue.defaultMode,
+    mode,
     start: p.hhmm,
     end: null,
     note: null,

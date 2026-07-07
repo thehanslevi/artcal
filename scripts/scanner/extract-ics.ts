@@ -1,4 +1,5 @@
 import type { CalEvent } from "../../src/types";
+import { classifyEvent } from "./classify.ts";
 import type { Candidate } from "./extract";
 import type { Venue } from "./venues";
 
@@ -154,6 +155,11 @@ export async function extractFromIcs(
     const description = v["DESCRIPTION"] ? unescapeText(v["DESCRIPTION"].value) : "";
     const location = v["LOCATION"] ? unescapeText(v["LOCATION"].value) : "";
     const url = v["URL"]?.value.trim() || venue.url;
+    const { mode, category } = classifyEvent(
+      summary,
+      venue.defaultMode,
+      venue.category,
+    );
 
     const event: CalEvent = {
       day: DAY_ABBR[when.getDay()] ?? "",
@@ -161,9 +167,9 @@ export async function extractFromIcs(
       event: summary,
       where: location || venue.whereTemplate,
       cost: detectCost(summary, description),
-      category: venue.category,
+      category,
       flag: null,
-      mode: venue.defaultMode,
+      mode,
       start: start.hhmm,
       end: sameDayEnd ? end.hhmm : null,
       note: null,

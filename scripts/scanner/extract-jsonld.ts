@@ -1,4 +1,5 @@
 import type { CalEvent } from "../../src/types";
+import { classifyEvent } from "./classify.ts";
 import type { Venue } from "./venues";
 
 const MONTH_NAMES = [
@@ -109,16 +110,22 @@ function toCalEvent(
       : null;
 
   const cost = extractCost(raw.offers);
+  const title = cleanTitle(raw.name, venue.name);
+  const { mode, category } = classifyEvent(
+    title,
+    venue.defaultMode,
+    venue.category,
+  );
 
   return {
     day,
     date,
-    event: cleanTitle(raw.name, venue.name),
+    event: title,
     where: locationString(raw.location) ?? venue.whereTemplate,
     cost,
-    category: venue.category,
+    category,
     flag: null,
-    mode: venue.defaultMode,
+    mode,
     start: startTime,
     end: endTime,
     note: null,
