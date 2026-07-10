@@ -26,9 +26,11 @@ function buildModelChain(): ModelSpec[] {
     );
   }
   if (process.env.CEREBRAS_API_KEY) {
+    // Prefer strong, confirmed-available models; discovery is the fallback.
+    // (Auto-discovery once landed on gemma-4-31b, which barely extracts.)
     chain.push(
-      { provider: "cerebras", model: process.env.CEREBRAS_MODEL ?? "llama-3.3-70b" },
-      { provider: "cerebras", model: "llama3.1-8b" },
+      { provider: "cerebras", model: process.env.CEREBRAS_MODEL ?? "gpt-oss-120b" },
+      { provider: "cerebras", model: "llama-3.3-70b" },
     );
   }
   if (process.env.OPENAI_COMPAT_API_KEY && process.env.OPENAI_COMPAT_BASE_URL) {
@@ -129,11 +131,15 @@ async function discoverModel(
     const ids = (json.data ?? [])
       .map((m) => m.id)
       .filter((id): id is string => !!id && !/embed|whisper|tts/i.test(id));
-    // Prefer a mid/large instruct model; fall back to anything available.
+    // Prefer strong instruct models; explicitly rank small ones (gemma-4-31b)
+    // last — it barely extracts. Larger/known-good first.
     return (
+      ids.find((id) => /gpt-oss/i.test(id)) ??
       ids.find((id) => /llama.*(70b|3\.3)/i.test(id)) ??
-      ids.find((id) => /llama/i.test(id)) ??
-      ids.find((id) => /(qwen|gpt|glm|mixtral|gemma)/i.test(id)) ??
+      ids.find((id) => /(qwen).*(235b|32b)/i.test(id)) ??
+      ids.find((id) => /(glm|zai)/i.test(id)) ??
+      ids.find((id) => /llama|qwen/i.test(id)) ??
+      ids.find((id) => !/gemma/i.test(id)) ??
       ids[0] ??
       null
     );
