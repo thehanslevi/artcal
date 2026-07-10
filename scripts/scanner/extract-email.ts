@@ -3,23 +3,22 @@ import type { CalEvent } from "../../src/types";
 import type { Candidate } from "./extract";
 import { callLlm, hasLlm, isQuotaExhausted } from "./llm";
 
-const SYSTEM_PROMPT = `You extract dated cultural events from an email newsletter into strict JSON.
+const SYSTEM_PROMPT = `You extract dated ARTS and CREATIVE-PRACTICE events from an email newsletter into strict JSON.
+
+This is a curated arts calendar. Extract ONLY events that are art or creative practice:
+- INCLUDE: concerts, DJ sets, live music; theatre, dance, performance; film screenings; art/photo exhibitions and openings; poetry/prose readings, book launches, artist talks; and hands-on art/craft/making classes and workshops (writing, printmaking, ceramics, darkroom, music production, filmmaking, textiles, woodworking, etc.).
+- EXCLUDE — do NOT extract these even if dated: civic or community-service events, environmental / garden / tree / water stewardship, tree counts, recycling, volunteer days, nature walks, forest bathing, bird walks; sports and watch parties; markets, shopping, sales; food-only socials, picnics, pizza parties (unless it's a cooking CLASS); fundraisers/galas; fitness/wellness; tours; and general info sessions. When an event is not clearly arts or creative practice, OMIT it.
 
 Rules:
 - ONLY include events with a specific date in 2026 or 2027.
 - Date format: three-letter month + day, e.g. "Jul 26", "Nov 4".
 - Day format: three-letter weekday (Mon/Tue/Wed/Thu/Fri/Sat/Sun).
 - Times: 24-hour "HH:MM" or null.
-- Skip anything without a firm date and a venue name.
-- Skip past events (before today).
+- Skip anything without a firm date and a venue name. Skip past events (before today).
 - Return at most 40 events.
 
-Category (pick one):
-- sound, dance, film, tech, making, theatre, literature, community
-
-Mode:
-- make (class, workshop, participatory)
-- witness (show, screening, concert, reading)
+Category (pick one): sound, dance, film, tech, making, theatre, literature, community
+Mode: make (class, workshop, participatory) · witness (show, screening, concert, reading)
 
 Return a JSON object {"events": [ ... ]}. For each event fill: day, date, event
 title verbatim, where (venue name/address), cost (FREE / $X / $X-Y / TBD),

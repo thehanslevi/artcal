@@ -283,6 +283,48 @@
           "end": null,
           "note": "Free World Club DJ dance party / silent disco kicking off the series — outdoors at Lincoln Center.",
           "url": "https://lincolncenter.org/series/summer-for-the-city/madame-gandhi-218"
+        },
+        {
+          "day": "Fri",
+          "date": "Jul 10",
+          "event": "Bronx Museum: First Friday — The Robyn Party",
+          "where": "The Bronx Museum, 1040 Grand Concourse, Bronx",
+          "cost": "FREE",
+          "category": "sound",
+          "flag": null,
+          "mode": "witness",
+          "start": "18:00",
+          "end": null,
+          "note": null,
+          "url": "https://bronxmuseum.org/"
+        },
+        {
+          "day": "Sat",
+          "date": "Jul 11",
+          "event": "CCCADI: AfriCarnaval — A Tribute to Calypso Rose",
+          "where": "Josie Robertson Plaza, Lincoln Center",
+          "cost": "FREE",
+          "category": "sound",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://www.cccadi.org/events"
+        },
+        {
+          "day": "Sat",
+          "date": "Jul 11",
+          "event": "Snug Harbor: Serpentine Sibyls — Opening with a Shakuhachi Flute Performance",
+          "where": "Snug Harbor Cultural Center, Staten Island",
+          "cost": "FREE",
+          "category": "sound",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://snug-harbor.org/"
         }
       ]
     },
@@ -1497,6 +1539,34 @@
           "end": "23:00",
           "note": null,
           "url": "https://elmuseo.org/event/fifa-mens-world-cup-2026-final-watch-party/"
+        },
+        {
+          "day": "Thu",
+          "date": "Jul 16",
+          "event": "Snug Harbor: Soundtrack to a Coup d'État (film screening)",
+          "where": "Snug Harbor Cultural Center, Staten Island",
+          "cost": "FREE",
+          "category": "film",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://snug-harbor.org/"
+        },
+        {
+          "day": "Sun",
+          "date": "Jul 19",
+          "event": "Brooklyn Poets: Scene and Song w/ Matthew Gellman",
+          "where": "Brooklyn Poets (online)",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "make",
+          "start": null,
+          "end": null,
+          "note": "Poetry workshop.",
+          "url": "https://brooklynpoets.org/workshops/all"
         }
       ]
     },
@@ -1852,6 +1922,48 @@
           "end": null,
           "note": null,
           "url": "https://summerstage.org"
+        },
+        {
+          "day": "Wed",
+          "date": "Jul 22",
+          "event": "Brooklyn Poets: Creativity in Constriction — Experimenting With Form w/ Kayla Schwab",
+          "where": "Brooklyn Poets, Brooklyn",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "make",
+          "start": null,
+          "end": null,
+          "note": "Poetry workshop.",
+          "url": "https://brooklynpoets.org/workshops/all"
+        },
+        {
+          "day": "Sun",
+          "date": "Jul 26",
+          "event": "Brooklyn Poets: Cryptids & Creatures — Mythology and the Monstrous in Modern Poetry w/ Maya Salameh",
+          "where": "Brooklyn Poets (online)",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "make",
+          "start": null,
+          "end": null,
+          "note": "Poetry workshop.",
+          "url": "https://brooklynpoets.org/workshops/all"
+        },
+        {
+          "day": "Sun",
+          "date": "Jul 26",
+          "event": "Brooklyn Poets: Give Us Back the World — On Poetic Closure w/ D.S. Waldman",
+          "where": "Brooklyn Poets, Brooklyn",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "make",
+          "start": null,
+          "end": null,
+          "note": "Poetry workshop.",
+          "url": "https://brooklynpoets.org/workshops/all"
         }
       ]
     },
@@ -2109,6 +2221,48 @@
           "end": "15:00",
           "note": "Aarati Akkapeddi",
           "url": "https://withfriends.events/event/NXWa8sJw/handmade-datasets-free-public-talk/"
+        },
+        {
+          "day": "Wed",
+          "date": "Jul 29",
+          "event": "Brooklyn Poets: Artifacts of Grief w/ Gbenga Adesina",
+          "where": "Brooklyn Poets (online)",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "make",
+          "start": null,
+          "end": null,
+          "note": "Poetry workshop.",
+          "url": "https://brooklynpoets.org/workshops/all"
+        },
+        {
+          "day": "Thu",
+          "date": "Jul 30",
+          "event": "Brooklyn Poets: Punctuating Your Poems Just Right w/ Tara Skurtu",
+          "where": "Brooklyn Poets, Brooklyn",
+          "cost": "TBD",
+          "category": "literature",
+          "flag": null,
+          "mode": "make",
+          "start": null,
+          "end": null,
+          "note": "Poetry workshop.",
+          "url": "https://brooklynpoets.org/workshops/all"
+        },
+        {
+          "day": "Thu",
+          "date": "Jul 30",
+          "event": "Snug Harbor: Sounds of Summer Concert Series",
+          "where": "Snug Harbor Cultural Center, Staten Island",
+          "cost": "FREE",
+          "category": "sound",
+          "flag": null,
+          "mode": "witness",
+          "start": null,
+          "end": null,
+          "note": null,
+          "url": "https://snug-harbor.org/"
         }
       ]
     },
