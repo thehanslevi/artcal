@@ -239,18 +239,19 @@ function dispatch(
 }
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
-// A tokens-per-minute cap needs a full rolling-window wait; server congestion
-// clears faster.
-const TOKEN_LIMIT_BACKOFF_MS = 60000;
+// A per-minute cap (tokens OR requests) needs a full rolling-window wait to
+// clear; generic server congestion clears faster.
+const PER_MINUTE_BACKOFF_MS = 60000;
 const CONGESTION_BACKOFF_MS = 12000;
-// Pace calls so we don't burst over the TPM cap in the first place.
-const MIN_CALL_GAP_MS = 5000;
-const MAX_CONSECUTIVE_RATE_FAILS = 4;
+// Pace calls so we don't burst over the per-minute caps in the first place.
+const MIN_CALL_GAP_MS = 6000;
+const MAX_CONSECUTIVE_RATE_FAILS = 8;
 let consecutiveRateFails = 0;
 let lastCallAt = 0;
 
-function isTokenLimit(msg: string): boolean {
-  return /too_many_tokens|tokens per minute|tokens_per_minute/i.test(msg);
+// Both tokens-per-minute and requests-per-minute are rolling-window limits.
+function isPerMinuteLimit(msg: string): boolean {
+  return /per minute|per_minute|too_many_tokens|too_many_requests/i.test(msg);
 }
 
 async function paced(spec: ModelSpec, sys: string, user: string): Promise<string> {
@@ -287,8 +288,8 @@ export async function callLlm(
           idx += 1;
           continue;
         }
-        const backoff = isTokenLimit(msg)
-          ? TOKEN_LIMIT_BACKOFF_MS
+        const backoff = isPerMinuteLimit(msg)
+          ? PER_MINUTE_BACKOFF_MS
           : CONGESTION_BACKOFF_MS;
         console.warn(`   rate-limited on ${spec.provider} (${msg.slice(0, 120)}); backing off ${backoff / 1000}s`);
         await sleep(backoff);
