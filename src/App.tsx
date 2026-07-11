@@ -113,9 +113,16 @@ function App() {
     (async () => {
       setSyncStatus({ kind: "syncing" });
       try {
+        const curator = (await hashPassphrase(passphrase)) === CURATOR_HASH;
         const remote = await fetchPicks(passphrase);
         if (cancelled) return;
-        if (remote && remote.length > 0) {
+        if (curator) {
+          // The curator's row IS the public "Don't miss" list, so never merge
+          // this browser's casual local stars into it — remote is authoritative.
+          // Don't miss then shows ONLY events deliberately starred as curator.
+          skipNextUpload.current = true;
+          setPicks(new Set(remote ?? []));
+        } else if (remote && remote.length > 0) {
           const merged = new Set<string>([...loadPicks(), ...remote]);
           skipNextUpload.current = true;
           setPicks(merged);
@@ -195,7 +202,16 @@ function App() {
     if (!passphrase) return;
     setSyncStatus({ kind: "syncing" });
     try {
+      const curator = (await hashPassphrase(passphrase)) === CURATOR_HASH;
       const remote = await fetchPicks(passphrase);
+      if (curator) {
+        // Curator: remote is authoritative; don't push local stars up (see the
+        // passphrase sync effect above).
+        skipNextUpload.current = true;
+        setPicks(new Set(remote ?? []));
+        setSyncStatus({ kind: "synced", at: new Date() });
+        return;
+      }
       const local = new Set(loadPicks());
       if (remote) {
         for (const p of remote) local.add(p);

@@ -1398,6 +1398,17 @@ a:hover {
   border-bottom-color: var(--accent);
 }
 
+.week-widened {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin: -4px 0 16px;
+  padding-left: 10px;
+  border-left: 2px solid var(--accent);
+}
+
 .week-summary {
   display: flex;
   gap: 6px;
