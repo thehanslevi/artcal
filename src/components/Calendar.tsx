@@ -44,6 +44,7 @@ interface EnrichedWeek {
   past: boolean;
   current: boolean;
   visible: CalEvent[];
+  events: CalEvent[];
 }
 
 export function Calendar({
@@ -68,13 +69,13 @@ export function Calendar({
     setUserWeekIndex(null);
   }, [filter, tab, picksOnly, freeOnly, weekendOnly]);
 
-  const enrichedWeeks: EnrichedWeek[] = WEEKS.map((week) => {
-    const range = { start: week.start, end: week.end };
-    const past = isPastWeek(range, now);
-    const current = isCurrentWeek(range, now);
-    const visible = week.events
+  // Apply all active filters to a week's events under a given tab. Kept as a
+  // function so the focused week can be re-filtered with a widened tab when a
+  // single mode leaves it too sparse (see THIN_WEEK below).
+  const visibleFor = (events: CalEvent[], effTab: TabMode) =>
+    events
       .filter((e) => filter === "all" || e.category === filter)
-      .filter((e) => matchesTab(tab, e.mode))
+      .filter((e) => matchesTab(effTab, e.mode))
       .filter((e) => !picksOnly || picks.has(pickId(e)))
       .filter((e) => !freeOnly || isFree(e))
       .filter((e) => {
@@ -88,7 +89,13 @@ export function Calendar({
         const d = parseEventDate(e.date);
         return d ? isThisWeekend(d, now) : false;
       });
-    return { label: week.label, range, past, current, visible };
+
+  const enrichedWeeks: EnrichedWeek[] = WEEKS.map((week) => {
+    const range = { start: week.start, end: week.end };
+    const past = isPastWeek(range, now);
+    const current = isCurrentWeek(range, now);
+    const visible = visibleFor(week.events, tab);
+    return { label: week.label, range, past, current, visible, events: week.events };
   });
 
   const shownWeeks = enrichedWeeks.filter((w) => {
@@ -138,6 +145,26 @@ export function Calendar({
 
   const canPrev = safeIndex > 0;
   const canNext = safeIndex < shownWeeks.length - 1;
+
+  // A single mode (Making or Witnessing) can leave the focused week nearly
+  // empty — landing on 3 events reads as "broken." When that happens, keep the
+  // single-week view but widen this one week to show both modes so it looks
+  // full. Navigation and counts stay scoped to the chosen tab.
+  const THIN_WEEK = 4;
+  let focusedEvents = focused.visible;
+  let widened = false;
+  if (
+    viewMode === "single" &&
+    !weekendOnly &&
+    tab !== "all" &&
+    focused.visible.length < THIN_WEEK
+  ) {
+    const both = visibleFor(focused.events, "all");
+    if (both.length > focused.visible.length) {
+      focusedEvents = both;
+      widened = true;
+    }
+  }
 
   return (
     <div className="calendar">
@@ -199,6 +226,11 @@ export function Calendar({
         </div>
       </div>
       {(viewMode === "single" && !weekendOnly ? [focused] : shownWeeks).map((week) => {
+        const weekEvents =
+          week === focused && viewMode === "single" && !weekendOnly
+            ? focusedEvents
+            : week.visible;
+        const showWidenedNote = widened && week === focused;
         return (
           <section
             key={week.label}
@@ -211,9 +243,15 @@ export function Calendar({
                   <span className="current-chip">This week</span>
                 ) : null}
               </h3>
-              <WeekSummary events={week.visible} tab={tab} picks={picks} />
+              <WeekSummary events={weekEvents} tab={tab} picks={picks} />
             </div>
-            {week.visible.map((event, idx) => {
+            {showWidenedNote ? (
+              <p className="week-widened">
+                Slim {tab === "practice" ? "making" : "witnessing"} week — showing
+                both making &amp; witnessing.
+              </p>
+            ) : null}
+            {weekEvents.map((event, idx) => {
               const d = parseEventDate(event.date);
               const du: number | null = d ? daysUntilFn(d, now) : null;
               const evPast = d ? isPast(d, now) : false;
