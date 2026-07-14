@@ -5,7 +5,9 @@ import {
   LAST_VERIFIED,
   PRACTICES,
   availableThisWeek,
+  formatAvailability,
   formatCost,
+  formatCostGap,
   formatSchedule,
   isAffordable,
   isNearby,
@@ -180,12 +182,16 @@ function PracticeRow({
   onThisWeek: boolean;
 }) {
   const cost = formatCost(p.cost);
+  const gap = formatCostGap(p.cost);
+  const avail = formatAvailability(p.availability);
+  const dormant = p.availability && p.availability.status !== "running";
   const ink = INK[p.disciplines[0]!];
   return (
-    <li className={`dir-item cat-${ink}`}>
+    <li className={`dir-item cat-${ink}${dormant ? " is-dormant" : ""}`}>
       <div className="dir-when">
         <span className="dir-sched">{formatSchedule(p.schedule)}</span>
         {onThisWeek ? <span className="dir-live">this week</span> : null}
+        {avail ? <span className="dir-avail">{avail}</span> : null}
       </div>
       <div className="dir-body">
         <div className="dir-name">
@@ -197,10 +203,14 @@ function PracticeRow({
         <div className="dir-meta">
           {p.neighborhood}
           {p.travelMin !== null ? (
-            <span className="dir-travel"> · {p.travelMin} min</span>
+            <span className="dir-travel"> · ~{p.travelMin} min</span>
           ) : null}
           {cost ? <span className="dir-cost"> · {cost}</span> : null}
+          {gap ? <span className="dir-gap"> · {gap}</span> : null}
         </div>
+        {p.availability && p.availability.status !== "running" ? (
+          <div className="dir-dormant-note">{p.availability.note}</div>
+        ) : null}
         {p.access.length ? (
           <div className="dir-access">
             {p.access

@@ -62,7 +62,24 @@ export type Cost =
   | { kind: "range"; min: number; max: number }
   | { kind: "per-month"; amount: number }
   | { kind: "per-session"; amount: number }
-  | { kind: "unknown" };
+  | { kind: "unknown"; why: UnknownCostReason };
+
+/**
+ * Why a price is missing, because the reasons are not equivalent.
+ *
+ * Checking 8 venues found 2 that publish prices, 4 that publish none at all,
+ * and 2 that block automated readers. "not-published" is a durable fact about
+ * the venue that a visitor deserves to see up front. "not-checked" is a backlog
+ * item. Collapsing both into "TBD" is what made 58% of the old calendar
+ * unusable for the one constraint that actually binds.
+ */
+export type UnknownCostReason =
+  /** The venue genuinely does not list prices publicly. Call or email them. */
+  | "not-published"
+  /** The site blocks automated reading. A human can still look. */
+  | "blocked"
+  /** Nobody has looked yet. */
+  | "not-checked";
 
 /**
  * The standing pattern. `dated` exists only for genuine one-offs; if most
@@ -76,6 +93,31 @@ export type Schedule =
   | { kind: "irregular"; note: string }
   | { kind: "dated"; date: string; note?: string };
 
+/**
+ * A schedule says when a practice meets. It does not say whether it is meeting
+ * at all right now, and those are different questions.
+ *
+ * The Fire Ensemble rehearses weekly on Mondays and is currently not running:
+ * its spring session ended in June and summer is the gap. Mono No Aware runs
+ * year-round and is closed every August. Modelling only the schedule made the
+ * first case show up as "on this week," which is a lie.
+ *
+ * Omit this field entirely to mean "running, year-round." Most practices are.
+ */
+export type Availability =
+  | { status: "running"; note?: string; darkMonths?: number[] }
+  | {
+      status: "dormant";
+      /** Why it is not running. Always required: dormancy needs a reason. */
+      note: string;
+      /** ISO date or YYYY-MM. */
+      resumes?: string;
+      /** True when `resumes` is inferred from last year's pattern, not posted. */
+      resumesEstimated?: boolean;
+    }
+  | { status: "waitlist"; note: string; resumes?: string }
+  | { status: "unknown"; note: string };
+
 export interface Practice {
   id: string;
   name: string;
@@ -84,11 +126,16 @@ export interface Practice {
   disciplines: Discipline[];
   neighborhood: string;
   borough: Borough;
-  /** Door-to-door minutes from Crown Heights. Null when not yet measured. */
+  /**
+   * Approximate door-to-door minutes from Crown Heights. Always an estimate,
+   * never a measurement. Null when there is no fixed address to estimate from.
+   */
   travelMin: number | null;
   url: string;
   cost: Cost;
   schedule: Schedule;
+  /** Omit to mean running year-round. */
+  availability?: Availability;
   access: Access[];
   /** ISO date this entry was last checked against the venue's own site. */
   verifiedOn: string;

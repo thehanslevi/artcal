@@ -1,6 +1,7 @@
 import raw from "../data/practices.json";
 import type {
   Access,
+  Availability,
   Cost,
   Practice,
   PracticesData,
@@ -46,7 +47,24 @@ function daysInMonth(d: Date): number {
   return new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate();
 }
 
-/** Practices with a computable occurrence in the 7 days starting at `from`. */
+/**
+ * Whether a practice is actually meeting on `date`, as opposed to merely having
+ * a schedule that says it would. A schedule and a season are different facts;
+ * conflating them is what put the Fire Ensemble in "this week" while its
+ * spring session was over.
+ */
+export function isRunningOn(p: Practice, date: Date): boolean {
+  const a = p.availability;
+  if (!a) return true; // omitted means running year-round
+  if (a.status !== "running") return false;
+  if (a.darkMonths?.includes(date.getMonth() + 1)) return false;
+  return true;
+}
+
+/**
+ * Practices with a computable occurrence in the 7 days starting at `from`, that
+ * are also actually running. Both conditions are required.
+ */
 export function availableThisWeek(
   from: Date,
   practices: Practice[] = PRACTICES,
@@ -59,9 +77,47 @@ export function availableThisWeek(
   return practices
     .map((practice) => ({
       practice,
-      days: week.filter((d) => occursOn(practice.schedule, d)),
+      days: week.filter(
+        (d) => occursOn(practice.schedule, d) && isRunningOn(practice, d),
+      ),
     }))
     .filter((x) => x.days.length > 0);
+}
+
+const MONTH = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+];
+
+/** A short label for the UI, or null when a practice is simply running. */
+export function formatAvailability(a: Availability | undefined): string | null {
+  if (!a) return null;
+  switch (a.status) {
+    case "running":
+      if (!a.darkMonths?.length) return null;
+      return `Dark ${a.darkMonths.map((m) => MONTH[m - 1]).join(", ")}`;
+    case "dormant": {
+      if (!a.resumes) return "Not running";
+      const when = formatResumes(a.resumes);
+      return a.resumesEstimated ? `Back ~${when}` : `Back ${when}`;
+    }
+    case "waitlist":
+      return "Waitlist";
+    case "unknown":
+      return "Unconfirmed";
+  }
+}
+
+function formatResumes(s: string): string {
+  const m = /^(\d{4})-(\d{2})(?:-(\d{2}))?$/.exec(s);
+  if (!m) return s;
+  const month = MONTH[Number(m[2]) - 1] ?? s;
+  return m[3] ? `${month} ${Number(m[3])}` : month;
+}
+
+/** Running right now, on the given day. Drives the default Directory sort. */
+export function isRunningNow(p: Practice, date: Date): boolean {
+  return isRunningOn(p, date);
 }
 
 const DAY_LABEL: Record<Weekday, string> = {
@@ -121,6 +177,22 @@ export function formatCost(c: Cost): string | null {
       return `$${c.amount}/session`;
     case "unknown":
       return null;
+  }
+}
+
+/**
+ * The honest version of the old "TBD". Says whose gap it is: the venue's, the
+ * bot-blocker's, or ours.
+ */
+export function formatCostGap(c: Cost): string | null {
+  if (c.kind !== "unknown") return null;
+  switch (c.why) {
+    case "not-published":
+      return "Price not published — ask them";
+    case "blocked":
+      return "Price not readable by bot — check in a browser";
+    case "not-checked":
+      return "Price not checked yet";
   }
 }
 

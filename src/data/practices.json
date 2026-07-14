@@ -5,113 +5,208 @@
       "id": "artshack",
       "name": "Artshack Brooklyn",
       "what": "Nonprofit ceramics studio. Wheel throwing, handbuilding, sculpture; sessions include unlimited open studio.",
-      "disciplines": ["ceramics"],
+      "disciplines": [
+        "ceramics"
+      ],
       "neighborhood": "Bed-Stuy",
       "borough": "brooklyn",
       "travelMin": 10,
-      "url": "https://www.artshackbrooklyn.org/upcoming-classes",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "session", "weeks": 5, "note": "5-week summer sessions plus weekend one-offs" },
-      "access": ["free", "work-study", "scholarship", "enroll-ahead"],
-      "verifiedOn": "2026-07-06",
-      "caveat": "Free community days run year-round. Work-study is 50% off. Full scholarships for Black and Brown applicants; fall apps open Jul 28."
+      "url": "https://www.artshackbrooklyn.org/studio/upcoming",
+      "cost": {
+        "kind": "unknown",
+        "why": "not-published"
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 5,
+        "note": "5-week summer sessions plus weekend one-offs"
+      },
+      "access": [
+        "free",
+        "work-study",
+        "scholarship",
+        "enroll-ahead"
+      ],
+      "verifiedOn": "2026-07-14",
+      "caveat": "Prices are not published; email info@artshackbrooklyn.org. Free community days run year-round. Work-study is 50% off. Full scholarships for Black and Brown applicants; fall apps open Jul 28."
     },
     {
       "id": "gasworks",
       "name": "Gasworks NYC",
       "what": "Wheel throwing, handbuilding, cone 10 gas reduction firing.",
-      "disciplines": ["ceramics"],
+      "disciplines": [
+        "ceramics"
+      ],
       "neighborhood": "South Slope",
       "borough": "brooklyn",
-      "travelMin": null,
+      "travelMin": 25,
       "url": "https://gasworksnyc.com/collections",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "session", "weeks": 4, "note": "4- and 8-week sessions; one-night Friday classes" },
-      "access": ["enroll-ahead", "drop-in"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 4,
+        "note": "4- and 8-week sessions; one-night Friday classes"
+      },
+      "access": [
+        "enroll-ahead",
+        "drop-in"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "bushwick-ceramics",
       "name": "Bushwick Ceramics",
       "what": "Wheel throwing and handbuilding; one-day workshops; open studio membership.",
-      "disciplines": ["ceramics"],
+      "disciplines": [
+        "ceramics"
+      ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
       "travelMin": 20,
       "url": "https://bushwickceramics.com/classes",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "session", "weeks": 6, "note": "6-week classes; one-day workshops" },
-      "access": ["enroll-ahead", "membership"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 6,
+        "note": "6-week classes; one-day workshops"
+      },
+      "access": [
+        "enroll-ahead",
+        "membership"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "bklyn-clay",
       "name": "BKLYN CLAY",
       "what": "Semester-based wheel throwing and handbuilding, open studio included. Latin American ceramic traditions track in Spanish and English.",
-      "disciplines": ["ceramics"],
+      "disciplines": [
+        "ceramics"
+      ],
       "neighborhood": "Prospect Heights",
       "borough": "brooklyn",
       "travelMin": 10,
       "url": "https://bklynclay.com/classes",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "session", "weeks": 12, "note": "12-week semesters" },
-      "access": ["enroll-ahead", "membership"],
-      "verifiedOn": "2026-07-06"
+      "cost": {
+        "kind": "fixed",
+        "amount": 825
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 12,
+        "note": "12-week semesters"
+      },
+      "access": [
+        "enroll-ahead",
+        "membership"
+      ],
+      "verifiedOn": "2026-07-14",
+      "caveat": "$825 for the full 12-week semester, plus a $15 tool kit and firing fees at 4 cents per cubic inch."
     },
     {
       "id": "choplet",
       "name": "Choplet Ceramic Studio",
       "what": "Monthly unlimited-access membership; wheel and handbuilding. Also runs screenprint boot camps.",
-      "disciplines": ["ceramics", "printmaking"],
+      "disciplines": [
+        "ceramics",
+        "printmaking"
+      ],
       "neighborhood": "Williamsburg + Greenpoint",
       "borough": "brooklyn",
-      "travelMin": null,
+      "travelMin": 30,
       "url": "https://choplet.com",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "membership", "note": "Monthly unlimited access" },
-      "access": ["membership"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "membership",
+        "note": "Monthly unlimited access"
+      },
+      "access": [
+        "membership"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "brooklyn-clay-industries",
       "name": "Brooklyn Clay Industries",
       "what": "BYOB drop-in wheel and handbuilding.",
-      "disciplines": ["ceramics"],
+      "disciplines": [
+        "ceramics"
+      ],
       "neighborhood": "Navy Yard",
       "borough": "brooklyn",
-      "travelMin": null,
+      "travelMin": 25,
       "url": "https://www.brooklynclayindustries.com/classes",
-      "cost": { "kind": "per-session", "amount": 85 },
-      "schedule": { "kind": "irregular", "note": "Drop-in sessions; check site" },
-      "access": ["drop-in", "membership"],
+      "cost": {
+        "kind": "per-session",
+        "amount": 85
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Drop-in sessions; check site"
+      },
+      "access": [
+        "drop-in",
+        "membership"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "powerhouse-ceramics",
       "name": "Powerhouse Arts Community Ceramics Studio",
       "what": "Wheel, handbuilding, slip-casting, gas firing, raku, 3D printing. Shares a building with MGC printmaking.",
-      "disciplines": ["ceramics"],
+      "disciplines": [
+        "ceramics"
+      ],
       "neighborhood": "Gowanus",
       "borough": "brooklyn",
       "travelMin": 25,
       "url": "https://powerhousearts.org/community-ceramics-studio",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "membership", "note": "Membership-based" },
-      "access": ["membership"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "membership",
+        "note": "Membership-based"
+      },
+      "access": [
+        "membership"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "manny-cantor",
       "name": "Manny Cantor Center",
       "what": "Adult wheel and handbuilding at the Educational Alliance settlement house.",
-      "disciplines": ["ceramics"],
+      "disciplines": [
+        "ceramics"
+      ],
       "neighborhood": "Lower East Side",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://mannycantor.org/art/art-classes/ceramics/",
-      "cost": { "kind": "fixed", "amount": 435 },
-      "schedule": { "kind": "session", "weeks": 8, "note": "8-week sessions" },
-      "access": ["scholarship", "enroll-ahead"],
+      "cost": {
+        "kind": "fixed",
+        "amount": 435
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 8,
+        "note": "8-week sessions"
+      },
+      "access": [
+        "scholarship",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Income-eligible scholarships available."
     },
@@ -119,58 +214,109 @@
       "id": "scratch-ceramics",
       "name": "Scratch Ceramics",
       "what": "Community ceramics studio; wheel throwing and handbuilding. The Queens hub since 2024.",
-      "disciplines": ["ceramics"],
+      "disciplines": [
+        "ceramics"
+      ],
       "neighborhood": "Ridgewood",
       "borough": "queens",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://www.scratchceramics.com",
-      "cost": { "kind": "range", "min": 495, "max": 520 },
-      "schedule": { "kind": "session", "weeks": 8, "note": "8-week sessions; membership $220/mo, 3-month minimum" },
-      "access": ["enroll-ahead", "membership"],
+      "cost": {
+        "kind": "range",
+        "min": 495,
+        "max": 520
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 8,
+        "note": "8-week sessions; membership $220/mo, 3-month minimum"
+      },
+      "access": [
+        "enroll-ahead",
+        "membership"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "uptown-clay",
       "name": "Uptown Clay",
       "what": "Community ceramics studio, 20 wheels and 4 kilns. Instructors are Washington Heights natives. Drop-in option.",
-      "disciplines": ["ceramics"],
+      "disciplines": [
+        "ceramics"
+      ],
       "neighborhood": "Washington Heights",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 65,
       "url": "https://www.uptown-clay.com/classes",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "membership", "note": "Group sessions, drop-in a la carte, and membership. Open studio Sundays 11am-10pm" },
-      "access": ["drop-in", "membership"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "membership",
+        "note": "Group sessions, drop-in a la carte, and membership. Open studio Sundays 11am-10pm"
+      },
+      "access": [
+        "drop-in",
+        "membership"
+      ],
       "verifiedOn": "2026-07-06"
     },
-
     {
       "id": "mgc",
       "name": "MGC Community Print Studio",
       "what": "Intaglio, relief, lithography, screenprinting, digital. The largest community print studio in Brooklyn.",
-      "disciplines": ["printmaking"],
+      "disciplines": [
+        "printmaking"
+      ],
       "neighborhood": "Gowanus",
       "borough": "brooklyn",
       "travelMin": 25,
       "url": "https://powerhousearts.org/mgc-community-print-studio",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "irregular", "note": "Semester-based; summer/fall not posted as of Jul 6" },
-      "access": ["sliding-scale", "membership", "enroll-ahead"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Semester-based; summer/fall not posted as of Jul 6"
+      },
+      "access": [
+        "sliding-scale",
+        "membership",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
-      "caveat": "No posted semester since June 23. Email mgc@powerhousearts.org. Shoestring Press is the active alternative."
+      "caveat": "No posted semester since June 23. Email mgc@powerhousearts.org. Shoestring Press is the active alternative.",
+      "availability": {
+        "status": "unknown",
+        "note": "No posted summer or fall semester since June 23."
+      }
     },
     {
       "id": "shoestring-press",
       "name": "Shoestring Press",
       "what": "Membership print shop five minutes from home. Screenprint, etching, litho, relief. Master printer Lane Sell.",
-      "disciplines": ["printmaking"],
+      "disciplines": [
+        "printmaking"
+      ],
       "neighborhood": "Crown Heights",
       "borough": "brooklyn",
       "travelMin": 5,
       "url": "https://shoestring.press",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "membership", "note": "Membership studio; classes at all levels, single-day and multi-session" },
-      "access": ["membership", "contact-first", "enroll-ahead"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "membership",
+        "note": "Membership studio; classes at all levels, single-day and multi-session"
+      },
+      "access": [
+        "membership",
+        "contact-first",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Visit by appointment. Email info@shoestringpressny.com. 640 Classon Ave, between Bergen and Dean."
     },
@@ -178,70 +324,129 @@
       "id": "rbpmw",
       "name": "Robert Blackburn Printmaking Workshop",
       "what": "Fine art printmaking: screenprinting, photopolymer letterpress, textile printing. Eight hours of free studio time after each workshop.",
-      "disciplines": ["printmaking"],
+      "disciplines": [
+        "printmaking"
+      ],
       "neighborhood": "Midtown West",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 45,
       "url": "https://www.rbpmw-efanyc.org/classes",
-      "cost": { "kind": "range", "min": 290, "max": 495 },
-      "schedule": { "kind": "session", "weeks": 3, "note": "Multi-session courses" },
-      "access": ["enroll-ahead"],
+      "cost": {
+        "kind": "range",
+        "min": 290,
+        "max": 495
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 3,
+        "note": "Multi-session courses"
+      },
+      "access": [
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "les-printshop",
       "name": "Lower East Side Printshop",
       "what": "Screenprinting, intaglio, drypoint, chine collé. One-day workshops with studio time included.",
-      "disciplines": ["printmaking"],
+      "disciplines": [
+        "printmaking"
+      ],
       "neighborhood": "Lower East Side",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://www.printshop.org/classes-workshops",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "irregular", "note": "One-day workshops; open membership for ongoing access" },
-      "access": ["membership", "enroll-ahead"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "One-day workshops; open membership for ongoing access"
+      },
+      "access": [
+        "membership",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "bushwick-print-lab",
       "name": "Bushwick Print Lab",
       "what": "Screenprinting workshops. One beginner workshop unlocks open studio rental.",
-      "disciplines": ["printmaking"],
+      "disciplines": [
+        "printmaking"
+      ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
       "travelMin": 20,
       "url": "https://bushwickprintlab.org/services/workshops/",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "irregular", "note": "Workshops on rotation; open studio after beginner class" },
-      "access": ["enroll-ahead", "membership"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Workshops on rotation; open studio after beginner class"
+      },
+      "access": [
+        "enroll-ahead",
+        "membership"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "works-in-progress",
       "name": "Works in Progress NYC",
       "what": "Commercial-grade silk screen intensive: coating, burning, washing screens.",
-      "disciplines": ["printmaking"],
+      "disciplines": [
+        "printmaking"
+      ],
       "neighborhood": "East Village",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://www.worksinprogressnyc.org/silk-screen-classes/",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "irregular", "note": "Intro intensives; open studio for members" },
-      "access": ["enroll-ahead", "membership"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Intro intensives; open studio for members"
+      },
+      "access": [
+        "enroll-ahead",
+        "membership"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "mobile-print-power",
       "name": "Mobile Print Power",
       "what": "Multigenerational silkscreen and political education collective. Portable print carts, citywide pop-ups.",
-      "disciplines": ["printmaking", "community"],
+      "disciplines": [
+        "printmaking",
+        "community"
+      ],
       "neighborhood": "Corona",
       "borough": "queens",
-      "travelMin": null,
+      "travelMin": 50,
       "url": "https://mobileprintpower.com/workshops.php",
-      "cost": { "kind": "free" },
-      "schedule": { "kind": "weekly", "days": ["tue"], "time": "19:00-21:00" },
-      "access": ["free", "contact-first"],
+      "cost": {
+        "kind": "free"
+      },
+      "schedule": {
+        "kind": "weekly",
+        "days": [
+          "tue"
+        ],
+        "time": "19:00-21:00"
+      },
+      "access": [
+        "free",
+        "contact-first"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Email info@mobileprintpower.com to join the Tuesday workshop. All welcome."
     },
@@ -249,14 +454,28 @@
       "id": "secret-riso-club",
       "name": "Secret Riso Club",
       "what": "Community bookstore and risograph studio. Riso 101 gets you a two-color poster and ten copies to take home.",
-      "disciplines": ["printmaking", "zines"],
+      "disciplines": [
+        "printmaking",
+        "zines"
+      ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
       "travelMin": 15,
       "url": "https://secretrisoclub.com",
-      "cost": { "kind": "range", "min": 50, "max": 90 },
-      "schedule": { "kind": "irregular", "note": "Riso 101 monthly; workshops on rotation; member studio access after certification" },
-      "access": ["scholarship", "membership", "enroll-ahead"],
+      "cost": {
+        "kind": "range",
+        "min": 50,
+        "max": 90
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Riso 101 monthly; workshops on rotation; member studio access after certification"
+      },
+      "access": [
+        "scholarship",
+        "membership",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Community/scholarship tickets on request: workshops@secretrisoclub.com."
     },
@@ -264,118 +483,211 @@
       "id": "lucky-risograph",
       "name": "Lucky Risograph",
       "what": "Community riso press. Three-hour group workshops; you leave with printed work.",
-      "disciplines": ["printmaking", "zines"],
+      "disciplines": [
+        "printmaking",
+        "zines"
+      ],
       "neighborhood": "DUMBO",
       "borough": "brooklyn",
-      "travelMin": null,
+      "travelMin": 25,
       "url": "https://luckyrisograph.press",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "irregular", "note": "Monthly group workshops" },
-      "access": ["enroll-ahead"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Monthly group workshops"
+      },
+      "access": [
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06"
     },
-
     {
       "id": "center-for-book-arts",
       "name": "Center for Book Arts",
       "what": "Letterpress, bookbinding, paper marbling, typography, artist books. Over 100 classes a year.",
-      "disciplines": ["book-arts", "printmaking"],
+      "disciplines": [
+        "book-arts",
+        "printmaking"
+      ],
       "neighborhood": "Flatiron",
       "borough": "manhattan",
       "travelMin": 45,
       "url": "https://centerforbookarts.org/classes-and-workshops",
-      "cost": { "kind": "range", "min": 75, "max": 150 },
-      "schedule": { "kind": "session", "weeks": 5, "note": "Multi-session courses and single workshops" },
-      "access": ["enroll-ahead", "membership"],
+      "cost": {
+        "kind": "range",
+        "min": 75,
+        "max": 150
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 5,
+        "note": "Multi-session courses and single workshops"
+      },
+      "access": [
+        "enroll-ahead",
+        "membership"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Pay-what-you-can intensives offered periodically. $75/yr membership gives class discounts."
     },
-
     {
       "id": "textile-arts-center",
       "name": "Textile Arts Center",
       "what": "Weaving, knitting, sewing, natural dyeing, felting, visible mending. The widest range of fiber process in Brooklyn.",
-      "disciplines": ["textiles"],
+      "disciplines": [
+        "textiles"
+      ],
       "neighborhood": "Gowanus",
       "borough": "brooklyn",
       "travelMin": 22,
       "url": "https://textileartscenter.com/classes",
-      "cost": { "kind": "range", "min": 60, "max": 120 },
-      "schedule": { "kind": "session", "weeks": 4, "note": "4-week courses plus single-day workshops" },
-      "access": ["enroll-ahead"],
+      "cost": {
+        "kind": "range",
+        "min": 60,
+        "max": 120
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 4,
+        "note": "4-week courses plus single-day workshops"
+      },
+      "access": [
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "No sliding scale listed. TAC AIR residency exists for fiber artists."
     },
-
     {
       "id": "urbanglass",
       "name": "UrbanGlass",
       "what": "Glassblowing, flameworking, stained glass, coldworking, fused glass, beadmaking.",
-      "disciplines": ["glass"],
+      "disciplines": [
+        "glass"
+      ],
       "neighborhood": "Fort Greene",
       "borough": "brooklyn",
       "travelMin": 15,
       "url": "https://urbanglass.org/classes",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "session", "weeks": 6, "note": "Multi-week and single-session; all levels" },
-      "access": ["enroll-ahead"],
-      "verifiedOn": "2026-07-06"
+      "cost": {
+        "kind": "unknown",
+        "why": "not-published"
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 6,
+        "note": "Multi-week and single-session; all levels"
+      },
+      "access": [
+        "enroll-ahead"
+      ],
+      "verifiedOn": "2026-07-14",
+      "caveat": "Prices are not listed per class; call (718) 625-3685 or email info@urbanglass.org."
     },
     {
       "id": "brooklyn-glass",
       "name": "Brooklyn Glass",
       "what": "Glassblowing, flameworking, neon fabrication. Scientific glassblowing track.",
-      "disciplines": ["glass"],
+      "disciplines": [
+        "glass"
+      ],
       "neighborhood": "Windsor Terrace",
       "borough": "brooklyn",
-      "travelMin": null,
+      "travelMin": 30,
       "url": "https://brooklynglass.com/education/classes/",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "session", "weeks": 4, "note": "4- and 8-week courses; summer intensives" },
-      "access": ["enroll-ahead"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 4,
+        "note": "4- and 8-week courses; summer intensives"
+      },
+      "access": [
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06"
     },
-
     {
       "id": "makeville",
       "name": "Makeville Studio",
       "what": "Community woodshop. Furniture making, wood turning, hand tools. Certification unlocks hourly bench rental.",
-      "disciplines": ["woodworking"],
+      "disciplines": [
+        "woodworking"
+      ],
       "neighborhood": "Park Slope",
       "borough": "brooklyn",
-      "travelMin": null,
+      "travelMin": 20,
       "url": "https://makeville.com",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "irregular", "note": "Classes required before certification, then hourly bench rental" },
-      "access": ["enroll-ahead", "membership"],
-      "verifiedOn": "2026-07-06"
+      "cost": {
+        "kind": "unknown",
+        "why": "not-published"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Classes required before certification, then hourly bench rental"
+      },
+      "access": [
+        "enroll-ahead",
+        "membership"
+      ],
+      "verifiedOn": "2026-07-14",
+      "caveat": "Prices are not published; contact hello@makeville.com."
     },
     {
       "id": "craftsman-ave",
       "name": "Craftsman Ave",
       "what": "Stained glass, woodworking, blacksmithing, welding, leatherwork, knife-making, electronics. Four-hour beginner workshops, materials included.",
-      "disciplines": ["woodworking", "glass"],
+      "disciplines": [
+        "woodworking",
+        "glass"
+      ],
       "neighborhood": "Industry City",
       "borough": "brooklyn",
       "travelMin": 40,
       "url": "https://craftsmanave.com",
-      "cost": { "kind": "range", "min": 75, "max": 150 },
-      "schedule": { "kind": "irregular", "note": "Drop-in 4-hour workshops on rotation" },
-      "access": ["drop-in", "enroll-ahead"],
+      "cost": {
+        "kind": "range",
+        "min": 75,
+        "max": 150
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Drop-in 4-hour workshops on rotation"
+      },
+      "access": [
+        "drop-in",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "makerspace-nyc",
       "name": "MakerSpace NYC",
       "what": "50,000 sq ft nonprofit. Woodshop, metalshop, welding, blacksmithing, ceramics, CNC, 3D printing.",
-      "disciplines": ["woodworking"],
+      "disciplines": [
+        "woodworking"
+      ],
       "neighborhood": "Brooklyn Army Terminal",
       "borough": "brooklyn",
       "travelMin": 38,
       "url": "https://www.makerspace.nyc/classes",
-      "cost": { "kind": "per-month", "amount": 175 },
-      "schedule": { "kind": "membership", "note": "Day passes $50-75; memberships from ~$175/mo" },
-      "access": ["scholarship", "drop-in", "membership"],
+      "cost": {
+        "kind": "per-month",
+        "amount": 175
+      },
+      "schedule": {
+        "kind": "membership",
+        "note": "Day passes $50-75; memberships from ~$175/mo"
+      },
+      "access": [
+        "scholarship",
+        "drop-in",
+        "membership"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Free 3-month memberships by competitive application; priority to Sunset Park residents and underrepresented artists."
     },
@@ -383,45 +695,90 @@
       "id": "brooklyn-spark",
       "name": "Brooklyn Spark",
       "what": "Nine-founder co-op maker space. Woodshop, ceramics with kiln, textiles and looms, laser cutter, 3D printer.",
-      "disciplines": ["woodworking", "ceramics", "textiles"],
+      "disciplines": [
+        "woodworking",
+        "ceramics",
+        "textiles"
+      ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
       "travelMin": 18,
       "url": "https://brooklynspark.com",
-      "cost": { "kind": "per-month", "amount": 165 },
-      "schedule": { "kind": "weekly", "days": ["mon"], "time": "19:00-22:00" },
-      "access": ["free", "membership"],
+      "cost": {
+        "kind": "per-month",
+        "amount": 165
+      },
+      "schedule": {
+        "kind": "weekly",
+        "days": [
+          "mon"
+        ],
+        "time": "19:00-22:00"
+      },
+      "access": [
+        "free",
+        "membership"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Monday public nights 7-10pm are free and need no membership. That is the way in."
     },
-
     {
       "id": "bushwick-darkroom",
       "name": "Bushwick Community Darkroom",
       "what": "Film developing, B&W and color printing. Hourly and monthly rental; 24/7 member access.",
-      "disciplines": ["darkroom"],
+      "disciplines": [
+        "darkroom"
+      ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
       "travelMin": 18,
       "url": "https://www.bushwickcommunitydarkroom.com",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "weekly", "days": ["tue", "wed", "thu", "fri", "sat"], "time": "12:00-20:00" },
-      "access": ["drop-in", "membership", "enroll-ahead"],
-      "verifiedOn": "2026-07-06",
-      "caveat": "Public hours Tue-Sat 12-8pm. Closest darkroom to Crown Heights; walk in any time."
+      "cost": {
+        "kind": "per-month",
+        "amount": 30
+      },
+      "schedule": {
+        "kind": "weekly",
+        "days": [
+          "tue",
+          "wed",
+          "thu",
+          "fri",
+          "sat"
+        ],
+        "time": "12:00-20:00"
+      },
+      "access": [
+        "drop-in",
+        "membership",
+        "enroll-ahead"
+      ],
+      "verifiedOn": "2026-07-14",
+      "caveat": "Membership starts at $30/month. Non-member rental starts at $20/hr. Most group classes are $195 for a 3-hour session. Public hours Tue-Sat 12-8pm."
     },
     {
       "id": "gowanus-darkroom",
       "name": "Gowanus Darkroom",
       "what": "Small-group workshops, max four: film developing, B&W and color printing, photograms. Monthly group critique.",
-      "disciplines": ["darkroom"],
+      "disciplines": [
+        "darkroom"
+      ],
       "neighborhood": "Gowanus",
       "borough": "brooklyn",
       "travelMin": 25,
       "url": "https://www.gowanusdarkroom.com/classes",
-      "cost": { "kind": "per-session", "amount": 12 },
-      "schedule": { "kind": "irregular", "note": "$12/hr rental; workshops on rotation; monthly critique" },
-      "access": ["drop-in", "membership"],
+      "cost": {
+        "kind": "per-session",
+        "amount": 12
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "$12/hr rental; workshops on rotation; monthly critique"
+      },
+      "access": [
+        "drop-in",
+        "membership"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Monthly critique is $5 to show, free to attend as a listener, free for members. Cheapest accountability structure on this list."
     },
@@ -429,14 +786,25 @@
       "id": "penumbra",
       "name": "Penumbra Foundation",
       "what": "Tintype, wet plate collodion, cyanotype, gum bichromate, DIY developers. Over 100 workshops a year.",
-      "disciplines": ["darkroom"],
+      "disciplines": [
+        "darkroom"
+      ],
       "neighborhood": "Murray Hill",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 45,
       "url": "https://www.penumbrafoundation.org/workshops/",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "irregular", "note": "Workshops year-round" },
-      "access": ["free", "enroll-ahead"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Workshops year-round"
+      },
+      "access": [
+        "free",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Artist lecture series is free and open to the public."
     },
@@ -444,14 +812,25 @@
       "id": "icp",
       "name": "International Center of Photography",
       "what": "Darkroom skills, film developing, alt processes, B&W printing.",
-      "disciplines": ["darkroom"],
+      "disciplines": [
+        "darkroom"
+      ],
       "neighborhood": "Lower East Side",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://www.icp.org/school/courses-and-workshops",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "irregular", "note": "Courses and workshops year-round" },
-      "access": ["membership", "enroll-ahead"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Courses and workshops year-round"
+      },
+      "access": [
+        "membership",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Member discounts 10-40% off tuition."
     },
@@ -459,75 +838,143 @@
       "id": "alterwork",
       "name": "AlterWork Studios",
       "what": "Multi-disciplinary open access: ceramics, woodworking, printmaking, darkroom, screen printing, textiles. Open daily.",
-      "disciplines": ["ceramics", "woodworking", "printmaking", "darkroom", "textiles"],
+      "disciplines": [
+        "ceramics",
+        "woodworking",
+        "printmaking",
+        "darkroom",
+        "textiles"
+      ],
       "neighborhood": "Long Island City",
       "borough": "queens",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://www.alterworkstudios.com/purchase",
-      "cost": { "kind": "per-month", "amount": 195 },
-      "schedule": { "kind": "session", "weeks": 6, "note": "6-week class cycles year-round. Studio open daily 12-9pm" },
-      "access": ["free", "work-study", "membership"],
+      "cost": {
+        "kind": "per-month",
+        "amount": 195
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 6,
+        "note": "6-week class cycles year-round. Studio open daily 12-9pm"
+      },
+      "access": [
+        "free",
+        "work-study",
+        "membership"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Free class via 3 hr/week studio assistant work exchange: tina@alterworkstudios.com. Address is 40-20 22nd St; CourseHorse's 30-09 35th Ave listing is wrong."
     },
-
     {
       "id": "mono-no-aware",
       "name": "Mono No Aware",
       "what": "16mm Bolex, Super 8, optical printing, hand-processed reversal. Stock, processing, and gear included. Workshops end in a free public screening.",
-      "disciplines": ["film"],
+      "disciplines": [
+        "film"
+      ],
       "neighborhood": "Downtown Brooklyn",
       "borough": "brooklyn",
       "travelMin": 20,
       "url": "http://mononoawarefilm.com/community-workshops",
-      "cost": { "kind": "sliding", "min": 25, "max": 200 },
-      "schedule": { "kind": "irregular", "note": "Workshops on rotation. Closed all of August; September is the beginner slate" },
-      "access": ["sliding-scale", "enroll-ahead"],
+      "cost": {
+        "kind": "sliding",
+        "min": 25,
+        "max": 200
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Workshops on rotation. Closed all of August; September is the beginner slate"
+      },
+      "access": [
+        "sliding-scale",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
-      "caveat": "The only entry on this list that natively has a finish line: every workshop ends in a public screening."
+      "caveat": "The only entry on this list that natively has a finish line: every workshop ends in a public screening.",
+      "availability": {
+        "status": "running",
+        "darkMonths": [
+          8
+        ],
+        "note": "Closed July 3 and all of August. September is the beginner slate."
+      }
     },
     {
       "id": "millennium-film",
       "name": "Millennium Film Workshop",
       "what": "Optical printing, 16mm, Super 8, Steenbeck editing. One of the only places in NYC still teaching Super 8.",
-      "disciplines": ["film"],
+      "disciplines": [
+        "film"
+      ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
       "travelMin": 18,
       "url": "https://www.millenniumfilm.org",
-      "cost": { "kind": "fixed", "amount": 80 },
-      "schedule": { "kind": "membership", "note": "$80/yr 8mm tier includes workshops + Super 8 cameras + editing; $150/yr 16mm tier includes everything" },
-      "access": ["membership", "contact-first"],
+      "cost": {
+        "kind": "fixed",
+        "amount": 80
+      },
+      "schedule": {
+        "kind": "membership",
+        "note": "$80/yr 8mm tier includes workshops + Super 8 cameras + editing; $150/yr 16mm tier includes everything"
+      },
+      "access": [
+        "membership",
+        "contact-first"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "No standalone class registration; workshops come with membership. The /workshops-and-classes URL 404s. Visiting hours Mon-Wed + Fri 11am-4pm."
     },
-
     {
       "id": "343-labs",
       "name": "343 Labs",
       "what": "Ableton Live production: intro workshops, 4-week intensives, full courses.",
-      "disciplines": ["sound"],
+      "disciplines": [
+        "sound"
+      ],
       "neighborhood": "SoHo",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://www.343labs.com/nyc-courses-at-343-labs/",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "session", "weeks": 4, "note": "Single workshops through full courses" },
-      "access": ["enroll-ahead"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 4,
+        "note": "Single workshops through full courses"
+      },
+      "access": [
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "bkcm",
       "name": "Brooklyn Conservatory of Music",
       "what": "Jazz Lab intensive for adults: small-group ensemble, improvisation, performance development.",
-      "disciplines": ["sound"],
+      "disciplines": [
+        "sound"
+      ],
       "neighborhood": "Park Slope",
       "borough": "brooklyn",
-      "travelMin": null,
+      "travelMin": 20,
       "url": "https://bkcm.org/summer",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "session", "weeks": 6, "note": "Summer intensive plus year-round lessons" },
-      "access": ["scholarship", "enroll-ahead"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 6,
+        "note": "Summer intensive plus year-round lessons"
+      },
+      "access": [
+        "scholarship",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Full and partial scholarships available."
     },
@@ -535,44 +982,83 @@
       "id": "creative-music-studio",
       "name": "Creative Music Studio at Ibeam",
       "what": "Improvisation workshops in free jazz, electroacoustic, experimental sound. Backline provided. All backgrounds welcome.",
-      "disciplines": ["sound"],
+      "disciplines": [
+        "sound"
+      ],
       "neighborhood": "Gowanus",
       "borough": "brooklyn",
       "travelMin": 20,
       "url": "https://creativemusic.org/workshops-2026/",
-      "cost": { "kind": "sliding", "min": 10, "max": 30 },
-      "schedule": { "kind": "irregular", "note": "Periodic weekend intensives" },
-      "access": ["sliding-scale", "drop-in"],
+      "cost": {
+        "kind": "sliding",
+        "min": 10,
+        "max": 30
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Periodic weekend intensives"
+      },
+      "access": [
+        "sliding-scale",
+        "drop-in"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "pioneer-works",
       "name": "Pioneer Works",
       "what": "Multi-disciplinary nonprofit: recording studio, creative coding, ceramics, Synth Library. Free monthly open house on second Sundays.",
-      "disciplines": ["sound", "code", "community", "ceramics"],
+      "disciplines": [
+        "sound",
+        "code",
+        "community",
+        "ceramics"
+      ],
       "neighborhood": "Red Hook",
       "borough": "brooklyn",
       "travelMin": 35,
       "url": "https://pioneerworks.org/classes",
-      "cost": { "kind": "free" },
-      "schedule": { "kind": "monthly-nth", "nth": 2, "day": "sun", "time": "12:00-18:00" },
-      "access": ["free", "drop-in"],
+      "cost": {
+        "kind": "free"
+      },
+      "schedule": {
+        "kind": "monthly-nth",
+        "nth": 2,
+        "day": "sun",
+        "time": "12:00-18:00"
+      },
+      "access": [
+        "free",
+        "drop-in"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "85% of programs are free or low-cost. Second Sundays is free with RSVP. Synth Library gives free instrument access; confirm hours."
     },
-
     {
       "id": "sfpc",
       "name": "School for Poetic Computation",
       "what": "Code, hardware, critical theory, and art. One-day public workshops and free public talks.",
-      "disciplines": ["code"],
+      "disciplines": [
+        "code"
+      ],
       "neighborhood": "Lower East Side",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://sfpc.study",
-      "cost": { "kind": "fixed", "amount": 300 },
-      "schedule": { "kind": "irregular", "note": "One-day workshops plus free public talks" },
-      "access": ["sliding-scale", "scholarship", "enroll-ahead", "free"],
+      "cost": {
+        "kind": "fixed",
+        "amount": 300
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "One-day workshops plus free public talks"
+      },
+      "access": [
+        "sliding-scale",
+        "scholarship",
+        "enroll-ahead",
+        "free"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Workshops are $300 flat plus fees. Public talks are free. Scholarship tickets released to the email list two weeks ahead."
     },
@@ -580,59 +1066,110 @@
       "id": "nyc-resistor",
       "name": "NYC Resistor",
       "what": "Hacker collective and shared shop. Soldering, electronics, PCB design, wax casting, 3D modeling.",
-      "disciplines": ["code"],
+      "disciplines": [
+        "code"
+      ],
       "neighborhood": "Boerum Hill",
       "borough": "brooklyn",
       "travelMin": 15,
       "url": "https://www.nycresistor.com/event/",
-      "cost": { "kind": "range", "min": 35, "max": 75 },
-      "schedule": { "kind": "weekly", "days": ["mon", "thu"], "time": "18:30" },
-      "access": ["free", "drop-in", "enroll-ahead"],
+      "cost": {
+        "kind": "range",
+        "min": 35,
+        "max": 75
+      },
+      "schedule": {
+        "kind": "weekly",
+        "days": [
+          "mon",
+          "thu"
+        ],
+        "time": "18:30"
+      },
+      "access": [
+        "free",
+        "drop-in",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Public Craft Nights Mon + Thu are free with RSVP. 18+. Need-based tickets on some paid classes."
     },
-
     {
       "id": "interference-archive",
       "name": "Interference Archive",
       "what": "Volunteer-run social movement archive with open stacks. Zine workshops, collections work parties, fiber meetups.",
-      "disciplines": ["zines", "community", "textiles"],
+      "disciplines": [
+        "zines",
+        "community",
+        "textiles"
+      ],
       "neighborhood": "Park Slope",
       "borough": "brooklyn",
       "travelMin": 20,
       "url": "https://interferencearchive.org/what-we-do/events/",
-      "cost": { "kind": "free" },
-      "schedule": { "kind": "irregular", "note": "Workshops, work parties, and zine club on rotation" },
-      "access": ["free", "drop-in"],
+      "cost": {
+        "kind": "free"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Workshops, work parties, and zine club on rotation"
+      },
+      "access": [
+        "free",
+        "drop-in"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "booklyn",
       "name": "Booklyn",
       "what": "Zines 101 for adults: history, binding, printing, distribution. Zines as community practice.",
-      "disciplines": ["zines", "book-arts"],
+      "disciplines": [
+        "zines",
+        "book-arts"
+      ],
       "neighborhood": "Park Slope",
       "borough": "brooklyn",
       "travelMin": 20,
       "url": "https://booklyn.org/programs/",
-      "cost": { "kind": "fixed", "amount": 35 },
-      "schedule": { "kind": "irregular", "note": "Workshops at Old Stone House and Interference Archive" },
-      "access": ["enroll-ahead"],
+      "cost": {
+        "kind": "fixed",
+        "amount": 35
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Workshops at Old Stone House and Interference Archive"
+      },
+      "access": [
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06"
     },
-
     {
       "id": "nywc",
       "name": "NY Writers Coalition",
       "what": "Free drop-in creative writing workshops. Write to prompts, share if you want, positive and specific feedback only. No critique.",
-      "disciplines": ["writing"],
+      "disciplines": [
+        "writing"
+      ],
       "neighborhood": "Crown Heights (Eastern Pkwy branch)",
       "borough": "brooklyn",
       "travelMin": 10,
       "url": "https://nywriterscoalition.org",
-      "cost": { "kind": "free" },
-      "schedule": { "kind": "weekly", "days": ["mon"], "time": "15:00-17:00" },
-      "access": ["free", "drop-in"],
+      "cost": {
+        "kind": "free"
+      },
+      "schedule": {
+        "kind": "weekly",
+        "days": [
+          "mon"
+        ],
+        "time": "15:00-17:00"
+      },
+      "access": [
+        "free",
+        "drop-in"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Runs at 40+ sites citywide. The Eastern Parkway branch is walking distance; the Grand Army Plaza session is Mondays 3-5pm, bilingual."
     },
@@ -640,14 +1177,28 @@
       "id": "brooklyn-poets",
       "name": "Brooklyn Poets",
       "what": "Free weekly community writing groups: prompts and optional share-out.",
-      "disciplines": ["writing"],
+      "disciplines": [
+        "writing"
+      ],
       "neighborhood": "Brooklyn (hybrid)",
       "borough": "brooklyn",
       "travelMin": null,
       "url": "https://brooklynpoets.org/community-groups",
-      "cost": { "kind": "free" },
-      "schedule": { "kind": "weekly", "days": ["fri", "sat"], "time": "Fri 15:00, Sat 12:00" },
-      "access": ["free", "drop-in"],
+      "cost": {
+        "kind": "free"
+      },
+      "schedule": {
+        "kind": "weekly",
+        "days": [
+          "fri",
+          "sat"
+        ],
+        "time": "Fri 15:00, Sat 12:00"
+      },
+      "access": [
+        "free",
+        "drop-in"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Community groups are free. Paid multi-week workshops also run."
     },
@@ -655,28 +1206,53 @@
       "id": "center-for-fiction",
       "name": "Center for Fiction",
       "what": "Fiction and nonfiction workshops, open enrollment.",
-      "disciplines": ["writing"],
+      "disciplines": [
+        "writing"
+      ],
       "neighborhood": "Boerum Hill",
       "borough": "brooklyn",
       "travelMin": 15,
       "url": "https://centerforfiction.org/writing-workshops/",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "session", "weeks": 6, "note": "6-week workshops" },
-      "access": ["enroll-ahead", "membership"],
-      "verifiedOn": "2026-07-06"
+      "cost": {
+        "kind": "unknown",
+        "why": "blocked"
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 6,
+        "note": "6-week workshops"
+      },
+      "access": [
+        "enroll-ahead",
+        "membership"
+      ],
+      "verifiedOn": "2026-07-14",
+      "caveat": "The site blocks automated readers; check prices in a browser."
     },
     {
       "id": "belladonna",
       "name": "Belladonna* Writing Spirals",
       "what": "Feminist avant-garde literary press. Each session works from a chaplet in their archive.",
-      "disciplines": ["writing"],
+      "disciplines": [
+        "writing"
+      ],
       "neighborhood": "Crown Heights",
       "borough": "brooklyn",
       "travelMin": 5,
       "url": "https://www.belladonnaseries.org",
-      "cost": { "kind": "sliding", "min": 25, "max": 75 },
-      "schedule": { "kind": "irregular", "note": "Periodic evening spirals, 7-9pm" },
-      "access": ["sliding-scale", "enroll-ahead"],
+      "cost": {
+        "kind": "sliding",
+        "min": 25,
+        "max": 75
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Periodic evening spirals, 7-9pm"
+      },
+      "access": [
+        "sliding-scale",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "925 Bergen St #405, walking distance. NOTAFLOF: no one turned away for lack of funds."
     },
@@ -684,44 +1260,88 @@
       "id": "gotham-writers",
       "name": "Gotham Writers Workshop",
       "what": "Fiction, poetry, nonfiction, screenwriting. The largest creative writing school in the city.",
-      "disciplines": ["writing"],
+      "disciplines": [
+        "writing"
+      ],
       "neighborhood": "Flatiron",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://www.writingclasses.com",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "session", "weeks": 10, "note": "10-week and weekend formats" },
-      "access": ["enroll-ahead"],
-      "verifiedOn": "2026-07-06"
+      "cost": {
+        "kind": "unknown",
+        "why": "blocked"
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 10,
+        "note": "10-week and weekend formats"
+      },
+      "access": [
+        "enroll-ahead"
+      ],
+      "verifiedOn": "2026-07-14",
+      "caveat": "The site blocks automated readers; check prices in a browser."
     },
-
     {
       "id": "wondrous",
       "name": "Wondrous",
       "what": "The only NYC studio dedicated entirely to breaking. Adult beginner class is toprock and footwork, no strength prerequisites. History and culture taught alongside technique.",
-      "disciplines": ["dance"],
+      "disciplines": [
+        "dance"
+      ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
       "travelMin": 13,
       "url": "https://wondrousnyc.com",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "irregular", "note": "Adult beginner classes weekly; day and time unconfirmed" },
-      "access": ["drop-in", "enroll-ahead"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Adult beginner classes weekly; day and time unconfirmed"
+      },
+      "access": [
+        "drop-in",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
-      "caveat": "LOCKED as the weekly dance anchor since June 25, still unconfirmed. The site blocks automated searches. Visit wondrousnyc.com or @wondrousnyc directly. This is the single most load-bearing unknown on the list."
+      "caveat": "LOCKED as the weekly dance anchor since June 25, still unconfirmed. The site blocks automated searches. Visit wondrousnyc.com or @wondrousnyc directly. This is the single most load-bearing unknown on the list.",
+      "availability": {
+        "status": "unknown",
+        "note": "Adult beginner schedule unconfirmed since June 25. The site blocks automated searches; visit in person or via Instagram."
+      }
     },
     {
       "id": "ailey-extension",
       "name": "Ailey Extension",
       "what": "Vogue, heels, Afro'Dance, West African, house. Dense weeknight schedule.",
-      "disciplines": ["dance"],
+      "disciplines": [
+        "dance"
+      ],
       "neighborhood": "Midtown",
       "borough": "manhattan",
       "travelMin": 45,
       "url": "https://ailey.org/classes",
-      "cost": { "kind": "range", "min": 18, "max": 22 },
-      "schedule": { "kind": "weekly", "days": ["mon", "tue", "wed", "thu", "fri"], "time": "evenings" },
-      "access": ["drop-in"],
+      "cost": {
+        "kind": "range",
+        "min": 18,
+        "max": 22
+      },
+      "schedule": {
+        "kind": "weekly",
+        "days": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri"
+        ],
+        "time": "evenings"
+      },
+      "access": [
+        "drop-in"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "A float, not a weekly fixture (locked June 30). Midtown costs more transit and money per session than Wondrous. Book via Mindbody."
     },
@@ -729,14 +1349,32 @@
       "id": "movers-bodega",
       "name": "Mover's Bodega",
       "what": "House, waacking, breaking, hip hop, lite feet, popping, jersey club.",
-      "disciplines": ["dance"],
+      "disciplines": [
+        "dance"
+      ],
       "neighborhood": "Long Island City",
       "borough": "queens",
       "travelMin": 28,
       "url": "https://moversbodega.com",
-      "cost": { "kind": "fixed", "amount": 20 },
-      "schedule": { "kind": "weekly", "days": ["mon", "tue", "wed", "thu", "fri", "sat"], "time": "varies" },
-      "access": ["drop-in"],
+      "cost": {
+        "kind": "fixed",
+        "amount": 20
+      },
+      "schedule": {
+        "kind": "weekly",
+        "days": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri",
+          "sat"
+        ],
+        "time": "varies"
+      },
+      "access": [
+        "drop-in"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "$20/class; 3-pack $55; 6-pack $108."
     },
@@ -744,45 +1382,90 @@
       "id": "capoeira-luanda",
       "name": "Capoeira Luanda Brooklyn",
       "what": "Capoeira Angola with Professor Pião, Mestre Jelon lineage from Bahia. Movement, music, song, and ritual are inseparable in the form.",
-      "disciplines": ["dance", "sound", "community"],
-      "neighborhood": "Bed-Stuy",
+      "disciplines": [
+        "dance",
+        "sound",
+        "community"
+      ],
+      "neighborhood": "Crown Heights (Dean St. Playground)",
       "borough": "brooklyn",
-      "travelMin": 15,
+      "travelMin": 10,
       "url": "https://piaocapoeira.com",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "weekly", "days": ["mon", "wed", "fri"], "time": "18:30-20:00" },
-      "access": ["free", "drop-in"],
-      "verifiedOn": "2026-07-06",
-      "caveat": "Free trial class, no contracts. Classes at the Co-op School in Bed-Stuy. The one movement practice that bundles body, instrument, and communal ritual."
+      "cost": {
+        "kind": "unknown",
+        "why": "not-published"
+      },
+      "schedule": {
+        "kind": "weekly",
+        "days": [
+          "mon",
+          "wed",
+          "fri"
+        ],
+        "time": "19:40-21:00"
+      },
+      "access": [
+        "drop-in"
+      ],
+      "verifiedOn": "2026-07-14",
+      "caveat": "CORRECTED Jul 14: the site lists Mon/Wed/Fri 7:40-9:00pm at Dean St. Playground, not 6:30-8pm at the Co-op School. Org address is 644 Gates Ave; classes are at the playground. Prices are not published and the previously-noted free trial is unconfirmed. Call (917) 224-1209."
     },
-
     {
       "id": "humanist-project",
       "name": "The Humanist Project",
       "what": "Eight-week weekly clown training with Michael F. Toomey, Gaulier and Fusetti lineage. Poke at the ridiculous; every slip, fall, and heartbreak.",
-      "disciplines": ["theatre"],
+      "disciplines": [
+        "theatre"
+      ],
       "neighborhood": "Houghton Hall, Manhattan",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 45,
       "url": "https://www.thehumanistproject.org",
-      "cost": { "kind": "fixed", "amount": 450 },
-      "schedule": { "kind": "session", "weeks": 8, "note": "Mondays 7-10pm, fall cycle" },
-      "access": ["sliding-scale", "enroll-ahead"],
+      "cost": {
+        "kind": "fixed",
+        "amount": 450
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 8,
+        "note": "Mondays 7-10pm, fall cycle"
+      },
+      "access": [
+        "sliding-scale",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
-      "caveat": "2026 fall dates STILL not posted; site shows the Sep 15-Nov 3 2025 cycle. Working estimate Sep 14-Nov 2, 2026. Tiered tuition and payment plans on request. Email thehumanistproject.org/contact."
+      "caveat": "2026 fall dates STILL not posted; site shows the Sep 15-Nov 3 2025 cycle. Working estimate Sep 14-Nov 2, 2026. Tiered tuition and payment plans on request. Email thehumanistproject.org/contact.",
+      "availability": {
+        "status": "dormant",
+        "note": "2026 fall dates still not posted; the site shows the Sep 15 - Nov 3, 2025 cycle.",
+        "resumes": "2026-09-14",
+        "resumesEstimated": true
+      }
     },
     {
       "id": "jack",
       "name": "JACK",
       "what": "Performance and civic space, 80+ shows a year. Rehearsal rental subsidized by NYSCA for artistic projects.",
-      "disciplines": ["theatre", "community"],
+      "disciplines": [
+        "theatre",
+        "community"
+      ],
       "neighborhood": "Clinton Hill",
       "borough": "brooklyn",
       "travelMin": 10,
       "url": "https://jackny.org",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "irregular", "note": "Rehearsal rental by booking; programming year-round" },
-      "access": ["contact-first"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Rehearsal rental by booking; programming year-round"
+      },
+      "access": [
+        "contact-first"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "One C-train stop away. The rehearsal home for Build D prototyping (locked June 30). Confirm the actual subsidized rate: rentals@jackny.org."
     },
@@ -790,60 +1473,126 @@
       "id": "bushwick-starr",
       "name": "The Bushwick Starr",
       "what": "Free community workshops in August: Creating Performance (devised work), bilingual storytelling.",
-      "disciplines": ["theatre"],
+      "disciplines": [
+        "theatre"
+      ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
       "travelMin": 18,
       "url": "https://thebushwickstarr.org",
-      "cost": { "kind": "free" },
-      "schedule": { "kind": "irregular", "note": "Summers at the Starr, August" },
-      "access": ["free", "enroll-ahead"],
+      "cost": {
+        "kind": "free"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Summers at the Starr, August"
+      },
+      "access": [
+        "free",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
-      "caveat": "The closest thing to a free devised-theater workshop anywhere on this list, and it costs nothing. Dates unconfirmed. Worth restructuring a week around."
+      "caveat": "The closest thing to a free devised-theater workshop anywhere on this list, and it costs nothing. Dates unconfirmed. Worth restructuring a week around.",
+      "availability": {
+        "status": "dormant",
+        "note": "Summers at the Starr runs in August; specific dates not yet posted.",
+        "resumes": "2026-08",
+        "resumesEstimated": true
+      }
     },
     {
       "id": "tonyc",
       "name": "Theatre of the Oppressed NYC",
       "what": "Boal's Forum Theatre methodology: a play about an unresolved oppression, then the audience steps in and improvises alternatives. Concrete facilitation tools.",
-      "disciplines": ["theatre", "community"],
+      "disciplines": [
+        "theatre",
+        "community"
+      ],
       "neighborhood": "Manhattan",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://www.tonyc.nyc/public_workshops",
-      "cost": { "kind": "sliding", "min": 300, "max": 700 },
-      "schedule": { "kind": "session", "weeks": 6, "note": "Level 1 training, roughly twice a year: 4 sessions online/in-person plus 2 in person" },
-      "access": ["sliding-scale", "enroll-ahead"],
+      "cost": {
+        "kind": "sliding",
+        "min": 300,
+        "max": 700
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 6,
+        "note": "Level 1 training, roughly twice a year: 4 sessions online/in-person plus 2 in person"
+      },
+      "access": [
+        "sliding-scale",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
-      "caveat": "Sliding scale by financial means; no institutional affiliation required. Shorter intro workshops run $35-80. The most directly relevant facilitation practice in the city for participatory work."
+      "caveat": "Sliding scale by financial means; no institutional affiliation required. Shorter intro workshops run $35-80. The most directly relevant facilitation practice in the city for participatory work.",
+      "availability": {
+        "status": "waitlist",
+        "note": "Level 1 training runs roughly twice a year. Waitlist for the fall 2026 cohort.",
+        "resumes": "2026-09"
+      }
     },
-
     {
       "id": "fire-ensemble",
       "name": "The Fire Ensemble",
       "what": "Intergenerational pop-up choir. Gospel, R&B, musical theater. Music and ritual framed as tools for collective liberation.",
-      "disciplines": ["voice"],
+      "disciplines": [
+        "voice"
+      ],
       "neighborhood": "Judson Memorial Church",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://www.fireensemble.com",
-      "cost": { "kind": "free" },
-      "schedule": { "kind": "weekly", "days": ["mon"], "time": "18:00-20:00" },
-      "access": ["free", "contact-first"],
+      "cost": {
+        "kind": "free"
+      },
+      "schedule": {
+        "kind": "weekly",
+        "days": [
+          "mon"
+        ],
+        "time": "18:00-20:00"
+      },
+      "access": [
+        "free",
+        "contact-first"
+      ],
       "verifiedOn": "2026-07-06",
-      "caveat": "Spring session ended in June; summer is the gap. Fall session TBD, likely September. RSVP now at fireensemble.com/choir-form. Correct site is fireensemble.com, NOT singforhope.org."
+      "caveat": "Spring session ended in June; summer is the gap. Fall session TBD, likely September. RSVP now at fireensemble.com/choir-form. Correct site is fireensemble.com, NOT singforhope.org.",
+      "availability": {
+        "status": "dormant",
+        "note": "Spring 2026 session ended in June. The ensemble runs spring and fall sessions; summer is the gap.",
+        "resumes": "2026-09",
+        "resumesEstimated": true
+      }
     },
     {
       "id": "sacred-harp",
       "name": "NYC Sacred Harp",
       "what": "Leaderless four-part communal singing in a hollow square. Anyone can lead, no soloists, no audience, no performance. Loaner books; you do not need to read music.",
-      "disciplines": ["voice", "community"],
+      "disciplines": [
+        "voice",
+        "community"
+      ],
       "neighborhood": "Carroll Gardens",
       "borough": "brooklyn",
       "travelMin": 25,
       "url": "https://www.nycsacredharp.com/nycsingings",
-      "cost": { "kind": "free" },
-      "schedule": { "kind": "monthly-nth", "nth": 2, "day": "sun", "time": "14:00-17:00" },
-      "access": ["free", "drop-in"],
+      "cost": {
+        "kind": "free"
+      },
+      "schedule": {
+        "kind": "monthly-nth",
+        "nth": 2,
+        "day": "sun",
+        "time": "14:00-17:00"
+      },
+      "access": [
+        "free",
+        "drop-in"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "St. Paul's Episcopal, 199 Carroll St. Free, pass the hat. A 250-year-old participatory form with consent structure built into the democracy of it."
     },
@@ -851,58 +1600,105 @@
       "id": "brooklynite-choir",
       "name": "Brooklynite Choir",
       "what": "Pop, rock, indie. No audition, no sheet music, learn by ear.",
-      "disciplines": ["voice"],
+      "disciplines": [
+        "voice"
+      ],
       "neighborhood": "Brooklyn",
       "borough": "brooklyn",
       "travelMin": null,
       "url": "https://nychoirproject.com/brooklynite-choir",
-      "cost": { "kind": "per-session", "amount": 22 },
-      "schedule": { "kind": "session", "weeks": 10, "note": "Seasonal cycles" },
-      "access": ["enroll-ahead"],
+      "cost": {
+        "kind": "per-session",
+        "amount": 22
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 10,
+        "note": "Seasonal cycles"
+      },
+      "access": [
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
-      "caveat": "Currently full; on the waitlist. Fall cycle likely opens August."
+      "caveat": "Currently full; on the waitlist. Fall cycle likely opens August.",
+      "availability": {
+        "status": "waitlist",
+        "note": "Currently full. Fall cycle likely opens in August.",
+        "resumes": "2026-09"
+      }
     },
-
     {
       "id": "flux-factory",
       "name": "Flux Factory",
       "what": "Artist-led nonprofit space. Open studios, salons, workshops. Shared music studio, woodshop, screen printing.",
-      "disciplines": ["community"],
+      "disciplines": [
+        "community"
+      ],
       "neighborhood": "Long Island City",
       "borough": "queens",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://www.fluxfactory.org",
-      "cost": { "kind": "free" },
-      "schedule": { "kind": "irregular", "note": "75+ free public events a year" },
-      "access": ["free", "drop-in"],
+      "cost": {
+        "kind": "free"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "75+ free public events a year"
+      },
+      "access": [
+        "free",
+        "drop-in"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "art-students-league",
       "name": "Art Students League",
       "what": "Open enrollment, no application or jury: painting, sculpture, drawing, printmaking. Since 1875.",
-      "disciplines": ["community", "printmaking"],
+      "disciplines": [
+        "community",
+        "printmaking"
+      ],
       "neighborhood": "Midtown West",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 45,
       "url": "https://www.artstudentsleague.org",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "membership", "note": "Short-term memberships and drop-in open sessions" },
-      "access": ["drop-in", "membership"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "membership",
+        "note": "Short-term memberships and drop-in open sessions"
+      },
+      "access": [
+        "drop-in",
+        "membership"
+      ],
       "verifiedOn": "2026-07-06"
     },
     {
       "id": "mfta",
       "name": "Materials for the Arts",
       "what": "Creative reuse studio workshops. Free supply warehouse for qualifying NYC nonprofits.",
-      "disciplines": ["community"],
+      "disciplines": [
+        "community"
+      ],
       "neighborhood": "Long Island City",
       "borough": "queens",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://www.materialsforthearts.org/education-center/",
-      "cost": { "kind": "free" },
-      "schedule": { "kind": "irregular", "note": "Workshops, mostly for educators; some public field trips" },
-      "access": ["free", "contact-first"],
+      "cost": {
+        "kind": "free"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Workshops, mostly for educators; some public field trips"
+      },
+      "access": [
+        "free",
+        "contact-first"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Primary audience is educators with CTLE credits. Public access is limited."
     },
@@ -910,14 +1706,32 @@
       "id": "abrons",
       "name": "Abrons Arts Center",
       "what": "Multi-disciplinary community arts inside Henry Street Settlement since 1975. Ceramics, visual arts, digital music, theater, dance.",
-      "disciplines": ["ceramics", "theatre", "dance", "sound", "community"],
+      "disciplines": [
+        "ceramics",
+        "theatre",
+        "dance",
+        "sound",
+        "community"
+      ],
       "neighborhood": "Lower East Side",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://www.abronsartscenter.org/education/group-classes",
-      "cost": { "kind": "range", "min": 50, "max": 350 },
-      "schedule": { "kind": "session", "weeks": 11, "note": "Fall ceramics Sep 16 - Dec 2, 2026" },
-      "access": ["free", "sliding-scale", "enroll-ahead"],
+      "cost": {
+        "kind": "range",
+        "min": 50,
+        "max": 350
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 11,
+        "note": "Fall ceramics Sep 16 - Dec 2, 2026"
+      },
+      "access": [
+        "free",
+        "sliding-scale",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "\"Free and affordable\" is a stated commitment; free for NYCHA residents. Summer is light on visual arts; check directly."
     },
@@ -925,29 +1739,59 @@
       "id": "taller-boricua",
       "name": "Taller Boricua",
       "what": "Puerto Rican printmaking collective founded 1969. Litho, silkscreen, linocut, intaglio, wood engraving.",
-      "disciplines": ["printmaking", "community"],
+      "disciplines": [
+        "printmaking",
+        "community"
+      ],
       "neighborhood": "East Harlem",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 55,
       "url": "https://tallerboricua.org/rtpw-printmaking-workshop/",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "irregular", "note": "Access is through the collective, not open enrollment" },
-      "access": ["contact-first"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Access is through the collective, not open enrollment"
+      },
+      "access": [
+        "contact-first"
+      ],
       "verifiedOn": "2026-07-06",
-      "caveat": "No public enrollment schedule. Contact info@tallerboricua.org. Gallery at 1680 Lexington is open Tue-Sat."
+      "caveat": "No public enrollment schedule. Contact info@tallerboricua.org. Gallery at 1680 Lexington is open Tue-Sat.",
+      "availability": {
+        "status": "unknown",
+        "note": "No public enrollment schedule; access is through the collective."
+      }
     },
     {
       "id": "brac",
       "name": "Bronx River Art Center",
       "what": "Wheel throwing, handbuilding, printmaking, stained glass. Materials included.",
-      "disciplines": ["ceramics", "printmaking", "glass"],
+      "disciplines": [
+        "ceramics",
+        "printmaking",
+        "glass"
+      ],
       "neighborhood": "West Farms",
       "borough": "bronx",
       "travelMin": 68,
       "url": "https://www.bronxriverart.org/education-adult-classes",
-      "cost": { "kind": "range", "min": 250, "max": 400 },
-      "schedule": { "kind": "session", "weeks": 10, "note": "9-10 week adult sessions" },
-      "access": ["scholarship", "enroll-ahead"],
+      "cost": {
+        "kind": "range",
+        "min": 250,
+        "max": 400
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 10,
+        "note": "9-10 week adult sessions"
+      },
+      "access": [
+        "scholarship",
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "Fee waivers and scholarships available. 60-75 minutes from Crown Heights; not a realistic weekly anchor."
     },
@@ -955,14 +1799,30 @@
       "id": "art-lab-snug-harbor",
       "name": "Art Lab at Snug Harbor",
       "what": "Ceramics, printmaking, stained glass, darkroom, sewing, jewelry, woodworking. Nonprofit since 1975.",
-      "disciplines": ["ceramics", "printmaking", "glass", "darkroom", "textiles", "woodworking"],
+      "disciplines": [
+        "ceramics",
+        "printmaking",
+        "glass",
+        "darkroom",
+        "textiles",
+        "woodworking"
+      ],
       "neighborhood": "Snug Harbor",
       "borough": "staten-island",
       "travelMin": 90,
       "url": "https://artlabsi.com/art-classes/",
-      "cost": { "kind": "unknown" },
-      "schedule": { "kind": "session", "weeks": 10, "note": "10-week sessions; 8-week in summer" },
-      "access": ["enroll-ahead"],
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 10,
+        "note": "10-week sessions; 8-week in summer"
+      },
+      "access": [
+        "enroll-ahead"
+      ],
       "verifiedOn": "2026-07-06",
       "caveat": "90 minutes from Crown Heights. Listed for completeness, not as a realistic option."
     }
