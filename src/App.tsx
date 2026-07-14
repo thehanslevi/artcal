@@ -31,7 +31,6 @@ import { SubmitPanel } from "./components/SubmitPanel";
 import { CuratorPicks } from "./components/CuratorPicks";
 import { Directory } from "./components/Directory";
 import { SyncPanel, type SyncStatus } from "./components/SyncPanel";
-import { TabBar } from "./components/TabBar";
 
 // The two halves of "Making × Witnessing" have different native shapes, so they
 // get different data models rather than one `mode` field.
@@ -54,7 +53,14 @@ function App() {
   // Default to Making — the calendar's reason for being is creative practice,
   // and the venue mix skews heavily toward witness events, so lead with making.
   const [view, setView] = useState<View>("making");
-  const [tab, setTab] = useState<TabMode>("practice");
+  // The top-level Making/Witnessing switch replaced the old TabBar, which used
+  // the same two words one level down and disagreed with it.
+  //
+  // The real split is now standing practices (Directory) vs dated events (this
+  // calendar), not make vs witness. So this view shows every dated event:
+  // filtering to "attend" would strand the 79 make-mode events, including
+  // starred ones already in someone's subscribed feed.
+  const tab: TabMode = "all";
   const [filter, setFilter] = useState<CategoryFilter>("all");
   const [picksOnly, setPicksOnly] = useState(false);
   const [freeOnly, setFreeOnly] = useState(false);
@@ -286,27 +292,17 @@ function App() {
               />
             </div>
           </div>
-          <ol className="howto">
-            <li className="howto-step">
-              <span className="howto-num howto-num-1">1</span>
-              Star <span className="howto-star">★</span> the events you want
-            </li>
-            <li className="howto-step">
-              <span className="howto-num howto-num-2">2</span>
-              <button
-                type="button"
-                className="howto-link"
-                onClick={handleCreateLink}
-              >
-                Get your calendar link
-              </button>
-              — one click, no account
-            </li>
-            <li className="howto-step">
-              <span className="howto-num howto-num-3">3</span>
-              Subscribe in Google/Apple Cal — it updates itself
-            </li>
-          </ol>
+          <p className="howto">
+            Star <span className="howto-star">★</span> anything you want, then{" "}
+            <button
+              type="button"
+              className="howto-link"
+              onClick={handleCreateLink}
+            >
+              get a calendar link
+            </button>{" "}
+            — no account. It stays current in Google or Apple Calendar.
+          </p>
         </div>
       </header>
       <nav className="zone zone-band">
@@ -332,7 +328,6 @@ function App() {
               Witnessing
             </button>
           </div>
-          {view === "witnessing" ? <TabBar active={tab} onChange={setTab} /> : null}
         </div>
       </nav>
       <main className="zone zone-main">

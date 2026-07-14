@@ -146,26 +146,6 @@ export function Calendar({
   const canPrev = safeIndex > 0;
   const canNext = safeIndex < shownWeeks.length - 1;
 
-  // A single mode (Making or Witnessing) can leave the focused week nearly
-  // empty — landing on 3 events reads as "broken." When that happens, keep the
-  // single-week view but widen this one week to show both modes so it looks
-  // full. Navigation and counts stay scoped to the chosen tab.
-  const THIN_WEEK = 4;
-  let focusedEvents = focused.visible;
-  let widened = false;
-  if (
-    viewMode === "single" &&
-    !weekendOnly &&
-    tab !== "all" &&
-    focused.visible.length < THIN_WEEK
-  ) {
-    const both = visibleFor(focused.events, "all");
-    if (both.length > focused.visible.length) {
-      focusedEvents = both;
-      widened = true;
-    }
-  }
-
   return (
     <div className="calendar">
       <div className="calendar-controls">
@@ -226,11 +206,7 @@ export function Calendar({
         </div>
       </div>
       {(viewMode === "single" && !weekendOnly ? [focused] : shownWeeks).map((week) => {
-        const weekEvents =
-          week === focused && viewMode === "single" && !weekendOnly
-            ? focusedEvents
-            : week.visible;
-        const showWidenedNote = widened && week === focused;
+        const weekEvents = week.visible;
         return (
           <section
             key={week.label}
@@ -245,12 +221,6 @@ export function Calendar({
               </h3>
               <WeekSummary events={weekEvents} tab={tab} picks={picks} />
             </div>
-            {showWidenedNote ? (
-              <p className="week-widened">
-                Slim {tab === "practice" ? "making" : "witnessing"} week — showing
-                both making &amp; witnessing.
-              </p>
-            ) : null}
             {weekEvents.map((event, idx) => {
               const d = parseEventDate(event.date);
               const du: number | null = d ? daysUntilFn(d, now) : null;
