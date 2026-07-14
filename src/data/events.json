@@ -16,7 +16,8 @@
           "start": "13:30",
           "end": null,
           "note": "1:30pm CATCHBALL, 4:45pm Doors open",
-          "url": "https://pools.events/event/WwBLzTQJ/catch-5th-of-july-weekend-spectacular/"
+          "url": "https://pools.events/event/WwBLzTQJ/catch-5th-of-july-weekend-spectacular/",
+          "uid": "e_dce86a8d401d"
         },
         {
           "day": "Sun",
@@ -30,7 +31,8 @@
           "start": "19:00",
           "end": null,
           "note": null,
-          "url": "https://dadabar.nyc/go/events/6606827?feature_id=1003841&occurrence_id=766015707&popup=1"
+          "url": "https://dadabar.nyc/go/events/6606827?feature_id=1003841&occurrence_id=766015707&popup=1",
+          "uid": "e_1bca5679c7f4"
         },
         {
           "day": "Sun",
@@ -44,7 +46,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://lmcc.net/events/catchball/"
+          "url": "https://lmcc.net/events/catchball/",
+          "uid": "e_aefda6800c88"
         },
         {
           "day": "Sun",
@@ -58,7 +61,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://lmcc.net/events/catch-5th-of-july-weekend-spectacular/"
+          "url": "https://lmcc.net/events/catch-5th-of-july-weekend-spectacular/",
+          "uid": "e_71d47c2e7f2a"
         },
         {
           "day": "Mon",
@@ -72,7 +76,8 @@
           "start": "20:00",
           "end": null,
           "note": null,
-          "url": "https://pools.events/event/2fzpZ3xL/recital/"
+          "url": "https://pools.events/event/2fzpZ3xL/recital/",
+          "uid": "e_f62c2facec63"
         },
         {
           "day": "Mon",
@@ -86,7 +91,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://www.materialsforthearts.org/event/stop-motion-animation-summer-2026/"
+          "url": "https://www.materialsforthearts.org/event/stop-motion-animation-summer-2026/",
+          "uid": "e_a0575515b5fb"
         },
         {
           "day": "Tue",
@@ -100,7 +106,8 @@
           "start": "20:00",
           "end": null,
           "note": null,
-          "url": "https://dadabar.nyc/go/events/6622459?feature_id=1003841&occurrence_id=767559990&popup=1"
+          "url": "https://dadabar.nyc/go/events/6622459?feature_id=1003841&occurrence_id=767559990&popup=1",
+          "uid": "e_426869a0d627"
         },
         {
           "day": "Tue",
@@ -114,7 +121,8 @@
           "start": "23:00",
           "end": "00:30",
           "note": null,
-          "url": "https://wordupbooks.com/event/2026-07-07/no-name-super-story-party"
+          "url": "https://wordupbooks.com/event/2026-07-07/no-name-super-story-party",
+          "uid": "e_b552cddb705d"
         },
         {
           "day": "Tue",
@@ -128,7 +136,8 @@
           "start": "20:00",
           "end": "20:00",
           "note": null,
-          "url": "https://greenwichhouse.org/event/venture-bond-jazz-quintet-concert/"
+          "url": "https://greenwichhouse.org/event/venture-bond-jazz-quintet-concert/",
+          "uid": "e_6f0137019146"
         },
         {
           "day": "Wed",
@@ -142,7 +151,8 @@
           "start": "21:00",
           "end": null,
           "note": null,
-          "url": "https://dadabar.nyc/event/6636729/769106038/jazz-the-sean-temme-group"
+          "url": "https://dadabar.nyc/event/6636729/769106038/jazz-the-sean-temme-group",
+          "uid": "e_190cf0adaa9d"
         },
         {
           "day": "Wed",
@@ -156,7 +166,8 @@
           "start": "18:00",
           "end": "21:00",
           "note": "4 Wednesdays",
-          "url": "https://printshop.org/classes-workshops/intro-to-printmaking-ii"
+          "url": "https://printshop.org/classes-workshops/intro-to-printmaking-ii",
+          "uid": "e_01f56e627103"
         },
         {
           "day": "Thu",
@@ -170,7 +181,8 @@
           "start": "18:00",
           "end": "21:00",
           "note": null,
-          "url": "https://www.delightfactorynyc.com/events"
+          "url": "https://www.delightfactorynyc.com/events",
+          "uid": "e_0838be701dd7"
         },
         {
           "day": "Thu",
@@ -184,7 +196,8 @@
           "start": "22:00",
           "end": null,
           "note": null,
-          "url": "https://dadabar.nyc/event/6562740/761908985/vibey-house-djs-geoball-w-gem-geo"
+          "url": "https://dadabar.nyc/event/6562740/761908985/vibey-house-djs-geoball-w-gem-geo",
+          "uid": "e_d03127de8ab8"
         },
         {
           "day": "Fri",
@@ -198,7 +211,8 @@
           "start": "19:00",
           "end": null,
           "note": null,
-          "url": "https://dadabar.nyc/event/6636955/769107315/dada-x-tem-present-rat-city-sunrise-halftime-kevin-clark"
+          "url": "https://dadabar.nyc/event/6636955/769107315/dada-x-tem-present-rat-city-sunrise-halftime-kevin-clark",
+          "uid": "e_e515cfd702bd"
         },
         {
           "day": "Fri",
@@ -212,7 +226,8 @@
           "start": "22:00",
           "end": null,
           "note": null,
-          "url": "https://dadabar.nyc/event/6629310/770007966/house-djs-are-we-there-yet-vol-4"
+          "url": "https://dadabar.nyc/event/6629310/770007966/house-djs-are-we-there-yet-vol-4",
+          "uid": "e_2835922ea773"
         },
         {
           "day": "Sat",
@@ -226,7 +241,8 @@
           "start": "10:00",
           "end": "13:00",
           "note": null,
-          "url": "https://www.delightfactorynyc.com/events"
+          "url": "https://www.delightfactorynyc.com/events",
+          "uid": "e_a62d78eb78f4"
         },
         {
           "day": "Sat",
@@ -240,7 +256,8 @@
           "start": "19:00",
           "end": null,
           "note": null,
-          "url": "https://dadabar.nyc/event/6583981/763701435/singer-songwriter-ianianian-steve-kelly-eliza-edens-and-teemer"
+          "url": "https://dadabar.nyc/event/6583981/763701435/singer-songwriter-ianianian-steve-kelly-eliza-edens-and-teemer",
+          "uid": "e_3bb533642d1f"
         },
         {
           "day": "Sat",
@@ -254,7 +271,8 @@
           "start": "22:00",
           "end": null,
           "note": null,
-          "url": "https://dadabar.nyc/event/6644913/770008241/house-dj-r-dubbs"
+          "url": "https://dadabar.nyc/event/6644913/770008241/house-dj-r-dubbs",
+          "uid": "e_65c3b39d621b"
         },
         {
           "day": "Sat",
@@ -268,7 +286,8 @@
           "start": "13:00",
           "end": "16:00",
           "note": "with Melanie Hoff",
-          "url": "https://sfpc.study/sessions/future-schools/consensual-hacking"
+          "url": "https://sfpc.study/sessions/future-schools/consensual-hacking",
+          "uid": "e_aa83bc715beb"
         },
         {
           "day": "Wed",
@@ -282,7 +301,8 @@
           "start": "22:00",
           "end": null,
           "note": "Free World Club DJ dance party / silent disco kicking off the series — outdoors at Lincoln Center.",
-          "url": "https://lincolncenter.org/series/summer-for-the-city/madame-gandhi-218"
+          "url": "https://lincolncenter.org/series/summer-for-the-city/madame-gandhi-218",
+          "uid": "e_78a6f636a1f1"
         },
         {
           "day": "Fri",
@@ -296,7 +316,8 @@
           "start": "18:00",
           "end": null,
           "note": null,
-          "url": "https://bronxmuseum.org/"
+          "url": "https://bronxmuseum.org/",
+          "uid": "e_db246100de3c"
         },
         {
           "day": "Sat",
@@ -310,7 +331,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://www.cccadi.org/events"
+          "url": "https://www.cccadi.org/events",
+          "uid": "e_76f805a81f4c"
         },
         {
           "day": "Sat",
@@ -324,7 +346,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://snug-harbor.org/"
+          "url": "https://snug-harbor.org/",
+          "uid": "e_8814cc23d38c"
         }
       ]
     },
@@ -343,7 +366,8 @@
           "start": "20:00",
           "end": null,
           "note": "Runs Jul 5–11 (Jul 2–4 were cancelled due to heat).",
-          "url": "https://danspaceproject.org/calendar/"
+          "url": "https://danspaceproject.org/calendar/",
+          "uid": "e_a0ff44631fc5"
         },
         {
           "day": "Mon",
@@ -357,7 +381,8 @@
           "start": "18:00",
           "end": "20:00",
           "note": "Learn the basics of black and white darkroom printing. This workshop covers film development, contact printing, and enlarging. All materials included.",
-          "url": "https://www.bushwickcommunitydarkroom.com/events/2026/7/6/intro-to-darkroom-printing-bw-film-july-6"
+          "url": "https://www.bushwickcommunitydarkroom.com/events/2026/7/6/intro-to-darkroom-printing-bw-film-july-6",
+          "uid": "e_5df3b8f35b6d"
         },
         {
           "day": "Mon",
@@ -371,7 +396,8 @@
           "start": "19:30",
           "end": null,
           "note": "Kickoff for the 34th annual HOT Festival + 40 years of Dixon Place.",
-          "url": "https://dixonplace.org/"
+          "url": "https://dixonplace.org/",
+          "uid": "e_41613934546d"
         },
         {
           "day": "Mon",
@@ -385,7 +411,8 @@
           "start": null,
           "end": null,
           "note": "Solo comedy, hit run from Edinburgh Fringe. Long run through Aug 16.",
-          "url": "https://here.org/shows/"
+          "url": "https://here.org/shows/",
+          "uid": "e_8ef4398389cf"
         },
         {
           "day": "Tue",
@@ -399,7 +426,8 @@
           "start": "19:00",
           "end": "20:30",
           "note": "Uses WWII as analogy for the playwright's and her husband's struggle with his cancer.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_da2095fddcc2"
         },
         {
           "day": "Tue",
@@ -413,7 +441,8 @@
           "start": "19:30",
           "end": null,
           "note": "\"Like if the Lorax did the Vagina Monologues.\" HOT Festival.",
-          "url": "https://dixonplace.org/"
+          "url": "https://dixonplace.org/",
+          "uid": "e_cfe0a9796ba5"
         },
         {
           "day": "Tue",
@@ -427,7 +456,8 @@
           "start": "19:30",
           "end": null,
           "note": "HOT Festival. Mixed bag of performance, personality, pleasure.",
-          "url": "https://dixonplace.org/"
+          "url": "https://dixonplace.org/",
+          "uid": "e_1caeaa90f069"
         },
         {
           "day": "Wed",
@@ -441,7 +471,8 @@
           "start": "18:00",
           "end": null,
           "note": null,
-          "url": "https://summerstage.org"
+          "url": "https://summerstage.org",
+          "uid": "e_11b702e312b6"
         },
         {
           "day": "Wed",
@@ -455,7 +486,8 @@
           "start": "19:00",
           "end": "20:00",
           "note": "Sort donation requests, cataloging projects. Low-lift way to meet the collective.",
-          "url": "https://interferencearchive.org/events/"
+          "url": "https://interferencearchive.org/events/",
+          "uid": "e_5ba62b423a2d"
         },
         {
           "day": "Wed",
@@ -469,7 +501,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://filmforum.org/events/event/shermans-march-july-8"
+          "url": "https://filmforum.org/events/event/shermans-march-july-8",
+          "uid": "e_ff71d4b3dbff"
         },
         {
           "day": "Thu",
@@ -483,7 +516,8 @@
           "start": "18:00",
           "end": null,
           "note": "Walkable from Crown Heights, leads into Roulette",
-          "url": "https://summerstage.org"
+          "url": "https://summerstage.org",
+          "uid": "e_9ae43cba2d3e"
         },
         {
           "day": "Thu",
@@ -497,7 +531,8 @@
           "start": "19:00",
           "end": null,
           "note": "Interactive gameshow play. Runs Jul 9–11.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_15428891ce54"
         },
         {
           "day": "Thu",
@@ -511,7 +546,8 @@
           "start": "19:00",
           "end": null,
           "note": "Kaleidoscopic queer comedy deconstructing a forgotten Hollywood film. Long run — through Aug 2.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_b067feb2faa5"
         },
         {
           "day": "Thu",
@@ -525,7 +561,8 @@
           "start": "19:00",
           "end": null,
           "note": null,
-          "url": "https://filmforum.org/events/event/shermans-march-july-9"
+          "url": "https://filmforum.org/events/event/shermans-march-july-9",
+          "uid": "e_7a241fe4ffbc"
         },
         {
           "day": "Thu",
@@ -539,7 +576,8 @@
           "start": "20:00",
           "end": null,
           "note": "Doors 7:30pm, music 8pm",
-          "url": "https://roulette.org/event/no-fun-new-perspectives-night-1/"
+          "url": "https://roulette.org/event/no-fun-new-perspectives-night-1/",
+          "uid": "e_9cce3cc8cb7f"
         },
         {
           "day": "Thu",
@@ -553,7 +591,11 @@
           "start": null,
           "end": null,
           "note": "Recurring Thursday. Also Jul 16.",
-          "url": "https://www.bkarthaus.com/shows-events"
+          "url": "https://www.bkarthaus.com/shows-events",
+          "uid": "e_4604151857f7",
+          "aliases": [
+            "Jul 9|FOLKUS"
+          ]
         },
         {
           "day": "Thu",
@@ -567,7 +609,8 @@
           "start": null,
           "end": null,
           "note": "Runs Jul 9–12. Variety/circus performance.",
-          "url": "https://www.bkarthaus.com/shows-events"
+          "url": "https://www.bkarthaus.com/shows-events",
+          "uid": "e_4d74772a758b"
         },
         {
           "day": "Thu",
@@ -581,7 +624,8 @@
           "start": null,
           "end": null,
           "note": "Opens Jul 9, runs through Jul 25. 70 min. Presale $35 through Jun 15.",
-          "url": "https://www.bricktheater.com/"
+          "url": "https://www.bricktheater.com/",
+          "uid": "e_2bd971c4dc3b"
         },
         {
           "day": "Fri",
@@ -595,7 +639,8 @@
           "start": "18:00",
           "end": null,
           "note": "Free outdoor festival — Habibi Festival celebrates Middle Eastern + North African artists.",
-          "url": "https://bricartsmedia.org/events"
+          "url": "https://bricartsmedia.org/events",
+          "uid": "e_0e51cbcc4296"
         },
         {
           "day": "Fri",
@@ -609,7 +654,8 @@
           "start": "19:00",
           "end": null,
           "note": "Stand-up on tech culture, immigrant expectations, dating French men. Runs Jul 10–12.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_339170900e4c"
         },
         {
           "day": "Fri",
@@ -623,7 +669,8 @@
           "start": "20:00",
           "end": null,
           "note": "Go for Raven Chacon — Diné composer, Pulitzer 2022",
-          "url": "https://roulette.org/event/no-fun-new-perspectives-night-2/"
+          "url": "https://roulette.org/event/no-fun-new-perspectives-night-2/",
+          "uid": "e_8c2d11495e4f"
         },
         {
           "day": "Fri",
@@ -637,7 +684,8 @@
           "start": "20:00",
           "end": null,
           "note": "New solo work: electric guitar, tenor banjo, five-string banjo.",
-          "url": "https://issueprojectroom.org/calendar"
+          "url": "https://issueprojectroom.org/calendar",
+          "uid": "e_12e549110cf8"
         },
         {
           "day": "Fri",
@@ -651,7 +699,8 @@
           "start": null,
           "end": null,
           "note": "New McElwee run.",
-          "url": "https://www.filmforum.org/now-playing"
+          "url": "https://www.filmforum.org/now-playing",
+          "uid": "e_2a870734b61a"
         },
         {
           "day": "Fri",
@@ -665,7 +714,8 @@
           "start": null,
           "end": null,
           "note": "Runs Jul 10–23.",
-          "url": "https://www.filmforum.org/now-playing"
+          "url": "https://www.filmforum.org/now-playing",
+          "uid": "e_dc30d4e625c5"
         },
         {
           "day": "Fri",
@@ -679,7 +729,8 @@
           "start": null,
           "end": null,
           "note": "Xhloe + Natasha, dir. Tom Costello. Final performances of their run.",
-          "url": "https://arsnovanyc.com/upcoming"
+          "url": "https://arsnovanyc.com/upcoming",
+          "uid": "e_d2ecefd12b9f"
         },
         {
           "day": "Fri",
@@ -693,7 +744,8 @@
           "start": null,
           "end": null,
           "note": "Runs Jul 10–11.",
-          "url": "https://www.bkarthaus.com/shows-events"
+          "url": "https://www.bkarthaus.com/shows-events",
+          "uid": "e_fc991bea88b5"
         },
         {
           "day": "Fri",
@@ -707,7 +759,8 @@
           "start": null,
           "end": null,
           "note": "A laboratory (Variety Show) for circus and circus-adjacent performance and experimentation.",
-          "url": "https://www.eventbrite.com/e/cirkus-moxie-lab-tickets-1992029994337?aff=oddtdtcreator"
+          "url": "https://www.eventbrite.com/e/cirkus-moxie-lab-tickets-1992029994337?aff=oddtdtcreator",
+          "uid": "e_abf4681d0071"
         },
         {
           "day": "Sat",
@@ -721,7 +774,8 @@
           "start": "15:00",
           "end": null,
           "note": "Matinee. Runs Jul 11–12.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_1c357fb8090b"
         },
         {
           "day": "Sat",
@@ -735,7 +789,8 @@
           "start": "15:00",
           "end": null,
           "note": "Legal Aid Society presents Saint James Joy, Pahua, Puppetmobile.",
-          "url": "https://bricartsmedia.org/events"
+          "url": "https://bricartsmedia.org/events",
+          "uid": "e_b200f13c550c"
         },
         {
           "day": "Sat",
@@ -749,7 +804,8 @@
           "start": "18:00",
           "end": "21:00",
           "note": "Bring an exposed roll of film. Alt-process chemistry — develop in red wine. Conflicts with Roulette Night 3.",
-          "url": "https://www.bushwickcommunitydarkroom.com/events"
+          "url": "https://www.bushwickcommunitydarkroom.com/events",
+          "uid": "e_483b36267d49"
         },
         {
           "day": "Sat",
@@ -763,7 +819,8 @@
           "start": "20:00",
           "end": null,
           "note": "Dense day. Conflicts with BCD Winol workshop.",
-          "url": "https://roulette.org/event/no-fun-new-perspectives-night-3/"
+          "url": "https://roulette.org/event/no-fun-new-perspectives-night-3/",
+          "uid": "e_154290a55e76"
         },
         {
           "day": "Sat",
@@ -777,7 +834,8 @@
           "start": null,
           "end": null,
           "note": "Stand-up comedy.",
-          "url": "https://www.bkarthaus.com/shows-events"
+          "url": "https://www.bkarthaus.com/shows-events",
+          "uid": "e_285a65a3c4cd"
         },
         {
           "day": "Sat",
@@ -791,7 +849,8 @@
           "start": null,
           "end": null,
           "note": "Fits between SFPC (ends 4pm) and Roulette Night 3 (8pm)",
-          "url": "https://summerstage.org"
+          "url": "https://summerstage.org",
+          "uid": "e_c01c9b42e017"
         },
         {
           "day": "Sat",
@@ -805,7 +864,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://www.eventbrite.com/e/january-6th-the-musical-tickets-1990835917822?aff=oddtdtcreator"
+          "url": "https://www.eventbrite.com/e/january-6th-the-musical-tickets-1990835917822?aff=oddtdtcreator",
+          "uid": "e_c76ee6c31611"
         },
         {
           "day": "Sat",
@@ -819,7 +879,8 @@
           "start": null,
           "end": null,
           "note": "A laboratory (Variety Show) for circus and circus-adjacent performance and experimentation.",
-          "url": "https://www.eventbrite.com/e/cirkus-moxie-lab-tickets-1992029994337?aff=oddtdtcreator"
+          "url": "https://www.eventbrite.com/e/cirkus-moxie-lab-tickets-1992029994337?aff=oddtdtcreator",
+          "uid": "e_ca9337117dbf"
         },
         {
           "day": "Sun",
@@ -833,7 +894,8 @@
           "start": "12:00",
           "end": "18:00",
           "note": "ANIMAL [a listening gym] on view. Juma Sultan live 4–6pm. RSVP at pioneerworks.org",
-          "url": "https://pioneerworks.org/programs/second-sundays-july-2026"
+          "url": "https://pioneerworks.org/programs/second-sundays-july-2026",
+          "uid": "e_e6532ed683e3"
         },
         {
           "day": "Sun",
@@ -847,7 +909,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://www.eventbrite.com/e/cirkus-moxie-lab-tickets-1992029994337?aff=oddtdtcreator"
+          "url": "https://www.eventbrite.com/e/cirkus-moxie-lab-tickets-1992029994337?aff=oddtdtcreator",
+          "uid": "e_ef3d66ef6151"
         }
       ]
     },
@@ -866,7 +929,8 @@
           "start": "19:00",
           "end": "20:00",
           "note": null,
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_b923b600ea62"
         },
         {
           "day": "Mon",
@@ -880,7 +944,8 @@
           "start": "21:30",
           "end": "23:00",
           "note": "An experiment, a return to form, a performer in the dark.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_48693ba7cda5"
         },
         {
           "day": "Mon",
@@ -894,7 +959,8 @@
           "start": "21:30",
           "end": null,
           "note": "Drama involving a curse and relationship conflict. Runs Jul 13–14.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_ba5bd4f8e9a0"
         },
         {
           "day": "Tue",
@@ -908,7 +974,8 @@
           "start": "19:00",
           "end": "20:00",
           "note": null,
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_e93ca1a907dc"
         },
         {
           "day": "Tue",
@@ -922,7 +989,8 @@
           "start": "19:00",
           "end": null,
           "note": "Contemporary drama on how love + loss intertwine. Runs Jul 14–18.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_75000536843d"
         },
         {
           "day": "Tue",
@@ -936,7 +1004,8 @@
           "start": "19:00",
           "end": "21:30",
           "note": "3-session evening class, Tuesdays Jul 14–28.",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_eb47b586352c"
         },
         {
           "day": "Tue",
@@ -950,7 +1019,8 @@
           "start": "19:30",
           "end": null,
           "note": "Same night as Mono No Aware Producing Fundamentals — pick one.",
-          "url": "https://pioneerworks.org/programs/false-harmonics-26-conrad-tao-aaron-turner-and-randall-dunn-charmaine-lee"
+          "url": "https://pioneerworks.org/programs/false-harmonics-26-conrad-tao-aaron-turner-and-randall-dunn-charmaine-lee",
+          "uid": "e_2c706aeca12c"
         },
         {
           "day": "Tue",
@@ -964,7 +1034,8 @@
           "start": "21:30",
           "end": null,
           "note": "\"oz is tired of Men. the most reasonable conclusion is to become God.\" Runs Jul 14–18.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_e5f8a55bddd3"
         },
         {
           "day": "Tue",
@@ -978,7 +1049,8 @@
           "start": null,
           "end": null,
           "note": "EdFest — Edinburgh Fringe preview series.",
-          "url": "https://www.bkarthaus.com/shows-events"
+          "url": "https://www.bkarthaus.com/shows-events",
+          "uid": "e_8cc38f644141"
         },
         {
           "day": "Tue",
@@ -992,7 +1064,8 @@
           "start": null,
           "end": null,
           "note": "EdFest — Edinburgh Fringe preview series.",
-          "url": "https://www.bkarthaus.com/shows-events"
+          "url": "https://www.bkarthaus.com/shows-events",
+          "uid": "e_2c59c61431f4"
         },
         {
           "day": "Wed",
@@ -1006,7 +1079,8 @@
           "start": "18:00",
           "end": null,
           "note": null,
-          "url": "https://dadabar.nyc/event/6641952/769750619/the-tiny-musician-violin-loopstation"
+          "url": "https://dadabar.nyc/event/6641952/769750619/the-tiny-musician-violin-loopstation",
+          "uid": "e_d200a5344b6e"
         },
         {
           "day": "Wed",
@@ -1020,7 +1094,8 @@
           "start": "19:00",
           "end": "20:30",
           "note": null,
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_a2735ed5acc4"
         },
         {
           "day": "Wed",
@@ -1034,7 +1109,8 @@
           "start": "19:00",
           "end": "20:30",
           "note": null,
-          "url": "https://www.delightfactorynyc.com/events"
+          "url": "https://www.delightfactorynyc.com/events",
+          "uid": "e_d1e8be8781cd"
         },
         {
           "day": "Wed",
@@ -1048,7 +1124,8 @@
           "start": "20:00",
           "end": null,
           "note": null,
-          "url": "https://dadabar.nyc/event/6636735/769106048/jazz-the-simon-metzger-group"
+          "url": "https://dadabar.nyc/event/6636735/769106048/jazz-the-simon-metzger-group",
+          "uid": "e_67aae44f2263"
         },
         {
           "day": "Wed",
@@ -1062,7 +1139,8 @@
           "start": "21:30",
           "end": "23:00",
           "note": "Interactive invitation to audience participation.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_24c247053b9b"
         },
         {
           "day": "Wed",
@@ -1076,7 +1154,8 @@
           "start": null,
           "end": null,
           "note": "EdFest.",
-          "url": "https://www.bkarthaus.com/shows-events"
+          "url": "https://www.bkarthaus.com/shows-events",
+          "uid": "e_c08bc53847f0"
         },
         {
           "day": "Wed",
@@ -1090,7 +1169,8 @@
           "start": "21:00",
           "end": "23:00",
           "note": null,
-          "url": "https://www.fluxfactory.org/event/lotte-van-den-audenaeren/"
+          "url": "https://www.fluxfactory.org/event/lotte-van-den-audenaeren/",
+          "uid": "e_fcea8e0a05af"
         },
         {
           "day": "Thu",
@@ -1104,7 +1184,8 @@
           "start": "17:00",
           "end": null,
           "note": null,
-          "url": "https://summerstage.org"
+          "url": "https://summerstage.org",
+          "uid": "e_24c3d6353f02"
         },
         {
           "day": "Thu",
@@ -1118,7 +1199,8 @@
           "start": "19:00",
           "end": null,
           "note": "Part poetry reading, part immersive theater, set post-apocalyptically. Runs Jul 16–18.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_3fdc18dafbc3"
         },
         {
           "day": "Thu",
@@ -1132,7 +1214,8 @@
           "start": "19:30",
           "end": "19:30",
           "note": null,
-          "url": "https://uniondocs.org/event/a-brief-history-of-chasing-storms-2026-07-16/"
+          "url": "https://uniondocs.org/event/a-brief-history-of-chasing-storms-2026-07-16/",
+          "uid": "e_f549d5c7846c"
         },
         {
           "day": "Thu",
@@ -1146,7 +1229,8 @@
           "start": "21:30",
           "end": "23:00",
           "note": "Immersive spiritual service focused on the ocean's healing properties.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_f7ac62b179e4"
         },
         {
           "day": "Thu",
@@ -1160,7 +1244,11 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://www.bkarthaus.com/shows-events"
+          "url": "https://www.bkarthaus.com/shows-events",
+          "uid": "e_4cf0f13d8ff1",
+          "aliases": [
+            "Jul 16|FOLKUS"
+          ]
         },
         {
           "day": "Thu",
@@ -1174,7 +1262,8 @@
           "start": null,
           "end": null,
           "note": "Screening run opens.",
-          "url": "https://www.bam.org/"
+          "url": "https://www.bam.org/",
+          "uid": "e_e4439e45ed71"
         },
         {
           "day": "Thu",
@@ -1188,7 +1277,8 @@
           "start": "22:30",
           "end": "00:30",
           "note": null,
-          "url": "https://www.materialsforthearts.org/event/mfta-designer-in-residence-scooter-laforge-event/"
+          "url": "https://www.materialsforthearts.org/event/mfta-designer-in-residence-scooter-laforge-event/",
+          "uid": "e_c1d4324a90d8"
         },
         {
           "day": "Fri",
@@ -1202,7 +1292,8 @@
           "start": "18:00",
           "end": "20:00",
           "note": "Free outdoor plaza programming, 6–8pm. Runs Jul 17 – Aug 15.",
-          "url": "https://www.abronsartscenter.org/performing-arts"
+          "url": "https://www.abronsartscenter.org/performing-arts",
+          "uid": "e_f9e87434cd32"
         },
         {
           "day": "Fri",
@@ -1216,7 +1307,8 @@
           "start": "19:00",
           "end": "20:30",
           "note": "All-female comedy team, original sketches.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_25f4f98d5d2a"
         },
         {
           "day": "Fri",
@@ -1230,7 +1322,8 @@
           "start": "20:00",
           "end": "23:00",
           "note": null,
-          "url": "https://www.delightfactorynyc.com/events"
+          "url": "https://www.delightfactorynyc.com/events",
+          "uid": "e_f9859480361d"
         },
         {
           "day": "Fri",
@@ -1244,7 +1337,8 @@
           "start": "21:30",
           "end": "23:00",
           "note": "Drama with three Black women stuck behind in the annals of time.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_75f24ea541d5"
         },
         {
           "day": "Sat",
@@ -1258,7 +1352,8 @@
           "start": "14:30",
           "end": null,
           "note": null,
-          "url": "https://www.symphonyspace.org/"
+          "url": "https://www.symphonyspace.org/",
+          "uid": "e_a2e35f143de7"
         },
         {
           "day": "Sat",
@@ -1272,7 +1367,8 @@
           "start": "16:00",
           "end": "22:00",
           "note": "One seat left. Advanced territory — not a beginner workshop.",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_23d938cf2308"
         },
         {
           "day": "Sat",
@@ -1286,7 +1382,11 @@
           "start": "19:00",
           "end": null,
           "note": "Jo Barchi, Ted Dodson + others reading. Free/sliding.",
-          "url": "https://www.wendyssubway.com/programs"
+          "url": "https://www.wendyssubway.com/programs",
+          "uid": "e_ba01d820293f",
+          "aliases": [
+            "Jul 18|Maybe Sometimes: A Reading With Jo Barchi, Ted Dodson, Kristen Gallagher, Matt Longabucco, and Caroline Rayner"
+          ]
         },
         {
           "day": "Sat",
@@ -1300,7 +1400,8 @@
           "start": "19:30",
           "end": null,
           "note": "Benefit show, paid.",
-          "url": "https://bricartsmedia.org/events"
+          "url": "https://bricartsmedia.org/events",
+          "uid": "e_997ecf737e11"
         },
         {
           "day": "Sat",
@@ -1314,7 +1415,8 @@
           "start": "20:00",
           "end": null,
           "note": "Matana Roberts (2009 AIR) + Ben Vida (2013 AIR) performing from Oblivion Seekers.",
-          "url": "https://issueprojectroom.org/calendar"
+          "url": "https://issueprojectroom.org/calendar",
+          "uid": "e_5acf6971e9df"
         },
         {
           "day": "Sat",
@@ -1328,7 +1430,8 @@
           "start": "21:30",
           "end": "23:00",
           "note": "Four unremarkable women defending Earth from a space threat.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_6c3ad63ce805"
         },
         {
           "day": "Sat",
@@ -1342,7 +1445,8 @@
           "start": null,
           "end": null,
           "note": "Rare milestone event. Live-coding collective, algorithmic sets projected onto walls. Bring a laptop.",
-          "url": "https://livecode.nyc/events.html"
+          "url": "https://livecode.nyc/events.html",
+          "uid": "e_d57ee20d4923"
         },
         {
           "day": "Sat",
@@ -1356,7 +1460,8 @@
           "start": "10:00",
           "end": "16:00",
           "note": null,
-          "url": "https://printshop.org/classes-workshops/pochoir-workshop-with-andrew-betancourt"
+          "url": "https://printshop.org/classes-workshops/pochoir-workshop-with-andrew-betancourt",
+          "uid": "e_e87a0aa9a0de"
         },
         {
           "day": "Sat",
@@ -1370,7 +1475,11 @@
           "start": null,
           "end": null,
           "note": "Melanie Hoff",
-          "url": "https://withfriends.events/event/ahNbaM8n/the-origin-of-the-word-free-public-talk/"
+          "url": "https://withfriends.events/event/ahNbaM8n/the-origin-of-the-word-free-public-talk/",
+          "uid": "e_f2e193c270db",
+          "aliases": [
+            "Jul 18|SFPC free talk: The Origin of the Word — Melanie Hoff"
+          ]
         },
         {
           "day": "Sat",
@@ -1384,7 +1493,8 @@
           "start": "10:00",
           "end": "14:00",
           "note": null,
-          "url": "https://www.worksinprogressnyc.org/works-in-progress-shop/p/introduction-to-silk-screen-printing-class"
+          "url": "https://www.worksinprogressnyc.org/works-in-progress-shop/p/introduction-to-silk-screen-printing-class",
+          "uid": "e_b92399727654"
         },
         {
           "day": "Sun",
@@ -1398,7 +1508,8 @@
           "start": "11:00",
           "end": "13:00",
           "note": null,
-          "url": "https://www.delightfactorynyc.com/events"
+          "url": "https://www.delightfactorynyc.com/events",
+          "uid": "e_74b6b092477d"
         },
         {
           "day": "Sun",
@@ -1412,7 +1523,8 @@
           "start": "15:00",
           "end": "16:30",
           "note": "Handcrafted marionettes from scrap materials + physical theater. Matinee.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_d370cfb13700"
         },
         {
           "day": "Sun",
@@ -1426,7 +1538,8 @@
           "start": "16:00",
           "end": "22:00",
           "note": null,
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_8354d864dbcc"
         },
         {
           "day": "Sun",
@@ -1440,7 +1553,8 @@
           "start": "19:00",
           "end": null,
           "note": "Our complicated relationship to the ocean, conservation. Runs Jul 19–20.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_cb27ed806554"
         },
         {
           "day": "Sun",
@@ -1454,7 +1568,8 @@
           "start": "19:00",
           "end": "20:30",
           "note": "Raw, funny, unflinching on connection and relationships.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_c6d43ec41877"
         },
         {
           "day": "Sun",
@@ -1468,7 +1583,8 @@
           "start": "21:30",
           "end": null,
           "note": "Profane, absurd debate where honor, faith, and righteous violence collapse.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_b403928a7335"
         },
         {
           "day": "Sun",
@@ -1482,7 +1598,8 @@
           "start": "17:00",
           "end": "23:00",
           "note": null,
-          "url": "https://elmuseo.org/event/fifa-mens-world-cup-2026-final-watch-party/"
+          "url": "https://elmuseo.org/event/fifa-mens-world-cup-2026-final-watch-party/",
+          "uid": "e_0bf4703136f9"
         },
         {
           "day": "Thu",
@@ -1496,7 +1613,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://snug-harbor.org/"
+          "url": "https://snug-harbor.org/",
+          "uid": "e_03348573bc4c"
         },
         {
           "day": "Sun",
@@ -1510,7 +1628,8 @@
           "start": null,
           "end": null,
           "note": "Poetry workshop.",
-          "url": "https://brooklynpoets.org/workshops/all"
+          "url": "https://brooklynpoets.org/workshops/all",
+          "uid": "e_32015330d950"
         }
       ]
     },
@@ -1529,7 +1648,8 @@
           "start": "19:00",
           "end": "20:00",
           "note": "Performance inviting the audience to \"pay your respects\" during a solemn ceremony.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_37529b26b95c"
         },
         {
           "day": "Mon",
@@ -1543,7 +1663,8 @@
           "start": null,
           "end": null,
           "note": "Biblical reinterpretation comedy.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_010579b7cdd2"
         },
         {
           "day": "Tue",
@@ -1557,7 +1678,8 @@
           "start": "19:00",
           "end": "21:30",
           "note": "3-session evening class, Tuesdays Jul 14–28.",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_1835bea09fd4"
         },
         {
           "day": "Tue",
@@ -1571,7 +1693,8 @@
           "start": null,
           "end": null,
           "note": "Love, Denial and 20 Years of Barely Contained Fury. Runs Jul 21–22.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_6a912cf95306"
         },
         {
           "day": "Wed",
@@ -1585,7 +1708,8 @@
           "start": null,
           "end": null,
           "note": "Clown narrative — a childhood friend disappears. Long run through Jul 31.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_b202f8725667"
         },
         {
           "day": "Wed",
@@ -1599,7 +1723,8 @@
           "start": null,
           "end": null,
           "note": "Best free dance viewing of the summer. Don't miss.",
-          "url": "https://summerstage.org"
+          "url": "https://summerstage.org",
+          "uid": "e_442fcb4a26a0"
         },
         {
           "day": "Thu",
@@ -1613,7 +1738,8 @@
           "start": "19:00",
           "end": "22:00",
           "note": "RSVP required.",
-          "url": "https://www.judson.org/calendar"
+          "url": "https://www.judson.org/calendar",
+          "uid": "e_0632efa6ec6a"
         },
         {
           "day": "Thu",
@@ -1627,7 +1753,8 @@
           "start": "19:30",
           "end": "20:30",
           "note": "Show up with a project; write for an hour alongside others.",
-          "url": "https://www.wendyssubway.com/programs"
+          "url": "https://www.wendyssubway.com/programs",
+          "uid": "e_837a08d6de93"
         },
         {
           "day": "Thu",
@@ -1641,7 +1768,8 @@
           "start": null,
           "end": null,
           "note": "Trans narrative exploring roommate relationships. Runs Jul 23–28.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_b9be4836a143"
         },
         {
           "day": "Thu",
@@ -1655,7 +1783,8 @@
           "start": null,
           "end": null,
           "note": "Runs Jul 23–25.",
-          "url": "https://thetanknyc.org/tankcalendar"
+          "url": "https://thetanknyc.org/tankcalendar",
+          "uid": "e_5c9cf9ca0ef2"
         },
         {
           "day": "Thu",
@@ -1669,7 +1798,8 @@
           "start": "21:00",
           "end": "21:00",
           "note": null,
-          "url": "https://greenwichhouse.org/event/ceramics-now-2025-artists/"
+          "url": "https://greenwichhouse.org/event/ceramics-now-2025-artists/",
+          "uid": "e_b0f27b6b020f"
         },
         {
           "day": "Thu",
@@ -1683,7 +1813,8 @@
           "start": "22:00",
           "end": "01:00",
           "note": null,
-          "url": "https://elmuseo.org/event/uptown-bounce-co-presented-by-the-museum-of-the-city-of-new-york/"
+          "url": "https://elmuseo.org/event/uptown-bounce-co-presented-by-the-museum-of-the-city-of-new-york/",
+          "uid": "e_0cee4b384226"
         },
         {
           "day": "Fri",
@@ -1697,7 +1828,8 @@
           "start": "10:00",
           "end": "16:30",
           "note": "3-day intensive Jul 24–26, 10am–4:30pm daily. Faculty: Elsaesser, Stephens, Sharon Lockhart, Kienitz Wilkins, Cardone. Big commitment — decide fast.",
-          "url": "https://uniondocs.org/events/category/workshops/list/"
+          "url": "https://uniondocs.org/events/category/workshops/list/",
+          "uid": "e_386c16a24d5d"
         },
         {
           "day": "Fri",
@@ -1711,7 +1843,8 @@
           "start": "18:00",
           "end": null,
           "note": "Free jazz night.",
-          "url": "https://bricartsmedia.org/events"
+          "url": "https://bricartsmedia.org/events",
+          "uid": "e_9aee9e3ca77c"
         },
         {
           "day": "Fri",
@@ -1725,7 +1858,8 @@
           "start": null,
           "end": null,
           "note": "Runs Jul 24–Aug 6.",
-          "url": "https://www.filmforum.org/now-playing"
+          "url": "https://www.filmforum.org/now-playing",
+          "uid": "e_69e9aea43fa7"
         },
         {
           "day": "Fri",
@@ -1739,7 +1873,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://www.filmforum.org/now-playing"
+          "url": "https://www.filmforum.org/now-playing",
+          "uid": "e_0a5b15b37f64"
         },
         {
           "day": "Fri",
@@ -1753,7 +1888,8 @@
           "start": "18:00",
           "end": "21:00",
           "note": "Two-day workshop, continues Sat Jul 25, 1-4pm ET. With Omayeli Arenyeka.",
-          "url": "https://sfpc.study/sessions/future-schools/extending-poetry-through-computation"
+          "url": "https://sfpc.study/sessions/future-schools/extending-poetry-through-computation",
+          "uid": "e_c2437d29c222"
         },
         {
           "day": "Sat",
@@ -1767,7 +1903,8 @@
           "start": "12:00",
           "end": "14:30",
           "note": "Generative writing workshop.",
-          "url": "https://www.wendyssubway.com/programs"
+          "url": "https://www.wendyssubway.com/programs",
+          "uid": "e_cb79e3aaf706"
         },
         {
           "day": "Sat",
@@ -1781,7 +1918,8 @@
           "start": "12:00",
           "end": "17:00",
           "note": null,
-          "url": "https://lmcc.net/events/july-open-studios/"
+          "url": "https://lmcc.net/events/july-open-studios/",
+          "uid": "e_18bd0bb5348f"
         },
         {
           "day": "Sat",
@@ -1795,7 +1933,8 @@
           "start": "13:00",
           "end": "15:00",
           "note": null,
-          "url": "https://lmcc.net/events/recycled-runway-art-workshop-with-sari-nordman/2026-07-25/"
+          "url": "https://lmcc.net/events/recycled-runway-art-workshop-with-sari-nordman/2026-07-25/",
+          "uid": "e_169d7a269a4f"
         },
         {
           "day": "Sat",
@@ -1809,7 +1948,8 @@
           "start": "13:00",
           "end": "16:00",
           "note": null,
-          "url": "https://www.delightfactorynyc.com/events"
+          "url": "https://www.delightfactorynyc.com/events",
+          "uid": "e_5cfb8ef18c9e"
         },
         {
           "day": "Sat",
@@ -1823,7 +1963,8 @@
           "start": "15:00",
           "end": null,
           "note": "Free, in your neighborhood.",
-          "url": "https://bricartsmedia.org/events"
+          "url": "https://bricartsmedia.org/events",
+          "uid": "e_1c3db7de5088"
         },
         {
           "day": "Sun",
@@ -1837,7 +1978,8 @@
           "start": "19:30",
           "end": "21:00",
           "note": "Experimental audio making — record yourself reading archive materials. Small group.",
-          "url": "https://interferencearchive.org/event/audio-collage-workshop-exploring-the-archive-through-audio/"
+          "url": "https://interferencearchive.org/event/audio-collage-workshop-exploring-the-archive-through-audio/",
+          "uid": "e_64a447152e9e"
         },
         {
           "day": "Sun",
@@ -1851,7 +1993,8 @@
           "start": null,
           "end": null,
           "note": "National Theatre Live special screening.",
-          "url": "https://nyuskirball.org/events"
+          "url": "https://nyuskirball.org/events",
+          "uid": "e_78c1246fa99c"
         },
         {
           "day": "Sun",
@@ -1865,7 +2008,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://summerstage.org"
+          "url": "https://summerstage.org",
+          "uid": "e_34792872d39d"
         },
         {
           "day": "Wed",
@@ -1879,7 +2023,8 @@
           "start": null,
           "end": null,
           "note": "Poetry workshop.",
-          "url": "https://brooklynpoets.org/workshops/all"
+          "url": "https://brooklynpoets.org/workshops/all",
+          "uid": "e_3fc572aff455"
         },
         {
           "day": "Sun",
@@ -1893,7 +2038,8 @@
           "start": null,
           "end": null,
           "note": "Poetry workshop.",
-          "url": "https://brooklynpoets.org/workshops/all"
+          "url": "https://brooklynpoets.org/workshops/all",
+          "uid": "e_861c15f959c7"
         },
         {
           "day": "Sun",
@@ -1907,7 +2053,8 @@
           "start": null,
           "end": null,
           "note": "Poetry workshop.",
-          "url": "https://brooklynpoets.org/workshops/all"
+          "url": "https://brooklynpoets.org/workshops/all",
+          "uid": "e_2cbff0299290"
         }
       ]
     },
@@ -1926,7 +2073,8 @@
           "start": "19:00",
           "end": "22:00",
           "note": null,
-          "url": "https://www.delightfactorynyc.com/events"
+          "url": "https://www.delightfactorynyc.com/events",
+          "uid": "e_e265ac8871c0"
         },
         {
           "day": "Tue",
@@ -1940,7 +2088,8 @@
           "start": "19:00",
           "end": "21:30",
           "note": "3-session evening class, Tuesdays Jul 14–28.",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_a0674d0b4fa8"
         },
         {
           "day": "Tue",
@@ -1954,7 +2103,8 @@
           "start": "19:30",
           "end": null,
           "note": "Tickets bought. Lynch sound collaborator. Live to picture.",
-          "url": "https://pioneerworks.org/programs/false-harmonics-27-dean-hurley-c-lavender"
+          "url": "https://pioneerworks.org/programs/false-harmonics-27-dean-hurley-c-lavender",
+          "uid": "e_f57a47954fca"
         },
         {
           "day": "Tue",
@@ -1968,7 +2118,8 @@
           "start": "18:00",
           "end": "21:00",
           "note": "4 Tuesdays",
-          "url": "https://printshop.org/classes-workshops/relief-printmaking-with-anat-keinan"
+          "url": "https://printshop.org/classes-workshops/relief-printmaking-with-anat-keinan",
+          "uid": "e_4c3ac0e4c233"
         },
         {
           "day": "Wed",
@@ -1982,7 +2133,8 @@
           "start": "17:00",
           "end": null,
           "note": "LAMC.",
-          "url": "https://summerstage.org"
+          "url": "https://summerstage.org",
+          "uid": "e_c528f71ca877"
         },
         {
           "day": "Thu",
@@ -1996,7 +2148,8 @@
           "start": "18:00",
           "end": null,
           "note": "Hip hop history.",
-          "url": "https://summerstage.org"
+          "url": "https://summerstage.org",
+          "uid": "e_a517426dc7bb"
         },
         {
           "day": "Thu",
@@ -2010,7 +2163,8 @@
           "start": null,
           "end": null,
           "note": "Film Comment Live conversation series.",
-          "url": "https://www.bam.org/"
+          "url": "https://www.bam.org/",
+          "uid": "e_1b45696d1de1"
         },
         {
           "day": "Thu",
@@ -2024,7 +2178,8 @@
           "start": null,
           "end": null,
           "note": "Opens Jul 30, runs through Aug 2. 100 min. Dark comedy on masculinity + vulnerability.",
-          "url": "https://www.bricktheater.com/"
+          "url": "https://www.bricktheater.com/",
+          "uid": "e_cd47c8d60279"
         },
         {
           "day": "Fri",
@@ -2038,7 +2193,8 @@
           "start": "18:00",
           "end": null,
           "note": "Free.",
-          "url": "https://bricartsmedia.org/events"
+          "url": "https://bricartsmedia.org/events",
+          "uid": "e_1771bc9813fa"
         },
         {
           "day": "Fri",
@@ -2052,7 +2208,8 @@
           "start": "19:00",
           "end": null,
           "note": null,
-          "url": "https://pools.events/event/htt1Fw2w/gushes-protein/"
+          "url": "https://pools.events/event/htt1Fw2w/gushes-protein/",
+          "uid": "e_caba69819765"
         },
         {
           "day": "Fri",
@@ -2066,7 +2223,8 @@
           "start": "19:00",
           "end": "22:00",
           "note": null,
-          "url": "https://www.delightfactorynyc.com/events"
+          "url": "https://www.delightfactorynyc.com/events",
+          "uid": "e_c6838c6ae969"
         },
         {
           "day": "Fri",
@@ -2080,7 +2238,8 @@
           "start": null,
           "end": null,
           "note": "Runs Jul 31 – Aug 6.",
-          "url": "https://www.bam.org/"
+          "url": "https://www.bam.org/",
+          "uid": "e_cca28e0d4247"
         },
         {
           "day": "Fri",
@@ -2094,7 +2253,8 @@
           "start": "22:00",
           "end": "01:00",
           "note": null,
-          "url": "https://elmuseo.org/event/open-studio-double-exposures/"
+          "url": "https://elmuseo.org/event/open-studio-double-exposures/",
+          "uid": "e_edadfe9d6d40"
         },
         {
           "day": "Sat",
@@ -2108,7 +2268,8 @@
           "start": "13:00",
           "end": "15:00",
           "note": null,
-          "url": "https://lmcc.net/events/hybrid-animal-encyclopedia-workshop-with-nobuho-nagasawa/2026-08-01/"
+          "url": "https://lmcc.net/events/hybrid-animal-encyclopedia-workshop-with-nobuho-nagasawa/2026-08-01/",
+          "uid": "e_adbfd22ab41f"
         },
         {
           "day": "Sat",
@@ -2122,7 +2283,8 @@
           "start": "19:30",
           "end": "23:55",
           "note": null,
-          "url": "https://www.delightfactorynyc.com/events"
+          "url": "https://www.delightfactorynyc.com/events",
+          "uid": "e_d14c2de79fcf"
         },
         {
           "day": "Sat",
@@ -2136,7 +2298,8 @@
           "start": null,
           "end": null,
           "note": "Local vendor market — prints, ceramics, clothing. Kicks off Summers at the Starr.",
-          "url": "https://www.thebushwickstarr.org/"
+          "url": "https://www.thebushwickstarr.org/",
+          "uid": "e_944072188a87"
         },
         {
           "day": "Sat",
@@ -2150,7 +2313,8 @@
           "start": "10:00",
           "end": "16:00",
           "note": null,
-          "url": "https://creativemusic.org/event/creative-music-workshop-with-joe-mcpherson-2026/"
+          "url": "https://creativemusic.org/event/creative-music-workshop-with-joe-mcpherson-2026/",
+          "uid": "e_18b6f0bb50ca"
         },
         {
           "day": "Sat",
@@ -2164,7 +2328,11 @@
           "start": "13:30",
           "end": "15:00",
           "note": "Aarati Akkapeddi",
-          "url": "https://withfriends.events/event/NXWa8sJw/handmade-datasets-free-public-talk/"
+          "url": "https://withfriends.events/event/NXWa8sJw/handmade-datasets-free-public-talk/",
+          "uid": "e_d2dacc2622ce",
+          "aliases": [
+            "Aug 1|SFPC free talk: Handmade Datasets — Aarati Akkapeddi"
+          ]
         },
         {
           "day": "Wed",
@@ -2178,7 +2346,8 @@
           "start": null,
           "end": null,
           "note": "Poetry workshop.",
-          "url": "https://brooklynpoets.org/workshops/all"
+          "url": "https://brooklynpoets.org/workshops/all",
+          "uid": "e_19fc4cfe2097"
         },
         {
           "day": "Thu",
@@ -2192,7 +2361,8 @@
           "start": null,
           "end": null,
           "note": "Poetry workshop.",
-          "url": "https://brooklynpoets.org/workshops/all"
+          "url": "https://brooklynpoets.org/workshops/all",
+          "uid": "e_2fa95267279d"
         },
         {
           "day": "Thu",
@@ -2206,7 +2376,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://snug-harbor.org/"
+          "url": "https://snug-harbor.org/",
+          "uid": "e_1a52efed57eb"
         }
       ]
     },
@@ -2225,7 +2396,8 @@
           "start": "18:00",
           "end": "22:00",
           "note": "Green woodworking meetup. No one turned away. RSVP nycspoonclub@gmail.com. Conflicts with Summer Sings.",
-          "url": "https://makeville.com/events/2026-3-23-nyc-spoon-club"
+          "url": "https://makeville.com/events/2026-3-23-nyc-spoon-club",
+          "uid": "e_bec6fd8b73ef"
         },
         {
           "day": "Mon",
@@ -2239,7 +2411,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://pioneerworks.org"
+          "url": "https://pioneerworks.org",
+          "uid": "e_f9d6f1792e5a"
         },
         {
           "day": "Mon",
@@ -2253,7 +2426,8 @@
           "start": "10:00",
           "end": "16:00",
           "note": null,
-          "url": "https://creativemusic.org/event/creative-music-workshop-with-joe-mcpherson-2026/"
+          "url": "https://creativemusic.org/event/creative-music-workshop-with-joe-mcpherson-2026/",
+          "uid": "e_0b7f9683f086"
         },
         {
           "day": "Tue",
@@ -2267,7 +2441,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://pioneerworks.org"
+          "url": "https://pioneerworks.org",
+          "uid": "e_3de2bf8fd378"
         },
         {
           "day": "Thu",
@@ -2281,7 +2456,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://summerstage.org"
+          "url": "https://summerstage.org",
+          "uid": "e_4fccfbfc69c1"
         },
         {
           "day": "Fri",
@@ -2295,7 +2471,8 @@
           "start": null,
           "end": null,
           "note": "Runs Aug 7–13.",
-          "url": "https://www.filmforum.org/now-playing"
+          "url": "https://www.filmforum.org/now-playing",
+          "uid": "e_cf39e9726ab8"
         },
         {
           "day": "Fri",
@@ -2309,7 +2486,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://www.filmforum.org/now-playing"
+          "url": "https://www.filmforum.org/now-playing",
+          "uid": "e_b9fe5a1e7026"
         },
         {
           "day": "Fri",
@@ -2323,7 +2501,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://summerstage.org"
+          "url": "https://summerstage.org",
+          "uid": "e_cac070d52878"
         },
         {
           "day": "Fri",
@@ -2337,7 +2516,8 @@
           "start": "13:00",
           "end": "18:00",
           "note": "Two-day workshop, continues Sat Aug 8, 1-4pm ET. With Chia Amisola.",
-          "url": "https://sfpc.study/sessions/future-schools/becoming-hypertext"
+          "url": "https://sfpc.study/sessions/future-schools/becoming-hypertext",
+          "uid": "e_600d7f63442a"
         },
         {
           "day": "Sat",
@@ -2351,7 +2531,8 @@
           "start": "19:00",
           "end": "21:00",
           "note": null,
-          "url": "https://lmcc.net/events/esperanza-spalding-in-concert/"
+          "url": "https://lmcc.net/events/esperanza-spalding-in-concert/",
+          "uid": "e_d852cf11fa15"
         },
         {
           "day": "Sat",
@@ -2365,7 +2546,8 @@
           "start": "12:00",
           "end": "16:00",
           "note": "Drypoint with Chine Collé",
-          "url": "https://printshop.org/classes-workshops/chine-colle-workshop-with-alejandra-arias-sevilla"
+          "url": "https://printshop.org/classes-workshops/chine-colle-workshop-with-alejandra-arias-sevilla",
+          "uid": "e_04b1fa89f6cb"
         },
         {
           "day": "Sun",
@@ -2379,7 +2561,8 @@
           "start": "12:00",
           "end": "16:00",
           "note": "Chine Collé: Printing, Seaming, Mounting & Collaging",
-          "url": "https://printshop.org/classes-workshops/chine-colle-workshop-with-alejandra-arias-sevilla"
+          "url": "https://printshop.org/classes-workshops/chine-colle-workshop-with-alejandra-arias-sevilla",
+          "uid": "e_cee0578ada5d"
         }
       ]
     },
@@ -2398,7 +2581,8 @@
           "start": null,
           "end": null,
           "note": "Runs Aug 14–20.",
-          "url": "https://www.filmforum.org/now-playing"
+          "url": "https://www.filmforum.org/now-playing",
+          "uid": "e_329f3ca80e1a"
         },
         {
           "day": "Sat",
@@ -2412,7 +2596,8 @@
           "start": "13:00",
           "end": "15:00",
           "note": null,
-          "url": "https://lmcc.net/events/hybrid-animal-encyclopedia-workshop-with-nobuho-nagasawa/2026-08-15/"
+          "url": "https://lmcc.net/events/hybrid-animal-encyclopedia-workshop-with-nobuho-nagasawa/2026-08-15/",
+          "uid": "e_ddc631355223"
         },
         {
           "day": "Sat",
@@ -2426,7 +2611,8 @@
           "start": "15:00",
           "end": null,
           "note": "National Theatre Live screening.",
-          "url": "https://www.symphonyspace.org/"
+          "url": "https://www.symphonyspace.org/",
+          "uid": "e_e30232e499cf"
         },
         {
           "day": "Sat",
@@ -2440,7 +2626,8 @@
           "start": "18:00",
           "end": null,
           "note": "NT Live screening — evening slot.",
-          "url": "https://www.symphonyspace.org/"
+          "url": "https://www.symphonyspace.org/",
+          "uid": "e_6a12e8b59592"
         },
         {
           "day": "Sat",
@@ -2454,7 +2641,8 @@
           "start": "18:00",
           "end": "20:00",
           "note": "Final day of the free outdoor plaza series.",
-          "url": "https://www.abronsartscenter.org/performing-arts"
+          "url": "https://www.abronsartscenter.org/performing-arts",
+          "uid": "e_965973c937b3"
         },
         {
           "day": "Sat",
@@ -2468,7 +2656,8 @@
           "start": "14:00",
           "end": "18:00",
           "note": null,
-          "url": "https://elmuseo.org/event/family-program-art-book-make/"
+          "url": "https://elmuseo.org/event/family-program-art-book-make/",
+          "uid": "e_cf2d78ba9690"
         },
         {
           "day": "Sat",
@@ -2482,7 +2671,8 @@
           "start": null,
           "end": null,
           "note": "with Ahana Ganguly",
-          "url": "https://sfpc.study/sessions/future-schools/double-tap-long-press"
+          "url": "https://sfpc.study/sessions/future-schools/double-tap-long-press",
+          "uid": "e_6434870505d2"
         },
         {
           "day": "Sun",
@@ -2496,7 +2686,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://summerstage.org"
+          "url": "https://summerstage.org",
+          "uid": "e_2609585f5889"
         },
         {
           "day": "Thu",
@@ -2510,7 +2701,8 @@
           "start": "22:30",
           "end": "00:30",
           "note": null,
-          "url": "https://elmuseo.org/event/film-screening-august/"
+          "url": "https://elmuseo.org/event/film-screening-august/",
+          "uid": "e_0e24ebbc8166"
         },
         {
           "day": "Fri",
@@ -2524,7 +2716,8 @@
           "start": null,
           "end": null,
           "note": "Massive Coppola retrospective. Runs Aug 21 – Sep 10.",
-          "url": "https://www.filmforum.org/now-playing"
+          "url": "https://www.filmforum.org/now-playing",
+          "uid": "e_af47354275ac"
         },
         {
           "day": "Sun",
@@ -2538,7 +2731,8 @@
           "start": "18:00",
           "end": null,
           "note": "NT Live screening.",
-          "url": "https://www.symphonyspace.org/"
+          "url": "https://www.symphonyspace.org/",
+          "uid": "e_c5c004368e8c"
         }
       ]
     },
@@ -2557,7 +2751,8 @@
           "start": "13:00",
           "end": "17:00",
           "note": "Double dutch culture, community-rooted.",
-          "url": "https://www.abronsartscenter.org/performing-arts"
+          "url": "https://www.abronsartscenter.org/performing-arts",
+          "uid": "e_0bb6e284f8b8"
         },
         {
           "day": "Fri",
@@ -2571,7 +2766,8 @@
           "start": "17:00",
           "end": null,
           "note": "Runs Fri Aug 28 5pm through Sun Aug 30 3pm. Registration required.",
-          "url": "https://www.judson.org/calendar"
+          "url": "https://www.judson.org/calendar",
+          "uid": "e_e1680db189b3"
         },
         {
           "day": "Fri",
@@ -2585,7 +2781,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://summerstage.org"
+          "url": "https://summerstage.org",
+          "uid": "e_18aec37526f6"
         },
         {
           "day": "Sat",
@@ -2599,7 +2796,8 @@
           "start": "13:00",
           "end": "15:00",
           "note": null,
-          "url": "https://lmcc.net/events/recycled-runway-art-workshop-with-sari-nordman/2026-08-29/"
+          "url": "https://lmcc.net/events/recycled-runway-art-workshop-with-sari-nordman/2026-08-29/",
+          "uid": "e_44a7d2fe37f0"
         },
         {
           "day": "Sat",
@@ -2613,7 +2811,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://summerstage.org"
+          "url": "https://summerstage.org",
+          "uid": "e_2db8a737c781"
         },
         {
           "day": "Sun",
@@ -2627,7 +2826,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://summerstage.org"
+          "url": "https://summerstage.org",
+          "uid": "e_3b37a2c28cca"
         }
       ]
     },
@@ -2646,7 +2846,8 @@
           "start": "19:30",
           "end": "23:30",
           "note": null,
-          "url": "https://www.delightfactorynyc.com/events"
+          "url": "https://www.delightfactorynyc.com/events",
+          "uid": "e_9da0d2e49578"
         },
         {
           "day": "Tue",
@@ -2660,7 +2861,8 @@
           "start": "19:00",
           "end": "21:30",
           "note": "Multi-week beginner course. Learn the Super 8mm camera, then take it out for 10 days. Continues Sep 15, 29, Oct 6.",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_d98ad6a7cb66"
         },
         {
           "day": "Tue",
@@ -2674,7 +2876,8 @@
           "start": null,
           "end": null,
           "note": "Runs Sep 8 – 20. BAM fall opener.",
-          "url": "https://www.bam.org/"
+          "url": "https://www.bam.org/",
+          "uid": "e_c15d2e9dbc2e"
         },
         {
           "day": "Wed",
@@ -2688,7 +2891,8 @@
           "start": "19:00",
           "end": "22:00",
           "note": "Only 4 seats. Frame-by-frame time-lapse work + week-long rental after.",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_e35923688720"
         },
         {
           "day": "Wed",
@@ -2702,7 +2906,8 @@
           "start": null,
           "end": null,
           "note": "Live sound design by Marc Anthony Thompson. Runs Sep 9 – Oct 4.",
-          "url": "https://www.nytw.org/2026-27-season/"
+          "url": "https://www.nytw.org/2026-27-season/",
+          "uid": "e_a7d87356c840"
         },
         {
           "day": "Wed",
@@ -2716,7 +2921,8 @@
           "start": "19:00",
           "end": "21:30",
           "note": "Full professional workflow beginning and ending on 16mm. Continues Sep 17 & Oct 1, 8, + Sat Sep 19 (9am–5pm).",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_b05ee19a3f96"
         },
         {
           "day": "Thu",
@@ -2730,7 +2936,8 @@
           "start": "19:30",
           "end": null,
           "note": "Music by Samora Pinderhughes. Runs Sep 10 + 12–13.",
-          "url": "https://newyorklivearts.org/calendar/"
+          "url": "https://newyorklivearts.org/calendar/",
+          "uid": "e_7ef8d16c5598"
         },
         {
           "day": "Fri",
@@ -2744,7 +2951,8 @@
           "start": "16:00",
           "end": null,
           "note": "Opening reception 4pm. Runs Sep 11 – Oct 18.",
-          "url": "https://www.abronsartscenter.org/performing-arts"
+          "url": "https://www.abronsartscenter.org/performing-arts",
+          "uid": "e_380c0447693f"
         },
         {
           "day": "Fri",
@@ -2758,7 +2966,8 @@
           "start": null,
           "end": null,
           "note": "Runs Sep 11–17.",
-          "url": "https://www.filmforum.org/now-playing"
+          "url": "https://www.filmforum.org/now-playing",
+          "uid": "e_2b40b156cebd"
         },
         {
           "day": "Sat",
@@ -2772,7 +2981,8 @@
           "start": "10:00",
           "end": "15:00",
           "note": "Test + maintain your own Super 8 camera. Open to the public.",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_1a2887180292"
         },
         {
           "day": "Sat",
@@ -2786,7 +2996,8 @@
           "start": "16:00",
           "end": "21:00",
           "note": "Only 4 seats. Advanced high-speed camera work.",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_c0e139ab8a2d"
         },
         {
           "day": "Sat",
@@ -2800,7 +3011,8 @@
           "start": null,
           "end": null,
           "note": "Author appearance.",
-          "url": "https://www.symphonyspace.org/"
+          "url": "https://www.symphonyspace.org/",
+          "uid": "e_4fcc61269f74"
         }
       ]
     },
@@ -2819,7 +3031,8 @@
           "start": "23:00",
           "end": "01:30",
           "note": null,
-          "url": "https://elmuseo.org/event/book-launch-julia-alvarez-in-the-time-of-the-butterflies/"
+          "url": "https://elmuseo.org/event/book-launch-julia-alvarez-in-the-time-of-the-butterflies/",
+          "uid": "e_7d751874b77c"
         },
         {
           "day": "Tue",
@@ -2833,7 +3046,8 @@
           "start": "19:00",
           "end": "21:30",
           "note": null,
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_5fc870a205c6"
         },
         {
           "day": "Wed",
@@ -2847,7 +3061,8 @@
           "start": "17:30",
           "end": null,
           "note": "Visual artist installation opens at NYLA.",
-          "url": "https://newyorklivearts.org/calendar/"
+          "url": "https://newyorklivearts.org/calendar/",
+          "uid": "e_9d78f9ea235e"
         },
         {
           "day": "Thu",
@@ -2861,7 +3076,8 @@
           "start": "21:00",
           "end": "21:00",
           "note": null,
-          "url": "https://greenwichhouse.org/event/vestiges-yoonjee-kwak/"
+          "url": "https://greenwichhouse.org/event/vestiges-yoonjee-kwak/",
+          "uid": "e_edeff517b200"
         },
         {
           "day": "Thu",
@@ -2875,7 +3091,8 @@
           "start": "19:00",
           "end": "20:30",
           "note": "Fall series resumes.",
-          "url": "https://www.wendyssubway.com/programs"
+          "url": "https://www.wendyssubway.com/programs",
+          "uid": "e_f0e38f28e1ad"
         },
         {
           "day": "Wed",
@@ -2889,7 +3106,8 @@
           "start": "19:00",
           "end": "21:30",
           "note": null,
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_14376639754c"
         },
         {
           "day": "Thu",
@@ -2903,7 +3121,8 @@
           "start": "20:00",
           "end": null,
           "note": "Bassoonist/composer w/ Olivia Block, Ben LaMar Gay, Brian Chase, Yarn/Wire. Conflicts with Wendy's Subway writing night.",
-          "url": "https://roulette.org/calendar"
+          "url": "https://roulette.org/calendar",
+          "uid": "e_43e3a263fbe3"
         },
         {
           "day": "Thu",
@@ -2917,7 +3136,8 @@
           "start": null,
           "end": null,
           "note": "Legendary musical extravaganza returns. Runs Sep 17 – Nov 1.",
-          "url": "https://here.org/shows/"
+          "url": "https://here.org/shows/",
+          "uid": "e_eb55d557f9bd"
         },
         {
           "day": "Thu",
@@ -2931,7 +3151,8 @@
           "start": "21:00",
           "end": "21:00",
           "note": null,
-          "url": "https://greenwichhouse.org/event/ryan-flores/"
+          "url": "https://greenwichhouse.org/event/ryan-flores/",
+          "uid": "e_2f3c2f4f7ce6"
         },
         {
           "day": "Fri",
@@ -2945,7 +3166,8 @@
           "start": null,
           "end": null,
           "note": "Burnett restoration. Runs Sep 18–24.",
-          "url": "https://www.filmforum.org/now-playing"
+          "url": "https://www.filmforum.org/now-playing",
+          "uid": "e_bb69ee079c26"
         },
         {
           "day": "Fri",
@@ -2959,7 +3181,8 @@
           "start": "23:00",
           "end": "02:00",
           "note": null,
-          "url": "https://elmuseo.org/event/el-museo-after-hours-disco-and-desire/"
+          "url": "https://elmuseo.org/event/el-museo-after-hours-disco-and-desire/",
+          "uid": "e_14bf62de0939"
         },
         {
           "day": "Sat",
@@ -2973,7 +3196,8 @@
           "start": "09:00",
           "end": "17:00",
           "note": "Long day. Conflicts with Macro Cinematography same day.",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_55f64ac7306e"
         },
         {
           "day": "Sat",
@@ -2987,7 +3211,8 @@
           "start": "10:00",
           "end": "15:00",
           "note": "Extreme close-ups on 16mm. Conflicts with Bolex extended day.",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_d2e257420810"
         },
         {
           "day": "Sun",
@@ -3001,7 +3226,8 @@
           "start": "10:00",
           "end": "16:00",
           "note": "One-day intensive. 100 feet of film to take home. Strongest beginner entry into 16mm.",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_17b76b05a6df"
         },
         {
           "day": "Sun",
@@ -3015,7 +3241,8 @@
           "start": "17:00",
           "end": "21:00",
           "note": "Full-color titles on animation stand.",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_4369d442e0ce"
         },
         {
           "day": "Tue",
@@ -3029,7 +3256,8 @@
           "start": "19:00",
           "end": "21:30",
           "note": "Thread, operate, maintain and exhibit 16mm film.",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_57d3d7b2cfdc"
         },
         {
           "day": "Thu",
@@ -3043,7 +3271,8 @@
           "start": "19:00",
           "end": "21:30",
           "note": "Edit in real time on a four-plate Steenbeck. Foundational analog editing.",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_3dea8b3f6244"
         },
         {
           "day": "Thu",
@@ -3057,7 +3286,8 @@
           "start": "19:00",
           "end": null,
           "note": "Boisterous, sweaty, glamorous. Runs Sep 24–26.",
-          "url": "https://baryshnikovarts.org/"
+          "url": "https://baryshnikovarts.org/",
+          "uid": "e_405f54d74dd5"
         },
         {
           "day": "Thu",
@@ -3071,7 +3301,8 @@
           "start": "20:00",
           "end": null,
           "note": "Scholars of experimental notation discuss + members of Rise of the Novel perform.",
-          "url": "https://roulette.org/calendar"
+          "url": "https://roulette.org/calendar",
+          "uid": "e_dc2c7d688465"
         },
         {
           "day": "Thu",
@@ -3085,7 +3316,8 @@
           "start": "22:30",
           "end": "00:30",
           "note": null,
-          "url": "https://elmuseo.org/event/film-screening-september/"
+          "url": "https://elmuseo.org/event/film-screening-september/",
+          "uid": "e_71917796172f"
         },
         {
           "day": "Fri",
@@ -3099,7 +3331,8 @@
           "start": null,
           "end": null,
           "note": "Runs Sep 25 – Oct 1.",
-          "url": "https://www.filmforum.org/now-playing"
+          "url": "https://www.filmforum.org/now-playing",
+          "uid": "e_68c88fbf5042"
         },
         {
           "day": "Sat",
@@ -3113,7 +3346,8 @@
           "start": "10:00",
           "end": "16:00",
           "note": "Only 6 seats. Optically enlarge a single 16mm frame to medium format.",
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_e9fe9f531fe1"
         },
         {
           "day": "Sun",
@@ -3127,7 +3361,8 @@
           "start": "19:30",
           "end": "20:30",
           "note": "Runs through Oct 24 (24 dates)",
-          "url": "https://stannswarehouse.org/show/kramer-fauci/"
+          "url": "https://stannswarehouse.org/show/kramer-fauci/",
+          "uid": "e_6b8db39cf953"
         },
         {
           "day": "Sun",
@@ -3141,7 +3376,8 @@
           "start": "20:00",
           "end": null,
           "note": "World premiere of Zorn's piano concerto — four trusted interpreters.",
-          "url": "https://roulette.org/calendar"
+          "url": "https://roulette.org/calendar",
+          "uid": "e_a5b8c1a40fd7"
         },
         {
           "day": "Mon",
@@ -3155,7 +3391,8 @@
           "start": null,
           "end": null,
           "note": "Actor Kyle MacLachlan joins us for an evening of conversation about his highly anticipated memoir, Fictional Selves.",
-          "url": "https://www.symphonyspace.org/events/kyle-maclachlan-fictional-selves"
+          "url": "https://www.symphonyspace.org/events/kyle-maclachlan-fictional-selves",
+          "uid": "e_b44c8276caac"
         },
         {
           "day": "Tue",
@@ -3169,7 +3406,8 @@
           "start": "15:30",
           "end": null,
           "note": null,
-          "url": "https://www.symphonyspace.org/events/nt-live-les-liaisons-dangereuses-2"
+          "url": "https://www.symphonyspace.org/events/nt-live-les-liaisons-dangereuses-2",
+          "uid": "e_6b60d3c2784d"
         },
         {
           "day": "Tue",
@@ -3183,7 +3421,8 @@
           "start": "19:00",
           "end": "21:30",
           "note": null,
-          "url": "http://mononoawarefilm.com/community-workshops"
+          "url": "http://mononoawarefilm.com/community-workshops",
+          "uid": "e_9e36efc15edc"
         }
       ]
     },
@@ -3202,7 +3441,8 @@
           "start": "19:00",
           "end": null,
           "note": null,
-          "url": "https://www.wendyssubway.com/programs/events/writing-night"
+          "url": "https://www.wendyssubway.com/programs/events/writing-night",
+          "uid": "e_34e27fdec03c"
         },
         {
           "day": "Fri",
@@ -3216,7 +3456,8 @@
           "start": "19:00",
           "end": null,
           "note": null,
-          "url": "https://newyorklivearts.org/calendar/"
+          "url": "https://newyorklivearts.org/calendar/",
+          "uid": "e_99c9cf8d25aa"
         },
         {
           "day": "Fri",
@@ -3230,7 +3471,8 @@
           "start": null,
           "end": null,
           "note": "Runs Oct 2–3.",
-          "url": "https://www.abronsartscenter.org/performing-arts"
+          "url": "https://www.abronsartscenter.org/performing-arts",
+          "uid": "e_b3473319283f"
         },
         {
           "day": "Mon",
@@ -3244,7 +3486,8 @@
           "start": null,
           "end": null,
           "note": "Special performance by Laurie Anderson at BAC's annual fête. Rare.",
-          "url": "https://baryshnikovarts.org/"
+          "url": "https://baryshnikovarts.org/",
+          "uid": "e_d5d662e41fec"
         },
         {
           "day": "Wed",
@@ -3258,7 +3501,8 @@
           "start": null,
           "end": null,
           "note": "Runs Oct 7–11. Theater + music.",
-          "url": "https://www.bam.org/"
+          "url": "https://www.bam.org/",
+          "uid": "e_eb703e90d5c7"
         },
         {
           "day": "Thu",
@@ -3272,7 +3516,8 @@
           "start": "19:30",
           "end": null,
           "note": "Runs Oct 8–10.",
-          "url": "https://newyorklivearts.org/calendar/"
+          "url": "https://newyorklivearts.org/calendar/",
+          "uid": "e_c661350aebe5"
         },
         {
           "day": "Tue",
@@ -3286,7 +3531,8 @@
           "start": null,
           "end": null,
           "note": null,
-          "url": "https://www.bam.org/"
+          "url": "https://www.bam.org/",
+          "uid": "e_225010b30bd8"
         },
         {
           "day": "Tue",
@@ -3300,7 +3546,8 @@
           "start": null,
           "end": null,
           "note": "FREE outdoor theater. Runs Oct 13–15.",
-          "url": "https://www.bam.org/"
+          "url": "https://www.bam.org/",
+          "uid": "e_d3424dd29f31"
         },
         {
           "day": "Thu",
@@ -3314,7 +3561,8 @@
           "start": "19:00",
           "end": null,
           "note": null,
-          "url": "https://www.wendyssubway.com/programs/events/writing-night"
+          "url": "https://www.wendyssubway.com/programs/events/writing-night",
+          "uid": "e_f5d46a2b64e4"
         },
         {
           "day": "Thu",
@@ -3328,7 +3576,8 @@
           "start": "18:00",
           "end": "21:00",
           "note": null,
-          "url": "https://elmuseo.org/event/community-conversations-making-latinidad/"
+          "url": "https://elmuseo.org/event/community-conversations-making-latinidad/",
+          "uid": "e_53960a990023"
         }
       ]
     },
@@ -3347,7 +3596,8 @@
           "start": "12:00",
           "end": "16:00",
           "note": "Free community fall festival.",
-          "url": "https://www.abronsartscenter.org/performing-arts"
+          "url": "https://www.abronsartscenter.org/performing-arts",
+          "uid": "e_f03d843420f0"
         },
         {
           "day": "Sat",
@@ -3361,7 +3611,8 @@
           "start": "14:00",
           "end": "18:00",
           "note": null,
-          "url": "https://elmuseo.org/event/family-program-dia-de-muertos/"
+          "url": "https://elmuseo.org/event/family-program-dia-de-muertos/",
+          "uid": "e_97fe37c1bcd2"
         },
         {
           "day": "Sun",
@@ -3375,7 +3626,8 @@
           "start": "10:00",
           "end": "13:00",
           "note": "Experience the magic of wet plate collodion photography. This intensive workshop covers preparing plates, exposure, and development to create unique tintypes. All materials included.",
-          "url": "https://www.bushwickcommunitydarkroom.com/events/2026/10/18/intro-to-wet-plate-collodion-oct-18"
+          "url": "https://www.bushwickcommunitydarkroom.com/events/2026/10/18/intro-to-wet-plate-collodion-oct-18",
+          "uid": "e_9a31b6269f5c"
         },
         {
           "day": "Mon",
@@ -3389,7 +3641,8 @@
           "start": "19:00",
           "end": null,
           "note": null,
-          "url": "https://baryshnikovarts.org/"
+          "url": "https://baryshnikovarts.org/",
+          "uid": "e_6ce5dfc6e033"
         },
         {
           "day": "Wed",
@@ -3403,7 +3656,8 @@
           "start": null,
           "end": null,
           "note": "Runs Oct 21–25.",
-          "url": "https://www.bam.org/"
+          "url": "https://www.bam.org/",
+          "uid": "e_92b80f0e5ec9"
         },
         {
           "day": "Thu",
@@ -3417,7 +3671,8 @@
           "start": "19:00",
           "end": null,
           "note": "Runs Oct 22–24. Clown-adjacent physical performance.",
-          "url": "https://baryshnikovarts.org/"
+          "url": "https://baryshnikovarts.org/",
+          "uid": "e_bbec853e7968"
         },
         {
           "day": "Fri",
@@ -3431,7 +3686,8 @@
           "start": "19:30",
           "end": null,
           "note": "Runs Oct 23–24. International commission.",
-          "url": "https://newyorklivearts.org/calendar/"
+          "url": "https://newyorklivearts.org/calendar/",
+          "uid": "e_ab14e6ca4bab"
         },
         {
           "day": "Sat",
@@ -3445,7 +3701,8 @@
           "start": null,
           "end": null,
           "note": "Runs Oct 24–30.",
-          "url": "https://www.bam.org/"
+          "url": "https://www.bam.org/",
+          "uid": "e_b0badcc03027"
         },
         {
           "day": "Sun",
@@ -3459,7 +3716,8 @@
           "start": "13:00",
           "end": "18:00",
           "note": null,
-          "url": "https://creativemusic.org/event/rhythm-and-groove-workshop-with-marcus-gilmore-2026/"
+          "url": "https://creativemusic.org/event/rhythm-and-groove-workshop-with-marcus-gilmore-2026/",
+          "uid": "e_bd51f1df54b7"
         },
         {
           "day": "Thu",
@@ -3473,7 +3731,8 @@
           "start": "19:00",
           "end": null,
           "note": null,
-          "url": "https://www.wendyssubway.com/programs/events/writing-night"
+          "url": "https://www.wendyssubway.com/programs/events/writing-night",
+          "uid": "e_c6ecda87cbde"
         },
         {
           "day": "Thu",
@@ -3487,7 +3746,8 @@
           "start": "22:30",
           "end": "00:30",
           "note": null,
-          "url": "https://elmuseo.org/event/film-screening-october/"
+          "url": "https://elmuseo.org/event/film-screening-october/",
+          "uid": "e_74da1aeda7d3"
         }
       ]
     },
@@ -3506,7 +3766,8 @@
           "start": "18:00",
           "end": "20:00",
           "note": "Learn the basics of black and white darkroom printing. This workshop covers film development, contact printing, and enlarging. All materials included.",
-          "url": "https://www.bushwickcommunitydarkroom.com/events/2026/11/2/intro-to-darkroom-printing-bw-film-nov-2"
+          "url": "https://www.bushwickcommunitydarkroom.com/events/2026/11/2/intro-to-darkroom-printing-bw-film-nov-2",
+          "uid": "e_c4203b9a7be4"
         },
         {
           "day": "Tue",
@@ -3520,7 +3781,8 @@
           "start": "10:00",
           "end": "12:00",
           "note": null,
-          "url": "https://www.writingclasses.com/classes/nyc/memoir-writing-ii-in-person-fall-2026"
+          "url": "https://www.writingclasses.com/classes/nyc/memoir-writing-ii-in-person-fall-2026",
+          "uid": "e_e86e11da6d0d"
         },
         {
           "day": "Wed",
@@ -3534,7 +3796,8 @@
           "start": null,
           "end": null,
           "note": "Runs Nov 4–7.",
-          "url": "https://www.bam.org/"
+          "url": "https://www.bam.org/",
+          "uid": "e_6edc72770708"
         },
         {
           "day": "Thu",
@@ -3548,7 +3811,8 @@
           "start": null,
           "end": null,
           "note": "Long run Nov 5 – Dec 20.",
-          "url": "https://www.abronsartscenter.org/performing-arts"
+          "url": "https://www.abronsartscenter.org/performing-arts",
+          "uid": "e_d7002fc314ac"
         },
         {
           "day": "Fri",
@@ -3562,7 +3826,8 @@
           "start": "19:30",
           "end": null,
           "note": "Runs Nov 6–7, 11–14.",
-          "url": "https://newyorklivearts.org/calendar/"
+          "url": "https://newyorklivearts.org/calendar/",
+          "uid": "e_83edd40b4b5f"
         },
         {
           "day": "Sat",
@@ -3576,7 +3841,8 @@
           "start": "19:00",
           "end": null,
           "note": "5th annual M³ festival — innovative music.",
-          "url": "https://roulette.org/calendar"
+          "url": "https://roulette.org/calendar",
+          "uid": "e_86d1a1f3065f"
         },
         {
           "day": "Sat",
@@ -3590,7 +3856,8 @@
           "start": "15:00",
           "end": "21:00",
           "note": null,
-          "url": "https://elmuseo.org/event/for-educators-teaching-with-artist-books/"
+          "url": "https://elmuseo.org/event/for-educators-teaching-with-artist-books/",
+          "uid": "e_64fe8f602a64"
         },
         {
           "day": "Wed",
@@ -3604,7 +3871,8 @@
           "start": null,
           "end": null,
           "note": "Runs Nov 11–15.",
-          "url": "https://www.bam.org/"
+          "url": "https://www.bam.org/",
+          "uid": "e_35a055cc1e35"
         },
         {
           "day": "Thu",
@@ -3618,7 +3886,8 @@
           "start": "19:00",
           "end": null,
           "note": "Runs Nov 12–13.",
-          "url": "https://baryshnikovarts.org/"
+          "url": "https://baryshnikovarts.org/",
+          "uid": "e_6216d94ecce9"
         },
         {
           "day": "Thu",
@@ -3632,7 +3901,8 @@
           "start": "19:00",
           "end": null,
           "note": null,
-          "url": "https://www.wendyssubway.com/programs/events/writing-night"
+          "url": "https://www.wendyssubway.com/programs/events/writing-night",
+          "uid": "e_15bd0b9b7493"
         },
         {
           "day": "Thu",
@@ -3646,7 +3916,8 @@
           "start": "19:30",
           "end": null,
           "note": "Runs Nov 12–14. World premiere.",
-          "url": "https://www.abronsartscenter.org/performing-arts"
+          "url": "https://www.abronsartscenter.org/performing-arts",
+          "uid": "e_0a59a7726dff"
         }
       ]
     },
@@ -3665,7 +3936,8 @@
           "start": "20:00",
           "end": null,
           "note": "Percussionist/composer/synthesist, new commission.",
-          "url": "https://roulette.org/calendar"
+          "url": "https://roulette.org/calendar",
+          "uid": "e_af81d159380a"
         },
         {
           "day": "Wed",
@@ -3679,7 +3951,8 @@
           "start": null,
           "end": null,
           "note": "Long run Nov 18 – 29.",
-          "url": "https://www.bam.org/"
+          "url": "https://www.bam.org/",
+          "uid": "e_afa3cc26ca06"
         },
         {
           "day": "Thu",
@@ -3693,7 +3966,8 @@
           "start": "19:00",
           "end": null,
           "note": "Runs Nov 19–21. Merce Cunningham legacy work.",
-          "url": "https://baryshnikovarts.org/"
+          "url": "https://baryshnikovarts.org/",
+          "uid": "e_c1c364281440"
         },
         {
           "day": "Thu",
@@ -3707,7 +3981,8 @@
           "start": "20:00",
           "end": null,
           "note": "Choreographer working with movement + sound.",
-          "url": "https://roulette.org/calendar"
+          "url": "https://roulette.org/calendar",
+          "uid": "e_e313afb87fe9"
         },
         {
           "day": "Thu",
@@ -3721,7 +3996,8 @@
           "start": null,
           "end": null,
           "note": "Runs Nov 19–21. Landmark 50th-anniversary concert version.",
-          "url": "https://www.bam.org/"
+          "url": "https://www.bam.org/",
+          "uid": "e_cbec8785d20e"
         },
         {
           "day": "Thu",
@@ -3735,7 +4011,8 @@
           "start": "22:00",
           "end": "22:00",
           "note": null,
-          "url": "https://greenwichhouse.org/event/ghp-artists-exhibition-2026/"
+          "url": "https://greenwichhouse.org/event/ghp-artists-exhibition-2026/",
+          "uid": "e_02a28edad850"
         },
         {
           "day": "Fri",
@@ -3749,7 +4026,8 @@
           "start": "20:00",
           "end": null,
           "note": "Second night of the commission.",
-          "url": "https://roulette.org/calendar"
+          "url": "https://roulette.org/calendar",
+          "uid": "e_772f8a963c56"
         },
         {
           "day": "Tue",
@@ -3763,7 +4041,8 @@
           "start": null,
           "end": null,
           "note": "Nicole Taylor / John Tiffany. Runs Nov 24 – Jan 10, 2027.",
-          "url": "https://www.nytw.org/2026-27-season/"
+          "url": "https://www.nytw.org/2026-27-season/",
+          "uid": "e_132fd6891317"
         }
       ]
     },
@@ -3782,7 +4061,8 @@
           "start": "13:00",
           "end": "15:00",
           "note": null,
-          "url": "https://www.writingclasses.com/classes/nyc/novel-writing-iii-in-person-fall-2026"
+          "url": "https://www.writingclasses.com/classes/nyc/novel-writing-iii-in-person-fall-2026",
+          "uid": "e_cc1662fb026f"
         }
       ]
     }

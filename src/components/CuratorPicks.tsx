@@ -3,13 +3,15 @@ import eventsData from "../data/events.json";
 import type { CalEvent, EventsData } from "../types";
 import { isPast, parseEventDate, today } from "../lib/dates";
 import { formatCost } from "../lib/cost";
-import { pickId } from "../lib/picks";
+import { buildPickIndex, pickId } from "../lib/picks";
 import { CURATOR_HASH } from "../lib/curator";
 import { fetchByHash, type PickNotes } from "../lib/sync";
 
 const data = eventsData as EventsData;
 const ALL: CalEvent[] = data.weeks.flatMap((w) => w.events as CalEvent[]);
-const BY_ID = new Map(ALL.map((e) => [pickId(e), e]));
+// Indexed by every identity an event answers to, so a pick starred before a
+// rename or a dedupe merge still resolves here.
+const BY_ID = buildPickIndex(ALL);
 
 // The editorial lede: the events the CURATOR has starred (under the shared
 // curator passphrase, synced to Supabase — the same identity that powers the

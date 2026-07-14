@@ -114,7 +114,11 @@ export function buildICal(
     const month = MONTHS[parts[0] ?? ""];
     const day = Number(parts[1]);
     if (!month || !day) continue;
-    let baseUid = `${icsDate(month, day)}-${slug(e.event)}`;
+    // Prefer the event's permanent uid. The old scheme derived this from the
+    // title, so renaming an event changed its calendar identity and clients
+    // treated it as a different event. Falls back to the derived form only for
+    // events that predate uids.
+    let baseUid = e.uid ?? `${icsDate(month, day)}-${slug(e.event)}`;
     let uid = baseUid;
     let n = 2;
     while (seenUids.has(uid)) {

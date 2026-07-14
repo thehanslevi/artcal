@@ -39,6 +39,18 @@ function richness(e: CalEvent): number {
   return score;
 }
 
+/**
+ * A merged-away event takes its identity with it, so any pick saved against it
+ * would dangle. Hand that identity to the survivor instead.
+ */
+function inheritIdentity(keep: CalEvent, lose: CalEvent): void {
+  const ids = new Set(keep.aliases ?? []);
+  if (lose.uid) ids.add(lose.uid);
+  ids.add(`${lose.date}|${lose.event}`); // legacy key, for pre-uid picks
+  ids.delete(keep.uid);
+  keep.aliases = Array.from(ids);
+}
+
 function fillMissing(keep: CalEvent, lose: CalEvent): void {
   if ((!keep.cost || keep.cost.trim().toUpperCase() === "TBD") && lose.cost &&
       lose.cost.trim().toUpperCase() !== "TBD") {
@@ -68,6 +80,7 @@ for (let i = 0; i < refs.length; i++) {
     console.log(`  keep: ${keep.e.event}`);
     console.log(`  drop: ${lose.e.event}`);
     fillMissing(keep.e, lose.e);
+    inheritIdentity(keep.e, lose.e);
     removed.add(lose);
     merges += 1;
   }

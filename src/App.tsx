@@ -8,7 +8,13 @@ import type {
 } from "./types";
 import { isFree } from "./lib/cost";
 import { today } from "./lib/dates";
-import { loadPicks, pickId, savePicks } from "./lib/picks";
+import {
+  buildPickIndex,
+  canonicalizePicks,
+  loadPicks,
+  pickId,
+  savePicks,
+} from "./lib/picks";
 import {
   fetchByHash,
   fetchPicks,
@@ -40,6 +46,9 @@ type View = "making" | "witnessing";
 
 const data = eventsData as EventsData;
 const ALL_EVENTS: CalEvent[] = data.weeks.flatMap((w) => w.events as CalEvent[]);
+// Every identity an event answers to. Stored picks resolve through this, so a
+// star saved before a rename or a merge upgrades itself instead of dangling.
+const PICK_INDEX = buildPickIndex(ALL_EVENTS);
 
 const TODAY_FMT = new Intl.DateTimeFormat("en-US", {
   weekday: "short",
@@ -64,7 +73,9 @@ function App() {
   const [filter, setFilter] = useState<CategoryFilter>("all");
   const [picksOnly, setPicksOnly] = useState(false);
   const [freeOnly, setFreeOnly] = useState(false);
-  const [picks, setPicks] = useState<Set<string>>(() => loadPicks());
+  const [picks, setPicks] = useState<Set<string>>(() =>
+    canonicalizePicks(loadPicks(), PICK_INDEX),
+  );
   const [passphrase, setPassphrase] = useState<string | null>(() => loadPassphrase());
   const [syncStatus, setSyncStatus] = useState<SyncStatus>({ kind: "idle" });
   const [subscribeOpen, setSubscribeOpen] = useState(false);
@@ -135,9 +146,12 @@ function App() {
           // this browser's casual local stars into it — remote is authoritative.
           // Don't miss then shows ONLY events deliberately starred as curator.
           skipNextUpload.current = true;
-          setPicks(new Set(remote ?? []));
+          setPicks(canonicalizePicks(remote ?? [], PICK_INDEX));
         } else if (remote && remote.length > 0) {
-          const merged = new Set<string>([...loadPicks(), ...remote]);
+          const merged = canonicalizePicks(
+            [...loadPicks(), ...remote],
+            PICK_INDEX,
+          );
           skipNextUpload.current = true;
           setPicks(merged);
           await uploadPicks(passphrase, Array.from(merged));
@@ -222,7 +236,7 @@ function App() {
         // Curator: remote is authoritative; don't push local stars up (see the
         // passphrase sync effect above).
         skipNextUpload.current = true;
-        setPicks(new Set(remote ?? []));
+        setPicks(canonicalizePicks(remote ?? [], PICK_INDEX));
         setSyncStatus({ kind: "synced", at: new Date() });
         return;
       }

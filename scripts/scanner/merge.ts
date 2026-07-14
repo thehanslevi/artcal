@@ -1,5 +1,15 @@
+import { randomBytes } from "node:crypto";
 import type { CalEvent, EventsData, Week } from "../../src/types";
 import { findDuplicateOf } from "./dedupe";
+
+/**
+ * Opaque and permanent. Never derive a uid from date, title, or venue: the
+ * whole point is that it survives those changing. Assigned once, here, the
+ * first time an event enters the file.
+ */
+function newUid(): string {
+  return "e_" + randomBytes(6).toString("hex");
+}
 
 const MONTHS: Record<string, number> = {
   Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
@@ -99,9 +109,10 @@ export function mergeIntoEvents(
       }
     }
 
+    const withUid: CalEvent = event.uid ? event : { ...event, uid: newUid() };
     weeks[targetIndex] = {
       ...weeks[targetIndex],
-      events: [...weeks[targetIndex].events, event].sort(byDateAsc(year)),
+      events: [...weeks[targetIndex].events, withUid].sort(byDateAsc(year)),
     };
   }
 

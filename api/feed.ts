@@ -9,7 +9,7 @@ import { createHash } from "node:crypto";
 import eventsData from "../src/data/events.json";
 import { CURATOR_HASH } from "../src/lib/curator";
 import { buildICal } from "../src/lib/ical";
-import { pickId } from "../src/lib/picks";
+import { buildPickIndex } from "../src/lib/picks";
 import type { CalEvent, EventsData } from "../src/types";
 
 const SUPABASE_URL = "https://djyzqifuckuwdeeltnej.supabase.co";
@@ -70,7 +70,16 @@ export default async function handler(
 
   const data = eventsData as EventsData;
   const all: CalEvent[] = data.weeks.flatMap((w) => w.events as CalEvent[]);
-  const events = all.filter((e) => ids.has(pickId(e)));
+  // Resolve through the identity index, not the title: a pick saved before a
+  // rename or a dedupe merge must still land on its event rather than silently
+  // disappear from someone's subscribed calendar.
+  const index = buildPickIndex(all);
+  const picked = new Set<CalEvent>();
+  for (const id of ids) {
+    const e = index.get(id);
+    if (e) picked.add(e);
+  }
+  const events = all.filter((e) => picked.has(e));
 
   const ics = buildICal(events, {
     calendarName: curated
