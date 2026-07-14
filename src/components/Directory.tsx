@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import type { Category } from "../types";
-import { STALE_AFTER_DAYS, type Discipline, type Practice } from "../types/practice";
+import type { Discipline, Practice } from "../types/practice";
 import {
   PRACTICES,
   availableThisWeek,
@@ -12,7 +12,6 @@ import {
   isAffordable,
   isNearby,
   isStale,
-  oldestCheck,
 } from "../lib/practices";
 import { today } from "../lib/dates";
 
@@ -105,17 +104,6 @@ export function Directory() {
     <section className="directory" aria-label="Where to make things in NYC">
       <div className="directory-lede">
         <p className="directory-title">Where to make things</p>
-        <p className="directory-sub">
-          {PRACTICES.length} NYC spaces where you make the thing rather than
-          watch it. Most publish a recurring public schedule; a few are
-          contact-first collectives, flagged as such. Prices that aren’t here
-          are usually not published anywhere, which is also worth knowing.
-        </p>
-        <p className="directory-decay">
-          Nothing here is settled. Oldest check: {oldestCheck(now)} days ago.
-          Schedules and prices rot, so anything unchecked for{" "}
-          {STALE_AFTER_DAYS} days is marked suspect. Reconfirm before you go.
-        </p>
       </div>
 
       <div className="directory-filters">
