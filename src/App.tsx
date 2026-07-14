@@ -29,8 +29,15 @@ import { Spaces } from "./components/Spaces";
 import { SubscribePanel } from "./components/SubscribePanel";
 import { SubmitPanel } from "./components/SubmitPanel";
 import { CuratorPicks } from "./components/CuratorPicks";
+import { Directory } from "./components/Directory";
 import { SyncPanel, type SyncStatus } from "./components/SyncPanel";
 import { TabBar } from "./components/TabBar";
+
+// The two halves of "Making × Witnessing" have different native shapes, so they
+// get different data models rather than one `mode` field.
+//   Making     — standing practices (practices.json). Derived, never scraped.
+//   Witnessing — dated events (events.json). Scraped, because shows publish dates.
+type View = "making" | "witnessing";
 
 const data = eventsData as EventsData;
 const ALL_EVENTS: CalEvent[] = data.weeks.flatMap((w) => w.events as CalEvent[]);
@@ -46,6 +53,7 @@ const UPLOAD_DEBOUNCE_MS = 1500;
 function App() {
   // Default to Making — the calendar's reason for being is creative practice,
   // and the venue mix skews heavily toward witness events, so lead with making.
+  const [view, setView] = useState<View>("making");
   const [tab, setTab] = useState<TabMode>("practice");
   const [filter, setFilter] = useState<CategoryFilter>("all");
   const [picksOnly, setPicksOnly] = useState(false);
@@ -303,11 +311,34 @@ function App() {
       </header>
       <nav className="zone zone-band">
         <div className="zone-inner">
-          <TabBar active={tab} onChange={setTab} />
+          <div className="view-switch" role="tablist" aria-label="Making or Witnessing">
+            <button
+              type="button"
+              role="tab"
+              aria-selected={view === "making"}
+              className={`view-btn${view === "making" ? " active" : ""}`}
+              onClick={() => setView("making")}
+            >
+              Making
+            </button>
+            <span className="view-x">×</span>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={view === "witnessing"}
+              className={`view-btn${view === "witnessing" ? " active" : ""}`}
+              onClick={() => setView("witnessing")}
+            >
+              Witnessing
+            </button>
+          </div>
+          {view === "witnessing" ? <TabBar active={tab} onChange={setTab} /> : null}
         </div>
       </nav>
       <main className="zone zone-main">
         <div className="zone-inner">
+      {view === "making" ? <Directory /> : (
+      <>
       <CuratorPicks />
       <div className="filter-row">
         <FilterBar active={filter} onChange={setFilter} counts={counts} />
@@ -370,6 +401,8 @@ function App() {
         notes={notes}
         onSetNote={handleSetNote}
       />
+      </>
+      )}
         </div>
       </main>
       <footer className="zone zone-footer">
@@ -391,7 +424,8 @@ function App() {
               and I'll include it here and in the newsletter.
             </p>
           </div>
-          <Spaces filter={filter} tab={tab} />
+          {/* On Making, the Directory is the venue list; two would compete. */}
+          {view === "witnessing" ? <Spaces filter={filter} tab={tab} /> : null}
           <div className="footer-bar">
             <span>Art Cal (Making × Witnessing)</span>
             <SubmitPanel open={submitOpen} onOpenChange={setSubmitOpen} />

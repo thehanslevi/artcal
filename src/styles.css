@@ -1394,6 +1394,255 @@ a:hover {
   text-transform: none;
 }
 
+/* Making × Witnessing — top-level view switch */
+.view-switch {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.view-btn {
+  font-family: var(--font-display);
+  font-stretch: 75%;
+  font-size: 30px;
+  line-height: 1;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text-1);
+  opacity: 0.32;
+  transition: opacity 0.12s;
+}
+
+.view-btn:hover {
+  opacity: 0.6;
+}
+
+.view-btn.active {
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.view-x {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--text-1);
+  opacity: 0.32;
+}
+
+/* Directory — where to make things */
+.directory-lede {
+  margin: 0 0 20px;
+}
+
+.directory-title {
+  font-family: var(--font-display);
+  font-stretch: 75%;
+  font-size: 42px;
+  line-height: 0.95;
+  margin: 0 0 8px;
+  color: var(--text-1);
+}
+
+.directory-sub {
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 62ch;
+  color: var(--text-2);
+  margin: 0;
+}
+
+.directory-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.dir-chips,
+.dir-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.dir-chip,
+.dir-toggle {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text-2);
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.dir-chip span,
+.dir-toggle span {
+  opacity: 0.5;
+}
+
+.dir-chip:hover,
+.dir-toggle:hover {
+  border-color: var(--text-1);
+  color: var(--text-1);
+}
+
+.dir-chip.active,
+.dir-toggle.active {
+  background: var(--text-1);
+  border-color: var(--text-1);
+  color: var(--bg);
+}
+
+.dir-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dir-item {
+  display: flex;
+  gap: 14px;
+  padding: 12px 0 12px 13px;
+  border-bottom: 1px solid var(--border);
+  border-left: 3px solid transparent;
+}
+
+.dir-when {
+  flex: 0 0 148px;
+  padding-top: 2px;
+}
+
+.dir-sched {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+.dir-live {
+  display: inline-block;
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 1px 6px;
+  border: 1px solid var(--accent);
+  color: var(--text-1);
+  border-radius: 2px;
+}
+
+.dir-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.dir-name {
+  font-family: var(--font-display);
+  font-stretch: 75%;
+  font-size: 24px;
+  line-height: 1.05;
+  color: var(--text-1);
+}
+
+.dir-name a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.dir-name a:hover {
+  border-bottom-color: currentColor;
+}
+
+.dir-what {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--text-1);
+  margin-top: 3px;
+  max-width: 68ch;
+}
+
+.dir-meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-top: 5px;
+}
+
+.dir-cost {
+  color: var(--text-2);
+}
+
+.dir-access {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.dir-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 1px 6px;
+  border-radius: 2px;
+  color: var(--text-2);
+  border: 1px solid var(--border-strong);
+}
+
+.dir-tag-free,
+.dir-tag-sliding-scale,
+.dir-tag-scholarship,
+.dir-tag-work-study {
+  border-color: var(--accent);
+  color: var(--text-1);
+}
+
+.dir-caveat {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--text-2);
+  margin-top: 6px;
+  padding-left: 9px;
+  border-left: 2px solid var(--border-strong);
+  max-width: 68ch;
+}
+
+@media (max-width: 640px) {
+  .dir-item {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .dir-when {
+    flex: none;
+  }
+  .directory-title {
+    font-size: 32px;
+  }
+  .view-btn {
+    font-size: 24px;
+  }
+}
+
 .is-current-week .week-head {
   border-bottom-color: var(--accent);
 }
