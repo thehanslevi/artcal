@@ -114,7 +114,22 @@ for (const p of data.practices) {
   }
 }
 
-if (!isIso(data.lastVerified)) errors.push(`lastVerified must be YYYY-MM-DD, got ${data.lastVerified}`);
+if (!isIso(data.lastVerified)) {
+  errors.push(`lastVerified must be YYYY-MM-DD, got ${data.lastVerified}`);
+} else {
+  // Derived, never typed. It drifted to a month behind the newest row once
+  // already, which is exactly the kind of quiet lie this file must not tell.
+  const newest = data.practices
+    .map((p) => p.verifiedOn)
+    .filter(isIso)
+    .sort()
+    .pop();
+  if (newest && data.lastVerified !== newest) {
+    errors.push(
+      `lastVerified is ${data.lastVerified} but the newest verifiedOn is ${newest}`,
+    );
+  }
+}
 
 if (errors.length) {
   console.error(`practices.json: ${errors.length} problem(s)\n`);

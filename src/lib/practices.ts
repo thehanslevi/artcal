@@ -16,6 +16,8 @@ import type {
 const data = raw as unknown as PracticesData;
 
 export const PRACTICES: Practice[] = data.practices;
+/** Newest verifiedOn across the file. Derived in the data, enforced by lint. */
+export const PRACTICES_VERIFIED = data.lastVerified;
 export const BY_ID = new Map(PRACTICES.map((p) => [p.id, p]));
 
 const WEEKDAYS: Weekday[] = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];

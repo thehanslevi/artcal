@@ -36,6 +36,7 @@ import { SubscribePanel } from "./components/SubscribePanel";
 import { SubmitPanel } from "./components/SubmitPanel";
 import { CuratorPicks } from "./components/CuratorPicks";
 import { Directory } from "./components/Directory";
+import { PRACTICES_VERIFIED } from "./lib/practices";
 import { SyncPanel, type SyncStatus } from "./components/SyncPanel";
 
 // The two halves of "Making × Witnessing" have different native shapes, so they
@@ -286,8 +287,13 @@ function App() {
               <p className="app-subtitle">
                 Classes, collaborations, shows, studios
               </p>
+              {/* Report the dataset actually on screen. events.json is scanned
+                  weekly; practices.json is hand-checked. One label for both
+                  advertised the scan date over directory data the scan never
+                  touches. */}
               <p className="verified">
-                Today {todayLabel} · last verified {data.lastVerified}
+                Today {todayLabel} · last verified{" "}
+                {view === "making" ? PRACTICES_VERIFIED : data.lastVerified}
               </p>
             </div>
             <div className="header-actions">
@@ -439,7 +445,10 @@ function App() {
           <div className="footer-bar">
             <span>Art Cal (Making × Witnessing)</span>
             <SubmitPanel open={submitOpen} onOpenChange={setSubmitOpen} />
-            <span>Last verified {data.lastVerified}</span>
+            <span>
+              Last verified{" "}
+              {view === "making" ? PRACTICES_VERIFIED : data.lastVerified}
+            </span>
           </div>
         </div>
       </footer>
