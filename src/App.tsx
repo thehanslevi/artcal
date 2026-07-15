@@ -7,7 +7,6 @@ import type {
   TabMode,
 } from "./types";
 import { isFree } from "./lib/cost";
-import { today } from "./lib/dates";
 import {
   buildPickIndex,
   canonicalizePicks,
@@ -51,12 +50,6 @@ const ALL_EVENTS: CalEvent[] = data.weeks.flatMap((w) => w.events as CalEvent[])
 // star saved before a rename or a merge upgrades itself instead of dangling.
 const PICK_INDEX = buildPickIndex(ALL_EVENTS);
 
-const TODAY_FMT = new Intl.DateTimeFormat("en-US", {
-  weekday: "short",
-  month: "short",
-  day: "numeric",
-});
-
 const UPLOAD_DEBOUNCE_MS = 1500;
 
 function App() {
@@ -84,7 +77,6 @@ function App() {
   const [weekendOnly, setWeekendOnly] = useState(false);
   const [isCurator, setIsCurator] = useState(false);
   const [notes, setNotes] = useState<PickNotes>({});
-  const todayLabel = useMemo(() => TODAY_FMT.format(today()), []);
   const uploadTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const notesTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const skipNextUpload = useRef(false);
@@ -280,20 +272,11 @@ function App() {
         <div className="zone-inner">
           <div className="app-header-row">
             <div>
-              <h1 className="app-title">
-                Art Cal
-                <span className="app-title-tag">(Making × Witnessing)</span>
-              </h1>
+              {/* No "(Making × Witnessing)" tag here: the nav band below says
+                  it, and once is enough. */}
+              <h1 className="app-title">Art Cal</h1>
               <p className="app-subtitle">
                 Classes, collaborations, shows, studios
-              </p>
-              {/* Report the dataset actually on screen. events.json is scanned
-                  weekly; practices.json is hand-checked. One label for both
-                  advertised the scan date over directory data the scan never
-                  touches. */}
-              <p className="verified">
-                Today {todayLabel} · last verified{" "}
-                {view === "making" ? PRACTICES_VERIFIED : data.lastVerified}
               </p>
             </div>
             <div className="header-actions">

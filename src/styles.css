@@ -820,17 +820,6 @@ a:hover {
   color: inherit;
 }
 
-.app-title-tag {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text-2);
-  margin-top: 16px;
-}
-
 .app-subtitle {
   color: var(--text-1);
   font-size: 24px;
@@ -840,15 +829,6 @@ a:hover {
   font-stretch: 87.5%;
   font-weight: 400;
   max-width: 560px;
-}
-
-.verified {
-  color: var(--text-3);
-  font-size: 10px;
-  margin-top: 14px;
-  font-family: var(--font-mono);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
 /* How-it-works strip */
@@ -2353,11 +2333,6 @@ a:hover {
 
   .app-title {
     font-size: 68px;
-  }
-
-  .app-title-tag {
-    font-size: 10px;
-    margin-top: 10px;
   }
 
   .decisions-list {
