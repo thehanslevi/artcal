@@ -456,7 +456,9 @@ export const VENUES: Venue[] = [
     name: "Greenwich House Pottery",
     url: "https://greenwichhouse.org/pottery/classes/",
     category: "making",
-    defaultMode: "make",
+    // This feed is the Jane Hartsook Gallery's, not the pottery school's
+    // class list — everything on it is an exhibition or an artist talk.
+    defaultMode: "witness",
     whereTemplate: "Greenwich House Pottery, 16 Jones St, West Village",
     fetch: "playwright",
   },
@@ -863,7 +865,8 @@ export const VENUES: Venue[] = [
     name: "BRIC",
     url: "https://bricartsmedia.org/classes/",
     category: "tech",
-    defaultMode: "make",
+    // Celebrate Brooklyn! is a concert series.
+    defaultMode: "witness",
     whereTemplate: "BRIC, 647 Fulton St, Fort Greene",
     fetch: "playwright",
   },
@@ -879,7 +882,9 @@ export const VENUES: Venue[] = [
     name: "El Museo del Barrio",
     url: "https://elmuseo.org/events/",
     category: "making",
-    defaultMode: "make",
+    // An art museum: screenings, parties and book launches, with a
+    // few family making programs. Those carry their own signals.
+    defaultMode: "witness",
     whereTemplate: "El Museo del Barrio, 1230 Fifth Ave, East Harlem",
     fetch: "playwright",
   },
