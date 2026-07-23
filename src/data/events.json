@@ -1333,8 +1333,8 @@
         {
           "day": "Tue",
           "date": "Jul 14",
-          "event": "Mono No Aware: Producing Fundamentals (1 of 3)",
-          "where": "Downtown Brooklyn",
+          "event": "Producing Fundamentals (1 of 3)",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "TBD",
           "category": "film",
           "flag": null,
@@ -1344,9 +1344,12 @@
           "note": "3-session evening class, Tuesdays Jul 14–28.",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_aa27063f21f0",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Jul 14|Mono No Aware: Producing Fundamentals (1 of 3)"
+          ]
         },
         {
           "day": "Tue",
@@ -1845,8 +1848,8 @@
         {
           "day": "Sat",
           "date": "Jul 18",
-          "event": "Mono No Aware: Optical Printing Day 1",
-          "where": "Downtown Brooklyn",
+          "event": "Optical Printing Day 1",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "TBD",
           "category": "film",
           "flag": null,
@@ -1856,9 +1859,12 @@
           "note": "One seat left. Advanced territory — not a beginner workshop.",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_7a14c2717b6a",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Jul 18|Mono No Aware: Optical Printing Day 1"
+          ]
         },
         {
           "day": "Sat",
@@ -2082,8 +2088,8 @@
         {
           "day": "Sun",
           "date": "Jul 19",
-          "event": "Mono No Aware: Optical Printing Day 2 / Titles Workshop",
-          "where": "Downtown Brooklyn",
+          "event": "Optical Printing Day 2 / Titles Workshop",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "TBD",
           "category": "film",
           "flag": null,
@@ -2093,9 +2099,12 @@
           "note": null,
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_9ab3b429d4c4",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Jul 19|Mono No Aware: Optical Printing Day 2 / Titles Workshop"
+          ]
         },
         {
           "day": "Sun",
@@ -2339,8 +2348,8 @@
         {
           "day": "Tue",
           "date": "Jul 21",
-          "event": "Mono No Aware: Producing Fundamentals (2 of 3)",
-          "where": "Downtown Brooklyn",
+          "event": "Producing Fundamentals (2 of 3)",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "TBD",
           "category": "film",
           "flag": null,
@@ -2350,9 +2359,12 @@
           "note": "3-session evening class, Tuesdays Jul 14–28.",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_b31e93eae425",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Jul 21|Mono No Aware: Producing Fundamentals (2 of 3)"
+          ]
         },
         {
           "day": "Tue",
@@ -3217,8 +3229,8 @@
         {
           "day": "Tue",
           "date": "Jul 28",
-          "event": "Mono No Aware: Producing Fundamentals (3 of 3)",
-          "where": "Downtown Brooklyn",
+          "event": "Producing Fundamentals (3 of 3)",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "TBD",
           "category": "film",
           "flag": null,
@@ -3228,9 +3240,12 @@
           "note": "3-session evening class, Tuesdays Jul 14–28.",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_2fed0d2046fe",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Jul 28|Mono No Aware: Producing Fundamentals (3 of 3)"
+          ]
         },
         {
           "day": "Tue",
@@ -4428,7 +4443,7 @@
           "start": "11:00",
           "end": "15:00",
           "note": null,
-          "url": "http://https//www.rbpmw-efanyc.org/new-events-1/2026/2/19/intro-to-screenprint-august?utm_source=EFA+MAILING+LIST&utm_campaign=cd53510839-EMAIL_CAMPAIGN_2018_11_13_03_27_COPY_01&utm_medium=email&utm_term=0_bbdace2044-cd53510839-601232217&mc_cid=cd53510839&mc_eid=UNIQID",
+          "url": "https://www.rbpmw-efanyc.org/new-events-1/2026/2/19/intro-to-screenprint-august?utm_source=EFA+MAILING+LIST&utm_campaign=cd53510839-EMAIL_CAMPAIGN_2018_11_13_03_27_COPY_01&utm_medium=email&utm_term=0_bbdace2044-cd53510839-601232217&mc_cid=cd53510839&mc_eid=UNIQID",
           "uid": "e_4d01fa94bc34",
           "venue": "RBPMW",
           "neighborhood": null,
@@ -4482,7 +4497,7 @@
           "start": "11:00",
           "end": "15:00",
           "note": null,
-          "url": "http://https//www.rbpmw-efanyc.org/new-events-1/2026/2/19/intro-to-screenprint-august?utm_source=EFA+MAILING+LIST&utm_campaign=cd53510839-EMAIL_CAMPAIGN_2018_11_13_03_27_COPY_01&utm_medium=email&utm_term=0_bbdace2044-cd53510839-601232217&mc_cid=cd53510839&mc_eid=UNIQID",
+          "url": "https://www.rbpmw-efanyc.org/new-events-1/2026/2/19/intro-to-screenprint-august?utm_source=EFA+MAILING+LIST&utm_campaign=cd53510839-EMAIL_CAMPAIGN_2018_11_13_03_27_COPY_01&utm_medium=email&utm_term=0_bbdace2044-cd53510839-601232217&mc_cid=cd53510839&mc_eid=UNIQID",
           "uid": "e_57ed50b5ce33",
           "venue": "RBPMW",
           "neighborhood": null,
@@ -4816,8 +4831,8 @@
         {
           "day": "Tue",
           "date": "Sep 8",
-          "event": "Mono No Aware: Super 8mm on Ektachrome (S1 of 4)",
-          "where": "Downtown Brooklyn",
+          "event": "Super 8mm on Ektachrome (S1 of 4)",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "sliding scale",
           "category": "film",
           "flag": "priority",
@@ -4827,9 +4842,12 @@
           "note": "Multi-week beginner course. Learn the Super 8mm camera, then take it out for 10 days. Continues Sep 15, 29, Oct 6.",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_0f152d44147a",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Sep 8|Mono No Aware: Super 8mm on Ektachrome (S1 of 4)"
+          ]
         },
         {
           "day": "Tue",
@@ -4852,8 +4870,8 @@
         {
           "day": "Wed",
           "date": "Sep 9",
-          "event": "Mono No Aware: Time Lapse on 16MM",
-          "where": "Downtown Brooklyn",
+          "event": "Time Lapse on 16MM",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "TBD",
           "category": "film",
           "flag": null,
@@ -4863,9 +4881,12 @@
           "note": "Only 4 seats. Frame-by-frame time-lapse work + week-long rental after.",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_d34042c81722",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Sep 9|Mono No Aware: Time Lapse on 16MM"
+          ]
         },
         {
           "day": "Wed",
@@ -4888,8 +4909,8 @@
         {
           "day": "Wed",
           "date": "Sep 10",
-          "event": "Mono No Aware: Intro to 16MM + Bolex Rex5 (S1 of 5)",
-          "where": "Downtown Brooklyn",
+          "event": "Intro to 16MM + Bolex Rex5 (S1 of 5)",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "sliding scale",
           "category": "film",
           "flag": null,
@@ -4899,9 +4920,12 @@
           "note": "Full professional workflow beginning and ending on 16mm. Continues Sep 17 & Oct 1, 8, + Sat Sep 19 (9am–5pm).",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_ff136fc56814",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Sep 10|Mono No Aware: Intro to 16MM + Bolex Rex5 (S1 of 5)"
+          ]
         },
         {
           "day": "Thu",
@@ -4969,8 +4993,8 @@
         {
           "day": "Sat",
           "date": "Sep 12",
-          "event": "Mono No Aware: Test It Yourself — Super 8MM Camera Testing",
-          "where": "Downtown Brooklyn",
+          "event": "Test It Yourself — Super 8MM Camera Testing",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "$25+ sliding",
           "category": "film",
           "flag": null,
@@ -4980,15 +5004,18 @@
           "note": "Test + maintain your own Super 8 camera. Open to the public.",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_b324477badff",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Sep 12|Mono No Aware: Test It Yourself — Super 8MM Camera Testing"
+          ]
         },
         {
           "day": "Sat",
           "date": "Sep 12",
-          "event": "Mono No Aware: High Speed — Super Slow Motion on 16MM",
-          "where": "Downtown Brooklyn",
+          "event": "High Speed — Super Slow Motion on 16MM",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "TBD",
           "category": "film",
           "flag": null,
@@ -4998,9 +5025,12 @@
           "note": "Only 4 seats. Advanced high-speed camera work.",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_55cb51d0332c",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Sep 12|Mono No Aware: High Speed — Super Slow Motion on 16MM"
+          ]
         },
         {
           "day": "Sat",
@@ -5067,8 +5097,8 @@
         {
           "day": "Tue",
           "date": "Sep 15",
-          "event": "Mono No Aware: Super 8mm on Ektachrome (S2 of 4)",
-          "where": "Downtown Brooklyn",
+          "event": "Super 8mm on Ektachrome (S2 of 4)",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "sliding scale",
           "category": "film",
           "flag": null,
@@ -5078,9 +5108,12 @@
           "note": null,
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_9e082cd75da3",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Sep 15|Mono No Aware: Super 8mm on Ektachrome (S2 of 4)"
+          ]
         },
         {
           "day": "Wed",
@@ -5145,8 +5178,8 @@
         {
           "day": "Wed",
           "date": "Sep 17",
-          "event": "Mono No Aware: Intro to 16MM + Bolex Rex5 (S2 of 5)",
-          "where": "Downtown Brooklyn",
+          "event": "Intro to 16MM + Bolex Rex5 (S2 of 5)",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "sliding scale",
           "category": "film",
           "flag": null,
@@ -5156,9 +5189,12 @@
           "note": null,
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_ffba7dc4c61a",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Sep 17|Mono No Aware: Intro to 16MM + Bolex Rex5 (S2 of 5)"
+          ]
         },
         {
           "day": "Thu",
@@ -5283,8 +5319,8 @@
         {
           "day": "Sat",
           "date": "Sep 19",
-          "event": "Mono No Aware: Bolex Rex5 (extended day, S3 of 5)",
-          "where": "Downtown Brooklyn",
+          "event": "Bolex Rex5 (extended day, S3 of 5)",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "sliding scale",
           "category": "film",
           "flag": null,
@@ -5294,15 +5330,18 @@
           "note": "Long day. Conflicts with Macro Cinematography same day.",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_4403a1ee6009",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Sep 19|Mono No Aware: Bolex Rex5 (extended day, S3 of 5)"
+          ]
         },
         {
           "day": "Sat",
           "date": "Sep 19",
-          "event": "Mono No Aware: Intro to 16MM Macro Cinematography",
-          "where": "Downtown Brooklyn",
+          "event": "Intro to 16MM Macro Cinematography",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "TBD",
           "category": "film",
           "flag": null,
@@ -5312,9 +5351,12 @@
           "note": "Extreme close-ups on 16mm. Conflicts with Bolex extended day.",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_8028e971974c",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Sep 19|Mono No Aware: Intro to 16MM Macro Cinematography"
+          ]
         },
         {
           "day": "Sat",
@@ -5337,8 +5379,8 @@
         {
           "day": "Sun",
           "date": "Sep 20",
-          "event": "Mono No Aware: Intro to 16MM on 3383 Color Positive Print Stock",
-          "where": "Downtown Brooklyn",
+          "event": "Intro to 16MM on 3383 Color Positive Print Stock",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "TBD",
           "category": "film",
           "flag": "priority",
@@ -5348,15 +5390,18 @@
           "note": "One-day intensive. 100 feet of film to take home. Strongest beginner entry into 16mm.",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_ba3b3a9e641c",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Sep 20|Mono No Aware: Intro to 16MM on 3383 Color Positive Print Stock"
+          ]
         },
         {
           "day": "Sun",
           "date": "Sep 20",
-          "event": "Mono No Aware: Motion Picture Color Titles on 16MM",
-          "where": "Downtown Brooklyn",
+          "event": "Motion Picture Color Titles on 16MM",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "sliding scale",
           "category": "film",
           "flag": null,
@@ -5366,15 +5411,18 @@
           "note": "Full-color titles on animation stand.",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_2d58600741e2",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Sep 20|Mono No Aware: Motion Picture Color Titles on 16MM"
+          ]
         },
         {
           "day": "Tue",
           "date": "Sep 22",
-          "event": "Mono No Aware: 16MM Projection Basics (EIKI SSL-O)",
-          "where": "Downtown Brooklyn",
+          "event": "16MM Projection Basics (EIKI SSL-O)",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "TBD",
           "category": "film",
           "flag": null,
@@ -5384,9 +5432,12 @@
           "note": "Thread, operate, maintain and exhibit 16mm film.",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_2784a9d1c4e5",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Sep 22|Mono No Aware: 16MM Projection Basics (EIKI SSL-O)"
+          ]
         },
         {
           "day": "Wed",
@@ -5409,8 +5460,8 @@
         {
           "day": "Thu",
           "date": "Sep 24",
-          "event": "Mono No Aware: Steenbeck Flatbed Editing + Ciro Splicer",
-          "where": "Downtown Brooklyn",
+          "event": "Steenbeck Flatbed Editing + Ciro Splicer",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "TBD",
           "category": "film",
           "flag": null,
@@ -5420,9 +5471,12 @@
           "note": "Edit in real time on a four-plate Steenbeck. Foundational analog editing.",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_3bf3719bb629",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Sep 24|Mono No Aware: Steenbeck Flatbed Editing + Ciro Splicer"
+          ]
         },
         {
           "day": "Thu",
@@ -5508,8 +5562,8 @@
         {
           "day": "Sat",
           "date": "Sep 26",
-          "event": "Mono No Aware: Blow Ups — 16MM to 120 Medium Format",
-          "where": "Downtown Brooklyn",
+          "event": "Blow Ups — 16MM to 120 Medium Format",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "TBD",
           "category": "film",
           "flag": null,
@@ -5519,9 +5573,12 @@
           "note": "Only 6 seats. Optically enlarge a single 16mm frame to medium format.",
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_002e5f342b76",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Sep 26|Mono No Aware: Blow Ups — 16MM to 120 Medium Format"
+          ]
         },
         {
           "day": "Sun",
@@ -5601,8 +5658,8 @@
         {
           "day": "Tue",
           "date": "Sep 29",
-          "event": "Mono No Aware: Super 8mm on Ektachrome (S3 of 4)",
-          "where": "Downtown Brooklyn",
+          "event": "Super 8mm on Ektachrome (S3 of 4)",
+          "where": "Mono No Aware, Downtown Brooklyn",
           "cost": "sliding scale",
           "category": "film",
           "flag": null,
@@ -5612,9 +5669,12 @@
           "note": null,
           "url": "http://mononoawarefilm.com/community-workshops",
           "uid": "e_a662101506e8",
-          "venue": "Downtown Brooklyn",
-          "neighborhood": null,
-          "address": null
+          "venue": "Mono No Aware",
+          "neighborhood": "Downtown Brooklyn",
+          "address": null,
+          "aliases": [
+            "Sep 29|Mono No Aware: Super 8mm on Ektachrome (S3 of 4)"
+          ]
         },
         {
           "day": "Tue",

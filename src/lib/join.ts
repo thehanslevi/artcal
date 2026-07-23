@@ -2,6 +2,7 @@ import eventsData from "../data/events.json";
 import type { CalEvent, EventsData } from "../types";
 import type { Practice } from "../types/practice";
 import { isPast, parseEventDate } from "./dates";
+import { hostOf, isAggregator } from "./host";
 
 const ALL: CalEvent[] = (eventsData as EventsData).weeks.flatMap(
   (w) => w.events as CalEvent[],
@@ -15,17 +16,28 @@ const ALL: CalEvent[] = (eventsData as EventsData).weeks.flatMap(
  * describe the same venues at different resolutions, so a Practice row can
  * borrow its venue's next real date instead of saying "check site".
  *
+ * Matching is by URL host first (see lib/host) and only falls back to names,
+ * because the two datasets were built independently and rarely agree on what a
+ * place is called. Name matching alone missed RBPMW's 22 workshops entirely.
+ *
  * Only make-mode events count. Pioneer Works runs concerts as well as open
  * studios, and a making directory should not advertise False Harmonics as your
  * next session there.
  */
 function matchesVenue(p: Practice, e: CalEvent): boolean {
+  const ph = hostOf(p.url);
+  const eh = hostOf(e.url);
+  // A shared host is proof. A shared aggregator (eventbrite) is not, so those
+  // fall through to the name test rather than matching everything.
+  if (ph && eh && !isAggregator(eh) && !isAggregator(ph)) return ph === eh;
+
   const name = p.name.toLowerCase();
-  const title = e.event.toLowerCase();
+  const venue = (e.venue ?? "").toLowerCase().trim();
+  if (!venue) return false;
   // Short names are ambiguous inside a free-text venue string ("JACK" would
-  // catch "Jack's Bar"), so they must lead the title with a colon.
-  if (name.length <= 5) return title.startsWith(name + ":");
-  return title.startsWith(name) || e.where.toLowerCase().includes(name);
+  // catch "Jack's Bar"), so they must equal the parsed venue outright.
+  if (name.length <= 5) return venue === name;
+  return venue.includes(name) || name.includes(venue);
 }
 
 /** Upcoming dated making sessions at this venue, soonest first. */
