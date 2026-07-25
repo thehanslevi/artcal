@@ -1,5 +1,5 @@
 {
-  "lastVerified": "2026-07-14",
+  "lastVerified": "2026-07-25",
   "practices": [
     {
       "id": "artshack",
@@ -1828,6 +1828,106 @@
       ],
       "verifiedOn": "2026-07-06",
       "caveat": "90 minutes from Crown Heights. Listed for completeness, not as a realistic option."
+    },
+    {
+      "id": "mugi-pottery",
+      "name": "Mugi Pottery",
+      "what": "Ceramics studio on the Upper West Side: wheel and handbuilding classes, studio space, member art shows.",
+      "disciplines": [
+        "ceramics"
+      ],
+      "neighborhood": "Upper West Side",
+      "borough": "manhattan",
+      "travelMin": 45,
+      "url": "https://mugipottery.com",
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Classes and studio space; check site for the term calendar."
+      },
+      "access": [
+        "enroll-ahead"
+      ],
+      "verifiedOn": "2026-07-25",
+      "caveat": "Scaffolded 2026-07-25 from the studio site; cost, schedule, and access need confirming."
+    },
+    {
+      "id": "myrtles-clayhouse",
+      "name": "Myrtle’s Clayhouse",
+      "what": "Ridgewood ceramics studio: monthly memberships, wheel throwing, handbuilding.",
+      "disciplines": [
+        "ceramics"
+      ],
+      "neighborhood": "Ridgewood",
+      "borough": "queens",
+      "travelMin": 25,
+      "url": "https://myrtlesclayhouse.com",
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "membership",
+        "note": "Monthly memberships; wheel and handbuilding."
+      },
+      "access": [
+        "membership"
+      ],
+      "verifiedOn": "2026-07-25",
+      "caveat": "Scaffolded 2026-07-25 from the studio site; cost, schedule, and access need confirming."
+    },
+    {
+      "id": "clayworks-on-columbia",
+      "name": "Clayworks on Columbia",
+      "what": "Not-for-profit clay studio and pottery school since 1994: classes, workshops, memberships.",
+      "disciplines": [
+        "ceramics"
+      ],
+      "neighborhood": "Columbia Waterfront",
+      "borough": "brooklyn",
+      "travelMin": 30,
+      "url": "https://clayworksoncolumbia.org",
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Classes, workshops, and memberships; check site."
+      },
+      "access": [
+        "membership"
+      ],
+      "verifiedOn": "2026-07-25",
+      "caveat": "Scaffolded 2026-07-25 from the studio site; cost, schedule, and access need confirming. Nonprofit — may offer scholarships."
+    },
+    {
+      "id": "potters-wheel-nyc",
+      "name": "The Potter’s Wheel",
+      "what": "Pottery teaching studio in Kew Gardens: wheel throwing classes.",
+      "disciplines": [
+        "ceramics"
+      ],
+      "neighborhood": "Kew Gardens",
+      "borough": "queens",
+      "travelMin": 45,
+      "url": "https://potterswheelny.com",
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Teaching studio; check site for class terms."
+      },
+      "access": [
+        "enroll-ahead"
+      ],
+      "verifiedOn": "2026-07-25",
+      "caveat": "Scaffolded 2026-07-25 from the studio site; cost, schedule, and access need confirming."
     }
   ]
 }
