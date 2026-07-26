@@ -1,7 +1,7 @@
 {
-  "ranAt": "2026-07-24T20:58:53.008Z",
-  "acceptedTotal": 96,
-  "rejectedTotal": 137,
+  "ranAt": "2026-07-26T13:11:01.154Z",
+  "acceptedTotal": 34,
+  "rejectedTotal": 168,
   "duplicatesSkipped": [],
   "perVenue": {
     "Symphony Space": {
@@ -10,23 +10,23 @@
       "source": "json-ld"
     },
     "UnionDocs": {
-      "accepted": 2,
+      "accepted": 0,
       "rejected": 3,
       "source": "ics"
     },
     "DADA": {
-      "accepted": 8,
-      "rejected": 2,
+      "accepted": 0,
+      "rejected": 8,
       "source": "json-ld"
     },
     "The Arts Center at Governors Island": {
       "accepted": 0,
-      "rejected": 7,
+      "rejected": 4,
       "source": "ics"
     },
     "Delight Factory": {
       "accepted": 0,
-      "rejected": 7,
+      "rejected": 5,
       "source": "json-ld"
     },
     "Greenwich House Pottery": {
@@ -40,23 +40,33 @@
       "source": "json-ld"
     },
     "Materials for the Arts": {
-      "accepted": 0,
+      "accepted": 1,
       "rejected": 1,
       "source": "json-ld"
     },
     "Brooklyn Shoe Space": {
-      "accepted": 19,
-      "rejected": 0,
+      "accepted": 0,
+      "rejected": 18,
       "source": "json-ld"
     },
     "Mostly Good Studios": {
-      "accepted": 6,
-      "rejected": 0,
+      "accepted": 0,
+      "rejected": 6,
       "source": "json-ld"
     },
     "Wonderville": {
-      "accepted": 9,
-      "rejected": 0,
+      "accepted": 5,
+      "rejected": 7,
+      "source": "json-ld"
+    },
+    "e-flux": {
+      "accepted": 0,
+      "rejected": 1,
+      "source": "json-ld"
+    },
+    "Cybernetics Library": {
+      "accepted": 0,
+      "rejected": 3,
       "source": "json-ld"
     },
     "Interference Archive": {
@@ -183,16 +193,6 @@
       "accepted": 0,
       "rejected": 0,
       "source": "none"
-    },
-    "e-flux": {
-      "accepted": 1,
-      "rejected": 0,
-      "source": "json-ld"
-    },
-    "Cybernetics Library": {
-      "accepted": 3,
-      "rejected": 0,
-      "source": "json-ld"
     },
     "Prime Produce": {
       "accepted": 0,
@@ -595,8 +595,8 @@
       "source": "none"
     },
     "_email": {
-      "accepted": 47,
-      "rejected": 95,
+      "accepted": 27,
+      "rejected": 90,
       "source": "llm"
     }
   }
