@@ -70,94 +70,10 @@
     "source": "json-ld"
   },
   {
-    "venue": "Symphony Space",
-    "event": "Selected Shorts: The Most of Nora Ephron, hosted by Meg Wolitzer",
-    "date": "Nov 18",
-    "reason": "duplicate of existing \"Selected Shorts: The Most of Nora Ephron, hosted by Meg Wolitzer\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "UnionDocs",
-    "event": "Summer Lab Pitch Bingo & Chill",
-    "date": "Jul 28",
-    "reason": "duplicate of existing \"Summer Lab Pitch Bingo & Chill\"",
-    "source": "ics"
-  },
-  {
-    "venue": "UnionDocs",
-    "event": "애국소녀 K- Family Affairs",
-    "date": "Aug 1",
-    "reason": "duplicate of existing \"애국소녀 K- Family Affairs\"",
-    "source": "ics"
-  },
-  {
     "venue": "UnionDocs",
     "event": "Wiseman's New York",
     "date": "Sep 2",
     "reason": "duplicate of existing \"Wiseman's New York\"",
-    "source": "ics"
-  },
-  {
-    "venue": "DADA",
-    "event": "Live Jazz Brunch for All Ages: Music Explorers (2 sets EVERY SUNDAY @ 10:30 & 11:30AM)",
-    "date": "Jul 26",
-    "reason": "duplicate of existing \"Live Jazz Brunch for All Ages: Music Explorers (2 sets EVERY SUNDAY @ 10:30 & 11:30AM)\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "DADA",
-    "event": "LATIN/JAZZ - George Kramarski Trio feat. Erika Toda (Guitar) & Chidiebere Joseph Emmanuel (Drums)",
-    "date": "Jul 26",
-    "reason": "duplicate of existing \"LATIN/JAZZ - George Kramarski Trio feat. Erika Toda (Guitar) & Chidiebere Joseph Emmanuel (Drums)\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "DADA",
-    "event": "The Most Hated Poets: Open Mic",
-    "date": "Jul 28",
-    "reason": "duplicate of existing \"The Most Hated Poets: Open Mic\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "DADA",
-    "event": "Jazz - Beck Levine, Benson, Rodeschin Trio",
-    "date": "Jul 29",
-    "reason": "duplicate of existing \"Jazz - Beck Levine, Benson, Rodeschin Trio\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "DADA",
-    "event": "STANDARD+IMPROV JAZZ - Smith / Atwal / Marcus Trio",
-    "date": "Jul 30",
-    "reason": "duplicate of existing \"STANDARD+IMPROV JAZZ - Smith / Atwal / Marcus Trio\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "DADA",
-    "event": "DJS - Andromeda.a & Willspliff",
-    "date": "Jul 31",
-    "reason": "duplicate of existing \"DJS - Andromeda.a & Willspliff\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "DADA",
-    "event": "Rap/Percussion - Jordan W. Carter & Ceddyjay",
-    "date": "Aug 1",
-    "reason": "duplicate of existing \"Rap/Percussion - Jordan W. Carter & Ceddyjay\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "DADA",
-    "event": "DADA x TEM present: Stephanie Babirak, Ski Team, Danny Ritz & the Regulars",
-    "date": "Aug 1",
-    "reason": "duplicate of existing \"x TEM present: Stephanie Babirak, Ski Team, Danny Ritz & the Regulars\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "The Arts Center at Governors Island",
-    "event": "Hybrid Animal Encyclopedia",
-    "date": "Aug 1",
-    "reason": "duplicate of existing \"Hybrid Animal Encyclopedia\"",
     "source": "ics"
   },
   {
@@ -182,25 +98,11 @@
     "source": "ics"
   },
   {
-    "venue": "Delight Factory",
-    "event": "Siren Circle",
-    "date": "Jul 28",
-    "reason": "duplicate of existing \"Siren Circle\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Delight Factory",
-    "event": "Circling Anniversary & Exhibition Closing Celebration",
-    "date": "Jul 31",
-    "reason": "duplicate of existing \"Circling Anniversary & Exhibition Closing Celebration\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Delight Factory",
-    "event": "Ego Free Jam Acoustic",
-    "date": "Aug 1",
-    "reason": "duplicate of existing \"Ego Free Jam Acoustic\"",
-    "source": "json-ld"
+    "venue": "The Arts Center at Governors Island",
+    "event": "Curriculum IV: Spin and Spin! Turn! Turn! Turn!",
+    "date": "Sep 10",
+    "reason": "duplicate of existing (0.60 similarity to \"Bill T. Jones — Curriculum IV: Spin and Spin! Turn! Turn! Turn!\")",
+    "source": "ics"
   },
   {
     "venue": "Delight Factory",
@@ -263,20 +165,6 @@
     "event": "GHP Artists Exhibition 2026",
     "date": "Nov 19",
     "reason": "duplicate of existing \"GHP Artists Exhibition 2026\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Flux Factory",
-    "event": "Opening • Itinerant Signal Institute (Rite of Spring)",
-    "date": "Aug 6",
-    "reason": "duplicate of existing \"Opening • Itinerant Signal Institute (Rite of Spring)\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Flux Factory",
-    "event": "Opening • 502 Bad Gateway: Error is Shadow",
-    "date": "Aug 6",
-    "reason": "duplicate of existing \"Opening • 502 Bad Gateway: Error is Shadow\"",
     "source": "json-ld"
   },
   {
@@ -428,13 +316,6 @@
   },
   {
     "venue": "Mostly Good Studios",
-    "event": "HANDBUILDING COURSE SUMMER SESSION WEEK 5",
-    "date": "Jul 30",
-    "reason": "duplicate of existing \"HANDBUILDING COURSE SUMMER SESSION WEEK 5\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Mostly Good Studios",
     "event": "HANDBUILDING COURSE SUMMER SESSION WEEK 6",
     "date": "Aug 6",
     "reason": "duplicate of existing \"HANDBUILDING COURSE SUMMER SESSION WEEK 6\"",
@@ -470,58 +351,16 @@
   },
   {
     "venue": "Wonderville",
-    "event": "Emo, Ska, Indie, Etc. - A Matinee Show with fruit dawg, Voluntary...",
-    "date": "Jul 26",
-    "reason": "duplicate of existing \"Emo, Ska, Indie, Etc. - A Matinee Show with fruit dawg, Voluntary...\"",
+    "event": "Dragon Dance",
+    "date": "Aug 2",
+    "reason": "duplicate of existing \"Dragon Dance\"",
     "source": "json-ld"
   },
   {
     "venue": "Wonderville",
-    "event": "A night of POWERFUL ROCK",
-    "date": "Jul 26",
-    "reason": "duplicate of existing \"A night of POWERFUL ROCK\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Wonderville",
-    "event": "Puppet Night at Wonderville!",
-    "date": "Jul 27",
-    "reason": "duplicate of existing \"Puppet Night at Wonderville!\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Wonderville",
-    "event": "the FORT90 BROADCAST SYSTEM presents: FORT90 TV",
-    "date": "Jul 27",
-    "reason": "duplicate of existing \"the FORT90 BROADCAST SYSTEM presents: FORT90 TV\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Wonderville",
-    "event": "Wonderville's Last Tuesday of the month PLAYTEST",
-    "date": "Jul 28",
-    "reason": "duplicate of existing \"Wonderville's Last Tuesday of the month PLAYTEST\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Wonderville",
-    "event": "Killer Queen Open Hive Night",
-    "date": "Jul 29",
-    "reason": "duplicate of existing \"Killer Queen Open Hive Night\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Wonderville",
-    "event": "Merrick Henry",
-    "date": "Jul 30",
-    "reason": "duplicate of existing \"Merrick Henry\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "e-flux",
-    "event": "Leap of Faith. IV. Afterlife in Images",
-    "date": "Jul 28",
-    "reason": "duplicate of existing \"Leap of Faith. IV. Afterlife in Images\"",
+    "event": "LIVE AT CORLEONES!",
+    "date": "Aug 2",
+    "reason": "duplicate of existing \"LIVE AT CORLEONES!\"",
     "source": "json-ld"
   },
   {
@@ -546,633 +385,675 @@
     "source": "json-ld"
   },
   {
-    "venue": "info@sewright.com, events@mailer.e-flux.com, hello@craftsmanave.com",
-    "event": "The Absolute Demand",
-    "date": "Jul 14",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Summer Writing Spiral with Sara Jane Stoner",
-    "date": "Jul 30",
-    "reason": "duplicate of existing \"Summer Writing Spiral with Sara Jane Stoner\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Summer Writing Spiral with Mel Elberg",
-    "date": "Aug 11",
-    "reason": "duplicate of existing \"Summer Writing Spiral with Mel Elberg\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Intro to Screenprint",
-    "date": "Jul 18",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Intro to Screenprint",
-    "date": "Jul 19",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Photolitho: Digital Films",
-    "date": "Jul 23",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Photolitho: Digital Films",
-    "date": "Jul 30",
-    "reason": "duplicate of existing \"Photolitho: Digital Films\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Photolitho: Digital Films",
-    "date": "Aug 6",
-    "reason": "duplicate of existing \"Photolitho: Digital Films\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Discover Your Collagraph",
-    "date": "Jul 25",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Discover Your Collagraph",
-    "date": "Jul 26",
-    "reason": "duplicate of existing \"Discover Your Collagraph\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "RISO",
-    "date": "Aug 1",
-    "reason": "duplicate of existing \"RISO\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "RISO",
-    "date": "Aug 2",
-    "reason": "duplicate of existing \"RISO\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Collagraph Workshop: Exploring Texture & Translation",
-    "date": "Aug 5",
-    "reason": "duplicate of existing \"Collagraph Workshop: Exploring Texture & Translation\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Collagraph Workshop: Exploring Texture & Translation",
-    "date": "Aug 12",
-    "reason": "duplicate of existing \"Collagraph Workshop: Exploring Texture & Translation\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "How to Emboss Paper with & without a Press",
-    "date": "Aug 8",
-    "reason": "duplicate of existing \"How to Emboss Paper with & without a Press\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "How to Emboss Paper with & without a Press",
-    "date": "Aug 9",
-    "reason": "duplicate of existing \"How to Emboss Paper with & without a Press\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Oil Paint Stick Monotype",
-    "date": "Aug 14",
-    "reason": "duplicate of existing \"Oil Paint Stick Monotype\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Oil Paint Stick Monotype",
-    "date": "Aug 21",
-    "reason": "duplicate of existing \"Oil Paint Stick Monotype\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Stone Lithography",
-    "date": "Aug 15",
-    "reason": "duplicate of existing \"Stone Lithography\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Textile Screenprinting",
-    "date": "Aug 29",
-    "reason": "duplicate of existing \"Textile Screenprinting\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, belladonnaseries@116607770.mailchimpapp.com, rbpmw@efanyc.org",
-    "event": "Textile Screenprinting",
-    "date": "Aug 30",
-    "reason": "duplicate of existing \"Textile Screenprinting\"",
-    "source": "email"
-  },
-  {
-    "venue": "workshops@brooklynpoets.org, akia@bronxriverart.ccsend.com, education@noguchi.org",
-    "event": "Magenta Lounge Opening Reception – Persona / Non Persona",
-    "date": "Jul 30",
-    "reason": "invalid category: art",
-    "source": "email"
-  },
-  {
-    "venue": "workshops@brooklynpoets.org, akia@bronxriverart.ccsend.com, education@noguchi.org",
-    "event": "Magenta Lounge Artist Talk – Persona / Non Persona",
-    "date": "Aug 13",
-    "reason": "invalid category: art",
-    "source": "email"
-  },
-  {
-    "venue": "workshops@brooklynpoets.org, akia@bronxriverart.ccsend.com, education@noguchi.org",
-    "event": "Socrates x Noguchi: Field Guide – Mixed Media Workshop",
-    "date": "Jul 18",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "workshops@brooklynpoets.org, akia@bronxriverart.ccsend.com, education@noguchi.org",
-    "event": "Socrates x Noguchi: Field Guide – Natural Materials Workshop",
-    "date": "Sep 12",
-    "reason": "duplicate of existing \"Socrates x Noguchi: Field Guide – Natural Materials Workshop\"",
-    "source": "email"
-  },
-  {
-    "venue": "workshops@brooklynpoets.org, akia@bronxriverart.ccsend.com, education@noguchi.org",
-    "event": "Queens Public Library – Art-making for Families",
-    "date": "Jul 20",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "workshops@brooklynpoets.org, akia@bronxriverart.ccsend.com, education@noguchi.org",
-    "event": "Queens Public Library – Art-making for Families",
-    "date": "Jul 27",
-    "reason": "date not literally in source HTML",
-    "source": "email"
-  },
-  {
-    "venue": "workshops@brooklynpoets.org, akia@bronxriverart.ccsend.com, education@noguchi.org",
-    "event": "Queens Public Library – Art-making for Families",
-    "date": "Aug 10",
-    "reason": "date not literally in source HTML",
-    "source": "email"
-  },
-  {
-    "venue": "workshops@brooklynpoets.org, akia@bronxriverart.ccsend.com, education@noguchi.org",
-    "event": "Queens Public Library – Art for Tots (Woodside)",
-    "date": "Jul 22",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "gala@theshed.org, tq@technoqueers.com, media@studiomuseum.org",
-    "event": "Uptown Fridays x On the Hush Songs",
-    "date": "Jul 31",
-    "reason": "duplicate of existing \"Uptown Fridays x On the Hush Songs\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@cccadi.org, events-bronxdoc.org@shared1.ccsend.com, 92NYupdates@92yemail.org",
-    "event": "Afrolatin Talks with Susana Baca",
-    "date": "Jul 23",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "info@cccadi.org, events-bronxdoc.org@shared1.ccsend.com, 92NYupdates@92yemail.org",
-    "event": "Afrolatin Talks with Susana Baca",
-    "date": "Jul 24",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "info@cccadi.org, events-bronxdoc.org@shared1.ccsend.com, 92NYupdates@92yemail.org",
-    "event": "Soul Summit Concert",
-    "date": "Jul 24",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "info@cccadi.org, events-bronxdoc.org@shared1.ccsend.com, 92NYupdates@92yemail.org",
-    "event": "Aaron Diehl & John Patitucci Concert",
+    "venue": "92NYupdates@92yemail.org, bkp@brooklynpoets.org, makesomething@8054302.brevosend.com",
+    "event": "Terence Blanchard and Ravi Coltrane – Miles Davis & John Coltrane Centennial celebration",
     "date": "Jul 21",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "info@cccadi.org, events-bronxdoc.org@shared1.ccsend.com, 92NYupdates@92yemail.org",
-    "event": "Terence Blanchard & Ravi Coltrane Concert",
+    "venue": "92NYupdates@92yemail.org, bkp@brooklynpoets.org, makesomething@8054302.brevosend.com",
+    "event": "Ron Carter & stellar quartet Foursight",
     "date": "Jul 23",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "info@cccadi.org, events-bronxdoc.org@shared1.ccsend.com, 92NYupdates@92yemail.org",
-    "event": "Ron Carter Quartet Concert",
-    "date": "Jul 25",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "info@cccadi.org, events-bronxdoc.org@shared1.ccsend.com, 92NYupdates@92yemail.org",
-    "event": "Kate Kortum & Aaron Diehl Trio Concert",
+    "venue": "92NYupdates@92yemail.org, bkp@brooklynpoets.org, makesomething@8054302.brevosend.com",
+    "event": "Kate Kortum and the Aaron Diehl Trio (livestream)",
     "date": "Jul 22",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "info@cccadi.org, events-bronxdoc.org@shared1.ccsend.com, 92NYupdates@92yemail.org",
-    "event": "The Essence of Us: A Cuban Story",
-    "date": "Sep 19",
-    "reason": "duplicate of existing \"The Essence of Us: A Cuban Story – Opening Night\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@cccadi.org, events-bronxdoc.org@shared1.ccsend.com, 92NYupdates@92yemail.org",
-    "event": "Jim Curtis & Jennifer Aniston: The Book of Possibility",
+    "venue": "92NYupdates@92yemail.org, bkp@brooklynpoets.org, makesomething@8054302.brevosend.com",
+    "event": "Jim Curtis & Jennifer Aniston: The Book of Possibility (book talk)",
     "date": "Sep 2",
     "reason": "duplicate of existing \"Jim Curtis & Jennifer Aniston – The Book of Possibility\"",
     "source": "email"
   },
   {
-    "venue": "bkp@brooklynpoets.org, makesomething@8054302.brevosend.com, lucia@bushwickcommunitydarkroom.com",
-    "event": "Free Community Group: Writing Group",
-    "date": "Jul 22",
+    "venue": "lucia@bushwickcommunitydarkroom.com, info@sewright.com, events@mailer.e-flux.com",
+    "event": "The Unfinished Passage (Leap of Faith III) – Film Screening",
+    "date": "Jul 21",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "bkp@brooklynpoets.org, makesomething@8054302.brevosend.com, lucia@bushwickcommunitydarkroom.com",
-    "event": "Brooklyn Poets Reading Series ft. poets Jason B Crawford, Starr Davis & Kyle Carrero Lopez",
-    "date": "Jul 22",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "bkp@brooklynpoets.org, makesomething@8054302.brevosend.com, lucia@bushwickcommunitydarkroom.com",
-    "event": "Free Community Group: Writing Group",
-    "date": "Jul 23",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "bkp@brooklynpoets.org, makesomething@8054302.brevosend.com, lucia@bushwickcommunitydarkroom.com",
-    "event": "Poetry Aloud",
-    "date": "Jul 23",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "info@theshed.org, 92yenresupdates@92yemail.org, bkp@brooklynpoets.org",
+    "venue": "lucia@bushwickcommunitydarkroom.com, info@theshed.org, 92yenresupdates@92yemail.org",
     "event": "Steve McQueen – End Credits",
     "date": "Sep 25",
     "reason": "duplicate of existing \"Steve McQueen – End Credits (live performance)\"",
     "source": "email"
   },
   {
-    "venue": "info@theshed.org, 92yenresupdates@92yemail.org, bkp@brooklynpoets.org",
+    "venue": "lucia@bushwickcommunitydarkroom.com, info@theshed.org, 92yenresupdates@92yemail.org",
     "event": "Steve McQueen – End Credits",
     "date": "Sep 26",
     "reason": "date not literally in source HTML",
     "source": "email"
   },
   {
-    "venue": "info@theshed.org, 92yenresupdates@92yemail.org, bkp@brooklynpoets.org",
+    "venue": "lucia@bushwickcommunitydarkroom.com, info@theshed.org, 92yenresupdates@92yemail.org",
     "event": "Jaclyn Smith – Beyond Charlie’s Angels",
     "date": "Sep 9",
     "reason": "duplicate of existing \"Jaclyn Smith Beyond Charlie’s Angels (talk & streaming)\"",
     "source": "email"
   },
   {
-    "venue": "info@theshed.org, 92yenresupdates@92yemail.org, bkp@brooklynpoets.org",
-    "event": "Craft Lab: Demystifying the Volta & Writing Towards Transformation with Omotara James",
+    "venue": "bkp@brooklynpoets.org, noreply@dancepractice.nyc, Devise.exp@224506502.mailchimpapp.com",
+    "event": "Demystifying the Volta & Writing Towards Transformation with Omotara James",
     "date": "Aug 2",
     "reason": "duplicate of existing \"Demystifying the Volta & Writing Towards Transformation with Omotara James (Craft Lab)\"",
     "source": "email"
   },
   {
-    "venue": "info@theshed.org, 92yenresupdates@92yemail.org, bkp@brooklynpoets.org",
-    "event": "Brooklyn Poets Reading Series",
-    "date": "Jul 24",
-    "reason": "date is in the past",
+    "venue": "bkp@brooklynpoets.org, noreply@dancepractice.nyc, Devise.exp@224506502.mailchimpapp.com",
+    "event": "MADRE GUÍA + DJ ARIB",
+    "date": "Aug 5",
+    "reason": "duplicate of existing \"MADRE GUÍA + DJ ARIB (dance & DJ set)\"",
     "source": "email"
   },
   {
-    "venue": "noreply@dancepractice.nyc, Devise.exp@224506502.mailchimpapp.com, genspace@ghost.io",
+    "venue": "bkp@brooklynpoets.org, noreply@dancepractice.nyc, Devise.exp@224506502.mailchimpapp.com",
+    "event": "CONTACT IMPROV JAM – W NINA JAKOBSON",
+    "date": "Aug 9",
+    "reason": "duplicate of existing \"CONTACT IMPROV JAM w Nina Jakobson (improv dance jam)\"",
+    "source": "email"
+  },
+  {
+    "venue": "bkp@brooklynpoets.org, noreply@dancepractice.nyc, Devise.exp@224506502.mailchimpapp.com",
+    "event": "DANCE PRACTICE: KE'RON J. WILSON + MICROFOSSIL",
+    "date": "Aug 22",
+    "reason": "duplicate of existing \"DANCE PRACTICE: KE'RON J. WILSON + MICROFOSSIL (dance practice)\"",
+    "source": "email"
+  },
+  {
+    "venue": "bkp@brooklynpoets.org, noreply@dancepractice.nyc, Devise.exp@224506502.mailchimpapp.com",
     "event": "A Stage of One's Own: A Solo Show Lab with Juan Ramirez, Jr.",
     "date": "Aug 2",
     "reason": "duplicate of existing \"A Stage of One's Own: A Solo Show Lab with Juan Ramirez, Jr.\"",
     "source": "email"
   },
   {
-    "venue": "info@bkmetalworks.com, workshops@brooklynpoets.org, bkp@brooklynpoets.org",
-    "event": "Punctuating Your Poems Just Right w/ Tara Skurtu",
-    "date": "Jul 30",
-    "reason": "duplicate of existing \"Punctuating Your Poems Just Right w/ Tara Skurtu\"",
-    "source": "email"
-  },
-  {
-    "venue": "info@bkmetalworks.com, workshops@brooklynpoets.org, bkp@brooklynpoets.org",
-    "event": "River Through: Poems that Bleed w/ grace (ge) gilbert",
-    "date": "Aug 2",
-    "reason": "duplicate of existing (0.71 similarity to \"River Through: Poems that Bleed\")",
-    "source": "email"
-  },
-  {
-    "venue": "info@bkmetalworks.com, workshops@brooklynpoets.org, bkp@brooklynpoets.org",
-    "event": "To the Marrow: Writing Short Poems w/ dawn lonsinger",
-    "date": "Aug 2",
-    "reason": "duplicate of existing (0.67 similarity to \"To the Marrow: Writing Short Poems\")",
-    "source": "email"
-  },
-  {
-    "venue": "info@bkmetalworks.com, workshops@brooklynpoets.org, bkp@brooklynpoets.org",
-    "event": "Versification: The What For w/ Joshua Mehigan",
-    "date": "Aug 6",
-    "reason": "duplicate of existing (0.50 similarity to \"Versification: The What For\")",
-    "source": "email"
-  },
-  {
-    "venue": "info@bkmetalworks.com, workshops@brooklynpoets.org, bkp@brooklynpoets.org",
-    "event": "Brooklyn Poets Teacher Training",
-    "date": "Aug 9",
-    "reason": "duplicate of existing \"Teacher Training\"",
-    "source": "email"
-  },
-  {
-    "venue": "rbpmw@efanyc.org, events-bronxdoc.org@shared1.ccsend.com, info@theshed.org",
-    "event": "Soul Summit – Latinx Freedom (DJ collective)",
-    "date": "Jul 24",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "rbpmw@efanyc.org, events-bronxdoc.org@shared1.ccsend.com, info@theshed.org",
-    "event": "FITO Performances – Rudi Goblen concert play",
-    "date": "Jul 24",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "rbpmw@efanyc.org, events-bronxdoc.org@shared1.ccsend.com, info@theshed.org",
-    "event": "The Cypher and the Ceremony (movement‑based public program)",
-    "date": "Jul 25",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "rbpmw@efanyc.org, events-bronxdoc.org@shared1.ccsend.com, info@theshed.org",
-    "event": "Live performance by Suzanne Ciani (electronic music)",
-    "date": "Jul 30",
-    "reason": "duplicate of existing (0.57 similarity to \"Suzanne Ciani Live Performance (Lightscape)\")",
-    "source": "email"
-  },
-  {
-    "venue": "rbpmw@efanyc.org, events-bronxdoc.org@shared1.ccsend.com, info@theshed.org",
-    "event": "Live performance by Sun Ra Arkestra",
+    "venue": "info@theshed.org, downtownmusicgalleryofficial@gmail.com, info@bronxriverart.ccsend.com",
+    "event": "Sun Ra Arkestra live performance (Lightscape)",
     "date": "Aug 13",
     "reason": "duplicate of existing \"Sun Ra Arkestra Live Performance (Lightscape)\"",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "Drypoint & Stencil Monoprint",
     "date": "Aug 4",
     "reason": "duplicate of existing \"Drypoint & Stencil Monoprint\"",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "Drypoint & Stencil Monoprint",
     "date": "Aug 11",
     "reason": "duplicate of existing \"Drypoint & Stencil Monoprint\"",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "Drypoint & Stencil Monoprint",
     "date": "Aug 18",
     "reason": "duplicate of existing \"Drypoint & Stencil Monoprint\"",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
-    "event": "Drypoint & Stencil Monoprint (Optional Session)",
-    "date": "Aug 25",
-    "reason": "duplicate of existing \"Drypoint & Stencil Monoprint (Optional Session)\"",
-    "source": "email"
-  },
-  {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "Collagraph Workshop: Exploring Texture & Translation",
     "date": "Aug 5",
     "reason": "duplicate of existing \"Collagraph Workshop: Exploring Texture & Translation\"",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "Collagraph Workshop: Exploring Texture & Translation",
     "date": "Aug 12",
     "reason": "duplicate of existing \"Collagraph Workshop: Exploring Texture & Translation\"",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
-    "event": "How to Emboss Paper with & without a Press",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
+    "event": "How to Emboss Paper With & Without a Press",
     "date": "Aug 8",
     "reason": "duplicate of existing \"How to Emboss Paper with & without a Press\"",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
-    "event": "How to Emboss Paper with & without a Press",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
+    "event": "How to Emboss Paper With & Without a Press",
     "date": "Aug 9",
     "reason": "duplicate of existing \"How to Emboss Paper with & without a Press\"",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "Gazillion Bubble Show",
     "date": "Jul 25",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "The Very Hungry Caterpillar Show",
     "date": "Jul 25",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "A Truly Original Idea",
     "date": "Jul 25",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "Revelation",
     "date": "Jul 25",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "The Delivery",
     "date": "Jul 25",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "When In God's Country, Hide In the Closet",
     "date": "Jul 25",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "Alice by Heart",
     "date": "Jul 25",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "Birthright",
     "date": "Jul 25",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "Masquerade",
     "date": "Jul 25",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "A Walk on the Moon",
     "date": "Jul 25",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "Are You Now Or Have You Ever Been",
     "date": "Jul 25",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "Broadway Magic Hour",
     "date": "Jul 25",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "tq@technoqueers.com, rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com",
     "event": "Bury Your Gays",
     "date": "Jul 25",
     "reason": "date is in the past",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
-    "event": "Disruption",
-    "date": "Jul 25",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
-    "event": "Fito",
-    "date": "Jul 25",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
-    "event": "Foosball",
-    "date": "Jul 25",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
-    "event": "Giulia",
-    "date": "Jul 25",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
-    "event": "Heathers",
-    "date": "Jul 25",
-    "reason": "date is in the past",
-    "source": "email"
-  },
-  {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "media@studiomuseum.org, info@socratessculpturepark.org, info@bkmetalworks.com",
     "event": "Dreams of This Future: The Collection of Peggy Cooper Cafritz",
     "date": "Aug 19",
     "reason": "duplicate of existing \"Dreams of This Future: The Collection of Peggy Cooper Cafritz\"",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "media@studiomuseum.org, info@socratessculpturepark.org, info@bkmetalworks.com",
     "event": "Geometries",
     "date": "Sep 10",
     "reason": "duplicate of existing \"Geometries\"",
     "source": "email"
   },
   {
-    "venue": "rbpmw@efanyc.org, stagespotlightnyc@mail.beehiiv.com, media@studiomuseum.org",
+    "venue": "media@studiomuseum.org, info@socratessculpturepark.org, info@bkmetalworks.com",
     "event": "A sustained becoming: Studio Museum Artists in Residence 2026",
     "date": "Oct 1",
     "reason": "duplicate of existing \"A Sustained Becoming: Studio Museum Artists in Residence 2026\"",
     "source": "email"
   },
   {
-    "venue": "info@socratessculpturepark.org, info@bkmetalworks.com, members@theshed.org",
-    "event": "Flush Setting",
+    "venue": "media@studiomuseum.org, info@socratessculpturepark.org, info@bkmetalworks.com",
+    "event": "Soldering in Depth (Workshop)",
+    "date": "Aug 17",
+    "reason": "duplicate of existing \"Soldering in Depth\"",
+    "source": "email"
+  },
+  {
+    "venue": "media@studiomuseum.org, info@socratessculpturepark.org, info@bkmetalworks.com",
+    "event": "Flush Setting (Workshop)",
     "date": "Sep 19",
     "reason": "duplicate of existing \"Flush Setting\"",
     "source": "email"
   },
   {
-    "venue": "info@socratessculpturepark.org, info@bkmetalworks.com, members@theshed.org",
-    "event": "Bead Setting",
+    "venue": "media@studiomuseum.org, info@socratessculpturepark.org, info@bkmetalworks.com",
+    "event": "Bead Setting (Workshop)",
     "date": "Oct 9",
     "reason": "duplicate of existing \"Bead Setting\"",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "Declaration of Faith",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "Are You Mad At Me??",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "Drunk Romeo & Juliet",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "Heathers",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "Music City",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "Pepper Slit: Live In Her Living Room",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "Shifters",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "The 25th Annual Putnam County Spelling Bee",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "The Body I Left in Susquehanna National Forest",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "The Man Who Came to Dinner",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "The Play That Goes Wrong",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "What a World! What a World!",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "A Walk on the Moon",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "Heated Rivalry",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "Last Laugh",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "Othello",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "Singfeld",
+    "date": "Jul 27",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "92yenresupdates@92yemail.org, stagespotlightnyc@mail.beehiiv.com, bkp@brooklynpoets.org",
+    "event": "Laurie Anderson Evening",
+    "date": "Sep 14",
+    "reason": "duplicate of existing \"Laurie Anderson heads up a boundary-breaking evening of music, literature, and performance\"",
+    "source": "email"
+  },
+  {
+    "venue": "lucia@bushwickcommunitydarkroom.com, belladonnaseries@116607770.mailchimpapp.com, genspace@ghost.io",
+    "event": "Summer Writing Spirals: Writing Circle with Sara Jane Stoner",
+    "date": "Jul 30",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "lucia@bushwickcommunitydarkroom.com, belladonnaseries@116607770.mailchimpapp.com, genspace@ghost.io",
+    "event": "Summer Writing Spirals: Writing Circle with Mel Elberg",
+    "date": "Aug 11",
+    "reason": "duplicate of existing (0.57 similarity to \"Summer Writing Spiral with Mel Elberg\")",
+    "source": "email"
+  },
+  {
+    "venue": "hello@reforesters.io, info@noguchi.org, media@studiomuseum.org",
+    "event": "Mount Mansfield Release Party",
+    "date": "Jul 31",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "hello@reforesters.io, info@noguchi.org, media@studiomuseum.org",
+    "event": "SQUEEKERS: Huichun Yang, Jake Sokolov-Gonzalez, Andy Braddock",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "hello@reforesters.io, info@noguchi.org, media@studiomuseum.org",
+    "event": "Family Workshop – Animation with Eastend Western",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "hello@reforesters.io, info@noguchi.org, media@studiomuseum.org",
+    "event": "Artists Talk & Screening – Nicolas Menard and Jack Cunningham",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "james@darefail.com, info@bkmetalworks.com, info@bronxriverart.ccsend.com",
+    "event": "Soldering in Depth",
+    "date": "Aug 17",
+    "reason": "duplicate of existing \"Soldering in Depth\"",
+    "source": "email"
+  },
+  {
+    "venue": "james@darefail.com, info@bkmetalworks.com, info@bronxriverart.ccsend.com",
+    "event": "Flush Setting Workshop",
+    "date": "Sep 19",
+    "reason": "duplicate of existing \"Flush Setting\"",
+    "source": "email"
+  },
+  {
+    "venue": "james@darefail.com, info@bkmetalworks.com, info@bronxriverart.ccsend.com",
+    "event": "Bead Setting Workshop",
+    "date": "Oct 9",
+    "reason": "duplicate of existing \"Bead Setting\"",
+    "source": "email"
+  },
+  {
+    "venue": "info@bushwickprintlab.org, bkp@brooklynpoets.org, tq@technoqueers.com",
+    "event": "YARD MART PRINT CAMP",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "downtownmusicgalleryofficial@gmail.com, lucia@bushwickcommunitydarkroom.com, info@theshed.org",
+    "event": "Sun Ra Arkestra One-Night-Only Live Performance",
+    "date": "Aug 13",
+    "reason": "duplicate of existing (0.57 similarity to \"Sun Ra Arkestra Live Performance (Lightscape)\")",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Gazillion Bubble Show",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "The Very Hungry Caterpillar Show",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "O: A New Odyssey for Gay Men and the Women Who Love Them",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Birthright",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Masquerade",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "A Walk on the Moon",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "An American Daughter",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Are You Now Or Have You Ever Been",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Broadway Magic Hour",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Disruption",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Foosball",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Forget I Said Anything",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Funeral of God",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Giulia",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Hamlet",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Heathers",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Hershey Felder: The Piano and Me",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Jamie Allan’s Amaze",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Les Misérables: The Arena Concert Spectacular",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Little Shop of Horrors",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Music City",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "PHILADANCO!",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "Shifters",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "The 25th Annual Putnam County Spelling Bee",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "The Betrothed",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "The Loved Ones",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "email"
+  },
+  {
+    "venue": "members@theshed.org, info@bkmetalworks.com, stagespotlightnyc@mail.beehiiv.com",
+    "event": "The Pass",
+    "date": "Aug 1",
+    "reason": "date is in the past",
     "source": "email"
   }
 ]

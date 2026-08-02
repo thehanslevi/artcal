@@ -1,22 +1,22 @@
 {
-  "ranAt": "2026-07-26T13:11:01.154Z",
-  "acceptedTotal": 34,
-  "rejectedTotal": 168,
+  "ranAt": "2026-08-02T13:11:20.625Z",
+  "acceptedTotal": 42,
+  "rejectedTotal": 151,
   "duplicatesSkipped": [],
   "perVenue": {
     "Symphony Space": {
-      "accepted": 1,
-      "rejected": 11,
+      "accepted": 2,
+      "rejected": 10,
       "source": "json-ld"
     },
     "UnionDocs": {
-      "accepted": 0,
-      "rejected": 3,
+      "accepted": 1,
+      "rejected": 1,
       "source": "ics"
     },
     "DADA": {
-      "accepted": 0,
-      "rejected": 8,
+      "accepted": 8,
+      "rejected": 0,
       "source": "json-ld"
     },
     "The Arts Center at Governors Island": {
@@ -26,7 +26,7 @@
     },
     "Delight Factory": {
       "accepted": 0,
-      "rejected": 5,
+      "rejected": 2,
       "source": "json-ld"
     },
     "Greenwich House Pottery": {
@@ -35,8 +35,8 @@
       "source": "json-ld"
     },
     "Flux Factory": {
-      "accepted": 0,
-      "rejected": 4,
+      "accepted": 1,
+      "rejected": 2,
       "source": "json-ld"
     },
     "Materials for the Arts": {
@@ -51,23 +51,28 @@
     },
     "Mostly Good Studios": {
       "accepted": 0,
-      "rejected": 6,
+      "rejected": 5,
       "source": "json-ld"
     },
     "Wonderville": {
-      "accepted": 5,
-      "rejected": 7,
+      "accepted": 9,
+      "rejected": 2,
       "source": "json-ld"
     },
     "e-flux": {
       "accepted": 0,
-      "rejected": 1,
-      "source": "json-ld"
+      "rejected": 0,
+      "source": "none"
     },
     "Cybernetics Library": {
       "accepted": 0,
       "rejected": 3,
       "source": "json-ld"
+    },
+    "Museum of Reclaimed Urban Space (MoRUS)": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
     },
     "Interference Archive": {
       "accepted": 0,
@@ -175,11 +180,6 @@
       "source": "none"
     },
     "Footlight Presents (Windjammer)": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Museum of Reclaimed Urban Space (MoRUS)": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
@@ -595,8 +595,8 @@
       "source": "none"
     },
     "_email": {
-      "accepted": 27,
-      "rejected": 90,
+      "accepted": 20,
+      "rejected": 96,
       "source": "llm"
     }
   }
