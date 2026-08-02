@@ -50,7 +50,6 @@ export function CuratorPicks({ tab }: { tab: TabMode }) {
       .map((e) => ({ e, d: parseEventDate(e.date) }))
       .filter((x) => x.d && !isPast(x.d, now))
       .sort((a, b) => a.d!.getTime() - b.d!.getTime())
-      .slice(0, 6)
       .map((x) => x.e);
   }, [ids, now, tab]);
 
