@@ -8,13 +8,16 @@ import { findDuplicateOf, canonicalDate } from "./dedupe";
 const KIDS_RE =
   /\b(kids?|tots?|toddlers?|babies|baby|preschool|pre-?k|nursery|children'?s?|story ?time|ages?\s*\d|for teens|little ones)\b/i;
 
-// Passive broadcast/streaming TV content — it rides in on big venues' newsletters
-// (92Y mailed a Hallmark Channel birthday special and a stand-up special). Art
-// Cal is about being in an NYC room, not watching TV, so these are gated. Kept
-// tight to on-screen-broadcast phrasing so it can't catch a livestreamed concert
-// or a virtual studio class, which are real participatory things.
-const BROADCAST_RE =
-  /\bstand-?up special\b|\(streaming\)|streaming special|watch party|\bon (netflix|hulu|hallmark|hbo|peacock|disney\+?)\b/i;
+// Art Cal is about being in an NYC room. Anything you watch or attend from home
+// — a stream, a livestream, a webinar, a virtual class, a TV special — is gated.
+// A title marker ("… (livestream)", "(virtual)", "stand-up special") or an
+// online location both count. Kept off bare "broadcast"/"TV" so it doesn't
+// catch an in-person night like Wonderville's "FORT90 BROADCAST SYSTEM".
+const STREAMING_RE =
+  /\b(livestream(ed|ing)?|streaming|webinar)\b|\((?:virtual|online|recorded|streaming[^)]*)\)|\bstand-?up special\b|watch party|\bon (netflix|hulu|hallmark|hbo|peacock|disney\+?)\b/i;
+
+// The location itself is online — "Online", "Virtual", "Zoom".
+const ONLINE_WHERE_RE = /^\s*(online|virtual\b|zoom\b|livestream)/i;
 
 const STOP_WORDS = new Set([
   "the", "a", "an", "and", "or", "at", "on", "in", "of", "to", "for",
@@ -104,7 +107,9 @@ export function makeGateRunner(
     if (!event.where.trim()) return fail("empty venue");
 
     if (KIDS_RE.test(event.event)) return fail("children's programming");
-    if (BROADCAST_RE.test(event.event)) return fail("broadcast/streaming TV");
+    if (STREAMING_RE.test(event.event) || ONLINE_WHERE_RE.test(event.where)) {
+      return fail("streaming / not in person");
+    }
 
     if (!VALID_CATEGORIES.has(event.category)) {
       return fail(`invalid category: ${event.category}`);

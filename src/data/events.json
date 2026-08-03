@@ -2466,24 +2466,6 @@
           "address": "60-47 Myrtle Ave"
         },
         {
-          "day": "Wed",
-          "date": "Jul 22",
-          "event": "Jazz in July – Kate Kortum & Aaron Diehl Trio (livestream)",
-          "where": "92Y (New York, NY)",
-          "cost": "TBD",
-          "category": "sound",
-          "flag": null,
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": null,
-          "url": "https://click.92yemail.org/?qs%C2%ABB7InYiOjEsImQiOjQ5NDJ9AAoAAAAAApZviryOp9GtQbKQ5IJkO7Shm4mEb8yZqxl27cSJnlS8U_tNOrJI0ufIRwSxPrIgVD4uHuc1h11GDvzPLVtBMHc1QxhQFqv16-aC4iaXcFQ",
-          "uid": "e_cd3f48bd0d63",
-          "venue": "92Y (New York",
-          "neighborhood": "NY)",
-          "address": null
-        },
-        {
           "day": "Thu",
           "date": "Jul 23",
           "event": "Judson McNally Jackson Book Talk: UNSAYABLE with Michael Cunningham & Sarah McNally",
@@ -4223,24 +4205,6 @@
           "uid": "e_aa7aee3bfb7d"
         },
         {
-          "day": "Tue",
-          "date": "Jul 28",
-          "event": "Unsettling Brilliance: Italian Mannerism and Its Afterlives (streaming exhibition)",
-          "where": "Online",
-          "cost": "FREE",
-          "category": "film",
-          "flag": null,
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": null,
-          "url": "https://click.92yemail.org/?qs«B7InYiOjEsImQiOjQ5NDR9AAoAAAAAArACkrAb4HaRxfja23qGum5mVeY6MQdU3NsS3rsYnVPqnkaoQTf6ICpe-jCbz2jFsCNii5R-E00Th3ILAvWVoB4WbbBgKJdoMNPw3tf8JFM",
-          "venue": "Online",
-          "neighborhood": null,
-          "address": null,
-          "uid": "e_54f2f57ea1d2"
-        },
-        {
           "day": "Wed",
           "date": "Jul 29",
           "event": "Julieta Venegas / Lasso / DJ Anamaria Sayre",
@@ -4963,24 +4927,6 @@
           "venue": "Brooklyn Poets",
           "neighborhood": null,
           "address": null
-        },
-        {
-          "day": "Sun",
-          "date": "Aug 2",
-          "event": "Demystifying the Volta & Writing Towards Transformation with Omotara James (Craft Lab)",
-          "where": "Zoom",
-          "cost": "TBD",
-          "category": "literature",
-          "flag": null,
-          "mode": "make",
-          "start": null,
-          "end": null,
-          "note": null,
-          "url": "https://events.brooklynpoets.org/events/brooklynpoets/2321448?utm_source=Brooklyn+Poets+Newsletter&utm_campaign=28257adcfe-Craft+Lab%3A+Water+as+Method_COPY_01&utm_medium=email&utm_term=0_-1cf9afad29-516992572&mc_cid=28257adcfe&mc_eid=UNIQID",
-          "venue": "Zoom",
-          "neighborhood": null,
-          "address": null,
-          "uid": "e_b316e475bae8"
         },
         {
           "day": "Sun",
@@ -6013,24 +5959,6 @@
           "neighborhood": "Long Island City",
           "address": "33-00 Northern Blvd, 3rd Floor",
           "uid": "e_303d73322eb3"
-        },
-        {
-          "day": "Mon",
-          "date": "Aug 10",
-          "event": "Drawing from a Distance (Virtual)",
-          "where": "Online",
-          "cost": "FREE",
-          "category": "making",
-          "flag": null,
-          "mode": "make",
-          "start": "19:30",
-          "end": "21:00",
-          "note": null,
-          "url": "https://www.noguchi.org/museum/calendar/event/2026-08-10-1930-drawing-from-a-distance/",
-          "venue": "Online",
-          "neighborhood": null,
-          "address": null,
-          "uid": "e_471a17573b7b"
         },
         {
           "day": "Tue",
