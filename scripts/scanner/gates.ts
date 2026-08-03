@@ -1,6 +1,12 @@
 import type { CalEvent, EventsData } from "../../src/types";
 import type { Candidate } from "./extract";
-import { findDuplicateOf } from "./dedupe";
+import { findDuplicateOf, canonicalDate } from "./dedupe";
+
+// Art Cal is an adults' making/witnessing calendar. Children's programming
+// (story times, "Art for Tots", toddler classes) is a whole separate world and
+// was never the point, so it's rejected at the gate rather than scrubbed later.
+const KIDS_RE =
+  /\b(kids?|tots?|toddlers?|babies|baby|preschool|pre-?k|nursery|children'?s?|story ?time|ages?\s*\d|for teens|little ones)\b/i;
 
 const STOP_WORDS = new Set([
   "the", "a", "an", "and", "or", "at", "on", "in", "of", "to", "for",
@@ -64,9 +70,12 @@ function buildDateIndex(existing: EventsData): Map<string, CalEvent[]> {
   const byDate = new Map<string, CalEvent[]>();
   for (const w of existing.weeks) {
     for (const e of w.events) {
-      const arr = byDate.get(e.date) ?? [];
+      // Key on the canonical date so "Aug 7" and "Aug 07" share a bucket and a
+      // candidate actually gets compared against same-day events in both forms.
+      const key = canonicalDate(e.date);
+      const arr = byDate.get(key) ?? [];
       arr.push(e);
-      byDate.set(e.date, arr);
+      byDate.set(key, arr);
     }
   }
   return byDate;
@@ -85,6 +94,8 @@ export function makeGateRunner(
 
     if (!event.event.trim()) return fail("empty title");
     if (!event.where.trim()) return fail("empty venue");
+
+    if (KIDS_RE.test(event.event)) return fail("children's programming");
 
     if (!VALID_CATEGORIES.has(event.category)) {
       return fail(`invalid category: ${event.category}`);
@@ -108,7 +119,7 @@ export function makeGateRunner(
 
     // Duplicate check: venue-stripped title similarity + venue/start-time
     // matching (see scanner/dedupe.ts). Catches "Venue: Title" vs "Title".
-    const existingOnDate = dateIndex.get(event.date) ?? [];
+    const existingOnDate = dateIndex.get(canonicalDate(event.date)) ?? [];
     const dup = findDuplicateOf(event, existingOnDate);
     if (dup) {
       return fail(`duplicate of existing "${dup.event}"`);
@@ -176,9 +187,10 @@ export function makeGateRunner(
     if (event.end && !isHhmm(event.end)) return fail("bad end time");
 
     // Register in the date index so later candidates this run don't dup either
-    const arr = dateIndex.get(event.date) ?? [];
+    const key = canonicalDate(event.date);
+    const arr = dateIndex.get(key) ?? [];
     arr.push(event);
-    dateIndex.set(event.date, arr);
+    dateIndex.set(key, arr);
 
     return { pass: true };
   };

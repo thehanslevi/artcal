@@ -20,6 +20,37 @@ function norm(s: string | null | undefined): string {
     .trim();
 }
 
+/**
+ * "Aug 7" and "Aug 07" are the same day but different strings, and the dedup
+ * used to bail on a raw string mismatch — which is how one Shed concert landed
+ * five times. Collapse to "aug 7" so the two formats compare equal.
+ */
+export function canonicalDate(dateStr: string): string {
+  const p = dateStr.trim().split(/\s+/);
+  const mo = (p[0] ?? "").toLowerCase().slice(0, 3);
+  const d = Number(p[1]);
+  return mo && !Number.isNaN(d) ? `${mo} ${d}` : dateStr.trim().toLowerCase();
+}
+
+/**
+ * A canonical event id from a URL: host + path, no scheme/query/fragment.
+ * Returns "" for a bare domain or a redirect/tracking link (path is just "/"),
+ * because those don't identify a specific event and would wrongly merge every
+ * event that shares the domain — e.g. a newsletter's click.tracker.org/?qs=…
+ * links, which differ only in an opaque query string.
+ */
+export function canonicalUrl(url: string | null | undefined): string {
+  if (!url) return "";
+  try {
+    const u = new URL(url);
+    const path = u.pathname.replace(/\/+$/, "");
+    if (!path) return "";
+    return (u.hostname.replace(/^www\./, "") + path).toLowerCase();
+  } catch {
+    return "";
+  }
+}
+
 function tokens(s: string): Set<string> {
   return new Set(norm(s).split(" ").filter((t) => t && !STOP_WORDS.has(t)));
 }
@@ -57,23 +88,45 @@ function strippedTitleTokens(e: Pick<CalEvent, "event" | "where">): Set<string> 
 }
 
 export function isLikelyDuplicate(a: CalEvent, b: CalEvent): boolean {
-  if (a.date !== b.date) return false;
+  if (canonicalDate(a.date) !== canonicalDate(b.date)) return false;
+
   const ta = strippedTitleTokens(a);
   const tb = strippedTitleTokens(b);
   const sim = jaccard(ta, tb);
   if (sim >= 0.6) return true;
 
+  // "Same place" — by URL first, venue string second. One Shed concert gets
+  // scraped as "The Shed", "The Shed Outdoor Plaza", "The Shed Outdoor Plaza
+  // (New York", so the fuzzy venue-prefix match misses it; the shared event URL
+  // catches it. But a URL can be a generic classes-listing page reused by every
+  // event (mononoawarefilm.com/community-workshops), so it only ever means
+  // "same place", never "same event" on its own.
   const va = norm(a.where);
   const vb = norm(b.where);
   const sameVenue = va !== "" && va.slice(0, 18) === vb.slice(0, 18);
+  const ua = canonicalUrl(a.url);
+  const samePlace = sameVenue || (ua !== "" && ua === canonicalUrl(b.url));
 
-  // Same night, same venue, and one title sits wholly inside the other: the
-  // same event scraped twice, once prefixed by its venue and once bare.
-  // "Brooklyn Art Haus: FOLKUS (singer/songwriter night)" vs "FOLKUS".
-  if (sameVenue && containment(ta, tb) >= 0.9) return true;
+  // One title sits wholly inside the other: the same event scraped twice, once
+  // prefixed by its venue and once bare — "Brooklyn Art Haus: FOLKUS" vs "FOLKUS".
+  if (samePlace && containment(ta, tb) >= 0.9) return true;
 
+  // Same place, same start time, and a real title overlap (≥2 shared words, so
+  // "Soul Summit Concert" and "Soul Summit – Latinx Freedom" collapse on {soul,
+  // summit}). The start time is what keeps a venue's 9am and 10am classes —
+  // different events on the same listing URL — from merging, while a concert
+  // scraped four times at 5pm does merge.
   const sameStart = !!a.start && a.start === b.start;
-  return sameVenue && sameStart && sim >= 0.3;
+  const sharedTokens = countShared(ta, tb);
+  if (samePlace && sameStart && (sharedTokens >= 2 || sim >= 0.3)) return true;
+
+  return false;
+}
+
+function countShared(a: Set<string>, b: Set<string>): number {
+  let n = 0;
+  for (const t of a) if (b.has(t)) n += 1;
+  return n;
 }
 
 /** First existing event the candidate duplicates, or null. */

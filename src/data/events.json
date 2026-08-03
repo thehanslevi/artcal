@@ -4204,7 +4204,7 @@
         {
           "day": "Tue",
           "date": "Jul 28",
-          "event": "Wonderville's Last Tuesday of the month PLAYTEST",
+          "event": "Last Tuesday of the month PLAYTEST",
           "where": "Wonderville",
           "cost": "TBD",
           "category": "tech",
@@ -4217,7 +4217,10 @@
           "venue": "Wonderville",
           "neighborhood": null,
           "address": "1186 Broadway Brooklyn",
-          "uid": "e_80f0224a7196"
+          "uid": "e_80f0224a7196",
+          "aliases": [
+            "Jul 28|Wonderville's Last Tuesday of the month PLAYTEST"
+          ]
         },
         {
           "day": "Tue",
@@ -4347,24 +4350,6 @@
           "neighborhood": null,
           "address": "1186 Broadway Brooklyn",
           "uid": "e_730008cdee18"
-        },
-        {
-          "day": "Wed",
-          "date": "Jul 29",
-          "event": "Art for Tots (Broadway)",
-          "where": "Queens Public Library, Long Island City",
-          "cost": "FREE",
-          "category": "making",
-          "flag": null,
-          "mode": "make",
-          "start": "10:30",
-          "end": "11:30",
-          "note": null,
-          "url": "https://www.noguchi.org/museum/calendar/",
-          "venue": "Queens Public Library",
-          "neighborhood": "Long Island City",
-          "address": null,
-          "uid": "e_6707478b70bc"
         },
         {
           "day": "Thu",
@@ -5239,24 +5224,6 @@
         {
           "day": "Tue",
           "date": "Aug 4",
-          "event": "Hallmark Channel’s 25th Birthday: A Quarter Century of Feel‑Good Television (streaming)",
-          "where": "Online",
-          "cost": "FREE",
-          "category": "film",
-          "flag": null,
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": null,
-          "url": "https://click.92yemail.org/?qs«B7InYiOjEsImQiOjQ5NDR9AAoAAAAAArACkrAY_n8zCZZ05ifuMDDOhIcYoSF-3RgJTNzpO50YKk24oEKRiob1wIkQqOtwzQEcGLpwBJIAtinqfv3-QkcqAD122STW1EYLQ1KYI_Q",
-          "venue": "Online",
-          "neighborhood": null,
-          "address": null,
-          "uid": "e_0a8f379afeb4"
-        },
-        {
-          "day": "Tue",
-          "date": "Aug 4",
           "event": "Drypoint & Stencil Monoprint",
           "where": "Robert Blackburn Printmaking Workshop",
           "cost": "$335-$475",
@@ -5343,24 +5310,6 @@
           "neighborhood": "Greenpoint",
           "address": null,
           "uid": "e_229fd60dc021"
-        },
-        {
-          "day": "Wed",
-          "date": "Aug 5",
-          "event": "Art for Tots (Broadway)",
-          "where": "Queens Public Library, Long Island City",
-          "cost": "FREE",
-          "category": "making",
-          "flag": null,
-          "mode": "make",
-          "start": "10:30",
-          "end": "11:30",
-          "note": null,
-          "url": "https://www.noguchi.org/museum/calendar/",
-          "venue": "Queens Public Library",
-          "neighborhood": "Long Island City",
-          "address": null,
-          "uid": "e_0259dd8d6053"
         },
         {
           "day": "Wed",
@@ -5708,7 +5657,15 @@
           "uid": "e_bc5a592f7396",
           "venue": "The Shed Outdoor Plaza (New York",
           "neighborhood": "NY)",
-          "address": null
+          "address": null,
+          "aliases": [
+            "e_2273582545ea",
+            "Aug 7|Soul Summit Concert",
+            "e_42650d3d3310",
+            "Aug 07|Soul Summit – Latinx Freedom (DJ collective)",
+            "e_bef07e439339",
+            "Aug 7|Soul Summit – movement and music at Latinx Freedom (outdoor Plaza)"
+          ]
         },
         {
           "day": "Fri",
@@ -5747,42 +5704,6 @@
           "uid": "e_926c4b4d88ea"
         },
         {
-          "day": "Sat",
-          "date": "Aug 7",
-          "event": "Soul Summit Concert",
-          "where": "The Shed Outdoor Plaza, The Shed",
-          "cost": "TBD",
-          "category": "sound",
-          "flag": null,
-          "mode": "witness",
-          "start": "17:00",
-          "end": "20:00",
-          "note": null,
-          "url": "https://www.theshed.org/program/522-latinx-freedom?utm_source=MASTER+LIST+2022&utm_campaign=c9d0f64dae-EMAIL_CAMPAIGN_2020_05_22_08_55_COPY_01&utm_medium=email&utm_term=0_0884b513f3-c9d0f64dae-463031546&mc_cid=c9d0f64dae&mc_eid=UNIQID",
-          "venue": "The Shed Outdoor Plaza",
-          "neighborhood": "The Shed",
-          "address": null,
-          "uid": "e_2273582545ea"
-        },
-        {
-          "day": "Sat",
-          "date": "Aug 07",
-          "event": "Soul Summit – Latinx Freedom (DJ collective)",
-          "where": "The Shed, outdoor Plaza",
-          "cost": "FREE",
-          "category": "sound",
-          "flag": null,
-          "mode": "witness",
-          "start": "17:00",
-          "end": "20:00",
-          "note": null,
-          "url": "https://www.theshed.org/program/522-latinx-freedom",
-          "venue": "The Shed",
-          "neighborhood": "outdoor Plaza",
-          "address": "545 West 30th Street",
-          "uid": "e_42650d3d3310"
-        },
-        {
           "day": "Fri",
           "date": "Aug 7",
           "event": "Indie/Folk - Diana Daniels, Biita Houdei, Laura Jean Anderson",
@@ -5817,24 +5738,6 @@
           "neighborhood": null,
           "address": "1186 Broadway Brooklyn",
           "uid": "e_7167381cf3c7"
-        },
-        {
-          "day": "Sat",
-          "date": "Aug 7",
-          "event": "Soul Summit – movement and music at Latinx Freedom (outdoor Plaza)",
-          "where": "The Shed",
-          "cost": "FREE",
-          "category": "sound",
-          "flag": null,
-          "mode": "witness",
-          "start": "17:00",
-          "end": "20:00",
-          "note": null,
-          "url": "https://www.theshed.org/program/522-latinx-freedom",
-          "venue": "The Shed",
-          "neighborhood": null,
-          "address": "545 West 30th Street",
-          "uid": "e_bef07e439339"
         },
         {
           "day": "Fri",
@@ -7853,26 +7756,10 @@
           "neighborhood": null,
           "address": "545 West 30th Street",
           "aliases": [
-            "Sep 17|The Shed 2026 Gala"
+            "Sep 17|The Shed 2026 Gala",
+            "e_1cec421eae14",
+            "Sep 17|2026 Gala (performance by Jamie xx)"
           ]
-        },
-        {
-          "day": "Fri",
-          "date": "Sep 17",
-          "event": "2026 Gala (performance by Jamie xx)",
-          "where": "The Shed",
-          "cost": "TBD",
-          "category": "sound",
-          "flag": null,
-          "mode": "witness",
-          "start": "17:30",
-          "end": "23:00",
-          "note": null,
-          "url": "https://www.theshed.org/program/561-the-shed-2026-gala#mmi-6898",
-          "venue": "The Shed",
-          "neighborhood": null,
-          "address": "545 West 30th Street",
-          "uid": "e_1cec421eae14"
         },
         {
           "day": "Fri",
