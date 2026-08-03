@@ -2172,24 +2172,6 @@
         {
           "day": "Sun",
           "date": "Jul 19",
-          "event": "FIFA Men’s World Cup 2026 Final: Watch Party",
-          "where": "El Museo del Barrio",
-          "cost": "FREE",
-          "category": "making",
-          "flag": null,
-          "mode": "witness",
-          "start": "17:00",
-          "end": "23:00",
-          "note": null,
-          "url": "https://elmuseo.org/event/fifa-mens-world-cup-2026-final-watch-party/",
-          "uid": "e_fbf70f202341",
-          "venue": "El Museo del Barrio",
-          "neighborhood": null,
-          "address": "1230 Fifth Avenue"
-        },
-        {
-          "day": "Sun",
-          "date": "Jul 19",
           "event": "Scene and Song w/ Matthew Gellman",
           "where": "Brooklyn Poets (online)",
           "cost": "TBD",
@@ -5366,24 +5348,6 @@
           "uid": "e_a4c5698e747f"
         },
         {
-          "day": "Wed",
-          "date": "Aug 5",
-          "event": "Nice to Meet You, Jeff Arcuri (stand‑up special)",
-          "where": "92NY",
-          "cost": "TBD",
-          "category": "theatre",
-          "flag": null,
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": null,
-          "url": "https://click.92yemail.org/?qs%C2%ABB7InYiOjEsImQiOjQ5NTZ9AAoAAAAAAzriX76Ul0d7R9Sex5h6NsViyDfgn82yHRWLxCzYm9dPPr3T1nnvZj02poU1qNvwKGsBbNSF9-EOPGKfToXuybBw5bwHf02FYu9d-E86VQ",
-          "venue": "92NY",
-          "neighborhood": null,
-          "address": null,
-          "uid": "e_4e85c1ea0086"
-        },
-        {
           "day": "Thu",
           "date": "Aug 6",
           "event": "Andrew Bird + Wordless Music Orchestra (20th anniversary)",
@@ -7133,24 +7097,6 @@
         {
           "day": "Wed",
           "date": "Sep 2",
-          "event": "Jim Curtis & Jennifer Aniston – The Book of Possibility",
-          "where": "92Y (New York, NY)",
-          "cost": "TBD",
-          "category": "literature",
-          "flag": null,
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": null,
-          "url": "https://click.92yemail.org/?qs%C2%ABB7InYiOjEsImQiOjQ5NDJ9AAoAAAAAApZviryVuY9ae__zFUsejTNOWaUcQYu5BcZqnWceWDE-n1mOOubHftnvbyE77tCZAl-eC55Dgl2CFmNxw--JQdxD9jkR7BZRsNRGVibtyfc",
-          "uid": "e_de0756bf2585",
-          "venue": "92Y (New York",
-          "neighborhood": "NY)",
-          "address": null
-        },
-        {
-          "day": "Wed",
-          "date": "Sep 2",
           "event": "Wiseman's New York",
           "where": "UnionDocs, Ridgewood",
           "cost": "TBD",
@@ -7279,24 +7225,6 @@
           "venue": "New York Theatre Workshop",
           "neighborhood": null,
           "address": "79 E 4th St"
-        },
-        {
-          "day": "Wed",
-          "date": "Sep 9",
-          "event": "Jaclyn Smith Beyond Charlie’s Angels (talk & streaming)",
-          "where": "Redeemer Presbyterian Church",
-          "cost": "FREE",
-          "category": "literature",
-          "flag": null,
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": null,
-          "url": "https://click.92yemail.org/?qs«B7InYiOjEsImQiOjQ5NDR9AAoAAAAAArACkrAO8YEmABPzWWs2S-r6BqaxqnUgE1jMCZLJGDbOe_A5RIf4BcjU5lFaYXU-C8Jewm6lNwxEJvjjWkstkKdm0KF4LZQ02ljBjsVZiJQ",
-          "venue": "Redeemer Presbyterian Church",
-          "neighborhood": null,
-          "address": "150 E 91st St",
-          "uid": "e_b9fc0b6daa54"
         },
         {
           "day": "Wed",
@@ -7845,24 +7773,6 @@
         {
           "day": "Sat",
           "date": "Sep 19",
-          "event": "The Essence of Us: A Cuban Story – Opening Night",
-          "where": "92Y (New York, NY)",
-          "cost": "TBD",
-          "category": "dance",
-          "flag": null,
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": null,
-          "url": "https://click.92yemail.org/?qs%C2%ABB7InYiOjEsImQiOjQ5NDJ9AAoAAAAAApZviryR2EnM-kdTvDlMqL2n9MKbZuZR3pC_IRgpPEhVT1Fc9YaSBnrHhxRC1PXfnr2TyFzEqgOSZBj2-PTOIBXMvu4XsKH-aHw82MkJ4mY",
-          "uid": "e_d11a0a23d941",
-          "venue": "92Y (New York",
-          "neighborhood": "NY)",
-          "address": null
-        },
-        {
-          "day": "Sat",
-          "date": "Sep 19",
           "event": "Flush Setting",
           "where": "Brooklyn Metal Works",
           "cost": "TBD",
@@ -7894,7 +7804,11 @@
           "venue": "92Y",
           "neighborhood": null,
           "address": null,
-          "uid": "e_b13ffdcf21c7"
+          "uid": "e_b13ffdcf21c7",
+          "aliases": [
+            "Sep 19|The Essence of Us: A Cuban Story – Opening Night",
+            "e_d11a0a23d941"
+          ]
         },
         {
           "day": "Sun",
@@ -8826,24 +8740,6 @@
           "venue": "Creative Music Studio at Ibeam",
           "neighborhood": "Gowanus",
           "address": "168 7th St"
-        },
-        {
-          "day": "Mon",
-          "date": "Oct 26",
-          "event": "Ayad Akhtar with Robert Downey Jr.: The Radiance",
-          "where": "92NY",
-          "cost": "TBD",
-          "category": "literature",
-          "flag": null,
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": null,
-          "url": "https://click.92yemail.org/?qs%C2%ABB7InYiOjEsImQiOjQ5NTZ9AAoAAAAAAzriX76D77nY88xynBcDlZ1d6Q8h8o9vP6DZOlSJNqckifjv3qcjSQlsE4rAnXGH1roRKBjsw_Oh48MESnnvtb_X_UTgHPN9W64aH62GOQ",
-          "venue": "92NY",
-          "neighborhood": null,
-          "address": null,
-          "uid": "e_b438cec7e5e7"
         },
         {
           "day": "Thu",

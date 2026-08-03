@@ -8,6 +8,14 @@ import { findDuplicateOf, canonicalDate } from "./dedupe";
 const KIDS_RE =
   /\b(kids?|tots?|toddlers?|babies|baby|preschool|pre-?k|nursery|children'?s?|story ?time|ages?\s*\d|for teens|little ones)\b/i;
 
+// Passive broadcast/streaming TV content — it rides in on big venues' newsletters
+// (92Y mailed a Hallmark Channel birthday special and a stand-up special). Art
+// Cal is about being in an NYC room, not watching TV, so these are gated. Kept
+// tight to on-screen-broadcast phrasing so it can't catch a livestreamed concert
+// or a virtual studio class, which are real participatory things.
+const BROADCAST_RE =
+  /\bstand-?up special\b|\(streaming\)|streaming special|watch party|\bon (netflix|hulu|hallmark|hbo|peacock|disney\+?)\b/i;
+
 const STOP_WORDS = new Set([
   "the", "a", "an", "and", "or", "at", "on", "in", "of", "to", "for",
   "with", "by", "from", "as", "is", "are", "was", "were", "presents",
@@ -96,6 +104,7 @@ export function makeGateRunner(
     if (!event.where.trim()) return fail("empty venue");
 
     if (KIDS_RE.test(event.event)) return fail("children's programming");
+    if (BROADCAST_RE.test(event.event)) return fail("broadcast/streaming TV");
 
     if (!VALID_CATEGORIES.has(event.category)) {
       return fail(`invalid category: ${event.category}`);
