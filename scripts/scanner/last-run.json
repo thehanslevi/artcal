@@ -1,42 +1,42 @@
 {
-  "ranAt": "2026-08-02T13:11:20.625Z",
-  "acceptedTotal": 42,
-  "rejectedTotal": 151,
+  "ranAt": "2026-08-09T12:40:39.800Z",
+  "acceptedTotal": 85,
+  "rejectedTotal": 158,
   "duplicatesSkipped": [],
   "perVenue": {
     "Symphony Space": {
-      "accepted": 2,
-      "rejected": 10,
+      "accepted": 3,
+      "rejected": 9,
       "source": "json-ld"
     },
     "UnionDocs": {
-      "accepted": 1,
-      "rejected": 1,
+      "accepted": 7,
+      "rejected": 4,
       "source": "ics"
     },
     "DADA": {
       "accepted": 8,
-      "rejected": 0,
+      "rejected": 2,
       "source": "json-ld"
     },
     "The Arts Center at Governors Island": {
-      "accepted": 0,
-      "rejected": 4,
+      "accepted": 2,
+      "rejected": 3,
       "source": "ics"
     },
     "Delight Factory": {
-      "accepted": 0,
+      "accepted": 1,
       "rejected": 2,
       "source": "json-ld"
     },
     "Greenwich House Pottery": {
-      "accepted": 0,
-      "rejected": 7,
+      "accepted": 1,
+      "rejected": 8,
       "source": "json-ld"
     },
     "Flux Factory": {
-      "accepted": 1,
-      "rejected": 2,
+      "accepted": 0,
+      "rejected": 1,
       "source": "json-ld"
     },
     "Materials for the Arts": {
@@ -46,30 +46,40 @@
     },
     "Brooklyn Shoe Space": {
       "accepted": 0,
-      "rejected": 18,
+      "rejected": 17,
       "source": "json-ld"
     },
     "Mostly Good Studios": {
       "accepted": 0,
-      "rejected": 5,
+      "rejected": 3,
       "source": "json-ld"
     },
     "Wonderville": {
-      "accepted": 9,
-      "rejected": 2,
+      "accepted": 8,
+      "rejected": 1,
       "source": "json-ld"
-    },
-    "e-flux": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
     },
     "Cybernetics Library": {
       "accepted": 0,
       "rejected": 3,
       "source": "json-ld"
     },
-    "Museum of Reclaimed Urban Space (MoRUS)": {
+    "Baryshnikov Arts Center": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Wendy's Subway": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Choplet Ceramic Studio": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Socrates Sculpture Park": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
@@ -104,17 +114,7 @@
       "rejected": 0,
       "source": "none"
     },
-    "Baryshnikov Arts Center": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
     "Film Forum": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Wendy's Subway": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
@@ -184,12 +184,22 @@
       "rejected": 0,
       "source": "none"
     },
+    "Museum of Reclaimed Urban Space (MoRUS)": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
     "Recess": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
     },
     "Sleepwalk": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "e-flux": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
@@ -389,11 +399,6 @@
       "rejected": 0,
       "source": "none"
     },
-    "Choplet Ceramic Studio": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
     "Gasworks NYC": {
       "accepted": 0,
       "rejected": 0,
@@ -549,11 +554,6 @@
       "rejected": 0,
       "source": "none"
     },
-    "Socrates Sculpture Park": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
     "Studio Museum in Harlem": {
       "accepted": 0,
       "rejected": 0,
@@ -595,8 +595,8 @@
       "source": "none"
     },
     "_email": {
-      "accepted": 20,
-      "rejected": 96,
+      "accepted": 54,
+      "rejected": 104,
       "source": "llm"
     }
   }
