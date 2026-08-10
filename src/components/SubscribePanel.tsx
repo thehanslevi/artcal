@@ -22,13 +22,13 @@ const FEEDS: Feed[] = [
   },
   {
     key: "attend",
-    label: "Witnessing",
+    label: "Happenings",
     filename: "feed-attend.ics",
     description: "Shows, concerts, screenings — things to witness.",
   },
   {
     key: "practice",
-    label: "Making",
+    label: "Practice",
     filename: "feed-practice.ics",
     description: "Classes and workshops — things to make.",
   },

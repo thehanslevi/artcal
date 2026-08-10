@@ -29,14 +29,14 @@ const feeds: Feed[] = [
   {
     filename: "feed-attend.ics",
     events: allEvents.filter((e) => e.mode === "witness"),
-    name: "Art Cal — Witnessing",
+    name: "Art Cal — Happenings",
     description:
       "Shows, plays, concerts, screenings — things to witness.",
   },
   {
     filename: "feed-practice.ics",
     events: allEvents.filter((e) => e.mode === "make"),
-    name: "Art Cal — Making",
+    name: "Art Cal — Practice",
     description: "Classes, workshops, participatory practice.",
   },
   {
