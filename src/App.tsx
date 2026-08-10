@@ -35,7 +35,7 @@ import { SubscribePanel } from "./components/SubscribePanel";
 import { SubmitPanel } from "./components/SubmitPanel";
 import { CuratorPicks } from "./components/CuratorPicks";
 import { Directory } from "./components/Directory";
-import { PRACTICES_VERIFIED } from "./lib/practices";
+import { PRACTICES_CHECKED } from "./lib/practices";
 import { track } from "./lib/usage";
 import { SyncPanel, type SyncStatus } from "./components/SyncPanel";
 
@@ -440,8 +440,9 @@ function App() {
             <span>Art Cal (Making × Witnessing)</span>
             <SubmitPanel open={submitOpen} onOpenChange={setSubmitOpen} />
             <span>
-              Last verified{" "}
-              {view === "making" ? PRACTICES_VERIFIED : data.lastVerified}
+              {view === "making"
+                ? `Updated ${PRACTICES_CHECKED}`
+                : `Last verified ${data.lastVerified}`}
             </span>
           </div>
         </div>

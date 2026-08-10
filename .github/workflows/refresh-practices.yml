@@ -1,0 +1,68 @@
+name: Refresh practices
+
+# Weekly link-liveness sweep of the standing venue Directory. This is NOT the
+# quarterly hand re-check (that's check-practices.yml, which files an issue and
+# never edits data). This confirms every venue still resolves and bumps the
+# file-level `lastChecked` date, so the site's "Updated" footer stays current
+# between hand re-checks. It never touches `verifiedOn` / `lastVerified`.
+on:
+  schedule:
+    - cron: "0 11 * * 1"  # Mondays 11:00 UTC (~6/7am ET)
+  workflow_dispatch:
+
+concurrency:
+  group: refresh-practices
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: true
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sweep links and stamp lastChecked
+        run: npx tsx scripts/refresh-practices.ts
+        timeout-minutes: 10
+
+      - name: Commit the date
+        run: |
+          git config user.name  "calendar-scanner[bot]"
+          git config user.email "calendar-scanner@users.noreply.github.com"
+          if git diff --quiet -- src/data/practices.json; then
+            echo "No change to lastChecked (already today, or sweep skipped)."
+            exit 0
+          fi
+          DATE=$(node -e "console.log(require('./src/data/practices.json').lastChecked)")
+          # Re-apply the one-line date onto the latest main each attempt so this
+          # can never collide with a scan or a hand edit landing meanwhile.
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            LASTCHECKED_DATE="$DATE" npx tsx scripts/refresh-practices.ts
+            git add src/data/practices.json
+            if git diff --staged --quiet; then
+              echo "main already at lastChecked $DATE."
+              exit 0
+            fi
+            git commit -m "Practices: link sweep, lastChecked $DATE"
+            if git push; then
+              exit 0
+            fi
+            echo "Push attempt $i failed (main moved); retrying onto new main..."
+          done
+          echo "Could not push after 5 attempts."
+          exit 1
