@@ -1,32 +1,32 @@
 {
-  "ranAt": "2026-08-16T12:30:23.285Z",
-  "acceptedTotal": 78,
-  "rejectedTotal": 134,
+  "ranAt": "2026-08-23T12:30:58.018Z",
+  "acceptedTotal": 38,
+  "rejectedTotal": 113,
   "duplicatesSkipped": [],
   "perVenue": {
     "Symphony Space": {
-      "accepted": 1,
-      "rejected": 10,
+      "accepted": 0,
+      "rejected": 12,
       "source": "json-ld"
     },
     "UnionDocs": {
-      "accepted": 5,
-      "rejected": 10,
+      "accepted": 2,
+      "rejected": 14,
       "source": "ics"
     },
     "DADA": {
-      "accepted": 5,
-      "rejected": 2,
+      "accepted": 6,
+      "rejected": 0,
       "source": "json-ld"
     },
     "The Arts Center at Governors Island": {
-      "accepted": 1,
+      "accepted": 0,
       "rejected": 4,
       "source": "ics"
     },
     "Delight Factory": {
-      "accepted": 0,
-      "rejected": 3,
+      "accepted": 2,
+      "rejected": 2,
       "source": "json-ld"
     },
     "Greenwich House Pottery": {
@@ -35,39 +35,49 @@
       "source": "json-ld"
     },
     "Flux Factory": {
-      "accepted": 3,
-      "rejected": 0,
+      "accepted": 0,
+      "rejected": 2,
       "source": "json-ld"
     },
     "Materials for the Arts": {
-      "accepted": 0,
-      "rejected": 1,
+      "accepted": 1,
+      "rejected": 0,
       "source": "json-ld"
     },
     "Brooklyn Shoe Space": {
-      "accepted": 0,
+      "accepted": 10,
       "rejected": 15,
       "source": "json-ld"
     },
     "Mostly Good Studios": {
-      "accepted": 9,
-      "rejected": 3,
+      "accepted": 1,
+      "rejected": 11,
       "source": "json-ld"
     },
     "Wonderville": {
-      "accepted": 9,
-      "rejected": 0,
+      "accepted": 8,
+      "rejected": 1,
       "source": "json-ld"
     },
     "Cybernetics Library": {
-      "accepted": 1,
-      "rejected": 1,
+      "accepted": 0,
+      "rejected": 2,
       "source": "json-ld"
     },
     "Wendy's Subway": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
+    },
+    "e-flux": {
+      "accepted": 1,
+      "rejected": 2,
+      "source": "json-ld"
+    },
+    "Pioneer Works": {
+      "accepted": 0,
+      "rejected": 2,
+      "source": "json-ld"
     },
     "Interference Archive": {
       "accepted": 0,
@@ -125,9 +135,9 @@
       "source": "none"
     },
     "Roulette": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "accepted": 2,
+      "rejected": 28,
+      "source": "llm"
     },
     "New York Theatre Workshop": {
       "accepted": 0,
@@ -141,13 +151,13 @@
     },
     "Wavefield": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 10,
+      "source": "llm"
     },
     "SUPR OMEN": {
-      "accepted": 0,
+      "accepted": 3,
       "rejected": 0,
-      "source": "none"
+      "source": "llm"
     },
     "Francis Kite Club": {
       "accepted": 0,
@@ -189,20 +199,15 @@
       "rejected": 0,
       "source": "none"
     },
-    "e-flux": {
-      "accepted": 3,
-      "rejected": 0,
-      "source": "json-ld"
-    },
     "Prime Produce": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
     },
     "FourOneOne": {
-      "accepted": 0,
+      "accepted": 2,
       "rejected": 0,
-      "source": "none"
+      "source": "llm"
     },
     "La MaMa": {
       "accepted": 0,
@@ -489,11 +494,6 @@
       "rejected": 0,
       "source": "none"
     },
-    "Pioneer Works": {
-      "accepted": 1,
-      "rejected": 1,
-      "source": "json-ld"
-    },
     "Bushwick Print Lab": {
       "accepted": 0,
       "rejected": 0,
@@ -593,11 +593,6 @@
       "accepted": 0,
       "rejected": 0,
       "source": "none"
-    },
-    "_email": {
-      "accepted": 40,
-      "rejected": 76,
-      "source": "llm"
     }
   }
 }
