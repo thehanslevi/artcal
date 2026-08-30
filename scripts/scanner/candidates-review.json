@@ -1,20 +1,6 @@
 [
   {
     "venue": "Symphony Space",
-    "event": "Silent Clowns Film Series: Laurel or Hardy - Some Solo Shorts",
-    "date": "Aug 23",
-    "reason": "duplicate of existing \"Silent Clowns Film Series: Laurel or Hardy - Some Solo Shorts\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Symphony Space",
-    "event": "NT Live: All My Sons",
-    "date": "Aug 23",
-    "reason": "duplicate of existing \"NT Live — All My Sons\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Symphony Space",
     "event": "R.F. Kuang, Taipei Story",
     "date": "Sep 12",
     "reason": "duplicate of existing \"R.F. Kuang — Taipei Story\"",
@@ -39,6 +25,13 @@
     "event": "The Klezmatics & Friends: Celebrating 40 Years of Radical Joy",
     "date": "Sep 24",
     "reason": "duplicate of existing \"The Klezmatics & Friends: Celebrating 40 Years of Radical Joy\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Symphony Space",
+    "event": "Kyle MacLachlan, Fictional Selves",
+    "date": "Sep 28",
+    "reason": "duplicate of existing \"Kyle MacLachlan, Fictional Selves\"",
     "source": "json-ld"
   },
   {
@@ -81,6 +74,13 @@
     "event": "Revelry: The Lovestruck Balladeers",
     "date": "Oct 7",
     "reason": "duplicate of existing \"Revelry: The Lovestruck Balladeers\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Symphony Space",
+    "event": "Greek Theater on Screen: Sophocles' Electra",
+    "date": "Oct 11",
+    "reason": "duplicate of existing \"Greek Theater on Screen: Sophocles' Electra\"",
     "source": "json-ld"
   },
   {
@@ -134,6 +134,13 @@
   },
   {
     "venue": "UnionDocs",
+    "event": "Sonic Detection: Necessary Notes for Arts and Performance",
+    "date": "Sep 8",
+    "reason": "duplicate of existing \"Sonic Detection: Necessary Notes for Arts and Performance\"",
+    "source": "ics"
+  },
+  {
+    "venue": "UnionDocs",
     "event": "Ballet — Wiseman's New York",
     "date": "Sep 9",
     "reason": "duplicate of existing \"Ballet — Wiseman's New York\"",
@@ -182,10 +189,10 @@
     "source": "ics"
   },
   {
-    "venue": "The Arts Center at Governors Island",
-    "event": "Recycled Runway",
-    "date": "Aug 29",
-    "reason": "duplicate of existing \"Recycled Runway\"",
+    "venue": "UnionDocs",
+    "event": "Zodiac Killer Project",
+    "date": "Oct 2",
+    "reason": "duplicate of existing \"Zodiac Killer Project\"",
     "source": "ics"
   },
   {
@@ -214,6 +221,20 @@
     "event": "Ego Free Jam",
     "date": "Sep 5",
     "reason": "duplicate of existing \"Ego Free Jam\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Delight Factory",
+    "event": "Drone Lab + Open Projector",
+    "date": "Sep 18",
+    "reason": "duplicate of existing \"Drone Lab + Open Projector\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Delight Factory",
+    "event": "Global Voices",
+    "date": "Sep 19",
+    "reason": "duplicate of existing \"Global Voices\"",
     "source": "json-ld"
   },
   {
@@ -281,23 +302,16 @@
   },
   {
     "venue": "Flux Factory",
-    "event": "Flux Saturday: In The End, And In Minutes",
-    "date": "Aug 29",
-    "reason": "duplicate of existing \"Flux Saturday: In The End, And In Minutes\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Flux Factory",
     "event": "Flux Sunday: Closing the Autonomous Zone",
     "date": "Aug 30",
     "reason": "duplicate of existing \"Flux Sunday: Closing the Autonomous Zone\"",
     "source": "json-ld"
   },
   {
-    "venue": "Brooklyn Shoe Space",
-    "event": "1-day Square Toe Slipper Making",
-    "date": "Aug 23",
-    "reason": "duplicate of existing \"1-day Square Toe Slipper Making\"",
+    "venue": "Materials for the Arts",
+    "event": "T-Shirt Silkscreen Workshop &#8220;Lucky Finds: Second Chances&#8221; | Exhibition Closing",
+    "date": "Sep 3",
+    "reason": "duplicate of existing \"T-Shirt Silkscreen Workshop &#8220;Lucky Finds: Second Chances&#8221; | Exhibition Closing\"",
     "source": "json-ld"
   },
   {
@@ -305,6 +319,13 @@
     "event": "Introduction to Shoe Making",
     "date": "Aug 31",
     "reason": "duplicate of existing \"Introduction to Shoe Making\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
+    "event": "Next Pair Day",
+    "date": "Sep 12",
+    "reason": "duplicate of existing \"Next Pair Day\"",
     "source": "json-ld"
   },
   {
@@ -330,6 +351,20 @@
   },
   {
     "venue": "Brooklyn Shoe Space",
+    "event": "Next Pair Day",
+    "date": "Sep 26",
+    "reason": "duplicate of existing \"Next Pair Day\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
+    "event": "Introduction to Shoe Making",
+    "date": "Sep 30",
+    "reason": "duplicate of existing \"Introduction to Shoe Making\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
     "event": "6-Day Intensive Shoemaking Workshop Day 1 - 3",
     "date": "Oct 7",
     "reason": "duplicate of existing \"6-Day Intensive Shoemaking Workshop Day 1 - 3\"",
@@ -337,9 +372,23 @@
   },
   {
     "venue": "Brooklyn Shoe Space",
+    "event": "Next Pair Day",
+    "date": "Oct 10",
+    "reason": "duplicate of existing \"Next Pair Day\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
     "event": "6-Day Intensive Shoemaking Workshop Day 4 - 6",
     "date": "Oct 14",
     "reason": "duplicate of existing \"6-Day Intensive Shoemaking Workshop Day 4 - 6\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
+    "event": "Next Pair Day",
+    "date": "Oct 18",
+    "reason": "duplicate of existing \"Next Pair Day\"",
     "source": "json-ld"
   },
   {
@@ -358,9 +407,30 @@
   },
   {
     "venue": "Brooklyn Shoe Space",
+    "event": "Next Pair Day",
+    "date": "Nov 1",
+    "reason": "duplicate of existing \"Next Pair Day\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
+    "event": "Next Pair Day",
+    "date": "Nov 21",
+    "reason": "duplicate of existing \"Next Pair Day\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
     "event": "10day intensive shoemaking class Day 1& 2 of 10",
     "date": "Dec 2",
     "reason": "duplicate of existing \"10day intensive shoemaking class Day 1& 2 of 10\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
+    "event": "Next Pair Day",
+    "date": "Dec 5",
+    "reason": "duplicate of existing \"Next Pair Day\"",
     "source": "json-ld"
   },
   {
@@ -375,6 +445,13 @@
     "event": "10day intensive shoemaking class Day 3 - 5",
     "date": "Dec 9",
     "reason": "duplicate of existing \"10day intensive shoemaking class Day 3 - 5\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
+    "event": "Next Pair Day",
+    "date": "Dec 13",
+    "reason": "duplicate of existing \"Next Pair Day\"",
     "source": "json-ld"
   },
   {
@@ -396,20 +473,6 @@
     "event": "10day intensive shoemaking class Day 9 & 10",
     "date": "Dec 21",
     "reason": "duplicate of existing \"10day intensive shoemaking class Day 9 & 10\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Mostly Good Studios",
-    "event": "Creature Crafting",
-    "date": "Aug 23",
-    "reason": "duplicate of existing \"Creature Crafting\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Mostly Good Studios",
-    "event": "Show & Tell Salon",
-    "date": "Aug 27",
-    "reason": "duplicate of existing \"Show & Tell Salon\"",
     "source": "json-ld"
   },
   {
@@ -476,31 +539,10 @@
     "source": "json-ld"
   },
   {
-    "venue": "Wonderville",
-    "event": "Disasterpiece Movie Night: Cool Cat Saves the Kids",
-    "date": "Aug 23",
-    "reason": "children's programming",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Cybernetics Library",
-    "event": "Cybernetics Library Reading Room",
-    "date": "Aug 28",
-    "reason": "duplicate of existing \"Cybernetics Library Reading Room\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Cybernetics Library",
-    "event": "Cybernetics Library Open Hours",
-    "date": "Sep 5",
-    "reason": "duplicate of existing \"Cybernetics Library Open Hours\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "e-flux",
-    "event": "e-flux Book Sale and Open House",
-    "date": "Aug 29",
-    "reason": "duplicate of existing \"Book Sale and Open House\"",
+    "venue": "Mostly Good Studios",
+    "event": "HAND BUILDING COURSE FALL SESSION WEEK 6",
+    "date": "Nov 15",
+    "reason": "duplicate of existing \"HAND BUILDING COURSE FALL SESSION WEEK 6\"",
     "source": "json-ld"
   },
   {
@@ -511,283 +553,24 @@
     "source": "json-ld"
   },
   {
-    "venue": "Pioneer Works",
-    "event": "Opening Reception for Tuomas A. Laitinen, LaJuné McMillian, and Finnegan Shannon with Joselia Rebekah Hughes, Ariana Martinez, and Alex Dolores Salerno",
-    "date": "Sep 11",
-    "reason": "duplicate of existing \"Opening Reception for Tuomas A. Laitinen, LaJuné McMillian, and Finnegan Shannon with Joselia Rebekah Hughes, Ariana Martinez, and Alex Dolores Salerno\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Pioneer Works",
-    "event": "Opening Reception for Tuomas A. Laitinen, LaJuné McMillian, and Finnegan Shannon with Joselia Rebekah Hughes, Ariana Martinez, and Alex Dolores Salerno",
-    "date": "Sep 11",
-    "reason": "duplicate of existing \"Opening Reception for Tuomas A. Laitinen, LaJuné McMillian, and Finnegan Shannon with Joselia Rebekah Hughes, Ariana Martinez, and Alex Dolores Salerno\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Zeena Parkins, Ikue Mori, Mette Henriette",
-    "date": "Sep 14",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Okkyung Lee, C. Spencer Yeh, Nate Wooley",
-    "date": "Sep 15",
-    "reason": "title tokens missing from source",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Mary Halvorson, Patricia Brennan, Tomeka Reid",
+    "venue": "e-flux",
+    "event": "Bar Laika presents Playback 0037 with Midgar Records",
     "date": "Sep 16",
-    "reason": "title tokens missing from source",
-    "source": "llm"
+    "reason": "duplicate of existing \"Bar Laika presents Playback 0037 with Midgar Records\"",
+    "source": "json-ld"
   },
   {
-    "venue": "Roulette",
-    "event": "Vijay Iyer, Tyshawn Sorey, Linda May Han Oh",
-    "date": "Sep 17",
-    "reason": "title tokens missing from source",
-    "source": "llm"
+    "venue": "Pioneer Works",
+    "event": "Opening Reception for Tuomas A. Laitinen, LaJuné McMillian, and Finnegan Shannon with Joselia Rebekah Hughes, Ariana Martinez, and Alex Dolores Salerno",
+    "date": "Sep 11",
+    "reason": "duplicate of existing \"Opening Reception for Tuomas A. Laitinen, LaJuné McMillian, and Finnegan Shannon with Joselia Rebekah Hughes, Ariana Martinez, and Alex Dolores Salerno\"",
+    "source": "json-ld"
   },
   {
-    "venue": "Roulette",
-    "event": "Anthony Braxton, James Fei, Taylor Ho Bynum",
-    "date": "Sep 18",
-    "reason": "title tokens missing from source",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "John Zorn, Bill Frisell, Julian Lage",
-    "date": "Sep 20",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Carla Kihlstedt, Shahzad Ismaily, Ches Smith",
-    "date": "Sep 21",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Susie Ibarra, Sylvie Courvoisier, Ned Rothenberg",
-    "date": "Sep 22",
-    "reason": "title tokens missing from source",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Trevor Dunn, Mary Kouyoumdjian, Anna Webber",
-    "date": "Sep 23",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Brandon Lopez, Gerald Cleaver, Ingrid Laubrock",
-    "date": "Sep 24",
-    "reason": "title tokens missing from source",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Kris Davis, Matt Mitchell, Craig Taborn",
-    "date": "Sep 25",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Tyshawn Sorey, Vijay Iyer, Linda May Han Oh",
-    "date": "Sep 26",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Ikue Mori, Zeena Parkins, Mette Henriette",
-    "date": "Sep 27",
-    "reason": "title tokens missing from source",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "C. Spencer Yeh, Okkyung Lee, Nate Wooley",
-    "date": "Sep 28",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Patricia Brennan, Mary Halvorson, Tomeka Reid",
-    "date": "Sep 29",
-    "reason": "title tokens missing from source",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "James Fei, Anthony Braxton, Taylor Ho Bynum",
-    "date": "Sep 30",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Wadada Leo Smith, Roscoe Mitchell, George Lewis",
-    "date": "Oct 1",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Bill Frisell, John Zorn, Julian Lage",
-    "date": "Oct 2",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Shahzad Ismaily, Carla Kihlstedt, Ches Smith",
-    "date": "Oct 3",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Sylvie Courvoisier, Susie Ibarra, Ned Rothenberg",
-    "date": "Oct 4",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Mary Kouyoumdjian, Trevor Dunn, Anna Webber",
-    "date": "Oct 5",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Gerald Cleaver, Brandon Lopez, Ingrid Laubrock",
-    "date": "Oct 6",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Matt Mitchell, Kris Davis, Craig Taborn",
-    "date": "Oct 7",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Craig Taborn, Kris Davis, Matt Mitchell",
-    "date": "Oct 8",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Ingrid Laubrock, Brandon Lopez, Gerald Cleaver",
-    "date": "Oct 9",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Anna Webber, Trevor Dunn, Mary Kouyoumdjian",
-    "date": "Oct 10",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Ned Rothenberg, Susie Ibarra, Sylvie Courvoisier",
-    "date": "Oct 11",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Roulette",
-    "event": "Ches Smith, Carla Kihlstedt, Shahzad Ismaily",
-    "date": "Oct 12",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Wavefield",
-    "event": "Generative Art Workshop Series",
-    "date": "Jan 15",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Wavefield",
-    "event": "Live Coding Performance Night",
-    "date": "Feb 10",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Wavefield",
-    "event": "Modular Synth Meetup",
-    "date": "Mar 5",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Wavefield",
-    "event": "AI Music Composition Masterclass",
-    "date": "Apr 20",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Wavefield",
-    "event": "Experimental Film Screening Series",
-    "date": "May 1",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Wavefield",
-    "event": "Interactive Media Installation Opening",
-    "date": "Jun 12",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Wavefield",
-    "event": "Sonic Experiments Performance Series",
-    "date": "Jul 26",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Wavefield",
-    "event": "Virtual Reality Art Exhibition",
-    "date": "Aug 15",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Wavefield",
-    "event": "Data Visualization Workshop",
-    "date": "Sep 1",
-    "reason": "title tokens missing from source",
-    "source": "llm"
-  },
-  {
-    "venue": "Wavefield",
-    "event": "Holiday Sound Bath Meditation",
-    "date": "Dec 25",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
+    "venue": "Pioneer Works",
+    "event": "Opening Reception for Tuomas A. Laitinen, LaJuné McMillian, and Finnegan Shannon with Joselia Rebekah Hughes, Ariana Martinez, and Alex Dolores Salerno",
+    "date": "Sep 11",
+    "reason": "duplicate of existing \"Opening Reception for Tuomas A. Laitinen, LaJuné McMillian, and Finnegan Shannon with Joselia Rebekah Hughes, Ariana Martinez, and Alex Dolores Salerno\"",
+    "source": "json-ld"
   }
 ]

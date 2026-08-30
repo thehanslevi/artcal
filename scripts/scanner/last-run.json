@@ -1,7 +1,7 @@
 {
-  "ranAt": "2026-08-23T12:30:58.018Z",
-  "acceptedTotal": 38,
-  "rejectedTotal": 113,
+  "ranAt": "2026-08-30T15:56:29.357Z",
+  "acceptedTotal": 31,
+  "rejectedTotal": 82,
   "duplicatesSkipped": [],
   "perVenue": {
     "Symphony Space": {
@@ -10,58 +10,58 @@
       "source": "json-ld"
     },
     "UnionDocs": {
-      "accepted": 2,
-      "rejected": 14,
+      "accepted": 0,
+      "rejected": 16,
       "source": "ics"
     },
     "DADA": {
-      "accepted": 6,
+      "accepted": 8,
       "rejected": 0,
       "source": "json-ld"
     },
     "The Arts Center at Governors Island": {
       "accepted": 0,
-      "rejected": 4,
+      "rejected": 3,
       "source": "ics"
     },
     "Delight Factory": {
-      "accepted": 2,
-      "rejected": 2,
+      "accepted": 0,
+      "rejected": 4,
       "source": "json-ld"
     },
     "Greenwich House Pottery": {
-      "accepted": 0,
+      "accepted": 1,
       "rejected": 8,
       "source": "json-ld"
     },
     "Flux Factory": {
-      "accepted": 0,
-      "rejected": 2,
+      "accepted": 2,
+      "rejected": 1,
       "source": "json-ld"
     },
     "Materials for the Arts": {
       "accepted": 1,
-      "rejected": 0,
+      "rejected": 1,
       "source": "json-ld"
     },
     "Brooklyn Shoe Space": {
-      "accepted": 10,
-      "rejected": 15,
+      "accepted": 5,
+      "rejected": 23,
       "source": "json-ld"
     },
     "Mostly Good Studios": {
-      "accepted": 1,
-      "rejected": 11,
+      "accepted": 0,
+      "rejected": 10,
       "source": "json-ld"
     },
     "Wonderville": {
       "accepted": 8,
-      "rejected": 1,
+      "rejected": 0,
       "source": "json-ld"
     },
     "Cybernetics Library": {
-      "accepted": 0,
-      "rejected": 2,
+      "accepted": 1,
+      "rejected": 0,
       "source": "json-ld"
     },
     "Wendy's Subway": {
@@ -70,7 +70,7 @@
       "source": "none"
     },
     "e-flux": {
-      "accepted": 1,
+      "accepted": 5,
       "rejected": 2,
       "source": "json-ld"
     },
@@ -78,141 +78,6 @@
       "accepted": 0,
       "rejected": 2,
       "source": "json-ld"
-    },
-    "Interference Archive": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Summer for the City": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "The Tank": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Brooklyn Art Haus": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "New York Live Arts": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Abrons Arts Center": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Baryshnikov Arts Center": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Film Forum": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Mono No Aware": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Bushwick Community Darkroom": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "ISSUE Project Room": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Roulette": {
-      "accepted": 2,
-      "rejected": 28,
-      "source": "llm"
-    },
-    "New York Theatre Workshop": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "CATCH!": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Wavefield": {
-      "accepted": 0,
-      "rejected": 10,
-      "source": "llm"
-    },
-    "SUPR OMEN": {
-      "accepted": 3,
-      "rejected": 0,
-      "source": "llm"
-    },
-    "Francis Kite Club": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Telepathy": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Performance Space New York": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Chez Bushwick": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Footlight Presents (Windjammer)": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Museum of Reclaimed Urban Space (MoRUS)": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Recess": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Sleepwalk": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Prime Produce": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "FourOneOne": {
-      "accepted": 2,
-      "rejected": 0,
-      "source": "llm"
-    },
-    "La MaMa": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
     },
     "The Public Theater": {
       "accepted": 0,
@@ -590,6 +455,141 @@
       "source": "none"
     },
     "El Museo del Barrio": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Interference Archive": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Summer for the City": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "The Tank": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Brooklyn Art Haus": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "New York Live Arts": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Abrons Arts Center": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Baryshnikov Arts Center": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Film Forum": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Mono No Aware": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Bushwick Community Darkroom": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "ISSUE Project Room": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Roulette": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "New York Theatre Workshop": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "CATCH!": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Wavefield": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "SUPR OMEN": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Francis Kite Club": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Telepathy": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Performance Space New York": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Chez Bushwick": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Footlight Presents (Windjammer)": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Museum of Reclaimed Urban Space (MoRUS)": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Recess": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Sleepwalk": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Prime Produce": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "FourOneOne": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "La MaMa": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
