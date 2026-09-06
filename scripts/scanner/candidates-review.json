@@ -22,13 +22,6 @@
   },
   {
     "venue": "Symphony Space",
-    "event": "The Klezmatics & Friends: Celebrating 40 Years of Radical Joy",
-    "date": "Sep 24",
-    "reason": "duplicate of existing \"The Klezmatics & Friends: Celebrating 40 Years of Radical Joy\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Symphony Space",
     "event": "Kyle MacLachlan, Fictional Selves",
     "date": "Sep 28",
     "reason": "duplicate of existing \"Kyle MacLachlan, Fictional Selves\"",
@@ -75,55 +68,6 @@
     "date": "Oct 7",
     "reason": "duplicate of existing \"Revelry: The Lovestruck Balladeers\"",
     "source": "json-ld"
-  },
-  {
-    "venue": "Symphony Space",
-    "event": "Greek Theater on Screen: Sophocles' Electra",
-    "date": "Oct 11",
-    "reason": "duplicate of existing \"Greek Theater on Screen: Sophocles' Electra\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "UnionDocs",
-    "event": "Wiseman's New York",
-    "date": "Sep 2",
-    "reason": "duplicate of existing \"Wiseman's New York\"",
-    "source": "ics"
-  },
-  {
-    "venue": "UnionDocs",
-    "event": "Welfare — Wiseman's New York",
-    "date": "Sep 2",
-    "reason": "duplicate of existing (0.75 similarity to \"Wiseman's New York\")",
-    "source": "ics"
-  },
-  {
-    "venue": "UnionDocs",
-    "event": "Wiseman's New York: New York In Transition — Opening Panel",
-    "date": "Sep 3",
-    "reason": "duplicate of existing \"Wiseman's New York: New York In Transition — Opening Panel\"",
-    "source": "ics"
-  },
-  {
-    "venue": "UnionDocs",
-    "event": "Hospital — Wiseman's New York",
-    "date": "Sep 3",
-    "reason": "duplicate of existing \"Hospital — Wiseman's New York\"",
-    "source": "ics"
-  },
-  {
-    "venue": "UnionDocs",
-    "event": "High School II — Wiseman's New York",
-    "date": "Sep 4",
-    "reason": "duplicate of existing \"High School II — Wiseman's New York\"",
-    "source": "ics"
-  },
-  {
-    "venue": "UnionDocs",
-    "event": "Model — Wiseman's New York",
-    "date": "Sep 5",
-    "reason": "duplicate of existing \"Model — Wiseman's New York\"",
-    "source": "ics"
   },
   {
     "venue": "UnionDocs",
@@ -196,6 +140,20 @@
     "source": "ics"
   },
   {
+    "venue": "DADA",
+    "event": "Indie Americana - Old Father Eternity, Kevin Wulf, Little Cliff",
+    "date": "Sep 6",
+    "reason": "duplicate of existing \"Indie Americana - Old Father Eternity, Kevin Wulf, Little Cliff\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "DADA",
+    "event": "Sorcerer album release w/ Herb Lore",
+    "date": "Sep 9",
+    "reason": "duplicate of existing \"Sorcerer album release w/ Herb Lore\"",
+    "source": "json-ld"
+  },
+  {
     "venue": "The Arts Center at Governors Island",
     "event": "Curriculum IV: Spin and Spin! Turn! Turn! Turn!",
     "date": "Sep 10",
@@ -211,17 +169,10 @@
   },
   {
     "venue": "The Arts Center at Governors Island",
-    "event": "September 26 Open Studios",
+    "event": "Climate Week Open Studios featuring Anh Vo",
     "date": "Sep 26",
     "reason": "duplicate of existing \"September 26 Open Studios\"",
     "source": "ics"
-  },
-  {
-    "venue": "Delight Factory",
-    "event": "Ego Free Jam",
-    "date": "Sep 5",
-    "reason": "duplicate of existing \"Ego Free Jam\"",
-    "source": "json-ld"
   },
   {
     "venue": "Delight Factory",
@@ -274,7 +225,7 @@
   },
   {
     "venue": "Greenwich House Pottery",
-    "event": "Ryan Flores",
+    "event": "The Watchers, Ryan Flores",
     "date": "Sep 17",
     "reason": "duplicate of existing \"Ryan Flores\"",
     "source": "json-ld"
@@ -301,24 +252,31 @@
     "source": "json-ld"
   },
   {
+    "venue": "Greenwich House Pottery",
+    "event": "Made in Clay Holiday Sale",
+    "date": "Dec 12",
+    "reason": "duplicate of existing \"Made in Clay Holiday Sale\"",
+    "source": "json-ld"
+  },
+  {
     "venue": "Flux Factory",
-    "event": "Flux Sunday: Closing the Autonomous Zone",
-    "date": "Aug 30",
-    "reason": "duplicate of existing \"Flux Sunday: Closing the Autonomous Zone\"",
+    "event": "Underground Underwater Costume Workshop",
+    "date": "Sep 6",
+    "reason": "duplicate of existing \"Underground Underwater Costume Workshop\"",
     "source": "json-ld"
   },
   {
     "venue": "Materials for the Arts",
-    "event": "T-Shirt Silkscreen Workshop &#8220;Lucky Finds: Second Chances&#8221; | Exhibition Closing",
-    "date": "Sep 3",
-    "reason": "duplicate of existing \"T-Shirt Silkscreen Workshop &#8220;Lucky Finds: Second Chances&#8221; | Exhibition Closing\"",
+    "event": "Music: The Sounds of Math, Science &#038; Social Studies (Fall 2026)",
+    "date": "Oct 10",
+    "reason": "duplicate of existing \"Music: The Sounds of Math, Science &#038; Social Studies (Fall 2026)\"",
     "source": "json-ld"
   },
   {
     "venue": "Brooklyn Shoe Space",
-    "event": "Introduction to Shoe Making",
-    "date": "Aug 31",
-    "reason": "duplicate of existing \"Introduction to Shoe Making\"",
+    "event": "1-day Tote Bag Making Workshop",
+    "date": "Sep 11",
+    "reason": "duplicate of existing \"1-day Tote Bag Making Workshop\"",
     "source": "json-ld"
   },
   {
@@ -326,6 +284,13 @@
     "event": "Next Pair Day",
     "date": "Sep 12",
     "reason": "duplicate of existing \"Next Pair Day\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
+    "event": "1-day Square Toe Slipper Making",
+    "date": "Sep 13",
+    "reason": "duplicate of existing \"1-day Square Toe Slipper Making\"",
     "source": "json-ld"
   },
   {
@@ -340,6 +305,20 @@
     "event": "6-Day Intensive Shoemaking Workshop",
     "date": "Sep 16",
     "reason": "duplicate of existing \"6-Day Intensive Shoemaking Workshop\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
+    "event": "Foundation to Adhesives x Sneakers",
+    "date": "Sep 19",
+    "reason": "duplicate of existing \"Foundation to Adhesives x Sneakers\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
+    "event": "Mule Making",
+    "date": "Sep 19",
+    "reason": "duplicate of existing \"Mule Making\"",
     "source": "json-ld"
   },
   {
@@ -410,6 +389,13 @@
     "event": "Next Pair Day",
     "date": "Nov 1",
     "reason": "duplicate of existing \"Next Pair Day\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
+    "event": "Introduction to Shoe Making",
+    "date": "Nov 12",
+    "reason": "duplicate of existing \"Introduction to Shoe Making\"",
     "source": "json-ld"
   },
   {
@@ -546,10 +532,17 @@
     "source": "json-ld"
   },
   {
+    "venue": "Cybernetics Library",
+    "event": "Cybernetics Library Open Hours",
+    "date": "Sep 26",
+    "reason": "duplicate of existing \"Cybernetics Library Open Hours\"",
+    "source": "json-ld"
+  },
+  {
     "venue": "e-flux",
-    "event": "Bar Laika presents Playback 0036 with Fergus Jones",
-    "date": "Sep 3",
-    "reason": "duplicate of existing \"Bar Laika presents Playback 0036 with Fergus Jones\"",
+    "event": "Su Yu Hsin: Particular Waters",
+    "date": "Sep 10",
+    "reason": "duplicate of existing \"Su Yu Hsin: Particular Waters\"",
     "source": "json-ld"
   },
   {
@@ -560,6 +553,34 @@
     "source": "json-ld"
   },
   {
+    "venue": "e-flux",
+    "event": "Rehearsal Behavior. I: Chantal Akerman and Shirley Clarke",
+    "date": "Sep 17",
+    "reason": "duplicate of existing \"Rehearsal Behavior. I: Chantal Akerman and Shirley Clarke\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "e-flux",
+    "event": "Rehearsal Behavior. II: Yvonne Rainer",
+    "date": "Sep 19",
+    "reason": "duplicate of existing \"Rehearsal Behavior. II: Yvonne Rainer\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "e-flux",
+    "event": "Art and Theory Today: Readings from the Index",
+    "date": "Sep 22",
+    "reason": "duplicate of existing \"Art and Theory Today: Readings from the Index\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "e-flux",
+    "event": "Planetary Afterimages: After The Short Century",
+    "date": "Sep 24",
+    "reason": "duplicate of existing \"Planetary Afterimages: After The Short Century\"",
+    "source": "json-ld"
+  },
+  {
     "venue": "Pioneer Works",
     "event": "Opening Reception for Tuomas A. Laitinen, LaJuné McMillian, and Finnegan Shannon with Joselia Rebekah Hughes, Ariana Martinez, and Alex Dolores Salerno",
     "date": "Sep 11",
@@ -572,5 +593,1314 @@
     "date": "Sep 11",
     "reason": "duplicate of existing \"Opening Reception for Tuomas A. Laitinen, LaJuné McMillian, and Finnegan Shannon with Joselia Rebekah Hughes, Ariana Martinez, and Alex Dolores Salerno\"",
     "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Craft Company",
+    "event": "Embroidery for Beginners",
+    "date": "Jan 9",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Craft Company",
+    "event": "Macrame Plant Hanger",
+    "date": "Feb 7",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Craft Company",
+    "event": "Intro to Block Printing",
+    "date": "Mar 13",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Craft Company",
+    "event": "Natural Dyeing",
+    "date": "Apr 11",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Craft Company",
+    "event": "Intro to Quilting",
+    "date": "May 8",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Craft Company",
+    "event": "Advanced Sewing",
+    "date": "Jun 13",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Craft Company",
+    "event": "Intro to Weaving",
+    "date": "Jul 10",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Craft Company",
+    "event": "Basket Weaving",
+    "date": "Aug 8",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Craft Company",
+    "event": "Candle Making",
+    "date": "Sep 4",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Craft Company",
+    "event": "Jewelry Making",
+    "date": "Oct 10",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Craft Company",
+    "event": "Calligraphy for Beginners",
+    "date": "Nov 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Craft Company",
+    "event": "Intro to Sewing Machine Basics",
+    "date": "Nov 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Craft Company",
+    "event": "Holiday Wreath Making",
+    "date": "Dec 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Craft Company",
+    "event": "Knitting 101",
+    "date": "Dec 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "The Art of the Sonnet",
+    "date": "Sep 24",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "The Art of the Sonnet",
+    "date": "Oct 1",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "Writing the Self",
+    "date": "Oct 3",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "Advanced Poetics Seminar",
+    "date": "Oct 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "The Poetic Sequence",
+    "date": "Oct 7",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "The Art of the Sonnet",
+    "date": "Oct 8",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "Writing the Self",
+    "date": "Oct 10",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "Advanced Poetics Seminar",
+    "date": "Oct 12",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "The Poetic Sequence",
+    "date": "Oct 14",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "The Art of the Sonnet",
+    "date": "Oct 15",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "Writing the Self",
+    "date": "Oct 17",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "Advanced Poetics Seminar",
+    "date": "Oct 19",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "The Poetic Sequence",
+    "date": "Oct 21",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "The Art of the Sonnet",
+    "date": "Oct 22",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "Writing the Self",
+    "date": "Oct 24",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "The Poetic Sequence",
+    "date": "Oct 28",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "The Art of the Sonnet",
+    "date": "Oct 29",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "The Poetic Sequence",
+    "date": "Nov 4",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "The Art of the Sonnet",
+    "date": "Nov 5",
+    "reason": "streaming / not in person",
+    "source": "llm"
+  },
+  {
+    "venue": "Brooklyn Poets",
+    "event": "Advanced Poetics Seminar",
+    "date": "Nov 9",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Lower East Side Printshop",
+    "event": "Reductive Linocut Relief Printing with Kakyoung Lee",
+    "date": "Jan 7",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Jan 3",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Jan 10",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Jan 17",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Jan 24",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Jan 31",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Feb 7",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Feb 14",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Feb 21",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Feb 28",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Mar 7",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Mar 14",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Mar 21",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Mar 28",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Apr 4",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Apr 11",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Apr 18",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Apr 25",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "May 2",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Oct 11",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Oct 18",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Oct 25",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Nov 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Nov 29",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Dec 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Dec 13",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Dec 20",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Manhattan Graphics Center",
+    "event": "Open Studio: Printmaking",
+    "date": "Dec 27",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Jan 11",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Jan 18",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Jan 25",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Feb 1",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Feb 8",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Feb 15",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Feb 22",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Mar 1",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Mar 8",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Mar 15",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Mar 22",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Mar 29",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Apr 5",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Apr 12",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Apr 19",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Apr 26",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "May 3",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "May 10",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "May 17",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "May 24",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "May 31",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Jun 7",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Jun 14",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Jun 21",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Jun 28",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Jul 5",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Jul 12",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Jul 19",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "The Arm",
+    "event": "Poster Printing Workshop",
+    "date": "Jul 26",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 4",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 7",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 8",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 9",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 10",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 11",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 12",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 13",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 16",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 17",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 18",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 19",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 20",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 21",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 22",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 23",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 24",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 25",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 26",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 27",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 28",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 29",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 30",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Oct 31",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Nov 1",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Powerhouse Arts",
+    "event": "MGC Community Print Studio: Intaglio Workshop",
+    "date": "Nov 2",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Jan 11",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Jan 11",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Jan 18",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Jan 18",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Jan 25",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Jan 25",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Feb 1",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Feb 1",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Feb 8",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Feb 8",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Feb 15",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Feb 15",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Feb 22",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Feb 22",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Mar 1",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Mar 1",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Mar 8",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Mar 8",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Mar 15",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Mar 15",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Mar 22",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Mar 22",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Mar 29",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Mar 29",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Apr 5",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Apr 5",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Apr 12",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Apr 12",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Apr 19",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Apr 19",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Apr 26",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Artshack Brooklyn",
+    "event": "Adults: Wheel Throwing: Intro to the Basics",
+    "date": "Apr 26",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Jan 11",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Jan 18",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Jan 25",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Feb 1",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Feb 8",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Feb 15",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Feb 22",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Mar 1",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Mar 8",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Mar 15",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Mar 22",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Mar 29",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Apr 5",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Apr 12",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Apr 19",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Apr 26",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "May 3",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "May 10",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "May 17",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "May 24",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "May 31",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Jun 7",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Jun 14",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Jun 21",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Jun 28",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Jul 5",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Jul 12",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Jul 19",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Jul 26",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Aug 2",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Aug 9",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Aug 16",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Aug 23",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Choplet Ceramic Studio",
+    "event": "Wheel Throwing: Intro to the Basics",
+    "date": "Aug 30",
+    "reason": "date is in the past",
+    "source": "llm"
   }
 ]

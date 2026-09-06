@@ -1,22 +1,22 @@
 {
-  "ranAt": "2026-08-30T15:56:29.357Z",
-  "acceptedTotal": 31,
-  "rejectedTotal": 82,
+  "ranAt": "2026-09-06T14:50:03.060Z",
+  "acceptedTotal": 47,
+  "rejectedTotal": 272,
   "duplicatesSkipped": [],
   "perVenue": {
     "Symphony Space": {
-      "accepted": 0,
-      "rejected": 12,
+      "accepted": 2,
+      "rejected": 10,
       "source": "json-ld"
     },
     "UnionDocs": {
-      "accepted": 0,
-      "rejected": 16,
+      "accepted": 1,
+      "rejected": 10,
       "source": "ics"
     },
     "DADA": {
       "accepted": 8,
-      "rejected": 0,
+      "rejected": 2,
       "source": "json-ld"
     },
     "The Arts Center at Governors Island": {
@@ -25,17 +25,17 @@
       "source": "ics"
     },
     "Delight Factory": {
-      "accepted": 0,
-      "rejected": 4,
+      "accepted": 1,
+      "rejected": 3,
       "source": "json-ld"
     },
     "Greenwich House Pottery": {
-      "accepted": 1,
-      "rejected": 8,
+      "accepted": 0,
+      "rejected": 9,
       "source": "json-ld"
     },
     "Flux Factory": {
-      "accepted": 2,
+      "accepted": 3,
       "rejected": 1,
       "source": "json-ld"
     },
@@ -45,8 +45,8 @@
       "source": "json-ld"
     },
     "Brooklyn Shoe Space": {
-      "accepted": 5,
-      "rejected": 23,
+      "accepted": 1,
+      "rejected": 27,
       "source": "json-ld"
     },
     "Mostly Good Studios": {
@@ -55,13 +55,13 @@
       "source": "json-ld"
     },
     "Wonderville": {
-      "accepted": 8,
+      "accepted": 9,
       "rejected": 0,
       "source": "json-ld"
     },
     "Cybernetics Library": {
-      "accepted": 1,
-      "rejected": 0,
+      "accepted": 0,
+      "rejected": 1,
       "source": "json-ld"
     },
     "Wendy's Subway": {
@@ -70,74 +70,14 @@
       "source": "none"
     },
     "e-flux": {
-      "accepted": 5,
-      "rejected": 2,
+      "accepted": 2,
+      "rejected": 6,
       "source": "json-ld"
     },
     "Pioneer Works": {
       "accepted": 0,
       "rejected": 2,
       "source": "json-ld"
-    },
-    "The Public Theater": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Joe's Pub": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "St. Ann's Warehouse": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "National Sawdust": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Ars Nova": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Metrograph": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Film at Lincoln Center": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Mercury Store": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Nuyorican Poets Cafe": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "FRIGID NY (Under St. Marks)": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "BAM": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "The Bushwick Starr": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
     },
     "Target Margin Theater": {
       "accepted": 0,
@@ -191,8 +131,8 @@
     },
     "Brooklyn Craft Company": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 14,
+      "source": "llm"
     },
     "Makerspace NYC": {
       "accepted": 0,
@@ -215,9 +155,9 @@
       "source": "none"
     },
     "Brooklyn Poets": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "accepted": 10,
+      "rejected": 20,
+      "source": "llm"
     },
     "UrbanGlass": {
       "accepted": 0,
@@ -225,9 +165,9 @@
       "source": "none"
     },
     "Lower East Side Printshop": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "accepted": 5,
+      "rejected": 1,
+      "source": "llm"
     },
     "Robert Blackburn Printmaking Workshop": {
       "accepted": 0,
@@ -235,14 +175,14 @@
       "source": "none"
     },
     "Manhattan Graphics Center": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "accepted": 4,
+      "rejected": 27,
+      "source": "llm"
     },
     "The Arm": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 29,
+      "source": "llm"
     },
     "Dieu Donné": {
       "accepted": 0,
@@ -251,18 +191,18 @@
     },
     "Powerhouse Arts": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 30,
+      "source": "llm"
     },
     "Artshack Brooklyn": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 32,
+      "source": "llm"
     },
     "Choplet Ceramic Studio": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 34,
+      "source": "llm"
     },
     "Gasworks NYC": {
       "accepted": 0,
@@ -590,6 +530,66 @@
       "source": "none"
     },
     "La MaMa": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "The Public Theater": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Joe's Pub": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "St. Ann's Warehouse": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "National Sawdust": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Ars Nova": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Metrograph": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Film at Lincoln Center": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Mercury Store": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Nuyorican Poets Cafe": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "FRIGID NY (Under St. Marks)": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "BAM": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "The Bushwick Starr": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
