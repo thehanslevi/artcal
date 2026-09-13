@@ -1,66 +1,66 @@
 {
-  "ranAt": "2026-09-06T14:50:03.060Z",
-  "acceptedTotal": 47,
-  "rejectedTotal": 272,
+  "ranAt": "2026-09-13T15:31:19.210Z",
+  "acceptedTotal": 43,
+  "rejectedTotal": 81,
   "duplicatesSkipped": [],
   "perVenue": {
     "Symphony Space": {
-      "accepted": 2,
-      "rejected": 10,
+      "accepted": 0,
+      "rejected": 12,
       "source": "json-ld"
     },
     "UnionDocs": {
       "accepted": 1,
-      "rejected": 10,
+      "rejected": 5,
       "source": "ics"
     },
     "DADA": {
       "accepted": 8,
-      "rejected": 2,
+      "rejected": 1,
       "source": "json-ld"
     },
     "The Arts Center at Governors Island": {
-      "accepted": 0,
+      "accepted": 1,
       "rejected": 3,
       "source": "ics"
     },
     "Delight Factory": {
-      "accepted": 1,
-      "rejected": 3,
+      "accepted": 2,
+      "rejected": 4,
       "source": "json-ld"
     },
     "Greenwich House Pottery": {
-      "accepted": 0,
-      "rejected": 9,
+      "accepted": 10,
+      "rejected": 3,
       "source": "json-ld"
     },
     "Flux Factory": {
-      "accepted": 3,
-      "rejected": 1,
+      "accepted": 1,
+      "rejected": 2,
       "source": "json-ld"
     },
     "Materials for the Arts": {
-      "accepted": 1,
-      "rejected": 1,
+      "accepted": 0,
+      "rejected": 2,
       "source": "json-ld"
     },
     "Brooklyn Shoe Space": {
-      "accepted": 1,
-      "rejected": 27,
+      "accepted": 2,
+      "rejected": 25,
       "source": "json-ld"
     },
     "Mostly Good Studios": {
-      "accepted": 0,
-      "rejected": 10,
+      "accepted": 5,
+      "rejected": 7,
       "source": "json-ld"
     },
     "Wonderville": {
-      "accepted": 9,
+      "accepted": 8,
       "rejected": 0,
       "source": "json-ld"
     },
     "Cybernetics Library": {
-      "accepted": 0,
+      "accepted": 1,
       "rejected": 1,
       "source": "json-ld"
     },
@@ -70,141 +70,11 @@
       "source": "none"
     },
     "e-flux": {
-      "accepted": 2,
+      "accepted": 3,
       "rejected": 6,
       "source": "json-ld"
     },
     "Pioneer Works": {
-      "accepted": 0,
-      "rejected": 2,
-      "source": "json-ld"
-    },
-    "Target Margin Theater": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Soho Playhouse": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Atlantic Theater Company": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Bedlam": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Textile Arts Center": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Gowanus Print Lab": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Center for Book Arts": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Penumbra Foundation": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "BKLYN CLAY": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Brooklyn Glass": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Brooklyn Craft Company": {
-      "accepted": 0,
-      "rejected": 14,
-      "source": "llm"
-    },
-    "Makerspace NYC": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "NYC Resistor": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Genspace": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Powrplnt": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Brooklyn Poets": {
-      "accepted": 10,
-      "rejected": 20,
-      "source": "llm"
-    },
-    "UrbanGlass": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Lower East Side Printshop": {
-      "accepted": 5,
-      "rejected": 1,
-      "source": "llm"
-    },
-    "Robert Blackburn Printmaking Workshop": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Manhattan Graphics Center": {
-      "accepted": 4,
-      "rejected": 27,
-      "source": "llm"
-    },
-    "The Arm": {
-      "accepted": 0,
-      "rejected": 29,
-      "source": "llm"
-    },
-    "Dieu Donné": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Powerhouse Arts": {
-      "accepted": 0,
-      "rejected": 30,
-      "source": "llm"
-    },
-    "Artshack Brooklyn": {
-      "accepted": 0,
-      "rejected": 32,
-      "source": "llm"
-    },
-    "Choplet Ceramic Studio": {
-      "accepted": 0,
-      "rejected": 34,
-      "source": "llm"
-    },
-    "Gasworks NYC": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
@@ -261,8 +131,8 @@
     },
     "School for Poetic Computation": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 10,
+      "source": "llm"
     },
     "Harvestworks": {
       "accepted": 0,
@@ -305,9 +175,9 @@
       "source": "none"
     },
     "Works in Progress NYC": {
-      "accepted": 0,
+      "accepted": 1,
       "rejected": 0,
-      "source": "none"
+      "source": "llm"
     },
     "Manny Cantor Center": {
       "accepted": 0,
@@ -590,6 +460,136 @@
       "source": "none"
     },
     "The Bushwick Starr": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Target Margin Theater": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Soho Playhouse": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Atlantic Theater Company": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Bedlam": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Textile Arts Center": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Gowanus Print Lab": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Center for Book Arts": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Penumbra Foundation": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "BKLYN CLAY": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Brooklyn Glass": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Brooklyn Craft Company": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Makerspace NYC": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "NYC Resistor": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Genspace": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Powrplnt": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Brooklyn Poets": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "UrbanGlass": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Lower East Side Printshop": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Robert Blackburn Printmaking Workshop": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Manhattan Graphics Center": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "The Arm": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Dieu Donné": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Powerhouse Arts": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Artshack Brooklyn": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Choplet Ceramic Studio": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Gasworks NYC": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
