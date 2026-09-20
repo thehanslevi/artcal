@@ -1,13 +1,6 @@
 [
   {
     "venue": "Symphony Space",
-    "event": "Elizabeth Acevedo, Anger Is Only a Shadow",
-    "date": "Sep 16",
-    "reason": "duplicate of existing \"Elizabeth Acevedo, Anger Is Only a Shadow\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Symphony Space",
     "event": "Silent Clowns Film Series: Colleen Moore and Some Funny Friends",
     "date": "Sep 20",
     "reason": "duplicate of existing \"Silent Clowns Film Series: Colleen Moore and Some Funny Friends\"",
@@ -85,20 +78,6 @@
   },
   {
     "venue": "UnionDocs",
-    "event": "Wiseman's New York: Public vs. Private — Closing Panel",
-    "date": "Sep 13",
-    "reason": "duplicate of existing \"Wiseman's New York: Public vs. Private — Closing Panel\"",
-    "source": "ics"
-  },
-  {
-    "venue": "UnionDocs",
-    "event": "100 Jars of Honey",
-    "date": "Sep 15",
-    "reason": "duplicate of existing \"100 Jars of Honey\"",
-    "source": "ics"
-  },
-  {
-    "venue": "UnionDocs",
     "event": "Tell Don't Show: Adventures in First-Person Filmmaking",
     "date": "Oct 2",
     "reason": "duplicate of existing \"Tell Don't Show: Adventures in First-Person Filmmaking\"",
@@ -113,6 +92,13 @@
   },
   {
     "venue": "UnionDocs",
+    "event": "Under the Sky of Fetishes",
+    "date": "Oct 4",
+    "reason": "duplicate of existing \"Under the Sky of Fetishes\"",
+    "source": "ics"
+  },
+  {
+    "venue": "UnionDocs",
     "event": "Uneasy Arrangements: Collage, Animation & the Archive",
     "date": "Oct 23",
     "reason": "duplicate of existing \"Uneasy Arrangements: Collage, Animation & the Archive\"",
@@ -120,9 +106,30 @@
   },
   {
     "venue": "DADA",
-    "event": "Monthly Jazz Jam presented by Ridgewood Jazz",
-    "date": "Sep 13",
-    "reason": "duplicate of existing \"Monthly Jazz Jam presented by Ridgewood Jazz\"",
+    "event": "Verse4Verse: Drag + Poetry + Interviews",
+    "date": "Sep 20",
+    "reason": "duplicate of existing \"Verse4Verse: Drag + Poetry + Interviews\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "DADA",
+    "event": "Live Music & Monologues - Mono Y Mono",
+    "date": "Sep 22",
+    "reason": "duplicate of existing \"Live Music & Monologues - Mono Y Mono\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "DADA",
+    "event": "Low Intervention: Alien D (live), Deep Glens (live), Bryce Hackford (live), + Tetsuro (DJ)",
+    "date": "Sep 25",
+    "reason": "duplicate of existing \"Low Intervention: Alien D (live), Deep Glens (live), Bryce Hackford (live), + Tetsuro (DJ)\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "DADA",
+    "event": "The Most Hated Poets: Open Mic",
+    "date": "Sep 29",
+    "reason": "duplicate of existing \"The Most Hated Poets: Open Mic\"",
     "source": "json-ld"
   },
   {
@@ -130,6 +137,13 @@
     "event": "The Mushroom | Under The Radar",
     "date": "Jan 14",
     "reason": "date is in the past",
+    "source": "ics"
+  },
+  {
+    "venue": "The Arts Center at Governors Island",
+    "event": "Climate Week Evening Celebration with the NYC premiere of \"Songs of the Earth\"",
+    "date": "Sep 25",
+    "reason": "duplicate of existing \"Climate Week Evening Celebration with the NYC premiere of \"Songs of the Earth\"\"",
     "source": "ics"
   },
   {
@@ -148,20 +162,6 @@
   },
   {
     "venue": "Delight Factory",
-    "event": "Drone Lab + Open Projector",
-    "date": "Sep 18",
-    "reason": "duplicate of existing \"Drone Lab + Open Projector\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Delight Factory",
-    "event": "Global Voices",
-    "date": "Sep 19",
-    "reason": "duplicate of existing \"Global Voices\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Delight Factory",
     "event": "Pataphysics 021",
     "date": "Sep 26",
     "reason": "duplicate of existing \"Pataphysics 021\"",
@@ -175,38 +175,108 @@
     "source": "json-ld"
   },
   {
-    "venue": "Greenwich House Pottery",
-    "event": "The Watchers, Ryan Flores",
-    "date": "Sep 17",
-    "reason": "duplicate of existing \"Ryan Flores\"",
+    "venue": "Delight Factory",
+    "event": "VAHCO / Tall City: Tapes Tour 2026",
+    "date": "Oct 17",
+    "reason": "duplicate of existing \"VAHCO / Tall City: Tapes Tour 2026\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Delight Factory",
+    "event": "Ego Free Jam",
+    "date": "Nov 7",
+    "reason": "duplicate of existing \"Ego Free Jam\"",
     "source": "json-ld"
   },
   {
     "venue": "Greenwich House Pottery",
-    "event": "Artist Talk: Ryan Flores",
-    "date": "Sep 17",
-    "reason": "duplicate of existing (0.50 similarity to \"Ryan Flores\")",
+    "event": "New Work by Karina Yanes",
+    "date": "Jan 7",
+    "reason": "date is in the past",
     "source": "json-ld"
   },
   {
     "venue": "Greenwich House Pottery",
-    "event": "Ceramic Painting: A One-Day Workshop with Ryan Flores",
-    "date": "Sep 19",
-    "reason": "duplicate of existing \"Ceramic Painting: A One-Day Workshop with Ryan Flores\"",
+    "event": "Community Town Hall",
+    "date": "Sep 23",
+    "reason": "duplicate of existing \"Community Town Hall\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Greenwich House Pottery",
+    "event": "An Afternoon of Song with Melody and Allison",
+    "date": "Sep 26",
+    "reason": "duplicate of existing \"An Afternoon of Song with Melody and Allison\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Greenwich House Pottery",
+    "event": "Melissa Joseph: Artist-Led Exhibition Tour",
+    "date": "Sep 29",
+    "reason": "duplicate of existing \"Artist-Led Exhibition Tour\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Greenwich House Pottery",
+    "event": "Amaco Workshop",
+    "date": "Oct 4",
+    "reason": "duplicate of existing \"Amaco Workshop\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Greenwich House Pottery",
+    "event": "Amaco Workshop",
+    "date": "Oct 10",
+    "reason": "duplicate of existing \"Amaco Workshop\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Greenwich House Pottery",
+    "event": "Hudson Valley Pottery Tour",
+    "date": "Oct 17",
+    "reason": "duplicate of existing \"Hudson Valley Pottery Tour\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Greenwich House Pottery",
+    "event": "Discover Pottery Open House",
+    "date": "Oct 18",
+    "reason": "duplicate of existing \"Discover Pottery Open House\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Greenwich House Pottery",
+    "event": "Hudson Valley Pottery Tour",
+    "date": "Oct 18",
+    "reason": "duplicate of existing \"Hudson Valley Pottery Tour\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Greenwich House Pottery",
+    "event": "Taka Kigawa: Debussy&#8217;s Complete Préludes &#8211; Book I &#038; II",
+    "date": "Nov 7",
+    "reason": "duplicate of existing \"Taka Kigawa: Debussy&#8217;s Complete Préludes &#8211; Book I &#038; II\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Greenwich House Pottery",
+    "event": "GHP Artists Exhibition 2026",
+    "date": "Nov 19",
+    "reason": "duplicate of existing \"GHP Artists Exhibition 2026\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Greenwich House Pottery",
+    "event": "Made in Clay Holiday Sale",
+    "date": "Dec 12",
+    "reason": "duplicate of existing \"Made in Clay Holiday Sale\"",
     "source": "json-ld"
   },
   {
     "venue": "Flux Factory",
-    "event": "Out of Sight: Social & Architectural Camouflage",
-    "date": "Sep 16",
-    "reason": "duplicate of existing \"Out of Sight: Social & Architectural Camouflage\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Flux Factory",
-    "event": "Urban Water Awareness Day",
-    "date": "Sep 19",
-    "reason": "duplicate of existing \"Urban Water Awareness Day\"",
+    "event": "J. Pavone String Ensemble premieres Stalling Tumble || Levi Lu & Lesley Mok duo || Bongsu Park",
+    "date": "Oct 4",
+    "reason": "duplicate of existing \"J. Pavone String Ensemble premieres Stalling Tumble || Levi Lu & Lesley Mok duo || Bongsu Park\"",
     "source": "json-ld"
   },
   {
@@ -228,41 +298,6 @@
     "event": "6-day intensive Shoemaking Class",
     "date": "Jan 4",
     "reason": "date is in the past",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Brooklyn Shoe Space",
-    "event": "1-day Square Toe Slipper Making",
-    "date": "Sep 13",
-    "reason": "duplicate of existing \"1-day Square Toe Slipper Making\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Brooklyn Shoe Space",
-    "event": "Introduction to Shoe Making",
-    "date": "Sep 14",
-    "reason": "duplicate of existing \"Introduction to Shoe Making\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Brooklyn Shoe Space",
-    "event": "6-Day Intensive Shoemaking Workshop",
-    "date": "Sep 16",
-    "reason": "duplicate of existing \"6-Day Intensive Shoemaking Workshop\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Brooklyn Shoe Space",
-    "event": "Foundation to Adhesives x Sneakers",
-    "date": "Sep 19",
-    "reason": "duplicate of existing \"Foundation to Adhesives x Sneakers\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Brooklyn Shoe Space",
-    "event": "Mule Making",
-    "date": "Sep 19",
-    "reason": "duplicate of existing \"Mule Making\"",
     "source": "json-ld"
   },
   {
@@ -400,30 +435,16 @@
   },
   {
     "venue": "Mostly Good Studios",
-    "event": "Screen Printing",
-    "date": "Sep 13",
-    "reason": "duplicate of existing \"Screen Printing\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Mostly Good Studios",
-    "event": "Ceramic Sampler at Heart of Gold",
-    "date": "Sep 15",
-    "reason": "duplicate of existing \"Ceramic Sampler at Heart of Gold\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Mostly Good Studios",
-    "event": "Ceramic Slumber Party - JURASSIC PARK",
-    "date": "Sep 17",
-    "reason": "duplicate of existing \"Ceramic Slumber Party - JURASSIC PARK\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Mostly Good Studios",
     "event": "Make a Mug",
     "date": "Sep 25",
     "reason": "duplicate of existing \"Make a Mug\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Mostly Good Studios",
+    "event": "Ceramic Slumber Party - OVER THE GARDEN WALL",
+    "date": "Oct 9",
+    "reason": "duplicate of existing \"Ceramic Slumber Party - OVER THE GARDEN WALL\"",
     "source": "json-ld"
   },
   {
@@ -435,9 +456,23 @@
   },
   {
     "venue": "Mostly Good Studios",
+    "event": "Show & Tell Salon",
+    "date": "Oct 15",
+    "reason": "duplicate of existing \"Show & Tell Salon\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Mostly Good Studios",
     "event": "HAND BUILDING COURSE FALL SESSION WEEK 2",
     "date": "Oct 18",
     "reason": "duplicate of existing \"HAND BUILDING COURSE FALL SESSION WEEK 2\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Mostly Good Studios",
+    "event": "PICKLING PARTY",
+    "date": "Oct 18",
+    "reason": "duplicate of existing \"PICKLING PARTY\"",
     "source": "json-ld"
   },
   {
@@ -448,38 +483,45 @@
     "source": "json-ld"
   },
   {
+    "venue": "Mostly Good Studios",
+    "event": "Ceramic Slumber Party - PRACTICAL MAGIC",
+    "date": "Oct 29",
+    "reason": "duplicate of existing \"Ceramic Slumber Party - PRACTICAL MAGIC\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Mostly Good Studios",
+    "event": "VERY ANGRY WOMEN",
+    "date": "Oct 30",
+    "reason": "duplicate of existing \"VERY ANGRY WOMEN\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Mostly Good Studios",
+    "event": "HAND BUILDING COURSE FALL SESSION WEEK 4",
+    "date": "Nov 1",
+    "reason": "duplicate of existing \"HAND BUILDING COURSE FALL SESSION WEEK 4\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Mostly Good Studios",
+    "event": "HAND BUILDING COURSE FALL SESSION WEEK 5",
+    "date": "Nov 8",
+    "reason": "duplicate of existing \"HAND BUILDING COURSE FALL SESSION WEEK 5\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Mostly Good Studios",
+    "event": "HAND BUILDING COURSE FALL SESSION WEEK 6",
+    "date": "Nov 15",
+    "reason": "duplicate of existing \"HAND BUILDING COURSE FALL SESSION WEEK 6\"",
+    "source": "json-ld"
+  },
+  {
     "venue": "Cybernetics Library",
-    "event": "Cybernetics Library Open Hours",
-    "date": "Sep 26",
-    "reason": "duplicate of existing \"Cybernetics Library Open Hours\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "e-flux",
-    "event": "Andrei Ujică: Images in the World, Images in the Mind",
-    "date": "Sep 15",
-    "reason": "duplicate of existing \"Andrei Ujică: Images in the World, Images in the Mind\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "e-flux",
-    "event": "Bar Laika presents Playback 0037 with Midgar Records",
-    "date": "Sep 16",
-    "reason": "duplicate of existing \"Bar Laika presents Playback 0037 with Midgar Records\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "e-flux",
-    "event": "Rehearsal Behavior. I: Chantal Akerman and Shirley Clarke",
-    "date": "Sep 17",
-    "reason": "duplicate of existing \"Rehearsal Behavior. I: Chantal Akerman and Shirley Clarke\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "e-flux",
-    "event": "Rehearsal Behavior. II: Yvonne Rainer",
-    "date": "Sep 19",
-    "reason": "duplicate of existing \"Rehearsal Behavior. II: Yvonne Rainer\"",
+    "event": "Culture Commons: institutions, networks, and other forms of cooperation | International Forum on the Sustainability of Culture",
+    "date": "Sep 25",
+    "reason": "duplicate of existing \"Culture Commons: institutions, networks, and other forms of cooperation | International Forum on the Sustainability of Culture\"",
     "source": "json-ld"
   },
   {
@@ -497,73 +539,1641 @@
     "source": "json-ld"
   },
   {
-    "venue": "School for Poetic Computation",
-    "event": "The Digital Will: Making, Sorting, and Memorializing Our Data",
-    "date": "Sep 21",
+    "venue": "e-flux",
+    "event": "Bar Laika presents Playback 0039 with Tomin",
+    "date": "Oct 7",
+    "reason": "duplicate of existing \"Bar Laika presents Playback 0039 with Tomin\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "e-flux",
+    "event": "Bar Laika presents Playback 0040 with Solpara",
+    "date": "Oct 21",
+    "reason": "duplicate of existing \"Bar Laika presents Playback 0040 with Solpara\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "e-flux",
+    "event": "Bar Laika presents Playback 0041 with Chantal Michelle",
+    "date": "Nov 18",
+    "reason": "duplicate of existing \"Bar Laika presents Playback 0041 with Chantal Michelle\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "Opening Concert & Discussion",
+    "date": "Oct 23",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "Workshop Session I",
+    "date": "Oct 24",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "Workshop Session II",
+    "date": "Oct 24",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "Evening Performance",
+    "date": "Oct 24",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "Masterclass with Guest Artist",
+    "date": "Nov 13",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "Group Improvisation Session",
+    "date": "Nov 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "Composition Techniques Workshop",
+    "date": "Nov 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "Participant Showcase Concert",
+    "date": "Nov 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "Advanced Improvisation Clinic",
+    "date": "Nov 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "Feedback & Future Directions",
+    "date": "Nov 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "Introduction to Modular Synthesis",
+    "date": "Dec 4",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "DAW Workflow & Sound Design",
+    "date": "Dec 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "Live Performance Techniques",
+    "date": "Dec 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "Electronic Music Showcase",
+    "date": "Dec 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "Mixing & Mastering Basics",
+    "date": "Dec 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Creative Music Studio",
+    "event": "Q&A with Resident Artists",
+    "date": "Dec 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Interference Archive",
+    "event": "Anarchist Book Club: Discussion on Mutual Aid",
+    "date": "Jan 15",
     "reason": "streaming / not in person",
     "source": "llm"
   },
   {
-    "venue": "School for Poetic Computation",
-    "event": "Shaders for the Rest of Us",
-    "date": "Sep 22",
+    "venue": "Interference Archive",
+    "event": "History of Protest Graphics: Lecture and Q&A",
+    "date": "Feb 22",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Interference Archive",
+    "event": "International Women's Day Film Screening: \"She's Beautiful When She's Angry\"",
+    "date": "Mar 8",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Interference Archive",
+    "event": "DIY Bookbinding Workshop",
+    "date": "Apr 3",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Interference Archive",
+    "event": "Oral History Project: Documenting Activist Voices",
+    "date": "May 19",
     "reason": "streaming / not in person",
     "source": "llm"
   },
   {
-    "venue": "School for Poetic Computation",
-    "event": "Tools for Creativity",
-    "date": "Sep 22",
-    "reason": "streaming / not in person",
+    "venue": "Interference Archive",
+    "event": "Kids' Protest Poster Workshop",
+    "date": "Jun 12",
+    "reason": "children's programming",
     "source": "llm"
   },
   {
-    "venue": "School for Poetic Computation",
-    "event": "Power and Ground: Towards the Decay of the Computer Empire",
-    "date": "Sep 22",
-    "reason": "streaming / not in person",
+    "venue": "Interference Archive",
+    "event": "Radical History Walking Tour: Park Slope Activism",
+    "date": "Jul 4",
+    "reason": "date is in the past",
     "source": "llm"
   },
   {
-    "venue": "School for Poetic Computation",
-    "event": "The Erotics of Debt",
-    "date": "Sep 22",
-    "reason": "streaming / not in person",
+    "venue": "Interference Archive",
+    "event": "Poetry Reading: Voices of Resistance",
+    "date": "Aug 20",
+    "reason": "date is in the past",
     "source": "llm"
   },
   {
-    "venue": "School for Poetic Computation",
-    "event": "Power and Ground: Towards the Decay of the Computer Empire",
-    "date": "Sep 23",
-    "reason": "streaming / not in person",
+    "venue": "Interference Archive",
+    "event": "Archiving Activism: A Workshop on Preserving Movement History",
+    "date": "Sep 1",
+    "reason": "date is in the past",
     "source": "llm"
   },
   {
-    "venue": "School for Poetic Computation",
-    "event": "The Digital Will: Making, Sorting, and Memorializing Our Data",
-    "date": "Sep 23",
-    "reason": "streaming / not in person",
+    "venue": "Interference Archive",
+    "event": "Radical Zine Making Workshop",
+    "date": "Nov 10",
+    "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "School for Poetic Computation",
-    "event": "Shaders for the Rest of Us",
-    "date": "Sep 24",
-    "reason": "streaming / not in person",
+    "venue": "Wavefield",
+    "event": "Wavefield: Algorithmic Art Workshop",
+    "date": "Jan 9",
+    "reason": "date is in the past",
     "source": "llm"
   },
   {
-    "venue": "School for Poetic Computation",
-    "event": "The Erotics of Debt",
-    "date": "Sep 24",
-    "reason": "streaming / not in person",
+    "venue": "Wavefield",
+    "event": "Wavefield: Live Coding for Musicians",
+    "date": "Jan 10",
+    "reason": "date is in the past",
     "source": "llm"
   },
   {
-    "venue": "School for Poetic Computation",
-    "event": "Tools for Creativity",
-    "date": "Sep 27",
-    "reason": "streaming / not in person",
+    "venue": "Wavefield",
+    "event": "Wavefield: Generative Soundscapes",
+    "date": "Jan 16",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Introduction to TouchDesigner",
+    "date": "Jan 17",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: AI and Creative Expression",
+    "date": "Jan 23",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Hardware Hacking for Visuals",
+    "date": "Jan 24",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Generative Art Performance",
+    "date": "Jan 30",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Creative Coding for Artists",
+    "date": "Jan 31",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Algorithmic Music Performance",
+    "date": "Feb 6",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Introduction to Processing",
+    "date": "Feb 7",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Live Coding & Generative Music",
+    "date": "Oct 4",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Algorithmic Soundscapes Workshop",
+    "date": "Oct 16",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Generative Visuals Performance",
+    "date": "Oct 17",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Intro to Creative Coding",
+    "date": "Oct 18",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: AI in Music Production",
+    "date": "Oct 24",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Hardware Hacking for Sound",
+    "date": "Oct 25",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Interactive Art Installation",
+    "date": "Nov 7",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Sound Synthesis Techniques",
+    "date": "Nov 8",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Generative Art Showcase",
+    "date": "Nov 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Introduction to Max/MSP",
+    "date": "Nov 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Live Coding Performance Night",
+    "date": "Nov 21",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Creative Coding for Beginners",
+    "date": "Nov 22",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Algorithmic Music Composition",
+    "date": "Nov 28",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Building Interactive Systems",
+    "date": "Nov 29",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Generative Design Workshop",
+    "date": "Dec 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Sound Art Installation",
+    "date": "Dec 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Live Coding Jam Session",
+    "date": "Dec 12",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Introduction to Pure Data",
+    "date": "Dec 13",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Generative Music Performance",
+    "date": "Dec 19",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Wavefield",
+    "event": "Wavefield: Creative Coding Showcase",
+    "date": "Dec 20",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "SUPR OMEN",
+    "event": "DRIFT presents Testu Collective | Field Body Performance",
+    "date": "Sep 10",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Francis Kite Club",
+    "event": "The Francis Kite Club - January 3rd",
+    "date": "Jan 3",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Francis Kite Club",
+    "event": "The Francis Kite Club - February 7th",
+    "date": "Feb 7",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Francis Kite Club",
+    "event": "The Francis Kite Club - March 7th",
+    "date": "Mar 7",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Francis Kite Club",
+    "event": "The Francis Kite Club - April 4th",
+    "date": "Apr 4",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Francis Kite Club",
+    "event": "The Francis Kite Club - May 2nd",
+    "date": "May 2",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Francis Kite Club",
+    "event": "The Francis Kite Club - June 6th",
+    "date": "Jun 6",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Francis Kite Club",
+    "event": "The Francis Kite Club - July 4th",
+    "date": "Jul 4",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Francis Kite Club",
+    "event": "The Francis Kite Club - August 1st",
+    "date": "Aug 1",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Francis Kite Club",
+    "event": "The Francis Kite Club - September 5th",
+    "date": "Sep 5",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Francis Kite Club",
+    "event": "The Francis Kite Club - October 4th",
+    "date": "Oct 4",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Francis Kite Club",
+    "event": "The Francis Kite Club - November 1st",
+    "date": "Nov 1",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Francis Kite Club",
+    "event": "The Francis Kite Club - November 7th",
+    "date": "Nov 7",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Francis Kite Club",
+    "event": "The Francis Kite Club - December 5th",
+    "date": "Dec 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Francis Kite Club",
+    "event": "The Francis Kite Club - December 6th",
+    "date": "Dec 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Jan 17",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Jan 18",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Feb 06",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Feb 07",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Feb 08",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Feb 13",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Feb 14",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Feb 15",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Feb 20",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Feb 21",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Feb 22",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Feb 27",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Feb 28",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Mar 01",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Mar 06",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Mar 07",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Mar 08",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Mar 13",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Mar 14",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Mar 15",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Mar 20",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Mar 21",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Mar 22",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Mar 27",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Mar 28",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Mar 29",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Apr 03",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Apr 04",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Apr 05",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Apr 10",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Performance Space New York",
+    "event": "The Body Is A Cage",
+    "date": "Apr 11",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 7",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 8",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 9",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 10",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 11",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 12",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 13",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 16",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 17",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 18",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 19",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 20",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 21",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 22",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 23",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 24",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 26",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 27",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 28",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 29",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 30",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Oct 31",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Footlight Presents (Windjammer)",
+    "event": "The Dead South",
+    "date": "Nov 3",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Jan 2",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Jan 3",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Jan 9",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Jan 10",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Jan 16",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Jan 17",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Jan 23",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Jan 24",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Jan 30",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Jan 31",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Feb 6",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Feb 7",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "Community Garden Tour",
+    "date": "Oct 25",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Nov 7",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Nov 8",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Nov 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Nov 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Nov 21",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Nov 22",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Nov 28",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Nov 29",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Dec 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Dec 12",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Dec 13",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Dec 19",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Dec 20",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Dec 26",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Museum of Reclaimed Urban Space (MoRUS)",
+    "event": "East Village Community Garden Tour",
+    "date": "Dec 27",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Sleepwalk",
+    "event": "New Year's Day Concert",
+    "date": "Jan 11",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Sleepwalk",
+    "event": "Valentine's Day Jazz Night",
+    "date": "Feb 14",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Sleepwalk",
+    "event": "Spring Equinox Sound Bath",
+    "date": "Mar 20",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Sleepwalk",
+    "event": "Experimental Electronic Music Showcase",
+    "date": "Apr 11",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Sleepwalk",
+    "event": "Ambient Drone Performance",
+    "date": "May 17",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Sleepwalk",
+    "event": "Summer Solstice DJ Set",
+    "date": "Jun 19",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Sleepwalk",
+    "event": "Live Coding Music Performance",
+    "date": "Jul 11",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Sleepwalk",
+    "event": "Acoustic Folk Evening",
+    "date": "Aug 16",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Sleepwalk",
+    "event": "Modular Synth Jam Session",
+    "date": "Sep 19",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Sleepwalk",
+    "event": "Spooky Soundscapes Halloween Special",
+    "date": "Oct 16",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Sleepwalk",
+    "event": "Improvisational Music Workshop",
+    "date": "Nov 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Sleepwalk",
+    "event": "Winter Solstice Choral Performance",
+    "date": "Dec 13",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "FourOneOne",
+    "event": "Anh Vo: Tỳ Bà Hành…But Alas There Was No Music",
+    "date": "Oct 3",
+    "reason": "duplicate of existing \"Anh Vo: Tỳ Bà Hành…But Alas There Was No Music\"",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Jan 3",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Jan 10",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Jan 17",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Jan 24",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Jan 31",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Feb 7",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Feb 14",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Feb 21",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Feb 28",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Mar 7",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Mar 14",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Mar 21",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Mar 28",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Apr 4",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Apr 11",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Apr 18",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "Apr 25",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2027",
+    "date": "May 2",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2026",
+    "date": "Oct 4",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2026",
+    "date": "Oct 11",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2026",
+    "date": "Oct 18",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2026",
+    "date": "Oct 25",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2026",
+    "date": "Nov 1",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2026",
+    "date": "Nov 8",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2026",
+    "date": "Nov 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2026",
+    "date": "Nov 22",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2026",
+    "date": "Nov 29",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2026",
+    "date": "Dec 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "La MaMa Moves! Dance Festival 2026",
+    "date": "Dec 27",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "A Celebration of the Life and Music of George Lewis",
+    "date": "Oct 4",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Femenine\"",
+    "date": "Oct 9",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"The Chorus\"",
+    "date": "Oct 10",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Stay Away\"",
+    "date": "Oct 11",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "A Celebration of the Life and Music of George Lewis",
+    "date": "Oct 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Femenine\"",
+    "date": "Oct 16",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"The Chorus\"",
+    "date": "Oct 17",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Stay Away\"",
+    "date": "Oct 18",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "A Celebration of the Life and Music of George Lewis",
+    "date": "Oct 22",
+    "reason": "title tokens missing from source",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Femenine\"",
+    "date": "Oct 23",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"The Chorus\"",
+    "date": "Oct 24",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Stay Away\"",
+    "date": "Oct 25",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "A Celebration of the Life and Music of George Lewis",
+    "date": "Oct 29",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Femenine\"",
+    "date": "Oct 30",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"The Chorus\"",
+    "date": "Oct 31",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Stay Away\"",
+    "date": "Nov 1",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "A Celebration of the Life and Music of George Lewis",
+    "date": "Nov 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Femenine\"",
+    "date": "Nov 6",
+    "reason": "title tokens missing from source",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"The Chorus\"",
+    "date": "Nov 7",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Stay Away\"",
+    "date": "Nov 8",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "A Celebration of the Life and Music of George Lewis",
+    "date": "Nov 12",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Femenine\"",
+    "date": "Nov 13",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"The Chorus\"",
+    "date": "Nov 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Stay Away\"",
+    "date": "Nov 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "A Celebration of the Life and Music of George Lewis",
+    "date": "Nov 19",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Femenine\"",
+    "date": "Nov 20",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"The Chorus\"",
+    "date": "Nov 21",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Stay Away\"",
+    "date": "Nov 22",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "A Celebration of the Life and Music of George Lewis",
+    "date": "Nov 26",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Femenine\"",
+    "date": "Nov 27",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"The Chorus\"",
+    "date": "Nov 28",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "National Sawdust",
+    "event": "The Music of Julius Eastman: \"Stay Away\"",
+    "date": "Nov 29",
+    "reason": "date not literally in source HTML",
     "source": "llm"
   }
 ]
