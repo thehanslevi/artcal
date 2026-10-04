@@ -1,34 +1,6 @@
 [
   {
     "venue": "Symphony Space",
-    "event": "Kyle MacLachlan, Fictional Selves",
-    "date": "Sep 28",
-    "reason": "duplicate of existing \"Kyle MacLachlan, Fictional Selves\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Symphony Space",
-    "event": "NT Live: Les Liaisons Dangereuses",
-    "date": "Sep 29",
-    "reason": "duplicate of existing \"NT Live: Les Liaisons Dangereuses\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Symphony Space",
-    "event": "Eric Idle, Idle in Provence",
-    "date": "Sep 29",
-    "reason": "duplicate of existing \"Eric Idle, Idle in Provence\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Symphony Space",
-    "event": "NT Live: The Misanthrope",
-    "date": "Sep 29",
-    "reason": "duplicate of existing \"NT Live: The Misanthrope\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Symphony Space",
     "event": "Uptown Showdown: Hot vs. Cold",
     "date": "Oct 6",
     "reason": "duplicate of existing \"Uptown Showdown: Hot vs. Cold\"",
@@ -57,31 +29,31 @@
   },
   {
     "venue": "Symphony Space",
+    "event": "Erin French, Seize the Supper",
+    "date": "Oct 12",
+    "reason": "duplicate of existing \"Erin French, Seize the Supper\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Symphony Space",
+    "event": "Sez I to Myself: A Celebration of Frank & Malachy McCourt",
+    "date": "Oct 14",
+    "reason": "duplicate of existing \"Sez I to Myself: A Celebration of Frank & Malachy McCourt\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Symphony Space",
+    "event": "Selected Shorts: The Best American Short Stories 2026 with Viet Thanh Nguyen",
+    "date": "Oct 21",
+    "reason": "duplicate of existing \"Selected Shorts: The Best American Short Stories 2026 with Viet Thanh Nguyen\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Symphony Space",
     "event": "Grey Gardens: 20th Anniversary Celebration",
     "date": "Nov 5",
     "reason": "duplicate of existing \"Grey Gardens: 20th Anniversary Celebration\"",
     "source": "json-ld"
-  },
-  {
-    "venue": "UnionDocs",
-    "event": "Narcisa Hirsch: Graffiti, Film & Political Gesture",
-    "date": "Sep 27",
-    "reason": "duplicate of existing \"Narcisa Hirsch: Graffiti, Film & Political Gesture\"",
-    "source": "ics"
-  },
-  {
-    "venue": "UnionDocs",
-    "event": "Tell Don't Show: Adventures in First-Person Filmmaking",
-    "date": "Oct 2",
-    "reason": "duplicate of existing \"Tell Don't Show: Adventures in First-Person Filmmaking\"",
-    "source": "ics"
-  },
-  {
-    "venue": "UnionDocs",
-    "event": "Zodiac Killer Project",
-    "date": "Oct 2",
-    "reason": "duplicate of existing \"Zodiac Killer Project\"",
-    "source": "ics"
   },
   {
     "venue": "UnionDocs",
@@ -99,23 +71,44 @@
   },
   {
     "venue": "DADA",
-    "event": "The Most Hated Poets: Open Mic",
-    "date": "Sep 29",
-    "reason": "duplicate of existing \"The Most Hated Poets: Open Mic\"",
+    "event": "Creative Expressions NYC: Open Mic & Salon",
+    "date": "Oct 4",
+    "reason": "duplicate of existing \"Creative Expressions NYC: Open Mic & Salon\"",
     "source": "json-ld"
   },
   {
     "venue": "DADA",
-    "event": "Elias Meister - CHINCHILLA with Scott Colberg (b) & Jeremy Gustin (d)",
-    "date": "Sep 30",
-    "reason": "duplicate of existing \"Elias Meister - CHINCHILLA with Scott Colberg (b) & Jeremy Gustin (d)\"",
+    "event": "patrick brennan & Arteidolia Press present: SOUNDWRDS",
+    "date": "Oct 6",
+    "reason": "duplicate of existing \"patrick brennan & Arteidolia Press present: SOUNDWRDS\"",
     "source": "json-ld"
   },
   {
     "venue": "DADA",
-    "event": "A Night of Comedy and Music with Rufat, Yedoye, and Or Bareket",
-    "date": "Oct 1",
-    "reason": "duplicate of existing \"A Night of Comedy and Music with Rufat, Yedoye, and Or Bareket\"",
+    "event": "JAZZ - Wanja Rosenthal Quartet",
+    "date": "Oct 7",
+    "reason": "duplicate of existing \"JAZZ - Wanja Rosenthal Quartet\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "DADA",
+    "event": "JAZZ - Noah Houk Trio",
+    "date": "Oct 8",
+    "reason": "duplicate of existing \"JAZZ - Noah Houk Trio\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "DADA",
+    "event": "DJS - Andromeda.a & Willspliff",
+    "date": "Oct 9",
+    "reason": "duplicate of existing \"DJS - Andromeda.a & Willspliff\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "DADA",
+    "event": "Dada Annual Surrealist Ball",
+    "date": "Oct 10",
+    "reason": "duplicate of existing \"Annual Surrealist Ball\"",
     "source": "json-ld"
   },
   {
@@ -126,10 +119,24 @@
     "source": "ics"
   },
   {
+    "venue": "The Arts Center at Governors Island",
+    "event": "Homecoming: For the Harbor",
+    "date": "Oct 17",
+    "reason": "duplicate of existing \"Homecoming: For the Harbor\"",
+    "source": "ics"
+  },
+  {
+    "venue": "The Arts Center at Governors Island",
+    "event": "New Date: Open Studios on October 17",
+    "date": "Oct 17",
+    "reason": "duplicate of existing \"New Date: Open Studios on October 17\"",
+    "source": "ics"
+  },
+  {
     "venue": "Delight Factory",
-    "event": "Ego Free Jam Acoustic",
-    "date": "Oct 3",
-    "reason": "duplicate of existing \"Ego Free Jam Acoustic\"",
+    "event": "DF5 Art Opening and DJ Dance Party",
+    "date": "Oct 9",
+    "reason": "duplicate of existing \"DF5 Art Opening and DJ Dance Party\"",
     "source": "json-ld"
   },
   {
@@ -169,9 +176,9 @@
   },
   {
     "venue": "Greenwich House Pottery",
-    "event": "Melissa Joseph: Artist-Led Exhibition Tour",
-    "date": "Sep 29",
-    "reason": "duplicate of existing \"Artist-Led Exhibition Tour\"",
+    "event": "&lt;em&gt;The Male Glaze&lt;/em&gt;, Jasa McKenzie (curator)",
+    "date": "May 13",
+    "reason": "date is in the past",
     "source": "json-ld"
   },
   {
@@ -186,6 +193,13 @@
     "event": "Amaco Workshop",
     "date": "Oct 10",
     "reason": "duplicate of existing \"Amaco Workshop\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Greenwich House Pottery",
+    "event": "Theresa Rosas: Solo Piano Pieces of Bach, Brahms, Chopin, Debussy",
+    "date": "Oct 16",
+    "reason": "duplicate of existing \"Theresa Rosas: Solo Piano Pieces of Bach, Brahms, Chopin, Debussy\"",
     "source": "json-ld"
   },
   {
@@ -246,13 +260,6 @@
   },
   {
     "venue": "Flux Factory",
-    "event": "CANCELLED: Saree: Memory, Politics, & Inheritance",
-    "date": "Sep 27",
-    "reason": "duplicate of existing \"Saree: Memory, Politics, & Inheritance\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Flux Factory",
     "event": "J. Pavone String Ensemble premieres Stalling Tumble || Levi Lu & Lesley Mok duo || Bongsu Park",
     "date": "Oct 4",
     "reason": "duplicate of existing \"J. Pavone String Ensemble premieres Stalling Tumble || Levi Lu & Lesley Mok duo || Bongsu Park\"",
@@ -266,24 +273,17 @@
     "source": "json-ld"
   },
   {
+    "venue": "Materials for the Arts",
+    "event": "Ballroom Event with Kiki Arts Collective",
+    "date": "Oct 15",
+    "reason": "duplicate of existing \"Ballroom Event with Kiki Arts Collective\"",
+    "source": "json-ld"
+  },
+  {
     "venue": "Brooklyn Shoe Space",
     "event": "6-day intensive Shoemaking Class",
     "date": "Jan 4",
     "reason": "date is in the past",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Brooklyn Shoe Space",
-    "event": "Introduction to Shoe Making",
-    "date": "Sep 30",
-    "reason": "duplicate of existing \"Introduction to Shoe Making\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Brooklyn Shoe Space",
-    "event": "6-Day Intensive Shoemaking Workshop Private Class Day 1 & 2",
-    "date": "Oct 8",
-    "reason": "duplicate of existing \"6-Day Intensive Shoemaking Workshop Private Class Day 1 & 2\"",
     "source": "json-ld"
   },
   {
@@ -295,7 +295,14 @@
   },
   {
     "venue": "Brooklyn Shoe Space",
-    "event": "6-Day Intensive Shoemaking Workshop Private Class Day 3",
+    "event": "Private single layer sneaker class",
+    "date": "Oct 14",
+    "reason": "duplicate of existing \"Private single layer sneaker class\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
+    "event": "6-Day Intensive Shoemaking Workshop Private Class Day 1",
     "date": "Oct 16",
     "reason": "duplicate of existing \"6-Day Intensive Shoemaking Workshop Private Class Day 3\"",
     "source": "json-ld"
@@ -316,13 +323,6 @@
   },
   {
     "venue": "Brooklyn Shoe Space",
-    "event": "Introduction to Shoe Making",
-    "date": "Oct 21",
-    "reason": "duplicate of existing \"Introduction to Shoe Making\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Brooklyn Shoe Space",
     "event": "3-day QuickKicks sneaker making class",
     "date": "Oct 22",
     "reason": "duplicate of existing \"3-day QuickKicks sneaker making class\"",
@@ -330,7 +330,7 @@
   },
   {
     "venue": "Brooklyn Shoe Space",
-    "event": "6-Day Intensive Shoemaking Workshop Private Class Day 4, 5 & 6",
+    "event": "6-Day Intensive Shoemaking Workshop Private Class Day2 - 4",
     "date": "Oct 28",
     "reason": "duplicate of existing \"6-Day Intensive Shoemaking Workshop Private Class Day 4, 5 & 6\"",
     "source": "json-ld"
@@ -519,1381 +519,58 @@
   },
   {
     "venue": "e-flux",
+    "event": "Tim Altenhof, Breathing Space: The Architecture of Pneumatic Beings",
+    "date": "Oct 22",
+    "reason": "duplicate of existing \"Tim Altenhof, Breathing Space: The Architecture of Pneumatic Beings\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "e-flux",
     "event": "Bar Laika presents Playback 0041 with Chantal Michelle",
     "date": "Nov 18",
     "reason": "duplicate of existing \"Bar Laika presents Playback 0041 with Chantal Michelle\"",
     "source": "json-ld"
   },
   {
-    "venue": "Lower East Side Printshop",
-    "event": "Reductive Linocut Relief Printing with Kakyoung Lee",
-    "date": "Jan 7",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Lower East Side Printshop",
-    "event": "Oil-based Monotype Workshop with Rachel Burgess",
-    "date": "Jan 8",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Lower East Side Printshop",
-    "event": "Intro to Screenprinting with Jeremy Ruiz",
-    "date": "Oct 19",
-    "reason": "duplicate of existing \"Intro to Screenprinting with Jeremy Ruiz\"",
-    "source": "llm"
-  },
-  {
-    "venue": "Lower East Side Printshop",
-    "event": "Intro to Printmaking I with Julia Elsas",
-    "date": "Oct 20",
-    "reason": "duplicate of existing \"Intro to Printmaking I with Julia Elsas\"",
-    "source": "llm"
-  },
-  {
-    "venue": "Lower East Side Printshop",
-    "event": "Water-based Monotype Workshop with Henry Rosenberg",
-    "date": "Oct 24",
-    "reason": "duplicate of existing \"Water-based Monotype Workshop with Henry Rosenberg\"",
-    "source": "llm"
-  },
-  {
-    "venue": "Lower East Side Printshop",
-    "event": "Scratch Ceramics x LESP: Screenprinting on Ceramics with Nathan Catlin",
-    "date": "Nov 8",
-    "reason": "duplicate of existing \"Scratch Ceramics x LESP: Screenprinting on Ceramics with Nathan Catlin\"",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Jan 3",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Jan 10",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Jan 17",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Jan 24",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Jan 31",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Feb 7",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Feb 14",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Feb 21",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Feb 28",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Mar 7",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Mar 14",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Mar 21",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Mar 28",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Apr 4",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Apr 11",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Apr 18",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Apr 25",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "May 2",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "May 9",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "May 16",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "May 23",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "May 30",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
+    "venue": "Bushwick Print Lab",
+    "event": "Intro to Letterpress",
     "date": "Oct 4",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
+    "venue": "Bushwick Print Lab",
+    "event": "Screenprinting 101",
     "date": "Oct 11",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Oct 18",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Oct 25",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Nov 1",
-    "reason": "title tokens missing from source",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Nov 8",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Nov 15",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Nov 22",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Nov 29",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Dec 6",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Dec 13",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Dec 20",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Brooklyn Metal Works",
-    "event": "Intro to Lost Wax Casting",
-    "date": "Dec 27",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Jan 3",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Jan 10",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Jan 17",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Jan 24",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Jan 31",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Feb 7",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Feb 14",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Feb 21",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Feb 28",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Mar 7",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Mar 14",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Mar 21",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Mar 28",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Apr 4",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Apr 11",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Apr 18",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Apr 25",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "May 2",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "May 9",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "May 16",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "May 23",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Oct 4",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Oct 11",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Oct 18",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Oct 25",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
+    "venue": "Bushwick Print Lab",
+    "event": "Intro to Letterpress",
     "date": "Nov 1",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
+    "venue": "Bushwick Print Lab",
+    "event": "Screenprinting 101",
     "date": "Nov 8",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Nov 15",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Nov 22",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Nov 29",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Dec 6",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
+    "venue": "Bushwick Print Lab",
+    "event": "Screenprinting 101",
     "date": "Dec 13",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
-    "date": "Dec 20",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Makeville Studio",
-    "event": "Woodworking: Make a Cutting Board",
+    "venue": "Bushwick Print Lab",
+    "event": "Intro to Letterpress",
     "date": "Dec 27",
     "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Jan 11",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Jan 18",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Jan 25",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Feb 1",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Feb 8",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Feb 15",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Feb 22",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Mar 1",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Mar 8",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Mar 15",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Mar 22",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Mar 29",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Apr 5",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Apr 12",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Apr 19",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Apr 26",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "May 3",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "May 10",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "May 17",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "May 24",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "May 31",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Jun 7",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Jun 14",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Jun 21",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Jun 28",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Jul 5",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Jul 12",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Jul 19",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Jul 26",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Gowanus Darkroom",
-    "event": "Darkroom Printing Workshop",
-    "date": "Aug 2",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Photography & the City: A Workshop with Daniel Arnold",
-    "date": "Jan 10",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Introduction to Studio Lighting",
-    "date": "Jan 17",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "The Art of the Photo Essay",
-    "date": "Jan 24",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Introduction to Documentary Photography",
-    "date": "Jan 31",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Street Photography Intensive",
-    "date": "Feb 7",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "The Portrait Studio",
-    "date": "Feb 14",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Advanced Lighting Techniques",
-    "date": "Feb 21",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "The Business of Photography",
-    "date": "Feb 28",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Alternative Processes: Cyanotype",
-    "date": "Mar 7",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Introduction to Photo Editing",
-    "date": "Mar 14",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "The Photobook Dummy",
-    "date": "Mar 21",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Mobile Photography Masterclass",
-    "date": "Mar 28",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Introduction to Fine Art Printing",
-    "date": "Apr 4",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Architectural Photography",
-    "date": "Apr 11",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Fashion Photography Fundamentals",
-    "date": "Apr 18",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Food Photography Styling",
-    "date": "Apr 25",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Introduction to Drone Photography",
-    "date": "May 2",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Abstract Photography",
-    "date": "May 9",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "The Art of the Selfie",
-    "date": "May 16",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Introduction to Astrophotography",
-    "date": "May 23",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Black and White Printing",
-    "date": "May 30",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Introduction to Photoshop for Photographers",
-    "date": "Jun 6",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "The Art of Still Life Photography",
-    "date": "Jun 13",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Introduction to Lightroom",
-    "date": "Jun 20",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "The Creative Process in Photography",
-    "date": "Jun 27",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Introduction to Video Editing for Photographers",
-    "date": "Jul 4",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "The Art of the Landscape",
-    "date": "Jul 11",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Introduction to HDR Photography",
-    "date": "Jul 18",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "The Art of Macro Photography",
-    "date": "Jul 25",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "Introduction to Night Photography",
-    "date": "Aug 1",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "International Center of Photography",
-    "event": "The Art of the Panoramic",
-    "date": "Aug 8",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Workshop: New Year, New Skills",
-    "date": "Jan 2",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Class: Fresh Start Projects",
-    "date": "Jan 3",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Workshop: Cozy Home Decor",
-    "date": "Jan 9",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Class: Winter Accessories",
-    "date": "Jan 10",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Workshop: Personalized Gifts",
-    "date": "Jan 16",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Workshop: Create Your Own Scarf",
-    "date": "Oct 4",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Workshop: Wall Hanging",
-    "date": "Oct 11",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Advanced Weaving Techniques: Complex Patterns",
-    "date": "Oct 17",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving for Kids: Fun Projects",
-    "date": "Oct 18",
-    "reason": "children's programming",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Workshop: Tote Bag",
-    "date": "Oct 24",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Class: Pillow Covers",
-    "date": "Oct 25",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Workshop: Stuffed Animals",
-    "date": "Oct 31",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Class: Hats",
-    "date": "Nov 1",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Workshop: Small Accessories",
-    "date": "Nov 7",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Class: Tapestry Art",
-    "date": "Nov 8",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Workshop: Holiday Ornaments",
-    "date": "Nov 14",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Class: Gift Items",
-    "date": "Nov 15",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Workshop: Custom Projects",
-    "date": "Nov 21",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Class: Advanced Techniques Refresher",
-    "date": "Nov 22",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Workshop: Festive Decor",
-    "date": "Nov 28",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Class: Last Minute Gifts",
-    "date": "Nov 29",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Workshop: Winter Accessories",
-    "date": "Dec 5",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Class: Cozy Home Textiles",
-    "date": "Dec 6",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Workshop: Personalized Gifts",
-    "date": "Dec 12",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Class: Festive Wall Hangings",
-    "date": "Dec 13",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Workshop: Last Minute DIY Gifts",
-    "date": "Dec 19",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Class: New Year Decor",
-    "date": "Dec 20",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Workshop: Post-Holiday Projects",
-    "date": "Dec 26",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Loop of the Loom",
-    "event": "Weaving Class: Winter Warmers",
-    "date": "Dec 27",
-    "reason": "date not literally in source HTML",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 11",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 12",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 13",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 14",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 15",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 16",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 17",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 18",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 19",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 20",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 21",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 22",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 23",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 24",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 25",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 26",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 27",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 28",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 29",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 30",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Jan 31",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Feb 01",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Feb 02",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Feb 03",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Feb 04",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Feb 05",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Feb 06",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Feb 07",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Feb 08",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Feb 09",
-    "reason": "date is in the past",
-    "source": "llm"
-  },
-  {
-    "venue": "Art Students League of New York",
-    "event": "Figure Drawing Marathon",
-    "date": "Feb 10",
-    "reason": "date is in the past",
     "source": "llm"
   }
 ]
