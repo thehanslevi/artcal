@@ -1,37 +1,9 @@
 [
   {
     "venue": "Symphony Space",
-    "event": "Uptown Showdown: Hot vs. Cold",
-    "date": "Oct 6",
-    "reason": "duplicate of existing \"Uptown Showdown: Hot vs. Cold\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Symphony Space",
-    "event": "Exhibition on Screen: Raphael Revealed (Encore)",
-    "date": "Oct 7",
-    "reason": "duplicate of existing \"Exhibition on Screen: Raphael Revealed (Encore)\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Symphony Space",
-    "event": "Revelry: The Lovestruck Balladeers",
-    "date": "Oct 7",
-    "reason": "duplicate of existing \"Revelry: The Lovestruck Balladeers\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Symphony Space",
     "event": "Greek Theater on Screen: Sophocles' Electra",
     "date": "Oct 11",
     "reason": "duplicate of existing \"Greek Theater on Screen: Sophocles' Electra\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Symphony Space",
-    "event": "Erin French, Seize the Supper",
-    "date": "Oct 12",
-    "reason": "duplicate of existing \"Erin French, Seize the Supper\"",
     "source": "json-ld"
   },
   {
@@ -50,6 +22,20 @@
   },
   {
     "venue": "Symphony Space",
+    "event": "Revelry: King Solomon Hicks",
+    "date": "Oct 23",
+    "reason": "duplicate of existing \"Revelry: King Solomon Hicks\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Symphony Space",
+    "event": "NT Live: The Misanthrope",
+    "date": "Oct 24",
+    "reason": "duplicate of existing \"NT Live: The Misanthrope\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Symphony Space",
     "event": "Grey Gardens: 20th Anniversary Celebration",
     "date": "Nov 5",
     "reason": "duplicate of existing \"Grey Gardens: 20th Anniversary Celebration\"",
@@ -57,9 +43,9 @@
   },
   {
     "venue": "UnionDocs",
-    "event": "Under the Sky of Fetishes",
-    "date": "Oct 4",
-    "reason": "duplicate of existing \"Under the Sky of Fetishes\"",
+    "event": "Showgirls of Pakistan",
+    "date": "Oct 18",
+    "reason": "duplicate of existing \"Showgirls of Pakistan\"",
     "source": "ics"
   },
   {
@@ -70,45 +56,24 @@
     "source": "ics"
   },
   {
+    "venue": "UnionDocs",
+    "event": "Camera Ministry: Lens-based Encounters",
+    "date": "Nov 13",
+    "reason": "duplicate of existing \"Camera Ministry: Lens-based Encounters\"",
+    "source": "ics"
+  },
+  {
     "venue": "DADA",
-    "event": "Creative Expressions NYC: Open Mic & Salon",
-    "date": "Oct 4",
-    "reason": "duplicate of existing \"Creative Expressions NYC: Open Mic & Salon\"",
+    "event": "Monthly Jazz Jam w/ Marque Gilmore presented by Ridgewood Jazz",
+    "date": "Oct 11",
+    "reason": "duplicate of existing (0.71 similarity to \"Monthly Jazz Jam presented by Ridgewood Jazz\")",
     "source": "json-ld"
   },
   {
     "venue": "DADA",
-    "event": "patrick brennan & Arteidolia Press present: SOUNDWRDS",
-    "date": "Oct 6",
-    "reason": "duplicate of existing \"patrick brennan & Arteidolia Press present: SOUNDWRDS\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "DADA",
-    "event": "JAZZ - Wanja Rosenthal Quartet",
-    "date": "Oct 7",
-    "reason": "duplicate of existing \"JAZZ - Wanja Rosenthal Quartet\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "DADA",
-    "event": "JAZZ - Noah Houk Trio",
-    "date": "Oct 8",
-    "reason": "duplicate of existing \"JAZZ - Noah Houk Trio\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "DADA",
-    "event": "DJS - Andromeda.a & Willspliff",
-    "date": "Oct 9",
-    "reason": "duplicate of existing \"DJS - Andromeda.a & Willspliff\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "DADA",
-    "event": "Dada Annual Surrealist Ball",
-    "date": "Oct 10",
-    "reason": "duplicate of existing \"Annual Surrealist Ball\"",
+    "event": "Matthew O'Neill Through To Us Album Release Preview w/ Herb Lore and Theater of Divine Resonance",
+    "date": "Oct 14",
+    "reason": "duplicate of existing \"Matthew O'Neill Through To Us Album Release Preview w/ Herb Lore and Theater of Divine Resonance\"",
     "source": "json-ld"
   },
   {
@@ -134,13 +99,6 @@
   },
   {
     "venue": "Delight Factory",
-    "event": "DF5 Art Opening and DJ Dance Party",
-    "date": "Oct 9",
-    "reason": "duplicate of existing \"DF5 Art Opening and DJ Dance Party\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Delight Factory",
     "event": "Drone Lab & Voice Play + Open Projector",
     "date": "Oct 16",
     "reason": "duplicate of existing \"Drone Lab + Open Projector\"",
@@ -151,6 +109,20 @@
     "event": "VAHCO / Tall City: Tapes Tour 2026",
     "date": "Oct 17",
     "reason": "duplicate of existing \"VAHCO / Tall City: Tapes Tour 2026\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Delight Factory",
+    "event": "Going Home to the Moon",
+    "date": "Oct 26",
+    "reason": "duplicate of existing \"Going Home to the Moon\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Delight Factory",
+    "event": "Samhain Siren Circle",
+    "date": "Nov 1",
+    "reason": "duplicate of existing \"Samhain Siren Circle\"",
     "source": "json-ld"
   },
   {
@@ -183,16 +155,9 @@
   },
   {
     "venue": "Greenwich House Pottery",
-    "event": "Amaco Workshop",
-    "date": "Oct 4",
-    "reason": "duplicate of existing \"Amaco Workshop\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Greenwich House Pottery",
-    "event": "Amaco Workshop",
-    "date": "Oct 10",
-    "reason": "duplicate of existing \"Amaco Workshop\"",
+    "event": "&lt;em&gt;Vestiges&lt;/em&gt;, YoonJee Kwak",
+    "date": "Sep 16",
+    "reason": "date is in the past",
     "source": "json-ld"
   },
   {
@@ -232,9 +197,37 @@
   },
   {
     "venue": "Greenwich House Pottery",
+    "event": "Malachi Provenzano, violin: Beethoven, Stravinsky, and Bach",
+    "date": "Oct 29",
+    "reason": "duplicate of existing \"Malachi Provenzano, violin: Beethoven, Stravinsky, and Bach\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Greenwich House Pottery",
+    "event": "Eric Grossman: An Evening of Violin Masterpieces",
+    "date": "Oct 30",
+    "reason": "duplicate of existing \"Eric Grossman: An Evening of Violin Masterpieces\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Greenwich House Pottery",
     "event": "Taka Kigawa: Debussy&#8217;s Complete Préludes &#8211; Book I &#038; II",
     "date": "Nov 7",
     "reason": "duplicate of existing \"Taka Kigawa: Debussy&#8217;s Complete Préludes &#8211; Book I &#038; II\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Greenwich House Pottery",
+    "event": "Voices of Unsung Heros",
+    "date": "Nov 12",
+    "reason": "duplicate of existing \"Voices of Unsung Heros\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Greenwich House Pottery",
+    "event": "Alex Saraceno: Scriabin: Preludes &#038; Poèmes",
+    "date": "Nov 13",
+    "reason": "duplicate of existing \"Alex Saraceno: Scriabin: Preludes &#038; Poèmes\"",
     "source": "json-ld"
   },
   {
@@ -260,16 +253,23 @@
   },
   {
     "venue": "Flux Factory",
-    "event": "J. Pavone String Ensemble premieres Stalling Tumble || Levi Lu & Lesley Mok duo || Bongsu Park",
-    "date": "Oct 4",
-    "reason": "duplicate of existing \"J. Pavone String Ensemble premieres Stalling Tumble || Levi Lu & Lesley Mok duo || Bongsu Park\"",
+    "event": "Soil and Sand: A Sonic Journey with Kino Benally, Tati Benally, and dre jácome",
+    "date": "Oct 13",
+    "reason": "duplicate of existing \"Soil and Sand: A Sonic Journey with Kino Benally, Tati Benally, and dre jácome\"",
     "source": "json-ld"
   },
   {
-    "venue": "Materials for the Arts",
-    "event": "Music: The Sounds of Math, Science &#038; Social Studies (Fall 2026)",
-    "date": "Oct 10",
-    "reason": "duplicate of existing \"Music: The Sounds of Math, Science &#038; Social Studies (Fall 2026)\"",
+    "venue": "Flux Factory",
+    "event": "People Movers",
+    "date": "Oct 24",
+    "reason": "duplicate of existing \"People Movers\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Flux Factory",
+    "event": "Noticing Zine Activation",
+    "date": "Oct 25",
+    "reason": "duplicate of existing \"Noticing Zine Activation\"",
     "source": "json-ld"
   },
   {
@@ -284,13 +284,6 @@
     "event": "6-day intensive Shoemaking Class",
     "date": "Jan 4",
     "reason": "date is in the past",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Brooklyn Shoe Space",
-    "event": "Next Pair Day",
-    "date": "Oct 10",
-    "reason": "duplicate of existing \"Next Pair Day\"",
     "source": "json-ld"
   },
   {
@@ -358,9 +351,37 @@
   },
   {
     "venue": "Brooklyn Shoe Space",
+    "event": "6-Day Intensive Shoemaking Workshop Private Class Day 5",
+    "date": "Nov 18",
+    "reason": "duplicate of existing \"6-Day Intensive Shoemaking Workshop Private Class Day 5\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
+    "event": "Square Toe Slipper Making",
+    "date": "Nov 19",
+    "reason": "duplicate of existing \"Square Toe Slipper Making\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
+    "event": "6-Day Intensive Shoemaking Workshop Private Class Day 6",
+    "date": "Nov 20",
+    "reason": "duplicate of existing \"6-Day Intensive Shoemaking Workshop Private Class Day 6\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
     "event": "Next Pair Day",
     "date": "Nov 21",
     "reason": "duplicate of existing \"Next Pair Day\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "Brooklyn Shoe Space",
+    "event": "8-day boot class with Kira Goodey",
+    "date": "Nov 21",
+    "reason": "duplicate of existing \"8-day boot class with Kira Goodey\"",
     "source": "json-ld"
   },
   {
@@ -417,13 +438,6 @@
     "event": "10day intensive shoemaking class Day 9 & 10",
     "date": "Dec 21",
     "reason": "duplicate of existing \"10day intensive shoemaking class Day 9 & 10\"",
-    "source": "json-ld"
-  },
-  {
-    "venue": "Mostly Good Studios",
-    "event": "Ceramic Slumber Party - OVER THE GARDEN WALL",
-    "date": "Oct 9",
-    "reason": "duplicate of existing \"Ceramic Slumber Party - OVER THE GARDEN WALL\"",
     "source": "json-ld"
   },
   {
@@ -505,9 +519,30 @@
   },
   {
     "venue": "e-flux",
-    "event": "Bar Laika presents Playback 0039 with Tomin",
-    "date": "Oct 7",
-    "reason": "duplicate of existing \"Bar Laika presents Playback 0039 with Tomin\"",
+    "event": "Film at a Distance: On Artavazd Peleshyan",
+    "date": "Oct 13",
+    "reason": "duplicate of existing \"Film at a Distance: On Artavazd Peleshyan\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "e-flux",
+    "event": "Sometimes It Was Beautiful",
+    "date": "Oct 15",
+    "reason": "duplicate of existing \"Sometimes It Was Beautiful\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "e-flux",
+    "event": "Charles Mudede, \"Exit Envy: BLM, MAGA, and the Continuing Crisis of Longevity\"",
+    "date": "Oct 15",
+    "reason": "duplicate of existing \"Charles Mudede, \"Exit Envy: BLM, MAGA, and the Continuing Crisis of Longevity\"\"",
+    "source": "json-ld"
+  },
+  {
+    "venue": "e-flux",
+    "event": "Incomputable Earth: Technology and the Anthropocene Hypothesis",
+    "date": "Oct 20",
+    "reason": "duplicate of existing \"Incomputable Earth: Technology and the Anthropocene Hypothesis\"",
     "source": "json-ld"
   },
   {
@@ -532,44 +567,1339 @@
     "source": "json-ld"
   },
   {
-    "venue": "Bushwick Print Lab",
-    "event": "Intro to Letterpress",
-    "date": "Oct 4",
+    "venue": "Bushwick Community Darkroom",
+    "event": "Intro to Darkroom Printing (B&W Film) - October 12th, 2026",
+    "date": "Oct 12",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Bushwick Print Lab",
-    "event": "Screenprinting 101",
-    "date": "Oct 11",
+    "venue": "Bushwick Community Darkroom",
+    "event": "Intermediate Darkroom Printing - October 13th, 2026",
+    "date": "Oct 13",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Bushwick Print Lab",
-    "event": "Intro to Letterpress",
+    "venue": "Bushwick Community Darkroom",
+    "event": "Advanced Darkroom Printing - October 14th, 2026",
+    "date": "Oct 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Alternative Printing: Cyanotype - October 15th, 2026",
+    "date": "Oct 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Intro to Film Developing (B&W Film) - October 16th, 2026",
+    "date": "Oct 16",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Intro to Darkroom Printing (B&W Film) - October 17th, 2026",
+    "date": "Oct 17",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Intro to Film Developing (B&W Film) - October 21st, 2026",
+    "date": "Oct 21",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Intro to Darkroom Printing (B&W Film) - October 22nd, 2026",
+    "date": "Oct 22",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Intermediate Darkroom Printing - October 23rd, 2026",
+    "date": "Oct 23",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Advanced Darkroom Printing - October 24th, 2026",
+    "date": "Oct 24",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Alternative Printing: Cyanotype - October 25th, 2026",
+    "date": "Oct 25",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Intro to Film Developing (B&W Film) - October 26th, 2026",
+    "date": "Oct 26",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Intro to Darkroom Printing (B&W Film) - October 27th, 2026",
+    "date": "Oct 27",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Intermediate Darkroom Printing - October 28th, 2026",
+    "date": "Oct 28",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Advanced Darkroom Printing - October 29th, 2026",
+    "date": "Oct 29",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Alternative Printing: Cyanotype - October 30th, 2026",
+    "date": "Oct 30",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Intro to Film Developing (B&W Film) - October 31st, 2026",
+    "date": "Oct 31",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Advanced Darkroom Printing - November 3rd, 2026",
+    "date": "Nov 3",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Alternative Printing: Cyanotype - November 4th, 2026",
+    "date": "Nov 4",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Intro to Film Developing (B&W Film) - November 5th, 2026",
+    "date": "Nov 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Intro to Darkroom Printing (B&W Film) - November 6th, 2026",
+    "date": "Nov 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Intermediate Darkroom Printing - November 7th, 2026",
+    "date": "Nov 7",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Alternative Printing: Cyanotype - November 9th, 2026",
+    "date": "Nov 9",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Bushwick Community Darkroom",
+    "event": "Intro to Film Developing (B&W Film) - November 10th, 2026",
+    "date": "Nov 10",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "FourOneOne",
+    "event": "The Journey of Kuchipudi: From Yakshaganam to the Solo",
+    "date": "Oct 15",
+    "reason": "duplicate of existing \"The Journey of Kuchipudi: From Yakshaganam to the Solo\"",
+    "source": "llm"
+  },
+  {
+    "venue": "FourOneOne",
+    "event": "Fay Victor: Black Poems",
+    "date": "Dec 13",
+    "reason": "duplicate of existing \"Fay Victor: Black Poems\"",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
     "date": "Nov 1",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Bushwick Print Lab",
-    "event": "Screenprinting 101",
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 3",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 4",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 7",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
     "date": "Nov 8",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Bushwick Print Lab",
-    "event": "Screenprinting 101",
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 9",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 10",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 11",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 12",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 13",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 16",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 17",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 18",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 19",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 20",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 21",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 22",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 23",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 24",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 25",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 26",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 28",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 29",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "La MaMa",
+    "event": "The 2026 Queer Art Festival",
+    "date": "Nov 30",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Earth",
+    "date": "Nov 1",
+    "reason": "duplicate of existing \"The Films of Oleksandr Dovzhenko: Zvenigora\"",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Ivan",
+    "date": "Nov 1",
+    "reason": "duplicate of existing \"The Films of Oleksandr Dovzhenko: Zvenigora\"",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Earth",
+    "date": "Nov 3",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Ivan",
+    "date": "Nov 4",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Zvenigora",
+    "date": "Nov 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Earth",
+    "date": "Nov 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Ivan",
+    "date": "Nov 7",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Zvenigora",
+    "date": "Nov 8",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Earth",
+    "date": "Nov 8",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Ivan",
+    "date": "Nov 8",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Zvenigora",
+    "date": "Nov 9",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Earth",
+    "date": "Nov 10",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Ivan",
+    "date": "Nov 11",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Zvenigora",
+    "date": "Nov 12",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Earth",
+    "date": "Nov 13",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Ivan",
+    "date": "Nov 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Zvenigora",
+    "date": "Nov 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Earth",
+    "date": "Nov 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Ivan",
+    "date": "Nov 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Zvenigora",
+    "date": "Nov 16",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Earth",
+    "date": "Nov 17",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Ivan",
+    "date": "Nov 18",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Zvenigora",
+    "date": "Nov 19",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Ivan",
+    "date": "Nov 21",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Zvenigora",
+    "date": "Nov 22",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Earth",
+    "date": "Nov 22",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Metrograph",
+    "event": "The Films of Oleksandr Dovzhenko: Ivan",
+    "date": "Nov 22",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 1",
+    "reason": "duplicate of existing \"The Day the Earth Struck Back\"",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 1",
+    "reason": "duplicate of existing \"The Day the Earth Struck Back\"",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 2",
+    "reason": "duplicate of existing \"The Day the Earth Struck Back\"",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 2",
+    "reason": "duplicate of existing \"The Day the Earth Struck Back\"",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 3",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 3",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 3",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 4",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 4",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 4",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 7",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 7",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 7",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 8",
+    "reason": "duplicate of existing \"The Day the Earth Struck Back\"",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 8",
+    "reason": "duplicate of existing \"The Day the Earth Struck Back\"",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 9",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 9",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 9",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 10",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 10",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 10",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 11",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 11",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film at Lincoln Center",
+    "event": "The Day the Earth Struck Back",
+    "date": "Nov 11",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Open Mic Night",
+    "date": "Nov 1",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Spoken Word Showcase",
+    "date": "Nov 3",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Live Music Series",
+    "date": "Nov 4",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Comedy Night",
+    "date": "Nov 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "The Nuyorican Experience",
+    "date": "Nov 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Salsa Night",
+    "date": "Nov 7",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Open Mic Night",
+    "date": "Nov 8",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Poetry Slam",
+    "date": "Nov 9",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Spoken Word Showcase",
+    "date": "Nov 10",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Live Music Series",
+    "date": "Nov 11",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Comedy Night",
+    "date": "Nov 12",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "The Nuyorican Experience",
+    "date": "Nov 13",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Salsa Night",
+    "date": "Nov 14",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Open Mic Night",
+    "date": "Nov 15",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Poetry Slam",
+    "date": "Nov 16",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Spoken Word Showcase",
+    "date": "Nov 17",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Live Music Series",
+    "date": "Nov 18",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Comedy Night",
+    "date": "Nov 19",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "The Nuyorican Experience",
+    "date": "Nov 20",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Salsa Night",
+    "date": "Nov 21",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Open Mic Night",
+    "date": "Nov 22",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Poetry Slam",
+    "date": "Nov 23",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Spoken Word Showcase",
+    "date": "Nov 24",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Live Music Series",
+    "date": "Nov 25",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Comedy Night",
+    "date": "Nov 26",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "The Nuyorican Experience",
+    "date": "Nov 27",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Salsa Night",
+    "date": "Nov 28",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Open Mic Night",
+    "date": "Nov 29",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Nuyorican Poets Cafe",
+    "event": "Poetry Slam",
+    "date": "Nov 30",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Hack Manhattan",
+    "event": "Open Night",
+    "date": "Nov 1",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Hack Manhattan",
+    "event": "Soldering Class",
+    "date": "Nov 1",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Hack Manhattan",
+    "event": "Fibercraft Night",
+    "date": "Nov 1",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Hack Manhattan",
+    "event": "Locksport Workshop",
+    "date": "Nov 1",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Hack Manhattan",
+    "event": "Fixers Collective",
+    "date": "Nov 1",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Hack Manhattan",
+    "event": "Hole-y Day Sewing Circle",
+    "date": "Nov 1",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Hack Manhattan",
+    "event": "Computer Club",
+    "date": "Nov 1",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film-Makers' Cooperative",
+    "event": "Film Series: The Films of Stan Brakhage",
+    "date": "Nov 5",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Film-Makers' Cooperative",
+    "event": "Film Series: The Films of Stan Brakhage",
+    "date": "Nov 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Jan 3",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Jan 10",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Jan 17",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Jan 24",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Jan 31",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Feb 7",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Feb 14",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Feb 21",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Feb 28",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Mar 7",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Mar 14",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Mar 21",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Mar 28",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Apr 4",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Apr 11",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Apr 18",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Apr 25",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "May 2",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "May 9",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "May 16",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "May 23",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "May 30",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Nov 1",
+    "reason": "duplicate of existing \"Open Studio: Printmaking\"",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Nov 8",
+    "reason": "duplicate of existing \"Open Studio: Printmaking\"",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Nov 22",
+    "reason": "duplicate of existing \"Open Studio: Printmaking\"",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Nov 29",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Dec 6",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
     "date": "Dec 13",
     "reason": "date not literally in source HTML",
     "source": "llm"
   },
   {
-    "venue": "Bushwick Print Lab",
-    "event": "Intro to Letterpress",
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
+    "date": "Dec 20",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Noguchi Museum",
+    "event": "Noguchi Museum: Open Studio",
     "date": "Dec 27",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Socrates Sculpture Park",
+    "event": "Winter Open Studio",
+    "date": "Jan 17",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Socrates Sculpture Park",
+    "event": "Winter Open Studio",
+    "date": "Feb 21",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Socrates Sculpture Park",
+    "event": "Winter Open Studio",
+    "date": "Mar 21",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Socrates Sculpture Park",
+    "event": "Spring Open Studio",
+    "date": "Apr 18",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Socrates Sculpture Park",
+    "event": "Spring Open Studio",
+    "date": "May 16",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Socrates Sculpture Park",
+    "event": "Spring Open Studio",
+    "date": "Jun 20",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Socrates Sculpture Park",
+    "event": "Summer Open Studio",
+    "date": "Jul 18",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Socrates Sculpture Park",
+    "event": "Summer Open Studio",
+    "date": "Aug 15",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Socrates Sculpture Park",
+    "event": "Summer Open Studio",
+    "date": "Sep 19",
+    "reason": "date is in the past",
+    "source": "llm"
+  },
+  {
+    "venue": "Socrates Sculpture Park",
+    "event": "Fall Open Studio",
+    "date": "Oct 17",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Socrates Sculpture Park",
+    "event": "Fall Open Studio",
+    "date": "Nov 21",
+    "reason": "date not literally in source HTML",
+    "source": "llm"
+  },
+  {
+    "venue": "Socrates Sculpture Park",
+    "event": "Fall Open Studio",
+    "date": "Dec 19",
     "reason": "date not literally in source HTML",
     "source": "llm"
   }
