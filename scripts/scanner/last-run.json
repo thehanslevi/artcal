@@ -1,22 +1,22 @@
 {
-  "ranAt": "2026-10-18T15:17:33.244Z",
-  "acceptedTotal": 29,
-  "rejectedTotal": 89,
+  "ranAt": "2026-10-25T15:28:04.151Z",
+  "acceptedTotal": 64,
+  "rejectedTotal": 430,
   "duplicatesSkipped": [],
   "perVenue": {
     "Symphony Space": {
-      "accepted": 3,
-      "rejected": 9,
+      "accepted": 4,
+      "rejected": 8,
       "source": "json-ld"
     },
     "UnionDocs": {
-      "accepted": 1,
-      "rejected": 4,
+      "accepted": 0,
+      "rejected": 2,
       "source": "ics"
     },
     "DADA": {
-      "accepted": 5,
-      "rejected": 5,
+      "accepted": 7,
+      "rejected": 3,
       "source": "json-ld"
     },
     "The Arts Center at Governors Island": {
@@ -26,43 +26,33 @@
     },
     "Delight Factory": {
       "accepted": 1,
-      "rejected": 4,
+      "rejected": 5,
       "source": "json-ld"
     },
     "Greenwich House Pottery": {
-      "accepted": 3,
-      "rejected": 18,
+      "accepted": 0,
+      "rejected": 16,
       "source": "json-ld"
     },
     "Flux Factory": {
       "accepted": 0,
-      "rejected": 2,
+      "rejected": 1,
       "source": "json-ld"
     },
     "Materials for the Arts": {
-      "accepted": 1,
-      "rejected": 0,
-      "source": "json-ld"
-    },
-    "Brooklyn Shoe Space": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 1,
+      "source": "json-ld"
     },
     "Mostly Good Studios": {
       "accepted": 2,
-      "rejected": 10,
+      "rejected": 9,
       "source": "json-ld"
     },
     "Wonderville": {
-      "accepted": 8,
+      "accepted": 9,
       "rejected": 0,
       "source": "json-ld"
-    },
-    "Cybernetics Library": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
     },
     "Wendy's Subway": {
       "accepted": 0,
@@ -70,131 +60,11 @@
       "source": "none"
     },
     "e-flux": {
-      "accepted": 0,
-      "rejected": 4,
+      "accepted": 3,
+      "rejected": 1,
       "source": "json-ld"
     },
     "NY Writers Coalition": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "BKC": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "BRIC": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Museum of the Moving Image": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "El Museo del Barrio": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "FRIGID NY (Under St. Marks)": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "BAM": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "The Bushwick Starr": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Target Margin Theater": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Soho Playhouse": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Atlantic Theater Company": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Bedlam": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Textile Arts Center": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Gowanus Print Lab": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Center for Book Arts": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Penumbra Foundation": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "BKLYN CLAY": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Brooklyn Glass": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Brooklyn Craft Company": {
-      "accepted": 1,
-      "rejected": 29,
-      "source": "llm"
-    },
-    "Makerspace NYC": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "NYC Resistor": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Genspace": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Powrplnt": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Brooklyn Poets": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "UrbanGlass": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
@@ -296,8 +166,8 @@
     },
     "School for Poetic Computation": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 28,
+      "source": "llm"
     },
     "Harvestworks": {
       "accepted": 0,
@@ -340,9 +210,9 @@
       "source": "none"
     },
     "Works in Progress NYC": {
-      "accepted": 0,
+      "accepted": 1,
       "rejected": 0,
-      "source": "none"
+      "source": "llm"
     },
     "Manny Cantor Center": {
       "accepted": 0,
@@ -350,39 +220,39 @@
       "source": "none"
     },
     "Scratch Ceramics": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "accepted": 1,
+      "rejected": 30,
+      "source": "llm"
     },
     "Interference Archive": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 24,
+      "source": "llm"
     },
     "Summer for the City": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "accepted": 7,
+      "rejected": 23,
+      "source": "llm"
     },
     "The Tank": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "accepted": 8,
+      "rejected": 1,
+      "source": "llm"
     },
     "Brooklyn Art Haus": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "accepted": 6,
+      "rejected": 1,
+      "source": "llm"
     },
     "New York Live Arts": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 30,
+      "source": "llm"
     },
     "Abrons Arts Center": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "accepted": 8,
+      "rejected": 1,
+      "source": "llm"
     },
     "Baryshnikov Arts Center": {
       "accepted": 0,
@@ -390,58 +260,58 @@
       "source": "none"
     },
     "Film Forum": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "accepted": 5,
+      "rejected": 25,
+      "source": "llm"
     },
     "Mono No Aware": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 24,
+      "source": "llm"
     },
     "Bushwick Community Darkroom": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 24,
+      "source": "llm"
     },
     "ISSUE Project Room": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 33,
+      "source": "llm"
     },
     "Roulette": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 34,
+      "source": "llm"
     },
     "New York Theatre Workshop": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 32,
+      "source": "llm"
     },
     "CATCH!": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "accepted": 1,
+      "rejected": 11,
+      "source": "llm"
     },
     "Wavefield": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 24,
+      "source": "llm"
     },
     "SUPR OMEN": {
       "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "rejected": 4,
+      "source": "llm"
     },
     "Francis Kite Club": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
+      "accepted": 1,
+      "rejected": 29,
+      "source": "llm"
     },
     "Telepathy": {
-      "accepted": 4,
-      "rejected": 1,
+      "accepted": 0,
+      "rejected": 3,
       "source": "json-ld"
     },
     "Performance Space New York": {
@@ -590,6 +460,136 @@
       "source": "none"
     },
     "Creative Music Studio": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Cybernetics Library": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "FRIGID NY (Under St. Marks)": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "BAM": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "The Bushwick Starr": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Target Margin Theater": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Soho Playhouse": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Atlantic Theater Company": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Bedlam": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Textile Arts Center": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Gowanus Print Lab": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Center for Book Arts": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Penumbra Foundation": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "BKLYN CLAY": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Brooklyn Glass": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Brooklyn Craft Company": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Makerspace NYC": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "NYC Resistor": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Genspace": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Powrplnt": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Brooklyn Poets": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "UrbanGlass": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "BKC": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "BRIC": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Museum of the Moving Image": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "El Museo del Barrio": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Brooklyn Shoe Space": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
