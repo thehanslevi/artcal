@@ -1,0 +1,1092 @@
+/* ===========================================================================
+   THE DEVILS — a Halloween skin after Ken Russell's The Devils (1971)
+   Production design: Derek Jarman's Loudun — stark white brick, black
+   habits, Cardinal red, plague, iron grilles, and the burning.
+
+   Scoped entirely to <html data-skin="devils">. styles.css is untouched; the
+   original design is what renders when the attribute is absent.
+
+   The system
+   - Wall:   a running-bond brick wall (SVG) as the page ground. Dark mode is
+             the same wall at night.
+   - Ink:    bone white / bone black / Cardinal red. Nothing fluorescent.
+   - Pigment: the eight categories are period pigments, each with a glyph —
+             imagery carries the meaning, not just hue.
+   - Type:   ONE superfamily. Grenze Gotisch (blackletter display) for titles
+             and the wordmark; Grenze (its Roman companion) for everything
+             else — body, labels, times. No mono, no Junicode, no mixing.
+   - Imagery, all CSS: brick, iron grille, woodcut rays, wax seals, tombstone
+             date tablets, a double-ruled altar panel, ☠ for the dead (past),
+             and a footer that is the burning.
+   =========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400;500;600;700;800;900&family=Grenze:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
+
+/* ------------------------------------------------------------------ tokens */
+:root[data-skin="devils"] {
+  --page: #efe9dd;        /* plaster */
+  --bg: #f7f3eb;          /* whiter plaster — surfaces, slabs */
+  --surface: #e9e2d3;
+  --surface-2: #ddd5c3;
+  --text-1: #0b0908;      /* bone black */
+  --text-2: rgba(11, 9, 8, 0.78);
+  --text-3: rgba(11, 9, 8, 0.56);
+  --border: rgba(11, 9, 8, 0.38);
+  --border-strong: #0b0908;
+  --row-divider: rgba(11, 9, 8, 0.28);
+  --accent: #d6132d;      /* Cardinal red */
+  --accent-2: #d6132d;
+  --accent-3: #0b0908;
+  --accent-soft: rgba(214, 19, 45, 0.12);
+  --zone-grey: #efe9dd;
+  --band: #0b0908;
+  --zone-pink: #efe9dd;
+
+  /* Pigments */
+  --sound: #1b3b8f;       --sound-bg: rgba(27, 59, 143, 0.12);     --sound-text: #162f72;      /* lapis */
+  --dance: #d6132d;       --dance-bg: rgba(214, 19, 45, 0.12);     --dance-text: #a30d22;      /* vermilion */
+  --film: #5b2a86;        --film-bg: rgba(91, 42, 134, 0.12);      --film-text: #48216b;       /* incense */
+  --tech: #1f7a6f;        --tech-bg: rgba(31, 122, 111, 0.14);     --tech-text: #165e55;       /* verdigris */
+  --making: #b8731b;      --making-bg: rgba(184, 115, 27, 0.16);   --making-text: #8a5512;     /* ochre */
+  --theatre: #7a1212;     --theatre-bg: rgba(122, 18, 18, 0.12);   --theatre-text: #5f0e0e;    /* oxblood */
+  --literature: #8a1c5c;  --literature-bg: rgba(138, 28, 92, 0.12); --literature-text: #6d1649; /* Tyrian */
+  --community: #a68512;   --community-bg: rgba(166, 133, 18, 0.18); --community-text: #7a620d;  /* gold leaf */
+
+  --danger-bg: rgba(214, 19, 45, 0.1);  --danger-border: #d6132d; --danger-text: #a30d22;
+  --warn-bg: rgba(184, 115, 27, 0.14);  --warn-border: #b8731b;   --warn-text: #8a5512;
+  --pro-bg: rgba(91, 42, 134, 0.1);     --pro-border: #5b2a86;    --pro-text: #48216b;
+  --free: #1f7a6f;
+  --paid: #0b0908;
+
+  --font-body: "Grenze", Georgia, "Times New Roman", serif;
+  --font-display: "Grenze Gotisch", "Grenze", serif;
+  --font-mono: "Grenze", Georgia, serif;   /* every label becomes an inscription */
+
+  /* Running-bond brick, 96×56 tile: two courses, the second offset half a brick. */
+  --brick: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='56'%3E%3Cpath d='M0 27.5H96M0 55.5H96M48.5 0V28M.5 28V56' stroke='%230b0908' stroke-opacity='.26' fill='none'/%3E%3C/svg%3E");
+}
+
+/* Night in Loudun — and the fire. */
+:root[data-skin="devils"][data-theme="dark"] {
+  --page: #0c0a09;
+  --bg: #16120f;
+  --surface: #1c1713;
+  --surface-2: #28211b;
+  --text-1: #efe9dd;
+  --text-2: rgba(239, 233, 221, 0.78);
+  --text-3: rgba(239, 233, 221, 0.56);
+  --border: rgba(239, 233, 221, 0.28);
+  --border-strong: #efe9dd;
+  --row-divider: rgba(239, 233, 221, 0.2);
+  --accent: #ff2a45;
+  --accent-2: #ff2a45;
+  --accent-3: #efe9dd;
+  --accent-soft: rgba(255, 42, 69, 0.2);
+  --zone-grey: #0c0a09;
+  --zone-pink: #0c0a09;
+
+  --sound-text: #8ea3ff;  --dance-text: #ff6b7e;  --film-text: #c7a1f5;  --tech-text: #6fd3c3;
+  --making-text: #f0b05a; --theatre-text: #ff7070; --literature-text: #f28ac7; --community-text: #f0d35c;
+  --danger-text: #ff6b7e; --warn-text: #f0b05a; --pro-text: #c7a1f5;
+  --free: #6fd3c3;
+  --paid: #efe9dd;
+
+  --brick: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='56'%3E%3Cpath d='M0 27.5H96M0 55.5H96M48.5 0V28M.5 28V56' stroke='%23efe9dd' stroke-opacity='.13' fill='none'/%3E%3C/svg%3E");
+}
+
+/* -------------------------------------------------------------- the wall */
+[data-skin="devils"] body,
+[data-skin="devils"] html {
+  font-family: var(--font-body);
+  font-size: 16px;
+}
+
+[data-skin="devils"] ::selection {
+  background: var(--accent);
+  color: #f7f3eb;
+}
+
+[data-skin="devils"] .zone-header,
+[data-skin="devils"] .zone-main {
+  background-color: var(--page);
+  background-image: var(--brick);
+}
+
+[data-skin="devils"] a {
+  text-decoration-color: rgba(214, 19, 45, 0.55);
+}
+[data-skin="devils"] a:hover {
+  color: var(--accent);
+}
+
+/* ------------------------------------------------------------- the header */
+[data-skin="devils"] .zone-header {
+  position: relative;
+  overflow: hidden;
+  padding: 56px 0 40px;
+  border-bottom: 3px solid var(--text-1);
+}
+
+/* Woodcut rays — the glory, or the fire — behind the wordmark. */
+[data-skin="devils"] .zone-header::before {
+  content: "";
+  position: absolute;
+  left: -10%;
+  top: -60%;
+  width: 70%;
+  height: 200%;
+  background: repeating-conic-gradient(
+    from 0deg at 30% 55%,
+    var(--accent) 0 3deg,
+    transparent 3deg 9deg
+  );
+  opacity: 0.16;
+  -webkit-mask-image: radial-gradient(closest-side, #000 20%, transparent 72%);
+  mask-image: radial-gradient(closest-side, #000 20%, transparent 72%);
+  pointer-events: none;
+}
+[data-skin="devils"] .zone-header .zone-inner {
+  position: relative;
+}
+
+[data-skin="devils"] .app-title {
+  font-family: var(--font-display);
+  font-stretch: 100%;
+  font-weight: 900;
+  font-size: 164px;
+  line-height: 0.82;
+  letter-spacing: -0.01em;
+  padding-bottom: 22px;
+  max-width: none;
+  /* Incised into the wall. */
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.55),
+    0 -1px 0 rgba(0, 0, 0, 0.35),
+    4px 4px 0 var(--accent);
+}
+
+[data-skin="devils"] .app-subtitle {
+  font-family: var(--font-body);
+  font-stretch: 100%;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  max-width: none;
+  padding: 10px 0 0;
+  border-top: 1px solid var(--text-1);
+  display: inline-block;
+}
+
+/* Header actions — black tablets */
+[data-skin="devils"] .header-actions {
+  gap: 6px;
+}
+[data-skin="devils"] .subscribe-badge,
+[data-skin="devils"] .sync-badge,
+[data-skin="devils"] .theme-toggle,
+[data-skin="devils"] .skin-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--text-1);
+  border: 1px solid var(--text-1);
+  color: var(--page);
+  padding: 7px 14px;
+  border-radius: 0;
+  font: inherit;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+[data-skin="devils"] .subscribe-badge:hover,
+[data-skin="devils"] .sync-badge:hover,
+[data-skin="devils"] .theme-toggle:hover,
+[data-skin="devils"] .skin-toggle:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #f7f3eb;
+}
+[data-skin="devils"] .sync-badge.on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #f7f3eb;
+}
+[data-skin="devils"] .theme-toggle-icon,
+[data-skin="devils"] .skin-toggle-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* How-it-works strip — an inscription; the ★ becomes a cross */
+[data-skin="devils"] .howto {
+  border-top: 1px solid var(--text-1);
+  border-bottom: 1px solid var(--text-1);
+  padding: 12px 0;
+  margin-top: 30px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--text-1);
+  max-width: none;
+}
+[data-skin="devils"] .howto-star {
+  font-size: 0;
+  color: var(--accent);
+}
+[data-skin="devils"] .howto-star::before {
+  content: "✠";
+  font-size: 13px;
+}
+[data-skin="devils"] .howto-arrow {
+  color: var(--accent);
+}
+[data-skin="devils"] .howto-link {
+  color: var(--text-1);
+  text-decoration-color: var(--accent);
+}
+[data-skin="devils"] .howto-link:hover {
+  color: var(--accent);
+}
+
+/* ----------------------------------------------------------- the grille */
+[data-skin="devils"] .zone-band {
+  background-color: #0b0908;
+  /* The convent grille: iron bars over the dark. */
+  background-image:
+    repeating-linear-gradient(90deg, rgba(239, 233, 221, 0.14) 0 2px, transparent 2px 26px),
+    repeating-linear-gradient(0deg, rgba(239, 233, 221, 0.1) 0 2px, transparent 2px 26px);
+  padding: 10px 0;
+  border-bottom: 3px solid #0b0908;
+}
+[data-skin="devils"] .view-switch {
+  gap: 14px;
+  margin-bottom: 0;
+}
+[data-skin="devils"] .view-btn {
+  font-family: var(--font-display);
+  font-stretch: 100%;
+  font-weight: 600;
+  font-size: 40px;
+  color: #efe9dd;
+  opacity: 0.45;
+  text-decoration: none;
+}
+[data-skin="devils"] .view-btn:hover {
+  opacity: 0.8;
+}
+[data-skin="devils"] .view-btn.active {
+  opacity: 1;
+  color: #ff2a45;
+  text-decoration: none;
+}
+[data-skin="devils"] .view-btn.active::before {
+  content: "✠ ";
+  font-size: 0.6em;
+  vertical-align: 0.18em;
+}
+[data-skin="devils"] .view-x {
+  font-family: var(--font-body);
+  color: #efe9dd;
+  opacity: 0.45;
+}
+
+/* --------------------------------------------------------------- the main */
+[data-skin="devils"] .zone-main {
+  padding: 36px 0 110px;
+}
+
+/* Search — a stone slab */
+[data-skin="devils"] .search-box {
+  background: var(--bg);
+  border: 1.5px solid var(--text-1);
+  border-radius: 0;
+  padding: 10px 16px;
+  box-shadow: 4px 4px 0 var(--text-1);
+}
+[data-skin="devils"] .search-box:focus-within {
+  border-color: var(--accent);
+  box-shadow: 4px 4px 0 var(--accent);
+}
+[data-skin="devils"] .search-icon {
+  color: var(--accent);
+  transform: none;
+}
+[data-skin="devils"] .search-input {
+  font-family: var(--font-body);
+  font-size: 16px;
+}
+[data-skin="devils"] .search-clear {
+  border-radius: 0;
+  background: var(--text-1);
+  color: var(--page);
+}
+
+/* Filters — tablets */
+[data-skin="devils"] .filter-row {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  padding: 10px 0;
+  gap: 8px;
+}
+[data-skin="devils"] .filter-bar {
+  background: var(--bg);
+  border: 1.5px solid var(--text-1);
+  border-radius: 0;
+  padding: 5px;
+  gap: 4px;
+}
+[data-skin="devils"] .filter-btn {
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 5px 12px;
+  color: var(--text-2);
+}
+[data-skin="devils"] .filter-btn:hover {
+  background: var(--surface-2);
+  color: var(--text-1);
+}
+[data-skin="devils"] .filter-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #f7f3eb;
+}
+[data-skin="devils"] .filter-count {
+  font-size: 11px;
+}
+[data-skin="devils"] .filter-btn.active .filter-count {
+  color: rgba(247, 243, 235, 0.8);
+}
+
+[data-skin="devils"] .picks-toggle,
+[data-skin="devils"] .free-toggle,
+[data-skin="devils"] .weekend-toggle,
+[data-skin="devils"] .export-btn {
+  background: var(--bg);
+  border: 1.5px solid var(--text-1);
+  border-radius: 0;
+  color: var(--text-1);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 7px 14px;
+}
+[data-skin="devils"] .picks-toggle:hover:not(:disabled),
+[data-skin="devils"] .free-toggle:hover:not(:disabled),
+[data-skin="devils"] .weekend-toggle:hover,
+[data-skin="devils"] .export-btn:hover:not(:disabled) {
+  background: var(--text-1);
+  border-color: var(--text-1);
+  color: var(--page);
+}
+[data-skin="devils"] .picks-toggle.active,
+[data-skin="devils"] .free-toggle.active,
+[data-skin="devils"] .weekend-toggle.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #f7f3eb;
+}
+[data-skin="devils"] .picks-toggle.active span,
+[data-skin="devils"] .free-toggle.active span {
+  color: rgba(247, 243, 235, 0.75);
+}
+
+/* Week navigation */
+[data-skin="devils"] .week-nav-btn,
+[data-skin="devils"] .mini-toggle,
+[data-skin="devils"] .past-toggle-btn {
+  background: var(--bg);
+  border: 1.5px solid var(--text-1);
+  border-radius: 0;
+  color: var(--text-1);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+[data-skin="devils"] .week-nav-btn:hover:not(:disabled),
+[data-skin="devils"] .mini-toggle:hover,
+[data-skin="devils"] .past-toggle-btn:hover {
+  background: var(--text-1);
+  color: var(--page);
+}
+[data-skin="devils"] .week-nav-select {
+  background: var(--bg);
+  border: 1.5px solid var(--text-1);
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-1);
+}
+
+/* ----------------------------------------------------- the curator lede
+   An altar panel: double rule, cross, red rubric. */
+[data-skin="devils"] .curator {
+  background: var(--bg);
+  border: 4px double var(--text-1);
+  padding: 20px 22px 22px;
+  margin: 0 0 28px;
+  box-shadow: 8px 8px 0 var(--text-1);
+}
+[data-skin="devils"] .curator-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  margin: 0 0 14px;
+  color: var(--text-1);
+}
+[data-skin="devils"] .curator-title::before {
+  content: "✠";
+  color: var(--accent);
+  font-size: 0.9em;
+}
+[data-skin="devils"] .curator-list {
+  gap: 14px;
+}
+[data-skin="devils"] .curator-item {
+  grid-template-columns: 96px 1fr;
+  border-left-width: 5px;
+  padding-left: 12px;
+}
+[data-skin="devils"] .curator-when {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+[data-skin="devils"] .curator-event {
+  font-family: var(--font-display);
+  font-stretch: 100%;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.05;
+}
+[data-skin="devils"] .curator-event a:hover {
+  color: var(--accent);
+}
+[data-skin="devils"] .curator-note {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 16px;
+}
+[data-skin="devils"] .curator-meta {
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+/* --------------------------------------------------------------- the weeks */
+[data-skin="devils"] .week {
+  margin-bottom: 56px;
+}
+[data-skin="devils"] .week-head {
+  border-bottom: 4px double var(--text-1);
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+}
+[data-skin="devils"] .is-current-week .week-head {
+  border-bottom-color: var(--accent);
+}
+[data-skin="devils"] .week-header {
+  font-family: var(--font-display);
+  font-stretch: 100%;
+  font-weight: 800;
+  font-size: 74px;
+  line-height: 0.9;
+  letter-spacing: -0.005em;
+}
+/* "This week" — a wax seal */
+[data-skin="devils"] .current-chip {
+  margin-left: 16px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 30%, #ff5a6e, #c1102a 55%, #7a0a1b);
+  border: 2px solid #7a0a1b;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25), 2px 3px 0 rgba(11, 9, 8, 0.5);
+  color: #f7f3eb;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  transform: rotate(-6deg);
+  vertical-align: 0.35em;
+}
+[data-skin="devils"] .week-summary-chip {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  border-radius: 0;
+  border: 1px solid var(--text-1);
+}
+
+/* Danse macabre between weeks */
+[data-skin="devils"] .week + .week::before {
+  content: "✠ ☠ ✠ ☠ ✠ ☠ ✠";
+  font-family: var(--font-body);
+  font-size: 18px;
+  letter-spacing: 0.9em;
+  padding-left: 0.9em;
+  color: var(--accent);
+  margin: 0 0 44px;
+}
+
+/* ---------------------------------------------------------- the event row
+   A stone tablet on the wall: tombstone date block, blackletter title,
+   italic venue, pigment glyph. */
+[data-skin="devils"] .event-row {
+  grid-template-columns: 112px 1fr auto auto auto;
+  gap: 18px;
+  align-items: start;
+  padding: 16px 46px 16px 0;
+  border-bottom: 1px solid var(--row-divider);
+  border-left: none;
+  background: transparent;
+}
+[data-skin="devils"] .event-row:hover {
+  background: rgba(247, 243, 235, 0.75);
+}
+[data-skin="devils"] .event-row.cat-sound,
+[data-skin="devils"] .event-row.cat-dance,
+[data-skin="devils"] .event-row.cat-film,
+[data-skin="devils"] .event-row.cat-tech,
+[data-skin="devils"] .event-row.cat-making,
+[data-skin="devils"] .event-row.cat-theatre,
+[data-skin="devils"] .event-row.cat-literature,
+[data-skin="devils"] .event-row.cat-community {
+  border-left: none;
+}
+
+/* Tombstone date */
+[data-skin="devils"] .event-day {
+  min-width: 0;
+  padding: 10px 8px 9px;
+  border: 1.5px solid var(--text-1);
+  background: var(--bg);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.25;
+  color: var(--text-2);
+  box-shadow: 3px 3px 0 var(--text-1);
+}
+[data-skin="devils"] .event-day .event-day-name {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: none;
+  color: var(--text-1);
+  margin-bottom: 4px;
+}
+[data-skin="devils"] .event-day .event-time {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--text-3);
+  margin-top: 3px;
+}
+[data-skin="devils"] .countdown {
+  margin: 6px auto 0;
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+[data-skin="devils"] .countdown-today {
+  background: var(--accent);
+  color: #f7f3eb;
+}
+
+[data-skin="devils"] .event-title {
+  font-family: var(--font-display);
+  font-stretch: 100%;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+[data-skin="devils"] .event-title a {
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+}
+[data-skin="devils"] .event-title a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+[data-skin="devils"] .event-where {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--text-2);
+  margin-top: 3px;
+}
+[data-skin="devils"] .event-cost {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding-top: 4px;
+}
+[data-skin="devils"] .event-picknote {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 15px;
+  border-left: 3px solid var(--accent);
+}
+[data-skin="devils"] .curator-note-input {
+  font-family: var(--font-body);
+  border-radius: 0;
+}
+
+/* The dead: past events get the skull. */
+[data-skin="devils"] .event-row.is-past {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+[data-skin="devils"] .event-row.is-past .event-title::before {
+  content: "☠ ";
+}
+
+/* Picked — a red wash from the left, and the star burns */
+[data-skin="devils"] .event-row.is-picked {
+  background: linear-gradient(to right, var(--accent-soft) 0%, transparent 40%);
+}
+[data-skin="devils"] .pick-btn {
+  color: var(--text-3);
+  border-radius: 0;
+}
+[data-skin="devils"] .pick-btn:hover,
+[data-skin="devils"] .pick-btn.picked {
+  color: var(--accent);
+  background: transparent;
+}
+
+/* Category pills — pigment tablets with a glyph */
+[data-skin="devils"] .pill {
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 4px 10px;
+  color: #f7f3eb;
+  box-shadow: 2px 2px 0 var(--text-1);
+}
+[data-skin="devils"] .pill::before {
+  margin-right: 5px;
+  font-weight: 400;
+}
+[data-skin="devils"] .pill-sound { background: var(--sound); }
+[data-skin="devils"] .pill-dance { background: var(--dance); }
+[data-skin="devils"] .pill-film { background: var(--film); }
+[data-skin="devils"] .pill-tech { background: var(--tech); }
+[data-skin="devils"] .pill-making { background: var(--making); }
+[data-skin="devils"] .pill-theatre { background: var(--theatre); }
+[data-skin="devils"] .pill-literature { background: var(--literature); }
+[data-skin="devils"] .pill-community { background: var(--community); color: #0b0908; box-shadow: 2px 2px 0 #0b0908; }
+[data-skin="devils"] .pill-sound::before { content: "♪"; }
+[data-skin="devils"] .pill-dance::before { content: "✧"; }
+[data-skin="devils"] .pill-film::before { content: "◉"; }
+[data-skin="devils"] .pill-tech::before { content: "⚙"; }
+[data-skin="devils"] .pill-making::before { content: "✂"; }
+[data-skin="devils"] .pill-theatre::before { content: "☗"; }
+[data-skin="devils"] .pill-literature::before { content: "❡"; }
+[data-skin="devils"] .pill-community::before { content: "⚭"; }
+
+[data-skin="devils"] .mode-chip,
+[data-skin="devils"] .flag {
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+[data-skin="devils"] .flag-priority {
+  color: var(--accent);
+}
+
+/* Empty state */
+[data-skin="devils"] .empty-state {
+  border: 1.5px dashed var(--text-1);
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 17px;
+  background: var(--bg);
+}
+[data-skin="devils"] .empty-state::before {
+  content: "☠";
+  color: var(--accent);
+  font-size: 40px;
+}
+
+/* ------------------------------------------------------------ the directory */
+[data-skin="devils"] .directory-title {
+  font-family: var(--font-display);
+  font-stretch: 100%;
+  font-weight: 800;
+  font-size: 74px;
+  line-height: 0.9;
+}
+[data-skin="devils"] .dir-stale {
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+[data-skin="devils"] .directory-filters {
+  border-bottom: 4px double var(--text-1);
+  padding-bottom: 16px;
+}
+[data-skin="devils"] .dir-chip,
+[data-skin="devils"] .dir-toggle {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border: 1.5px solid var(--text-1);
+  border-radius: 0;
+  background: var(--bg);
+  color: var(--text-1);
+  padding: 5px 11px;
+}
+[data-skin="devils"] .dir-chip.active,
+[data-skin="devils"] .dir-toggle.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #f7f3eb;
+}
+[data-skin="devils"] .dir-item {
+  padding: 16px 0 16px 0;
+  border-bottom: 1px solid var(--row-divider);
+  border-left: none;
+  gap: 18px;
+}
+[data-skin="devils"] .dir-when {
+  flex: 0 0 140px;
+  padding: 10px 10px 9px;
+  border: 1.5px solid var(--text-1);
+  background: var(--bg);
+  box-shadow: 3px 3px 0 var(--text-1);
+  align-self: flex-start;
+}
+[data-skin="devils"] .dir-sched {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-1);
+}
+[data-skin="devils"] .dir-live,
+[data-skin="devils"] .dir-avail,
+[data-skin="devils"] .dir-tag,
+[data-skin="devils"] .dir-session-more,
+[data-skin="devils"] .dir-sessions-label,
+[data-skin="devils"] .dir-meta {
+  font-family: var(--font-body);
+  letter-spacing: 0.08em;
+  border-radius: 0;
+}
+[data-skin="devils"] .dir-live {
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 700;
+}
+[data-skin="devils"] .dir-name {
+  font-family: var(--font-display);
+  font-stretch: 100%;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1;
+}
+[data-skin="devils"] .dir-what {
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+[data-skin="devils"] .dir-session b {
+  font-family: var(--font-body);
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+[data-skin="devils"] .dir-caveat,
+[data-skin="devils"] .dir-dormant-note {
+  font-family: var(--font-body);
+  font-style: italic;
+  border-left-color: var(--accent);
+}
+
+/* --------------------------------------------------------------- the spaces */
+[data-skin="devils"] .spaces {
+  border: 1.5px solid var(--text-1);
+  border-radius: 0;
+  background: var(--bg);
+}
+[data-skin="devils"] .spaces-toggle-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+}
+[data-skin="devils"] .spaces-toggle-count {
+  border-radius: 0;
+  font-family: var(--font-body);
+  background: var(--text-1);
+  color: var(--page);
+}
+[data-skin="devils"] .space-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------- popovers */
+[data-skin="devils"] .subscribe-popover,
+[data-skin="devils"] .sync-popover,
+[data-skin="devils"] .submit-popover {
+  border: 1.5px solid var(--text-1);
+  border-radius: 0;
+  box-shadow: 8px 8px 0 var(--text-1);
+  background: var(--bg);
+}
+[data-skin="devils"] .subscribe-title,
+[data-skin="devils"] .sync-title,
+[data-skin="devils"] .submit-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+}
+[data-skin="devils"] .subscribe-section-title {
+  font-family: var(--font-body);
+  letter-spacing: 0.12em;
+}
+[data-skin="devils"] .subscribe-item,
+[data-skin="devils"] .subscribe-cta,
+[data-skin="devils"] .sync-feed {
+  border: 1px solid var(--text-1);
+  border-radius: 0;
+}
+[data-skin="devils"] .subscribe-copy-btn,
+[data-skin="devils"] .subscribe-medium-btn,
+[data-skin="devils"] .sync-secondary-btn,
+[data-skin="devils"] .submit-copy-btn {
+  border-radius: 0;
+  font-family: var(--font-body);
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+[data-skin="devils"] .subscribe-create-btn,
+[data-skin="devils"] .sync-save-btn {
+  border-radius: 0;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #f7f3eb;
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+[data-skin="devils"] .subscribe-create-btn:hover,
+[data-skin="devils"] .sync-save-btn:hover {
+  background: var(--text-1);
+  border-color: var(--text-1);
+  color: var(--page);
+}
+[data-skin="devils"] .sync-input,
+[data-skin="devils"] .submit-email,
+[data-skin="devils"] .subscribe-item-url {
+  border-radius: 0;
+  font-family: var(--font-body);
+}
+
+/* --------------------------------------------------------------- the burning
+   The footer is the stake. Black to Cardinal red, flames along its edge. */
+[data-skin="devils"] .zone-footer {
+  position: relative;
+  background: linear-gradient(180deg, #0c0a09 0%, #1a0608 40%, #6e0916 78%, #d6132d 100%);
+  padding: 72px 0 32px;
+  --bg: #0c0a09;
+  --text-1: #efe9dd;
+  --text-2: rgba(239, 233, 221, 0.78);
+  --text-3: rgba(239, 233, 221, 0.55);
+  --border: rgba(239, 233, 221, 0.3);
+  --border-strong: rgba(239, 233, 221, 0.6);
+  --surface: #16120f;
+  --surface-2: #28211b;
+}
+[data-skin="devils"] .zone-footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 44px;
+  background:
+    radial-gradient(circle at 50% 0, #d6132d 0 34%, transparent 36%) 0 0 / 46px 44px,
+    radial-gradient(circle at 50% 0, #ff6a3d 0 18%, transparent 20%) 23px 0 / 46px 44px;
+  opacity: 0.9;
+  pointer-events: none;
+}
+[data-skin="devils"] .about-title {
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: rgba(239, 233, 221, 0.6);
+}
+[data-skin="devils"] .about-text {
+  font-family: var(--font-display);
+  font-stretch: 100%;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #efe9dd;
+}
+[data-skin="devils"] .about-text a,
+[data-skin="devils"] .about-submit-link {
+  color: #ff8a9a;
+  text-decoration-color: rgba(255, 138, 154, 0.5);
+}
+[data-skin="devils"] .about-text a:hover,
+[data-skin="devils"] .about-submit-link:hover {
+  color: #fff;
+}
+[data-skin="devils"] .footer-bar {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  border-top: 1px solid rgba(239, 233, 221, 0.35);
+  color: rgba(239, 233, 221, 0.75);
+}
+[data-skin="devils"] .footer-submit-btn:hover {
+  color: #ff8a9a;
+}
+[data-skin="devils"] .submit-title,
+[data-skin="devils"] .submit-copy {
+  color: var(--text-1);
+}
+[data-skin="devils"] .submit-copy {
+  font-family: var(--font-body);
+}
+
+/* ------------------------------------------------------------- dark mode */
+:root[data-skin="devils"][data-theme="dark"] .zone-main {
+  background-color: var(--page);
+  background-image: var(--brick);
+}
+:root[data-skin="devils"][data-theme="dark"] .zone-header::before {
+  opacity: 0.26;
+}
+:root[data-skin="devils"][data-theme="dark"] .app-title {
+  text-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.7),
+    0 -1px 0 rgba(255, 255, 255, 0.12),
+    4px 4px 0 var(--accent);
+}
+:root[data-skin="devils"][data-theme="dark"] .event-row:hover {
+  background: rgba(239, 233, 221, 0.06);
+}
+:root[data-skin="devils"][data-theme="dark"] .subscribe-badge,
+:root[data-skin="devils"][data-theme="dark"] .sync-badge,
+:root[data-skin="devils"][data-theme="dark"] .theme-toggle,
+:root[data-skin="devils"][data-theme="dark"] .skin-toggle,
+:root[data-skin="devils"][data-theme="dark"] .search-clear,
+:root[data-skin="devils"][data-theme="dark"] .spaces-toggle-count {
+  background: var(--text-1);
+  border-color: var(--text-1);
+  color: var(--page);
+}
+:root[data-skin="devils"][data-theme="dark"] .filter-row {
+  background: transparent;
+}
+
+/* ----------------------------------------------------------------- mobile */
+@media (max-width: 640px) {
+  [data-skin="devils"] .zone-header {
+    padding: 36px 0 26px;
+  }
+  [data-skin="devils"] .app-title {
+    font-size: 84px;
+    text-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.55),
+      0 -1px 0 rgba(0, 0, 0, 0.35),
+      3px 3px 0 var(--accent);
+  }
+  [data-skin="devils"] .app-subtitle {
+    font-size: 13px;
+    letter-spacing: 0.16em;
+  }
+  [data-skin="devils"] .view-btn {
+    font-size: 30px;
+  }
+  [data-skin="devils"] .week-header,
+  [data-skin="devils"] .directory-title {
+    font-size: 48px;
+  }
+  [data-skin="devils"] .event-row {
+    grid-template-columns: 76px 1fr;
+    gap: 8px 12px;
+    padding: 12px 40px 12px 0;
+  }
+  [data-skin="devils"] .event-day {
+    padding: 8px 4px 7px;
+    font-size: 11px;
+  }
+  [data-skin="devils"] .event-day .event-day-name {
+    font-size: 22px;
+  }
+  [data-skin="devils"] .event-title {
+    font-size: 23px;
+  }
+  [data-skin="devils"] .dir-when {
+    flex: none;
+    align-self: stretch;
+  }
+  [data-skin="devils"] .current-chip {
+    margin-left: 10px;
+  }
+  /* The filter slab takes the full width; the four toggles wrap beneath it
+     as a row of tablets instead of stacking one per line. */
+  [data-skin="devils"] .filter-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  [data-skin="devils"] .filter-row .filter-bar {
+    flex: 1 1 100%;
+  }
+  [data-skin="devils"] .picks-toggle,
+  [data-skin="devils"] .free-toggle,
+  [data-skin="devils"] .weekend-toggle,
+  [data-skin="devils"] .export-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+/* Print keeps the inscription but loses the wall and the fire. */
+@media print {
+  [data-skin="devils"] .zone-header,
+  [data-skin="devils"] .zone-main {
+    background-image: none;
+  }
+  [data-skin="devils"] .zone-header::before,
+  [data-skin="devils"] .zone-footer::before {
+    display: none;
+  }
+}
