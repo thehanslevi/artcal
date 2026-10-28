@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 420">
+  <defs>
+    <pattern id="b" width="100" height="50" patternUnits="userSpaceOnUse">
+      <path d="M0 24.5H100M0 49.5H100M50.5 0V25M.5 25V50" stroke="#000" stroke-width=".7" fill="none"/>
+    </pattern>
+    <pattern id="m" width="100" height="30" patternUnits="userSpaceOnUse">
+      <path d="M0 30V.5H50V30M50 29.5H100" stroke="#000" stroke-width="1.2" fill="none"/>
+    </pattern>
+  </defs>
+  <rect x="0" y="150" width="1600" height="250" fill="url(#b)"/>
+  <rect x="0" y="120" width="1600" height="30" fill="url(#m)"/>
+  <path d="M0 150H1600M0 400H1600" stroke="#000" stroke-width="1.6"/>
+  <rect x="1100" y="70" width="170" height="330" fill="url(#b)" stroke="#000" stroke-width="1.6"/>
+  <rect x="1100" y="40" width="170" height="30" fill="url(#m)"/>
+  <path d="M1100 70H1270" stroke="#000" stroke-width="1.6"/>
+  <g fill="#000"><rect x="1178" y="120" width="8" height="42"/><rect x="1178" y="220" width="8" height="42"/><rect x="1178" y="320" width="8" height="42"/></g>
+  <g fill="none" stroke="#000" stroke-width="1.4">
+    <path d="M100 400V300A50 50 0 0 1 200 300V400"/>
+    <path d="M220 400V300A50 50 0 0 1 320 300V400"/>
+    <path d="M340 400V300A50 50 0 0 1 440 300V400"/>
+    <path d="M460 400V300A50 50 0 0 1 560 300V400"/>
+    <path d="M580 400V300A50 50 0 0 1 680 300V400"/>
+  </g>
+  <path d="M820 400V250A70 70 0 0 1 960 250V400" fill="none" stroke="#000" stroke-width="2"/>
+</svg>

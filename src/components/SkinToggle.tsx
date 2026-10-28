@@ -1,23 +1,24 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { useSkin } from "../lib/skin";
+import { useSkin, type Skin } from "../lib/skin";
+
+const LABEL: Record<Skin, string> = {
+  original: "Original",
+  "devils-a": "Devils A",
+  "devils-b": "Devils B",
+};
 
 export function SkinToggle() {
-  const { skin, toggle } = useSkin();
-  const devils = skin === "devils";
+  const { skin, cycle } = useSkin();
   return (
     <button
       type="button"
       className="skin-toggle"
-      onClick={toggle}
-      aria-pressed={devils}
-      aria-label={`Design: ${devils ? "The Devils" : "Original"}. Click to switch.`}
-      title={devils ? "Back to the original design" : "Switch to The Devils"}
+      onClick={cycle}
+      aria-label={`Design: ${LABEL[skin]}. Click to switch.`}
+      title={`Design: ${LABEL[skin]} — click to switch`}
     >
-      <span className="skin-toggle-icon" aria-hidden="true">
-        {devils ? "✠" : "✳"}
-      </span>
-      {devils ? "The Devils" : "Original"}
+      {LABEL[skin]}
     </button>
   );
 }

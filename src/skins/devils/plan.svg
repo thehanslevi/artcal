@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
+  <defs>
+    <pattern id="h" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#000" stroke-width=".9"/>
+    </pattern>
+    <path id="t" d="M975.3 540.6 L1026.8 547.6 L1100 600 L1026.8 652.4 L975.3 659.4 L839.1 895.3 L858.8 943.4 L850 1033 L768 995.8 L736.2 954.8 L463.8 954.8 L432 995.8 L350 1033 L341.2 943.4 L360.9 895.3 L224.7 659.4 L173.2 652.4 L100 600 L173.2 547.6 L224.7 540.6 L360.9 304.7 L341.2 256.6 L350 167 L432 204.2 L463.8 245.2 L736.2 245.2 L768 204.2 L850 167 L858.8 256.6 L839.1 304.7 Z"/>
+    <clipPath id="c"><circle cx="600" cy="600" r="330"/></clipPath>
+  </defs>
+  <!-- moat -->
+  <use href="#t" transform="translate(600 600) scale(1.08) translate(-600 -600)" fill="none" stroke="url(#h)" stroke-width="44"/>
+  <use href="#t" transform="translate(600 600) scale(1.13) translate(-600 -600)" fill="none" stroke="#000" stroke-width="1"/>
+  <!-- rampart and inner wall -->
+  <use href="#t" fill="none" stroke="#000" stroke-width="2.6"/>
+  <use href="#t" transform="translate(600 600) scale(.94) translate(-600 -600)" fill="none" stroke="#000" stroke-width="1"/>
+  <!-- streets -->
+  <g clip-path="url(#c)" stroke="#000" stroke-width=".6" fill="none">
+    <path d="M300 270V930M360 270V930M420 270V930M480 270V930M540 270V930M600 270V930M660 270V930M720 270V930M780 270V930M840 270V930M900 270V930M270 300H930M270 360H930M270 420H930M270 480H930M270 540H930M270 600H930M270 660H930M270 720H930M270 780H930M270 840H930M270 900H930"/>
+  </g>
+  <!-- the market: one solid square -->
+  <rect x="560" y="560" width="80" height="80" fill="#000"/>
+  <!-- the convent: cloister with hatched court -->
+  <rect x="400" y="440" width="170" height="130" fill="none" stroke="#000" stroke-width="1.4"/>
+  <rect x="440" y="470" width="90" height="70" fill="url(#h)" stroke="#000" stroke-width="1"/>
+  <!-- the church -->
+  <path d="M700 440h40v50h50v40h-50v70h-40v-70h-50v-40h50z" fill="none" stroke="#000" stroke-width="1.4"/>
+  <!-- the keep -->
+  <circle cx="700" cy="760" r="26" fill="none" stroke="#000" stroke-width="1.4"/>
+  <circle cx="700" cy="760" r="12" fill="none" stroke="#000" stroke-width="1"/>
+  <!-- compass -->
+  <g stroke="#000" fill="none">
+    <path d="M1040 100V220M980 160H1100" stroke-width=".9"/>
+    <path d="M1000 120L1080 200M1080 120L1000 200" stroke-width=".5"/>
+    <circle cx="1040" cy="160" r="10" stroke-width=".9"/>
+  </g>
+</svg>
