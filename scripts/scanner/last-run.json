@@ -1,12 +1,12 @@
 {
-  "ranAt": "2026-10-25T15:28:04.151Z",
-  "acceptedTotal": 64,
-  "rejectedTotal": 430,
+  "ranAt": "2026-11-01T17:33:26.861Z",
+  "acceptedTotal": 67,
+  "rejectedTotal": 247,
   "duplicatesSkipped": [],
   "perVenue": {
     "Symphony Space": {
-      "accepted": 4,
-      "rejected": 8,
+      "accepted": 5,
+      "rejected": 7,
       "source": "json-ld"
     },
     "UnionDocs": {
@@ -15,8 +15,8 @@
       "source": "ics"
     },
     "DADA": {
-      "accepted": 7,
-      "rejected": 3,
+      "accepted": 6,
+      "rejected": 1,
       "source": "json-ld"
     },
     "The Arts Center at Governors Island": {
@@ -25,32 +25,32 @@
       "source": "ics"
     },
     "Delight Factory": {
-      "accepted": 1,
+      "accepted": 0,
       "rejected": 5,
       "source": "json-ld"
     },
     "Greenwich House Pottery": {
-      "accepted": 0,
-      "rejected": 16,
+      "accepted": 3,
+      "rejected": 14,
       "source": "json-ld"
     },
     "Flux Factory": {
-      "accepted": 0,
-      "rejected": 1,
+      "accepted": 3,
+      "rejected": 0,
       "source": "json-ld"
     },
     "Materials for the Arts": {
-      "accepted": 0,
-      "rejected": 1,
+      "accepted": 1,
+      "rejected": 0,
       "source": "json-ld"
     },
     "Mostly Good Studios": {
-      "accepted": 2,
-      "rejected": 9,
+      "accepted": 0,
+      "rejected": 8,
       "source": "json-ld"
     },
     "Wonderville": {
-      "accepted": 9,
+      "accepted": 8,
       "rejected": 0,
       "source": "json-ld"
     },
@@ -60,11 +60,381 @@
       "source": "none"
     },
     "e-flux": {
-      "accepted": 3,
-      "rejected": 1,
+      "accepted": 6,
+      "rejected": 3,
       "source": "json-ld"
     },
     "NY Writers Coalition": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Telepathy": {
+      "accepted": 5,
+      "rejected": 0,
+      "source": "json-ld"
+    },
+    "Chez Bushwick": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Footlight Presents (Windjammer)": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Museum of Reclaimed Urban Space (MoRUS)": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Recess": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Sleepwalk": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Prime Produce": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "FourOneOne": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "La MaMa": {
+      "accepted": 3,
+      "rejected": 2,
+      "source": "json-ld"
+    },
+    "The Public Theater": {
+      "accepted": 0,
+      "rejected": 5,
+      "source": "json-ld"
+    },
+    "Joe's Pub": {
+      "accepted": 8,
+      "rejected": 2,
+      "source": "json-ld"
+    },
+    "St. Ann's Warehouse": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "National Sawdust": {
+      "accepted": 8,
+      "rejected": 3,
+      "source": "json-ld"
+    },
+    "Ars Nova": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Metrograph": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Film at Lincoln Center": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Mercury Store": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Nuyorican Poets Cafe": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Uptown Clay": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "AlterWork Studios": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Bronx River Art Center": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Fat Cat Fab Lab": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Hack Manhattan": {
+      "accepted": 0,
+      "rejected": 7,
+      "source": "llm"
+    },
+    "Film-Makers' Cooperative": {
+      "accepted": 8,
+      "rejected": 3,
+      "source": "llm"
+    },
+    "Noguchi Museum": {
+      "accepted": 0,
+      "rejected": 31,
+      "source": "llm"
+    },
+    "Socrates Sculpture Park": {
+      "accepted": 0,
+      "rejected": 27,
+      "source": "llm"
+    },
+    "Studio Museum in Harlem": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Word Up Community Bookshop": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Building Beats": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Creative Music Studio": {
+      "accepted": 0,
+      "rejected": 34,
+      "source": "llm"
+    },
+    "Cybernetics Library": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "FRIGID NY (Under St. Marks)": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "BAM": {
+      "accepted": 0,
+      "rejected": 5,
+      "source": "json-ld"
+    },
+    "The Bushwick Starr": {
+      "accepted": 1,
+      "rejected": 0,
+      "source": "llm"
+    },
+    "Target Margin Theater": {
+      "accepted": 0,
+      "rejected": 30,
+      "source": "llm"
+    },
+    "Soho Playhouse": {
+      "accepted": 0,
+      "rejected": 34,
+      "source": "llm"
+    },
+    "Atlantic Theater Company": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Bedlam": {
+      "accepted": 2,
+      "rejected": 21,
+      "source": "llm"
+    },
+    "Textile Arts Center": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Gowanus Print Lab": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Center for Book Arts": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Penumbra Foundation": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "BKLYN CLAY": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Brooklyn Glass": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Brooklyn Craft Company": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Makerspace NYC": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "NYC Resistor": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Genspace": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Powrplnt": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Brooklyn Poets": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "UrbanGlass": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "BKC": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "BRIC": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Museum of the Moving Image": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "El Museo del Barrio": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Brooklyn Shoe Space": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Interference Archive": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Summer for the City": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "The Tank": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Brooklyn Art Haus": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "New York Live Arts": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Abrons Arts Center": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Baryshnikov Arts Center": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Film Forum": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Mono No Aware": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Bushwick Community Darkroom": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "ISSUE Project Room": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Roulette": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "New York Theatre Workshop": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "CATCH!": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Wavefield": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "SUPR OMEN": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Francis Kite Club": {
+      "accepted": 0,
+      "rejected": 0,
+      "source": "none"
+    },
+    "Performance Space New York": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
@@ -166,8 +536,8 @@
     },
     "School for Poetic Computation": {
       "accepted": 0,
-      "rejected": 28,
-      "source": "llm"
+      "rejected": 0,
+      "source": "none"
     },
     "Harvestworks": {
       "accepted": 0,
@@ -210,9 +580,9 @@
       "source": "none"
     },
     "Works in Progress NYC": {
-      "accepted": 1,
+      "accepted": 0,
       "rejected": 0,
-      "source": "llm"
+      "source": "none"
     },
     "Manny Cantor Center": {
       "accepted": 0,
@@ -220,376 +590,6 @@
       "source": "none"
     },
     "Scratch Ceramics": {
-      "accepted": 1,
-      "rejected": 30,
-      "source": "llm"
-    },
-    "Interference Archive": {
-      "accepted": 0,
-      "rejected": 24,
-      "source": "llm"
-    },
-    "Summer for the City": {
-      "accepted": 7,
-      "rejected": 23,
-      "source": "llm"
-    },
-    "The Tank": {
-      "accepted": 8,
-      "rejected": 1,
-      "source": "llm"
-    },
-    "Brooklyn Art Haus": {
-      "accepted": 6,
-      "rejected": 1,
-      "source": "llm"
-    },
-    "New York Live Arts": {
-      "accepted": 0,
-      "rejected": 30,
-      "source": "llm"
-    },
-    "Abrons Arts Center": {
-      "accepted": 8,
-      "rejected": 1,
-      "source": "llm"
-    },
-    "Baryshnikov Arts Center": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Film Forum": {
-      "accepted": 5,
-      "rejected": 25,
-      "source": "llm"
-    },
-    "Mono No Aware": {
-      "accepted": 0,
-      "rejected": 24,
-      "source": "llm"
-    },
-    "Bushwick Community Darkroom": {
-      "accepted": 0,
-      "rejected": 24,
-      "source": "llm"
-    },
-    "ISSUE Project Room": {
-      "accepted": 0,
-      "rejected": 33,
-      "source": "llm"
-    },
-    "Roulette": {
-      "accepted": 0,
-      "rejected": 34,
-      "source": "llm"
-    },
-    "New York Theatre Workshop": {
-      "accepted": 0,
-      "rejected": 32,
-      "source": "llm"
-    },
-    "CATCH!": {
-      "accepted": 1,
-      "rejected": 11,
-      "source": "llm"
-    },
-    "Wavefield": {
-      "accepted": 0,
-      "rejected": 24,
-      "source": "llm"
-    },
-    "SUPR OMEN": {
-      "accepted": 0,
-      "rejected": 4,
-      "source": "llm"
-    },
-    "Francis Kite Club": {
-      "accepted": 1,
-      "rejected": 29,
-      "source": "llm"
-    },
-    "Telepathy": {
-      "accepted": 0,
-      "rejected": 3,
-      "source": "json-ld"
-    },
-    "Performance Space New York": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Chez Bushwick": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Footlight Presents (Windjammer)": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Museum of Reclaimed Urban Space (MoRUS)": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Recess": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Sleepwalk": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Prime Produce": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "FourOneOne": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "La MaMa": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "The Public Theater": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Joe's Pub": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "St. Ann's Warehouse": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "National Sawdust": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Ars Nova": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Metrograph": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Film at Lincoln Center": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Mercury Store": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Nuyorican Poets Cafe": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Uptown Clay": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "AlterWork Studios": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Bronx River Art Center": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Fat Cat Fab Lab": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Hack Manhattan": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Film-Makers' Cooperative": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Noguchi Museum": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Socrates Sculpture Park": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Studio Museum in Harlem": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Word Up Community Bookshop": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Building Beats": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Creative Music Studio": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Cybernetics Library": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "FRIGID NY (Under St. Marks)": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "BAM": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "The Bushwick Starr": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Target Margin Theater": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Soho Playhouse": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Atlantic Theater Company": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Bedlam": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Textile Arts Center": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Gowanus Print Lab": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Center for Book Arts": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Penumbra Foundation": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "BKLYN CLAY": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Brooklyn Glass": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Brooklyn Craft Company": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Makerspace NYC": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "NYC Resistor": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Genspace": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Powrplnt": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Brooklyn Poets": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "UrbanGlass": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "BKC": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "BRIC": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Museum of the Moving Image": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "El Museo del Barrio": {
-      "accepted": 0,
-      "rejected": 0,
-      "source": "none"
-    },
-    "Brooklyn Shoe Space": {
       "accepted": 0,
       "rejected": 0,
       "source": "none"
