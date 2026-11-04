@@ -43,7 +43,11 @@ const AVAIL_STATUS = ["running", "dormant", "waitlist", "unknown"];
 
 const errors: string[] = [];
 const raw = readFileSync(resolve("src/data/practices.json"), "utf8");
-const data = JSON.parse(raw) as { lastVerified: string; practices: Practice[] };
+const data = JSON.parse(raw) as {
+  lastVerified: string;
+  lastChecked: string;
+  practices: Practice[];
+};
 
 const err = (id: string, msg: string) => errors.push(`${id}: ${msg}`);
 const isIso = (s: unknown) => typeof s === "string" && /^\d{4}-\d{2}-\d{2}$/.test(s);
@@ -129,6 +133,17 @@ if (!isIso(data.lastVerified)) {
       `lastVerified is ${data.lastVerified} but the newest verifiedOn is ${newest}`,
     );
   }
+}
+
+// lastChecked is the automated freshness sweep (refresh-practices.ts). It's a
+// weaker claim than lastVerified, but it can never be OLDER: a link sweep that
+// predates the last hand-verification would be a meaningless date to surface.
+if (!isIso(data.lastChecked)) {
+  errors.push(`lastChecked must be YYYY-MM-DD, got ${data.lastChecked}`);
+} else if (isIso(data.lastVerified) && data.lastChecked < data.lastVerified) {
+  errors.push(
+    `lastChecked (${data.lastChecked}) is older than lastVerified (${data.lastVerified})`,
+  );
 }
 
 if (errors.length) {

@@ -157,7 +157,21 @@ export interface Practice {
 }
 
 export interface PracticesData {
+  /**
+   * Newest human `verifiedOn` in the file: the last time a person confirmed a
+   * venue's details (schedule, price, access) by hand. Enforced === the max
+   * `verifiedOn` by validate-practices.ts. Never touched by automation — a bot
+   * cannot make this claim honestly.
+   */
   lastVerified: string;
+  /**
+   * ISO date of the last automated freshness sweep (refresh-practices.ts): the
+   * directory's links were confirmed live on this date. Weaker than
+   * `lastVerified` — it says the venues still resolve, not that a human
+   * re-read their details. This is what the site shows as "Updated", so the
+   * footer stays current between the quarterly hand re-checks.
+   */
+  lastChecked: string;
   practices: Practice[];
 }
 
