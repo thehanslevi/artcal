@@ -6,6 +6,7 @@ import {
   extractPrices,
   parseLlmReading,
   pickOfferLinks,
+  planReading,
   proposeAccess,
   proposeCost,
   proposeNew,
@@ -409,6 +410,12 @@ test("a held model proposal has to pass today's rules, not the day it was made",
   // And gone if the page no longer says it.
   assert.equal(recheckHeld(held({ kind: "session", weeks: 8 }, mugi), page("Spring term: 6 weeks")), null);
 
+  // A venue that timed out has no page to check against. The meaning is still
+  // rechecked: this is how a wrong "membership" outlived the rule against it.
+  const taller = "Visits by Appointment";
+  assert.equal(recheckHeld(held({ kind: "membership", note: taller }, taller)), null);
+  assert.notEqual(recheckHeld(held({ kind: "session", weeks: 8 }, mugi)), null);
+
   // Pattern proposals aren't held this way; they're re-derived each run.
   const pattern = { ...held({ kind: "session", weeks: 1 }, mono), method: "pattern" as const };
   assert.equal(recheckHeld(pattern, page(mono)), pattern);
@@ -455,6 +462,53 @@ test("a new venue with nothing to quote isn't proposed, and guesses stay blank",
   assert.equal(p?.draft.neighborhood, "Prospect Heights");
   assert.equal(p?.draft.borough, "brooklyn");
   assert.ok(!JSON.stringify(p).includes("verifiedOn"));
+});
+
+// The second real run (2026-11-05) ran out of free quota at call 14 and lost
+// every reading after it, including the ones a pattern had agreed with.
+test("a saved reading is used before anyone asks whether there's quota", () => {
+  const saved = { hash: "abc", at: "2026-11-05T16:30:00Z", raw: "{}" };
+  assert.equal(planReading(saved, "abc", false), "unchanged");
+  assert.equal(planReading(saved, "abc", true), "unchanged");
+  // Page changed: ask if possible, else re-read the old reply against the new page.
+  assert.equal(planReading(saved, "xyz", true), "ask");
+  assert.equal(planReading(saved, "xyz", false), "stale");
+  // Entries saved before replies were kept have nothing to re-read.
+  const bare = { hash: "abc", at: "2026-11-05T16:30:00Z" };
+  assert.equal(planReading(bare, "abc", true), "ask");
+  assert.equal(planReading(bare, "abc", false), "skip");
+  assert.equal(planReading(undefined, "abc", false), "skip");
+});
+
+test("agreement holds from a saved reply, and a changed page can undo it", () => {
+  const raw = reply({ cost: { kind: "fixed", amount: 480, quote: "Tuition: $480" } });
+  const then = page("Tuition: $480");
+  assert.equal(proposeUpdates(ROW, then, parseLlmReading(raw, then))[0]?.confidence, "high");
+  // Same saved reply a week later, but the page now says something else.
+  const now = page("Tuition: $520");
+  const reading = parseLlmReading(raw, now);
+  assert.equal(reading.cost, undefined);
+  const [p] = proposeUpdates(ROW, now, reading);
+  assert.deepEqual(p?.change.proposed, { kind: "fixed", amount: 520 });
+  assert.equal(p?.confidence, "medium");
+});
+
+test("the model's description is a suggestion and can't become the row's", () => {
+  const venue = { name: "New Print Shop", url: "https://newprint.example.org", whereTemplate: "New Print Shop, 1 Main St, Gowanus" };
+  const pages = page("Our 8 week classes are $580.\n8 week classes run all year.");
+  const pitch = "We offer the highest quality of handmade custom prints.";
+  const p = proposeNew(venue, pages, parseLlmReading(reply({ what: pitch }), pages));
+  assert.equal(p?.draft.what, "");
+  assert.equal(p?.kind === "new" && p.suggestedWhat, pitch);
+  // A suggestion isn't a value the model supplied.
+  assert.equal(p?.method, "pattern");
+
+  // Even a draft that arrives with a description needs a person's.
+  const filled = newProposal();
+  if (filled.kind === "new") filled.draft.what = pitch;
+  assert.throws(() => applyProposal(DATA, filled, { verifiedOn: "2026-11-04" }), /--set what/);
+  const next = applyProposal(DATA, filled, { verifiedOn: "2026-11-04", set: { what: "Letterpress classes." } });
+  assert.equal(next.practices.at(-1)!.what, "Letterpress classes.");
 });
 
 // --- the honesty invariant ---

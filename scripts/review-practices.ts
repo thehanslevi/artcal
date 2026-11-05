@@ -76,7 +76,13 @@ function list(): void {
       console.log(`  proposed: ${JSON.stringify(p.change.proposed)}`);
     } else {
       console.log(`\n${tag}  NEW: ${p.draft.name}  ${p.draft.url}`);
-      console.log(`  draft: ${JSON.stringify({ ...p.draft, name: undefined, url: undefined })}`);
+      console.log(
+        `  draft: ${JSON.stringify({ ...p.draft, name: undefined, url: undefined, what: undefined })}`,
+      );
+      if (p.suggestedWhat) {
+        console.log(`  model's description (not applied; write yours with --set what="..."):`);
+        console.log(`    ${p.suggestedWhat}`);
+      }
     }
     for (const e of p.evidence) console.log(`  "${e.quote}"\n    ${e.url}`);
   }

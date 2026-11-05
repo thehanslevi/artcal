@@ -77,7 +77,16 @@ export type Proposal =
       current: unknown;
       change: FieldChange;
     })
-  | (ProposalBase & { kind: "new"; draft: PracticeDraft });
+  | (ProposalBase & {
+      kind: "new";
+      draft: PracticeDraft;
+      /**
+       * The model's one-line description, shown to the reviewer and never
+       * applied. It tends to be the venue's own pitch, and what a place is for
+       * is the one thing a person has to write.
+       */
+      suggestedWhat?: string;
+    });
 
 // ---------------------------------------------------------------------------
 // Text
@@ -904,14 +913,15 @@ export function proposeNew(
   const draft = draftFromVenue(venue, pages);
   const stub = { ...draft, id: "new", verifiedOn: "" } as unknown as Practice;
   const cost = proposeCost(stub, extractPrices(pages));
-  const schedule = proposeSchedule(stub, pages) ?? llm?.schedule;
+  const stated = proposeSchedule(stub, pages);
+  const schedule = stated ?? llm?.schedule;
+  const labelled = cost && cost.confidence !== "low";
   const access = proposeAccess(stub, pages);
-  if (cost && cost.confidence !== "low") draft.cost = cost.cost;
+  if (labelled) draft.cost = cost.cost;
   else if (llm?.cost) draft.cost = llm.cost.cost;
   else if (cost) draft.cost = cost.cost;
   if (schedule) draft.schedule = schedule.schedule;
   if (access) draft.access = access.access;
-  if (llm?.what) draft.what = llm.what;
 
   const evidence: Evidence[] = [];
   for (const e of [
@@ -931,22 +941,26 @@ export function proposeNew(
   return {
     kind: "new",
     draft,
-    method: llm?.cost || llm?.schedule || llm?.what ? "llm" : "pattern",
+    // Whichever reader the drafted values came from; a suggestion isn't a value.
+    method: (llm?.cost && !labelled) || (llm?.schedule && !stated) ? "llm" : "pattern",
     confidence: "low",
     evidence,
+    ...(llm?.what ? { suggestedWhat: llm.what } : {}),
   };
 }
 
 /**
- * A model's reading is cached while the page is unchanged, so its proposals are
- * carried from week to week without asking again. Carrying them must not carry
- * yesterday's rules: this puts a held proposal through today's checks, and
- * returns it (possibly corrected), or null if it no longer passes.
+ * Proposals for a venue that couldn't be loaded this run are carried over, since
+ * a timeout isn't evidence the offer ended. Carrying them must not carry the
+ * rules they were made under: this puts a model-backed one through today's
+ * checks and returns it (possibly corrected), or null if it no longer passes.
+ * With no page to hand, the quote is taken as still there and only its meaning
+ * is rechecked.
  */
-export function recheckHeld(p: Proposal, pages: Page[]): Proposal | null {
+export function recheckHeld(p: Proposal, pages?: Page[]): Proposal | null {
   if (p.method !== "llm" || p.kind !== "update") return p;
   const quote = p.evidence[0]?.quote;
-  if (!quote || !quoteOnPage(quote, pages)) return null;
+  if (!quote || (pages && !quoteOnPage(quote, pages))) return null;
   if (p.change.field === "schedule") {
     const again = readSchedule(p.change.proposed as unknown as Record<string, unknown>, quote);
     return again ? { ...p, change: { field: "schedule", proposed: again } } : null;
@@ -956,4 +970,39 @@ export function recheckHeld(p: Proposal, pages: Page[]): Proposal | null {
     return amountsOf(cost).every((a) => quoteHasAmount(quote, a)) ? p : null;
   }
   return p;
+}
+
+/** What the last model call for a venue said, kept so it needn't be asked again. */
+export interface CachedReading {
+  /** Fingerprint of the page text the model read. */
+  hash: string;
+  at: string;
+  /** The model's reply, verbatim. Only ever read back through parseLlmReading. */
+  raw?: string;
+}
+
+/**
+ * Where this run's reading of a venue comes from.
+ *
+ * unchanged: the page is as the model last saw it, so its saved reply is re-read
+ *            under today's rules. No call, and agreement with a pattern holds
+ *            from week to week.
+ * ask:       the page is new or changed, and there's quota.
+ * stale:     the page changed but the model can't be asked. Its last reply is
+ *            re-read against the page as it is now, so anything that survives is
+ *            still quoted from the current page.
+ * skip:      nothing saved and nobody to ask.
+ *
+ * Checking the cache before the quota matters: the second real run did it the
+ * other way round, ran out of quota at call 14, and dropped every reading after.
+ */
+export function planReading(
+  cached: CachedReading | undefined,
+  hash: string,
+  canAsk: boolean,
+): "unchanged" | "ask" | "stale" | "skip" {
+  const saved = typeof cached?.raw === "string";
+  if (saved && cached!.hash === hash) return "unchanged";
+  if (canAsk) return "ask";
+  return saved ? "stale" : "skip";
 }
