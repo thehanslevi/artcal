@@ -52,6 +52,19 @@ test("stripVenuePrefix keeps the original when the remainder is too short", () =
   assert.equal(stripVenuePrefix("The Tank: Hi", "The Tank"), "The Tank: Hi");
 });
 
+test("stripVenuePrefix drops a possessive venue", () => {
+  assert.equal(
+    stripVenuePrefix("Wonderville's 2nd Annual Alt.Ctrl Festival", "Wonderville"),
+    "2nd Annual Alt.Ctrl Festival",
+  );
+  assert.equal(stripVenuePrefix("The Tank’s Annual Gala", "The Tank"), "Annual Gala");
+  assert.equal(stripVenuePrefix("The Tank's Gala", "The Tank"), "Gala");
+  // Too little left to stand as a title.
+  assert.equal(stripVenuePrefix("The Tank's 10", "The Tank"), "The Tank's 10");
+  // Someone else's possessive isn't the venue's.
+  assert.equal(stripVenuePrefix("Fay Victor's Black Sonic Space", "FourOneOne"), "Fay Victor's Black Sonic Space");
+});
+
 test("stripVenuePrefix leaves a connector-led remainder alone", () => {
   // "Film Forum Presents X" must not become "Presents X".
   assert.equal(

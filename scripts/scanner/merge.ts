@@ -1,6 +1,7 @@
 import { randomBytes } from "node:crypto";
 import type { CalEvent, EventsData, Week } from "../../src/types";
 import { findDuplicateOf } from "./dedupe";
+import { cleanText } from "../../src/lib/entities";
 import { parseVenue, stripVenuePrefix } from "../../src/lib/venue";
 
 /**
@@ -111,11 +112,14 @@ export function mergeIntoEvents(
     }
 
     // Normalize on the way in, so a scrape can't reintroduce "Venue: Title"
-    // prefixes or paste a full postal address into the display string.
-    const parts = parseVenue(event.where);
+    // prefixes, paste a full postal address into the display string, or carry
+    // entities and tags through. Every source passes here, whatever its
+    // extractor remembered to decode.
+    const parts = parseVenue(cleanText(event.where));
     const normalized: CalEvent = {
       ...event,
-      event: stripVenuePrefix(event.event, parts.venue),
+      event: stripVenuePrefix(cleanText(event.event), parts.venue),
+      note: typeof event.note === "string" ? cleanText(event.note) || null : event.note,
       where: parts.where,
       venue: parts.venue,
       neighborhood: parts.neighborhood,

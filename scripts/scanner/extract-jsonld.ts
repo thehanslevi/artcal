@@ -1,3 +1,4 @@
+import { decodeHtmlEntities } from "../../src/lib/entities.ts";
 import type { CalEvent } from "../../src/types";
 import { classifyEvent } from "./classify.ts";
 import type { Venue } from "./venues";
@@ -134,14 +135,13 @@ function toCalEvent(
 }
 
 function cleanTitle(name: string, venueName: string): string {
-  let t = name
+  const known = name
     .replace(/&amp;/gi, "&")
     .replace(/&nbsp;/gi, " ")
     .replace(/&quot;/gi, '"')
     .replace(/&#0?39;/g, "'")
-    .replace(/&apos;/gi, "'")
-    .replace(/\s+/g, " ")
-    .trim();
+    .replace(/&apos;/gi, "'");
+  let t = decodeHtmlEntities(known).replace(/\s+/g, " ").trim();
   // Platforms often append the venue to the event name ("Title — Venue").
   const suffix = new RegExp(
     `\\s*[—–\\-|·]\\s*${venueName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*$`,

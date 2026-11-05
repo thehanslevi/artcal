@@ -1,3 +1,4 @@
+import { decodeHtmlEntities } from "../../src/lib/entities.ts";
 import type { CalEvent } from "../../src/types";
 import type { Venue } from "./venues";
 import { classifyEvent } from "./classify.ts";
@@ -13,16 +14,16 @@ const MONTH_ABBR = [
 const DAY_ABBR = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 function decode(s: string): string {
-  return s
+  const known = s
     .replace(/&amp;/gi, "&")
     .replace(/&nbsp;/gi, " ")
     .replace(/&quot;/gi, '"')
     .replace(/&#0?39;/g, "'")
     .replace(/&#8217;/g, "'")
     .replace(/&apos;/gi, "'")
-    .replace(/<[^>]+>/g, "")
-    .replace(/\s+/g, " ")
-    .trim();
+    .replace(/<[^>]+>/g, "");
+  // Then whatever that list doesn't name: "&#8220;", "&#038;", "&ndash;".
+  return decodeHtmlEntities(known).replace(/\s+/g, " ").trim();
 }
 
 interface Parsed {
