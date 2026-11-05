@@ -26,9 +26,11 @@ import {
   LLM_SYSTEM_PROMPT,
   parseLlmReading,
   pickOfferLinks,
+  planReading,
   proposeNew,
   proposeUpdates,
   recheckHeld,
+  type CachedReading,
   type LlmReading,
   type Page,
   type Proposal,
@@ -48,6 +50,8 @@ const LLM_PER_RUN = 40;
 // Below this share of venues answering, it's our network rather than theirs, and
 // a run that saw nothing shouldn't overwrite a review file full of open items.
 const FLOOR = 0.5;
+// A reply longer than this isn't saved, and the venue is simply asked again.
+const MAX_SAVED_REPLY = 6000;
 
 interface Seed {
   key: string;
@@ -65,7 +69,8 @@ export interface VenueResult {
   /** The row's figure is still on the site. A note for the reviewer, not a verification. */
   costStillShown?: boolean;
   proposals: number;
-  llm?: "used" | "unchanged" | "skipped";
+  /** used: asked now. unchanged/stale: saved reply re-read. skipped: no reading. */
+  llm?: "used" | "unchanged" | "stale" | "skipped";
   discarded?: number;
 }
 
@@ -157,7 +162,7 @@ const seeds = filter
 
 const previous = loadJson<{ proposals: Proposal[] }>(OUT_PATH, { proposals: [] });
 const decisions = loadJson<Record<string, unknown>>(DECISIONS_PATH, {});
-const state = loadJson<Record<string, { hash: string; at: string }>>(STATE_PATH, {});
+const state = loadJson<Record<string, CachedReading>>(STATE_PATH, {});
 
 try {
   console.log(`Reading ${seeds.length} venues...`);
@@ -196,57 +201,67 @@ try {
   const readings = new Map<string, LlmReading>();
   let llmCalls = 0;
   for (const c of queue) {
-    if (!hasLlm() || isQuotaExhausted() || llmCalls >= LLM_PER_RUN) {
+    const cached = state[c.seed.key];
+    const canAsk = hasLlm() && !isQuotaExhausted() && llmCalls < LLM_PER_RUN;
+    const plan = planReading(cached, c.hash, canAsk);
+    if (plan === "skip") {
       c.result.llm = "skipped";
       continue;
     }
-    if (state[c.seed.key]?.hash === c.hash) {
-      c.result.llm = "unchanged";
-      continue;
+    let raw: string | null;
+    if (plan === "ask") {
+      llmCalls += 1;
+      raw = await callLlm(LLM_SYSTEM_PROMPT, buildLlmPrompt(c.seed.name, c.pages), {
+        envelope: LLM_ENVELOPE,
+      });
+      if (raw !== null) {
+        state[c.seed.key] = {
+          hash: c.hash,
+          at: now.toISOString(),
+          ...(raw.length <= MAX_SAVED_REPLY ? { raw } : {}),
+        };
+      } else if (typeof cached?.raw === "string") {
+        // The call failed. What it said last time still counts, as far as
+        // today's page bears it out.
+        raw = cached.raw;
+        c.result.llm = "stale";
+      }
+    } else {
+      raw = cached!.raw!;
     }
-    llmCalls += 1;
-    const raw = await callLlm(LLM_SYSTEM_PROMPT, buildLlmPrompt(c.seed.name, c.pages), {
-      envelope: LLM_ENVELOPE,
-    });
     if (raw === null) {
       c.result.llm = "skipped";
       continue;
     }
+    // Saved or fresh, the reply goes through the same checks against the page
+    // as it is today.
     const reading = parseLlmReading(raw, c.pages);
     readings.set(c.seed.key, reading);
-    c.result.llm = "used";
+    c.result.llm ??= plan === "ask" ? "used" : plan;
     c.result.discarded = reading.discarded;
-    state[c.seed.key] = { hash: c.hash, at: now.toISOString() };
   }
 
-  // A venue that couldn't be read this week keeps its open proposals. So does one
-  // whose reading is cached: the model isn't re-asked, but its finding still stands.
+  // A venue that couldn't be read this week keeps its open proposals, rechecked
+  // under today's rules. Everything else is derived again from the page and the
+  // model's saved or fresh reply.
   const previousById = new Map(previous.proposals.map((p) => [p.id, p]));
   const targetOf = (p: Proposal) =>
     p.kind === "update" ? p.practiceId : `new:${hostOf(p.draft.url)}`;
   const read = new Set(
     crawled.filter((c) => c.result.status === "read").map((c) => c.seed.key),
   );
-  const unchanged = new Set(
-    crawled.filter((c) => c.result.llm === "unchanged").map((c) => c.seed.key),
-  );
 
-  const pagesOf = new Map(crawled.map((c) => [c.seed.key, c.pages]));
   const proposals: Proposal[] = [];
   for (const p of previous.proposals) {
     const target = targetOf(p);
-    if (!read.has(target)) {
-      proposals.push(p);
-    } else if (unchanged.has(target) && p.method === "llm") {
-      // Held without re-asking the model, but not without re-checking it.
-      const again = recheckHeld(p, pagesOf.get(target) ?? []);
-      if (!again) continue;
-      proposals.push(
-        again.kind === "update"
-          ? { ...again, id: proposalId([target, again.change.field, JSON.stringify(again.change.proposed)]) }
-          : again,
-      );
-    }
+    if (read.has(target)) continue;
+    const again = recheckHeld(p);
+    if (!again) continue;
+    proposals.push(
+      again.kind === "update"
+        ? { ...again, id: proposalId([target, again.change.field, JSON.stringify(again.change.proposed)]) }
+        : again,
+    );
   }
   const held = new Set(proposals.map((p) => p.id));
 
@@ -264,13 +279,6 @@ try {
       const fresh = buildProposals(c.seed, c.pages, readings.get(c.seed.key), today);
       for (const p of fresh) {
         if (decisions[p.id] || held.has(p.id)) continue;
-        // One proposal per row and field: what was just read replaces what was held.
-        if (p.kind === "update") {
-          const stale = proposals.findIndex(
-            (h) => h.kind === "update" && h.practiceId === p.practiceId && h.change.field === p.change.field,
-          );
-          if (stale >= 0) proposals.splice(stale, 1);
-        }
         proposals.push({ ...p, firstSeen: previousById.get(p.id)?.firstSeen ?? today });
         c.result.proposals += 1;
       }

@@ -33,7 +33,9 @@ function completeDraft(
   draft: PracticeDraft,
   set: Record<string, string>,
 ): PracticeDraft {
-  const out = { ...draft };
+  // What a place is for comes from the reviewer, whatever the draft holds: a
+  // scraper can't vouch for a description, and a model's is usually the pitch.
+  const out = { ...draft, what: "" };
   for (const [k, v] of Object.entries(set)) {
     switch (k) {
       case "name":
