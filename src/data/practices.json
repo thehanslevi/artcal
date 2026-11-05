@@ -407,7 +407,7 @@
       "neighborhood": "East Village",
       "borough": "manhattan",
       "travelMin": 40,
-      "url": "https://www.worksinprogressnyc.org/silk-screen-classes/",
+      "url": "https://www.worksinprogressnyc.org/classes",
       "cost": {
         "kind": "unknown",
         "why": "not-checked"
@@ -941,7 +941,7 @@
       "neighborhood": "SoHo",
       "borough": "manhattan",
       "travelMin": 40,
-      "url": "https://www.343labs.com/nyc-courses-at-343-labs/",
+      "url": "https://343labs.com/collections/nyc-courses",
       "cost": {
         "kind": "unknown",
         "why": "not-checked"
