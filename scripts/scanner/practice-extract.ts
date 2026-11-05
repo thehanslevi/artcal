@@ -673,15 +673,46 @@ function readCost(r: Record<string, unknown>): Cost | null {
   }
 }
 
+// The quote check proves the words are on the page. These prove they say what
+// the model claims. Each rule answers a wrong schedule from the first real run
+// (2026-11-05): "1 Session four hours" read as a one-week term, "Visits by
+// Appointment" read as a membership, and an archive's opening hours read as a
+// weekly class at Monday's time on all four days.
+const TIME_RANGE_RE =
+  /\b\d{1,2}(?::\d{2})?\s*(?:am|pm)?\s*(?:-|–|—|to)\s*\d{1,2}(?::\d{2})?\s*(?:am|pm)\b/gi;
+const TIME_POINT_RE = /\b\d{1,2}(?::\d{2})?\s*(?:am|pm)\b/gi;
+const normalizeTime = (t: string) =>
+  t.toLowerCase().replace(/\s+/g, "").replace(/[–—]|to/g, "-");
+
+/** The time, if the quote gives exactly one. Several times means it varies by day. */
+function sharedTime(claimed: string | undefined, quote: string): string | undefined {
+  if (!claimed) return undefined;
+  const ranges = quote.match(TIME_RANGE_RE) ?? [];
+  const found = new Set((ranges.length ? ranges : (quote.match(TIME_POINT_RE) ?? [])).map(normalizeTime));
+  return found.size === 1 && found.has(normalizeTime(claimed)) ? claimed : undefined;
+}
+
+// Opening hours name days too. A weekly practice says what meets.
+const MEETS_RE =
+  /\b(?:class(?:es)?|workshops?|sessions?|studio|rehears\w*|meet\w*|groups?|club|practice|lessons?|circle|jam|drawing|choir|night)\b/i;
+const ORDINAL_WORDS: Record<string, RegExp> = {
+  "1": /\b(?:first|1st)\b/i,
+  "2": /\b(?:second|2nd)\b/i,
+  "3": /\b(?:third|3rd)\b/i,
+  "4": /\b(?:fourth|4th)\b/i,
+  "-1": /\blast\b/i,
+};
+
 function readSchedule(r: Record<string, unknown>, quote: string): Schedule | null {
-  const time = typeof r["time"] === "string" ? r["time"] : undefined;
-  const note = typeof r["note"] === "string" ? r["note"].slice(0, 160) : "";
+  const claimedTime = typeof r["time"] === "string" ? r["time"] : undefined;
   switch (r["kind"]) {
     case "weekly": {
       const days = Array.isArray(r["days"])
         ? r["days"].filter((d): d is Weekday => WEEKDAYS.includes(d as Weekday))
         : [];
       if (!days.length || !days.every((d) => WEEKDAY_WORDS[d].test(quote))) return null;
+      if (!MEETS_RE.test(quote)) return null;
+      const time = sharedTime(claimedTime, quote);
       return { kind: "weekly", days, ...(time ? { time } : {}) };
     }
     case "monthly-nth": {
@@ -689,6 +720,8 @@ function readSchedule(r: Record<string, unknown>, quote: string): Schedule | nul
       if (![1, 2, 3, 4, -1].includes(nth as number)) return null;
       if (!WEEKDAYS.includes(day as Weekday)) return null;
       if (!WEEKDAY_WORDS[day as Weekday].test(quote)) return null;
+      if (!ORDINAL_WORDS[String(nth)]!.test(quote)) return null;
+      const time = sharedTime(claimedTime, quote);
       return {
         kind: "monthly-nth",
         nth: nth as 1 | 2 | 3 | 4 | -1,
@@ -696,11 +729,18 @@ function readSchedule(r: Record<string, unknown>, quote: string): Schedule | nul
         ...(time ? { time } : {}),
       };
     }
-    case "session":
-      if (!isNum(r["weeks"]) || !quoteHasAmount(quote, r["weeks"])) return null;
-      return { kind: "session", weeks: r["weeks"], note: note || `${r["weeks"]}-week classes` };
+    case "session": {
+      const weeks = r["weeks"];
+      if (!isNum(weeks) || weeks < 2 || weeks > 30) return null;
+      // The number has to be a number of weeks, not any figure in the sentence.
+      if (!new RegExp(`(^|[^\\d.])${weeks}[- ]?weeks?\\b`, "i").test(quote)) return null;
+      // The note is ours, not the model's: its wording isn't checked against
+      // anything, and a term's dates go stale.
+      return { kind: "session", weeks, note: `${weeks}-week classes` };
+    }
     case "membership":
-      return { kind: "membership", note: note || "Membership." };
+      if (!/\bmember/i.test(quote)) return null;
+      return { kind: "membership", note: "Membership." };
     default:
       return null;
   }
@@ -810,19 +850,23 @@ export function proposeUpdates(
   }
 
   if (current.schedule.kind === "irregular") {
+    // A term length the page states twice, or beside a price, outranks the
+    // model's reading of the same page. The model fills in when there's none.
     const s = proposeSchedule(current, pages);
-    if (llm?.schedule) {
+    if (s) {
       const agreed =
-        s && JSON.stringify(s.schedule) === JSON.stringify(llm.schedule.schedule);
+        llm?.schedule?.schedule.kind === "session" &&
+        s.schedule.kind === "session" &&
+        llm.schedule.schedule.weeks === s.schedule.weeks;
       out.push({
-        ...base, method: "llm", confidence: agreed ? "high" : "medium",
-        evidence: llm.schedule.evidence,
-        current: current.schedule, change: { field: "schedule", proposed: llm.schedule.schedule },
-      });
-    } else if (s) {
-      out.push({
-        ...base, method: "pattern", confidence: "medium", evidence: s.evidence,
+        ...base, method: "pattern", confidence: agreed ? "high" : "medium",
+        evidence: s.evidence,
         current: current.schedule, change: { field: "schedule", proposed: s.schedule },
+      });
+    } else if (llm?.schedule) {
+      out.push({
+        ...base, method: "llm", confidence: "medium", evidence: llm.schedule.evidence,
+        current: current.schedule, change: { field: "schedule", proposed: llm.schedule.schedule },
       });
     }
   }
@@ -860,7 +904,7 @@ export function proposeNew(
   const draft = draftFromVenue(venue, pages);
   const stub = { ...draft, id: "new", verifiedOn: "" } as unknown as Practice;
   const cost = proposeCost(stub, extractPrices(pages));
-  const schedule = llm?.schedule ?? proposeSchedule(stub, pages);
+  const schedule = proposeSchedule(stub, pages) ?? llm?.schedule;
   const access = proposeAccess(stub, pages);
   if (cost && cost.confidence !== "low") draft.cost = cost.cost;
   else if (llm?.cost) draft.cost = llm.cost.cost;
@@ -891,4 +935,25 @@ export function proposeNew(
     confidence: "low",
     evidence,
   };
+}
+
+/**
+ * A model's reading is cached while the page is unchanged, so its proposals are
+ * carried from week to week without asking again. Carrying them must not carry
+ * yesterday's rules: this puts a held proposal through today's checks, and
+ * returns it (possibly corrected), or null if it no longer passes.
+ */
+export function recheckHeld(p: Proposal, pages: Page[]): Proposal | null {
+  if (p.method !== "llm" || p.kind !== "update") return p;
+  const quote = p.evidence[0]?.quote;
+  if (!quote || !quoteOnPage(quote, pages)) return null;
+  if (p.change.field === "schedule") {
+    const again = readSchedule(p.change.proposed as unknown as Record<string, unknown>, quote);
+    return again ? { ...p, change: { field: "schedule", proposed: again } } : null;
+  }
+  if (p.change.field === "cost") {
+    const cost = p.change.proposed;
+    return amountsOf(cost).every((a) => quoteHasAmount(quote, a)) ? p : null;
+  }
+  return p;
 }

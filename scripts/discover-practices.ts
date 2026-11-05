@@ -28,6 +28,7 @@ import {
   pickOfferLinks,
   proposeNew,
   proposeUpdates,
+  recheckHeld,
   type LlmReading,
   type Page,
   type Proposal,
@@ -230,10 +231,23 @@ try {
     crawled.filter((c) => c.result.llm === "unchanged").map((c) => c.seed.key),
   );
 
-  const proposals: Proposal[] = previous.proposals.filter(
-    (p) =>
-      !read.has(targetOf(p)) || (unchanged.has(targetOf(p)) && p.method === "llm"),
-  );
+  const pagesOf = new Map(crawled.map((c) => [c.seed.key, c.pages]));
+  const proposals: Proposal[] = [];
+  for (const p of previous.proposals) {
+    const target = targetOf(p);
+    if (!read.has(target)) {
+      proposals.push(p);
+    } else if (unchanged.has(target) && p.method === "llm") {
+      // Held without re-asking the model, but not without re-checking it.
+      const again = recheckHeld(p, pagesOf.get(target) ?? []);
+      if (!again) continue;
+      proposals.push(
+        again.kind === "update"
+          ? { ...again, id: proposalId([target, again.change.field, JSON.stringify(again.change.proposed)]) }
+          : again,
+      );
+    }
+  }
   const held = new Set(proposals.map((p) => p.id));
 
   const perVenue: Record<string, VenueResult> = {};
@@ -250,6 +264,13 @@ try {
       const fresh = buildProposals(c.seed, c.pages, readings.get(c.seed.key), today);
       for (const p of fresh) {
         if (decisions[p.id] || held.has(p.id)) continue;
+        // One proposal per row and field: what was just read replaces what was held.
+        if (p.kind === "update") {
+          const stale = proposals.findIndex(
+            (h) => h.kind === "update" && h.practiceId === p.practiceId && h.change.field === p.change.field,
+          );
+          if (stale >= 0) proposals.splice(stale, 1);
+        }
         proposals.push({ ...p, firstSeen: previousById.get(p.id)?.firstSeen ?? today });
         c.result.proposals += 1;
       }
