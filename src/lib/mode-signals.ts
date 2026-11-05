@@ -70,3 +70,26 @@ export function titleSignal(title: string): Signal {
   if (m) return "make";
   return "none";
 }
+
+/**
+ * What a venue's own category for an event says, when its feed carries one.
+ *
+ * UnionDocs files each event under "Workshops & Labs" or "Screenings & Events".
+ * Its workshops have titles like "Camera Ministry: Lens-based Encounters", which
+ * no keyword list will ever read as a workshop, and its screenings have titles
+ * like "Hospital". The venue already said which is which.
+ *
+ * Deliberately narrow: only words a venue uses to sort its own calendar.
+ */
+const CATEGORY_MAKE_RE = /\b(?:workshops?|class(?:es)?|courses?|labs?|intensives?)\b/i;
+const CATEGORY_WITNESS_RE =
+  /\b(?:screenings?|exhibitions?|performances?|concerts?|talks?|readings?)\b/i;
+
+export function categorySignal(categories: string): Signal {
+  const m = CATEGORY_MAKE_RE.test(categories);
+  const w = CATEGORY_WITNESS_RE.test(categories);
+  if (m && w) return "both";
+  if (m) return "make";
+  if (w) return "witness";
+  return "none";
+}

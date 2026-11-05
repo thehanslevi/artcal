@@ -1,5 +1,5 @@
 import type { Category, Mode } from "../../src/types";
-import { titleSignal } from "../../src/lib/mode-signals";
+import { categorySignal, titleSignal } from "../../src/lib/mode-signals";
 
 // Deterministic extractors stamp every event with the venue's default mode
 // and category. That breaks for multi-program institutions (a pottery studio's
@@ -23,13 +23,17 @@ export function classifyEvent(
   title: string,
   venueMode: Mode,
   venueCategory: Category,
+  /** The venue's own category for this event, when its feed carries one. */
+  feedCategories = "",
 ): { mode: Mode; category: Category } {
   const t = title.toLowerCase();
 
-  // A decisive title overrides the venue default. Signals on both sides, or
-  // neither, keep the venue's default.
-  const signal = titleSignal(title);
-  const mode: Mode = signal === "make" || signal === "witness" ? signal : venueMode;
+  // A decisive title comes first, so the label never contradicts the title (the
+  // audit checks exactly that). Then the venue's own category for the event,
+  // which beats a blanket default. Then the default.
+  const decisive = (s: string) => (s === "make" || s === "witness" ? s : null);
+  const mode: Mode =
+    decisive(titleSignal(title)) ?? decisive(categorySignal(feedCategories)) ?? venueMode;
 
   let category = venueCategory;
   for (const [re, cat] of CATEGORY_HINTS) {
