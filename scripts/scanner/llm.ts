@@ -94,10 +94,20 @@ const GEMINI_SCHEMA = {
   required: ["events"],
 };
 
+/**
+ * What a call expects back. Omit for the event scan's `{"events": [...]}`.
+ * `envelope` describes the object to hosted providers; Gemini gets free-form
+ * JSON for these calls, so a caller must validate the result regardless.
+ */
+export interface LlmShape {
+  envelope: string;
+}
+
 async function callGemini(
   systemPrompt: string,
   userPrompt: string,
   model: string,
+  shape?: LlmShape,
 ): Promise<string> {
   const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY!);
   const m = genAI.getGenerativeModel({
@@ -105,7 +115,7 @@ async function callGemini(
     systemInstruction: systemPrompt,
     generationConfig: {
       responseMimeType: "application/json",
-      responseSchema: GEMINI_SCHEMA,
+      ...(shape ? {} : { responseSchema: GEMINI_SCHEMA }),
       temperature: 0,
     },
   });
@@ -154,6 +164,7 @@ async function postChat(
   model: string,
   systemPrompt: string,
   userPrompt: string,
+  shape?: LlmShape,
 ): Promise<string> {
   const res = await fetch(`${baseUrl.replace(/\/$/, "")}/chat/completions`, {
     method: "POST",
@@ -170,7 +181,7 @@ async function postChat(
           role: "system",
           content:
             systemPrompt +
-            '\n\nReturn a JSON object of the form {"events": [ ... ]}.',
+            `\n\nReturn a JSON object of the form ${shape?.envelope ?? '{"events": [ ... ]}'}.`,
         },
         { role: "user", content: userPrompt },
       ],
@@ -200,10 +211,11 @@ async function callOpenAiCompat(
   model: string,
   baseUrl: string,
   apiKey: string,
+  shape?: LlmShape,
 ): Promise<string> {
   const pick = resolvedModel[baseUrl] ?? model;
   try {
-    return await postChat(baseUrl, apiKey, pick, systemPrompt, userPrompt);
+    return await postChat(baseUrl, apiKey, pick, systemPrompt, userPrompt, shape);
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
     if (!isModelNotFound(msg) || resolvedModel[baseUrl]) throw err;
@@ -212,7 +224,7 @@ async function callOpenAiCompat(
     if (!discovered) throw err;
     resolvedModel[baseUrl] = discovered;
     console.warn(`   discovered usable model: ${discovered}`);
-    return await postChat(baseUrl, apiKey, discovered, systemPrompt, userPrompt);
+    return await postChat(baseUrl, apiKey, discovered, systemPrompt, userPrompt, shape);
   }
 }
 
@@ -231,9 +243,10 @@ function dispatch(
   spec: ModelSpec,
   systemPrompt: string,
   userPrompt: string,
+  shape?: LlmShape,
 ): Promise<string> {
   if (spec.provider === "gemini") {
-    return callGemini(systemPrompt, userPrompt, spec.model);
+    return callGemini(systemPrompt, userPrompt, spec.model, shape);
   }
   const [base, key] =
     spec.provider === "groq"
@@ -241,7 +254,7 @@ function dispatch(
       : spec.provider === "cerebras"
         ? ["https://api.cerebras.ai/v1", process.env.CEREBRAS_API_KEY!]
         : [process.env.OPENAI_COMPAT_BASE_URL!, process.env.OPENAI_COMPAT_API_KEY!];
-  return callOpenAiCompat(systemPrompt, userPrompt, spec.model, base, key);
+  return callOpenAiCompat(systemPrompt, userPrompt, spec.model, base, key, shape);
 }
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -260,11 +273,16 @@ function isPerMinuteLimit(msg: string): boolean {
   return /per minute|per_minute|too_many_tokens|too_many_requests/i.test(msg);
 }
 
-async function paced(spec: ModelSpec, sys: string, user: string): Promise<string> {
+async function paced(
+  spec: ModelSpec,
+  sys: string,
+  user: string,
+  shape?: LlmShape,
+): Promise<string> {
   const wait = MIN_CALL_GAP_MS - (Date.now() - lastCallAt);
   if (wait > 0) await sleep(wait);
   try {
-    return await dispatch(spec, sys, user);
+    return await dispatch(spec, sys, user, shape);
   } finally {
     lastCallAt = Date.now();
   }
@@ -274,11 +292,12 @@ async function paced(spec: ModelSpec, sys: string, user: string): Promise<string
 export async function callLlm(
   systemPrompt: string,
   userPrompt: string,
+  shape?: LlmShape,
 ): Promise<string | null> {
   while (idx < CHAIN.length) {
     const spec = CHAIN[idx]!;
     try {
-      const out = await paced(spec, systemPrompt, userPrompt);
+      const out = await paced(spec, systemPrompt, userPrompt, shape);
       consecutiveRateFails = 0;
       return out;
     } catch (err) {
@@ -300,7 +319,7 @@ export async function callLlm(
         console.warn(`   rate-limited on ${spec.provider} (${msg.slice(0, 120)}); backing off ${backoff / 1000}s`);
         await sleep(backoff);
         try {
-          const out = await paced(spec, systemPrompt, userPrompt);
+          const out = await paced(spec, systemPrompt, userPrompt, shape);
           consecutiveRateFails = 0;
           return out;
         } catch {

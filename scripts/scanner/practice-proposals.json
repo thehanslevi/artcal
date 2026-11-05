@@ -1,0 +1,2296 @@
+{
+  "ranAt": "2026-11-05T15:41:41.849Z",
+  "proposals": [
+    {
+      "kind": "update",
+      "practiceId": "343-labs",
+      "name": "343 Labs",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://343labs.com/pages/course-overview",
+          "quote": "from $1,445"
+        },
+        {
+          "url": "https://343labs.com/pages/course-overview",
+          "quote": "from $4,450"
+        },
+        {
+          "url": "https://343labs.com/collections/nyc-courses",
+          "quote": "From $1,945 USD"
+        },
+        {
+          "url": "https://343labs.com/collections/nyc-courses",
+          "quote": "From $2,825 USD"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "range",
+          "min": 1445,
+          "max": 4450
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "d5cac17f"
+    },
+    {
+      "kind": "update",
+      "practiceId": "artshack",
+      "name": "Artshack Brooklyn",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.artshackbrooklyn.org/studio/membership",
+          "quote": "$280/month"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-published"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "per-month",
+          "amount": 280
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "5352b4aa"
+    },
+    {
+      "kind": "update",
+      "practiceId": "bklyn-clay",
+      "name": "BKLYN CLAY",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://bklynclay.com/classes",
+          "quote": "The semester is 12 weeks long (you come to the same class each week) and costs $860 for the entire semester."
+        }
+      ],
+      "current": {
+        "kind": "fixed",
+        "amount": 825
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "fixed",
+          "amount": 860
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "afaf5d8a"
+    },
+    {
+      "kind": "update",
+      "practiceId": "brooklyn-spark",
+      "name": "Brooklyn Spark",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://brooklynspark.com/",
+          "quote": "Membership is $185/month (excluding tax) and includes a 10% discount"
+        }
+      ],
+      "current": {
+        "kind": "per-month",
+        "amount": 165
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "per-month",
+          "amount": 185
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "46a393de"
+    },
+    {
+      "kind": "update",
+      "practiceId": "brooklynite-choir",
+      "name": "Brooklynite Choir",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://nychoirproject.com/brooklynite-choir",
+          "quote": "Price: $400 ($25 per rehearsal) + a 3% processing fee."
+        }
+      ],
+      "current": {
+        "kind": "per-session",
+        "amount": 22
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "per-session",
+          "amount": 25
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "2b2484a1"
+    },
+    {
+      "kind": "update",
+      "practiceId": "bushwick-ceramics",
+      "name": "Bushwick Ceramics",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.bushwickceramics.com/monthlymemberships",
+          "quote": "Studio Membership $275/Month"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "per-month",
+          "amount": 275
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "1d4005be"
+    },
+    {
+      "kind": "update",
+      "practiceId": "capoeira-luanda",
+      "name": "Capoeira Luanda Brooklyn",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://piaocapoeira.com/class-schedule",
+          "quote": "From $799/semester , $120/month or $30/class"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-published"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "fixed",
+          "amount": 799
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "7cb139f6"
+    },
+    {
+      "kind": "update",
+      "practiceId": "choplet",
+      "name": "Choplet Ceramic Studio",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://choplet.com/custom_classes/6-and-12-week-ceramic-sessions/",
+          "quote": "10/25/26 - 12/10/26 (6 Week): $420"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "fixed",
+          "amount": 420
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "16b1462d"
+    },
+    {
+      "kind": "update",
+      "practiceId": "clayworks-on-columbia",
+      "name": "Clayworks on Columbia",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.clayworksoncolumbia.org/2026-registration-class-schedule",
+          "quote": "A 10 week session costs $500."
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "fixed",
+          "amount": 500
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "b6c944f0"
+    },
+    {
+      "kind": "update",
+      "practiceId": "clayworks-on-columbia",
+      "name": "Clayworks on Columbia",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.clayworksoncolumbia.org/2026-registration-class-schedule",
+          "quote": "A 10 week session costs $500."
+        }
+      ],
+      "current": {
+        "kind": "irregular",
+        "note": "Classes, workshops, and memberships; check site."
+      },
+      "change": {
+        "field": "schedule",
+        "proposed": {
+          "kind": "session",
+          "weeks": 10,
+          "note": "10-week classes"
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "1155324e"
+    },
+    {
+      "kind": "update",
+      "practiceId": "gasworks",
+      "name": "Gasworks NYC",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://gasworksnyc.com/pages/latine-class",
+          "quote": "This class is Sliding Scale, and the prices are: $75 (Seeding); $375 (Sustaining), and $675 (Generatin"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "sliding",
+          "min": 75,
+          "max": 675
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "5d558941"
+    },
+    {
+      "kind": "update",
+      "practiceId": "les-printshop",
+      "name": "Lower East Side Printshop",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.printshop.org/classes-workshops",
+          "quote": "Fee: $175 including 7 hours of studio time"
+        },
+        {
+          "url": "https://www.printshop.org/classes-workshops",
+          "quote": "Fee: $450 including 15 hours of studio time"
+        },
+        {
+          "url": "https://www.printshop.org/classes-workshops",
+          "quote": "Fee: $200 including materials and 6 hours of studio time"
+        },
+        {
+          "url": "https://www.printshop.org/classes-workshops",
+          "quote": "Fee: $250 including materials and 8 hours of studio time"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "range",
+          "min": 175,
+          "max": 450
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "856e11fe"
+    },
+    {
+      "kind": "update",
+      "practiceId": "makerspace-nyc",
+      "name": "MakerSpace NYC",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.makerspace.nyc/memberships",
+          "quote": "$225/Month"
+        },
+        {
+          "url": "https://www.makerspace.nyc/memberships",
+          "quote": "$325/Month"
+        },
+        {
+          "url": "https://www.makerspace.nyc/memberships",
+          "quote": "$375/Month"
+        },
+        {
+          "url": "https://www.makerspace.nyc/memberships",
+          "quote": "$475/Month"
+        }
+      ],
+      "current": {
+        "kind": "per-month",
+        "amount": 175
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "per-month",
+          "amount": 225
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "ef9d4337"
+    },
+    {
+      "kind": "update",
+      "practiceId": "manny-cantor",
+      "name": "Manny Cantor Center",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://mannycantor.org/art/art-classes/ceramics/",
+          "quote": "Cost: $540.00"
+        },
+        {
+          "url": "https://mannycantor.org/art/art-classes/painting/",
+          "quote": "Painting classes at MCC range from $215 to $445 per session depending on the length and f"
+        },
+        {
+          "url": "https://mannycantor.org/art/art-classes/ceramics/",
+          "quote": "Cost: $270.00"
+        },
+        {
+          "url": "https://mannycantor.org/art/art-classes/ceramics/",
+          "quote": "Ceramics classes at MCC are from $445-$540 per session. Clay and glazes are included; a"
+        }
+      ],
+      "current": {
+        "kind": "fixed",
+        "amount": 435
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "range",
+          "min": 215,
+          "max": 540
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "6360f8a4"
+    },
+    {
+      "kind": "update",
+      "practiceId": "myrtles-clayhouse",
+      "name": "Myrtle’s Clayhouse",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.myrtlesclayhouse.com/membershipsx",
+          "quote": "What $275/month gets you"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "per-month",
+          "amount": 275
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "fcdac4e9"
+    },
+    {
+      "kind": "update",
+      "practiceId": "penumbra",
+      "name": "Penumbra Foundation",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.penumbrafoundation.org/online-learning",
+          "quote": "Instructor: Lavonne Hall  | Tuition: $165 (Members) $195 (Non-Members)"
+        },
+        {
+          "url": "https://www.penumbrafoundation.org/online-learning",
+          "quote": "ngoing | Time: TBD between the instructor and the students | Tuition: $1,350 Members: $1,115 or six monthly payments of $250/$"
+        },
+        {
+          "url": "https://www.penumbrafoundation.org/online-learning",
+          "quote": "Tuition: $270 (Members) $318 (Non-Members) | Class Size Max: 10"
+        },
+        {
+          "url": "https://www.penumbrafoundation.org/online-learning",
+          "quote": "Tuition: $293 (Members) $345 (Non-Members) | Class Size Max: 10"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "range",
+          "min": 165,
+          "max": 1350
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "d93a3c2f"
+    },
+    {
+      "kind": "update",
+      "practiceId": "potters-wheel-nyc",
+      "name": "The Potter’s Wheel",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.potterswheelny.com/course-descriptions",
+          "quote": "Our courses are $450 for each session, and our Independent Artist courses are $400 per session."
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "range",
+          "min": 400,
+          "max": 450
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "e42ee926"
+    },
+    {
+      "kind": "update",
+      "practiceId": "powerhouse-ceramics",
+      "name": "Powerhouse Arts Community Ceramics Studio",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://powerhousearts.org/community-ceramics-studio",
+          "quote": "$255/mo"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "per-month",
+          "amount": 255
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "800d89a9"
+    },
+    {
+      "kind": "update",
+      "practiceId": "shoestring-press",
+      "name": "Shoestring Press",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.shoestring.press/membership",
+          "quote": "A monthly printmaking membership is $270, and includes most materials and access on a sign"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "per-month",
+          "amount": 270
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "1b3fe830"
+    },
+    {
+      "kind": "update",
+      "practiceId": "uptown-clay",
+      "name": "Uptown Clay",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.uptown-clay.com/memberships",
+          "quote": "Monthly Membership Fee:  $200"
+        },
+        {
+          "url": "https://www.uptown-clay.com/memberships",
+          "quote": "Monthly Membership Fee:  $300"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "per-month",
+          "amount": 200
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "2cfc420f"
+    },
+    {
+      "kind": "update",
+      "practiceId": "art-lab-snug-harbor",
+      "name": "Art Lab at Snug Harbor",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://artlabsi.com/art-classes/",
+          "quote": "$189.00"
+        },
+        {
+          "url": "https://artlabsi.com/art-classes/",
+          "quote": "$470.00"
+        },
+        {
+          "url": "https://artlabsi.com/art-classes/",
+          "quote": "$281.00"
+        },
+        {
+          "url": "https://artlabsi.com/art-classes/",
+          "quote": "$374.00"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "range",
+          "min": 189,
+          "max": 470
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "938ee05e"
+    },
+    {
+      "kind": "update",
+      "practiceId": "bkcm",
+      "name": "Brooklyn Conservatory of Music",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://bkcm.org/suzuki/",
+          "quote": "45-minute lessons – $4,500"
+        },
+        {
+          "url": "https://bkcm.org/suzuki/",
+          "quote": "30-minute lesson – $116"
+        },
+        {
+          "url": "https://bkcm.org/suzuki/",
+          "quote": "15-minute lessons (second instrument) – $1,815"
+        },
+        {
+          "url": "https://bkcm.org/suzuki/",
+          "quote": "30-minute lessons – $3,480"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "range",
+          "min": 116,
+          "max": 4500
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "4c3a145d"
+    },
+    {
+      "kind": "update",
+      "practiceId": "brooklyn-glass",
+      "name": "Brooklyn Glass",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://brooklynglass.com/education/classes/",
+          "quote": "leave with a beautiful, functional work of art that's uniquely yours. $250 + ... Read More"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "fixed",
+          "amount": 250
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "9a76ef85"
+    },
+    {
+      "kind": "update",
+      "practiceId": "brooklyn-poets",
+      "name": "Brooklyn Poets",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://brooklynpoets.org/community-groups",
+          "quote": "Don’t miss our final fall workshops–sliding scale seats available!"
+        }
+      ],
+      "current": [
+        "free",
+        "drop-in"
+      ],
+      "change": {
+        "field": "access",
+        "proposed": [
+          "free",
+          "drop-in",
+          "sliding-scale"
+        ]
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "e046bf3d"
+    },
+    {
+      "kind": "update",
+      "practiceId": "bushwick-print-lab",
+      "name": "Bushwick Print Lab",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://bushwickprintlab.org/services/workshops/",
+          "quote": "2 people: $500"
+        },
+        {
+          "url": "https://bushwickprintlab.org/services/screen-services/",
+          "quote": "LAB Reclaim Only\t$10\t$15\t$20\t$25\t$30\t$50\t$80"
+        },
+        {
+          "url": "https://bushwickprintlab.org/services/workshops/",
+          "quote": "1 person: $200"
+        },
+        {
+          "url": "https://bushwickprintlab.org/services/workshops/",
+          "quote": "2 people: $300"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "range",
+          "min": 10,
+          "max": 500
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "7a764708"
+    },
+    {
+      "kind": "update",
+      "practiceId": "center-for-fiction",
+      "name": "Center for Fiction",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://centerforfiction.org/shop/day-pass/",
+          "quote": "$30"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "blocked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "fixed",
+          "amount": 30
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "709384a5"
+    },
+    {
+      "kind": "update",
+      "practiceId": "choplet",
+      "name": "Choplet Ceramic Studio",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://choplet.com/studio-rental/drop-in/",
+          "quote": "This drop in pass is for Choplet during Open Studio hours."
+        }
+      ],
+      "current": [
+        "membership"
+      ],
+      "change": {
+        "field": "access",
+        "proposed": [
+          "membership",
+          "drop-in"
+        ]
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "a6425b88"
+    },
+    {
+      "kind": "update",
+      "practiceId": "gasworks",
+      "name": "Gasworks NYC",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://gasworksnyc.com/pages/studio-membership",
+          "quote": "Our sliding scale was inspired by the work of the following groups: Worts & C"
+        },
+        {
+          "url": "https://gasworksnyc.com/pages/studio-membership",
+          "quote": "Discounted classes with studio membership"
+        }
+      ],
+      "current": [
+        "enroll-ahead",
+        "drop-in"
+      ],
+      "change": {
+        "field": "access",
+        "proposed": [
+          "enroll-ahead",
+          "drop-in",
+          "sliding-scale",
+          "membership"
+        ]
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "98e85b8f"
+    },
+    {
+      "kind": "update",
+      "practiceId": "gotham-writers",
+      "name": "Gotham Writers Workshop",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://www.writingclasses.com/",
+          "quote": "Scholarships for Writers of Color"
+        }
+      ],
+      "current": [
+        "enroll-ahead"
+      ],
+      "change": {
+        "field": "access",
+        "proposed": [
+          "enroll-ahead",
+          "scholarship"
+        ]
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "705b374e"
+    },
+    {
+      "kind": "update",
+      "practiceId": "icp",
+      "name": "International Center of Photography",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://www.icp.org/school/oyc",
+          "quote": "ICP offers a range of merit-based scholarships and fellowships for both domestic and international student"
+        },
+        {
+          "url": "https://www.icp.org/school/oyc",
+          "quote": "i network. Learn more about housing, cost of living, campus work-study opportunities, and ways to connect with our student communi"
+        }
+      ],
+      "current": [
+        "membership",
+        "enroll-ahead"
+      ],
+      "change": {
+        "field": "access",
+        "proposed": [
+          "membership",
+          "enroll-ahead",
+          "scholarship",
+          "work-study"
+        ]
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "5440e4fa"
+    },
+    {
+      "kind": "update",
+      "practiceId": "penumbra",
+      "name": "Penumbra Foundation",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://www.penumbrafoundation.org/postkeller-scholarship-program",
+          "quote": "For this inaugural cohort of the Post-Keller Scholarship Program, Penumbra Foundation partnered with FIT, Hunter Col"
+        }
+      ],
+      "current": [
+        "free",
+        "enroll-ahead"
+      ],
+      "change": {
+        "field": "access",
+        "proposed": [
+          "free",
+          "enroll-ahead",
+          "scholarship"
+        ]
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "bc93026f"
+    },
+    {
+      "kind": "update",
+      "practiceId": "rbpmw",
+      "name": "Robert Blackburn Printmaking Workshop",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://www.rbpmw-efanyc.org/classes",
+          "quote": "Scholarships are made possible by the generosity of Crossed Purposes Fou"
+        }
+      ],
+      "current": [
+        "enroll-ahead"
+      ],
+      "change": {
+        "field": "access",
+        "proposed": [
+          "enroll-ahead",
+          "scholarship"
+        ]
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "d411a790"
+    },
+    {
+      "kind": "update",
+      "practiceId": "secret-riso-club",
+      "name": "Secret Riso Club",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://secretrisoclub.com/Membership",
+          "quote": "Every Wednesday and Sunday by appointment or drop-in."
+        }
+      ],
+      "current": [
+        "scholarship",
+        "membership",
+        "enroll-ahead"
+      ],
+      "change": {
+        "field": "access",
+        "proposed": [
+          "scholarship",
+          "membership",
+          "enroll-ahead",
+          "drop-in"
+        ]
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "a1470a72"
+    },
+    {
+      "kind": "update",
+      "practiceId": "textile-arts-center",
+      "name": "Textile Arts Center",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://textileartscenter.com/adult-classes/",
+          "quote": "Scholarships are available for Adult Classes, and currently awarded on a"
+        }
+      ],
+      "current": [
+        "enroll-ahead"
+      ],
+      "change": {
+        "field": "access",
+        "proposed": [
+          "enroll-ahead",
+          "scholarship"
+        ]
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "8952a122"
+    },
+    {
+      "kind": "update",
+      "practiceId": "urbanglass",
+      "name": "UrbanGlass",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://urbanglass.org/classes/overview",
+          "quote": "demonstrated interest, as well as a limited number of full scholarships supported by generous donors. Applications are accepted qua"
+        }
+      ],
+      "current": [
+        "enroll-ahead"
+      ],
+      "change": {
+        "field": "access",
+        "proposed": [
+          "enroll-ahead",
+          "scholarship"
+        ]
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "34475294"
+    },
+    {
+      "kind": "new",
+      "draft": {
+        "name": "Brooklyn Metal Works",
+        "url": "https://www.bkmetalworks.com/classes",
+        "what": "",
+        "disciplines": [],
+        "neighborhood": "Prospect Heights",
+        "borough": "brooklyn",
+        "travelMin": null,
+        "cost": {
+          "kind": "range",
+          "min": 580,
+          "max": 620
+        },
+        "schedule": {
+          "kind": "session",
+          "weeks": 8,
+          "note": "8-week classes"
+        },
+        "access": [
+          "enroll-ahead"
+        ]
+      },
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://www.bkmetalworks.com/classes",
+          "quote": "Our general price range for 8 week classes is $580-$620 and workshops are $200-$600 depending on len"
+        }
+      ],
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "bc805089"
+    },
+    {
+      "kind": "new",
+      "draft": {
+        "name": "BrickHouse Ceramic Art Center",
+        "url": "https://brickhouseny.com/pages/classes-overview",
+        "what": "",
+        "disciplines": [
+          "ceramics"
+        ],
+        "neighborhood": "Long Island City",
+        "borough": "queens",
+        "travelMin": null,
+        "cost": {
+          "kind": "range",
+          "min": 130,
+          "max": 525
+        },
+        "schedule": {
+          "kind": "irregular",
+          "note": "Check site for class terms."
+        },
+        "access": [
+          "enroll-ahead"
+        ]
+      },
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://brickhouseny.com/collections/classes",
+          "quote": "from $525.00"
+        },
+        {
+          "url": "https://brickhouseny.com/pages/workshop",
+          "quote": "ll the exact same workshop, just different dates. The workshop fee is $130, and the material fee is $35."
+        },
+        {
+          "url": "https://brickhouseny.com/collections/classes",
+          "quote": "from $440.00"
+        },
+        {
+          "url": "https://brickhouseny.com/collections/classes",
+          "quote": "from $280.00"
+        }
+      ],
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "e66f366a"
+    },
+    {
+      "kind": "new",
+      "draft": {
+        "name": "Brooklyn Craft Company",
+        "url": "https://www.brooklyncraftcompany.com/collections/all-workshops",
+        "what": "",
+        "disciplines": [
+          "textiles"
+        ],
+        "neighborhood": "Greenpoint",
+        "borough": "brooklyn",
+        "travelMin": null,
+        "cost": {
+          "kind": "range",
+          "min": 20,
+          "max": 350
+        },
+        "schedule": {
+          "kind": "irregular",
+          "note": "Check site for class terms."
+        },
+        "access": [
+          "enroll-ahead"
+        ]
+      },
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://www.brooklyncraftcompany.com/collections/workshops",
+          "quote": "$20.00"
+        },
+        {
+          "url": "https://www.brooklyncraftcompany.com/collections/workshops",
+          "quote": "$350.00"
+        },
+        {
+          "url": "https://www.brooklyncraftcompany.com/collections/all-workshops",
+          "quote": "$45.00"
+        },
+        {
+          "url": "https://www.brooklyncraftcompany.com/collections/all-workshops",
+          "quote": "$65.00"
+        }
+      ],
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "b649bc2a"
+    },
+    {
+      "kind": "new",
+      "draft": {
+        "name": "Brooklyn Shoe Space",
+        "url": "https://brooklynshoespace.com/schedule",
+        "what": "",
+        "disciplines": [
+          "textiles"
+        ],
+        "neighborhood": "East Williamsburg",
+        "borough": "brooklyn",
+        "travelMin": null,
+        "cost": {
+          "kind": "fixed",
+          "amount": 95
+        },
+        "schedule": {
+          "kind": "irregular",
+          "note": "Check site for class terms."
+        },
+        "access": [
+          "enroll-ahead"
+        ]
+      },
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://brooklynshoespace.com/classes",
+          "quote": "From $95"
+        }
+      ],
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "14c2921d"
+    },
+    {
+      "kind": "new",
+      "draft": {
+        "name": "Chez Bushwick",
+        "url": "https://www.chezbushwick.net/",
+        "what": "",
+        "disciplines": [],
+        "neighborhood": "Brooklyn",
+        "borough": "brooklyn",
+        "travelMin": null,
+        "cost": {
+          "kind": "fixed",
+          "amount": 8
+        },
+        "schedule": {
+          "kind": "irregular",
+          "note": "Check site for class terms."
+        },
+        "access": [
+          "enroll-ahead"
+        ]
+      },
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://www.chezbushwick.net/schedule",
+          "quote": "Chez Bushwick is currently accepting bookings for $8 Dance Rehearsals subsidized in partnership with N"
+        }
+      ],
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "bcde0011"
+    },
+    {
+      "kind": "new",
+      "draft": {
+        "name": "Dieu Donné",
+        "url": "https://www.dieudonne.org/",
+        "what": "",
+        "disciplines": [
+          "book-arts"
+        ],
+        "neighborhood": "Brooklyn Navy Yard",
+        "borough": "brooklyn",
+        "travelMin": null,
+        "cost": {
+          "kind": "range",
+          "min": 750,
+          "max": 875
+        },
+        "schedule": {
+          "kind": "irregular",
+          "note": "Check site for class terms."
+        },
+        "access": [
+          "enroll-ahead",
+          "scholarship"
+        ]
+      },
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://www.dieudonne.org/workshops-2026",
+          "quote": "Tuition: $750 + Eventbrite Fees"
+        },
+        {
+          "url": "https://www.dieudonne.org/workshops-2026",
+          "quote": "Tuition: $875 + Eventbrite Fees"
+        },
+        {
+          "url": "https://www.dieudonne.org/workshops-2026",
+          "quote": "ur full days. Registration typically opens in early spring. Scholarship opportunities are available annually. Sign up for our maili"
+        }
+      ],
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "e7f569fb"
+    },
+    {
+      "kind": "new",
+      "draft": {
+        "name": "Genspace",
+        "url": "https://www.genspace.org/classes",
+        "what": "",
+        "disciplines": [],
+        "neighborhood": "Sunset Park",
+        "borough": "brooklyn",
+        "travelMin": null,
+        "cost": {
+          "kind": "unknown",
+          "why": "not-checked"
+        },
+        "schedule": {
+          "kind": "irregular",
+          "note": "Check site for class terms."
+        },
+        "access": [
+          "enroll-ahead",
+          "drop-in"
+        ]
+      },
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://www.genspace.org/events",
+          "quote": "e lab will be open on Saturday 2-4pm after the Summit for a drop-in Open House for BDC participants, judges, and friends!"
+        }
+      ],
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "defa8c27"
+    },
+    {
+      "kind": "new",
+      "draft": {
+        "name": "Gowanus Print Lab",
+        "url": "https://www.gowanusprintlab.com/",
+        "what": "",
+        "disciplines": [],
+        "neighborhood": "Gowanus",
+        "borough": "brooklyn",
+        "travelMin": null,
+        "cost": {
+          "kind": "range",
+          "min": 25,
+          "max": 500
+        },
+        "schedule": {
+          "kind": "irregular",
+          "note": "Check site for class terms."
+        },
+        "access": [
+          "enroll-ahead"
+        ]
+      },
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://www.gowanusprintlab.com/classes.html",
+          "quote": "$500.00"
+        },
+        {
+          "url": "https://www.gowanusprintlab.com/classes.html",
+          "quote": "$300.00"
+        },
+        {
+          "url": "https://www.gowanusprintlab.com/classes.html",
+          "quote": "$450"
+        }
+      ],
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "f442c150"
+    },
+    {
+      "kind": "new",
+      "draft": {
+        "name": "Jamaica Center for Arts and Learning",
+        "url": "https://jcal.org/classes",
+        "what": "",
+        "disciplines": [
+          "theatre"
+        ],
+        "neighborhood": "Queens",
+        "borough": "queens",
+        "travelMin": null,
+        "cost": {
+          "kind": "fixed",
+          "amount": 350
+        },
+        "schedule": {
+          "kind": "irregular",
+          "note": "Check site for class terms."
+        },
+        "access": [
+          "enroll-ahead",
+          "scholarship"
+        ]
+      },
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://jcal.org/classes-2",
+          "quote": "es, individualized coaching, and one-on-one feedback and is priced at $350, inclusive."
+        },
+        {
+          "url": "https://jcal.org/classes-2",
+          "quote": "ant, which seeds a number of initiatives, including the new scholarships and portfolio prep, that are aligned with our values and wi"
+        }
+      ],
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "9609a694"
+    },
+    {
+      "kind": "new",
+      "draft": {
+        "name": "Loop of the Loom",
+        "url": "https://loopoftheloom.com/collections/weaving-classes",
+        "what": "",
+        "disciplines": [
+          "textiles"
+        ],
+        "neighborhood": "Upper East Side",
+        "borough": "manhattan",
+        "travelMin": null,
+        "cost": {
+          "kind": "fixed",
+          "amount": 629
+        },
+        "schedule": {
+          "kind": "irregular",
+          "note": "Check site for class terms."
+        },
+        "access": [
+          "enroll-ahead",
+          "drop-in"
+        ]
+      },
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://loopoftheloom.com/pages/spinning-classes",
+          "quote": "from $629.00"
+        },
+        {
+          "url": "https://loopoftheloom.com/collections/weaving-classes",
+          "quote": "FOR BEGINNERS AND DROP-IN STUDENTS"
+        }
+      ],
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "a0c892ee"
+    },
+    {
+      "kind": "new",
+      "draft": {
+        "name": "Mostly Good Studios",
+        "url": "https://mostlygoodstudios.com/calendar",
+        "what": "",
+        "disciplines": [
+          "ceramics"
+        ],
+        "neighborhood": "Astoria",
+        "borough": "queens",
+        "travelMin": null,
+        "cost": {
+          "kind": "unknown",
+          "why": "not-checked"
+        },
+        "schedule": {
+          "kind": "irregular",
+          "note": "Check site for class terms."
+        },
+        "access": [
+          "enroll-ahead",
+          "membership"
+        ]
+      },
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://www.mostlygoodstudios.com/studio-membership",
+          "quote": "mmit to your creativity and join Mostly Good Studios with a Studio Membership! Our studio memberships grants you access to the studio spa"
+        }
+      ],
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "2639ffdf"
+    },
+    {
+      "kind": "new",
+      "draft": {
+        "name": "Museum of the Moving Image",
+        "url": "https://movingimage.org/education/",
+        "what": "",
+        "disciplines": [],
+        "neighborhood": "Astoria",
+        "borough": "queens",
+        "travelMin": null,
+        "cost": {
+          "kind": "unknown",
+          "why": "not-checked"
+        },
+        "schedule": {
+          "kind": "irregular",
+          "note": "Check site for class terms."
+        },
+        "access": [
+          "enroll-ahead",
+          "drop-in"
+        ]
+      },
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://movingimage.org/education/",
+          "quote": "Moving Image Studio is a drop-in media-making space where visitors can experiment and create"
+        }
+      ],
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "9885de74"
+    },
+    {
+      "kind": "new",
+      "draft": {
+        "name": "Recess",
+        "url": "https://www.recessart.org/",
+        "what": "",
+        "disciplines": [
+          "writing"
+        ],
+        "neighborhood": "Clinton Hill",
+        "borough": null,
+        "travelMin": null,
+        "cost": {
+          "kind": "unknown",
+          "why": "not-checked"
+        },
+        "schedule": {
+          "kind": "irregular",
+          "note": "Check site for class terms."
+        },
+        "access": [
+          "enroll-ahead",
+          "drop-in"
+        ]
+      },
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://www.recessart.org/programs/3-assembly",
+          "quote": "Drop-ins Welcome"
+        }
+      ],
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "5948af30"
+    }
+  ],
+  "perVenue": {
+    "artshack": {
+      "status": "read",
+      "pages": 3,
+      "prices": 8,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "bushwick-ceramics": {
+      "status": "read",
+      "pages": 4,
+      "prices": 10,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "gasworks": {
+      "status": "read",
+      "pages": 4,
+      "prices": 4,
+      "proposals": 2,
+      "llm": "skipped"
+    },
+    "choplet": {
+      "status": "read",
+      "pages": 4,
+      "prices": 5,
+      "proposals": 2,
+      "llm": "skipped"
+    },
+    "bklyn-clay": {
+      "status": "read",
+      "pages": 4,
+      "prices": 3,
+      "proposals": 1,
+      "costStillShown": false
+    },
+    "brooklyn-clay-industries": {
+      "status": "read",
+      "pages": 4,
+      "prices": 4,
+      "proposals": 0,
+      "llm": "skipped",
+      "costStillShown": true
+    },
+    "scratch-ceramics": {
+      "status": "read",
+      "pages": 4,
+      "prices": 11,
+      "proposals": 0,
+      "costStillShown": true
+    },
+    "powerhouse-ceramics": {
+      "status": "read",
+      "pages": 4,
+      "prices": 1,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "manny-cantor": {
+      "status": "read",
+      "pages": 4,
+      "prices": 7,
+      "proposals": 1,
+      "costStillShown": false
+    },
+    "mgc": {
+      "status": "read",
+      "pages": 3,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "shoestring-press": {
+      "status": "read",
+      "pages": 4,
+      "prices": 1,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "uptown-clay": {
+      "status": "read",
+      "pages": 4,
+      "prices": 5,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "rbpmw": {
+      "status": "read",
+      "pages": 3,
+      "prices": 28,
+      "proposals": 1,
+      "costStillShown": true
+    },
+    "les-printshop": {
+      "status": "read",
+      "pages": 4,
+      "prices": 6,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "bushwick-print-lab": {
+      "status": "read",
+      "pages": 4,
+      "prices": 24,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "mobile-print-power": {
+      "status": "unreachable",
+      "pages": 0,
+      "prices": 0,
+      "proposals": 0,
+      "detail": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobileprintpower.com/workshops.php\nCall log:\n  - navigating to \"https:/"
+    },
+    "works-in-progress": {
+      "status": "dead",
+      "pages": 0,
+      "prices": 0,
+      "proposals": 0,
+      "detail": "HTTP 404"
+    },
+    "secret-riso-club": {
+      "status": "read",
+      "pages": 4,
+      "prices": 3,
+      "proposals": 1,
+      "llm": "skipped",
+      "costStillShown": true
+    },
+    "lucky-risograph": {
+      "status": "read",
+      "pages": 2,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "center-for-book-arts": {
+      "status": "read",
+      "pages": 3,
+      "prices": 5,
+      "proposals": 0,
+      "costStillShown": false
+    },
+    "textile-arts-center": {
+      "status": "read",
+      "pages": 4,
+      "prices": 5,
+      "proposals": 1,
+      "costStillShown": false
+    },
+    "makeville": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "brooklyn-glass": {
+      "status": "read",
+      "pages": 4,
+      "prices": 1,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "urbanglass": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "craftsman-ave": {
+      "status": "unreachable",
+      "pages": 0,
+      "prices": 0,
+      "proposals": 0,
+      "detail": "page.evaluate: Execution context was destroyed, most likely because of a navigation"
+    },
+    "brooklyn-spark": {
+      "status": "read",
+      "pages": 2,
+      "prices": 1,
+      "proposals": 1,
+      "costStillShown": false
+    },
+    "makerspace-nyc": {
+      "status": "read",
+      "pages": 3,
+      "prices": 4,
+      "proposals": 1,
+      "costStillShown": false
+    },
+    "penumbra": {
+      "status": "read",
+      "pages": 4,
+      "prices": 14,
+      "proposals": 2,
+      "llm": "skipped"
+    },
+    "gowanus-darkroom": {
+      "status": "read",
+      "pages": 4,
+      "prices": 24,
+      "proposals": 0,
+      "llm": "skipped",
+      "costStillShown": true
+    },
+    "bushwick-darkroom": {
+      "status": "read",
+      "pages": 4,
+      "prices": 7,
+      "proposals": 0,
+      "costStillShown": false
+    },
+    "alterwork": {
+      "status": "read",
+      "pages": 3,
+      "prices": 8,
+      "proposals": 0,
+      "costStillShown": false
+    },
+    "mono-no-aware": {
+      "status": "read",
+      "pages": 4,
+      "prices": 8,
+      "proposals": 0,
+      "llm": "skipped",
+      "costStillShown": true
+    },
+    "icp": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "millennium-film": {
+      "status": "read",
+      "pages": 3,
+      "prices": 0,
+      "proposals": 0,
+      "costStillShown": false
+    },
+    "bkcm": {
+      "status": "read",
+      "pages": 4,
+      "prices": 8,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "343-labs": {
+      "status": "read",
+      "pages": 4,
+      "prices": 19,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "creative-music-studio": {
+      "status": "read",
+      "pages": 3,
+      "prices": 3,
+      "proposals": 0,
+      "llm": "skipped",
+      "costStillShown": true
+    },
+    "sfpc": {
+      "status": "read",
+      "pages": 4,
+      "prices": 3,
+      "proposals": 0,
+      "llm": "skipped",
+      "costStillShown": true
+    },
+    "pioneer-works": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 0
+    },
+    "interference-archive": {
+      "status": "read",
+      "pages": 1,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "booklyn": {
+      "status": "blocked",
+      "pages": 0,
+      "prices": 0,
+      "proposals": 0,
+      "detail": "HTTP 403"
+    },
+    "nyc-resistor": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 0,
+      "costStillShown": false
+    },
+    "nywc": {
+      "status": "unreachable",
+      "pages": 0,
+      "prices": 0,
+      "proposals": 0,
+      "detail": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://nywriterscoalition.org/\nCall log:\n  - navigating to \"https://nywritersc"
+    },
+    "brooklyn-poets": {
+      "status": "read",
+      "pages": 4,
+      "prices": 2,
+      "proposals": 1
+    },
+    "center-for-fiction": {
+      "status": "read",
+      "pages": 3,
+      "prices": 1,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "wondrous": {
+      "status": "unreachable",
+      "pages": 0,
+      "prices": 0,
+      "proposals": 0,
+      "detail": "page.goto: net::ERR_SSL_PROTOCOL_ERROR at https://wondrousnyc.com/\nCall log:\n  - navigating to \"https://wondrousnyc.com/"
+    },
+    "belladonna": {
+      "status": "read",
+      "pages": 1,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped",
+      "costStillShown": false
+    },
+    "gotham-writers": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "movers-bodega": {
+      "status": "read",
+      "pages": 3,
+      "prices": 14,
+      "proposals": 0,
+      "costStillShown": true
+    },
+    "capoeira-luanda": {
+      "status": "read",
+      "pages": 4,
+      "prices": 5,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "ailey-extension": {
+      "status": "read",
+      "pages": 3,
+      "prices": 2,
+      "proposals": 0,
+      "costStillShown": false
+    },
+    "jack": {
+      "status": "read",
+      "pages": 1,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "bushwick-starr": {
+      "status": "read",
+      "pages": 2,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "humanist-project": {
+      "status": "read",
+      "pages": 3,
+      "prices": 1,
+      "proposals": 0,
+      "costStillShown": false
+    },
+    "sacred-harp": {
+      "status": "read",
+      "pages": 1,
+      "prices": 0,
+      "proposals": 0
+    },
+    "fire-ensemble": {
+      "status": "read",
+      "pages": 2,
+      "prices": 0,
+      "proposals": 0
+    },
+    "tonyc": {
+      "status": "read",
+      "pages": 2,
+      "prices": 4,
+      "proposals": 0,
+      "costStillShown": true
+    },
+    "brooklynite-choir": {
+      "status": "read",
+      "pages": 1,
+      "prices": 2,
+      "proposals": 1,
+      "costStillShown": false
+    },
+    "flux-factory": {
+      "status": "read",
+      "pages": 3,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "art-students-league": {
+      "status": "read",
+      "pages": 3,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "taller-boricua": {
+      "status": "read",
+      "pages": 1,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "mfta": {
+      "status": "read",
+      "pages": 2,
+      "prices": 2,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "abrons": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 0,
+      "costStillShown": false
+    },
+    "art-lab-snug-harbor": {
+      "status": "read",
+      "pages": 4,
+      "prices": 15,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "brac": {
+      "status": "read",
+      "pages": 4,
+      "prices": 6,
+      "proposals": 0,
+      "costStillShown": false
+    },
+    "mugi-pottery": {
+      "status": "read",
+      "pages": 3,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "clayworks-on-columbia": {
+      "status": "read",
+      "pages": 4,
+      "prices": 2,
+      "proposals": 2,
+      "llm": "skipped"
+    },
+    "potters-wheel-nyc": {
+      "status": "read",
+      "pages": 4,
+      "prices": 3,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "myrtles-clayhouse": {
+      "status": "read",
+      "pages": 4,
+      "prices": 7,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "new:chezbushwick.net": {
+      "status": "read",
+      "pages": 3,
+      "prices": 1,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "new:uniondocs.org": {
+      "status": "read",
+      "pages": 3,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "new:wendyssubway.com": {
+      "status": "unreachable",
+      "pages": 0,
+      "prices": 0,
+      "proposals": 0,
+      "detail": "page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://www.wendyssubway.com/programs\", waiting until "
+    },
+    "new:mercurystore.com": {
+      "status": "read",
+      "pages": 1,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "new:gowanusprintlab.com": {
+      "status": "read",
+      "pages": 2,
+      "prices": 4,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "new:recessart.org": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "new:powrplnt.org": {
+      "status": "read",
+      "pages": 2,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "new:genspace.org": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "new:brooklyncraftcompany.com": {
+      "status": "read",
+      "pages": 4,
+      "prices": 16,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "new:thearm.org": {
+      "status": "read",
+      "pages": 1,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "new:manhattangraphicscenter.org": {
+      "status": "read",
+      "pages": 2,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "new:dieudonne.org": {
+      "status": "read",
+      "pages": 4,
+      "prices": 2,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "new:bkmetalworks.com": {
+      "status": "read",
+      "pages": 4,
+      "prices": 4,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "new:brickhouseny.com": {
+      "status": "read",
+      "pages": 3,
+      "prices": 11,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "new:loopoftheloom.com": {
+      "status": "read",
+      "pages": 4,
+      "prices": 19,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "new:bluestockings.com": {
+      "status": "read",
+      "pages": 1,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "new:harvestworks.org": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "new:dctvny.org": {
+      "status": "read",
+      "pages": 3,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "new:hackmanhattan.com": {
+      "status": "read",
+      "pages": 1,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "new:fatcatfablab.org": {
+      "status": "read",
+      "pages": 1,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "new:jcal.org": {
+      "status": "read",
+      "pages": 4,
+      "prices": 1,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "new:noguchi.org": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "new:film-makerscoop.com": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "new:socratessculpturepark.org": {
+      "status": "read",
+      "pages": 3,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "new:wordupbooks.com": {
+      "status": "blocked",
+      "pages": 0,
+      "prices": 0,
+      "proposals": 0,
+      "detail": "HTTP 403"
+    },
+    "new:buildingbeats.org": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "new:studiomuseum.org": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "new:wearebkc.com": {
+      "status": "dead",
+      "pages": 0,
+      "prices": 0,
+      "proposals": 0,
+      "detail": "HTTP 404"
+    },
+    "new:movingimage.org": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "new:brooklynshoespace.com": {
+      "status": "read",
+      "pages": 4,
+      "prices": 13,
+      "proposals": 1,
+      "llm": "skipped"
+    },
+    "new:mostlygoodstudios.com": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 1,
+      "llm": "skipped"
+    }
+  }
+}
