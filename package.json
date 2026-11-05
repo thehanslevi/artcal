@@ -11,6 +11,8 @@
     "lint": "oxlint && tsx scripts/validate-practices.ts && tsx scripts/validate-events.ts && tsx scripts/audit-modes.ts --check && npm test",
     "preview": "vite preview",
     "check:practices": "tsx scripts/check-practices.ts",
+    "practices:discover": "tsx scripts/discover-practices.ts",
+    "practices:review": "tsx scripts/review-practices.ts",
     "usage": "tsx scripts/usage-report.ts",
     "audit:modes": "tsx scripts/audit-modes.ts",
     "test": "node --import tsx --test \"src/**/*.test.ts\" \"scripts/**/*.test.ts\""

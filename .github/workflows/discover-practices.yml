@@ -1,0 +1,114 @@
+name: Discover practices
+
+# Reads making venues' rendered pages and proposes Directory changes into
+# scripts/scanner/practice-proposals.json for a person to review. It never edits
+# src/data/practices.json, and a step below fails the run if that ever changes.
+# Thursdays, to stay clear of the Sunday scan on the shared free LLM quota.
+on:
+  schedule:
+    - cron: "0 12 * * 4"  # Thursdays 12:00 UTC (~7/8am ET)
+  workflow_dispatch:
+
+concurrency:
+  group: discover-practices
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: true
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Read venues and propose
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: npx tsx scripts/discover-practices.ts
+        timeout-minutes: 60
+
+      - name: Prove the Directory wasn't touched
+        run: git diff --exit-code -- src/data/practices.json
+
+      - name: Commit the proposals
+        run: |
+          git config user.name  "calendar-scanner[bot]"
+          git config user.email "calendar-scanner@users.noreply.github.com"
+          FILES="scripts/scanner/practice-proposals.json scripts/scanner/practice-discovery-state.json"
+          if git diff --quiet -- $FILES && [ -z "$(git ls-files --others --exclude-standard -- $FILES)" ]; then
+            echo "No change."
+            exit 0
+          fi
+          mkdir -p /tmp/discovery && cp $FILES /tmp/discovery/
+          # These files are only ever written by this job, so re-applying them
+          # onto the latest main can't collide with a scan or a hand edit.
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/discovery/* scripts/scanner/
+            git add $FILES
+            if git diff --staged --quiet; then exit 0; fi
+            git commit -m "Discover practices: $(node -e "console.log(require('./scripts/scanner/practice-proposals.json').proposals.length)") open proposals"
+            if git push; then exit 0; fi
+            echo "Push attempt $i failed (main moved); retrying onto new main..."
+          done
+          echo "Could not push after 5 attempts."
+          exit 1
+
+      - name: Open or update the review issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { execSync } = require('child_process');
+            const fs = require('fs');
+            const path = process.cwd() + '/scripts/scanner/practice-proposals.json';
+            // A run that couldn't reach most venues writes nothing, on purpose.
+            if (!fs.existsSync(path)) return;
+            const data = JSON.parse(fs.readFileSync(path, 'utf8'));
+            const count = data.proposals.length;
+            const title = 'Directory proposals';
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo, state: 'open',
+            });
+            const existing = open.find(i => !i.pull_request && i.title.startsWith(title));
+
+            // Nothing to review: stay quiet, and close what's no longer true.
+            if (count === 0) {
+              if (existing) {
+                await github.rest.issues.update({
+                  owner: context.repo.owner, repo: context.repo.repo,
+                  issue_number: existing.number, state: 'closed',
+                });
+              }
+              return;
+            }
+            const body = execSync('npx tsx scripts/review-practices.ts --md').toString();
+            const fields = { title: `${title}: ${count} to review`, body };
+            if (existing) {
+              await github.rest.issues.update({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: existing.number, ...fields,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo, ...fields,
+              });
+            }
