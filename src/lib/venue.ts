@@ -151,6 +151,17 @@ export function stripVenuePrefix(title: string, venue: string): string {
       }
     }
   }
+  // The venue naming itself as host: "Wonderville's 2nd Annual Alt.Ctrl
+  // Festival", "The Tank's Annual Gala". The venue is shown beside the title.
+  for (const c of candidates) {
+    for (const possessive of ["'s ", "’s "]) {
+      const prefix = c + possessive;
+      if (t.toLowerCase().startsWith(prefix.toLowerCase())) {
+        const rest = t.slice(prefix.length).trim();
+        if (rest.length >= 3) return rest;
+      }
+    }
+  }
   // Venue name flowing straight into the title with no separator, e.g.
   // "Brooklyn Metal Works Open Studios". Conservative: the remainder must be
   // substantial and must not start with a connector, so "Film Forum Presents X"

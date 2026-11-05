@@ -1,3 +1,4 @@
+import { decodeHtmlEntities } from "../../src/lib/entities.ts";
 import type { CalEvent } from "../../src/types";
 import { extractFromIcs } from "./extract-ics.ts";
 import { extractJsonLdEvents } from "./extract-jsonld.ts";
@@ -273,7 +274,7 @@ function str(v: unknown): string | null {
 }
 
 function decodeEntities(s: string): string {
-  return s
+  const known = s
     .replace(/&lt;br\s*\/?&gt;/gi, " ")
     .replace(/<br\s*\/?>/gi, " ")
     .replace(/&amp;/gi, "&")
@@ -282,9 +283,8 @@ function decodeEntities(s: string): string {
     .replace(/&apos;/gi, "'")
     .replace(/&#39;/gi, "'")
     .replace(/&lt;/gi, "<")
-    .replace(/&gt;/gi, ">")
-    .replace(/\s+/g, " ")
-    .trim();
+    .replace(/&gt;/gi, ">");
+  return decodeHtmlEntities(known).replace(/\s+/g, " ").trim();
 }
 
 function normalizeTime(t: string | null): string | null {

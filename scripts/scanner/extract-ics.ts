@@ -1,3 +1,4 @@
+import { decodeHtmlEntities } from "../../src/lib/entities.ts";
 import type { CalEvent } from "../../src/types";
 import { classifyEvent } from "./classify.ts";
 import type { Candidate } from "./extract";
@@ -54,7 +55,8 @@ export function parseIcs(ics: string): IcsEvent[] {
 }
 
 function unescapeText(s: string): string {
-  return s
+  // WordPress calendar feeds put HTML entities in SUMMARY ("&#8220;Title&#8221;").
+  return decodeHtmlEntities(s)
     .replace(/\\n/gi, " ")
     .replace(/\\,/g, ",")
     .replace(/\\;/g, ";")
