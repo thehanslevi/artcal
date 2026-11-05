@@ -11,6 +11,7 @@ import {
   proposeNew,
   proposeSchedule,
   proposeUpdates,
+  recheckHeld,
   type Page,
   type Proposal,
 } from "./practice-extract.ts";
@@ -299,6 +300,118 @@ test("weekly days must be named in the quote", () => {
     page(text),
   );
   assert.equal(bad.schedule, undefined);
+});
+
+// The model's three wrong schedules on its first real run (2026-11-05). Each
+// quote was genuinely on the page; none of them said what the model claimed.
+test("a real quote that doesn't say what the model claims is discarded", () => {
+  const schedule = (o: unknown, text: string) =>
+    parseLlmReading(reply({ schedule: o }), page(text)).schedule?.schedule;
+
+  const mono = "INSTRUCTION: 1 Session four hours";
+  assert.equal(schedule({ kind: "session", weeks: 1, note: "four hours", quote: mono }, mono), undefined);
+  const ten = "Enrollment for 10 students over 8 weeks";
+  assert.equal(schedule({ kind: "session", weeks: 10, quote: ten }, ten), undefined);
+
+  const taller = "Visits by Appointment";
+  assert.equal(schedule({ kind: "membership", note: taller, quote: taller }, taller), undefined);
+
+  const hours = "Monday 6-9pm\nFriday 1-6pm\nSaturday 12-5pm\nSunday 12-5pm";
+  assert.equal(
+    schedule({ kind: "weekly", days: ["mon", "fri", "sat", "sun"], time: "6-9pm", quote: hours }, hours),
+    undefined,
+  );
+});
+
+test("the model's wording never reaches the row, only checked values do", () => {
+  const text = "Winter - 1/5-3/1/2026 - 8 weeks\nStudio membership includes shelf space.";
+  const term = parseLlmReading(
+    reply({ schedule: { kind: "session", weeks: 8, note: "Winter - 1/5-3/1/2026", quote: "Winter - 1/5-3/1/2026 - 8 weeks" } }),
+    page(text),
+  );
+  assert.deepEqual(term.schedule?.schedule, { kind: "session", weeks: 8, note: "8-week classes" });
+  const member = parseLlmReading(
+    reply({ schedule: { kind: "membership", note: "Best studio in town!", quote: "Studio membership includes shelf space." } }),
+    page(text),
+  );
+  assert.deepEqual(member.schedule?.schedule, { kind: "membership", note: "Membership." });
+});
+
+test("a weekly time is kept only when every day shares it", () => {
+  const schedule = (o: unknown, text: string) =>
+    parseLlmReading(reply({ schedule: o }), page(text)).schedule?.schedule;
+  const shared = "Classes meet Mondays and Wednesdays 6-9pm";
+  assert.deepEqual(
+    schedule({ kind: "weekly", days: ["mon", "wed"], time: "6-9pm", quote: shared }, shared),
+    { kind: "weekly", days: ["mon", "wed"], time: "6-9pm" },
+  );
+  const varies = "Monday Wheel class 7-10PM\nTuesday Wheel class 10AM-1PM";
+  assert.deepEqual(
+    schedule({ kind: "weekly", days: ["mon", "tue"], time: "7-10PM", quote: varies }, varies),
+    { kind: "weekly", days: ["mon", "tue"] },
+  );
+  // A time the quote doesn't contain is the model's, not the page's.
+  assert.deepEqual(
+    schedule({ kind: "weekly", days: ["mon", "wed"], time: "7-10pm", quote: shared }, shared),
+    { kind: "weekly", days: ["mon", "wed"] },
+  );
+  const nth = "Critique group meets the first Saturday of the month";
+  assert.equal(schedule({ kind: "monthly-nth", nth: 2, day: "sat", quote: nth }, nth), undefined);
+  assert.deepEqual(schedule({ kind: "monthly-nth", nth: 1, day: "sat", quote: nth }, nth), {
+    kind: "monthly-nth", nth: 1, day: "sat",
+  });
+});
+
+test("a stated term outranks the model's schedule, and agreement earns high", () => {
+  const text = "A 10 week session costs $500.\nClasses run weekly: Monday Wheel 7-10PM";
+  const weekly = parseLlmReading(
+    reply({ schedule: { kind: "weekly", days: ["mon"], time: "7-10PM", quote: "Classes run weekly: Monday Wheel 7-10PM" } }),
+    page(text),
+  );
+  const pick = (llm: typeof weekly) =>
+    proposeUpdates(ROW, page(text), llm).find((p) => p.change.field === "schedule");
+  assert.equal(pick(weekly)?.method, "pattern");
+  assert.deepEqual(pick(weekly)?.change.proposed, { kind: "session", weeks: 10, note: "10-week classes" });
+  assert.equal(pick(weekly)?.confidence, "medium");
+
+  const same = parseLlmReading(
+    reply({ schedule: { kind: "session", weeks: 10, quote: "A 10 week session costs $500." } }),
+    page(text),
+  );
+  assert.equal(pick(same)?.confidence, "high");
+
+  // With no stated term, the model's checked reading is what there is.
+  const only = page("Classes run weekly: Monday Wheel 7-10PM");
+  const filled = proposeUpdates(ROW, only, parseLlmReading(
+    reply({ schedule: { kind: "weekly", days: ["mon"], time: "7-10PM", quote: "Classes run weekly: Monday Wheel 7-10PM" } }),
+    only,
+  )).find((p) => p.change.field === "schedule");
+  assert.equal(filled?.method, "llm");
+});
+
+test("a held model proposal has to pass today's rules, not the day it was made", () => {
+  const held = (proposed: unknown, quote: string): Proposal => ({
+    kind: "update", id: "x", practiceId: ROW.id, name: ROW.name, method: "llm", confidence: "medium",
+    evidence: [{ url: URL_A, quote }], firstSeen: "2026-11-05", lastSeen: "2026-11-05",
+    current: ROW.schedule,
+    change: { field: "schedule", proposed } as Extract<Proposal, { kind: "update" }>["change"],
+  });
+  const mono = "INSTRUCTION: 1 Session four hours";
+  assert.equal(recheckHeld(held({ kind: "session", weeks: 1, note: "four hours" }, mono), page(mono)), null);
+
+  // Kept, with the model's dated note replaced by ours.
+  const mugi = "Winter  - 1/5-3/1/2026 -  8 weeks";
+  const kept = recheckHeld(held({ kind: "session", weeks: 8, note: "Winter  - 1/5-3/1/2026" }, mugi), page(mugi));
+  assert.deepEqual(kept?.kind === "update" && kept.change.proposed, {
+    kind: "session", weeks: 8, note: "8-week classes",
+  });
+
+  // And gone if the page no longer says it.
+  assert.equal(recheckHeld(held({ kind: "session", weeks: 8 }, mugi), page("Spring term: 6 weeks")), null);
+
+  // Pattern proposals aren't held this way; they're re-derived each run.
+  const pattern = { ...held({ kind: "session", weeks: 1 }, mono), method: "pattern" as const };
+  assert.equal(recheckHeld(pattern, page(mono)), pattern);
 });
 
 test("garbage from the model yields nothing rather than throwing", () => {
