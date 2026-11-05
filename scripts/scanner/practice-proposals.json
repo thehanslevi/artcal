@@ -1,6 +1,88 @@
 {
-  "ranAt": "2026-11-05T15:41:41.849Z",
+  "ranAt": "2026-11-05T16:24:31.148Z",
   "proposals": [
+    {
+      "kind": "update",
+      "practiceId": "clayworks-on-columbia",
+      "name": "Clayworks on Columbia",
+      "method": "pattern",
+      "confidence": "high",
+      "evidence": [
+        {
+          "url": "https://www.clayworksoncolumbia.org/2026-registration-class-schedule",
+          "quote": "A 10 week session costs $500."
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "fixed",
+          "amount": 500
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "b6c944f0"
+    },
+    {
+      "kind": "update",
+      "practiceId": "potters-wheel-nyc",
+      "name": "The Potter’s Wheel",
+      "method": "pattern",
+      "confidence": "high",
+      "evidence": [
+        {
+          "url": "https://www.potterswheelny.com/course-descriptions",
+          "quote": "Our courses are $450 for each session, and our Independent Artist courses are $400 per session."
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "range",
+          "min": 400,
+          "max": 450
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "e42ee926"
+    },
+    {
+      "kind": "update",
+      "practiceId": "shoestring-press",
+      "name": "Shoestring Press",
+      "method": "pattern",
+      "confidence": "high",
+      "evidence": [
+        {
+          "url": "https://www.shoestring.press/membership",
+          "quote": "A monthly printmaking membership is $270, and includes most materials and access on a sign"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "per-month",
+          "amount": 270
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "1b3fe830"
+    },
     {
       "kind": "update",
       "practiceId": "343-labs",
@@ -178,30 +260,30 @@
     },
     {
       "kind": "update",
-      "practiceId": "capoeira-luanda",
-      "name": "Capoeira Luanda Brooklyn",
-      "method": "pattern",
+      "practiceId": "bushwick-print-lab",
+      "name": "Bushwick Print Lab",
+      "method": "llm",
       "confidence": "medium",
       "evidence": [
         {
-          "url": "https://piaocapoeira.com/class-schedule",
-          "quote": "From $799/semester , $120/month or $30/class"
+          "url": "https://bushwickprintlab.org/services/workshops/",
+          "quote": "1 person: $200"
         }
       ],
       "current": {
         "kind": "unknown",
-        "why": "not-published"
+        "why": "not-checked"
       },
       "change": {
         "field": "cost",
         "proposed": {
           "kind": "fixed",
-          "amount": 799
+          "amount": 200
         }
       },
       "firstSeen": "2026-11-05",
       "lastSeen": "2026-11-05",
-      "id": "7cb139f6"
+      "id": "469e1c1a"
     },
     {
       "kind": "update",
@@ -234,39 +316,12 @@
       "kind": "update",
       "practiceId": "clayworks-on-columbia",
       "name": "Clayworks on Columbia",
-      "method": "pattern",
+      "method": "llm",
       "confidence": "medium",
       "evidence": [
         {
           "url": "https://www.clayworksoncolumbia.org/2026-registration-class-schedule",
-          "quote": "A 10 week session costs $500."
-        }
-      ],
-      "current": {
-        "kind": "unknown",
-        "why": "not-checked"
-      },
-      "change": {
-        "field": "cost",
-        "proposed": {
-          "kind": "fixed",
-          "amount": 500
-        }
-      },
-      "firstSeen": "2026-11-05",
-      "lastSeen": "2026-11-05",
-      "id": "b6c944f0"
-    },
-    {
-      "kind": "update",
-      "practiceId": "clayworks-on-columbia",
-      "name": "Clayworks on Columbia",
-      "method": "pattern",
-      "confidence": "medium",
-      "evidence": [
-        {
-          "url": "https://www.clayworksoncolumbia.org/2026-registration-class-schedule",
-          "quote": "A 10 week session costs $500."
+          "quote": "Classes run weekly on the following schedule:\n\nMonday Wheel + Handbuilding 7-10PM \n\nTuesday Wheel + Handbuilding 10AM-1PM\n\nTuesday Sculpture + Handbuilding 7PM - 10PM\n\nTuesday Kids Handbuilding 4:30PM-6:00PM (youth class)\n\nWednesday Wheel + Handbuilding 7-10PM\n\nThursday Sculpture + Handbuilding  10AM-1PM\n\nThursday Wheel + Handbuilding 7-10PM\n\nSaturday Wheel + Handbuilding 10AM-1PM\n\nSunday Teens Wheel + Handbuilding 10AM-12PM (youth class)"
         }
       ],
       "current": {
@@ -276,14 +331,48 @@
       "change": {
         "field": "schedule",
         "proposed": {
-          "kind": "session",
-          "weeks": 10,
-          "note": "10-week classes"
+          "kind": "weekly",
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "sat",
+            "sun"
+          ],
+          "time": "7-10PM"
         }
       },
       "firstSeen": "2026-11-05",
       "lastSeen": "2026-11-05",
-      "id": "1155324e"
+      "id": "b004fa6f"
+    },
+    {
+      "kind": "update",
+      "practiceId": "flux-factory",
+      "name": "Flux Factory",
+      "method": "llm",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.fluxfactory.org/flux-workshops/",
+          "quote": "reserve studios in a booking system, with up to 12 practice hours per week"
+        }
+      ],
+      "current": {
+        "kind": "irregular",
+        "note": "75+ free public events a year"
+      },
+      "change": {
+        "field": "schedule",
+        "proposed": {
+          "kind": "membership",
+          "note": "Flux can accommodate up to 10 regularly practicing musicians/groups at a time. All applicants must go through a building & equipment orientation, after which th"
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "8bc1cafb"
     },
     {
       "kind": "update",
@@ -312,6 +401,39 @@
       "firstSeen": "2026-11-05",
       "lastSeen": "2026-11-05",
       "id": "5d558941"
+    },
+    {
+      "kind": "update",
+      "practiceId": "interference-archive",
+      "name": "Interference Archive",
+      "method": "llm",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://interferencearchive.org/what-we-do/events/",
+          "quote": "Monday 6-9pm\nFriday 1-6pm\nSaturday 12-5pm\nSunday 12-5pm"
+        }
+      ],
+      "current": {
+        "kind": "irregular",
+        "note": "Workshops, work parties, and zine club on rotation"
+      },
+      "change": {
+        "field": "schedule",
+        "proposed": {
+          "kind": "weekly",
+          "days": [
+            "mon",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "time": "6-9pm"
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "3de9b0c4"
     },
     {
       "kind": "update",
@@ -434,6 +556,62 @@
     },
     {
       "kind": "update",
+      "practiceId": "mono-no-aware",
+      "name": "Mono No Aware",
+      "method": "llm",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "http://www.mononoawarefilm.com/2026-oct-nov-creating-color-titles-on-16mm",
+          "quote": "INSTRUCTION: 1 Session four hours"
+        }
+      ],
+      "current": {
+        "kind": "irregular",
+        "note": "Workshops on rotation. Closed all of August; September is the beginner slate"
+      },
+      "change": {
+        "field": "schedule",
+        "proposed": {
+          "kind": "session",
+          "weeks": 1,
+          "note": "four hours"
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "894c1de6"
+    },
+    {
+      "kind": "update",
+      "practiceId": "mugi-pottery",
+      "name": "Mugi Pottery",
+      "method": "llm",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.mugipottery.com/adults",
+          "quote": "Winter  - 1/5-3/1/2026 -  8 weeks"
+        }
+      ],
+      "current": {
+        "kind": "irregular",
+        "note": "Classes and studio space; check site for the term calendar."
+      },
+      "change": {
+        "field": "schedule",
+        "proposed": {
+          "kind": "session",
+          "weeks": 8,
+          "note": "Winter  - 1/5-3/1/2026"
+        }
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05",
+      "id": "029b47e8"
+    },
+    {
+      "kind": "update",
       "practiceId": "myrtles-clayhouse",
       "name": "Myrtle’s Clayhouse",
       "method": "pattern",
@@ -501,34 +679,6 @@
     },
     {
       "kind": "update",
-      "practiceId": "potters-wheel-nyc",
-      "name": "The Potter’s Wheel",
-      "method": "pattern",
-      "confidence": "medium",
-      "evidence": [
-        {
-          "url": "https://www.potterswheelny.com/course-descriptions",
-          "quote": "Our courses are $450 for each session, and our Independent Artist courses are $400 per session."
-        }
-      ],
-      "current": {
-        "kind": "unknown",
-        "why": "not-checked"
-      },
-      "change": {
-        "field": "cost",
-        "proposed": {
-          "kind": "range",
-          "min": 400,
-          "max": 450
-        }
-      },
-      "firstSeen": "2026-11-05",
-      "lastSeen": "2026-11-05",
-      "id": "e42ee926"
-    },
-    {
-      "kind": "update",
       "practiceId": "powerhouse-ceramics",
       "name": "Powerhouse Arts Community Ceramics Studio",
       "method": "pattern",
@@ -556,30 +706,30 @@
     },
     {
       "kind": "update",
-      "practiceId": "shoestring-press",
-      "name": "Shoestring Press",
-      "method": "pattern",
+      "practiceId": "taller-boricua",
+      "name": "Taller Boricua",
+      "method": "llm",
       "confidence": "medium",
       "evidence": [
         {
-          "url": "https://www.shoestring.press/membership",
-          "quote": "A monthly printmaking membership is $270, and includes most materials and access on a sign"
+          "url": "https://tallerboricua.org/rtpw-printmaking-workshop/",
+          "quote": "Visits by Appointment"
         }
       ],
       "current": {
-        "kind": "unknown",
-        "why": "not-checked"
+        "kind": "irregular",
+        "note": "Access is through the collective, not open enrollment"
       },
       "change": {
-        "field": "cost",
+        "field": "schedule",
         "proposed": {
-          "kind": "per-month",
-          "amount": 270
+          "kind": "membership",
+          "note": "Visits by Appointment"
         }
       },
       "firstSeen": "2026-11-05",
       "lastSeen": "2026-11-05",
-      "id": "1b3fe830"
+      "id": "ad5e763d"
     },
     {
       "kind": "update",
@@ -749,70 +899,30 @@
     },
     {
       "kind": "update",
-      "practiceId": "bushwick-print-lab",
-      "name": "Bushwick Print Lab",
+      "practiceId": "capoeira-luanda",
+      "name": "Capoeira Luanda Brooklyn",
       "method": "pattern",
       "confidence": "low",
       "evidence": [
         {
-          "url": "https://bushwickprintlab.org/services/workshops/",
-          "quote": "2 people: $500"
-        },
-        {
-          "url": "https://bushwickprintlab.org/services/screen-services/",
-          "quote": "LAB Reclaim Only\t$10\t$15\t$20\t$25\t$30\t$50\t$80"
-        },
-        {
-          "url": "https://bushwickprintlab.org/services/workshops/",
-          "quote": "1 person: $200"
-        },
-        {
-          "url": "https://bushwickprintlab.org/services/workshops/",
-          "quote": "2 people: $300"
+          "url": "https://piaocapoeira.com/class-schedule",
+          "quote": "NEW TO CAPOEIRA? USE CODE FIRSTCLASS for $20 OFF!!!〰️NEW TO CAPOEIRA? USE CODE FIRSTCLASS for"
         }
       ],
       "current": {
         "kind": "unknown",
-        "why": "not-checked"
-      },
-      "change": {
-        "field": "cost",
-        "proposed": {
-          "kind": "range",
-          "min": 10,
-          "max": 500
-        }
-      },
-      "firstSeen": "2026-11-05",
-      "lastSeen": "2026-11-05",
-      "id": "7a764708"
-    },
-    {
-      "kind": "update",
-      "practiceId": "center-for-fiction",
-      "name": "Center for Fiction",
-      "method": "pattern",
-      "confidence": "low",
-      "evidence": [
-        {
-          "url": "https://centerforfiction.org/shop/day-pass/",
-          "quote": "$30"
-        }
-      ],
-      "current": {
-        "kind": "unknown",
-        "why": "blocked"
+        "why": "not-published"
       },
       "change": {
         "field": "cost",
         "proposed": {
           "kind": "fixed",
-          "amount": 30
+          "amount": 20
         }
       },
       "firstSeen": "2026-11-05",
       "lastSeen": "2026-11-05",
-      "id": "709384a5"
+      "id": "3654de51"
     },
     {
       "kind": "update",
@@ -1386,10 +1496,6 @@
         {
           "url": "https://www.gowanusprintlab.com/classes.html",
           "quote": "$300.00"
-        },
-        {
-          "url": "https://www.gowanusprintlab.com/classes.html",
-          "quote": "$450"
         }
       ],
       "firstSeen": "2026-11-05",
@@ -1592,14 +1698,7 @@
     "artshack": {
       "status": "read",
       "pages": 3,
-      "prices": 8,
-      "proposals": 1,
-      "llm": "skipped"
-    },
-    "bushwick-ceramics": {
-      "status": "read",
-      "pages": 4,
-      "prices": 10,
+      "prices": 1,
       "proposals": 1,
       "llm": "skipped"
     },
@@ -1610,11 +1709,11 @@
       "proposals": 2,
       "llm": "skipped"
     },
-    "choplet": {
+    "bushwick-ceramics": {
       "status": "read",
       "pages": 4,
-      "prices": 5,
-      "proposals": 2,
+      "prices": 10,
+      "proposals": 1,
       "llm": "skipped"
     },
     "bklyn-clay": {
@@ -1623,6 +1722,13 @@
       "prices": 3,
       "proposals": 1,
       "costStillShown": false
+    },
+    "choplet": {
+      "status": "read",
+      "pages": 4,
+      "prices": 5,
+      "proposals": 2,
+      "llm": "skipped"
     },
     "brooklyn-clay-industries": {
       "status": "read",
@@ -1665,14 +1771,16 @@
       "pages": 4,
       "prices": 1,
       "proposals": 1,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 3
     },
     "uptown-clay": {
       "status": "read",
       "pages": 4,
       "prices": 5,
       "proposals": 1,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 0
     },
     "rbpmw": {
       "status": "read",
@@ -1686,14 +1794,16 @@
       "pages": 4,
       "prices": 6,
       "proposals": 1,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 5
     },
     "bushwick-print-lab": {
       "status": "read",
       "pages": 4,
       "prices": 24,
       "proposals": 1,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 2
     },
     "mobile-print-power": {
       "status": "unreachable",
@@ -1714,7 +1824,8 @@
       "pages": 4,
       "prices": 3,
       "proposals": 1,
-      "llm": "skipped",
+      "llm": "used",
+      "discarded": 6,
       "costStillShown": true
     },
     "lucky-risograph": {
@@ -1722,14 +1833,8 @@
       "pages": 2,
       "prices": 0,
       "proposals": 0,
-      "llm": "skipped"
-    },
-    "center-for-book-arts": {
-      "status": "read",
-      "pages": 3,
-      "prices": 5,
-      "proposals": 0,
-      "costStillShown": false
+      "llm": "used",
+      "discarded": 2
     },
     "textile-arts-center": {
       "status": "read",
@@ -1738,33 +1843,43 @@
       "proposals": 1,
       "costStillShown": false
     },
+    "center-for-book-arts": {
+      "status": "read",
+      "pages": 3,
+      "prices": 5,
+      "proposals": 0,
+      "costStillShown": false
+    },
     "makeville": {
       "status": "read",
       "pages": 4,
       "prices": 0,
       "proposals": 0,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 4
     },
     "brooklyn-glass": {
       "status": "read",
       "pages": 4,
       "prices": 1,
       "proposals": 1,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 2
     },
     "urbanglass": {
       "status": "read",
       "pages": 4,
       "prices": 0,
       "proposals": 1,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 0
     },
     "craftsman-ave": {
-      "status": "unreachable",
+      "status": "blocked",
       "pages": 0,
       "prices": 0,
       "proposals": 0,
-      "detail": "page.evaluate: Execution context was destroyed, most likely because of a navigation"
+      "detail": "HTTP 403"
     },
     "brooklyn-spark": {
       "status": "read",
@@ -1785,14 +1900,16 @@
       "pages": 4,
       "prices": 14,
       "proposals": 2,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 5
     },
     "gowanus-darkroom": {
       "status": "read",
       "pages": 4,
       "prices": 24,
       "proposals": 0,
-      "llm": "skipped",
+      "llm": "used",
+      "discarded": 5,
       "costStillShown": true
     },
     "bushwick-darkroom": {
@@ -1813,8 +1930,9 @@
       "status": "read",
       "pages": 4,
       "prices": 8,
-      "proposals": 0,
-      "llm": "skipped",
+      "proposals": 1,
+      "llm": "used",
+      "discarded": 2,
       "costStillShown": true
     },
     "icp": {
@@ -1822,7 +1940,8 @@
       "pages": 4,
       "prices": 0,
       "proposals": 1,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 4
     },
     "millennium-film": {
       "status": "read",
@@ -1836,21 +1955,24 @@
       "pages": 4,
       "prices": 8,
       "proposals": 1,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 6
     },
     "343-labs": {
       "status": "read",
       "pages": 4,
       "prices": 19,
       "proposals": 1,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 1
     },
     "creative-music-studio": {
       "status": "read",
       "pages": 3,
       "prices": 3,
       "proposals": 0,
-      "llm": "skipped",
+      "llm": "used",
+      "discarded": 0,
       "costStillShown": true
     },
     "sfpc": {
@@ -1858,7 +1980,8 @@
       "pages": 4,
       "prices": 3,
       "proposals": 0,
-      "llm": "skipped",
+      "llm": "used",
+      "discarded": 0,
       "costStillShown": true
     },
     "pioneer-works": {
@@ -1867,19 +1990,20 @@
       "prices": 0,
       "proposals": 0
     },
-    "interference-archive": {
-      "status": "read",
-      "pages": 1,
-      "prices": 0,
-      "proposals": 0,
-      "llm": "skipped"
-    },
     "booklyn": {
       "status": "blocked",
       "pages": 0,
       "prices": 0,
       "proposals": 0,
       "detail": "HTTP 403"
+    },
+    "interference-archive": {
+      "status": "read",
+      "pages": 1,
+      "prices": 0,
+      "proposals": 1,
+      "llm": "used",
+      "discarded": 0
     },
     "nyc-resistor": {
       "status": "read",
@@ -1903,10 +2027,11 @@
     },
     "center-for-fiction": {
       "status": "read",
-      "pages": 3,
-      "prices": 1,
-      "proposals": 1,
-      "llm": "skipped"
+      "pages": 1,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "used",
+      "discarded": 0
     },
     "wondrous": {
       "status": "unreachable",
@@ -1920,7 +2045,8 @@
       "pages": 1,
       "prices": 0,
       "proposals": 0,
-      "llm": "skipped",
+      "llm": "used",
+      "discarded": 0,
       "costStillShown": false
     },
     "gotham-writers": {
@@ -1928,7 +2054,8 @@
       "pages": 4,
       "prices": 0,
       "proposals": 1,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 0
     },
     "movers-bodega": {
       "status": "read",
@@ -1940,9 +2067,10 @@
     "capoeira-luanda": {
       "status": "read",
       "pages": 4,
-      "prices": 5,
+      "prices": 1,
       "proposals": 1,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 3
     },
     "ailey-extension": {
       "status": "read",
@@ -1956,14 +2084,16 @@
       "pages": 1,
       "prices": 0,
       "proposals": 0,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 0
     },
     "bushwick-starr": {
       "status": "read",
       "pages": 2,
       "prices": 0,
       "proposals": 0,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 0
     },
     "humanist-project": {
       "status": "read",
@@ -1985,11 +2115,11 @@
       "proposals": 0
     },
     "tonyc": {
-      "status": "read",
-      "pages": 2,
-      "prices": 4,
+      "status": "blocked",
+      "pages": 0,
+      "prices": 0,
       "proposals": 0,
-      "costStillShown": true
+      "detail": "HTTP 403"
     },
     "brooklynite-choir": {
       "status": "read",
@@ -1998,33 +2128,37 @@
       "proposals": 1,
       "costStillShown": false
     },
-    "flux-factory": {
-      "status": "read",
-      "pages": 3,
-      "prices": 0,
-      "proposals": 0,
-      "llm": "skipped"
-    },
     "art-students-league": {
       "status": "read",
       "pages": 3,
       "prices": 0,
       "proposals": 0,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 0
+    },
+    "flux-factory": {
+      "status": "read",
+      "pages": 3,
+      "prices": 0,
+      "proposals": 1,
+      "llm": "used",
+      "discarded": 2
     },
     "taller-boricua": {
       "status": "read",
       "pages": 1,
       "prices": 0,
-      "proposals": 0,
-      "llm": "skipped"
+      "proposals": 1,
+      "llm": "used",
+      "discarded": 1
     },
     "mfta": {
       "status": "read",
       "pages": 2,
       "prices": 2,
       "proposals": 0,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 3
     },
     "abrons": {
       "status": "read",
@@ -2038,7 +2172,8 @@
       "pages": 4,
       "prices": 15,
       "proposals": 1,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 0
     },
     "brac": {
       "status": "read",
@@ -2051,29 +2186,33 @@
       "status": "read",
       "pages": 3,
       "prices": 0,
-      "proposals": 0,
-      "llm": "skipped"
+      "proposals": 1,
+      "llm": "used",
+      "discarded": 0
     },
     "clayworks-on-columbia": {
       "status": "read",
       "pages": 4,
       "prices": 2,
       "proposals": 2,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 2
     },
     "potters-wheel-nyc": {
       "status": "read",
       "pages": 4,
       "prices": 3,
       "proposals": 1,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 3
     },
     "myrtles-clayhouse": {
       "status": "read",
       "pages": 4,
       "prices": 7,
       "proposals": 1,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 3
     },
     "new:chezbushwick.net": {
       "status": "read",
@@ -2106,7 +2245,7 @@
     "new:gowanusprintlab.com": {
       "status": "read",
       "pages": 2,
-      "prices": 4,
+      "prices": 3,
       "proposals": 1,
       "llm": "skipped"
     },
@@ -2187,16 +2326,16 @@
       "proposals": 0,
       "llm": "skipped"
     },
-    "new:harvestworks.org": {
+    "new:dctvny.org": {
       "status": "read",
-      "pages": 4,
+      "pages": 3,
       "prices": 0,
       "proposals": 0,
       "llm": "skipped"
     },
-    "new:dctvny.org": {
+    "new:harvestworks.org": {
       "status": "read",
-      "pages": 3,
+      "pages": 4,
       "prices": 0,
       "proposals": 0,
       "llm": "skipped"
