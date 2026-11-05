@@ -161,6 +161,7 @@ export async function extractFromIcs(
       summary,
       venue.defaultMode,
       venue.category,
+      v["CATEGORIES"] ? unescapeText(v["CATEGORIES"].value) : "",
     );
 
     const event: CalEvent = {

@@ -92,11 +92,14 @@ export const VENUES: Venue[] = [
     whereTemplate: "Wendy's Subway, Bushwick/Ridgewood border",
   },
   {
+    // The feed is five screenings to every workshop, so the default is witness.
+    // Its workshops still file as make: the feed tags each event "Workshops &
+    // Labs" or "Screenings & Events", and classify.ts reads that.
     name: "UnionDocs",
     url: "https://uniondocs.org/events/category/workshops/list/",
     icsUrl: "https://uniondocs.org/events/?ical=1",
     category: "film",
-    defaultMode: "make",
+    defaultMode: "witness",
     whereTemplate: "UnionDocs, Ridgewood",
   },
   {
@@ -519,10 +522,12 @@ export const VENUES: Venue[] = [
     fetch: "playwright",
   },
   {
+    // Mostly exhibitions, openings and concerts. Its workshops say so in the
+    // title and are still filed as make.
     name: "Flux Factory",
     url: "https://www.fluxfactory.org/events/",
     category: "community",
-    defaultMode: "make",
+    defaultMode: "witness",
     whereTemplate: "Flux Factory, 39-31 29th St, Long Island City",
     fetch: "playwright",
   },
@@ -806,10 +811,13 @@ export const VENUES: Venue[] = [
     whereTemplate: "Hack Manhattan, 137 W 14th St, Manhattan",
   },
   {
+    // A distribution co-op; what it lists publicly is screenings. The page is
+    // JS-rendered, and witness venues default to a static fetch, so say so.
     name: "Film-Makers' Cooperative",
     url: "https://film-makerscoop.com/screenings",
     category: "film",
-    defaultMode: "make",
+    defaultMode: "witness",
+    fetch: "playwright",
     whereTemplate: "Film-Makers' Cooperative, Gramercy, Manhattan",
   },
   {
