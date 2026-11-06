@@ -8,7 +8,9 @@
 // assumed, so a row can't enter the Directory carrying an unearned date.
 import { hostOf } from "../../src/lib/host.ts";
 import type {
+  Access,
   Borough,
+  Cost,
   Discipline,
   Practice,
   PracticesData,
@@ -24,9 +26,65 @@ export interface ApplyOptions {
 
 function slug(name: string): string {
   return name
+    // "Dieu Donné" is dieu-donne, not dieu-donn.
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
+}
+
+const ACCESS_VALUES: Access[] = [
+  "free", "sliding-scale", "scholarship", "work-study", "drop-in",
+  "membership", "enroll-ahead", "contact-first",
+];
+
+/**
+ * A price as a reviewer would type it, having read the page:
+ *
+ *   free            90            580-620
+ *   250/mo          90/session    75-675 sliding
+ *
+ * A draft's cost is often the roughest thing in it (an entry price read as the
+ * only price, or a range padded by one stray figure), and the person accepting
+ * has the page open. This lets them say what it is rather than accept a figure
+ * they can see is wrong.
+ */
+export function parseCost(text: string): Cost {
+  const t = text.trim().toLowerCase().replace(/[$,]/g, "");
+  const num = (s: string) => {
+    const n = Number(s);
+    if (!Number.isFinite(n) || n < 0) throw new Error(`"${text}" isn't a price`);
+    return n;
+  };
+  if (t === "free") return { kind: "free" };
+  let m = t.match(/^(\d+(?:\.\d+)?)\s*-\s*(\d+(?:\.\d+)?)(\s+sliding)?$/);
+  if (m) {
+    const [min, max] = [num(m[1]!), num(m[2]!)];
+    if (min >= max) throw new Error(`"${text}": a range runs low to high`);
+    return { kind: m[3] ? "sliding" : "range", min, max };
+  }
+  m = t.match(/^(\d+(?:\.\d+)?)\s*\/\s*(mo|month)$/);
+  if (m) return { kind: "per-month", amount: num(m[1]!) };
+  m = t.match(/^(\d+(?:\.\d+)?)\s*\/\s*(session|class|visit)$/);
+  if (m) return { kind: "per-session", amount: num(m[1]!) };
+  m = t.match(/^(\d+(?:\.\d+)?)$/);
+  if (m) return { kind: "fixed", amount: num(m[1]!) };
+  throw new Error(
+    `can't read cost "${text}". Try: free, 90, 580-620, 250/mo, 90/session, 75-675 sliding`,
+  );
+}
+
+function parseAccess(text: string): Access[] {
+  const values = text.split(",").map((a) => a.trim()).filter(Boolean);
+  const unknown = values.filter((a) => !ACCESS_VALUES.includes(a as Access));
+  if (!values.length || unknown.length) {
+    throw new Error(
+      `access is a comma list of: ${ACCESS_VALUES.join(", ")}` +
+        (unknown.length ? ` (not: ${unknown.join(", ")})` : ""),
+    );
+  }
+  return [...new Set(values)] as Access[];
 }
 
 function completeDraft(
@@ -52,6 +110,12 @@ function completeDraft(
         break;
       case "travelMin":
         out.travelMin = v === "null" ? null : Number(v);
+        break;
+      case "cost":
+        out.cost = parseCost(v);
+        break;
+      case "access":
+        out.access = parseAccess(v);
         break;
       default:
         throw new Error(`can't --set ${k}`);

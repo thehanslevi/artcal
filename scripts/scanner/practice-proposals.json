@@ -476,41 +476,6 @@
     {
       "kind": "new",
       "draft": {
-        "name": "Genspace",
-        "url": "https://www.genspace.org/classes",
-        "what": "Genspace's mission is to foster a safe and inclusive community where all people can experientially learn, boldly create, and meaningfully grow with the life sciences.",
-        "disciplines": [],
-        "neighborhood": "Sunset Park",
-        "borough": "brooklyn",
-        "travelMin": null,
-        "cost": {
-          "kind": "unknown",
-          "why": "not-checked"
-        },
-        "schedule": {
-          "kind": "irregular",
-          "note": "Check site for class terms."
-        },
-        "access": [
-          "enroll-ahead",
-          "drop-in"
-        ]
-      },
-      "method": "llm",
-      "confidence": "low",
-      "evidence": [
-        {
-          "url": "https://www.genspace.org/events",
-          "quote": "e lab will be open on Saturday 2-4pm after the Summit for a drop-in Open House for BDC participants, judges, and friends!"
-        }
-      ],
-      "firstSeen": "2026-11-05",
-      "lastSeen": "2026-11-05",
-      "id": "defa8c27"
-    },
-    {
-      "kind": "new",
-      "draft": {
         "name": "Gowanus Print Lab",
         "url": "https://www.gowanusprintlab.com/",
         "what": "We offer the highest quality of handmade custom prints on a variety of wearables and different materials in an effort to help companies big and small perfect their branding and to help artists bring t",
@@ -665,78 +630,6 @@
       "firstSeen": "2026-11-05",
       "lastSeen": "2026-11-05",
       "id": "2639ffdf"
-    },
-    {
-      "kind": "new",
-      "draft": {
-        "name": "Museum of the Moving Image",
-        "url": "https://movingimage.org/education/",
-        "what": "",
-        "disciplines": [],
-        "neighborhood": "Astoria",
-        "borough": "queens",
-        "travelMin": null,
-        "cost": {
-          "kind": "unknown",
-          "why": "not-checked"
-        },
-        "schedule": {
-          "kind": "irregular",
-          "note": "Check site for class terms."
-        },
-        "access": [
-          "enroll-ahead",
-          "drop-in"
-        ]
-      },
-      "method": "pattern",
-      "confidence": "low",
-      "evidence": [
-        {
-          "url": "https://movingimage.org/education/",
-          "quote": "Moving Image Studio is a drop-in media-making space where visitors can experiment and create"
-        }
-      ],
-      "firstSeen": "2026-11-05",
-      "lastSeen": "2026-11-05",
-      "id": "9885de74"
-    },
-    {
-      "kind": "new",
-      "draft": {
-        "name": "Recess",
-        "url": "https://www.recessart.org/",
-        "what": "",
-        "disciplines": [
-          "writing"
-        ],
-        "neighborhood": "Clinton Hill",
-        "borough": null,
-        "travelMin": null,
-        "cost": {
-          "kind": "unknown",
-          "why": "not-checked"
-        },
-        "schedule": {
-          "kind": "irregular",
-          "note": "Check site for class terms."
-        },
-        "access": [
-          "enroll-ahead",
-          "drop-in"
-        ]
-      },
-      "method": "pattern",
-      "confidence": "low",
-      "evidence": [
-        {
-          "url": "https://www.recessart.org/programs/3-assembly",
-          "quote": "Drop-ins Welcome"
-        }
-      ],
-      "firstSeen": "2026-11-05",
-      "lastSeen": "2026-11-05",
-      "id": "5948af30"
     }
   ],
   "perVenue": {
