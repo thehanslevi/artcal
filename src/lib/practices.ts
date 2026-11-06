@@ -1,10 +1,12 @@
 import raw from "../data/practices.json";
+import rawChecks from "../data/practice-checks.json";
 import { STALE_AFTER_DAYS } from "../types/practice";
 import type {
   Access,
   Availability,
   Cost,
   Practice,
+  PracticeChecks,
   PracticesData,
   Schedule,
   Weekday,
@@ -21,6 +23,7 @@ export const PRACTICES_VERIFIED = data.lastVerified;
 /** Last automated link-liveness sweep. What the footer shows as "Updated". */
 export const PRACTICES_CHECKED = data.lastChecked;
 export const BY_ID = new Map(PRACTICES.map((p) => [p.id, p]));
+const CHECKS = (rawChecks as unknown as PracticeChecks).rows;
 
 const WEEKDAYS: Weekday[] = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 
@@ -154,7 +157,7 @@ export function formatSchedule(s: Schedule): string {
     case "membership":
       return "Membership";
     case "irregular":
-      return "Check site";
+      return "Dates vary";
     case "dated":
       return s.date;
   }
@@ -219,24 +222,52 @@ export function isNearby(p: Practice, maxMin = 25): boolean {
 
 const DAY_MS = 86_400_000;
 
-export function daysSinceVerified(p: Practice, now: Date): number {
-  const then = new Date(p.verifiedOn + "T00:00:00");
+/**
+ * The last time this row was checked, by a person or by the weekly scrape,
+ * whichever is newer. ISO dates compare as strings.
+ */
+export function lastCheckedOn(
+  p: Practice,
+  checks: PracticeChecks["rows"] = CHECKS,
+): string {
+  const scraped = checks[p.id]?.ok;
+  return scraped && scraped > p.verifiedOn ? scraped : p.verifiedOn;
+}
+
+export function daysSinceChecked(
+  p: Practice,
+  now: Date,
+  checks: PracticeChecks["rows"] = CHECKS,
+): number {
+  const then = new Date(lastCheckedOn(p, checks) + "T00:00:00");
   return Math.max(0, Math.floor((now.getTime() - then.getTime()) / DAY_MS));
 }
 
 /**
- * Past STALE_AFTER_DAYS an entry is presented as suspect rather than true.
- * Nothing is locked; a fact verified in June is a fact about June.
+ * Past STALE_AFTER_DAYS a row says when it was last checked. Nothing is
+ * locked; a fact checked in June is a fact about June.
  */
-export function isStale(p: Practice, now: Date): boolean {
-  return daysSinceVerified(p, now) > STALE_AFTER_DAYS;
+export function isStale(
+  p: Practice,
+  now: Date,
+  checks: PracticeChecks["rows"] = CHECKS,
+): boolean {
+  return daysSinceChecked(p, now, checks) > STALE_AFTER_DAYS;
 }
 
-/** "checked today" / "checked 8 days ago" / "checked 41 days ago". */
-export function formatVerified(p: Practice, now: Date): string {
-  const n = daysSinceVerified(p, now);
-  if (n === 0) return "checked today";
-  if (n === 1) return "checked yesterday";
-  return `checked ${n} days ago`;
+const MONTH_ABBR = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+];
+
+/** "Last checked Jul 6", with the year once it isn't this one. */
+export function formatLastChecked(
+  p: Practice,
+  now: Date,
+  checks: PracticeChecks["rows"] = CHECKS,
+): string {
+  const [y, m, d] = lastCheckedOn(p, checks).split("-").map(Number);
+  const year = y === now.getFullYear() ? "" : `, ${y}`;
+  return `Last checked ${MONTH_ABBR[(m ?? 1) - 1]} ${d}${year}`;
 }
 

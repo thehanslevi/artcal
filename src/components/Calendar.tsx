@@ -32,6 +32,9 @@ interface Props {
   picksOnly: boolean;
   freeOnly: boolean;
   weekendOnly: boolean;
+  /** Owned by App, so the filter counts can match what is listed here. */
+  showPast: boolean;
+  onToggleShowPast: () => void;
   onTogglePick: (id: string) => void;
   isCurator?: boolean;
   notes?: Record<string, string>;
@@ -54,6 +57,8 @@ export function Calendar({
   picksOnly,
   freeOnly,
   weekendOnly,
+  showPast,
+  onToggleShowPast,
   onTogglePick,
   isCurator = false,
   notes = {},
@@ -61,7 +66,6 @@ export function Calendar({
 }: Props) {
   const [viewMode, setViewMode] = useState<"single" | "all">("single");
   const [userWeekIndex, setUserWeekIndex] = useState<number | null>(null);
-  const [showPast, setShowPast] = useState(false);
   const now = useMemo(() => today(), []);
 
   // Reset user selection when filters change
@@ -198,7 +202,7 @@ export function Calendar({
             <button
               type="button"
               className="mini-toggle"
-              onClick={() => setShowPast((s) => !s)}
+              onClick={onToggleShowPast}
             >
               {showPast ? "Hide past" : "Show past"}
             </button>

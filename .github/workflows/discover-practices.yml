@@ -1,8 +1,10 @@
 name: Discover practices
 
-# Reads making venues' rendered pages and proposes Directory changes into
-# scripts/scanner/practice-proposals.json for a person to review. It never edits
-# src/data/practices.json, and a step below fails the run if that ever changes.
+# Reads making venues' rendered pages. It proposes Directory changes into
+# scripts/scanner/practice-proposals.json for a person to review, and records
+# one check per row in src/data/practice-checks.json, which the site reads to
+# say when a row was last checked. It never edits src/data/practices.json, and a
+# step below fails the run if that ever changes.
 # Thursdays, to stay clear of the Sunday scan on the shared free LLM quota.
 on:
   schedule:
@@ -52,18 +54,18 @@ jobs:
         run: |
           git config user.name  "calendar-scanner[bot]"
           git config user.email "calendar-scanner@users.noreply.github.com"
-          FILES="scripts/scanner/practice-proposals.json scripts/scanner/practice-discovery-state.json"
+          FILES="scripts/scanner/practice-proposals.json scripts/scanner/practice-discovery-state.json src/data/practice-checks.json"
           if git diff --quiet -- $FILES && [ -z "$(git ls-files --others --exclude-standard -- $FILES)" ]; then
             echo "No change."
             exit 0
           fi
-          mkdir -p /tmp/discovery && cp $FILES /tmp/discovery/
+          for f in $FILES; do mkdir -p "/tmp/discovery/$(dirname "$f")" && cp "$f" "/tmp/discovery/$f"; done
           # These files are only ever written by this job, so re-applying them
           # onto the latest main can't collide with a scan or a hand edit.
           for i in 1 2 3 4 5; do
             git fetch origin main
             git reset --hard origin/main
-            cp /tmp/discovery/* scripts/scanner/
+            for f in $FILES; do cp "/tmp/discovery/$f" "$f"; done
             git add $FILES
             if git diff --staged --quiet; then exit 0; fi
             git commit -m "Discover practices: $(node -e "console.log(require('./scripts/scanner/practice-proposals.json').proposals.length)") open proposals"

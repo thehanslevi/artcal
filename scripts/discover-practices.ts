@@ -9,19 +9,28 @@
 // standing patterns, in prose, on pages that render client-side. Those pages
 // don't yield events, but once rendered most of them do say what a class costs.
 //
-// It writes one file, scripts/scanner/practice-proposals.json. It never writes
-// practices.json: review-practices.ts applies what a person accepts, and only a
-// person can move `verifiedOn`. The workflow checks that nothing else changed.
+// It writes proposals to scripts/scanner/practice-proposals.json, and one check
+// per Directory row to src/data/practice-checks.json, which the site reads to
+// say when a row was last checked. It never writes practices.json:
+// review-practices.ts applies what a person accepts, and only a person can move
+// `verifiedOn`. The workflow fails the run if that file changed.
 import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { hostOf } from "../src/lib/host.ts";
-import type { Practice, PracticesData } from "../src/types/practice.ts";
+import type {
+  CheckResult,
+  Practice,
+  PracticeChecks,
+  PracticesData,
+} from "../src/types/practice.ts";
 import { closeBrowser, renderPage } from "./scanner/fetchers.ts";
 import { callLlm, hasLlm, isQuotaExhausted } from "./scanner/llm.ts";
 import {
   buildLlmPrompt,
+  checkRow,
   extractPrices,
+  localDate,
   LLM_ENVELOPE,
   LLM_SYSTEM_PROMPT,
   parseLlmReading,
@@ -41,6 +50,9 @@ const PRACTICES_PATH = resolve("src/data/practices.json");
 const OUT_PATH = resolve("scripts/scanner/practice-proposals.json");
 const DECISIONS_PATH = resolve("scripts/scanner/practice-decisions.json");
 const STATE_PATH = resolve("scripts/scanner/practice-discovery-state.json");
+// Read by the site. Kept apart from practices.json, which this script never
+// writes: that file is hand-maintained and says what a person confirmed.
+const CHECKS_PATH = resolve("src/data/practice-checks.json");
 
 // Small nonprofits: a few at a time, a few pages each.
 const POOL = 3;
@@ -294,9 +306,28 @@ try {
     .sort((a, b) => rank(a) - rank(b) || targetOf(a).localeCompare(targetOf(b)));
 
   // A filtered run is for looking at output; it can't speak for the whole list.
+  // One check per Directory row: did its site load, and is its price still
+  // there? A pass moves the row's `ok` date; a miss keeps the old one, so a
+  // venue that is down this week doesn't lose the check it passed last week.
+  const checkedOn = localDate(now);
+  const previousChecks = loadJson<PracticeChecks>(CHECKS_PATH, { ranAt: "", rows: {} });
+  const checks: PracticeChecks = { ranAt: now.toISOString(), rows: {} };
+  for (const c of crawled) {
+    if (!c.seed.row) continue;
+    const result: CheckResult =
+      c.result.status === "read" ? checkRow(c.seed.row, c.pages) : c.result.status;
+    const before = previousChecks.rows[c.seed.key]?.ok;
+    const ok = result === "ok" ? checkedOn : before;
+    checks.rows[c.seed.key] = { ...(ok ? { ok } : {}), last: checkedOn, result };
+  }
+
   if (filter) {
     console.log(JSON.stringify(live.filter((p) => read.has(targetOf(p))), null, 2));
+    for (const c of crawled) {
+      if (c.seed.row) console.log(`check ${c.seed.key}: ${checks.rows[c.seed.key]?.result}`);
+    }
   } else {
+    writeFileSync(CHECKS_PATH, JSON.stringify(checks, null, 2) + "\n");
     writeFileSync(
       OUT_PATH,
       JSON.stringify({ ranAt: now.toISOString(), proposals: live, perVenue }, null, 2) + "\n",
@@ -309,6 +340,11 @@ try {
   console.log(
     `\nread ${count("read")} · blocked ${count("blocked")} · dead ${count("dead")} · unreachable ${count("unreachable")} · LLM calls ${llmCalls}` +
       `\n${live.length} open proposals. Review with: npm run practices:review`,
+  );
+  const tally: Record<string, number> = {};
+  for (const r of Object.values(checks.rows)) tally[r.result] = (tally[r.result] ?? 0) + 1;
+  console.log(
+    `Row checks: ${Object.entries(tally).map(([k, n]) => `${k} ${n}`).join(" · ")}`,
   );
 } finally {
   // One stuck page can keep browser.close() from ever returning (the first full

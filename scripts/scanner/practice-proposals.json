@@ -1,6 +1,33 @@
 {
-  "ranAt": "2026-11-05T17:05:02.643Z",
+  "ranAt": "2026-11-06T04:25:27.480Z",
   "proposals": [
+    {
+      "kind": "update",
+      "practiceId": "capoeira-luanda",
+      "name": "Capoeira Luanda Brooklyn",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://piaocapoeira.com/class-schedule",
+          "quote": "From $799/semester , $120/month or $30/class"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-published"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "fixed",
+          "amount": 799
+        }
+      },
+      "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-06",
+      "id": "7cb139f6"
+    },
     {
       "kind": "new",
       "draft": {
@@ -39,7 +66,7 @@
         }
       ],
       "firstSeen": "2026-11-05",
-      "lastSeen": "2026-11-05",
+      "lastSeen": "2026-11-06",
       "id": "9609a694"
     }
   ],
@@ -47,30 +74,37 @@
     "artshack": {
       "status": "read",
       "pages": 3,
-      "prices": 1,
-      "proposals": 1,
+      "prices": 8,
+      "proposals": 0,
       "llm": "skipped"
     },
     "bushwick-ceramics": {
       "status": "read",
       "pages": 4,
       "prices": 10,
-      "proposals": 1,
+      "proposals": 0,
       "llm": "skipped"
     },
     "gasworks": {
       "status": "read",
       "pages": 4,
       "prices": 4,
-      "proposals": 2,
-      "llm": "skipped"
+      "proposals": 0,
+      "costStillShown": false
     },
     "bklyn-clay": {
       "status": "read",
       "pages": 4,
       "prices": 3,
-      "proposals": 1,
-      "costStillShown": false
+      "proposals": 0,
+      "costStillShown": true
+    },
+    "choplet": {
+      "status": "read",
+      "pages": 4,
+      "prices": 5,
+      "proposals": 0,
+      "llm": "skipped"
     },
     "brooklyn-clay-industries": {
       "status": "read",
@@ -79,13 +113,6 @@
       "proposals": 0,
       "llm": "skipped",
       "costStillShown": true
-    },
-    "choplet": {
-      "status": "unreachable",
-      "pages": 0,
-      "prices": 0,
-      "proposals": 0,
-      "detail": "page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://choplet.com/\", waiting until \"domcontentloaded"
     },
     "scratch-ceramics": {
       "status": "read",
@@ -98,15 +125,15 @@
       "status": "read",
       "pages": 4,
       "prices": 1,
-      "proposals": 1,
-      "llm": "skipped"
+      "proposals": 0,
+      "costStillShown": true
     },
     "manny-cantor": {
       "status": "read",
       "pages": 4,
       "prices": 7,
-      "proposals": 1,
-      "costStillShown": false
+      "proposals": 0,
+      "costStillShown": true
     },
     "mgc": {
       "status": "read",
@@ -119,35 +146,36 @@
       "status": "read",
       "pages": 4,
       "prices": 1,
-      "proposals": 1,
-      "llm": "skipped"
+      "proposals": 0,
+      "costStillShown": true
     },
     "uptown-clay": {
       "status": "read",
       "pages": 4,
       "prices": 5,
-      "proposals": 1,
-      "llm": "skipped"
+      "proposals": 0,
+      "costStillShown": true
     },
     "rbpmw": {
       "status": "read",
       "pages": 3,
       "prices": 28,
-      "proposals": 1,
+      "proposals": 0,
+      "costStillShown": true
+    },
+    "les-printshop": {
+      "status": "read",
+      "pages": 4,
+      "prices": 6,
+      "proposals": 0,
+      "llm": "skipped",
       "costStillShown": true
     },
     "bushwick-print-lab": {
       "status": "read",
       "pages": 4,
       "prices": 24,
-      "proposals": 1,
-      "llm": "skipped"
-    },
-    "les-printshop": {
-      "status": "read",
-      "pages": 4,
-      "prices": 6,
-      "proposals": 1,
+      "proposals": 0,
       "llm": "skipped"
     },
     "mobile-print-power": {
@@ -158,26 +186,19 @@
       "detail": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobileprintpower.com/workshops.php\nCall log:\n  - navigating to \"https:/"
     },
     "works-in-progress": {
-      "status": "dead",
-      "pages": 0,
+      "status": "read",
+      "pages": 2,
       "prices": 0,
       "proposals": 0,
-      "detail": "HTTP 404"
+      "llm": "skipped"
     },
     "secret-riso-club": {
       "status": "read",
       "pages": 4,
       "prices": 3,
-      "proposals": 1,
+      "proposals": 0,
       "llm": "skipped",
       "costStillShown": true
-    },
-    "center-for-book-arts": {
-      "status": "read",
-      "pages": 3,
-      "prices": 5,
-      "proposals": 0,
-      "costStillShown": false
     },
     "lucky-risograph": {
       "status": "read",
@@ -186,14 +207,28 @@
       "proposals": 0,
       "llm": "skipped"
     },
+    "center-for-book-arts": {
+      "status": "read",
+      "pages": 3,
+      "prices": 5,
+      "proposals": 0,
+      "costStillShown": false
+    },
     "textile-arts-center": {
       "status": "read",
       "pages": 4,
       "prices": 5,
-      "proposals": 1,
+      "proposals": 0,
       "costStillShown": false
     },
     "makeville": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "urbanglass": {
       "status": "read",
       "pages": 4,
       "prices": 0,
@@ -204,14 +239,7 @@
       "status": "read",
       "pages": 4,
       "prices": 1,
-      "proposals": 1,
-      "llm": "skipped"
-    },
-    "urbanglass": {
-      "status": "read",
-      "pages": 4,
-      "prices": 0,
-      "proposals": 1,
+      "proposals": 0,
       "llm": "skipped"
     },
     "craftsman-ave": {
@@ -221,26 +249,33 @@
       "proposals": 0,
       "detail": "HTTP 403"
     },
-    "makerspace-nyc": {
-      "status": "read",
-      "pages": 3,
-      "prices": 4,
-      "proposals": 1,
-      "costStillShown": false
-    },
     "brooklyn-spark": {
       "status": "read",
       "pages": 2,
       "prices": 1,
-      "proposals": 1,
-      "costStillShown": false
+      "proposals": 0,
+      "costStillShown": true
+    },
+    "makerspace-nyc": {
+      "status": "read",
+      "pages": 3,
+      "prices": 4,
+      "proposals": 0,
+      "costStillShown": true
     },
     "penumbra": {
       "status": "read",
       "pages": 4,
       "prices": 14,
-      "proposals": 2,
+      "proposals": 0,
       "llm": "skipped"
+    },
+    "bushwick-darkroom": {
+      "status": "read",
+      "pages": 4,
+      "prices": 7,
+      "proposals": 0,
+      "costStillShown": false
     },
     "gowanus-darkroom": {
       "status": "read",
@@ -249,13 +284,6 @@
       "proposals": 0,
       "llm": "skipped",
       "costStillShown": true
-    },
-    "bushwick-darkroom": {
-      "status": "read",
-      "pages": 4,
-      "prices": 7,
-      "proposals": 0,
-      "costStillShown": false
     },
     "alterwork": {
       "status": "read",
@@ -276,7 +304,7 @@
       "status": "read",
       "pages": 4,
       "prices": 0,
-      "proposals": 1,
+      "proposals": 0,
       "llm": "skipped"
     },
     "millennium-film": {
@@ -290,15 +318,15 @@
       "status": "read",
       "pages": 4,
       "prices": 8,
-      "proposals": 1,
+      "proposals": 0,
       "llm": "skipped"
     },
     "343-labs": {
       "status": "read",
       "pages": 4,
       "prices": 19,
-      "proposals": 1,
-      "llm": "skipped"
+      "proposals": 0,
+      "costStillShown": true
     },
     "creative-music-studio": {
       "status": "read",
@@ -354,13 +382,13 @@
       "status": "read",
       "pages": 4,
       "prices": 2,
-      "proposals": 1
+      "proposals": 0
     },
     "center-for-fiction": {
       "status": "read",
       "pages": 3,
       "prices": 1,
-      "proposals": 1,
+      "proposals": 0,
       "llm": "skipped"
     },
     "wondrous": {
@@ -382,7 +410,7 @@
       "status": "read",
       "pages": 4,
       "prices": 0,
-      "proposals": 1,
+      "proposals": 0,
       "llm": "skipped"
     },
     "movers-bodega": {
@@ -395,14 +423,14 @@
     "capoeira-luanda": {
       "status": "read",
       "pages": 4,
-      "prices": 1,
+      "prices": 5,
       "proposals": 1,
       "llm": "skipped"
     },
     "ailey-extension": {
       "status": "read",
       "pages": 2,
-      "prices": 2,
+      "prices": 0,
       "proposals": 0,
       "costStillShown": false
     },
@@ -413,19 +441,19 @@
       "proposals": 0,
       "llm": "skipped"
     },
-    "humanist-project": {
-      "status": "read",
-      "pages": 3,
-      "prices": 1,
-      "proposals": 0,
-      "costStillShown": false
-    },
     "bushwick-starr": {
       "status": "read",
       "pages": 2,
       "prices": 0,
       "proposals": 0,
       "llm": "skipped"
+    },
+    "humanist-project": {
+      "status": "read",
+      "pages": 3,
+      "prices": 1,
+      "proposals": 0,
+      "costStillShown": false
     },
     "sacred-harp": {
       "status": "read",
@@ -440,18 +468,18 @@
       "proposals": 0
     },
     "tonyc": {
-      "status": "blocked",
-      "pages": 0,
-      "prices": 0,
+      "status": "read",
+      "pages": 2,
+      "prices": 4,
       "proposals": 0,
-      "detail": "HTTP 403"
+      "costStillShown": true
     },
     "brooklynite-choir": {
       "status": "read",
       "pages": 1,
       "prices": 2,
-      "proposals": 1,
-      "costStillShown": false
+      "proposals": 0,
+      "costStillShown": true
     },
     "flux-factory": {
       "status": "read",
@@ -463,6 +491,13 @@
     "art-students-league": {
       "status": "read",
       "pages": 3,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
+    },
+    "taller-boricua": {
+      "status": "read",
+      "pages": 1,
       "prices": 0,
       "proposals": 0,
       "llm": "skipped"
@@ -481,26 +516,12 @@
       "proposals": 0,
       "costStillShown": false
     },
-    "taller-boricua": {
-      "status": "unreachable",
-      "pages": 0,
-      "prices": 0,
-      "proposals": 0,
-      "detail": "page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://tallerboricua.org/rtpw-printmaking-workshop/\","
-    },
     "brac": {
       "status": "read",
       "pages": 4,
       "prices": 6,
       "proposals": 0,
       "costStillShown": false
-    },
-    "art-lab-snug-harbor": {
-      "status": "read",
-      "pages": 4,
-      "prices": 15,
-      "proposals": 1,
-      "llm": "skipped"
     },
     "mugi-pottery": {
       "status": "read",
@@ -509,99 +530,127 @@
       "proposals": 0,
       "llm": "skipped"
     },
+    "art-lab-snug-harbor": {
+      "status": "read",
+      "pages": 4,
+      "prices": 15,
+      "proposals": 0,
+      "costStillShown": true
+    },
     "clayworks-on-columbia": {
       "status": "read",
       "pages": 4,
       "prices": 2,
-      "proposals": 2,
-      "llm": "skipped"
+      "proposals": 0,
+      "costStillShown": true
     },
     "potters-wheel-nyc": {
       "status": "read",
       "pages": 4,
       "prices": 3,
-      "proposals": 1,
-      "llm": "skipped"
+      "proposals": 0,
+      "llm": "skipped",
+      "costStillShown": true
     },
     "myrtles-clayhouse": {
       "status": "read",
       "pages": 4,
       "prices": 7,
-      "proposals": 1,
-      "llm": "skipped"
-    },
-    "new:chezbushwick.net": {
-      "status": "read",
-      "pages": 3,
-      "prices": 1,
-      "proposals": 1,
-      "llm": "skipped"
-    },
-    "new:uniondocs.org": {
-      "status": "read",
-      "pages": 3,
-      "prices": 0,
       "proposals": 0,
-      "llm": "used",
-      "discarded": 2
+      "costStillShown": true
+    },
+    "brooklyn-metal-works": {
+      "status": "read",
+      "pages": 4,
+      "prices": 4,
+      "proposals": 0,
+      "costStillShown": true
+    },
+    "brickhouse-ceramic-art-center": {
+      "status": "read",
+      "pages": 3,
+      "prices": 11,
+      "proposals": 0,
+      "llm": "skipped",
+      "costStillShown": true
+    },
+    "brooklyn-craft-company": {
+      "status": "read",
+      "pages": 4,
+      "prices": 16,
+      "proposals": 0,
+      "llm": "skipped",
+      "costStillShown": true
+    },
+    "dieu-donne": {
+      "status": "read",
+      "pages": 4,
+      "prices": 2,
+      "proposals": 0,
+      "llm": "skipped",
+      "costStillShown": true
+    },
+    "brooklyn-shoe-space": {
+      "status": "read",
+      "pages": 4,
+      "prices": 14,
+      "proposals": 0,
+      "llm": "skipped",
+      "costStillShown": true
+    },
+    "loop-of-the-loom": {
+      "status": "read",
+      "pages": 4,
+      "prices": 19,
+      "proposals": 0,
+      "llm": "skipped",
+      "costStillShown": true
+    },
+    "gowanus-print-lab": {
+      "status": "read",
+      "pages": 1,
+      "prices": 4,
+      "proposals": 0,
+      "costStillShown": true
     },
     "new:wendyssubway.com": {
-      "status": "unreachable",
-      "pages": 0,
+      "status": "read",
+      "pages": 4,
       "prices": 0,
       "proposals": 0,
-      "detail": "page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://www.wendyssubway.com/programs\", waiting until "
+      "llm": "skipped"
+    },
+    "mostly-good-studios": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "skipped"
     },
     "new:mercurystore.com": {
       "status": "read",
       "pages": 1,
       "prices": 0,
       "proposals": 0,
-      "llm": "used",
-      "discarded": 3
+      "llm": "skipped"
     },
-    "new:gowanusprintlab.com": {
+    "new:chezbushwick.net": {
       "status": "read",
-      "pages": 2,
-      "prices": 3,
-      "proposals": 1,
-      "llm": "used",
-      "discarded": 0
+      "pages": 3,
+      "prices": 1,
+      "proposals": 0,
+      "llm": "skipped"
     },
     "new:recessart.org": {
       "status": "read",
       "pages": 4,
       "prices": 0,
-      "proposals": 1,
-      "llm": "used",
-      "discarded": 0
+      "proposals": 0,
+      "llm": "skipped"
     },
     "new:powrplnt.org": {
       "status": "read",
       "pages": 2,
-      "prices": 0,
-      "proposals": 0,
-      "llm": "used",
-      "discarded": 4
-    },
-    "new:genspace.org": {
-      "status": "read",
-      "pages": 4,
-      "prices": 0,
-      "proposals": 1,
-      "llm": "used",
-      "discarded": 3
-    },
-    "new:brooklyncraftcompany.com": {
-      "status": "read",
-      "pages": 4,
-      "prices": 16,
-      "proposals": 1,
-      "llm": "skipped"
-    },
-    "new:thearm.org": {
-      "status": "read",
-      "pages": 1,
       "prices": 0,
       "proposals": 0,
       "llm": "skipped"
@@ -613,35 +662,14 @@
       "proposals": 0,
       "llm": "skipped"
     },
-    "new:dieudonne.org": {
+    "new:genspace.org": {
       "status": "read",
       "pages": 4,
-      "prices": 2,
-      "proposals": 1,
+      "prices": 0,
+      "proposals": 0,
       "llm": "skipped"
     },
-    "new:bkmetalworks.com": {
-      "status": "read",
-      "pages": 4,
-      "prices": 4,
-      "proposals": 1,
-      "llm": "skipped"
-    },
-    "new:brickhouseny.com": {
-      "status": "read",
-      "pages": 3,
-      "prices": 11,
-      "proposals": 1,
-      "llm": "skipped"
-    },
-    "new:loopoftheloom.com": {
-      "status": "read",
-      "pages": 4,
-      "prices": 19,
-      "proposals": 1,
-      "llm": "skipped"
-    },
-    "new:bluestockings.com": {
+    "new:thearm.org": {
       "status": "read",
       "pages": 1,
       "prices": 0,
@@ -662,7 +690,7 @@
       "proposals": 0,
       "llm": "skipped"
     },
-    "new:hackmanhattan.com": {
+    "new:bluestockings.com": {
       "status": "read",
       "pages": 1,
       "prices": 0,
@@ -683,14 +711,14 @@
       "proposals": 1,
       "llm": "skipped"
     },
-    "new:noguchi.org": {
+    "new:hackmanhattan.com": {
       "status": "read",
-      "pages": 4,
+      "pages": 1,
       "prices": 0,
       "proposals": 0,
       "llm": "skipped"
     },
-    "new:film-makerscoop.com": {
+    "new:noguchi.org": {
       "status": "read",
       "pages": 4,
       "prices": 0,
@@ -736,21 +764,7 @@
       "status": "read",
       "pages": 4,
       "prices": 0,
-      "proposals": 1,
-      "llm": "skipped"
-    },
-    "new:brooklynshoespace.com": {
-      "status": "read",
-      "pages": 4,
-      "prices": 13,
-      "proposals": 1,
-      "llm": "skipped"
-    },
-    "new:mostlygoodstudios.com": {
-      "status": "read",
-      "pages": 4,
-      "prices": 0,
-      "proposals": 1,
+      "proposals": 0,
       "llm": "skipped"
     }
   }
