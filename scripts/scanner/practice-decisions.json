@@ -136,5 +136,40 @@
     "decision": "rejected",
     "on": "2026-11-05",
     "why": "paid fellowships for ages 18 to 26, not open enrollment"
+  },
+  "5352b4aa": {
+    "decision": "rejected",
+    "on": "2026-11-05",
+    "why": "a studio membership price; the row is about class sessions"
+  },
+  "1d4005be": {
+    "decision": "rejected",
+    "on": "2026-11-05",
+    "why": "a studio membership price; the row is about 6-week classes"
+  },
+  "16b1462d": {
+    "decision": "rejected",
+    "on": "2026-11-05",
+    "why": "a 6-week class price; the row is the monthly membership"
+  },
+  "6360f8a4": {
+    "decision": "rejected",
+    "on": "2026-11-05",
+    "why": "mixes in painting classes; the page gives ceramics as $445-$540 per session"
+  },
+  "d93a3c2f": {
+    "decision": "rejected",
+    "on": "2026-11-05",
+    "why": "from the online-learning page; the row is in-person workshops"
+  },
+  "5440e4fa": {
+    "decision": "rejected",
+    "on": "2026-11-05",
+    "why": "the scholarships and work-study belong to the one-year certificate, not the classes"
+  },
+  "bc93026f": {
+    "decision": "rejected",
+    "on": "2026-11-05",
+    "why": "one named scholarship cohort, not a standing offer"
   }
 }
