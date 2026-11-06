@@ -19,6 +19,7 @@ export type Discipline =
   | "textiles"
   | "glass"
   | "woodworking"
+  | "metalwork"
   | "darkroom"
   | "film"
   | "sound"

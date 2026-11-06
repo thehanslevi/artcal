@@ -458,7 +458,15 @@ test("a new venue with nothing to quote isn't proposed, and guesses stay blank",
   assert.equal(proposeNew(venue, page("Welcome to our studio. Jewelry and metalwork.")), null);
   const p = proposeNew(venue, page("Our 8 week classes are $580.\n8 week classes run all year."));
   assert.equal(p?.confidence, "low");
-  assert.deepEqual(p?.draft.disciplines, []);
+  // The venue's own name decides when it can. (Metalwork became a discipline
+  // on 2026-11-05, when this venue was added; before that this stayed blank.)
+  assert.deepEqual(p?.draft.disciplines, ["metalwork"]);
+  // A name that says nothing, on a page that says nothing decisive: blank.
+  const lab = { name: "Genspace", url: "https://lab.example.org", whereTemplate: "Genspace, 132 32nd St, Sunset Park" };
+  assert.deepEqual(
+    proposeNew(lab, page("Our 8 week classes are $580.\n8 week classes run all year."))?.draft.disciplines,
+    [],
+  );
   assert.equal(p?.draft.neighborhood, "Prospect Heights");
   assert.equal(p?.draft.borough, "brooklyn");
   assert.ok(!JSON.stringify(p).includes("verifiedOn"));

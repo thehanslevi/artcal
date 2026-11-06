@@ -19,7 +19,7 @@ import type {
 
 const DISCIPLINES: Discipline[] = [
   "ceramics", "printmaking", "book-arts", "textiles", "glass", "woodworking",
-  "darkroom", "film", "sound", "code", "zines", "writing", "dance", "theatre",
+  "metalwork", "darkroom", "film", "sound", "code", "zines", "writing", "dance", "theatre",
   "voice", "community",
 ];
 const BOROUGHS: Borough[] = [

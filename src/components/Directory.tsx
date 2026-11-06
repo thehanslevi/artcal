@@ -18,7 +18,7 @@ import { datedSessionsFor, sessionTitle } from "../lib/join";
 import { track } from "../lib/usage";
 
 // Reuse the existing eight-ink palette rather than inventing colours for all
-// sixteen disciplines.
+// seventeen disciplines.
 const INK: Record<Discipline, Category> = {
   ceramics: "making",
   printmaking: "making",
@@ -26,6 +26,7 @@ const INK: Record<Discipline, Category> = {
   textiles: "making",
   glass: "making",
   woodworking: "making",
+  metalwork: "making",
   zines: "making",
   darkroom: "film",
   film: "film",
@@ -45,6 +46,7 @@ const DISCIPLINE_LABEL: Record<Discipline, string> = {
   textiles: "Textiles",
   glass: "Glass",
   woodworking: "Woodworking",
+  metalwork: "Metalwork",
   darkroom: "Darkroom",
   film: "Film",
   sound: "Sound",
