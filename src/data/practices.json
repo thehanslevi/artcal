@@ -43,13 +43,13 @@
       "travelMin": 25,
       "url": "https://gasworksnyc.com/collections",
       "cost": {
-        "kind": "unknown",
-        "why": "not-checked"
+        "kind": "fixed",
+        "amount": 775
       },
       "schedule": {
         "kind": "session",
-        "weeks": 4,
-        "note": "4- and 8-week sessions; one-night Friday classes"
+        "weeks": 12,
+        "note": "12-week semesters; one-night TryNight classes"
       },
       "access": [
         "enroll-ahead",
@@ -951,8 +951,9 @@
       "travelMin": 40,
       "url": "https://343labs.com/collections/nyc-courses",
       "cost": {
-        "kind": "unknown",
-        "why": "not-checked"
+        "kind": "range",
+        "min": 1445,
+        "max": 4450
       },
       "schedule": {
         "kind": "session",
@@ -1826,8 +1827,9 @@
       "travelMin": 90,
       "url": "https://artlabsi.com/art-classes/",
       "cost": {
-        "kind": "unknown",
-        "why": "not-checked"
+        "kind": "range",
+        "min": 189,
+        "max": 470
       },
       "schedule": {
         "kind": "session",

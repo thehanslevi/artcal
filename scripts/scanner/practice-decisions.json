@@ -108,5 +108,18 @@
     "decision": "rejected",
     "on": "2026-11-06",
     "why": "one class teaser, too thin for a row covering courses"
+  },
+  "938ee05e": {
+    "decision": "accepted",
+    "on": "2026-11-06"
+  },
+  "d5cac17f": {
+    "decision": "accepted",
+    "on": "2026-11-06"
+  },
+  "5d558941": {
+    "decision": "rejected",
+    "on": "2026-11-06",
+    "why": "that sliding scale is for two specific classes; regular classes are $775 for a 12-week semester"
   }
 }

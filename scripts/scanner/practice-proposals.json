@@ -3,46 +3,6 @@
   "proposals": [
     {
       "kind": "update",
-      "practiceId": "343-labs",
-      "name": "343 Labs",
-      "method": "pattern",
-      "confidence": "medium",
-      "evidence": [
-        {
-          "url": "https://343labs.com/pages/course-overview",
-          "quote": "from $1,445"
-        },
-        {
-          "url": "https://343labs.com/pages/course-overview",
-          "quote": "from $4,450"
-        },
-        {
-          "url": "https://343labs.com/collections/nyc-courses",
-          "quote": "From $1,945 USD"
-        },
-        {
-          "url": "https://343labs.com/collections/nyc-courses",
-          "quote": "From $2,825 USD"
-        }
-      ],
-      "current": {
-        "kind": "unknown",
-        "why": "not-checked"
-      },
-      "change": {
-        "field": "cost",
-        "proposed": {
-          "kind": "range",
-          "min": 1445,
-          "max": 4450
-        }
-      },
-      "firstSeen": "2026-11-05",
-      "lastSeen": "2026-11-05",
-      "id": "d5cac17f"
-    },
-    {
-      "kind": "update",
       "practiceId": "artshack",
       "name": "Artshack Brooklyn",
       "method": "pattern",
@@ -124,34 +84,6 @@
     },
     {
       "kind": "update",
-      "practiceId": "gasworks",
-      "name": "Gasworks NYC",
-      "method": "pattern",
-      "confidence": "medium",
-      "evidence": [
-        {
-          "url": "https://gasworksnyc.com/pages/latine-class",
-          "quote": "This class is Sliding Scale, and the prices are: $75 (Seeding); $375 (Sustaining), and $675 (Generatin"
-        }
-      ],
-      "current": {
-        "kind": "unknown",
-        "why": "not-checked"
-      },
-      "change": {
-        "field": "cost",
-        "proposed": {
-          "kind": "sliding",
-          "min": 75,
-          "max": 675
-        }
-      },
-      "firstSeen": "2026-11-05",
-      "lastSeen": "2026-11-05",
-      "id": "5d558941"
-    },
-    {
-      "kind": "update",
       "practiceId": "manny-cantor",
       "name": "Manny Cantor Center",
       "method": "pattern",
@@ -229,46 +161,6 @@
       "firstSeen": "2026-11-05",
       "lastSeen": "2026-11-05",
       "id": "d93a3c2f"
-    },
-    {
-      "kind": "update",
-      "practiceId": "art-lab-snug-harbor",
-      "name": "Art Lab at Snug Harbor",
-      "method": "pattern",
-      "confidence": "low",
-      "evidence": [
-        {
-          "url": "https://artlabsi.com/art-classes/",
-          "quote": "$189.00"
-        },
-        {
-          "url": "https://artlabsi.com/art-classes/",
-          "quote": "$470.00"
-        },
-        {
-          "url": "https://artlabsi.com/art-classes/",
-          "quote": "$281.00"
-        },
-        {
-          "url": "https://artlabsi.com/art-classes/",
-          "quote": "$374.00"
-        }
-      ],
-      "current": {
-        "kind": "unknown",
-        "why": "not-checked"
-      },
-      "change": {
-        "field": "cost",
-        "proposed": {
-          "kind": "range",
-          "min": 189,
-          "max": 470
-        }
-      },
-      "firstSeen": "2026-11-05",
-      "lastSeen": "2026-11-05",
-      "id": "938ee05e"
     },
     {
       "kind": "update",
