@@ -1,6 +1,6 @@
 {
-  "lastVerified": "2026-07-25",
-  "lastChecked": "2026-11-04",
+  "lastVerified": "2026-11-05",
+  "lastChecked": "2026-11-05",
   "practices": [
     {
       "id": "artshack",
@@ -1944,6 +1944,216 @@
       ],
       "verifiedOn": "2026-07-25",
       "caveat": "Scaffolded 2026-07-25 from the studio site; cost, schedule, and access need confirming."
+    },
+    {
+      "id": "brooklyn-metal-works",
+      "name": "Brooklyn Metal Works",
+      "what": "Jewelry and metalsmithing studio. Eight-week classes and shorter workshops; enrolled students get open studio time.",
+      "disciplines": [
+        "metalwork"
+      ],
+      "neighborhood": "Prospect Heights",
+      "borough": "brooklyn",
+      "travelMin": null,
+      "url": "https://www.bkmetalworks.com/classes",
+      "cost": {
+        "kind": "range",
+        "min": 580,
+        "max": 620
+      },
+      "schedule": {
+        "kind": "session",
+        "weeks": 8,
+        "note": "8-week classes"
+      },
+      "access": [
+        "enroll-ahead"
+      ],
+      "verifiedOn": "2026-11-05"
+    },
+    {
+      "id": "brickhouse-ceramic-art-center",
+      "name": "BrickHouse Ceramic Art Center",
+      "what": "Wheel throwing, handbuilding, sculpture. Four terms a year; classes meet three hours a week, ten students or fewer.",
+      "disciplines": [
+        "ceramics"
+      ],
+      "neighborhood": "Long Island City",
+      "borough": "queens",
+      "travelMin": null,
+      "url": "https://brickhouseny.com/pages/classes-overview",
+      "cost": {
+        "kind": "range",
+        "min": 130,
+        "max": 525
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Check site for class terms."
+      },
+      "access": [
+        "enroll-ahead"
+      ],
+      "verifiedOn": "2026-11-05",
+      "caveat": "Scaffolded 2026-11-05 from the studio site; cost, schedule, and access need confirming."
+    },
+    {
+      "id": "brooklyn-craft-company",
+      "name": "Brooklyn Craft Company",
+      "what": "Sewing, quilting, knitting, weaving, natural dyeing. Mostly single-session workshops, plus a five-week sewing course and open sewing hours.",
+      "disciplines": [
+        "textiles"
+      ],
+      "neighborhood": "Greenpoint",
+      "borough": "brooklyn",
+      "travelMin": null,
+      "url": "https://www.brooklyncraftcompany.com/collections/all-workshops",
+      "cost": {
+        "kind": "range",
+        "min": 45,
+        "max": 350
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Check site for class terms."
+      },
+      "access": [
+        "enroll-ahead",
+        "drop-in"
+      ],
+      "verifiedOn": "2026-11-05",
+      "caveat": "Scaffolded 2026-11-05 from the studio site; cost, schedule, and access need confirming."
+    },
+    {
+      "id": "brooklyn-shoe-space",
+      "name": "Brooklyn Shoe Space",
+      "what": "Shoemaking, from two-hour classes to eight-day intensives. Members get a workbench and round-the-clock access.",
+      "disciplines": [
+        "textiles"
+      ],
+      "neighborhood": "East Williamsburg",
+      "borough": "brooklyn",
+      "travelMin": null,
+      "url": "https://brooklynshoespace.com/classes",
+      "cost": {
+        "kind": "range",
+        "min": 95,
+        "max": 6500
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Check site for class terms."
+      },
+      "access": [
+        "enroll-ahead",
+        "membership"
+      ],
+      "verifiedOn": "2026-11-05",
+      "caveat": "Scaffolded 2026-11-05 from the studio site; cost, schedule, and access need confirming."
+    },
+    {
+      "id": "dieu-donne",
+      "name": "Dieu Donné",
+      "what": "Hand papermaking. Spring and summer workshops, two to four full days each; scholarships every year.",
+      "disciplines": [
+        "book-arts"
+      ],
+      "neighborhood": "Brooklyn Navy Yard",
+      "borough": "brooklyn",
+      "travelMin": null,
+      "url": "https://www.dieudonne.org/educational-events",
+      "cost": {
+        "kind": "range",
+        "min": 750,
+        "max": 875
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Check site for class terms."
+      },
+      "access": [
+        "enroll-ahead",
+        "scholarship"
+      ],
+      "verifiedOn": "2026-11-05",
+      "caveat": "Scaffolded 2026-11-05 from the studio site; cost, schedule, and access need confirming."
+    },
+    {
+      "id": "loop-of-the-loom",
+      "name": "Loop of the Loom",
+      "what": "Weaving on pre-set looms; no experience needed. Two-hour intro sessions, project classes, month-long studio passes. Also spinning and needle felting.",
+      "disciplines": [
+        "textiles"
+      ],
+      "neighborhood": "Upper East Side",
+      "borough": "manhattan",
+      "travelMin": null,
+      "url": "https://loopoftheloom.com/collections/weaving-classes",
+      "cost": {
+        "kind": "per-session",
+        "amount": 90
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Check site for class terms."
+      },
+      "access": [
+        "enroll-ahead",
+        "drop-in"
+      ],
+      "verifiedOn": "2026-11-05",
+      "caveat": "Scaffolded 2026-11-05 from the studio site; cost, schedule, and access need confirming."
+    },
+    {
+      "id": "mostly-good-studios",
+      "name": "Mostly Good Studios",
+      "what": "Ceramics studio. Six-week handbuilding course; membership with open studio hours Monday, Tuesday and Saturday.",
+      "disciplines": [
+        "ceramics"
+      ],
+      "neighborhood": "Astoria",
+      "borough": "queens",
+      "travelMin": null,
+      "url": "https://mostlygoodstudios.com/calendar",
+      "cost": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Check site for class terms."
+      },
+      "access": [
+        "enroll-ahead",
+        "membership"
+      ],
+      "verifiedOn": "2026-11-05",
+      "caveat": "Scaffolded 2026-11-05 from the studio site; cost, schedule, and access need confirming."
+    },
+    {
+      "id": "gowanus-print-lab",
+      "name": "Gowanus Print Lab",
+      "what": "Screen printing. Four-week Screen Printing 101 for adults; private lessons for one or two.",
+      "disciplines": [
+        "printmaking"
+      ],
+      "neighborhood": "Sunset Park",
+      "borough": "brooklyn",
+      "travelMin": null,
+      "url": "https://www.gowanusprintlab.com/classes.html",
+      "cost": {
+        "kind": "fixed",
+        "amount": 450
+      },
+      "schedule": {
+        "kind": "irregular",
+        "note": "Check site for class terms."
+      },
+      "access": [
+        "enroll-ahead"
+      ],
+      "verifiedOn": "2026-11-05",
+      "caveat": "Scaffolded 2026-11-05 from the studio site; cost, schedule, and access need confirming."
     }
   ]
 }

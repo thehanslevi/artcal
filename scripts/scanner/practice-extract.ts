@@ -536,6 +536,7 @@ const DISCIPLINE_HINTS: [Discipline, RegExp][] = [
   ["textiles", /textile|weaving|sewing|knit|shoemak|\bshoes?\b/gi],
   ["glass", /glass/gi],
   ["woodworking", /woodwork|furniture|fab ?lab/gi],
+  ["metalwork", /metal ?work|metalsmith|jewel(?:le)?ry|blacksmith|welding/gi],
   ["darkroom", /darkroom|photograph/gi],
   ["film", /filmmak|\b16mm\b|documentary|\bfilm\b/gi],
   ["sound", /\bsound\b|synth|music production|\baudio\b|\bbeats?\b/gi],
