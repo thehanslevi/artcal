@@ -405,6 +405,7 @@ function App() {
           This weekend
         </button>
         <ExportButton
+          events={listed}
           filter={filter}
           tab={tab}
           picks={picks}
