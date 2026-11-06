@@ -76,7 +76,11 @@ export function Calendar({
   // Apply all active filters to a week's events under a given tab. Kept as a
   // function so the focused week can be re-filtered with a widened tab when a
   // single mode leaves it too sparse (see THIN_WEEK below).
-  const visibleFor = (events: CalEvent[], effTab: TabMode) =>
+  const visibleFor = (
+    events: CalEvent[],
+    effTab: TabMode,
+    withPast: boolean = showPast,
+  ) =>
     events
       .filter((e) => filter === "all" || e.category === filter)
       .filter((e) => matchesTab(effTab, e.mode))
@@ -84,7 +88,7 @@ export function Calendar({
       .filter((e) => !freeOnly || isFree(e))
       .filter((e) => {
         // Hide events that have already happened (unless "show past" is on).
-        if (showPast) return true;
+        if (withPast) return true;
         const d = parseEventDate(e.date);
         return !d || !isPast(d, now);
       })
@@ -108,7 +112,16 @@ export function Calendar({
     return true;
   });
 
-  const anyPast = enrichedWeeks.some((w) => w.past && w.visible.length > 0);
+  // Is there anything "Show past" would bring back under these filters? This
+  // has to look past the hiding above. It used to ask whether a past week had
+  // visible events, which the hiding had already emptied, so the answer was
+  // always no and the button never appeared.
+  const anyPast = WEEKS.some((week) =>
+    visibleFor(week.events, tab, true).some((e) => {
+      const d = parseEventDate(e.date);
+      return d !== null && isPast(d, now);
+    }),
+  );
 
   if (shownWeeks.length === 0) {
     return (
