@@ -53,7 +53,9 @@
       },
       "access": [
         "enroll-ahead",
-        "drop-in"
+        "drop-in",
+        "sliding-scale",
+        "membership"
       ],
       "verifiedOn": "2026-07-06"
     },
@@ -96,7 +98,7 @@
       "url": "https://bklynclay.com/classes",
       "cost": {
         "kind": "fixed",
-        "amount": 825
+        "amount": 860
       },
       "schedule": {
         "kind": "session",
@@ -131,7 +133,8 @@
         "note": "Monthly unlimited access"
       },
       "access": [
-        "membership"
+        "membership",
+        "drop-in"
       ],
       "verifiedOn": "2026-07-06"
     },
@@ -172,8 +175,8 @@
       "travelMin": 25,
       "url": "https://powerhousearts.org/community-ceramics-studio",
       "cost": {
-        "kind": "unknown",
-        "why": "not-checked"
+        "kind": "per-month",
+        "amount": 255
       },
       "schedule": {
         "kind": "membership",
@@ -250,8 +253,8 @@
       "travelMin": 65,
       "url": "https://www.uptown-clay.com/adult-wheel-booking-page",
       "cost": {
-        "kind": "unknown",
-        "why": "not-checked"
+        "kind": "per-month",
+        "amount": 200
       },
       "schedule": {
         "kind": "membership",
@@ -306,8 +309,8 @@
       "travelMin": 5,
       "url": "https://shoestring.press",
       "cost": {
-        "kind": "unknown",
-        "why": "not-checked"
+        "kind": "per-month",
+        "amount": 270
       },
       "schedule": {
         "kind": "membership",
@@ -343,7 +346,8 @@
         "note": "Multi-session courses"
       },
       "access": [
-        "enroll-ahead"
+        "enroll-ahead",
+        "scholarship"
       ],
       "verifiedOn": "2026-07-06"
     },
@@ -359,8 +363,9 @@
       "travelMin": 40,
       "url": "https://www.printshop.org/classes-workshops",
       "cost": {
-        "kind": "unknown",
-        "why": "not-checked"
+        "kind": "range",
+        "min": 175,
+        "max": 450
       },
       "schedule": {
         "kind": "irregular",
@@ -479,7 +484,8 @@
       "access": [
         "scholarship",
         "membership",
-        "enroll-ahead"
+        "enroll-ahead",
+        "drop-in"
       ],
       "verifiedOn": "2026-07-06",
       "caveat": "Community/scholarship tickets on request: workshops@secretrisoclub.com."
@@ -560,7 +566,8 @@
         "note": "4-week courses plus single-day workshops"
       },
       "access": [
-        "enroll-ahead"
+        "enroll-ahead",
+        "scholarship"
       ],
       "verifiedOn": "2026-07-14",
       "caveat": "No sliding scale listed. TAC AIR residency exists for fiber artists."
@@ -586,7 +593,8 @@
         "note": "Multi-week and single-session; all levels"
       },
       "access": [
-        "enroll-ahead"
+        "enroll-ahead",
+        "scholarship"
       ],
       "verifiedOn": "2026-07-14",
       "caveat": "Prices are not listed per class; call (718) 625-3685 or email info@urbanglass.org."
@@ -682,7 +690,7 @@
       "url": "https://www.makerspace.nyc/classes",
       "cost": {
         "kind": "per-month",
-        "amount": 175
+        "amount": 225
       },
       "schedule": {
         "kind": "membership",
@@ -711,7 +719,7 @@
       "url": "https://brooklynspark.com",
       "cost": {
         "kind": "per-month",
-        "amount": 165
+        "amount": 185
       },
       "schedule": {
         "kind": "weekly",
@@ -1202,7 +1210,8 @@
       },
       "access": [
         "free",
-        "drop-in"
+        "drop-in",
+        "sliding-scale"
       ],
       "verifiedOn": "2026-07-06",
       "caveat": "Community groups are free. Paid multi-week workshops also run."
@@ -1282,7 +1291,8 @@
         "note": "10-week and weekend formats"
       },
       "access": [
-        "enroll-ahead"
+        "enroll-ahead",
+        "scholarship"
       ],
       "verifiedOn": "2026-07-14",
       "caveat": "The site blocks automated readers; check prices in a browser."
@@ -1613,7 +1623,7 @@
       "url": "https://nychoirproject.com/brooklynite-choir",
       "cost": {
         "kind": "per-session",
-        "amount": 22
+        "amount": 25
       },
       "schedule": {
         "kind": "session",
@@ -1867,8 +1877,8 @@
       "travelMin": 25,
       "url": "https://myrtlesclayhouse.com",
       "cost": {
-        "kind": "unknown",
-        "why": "not-checked"
+        "kind": "per-month",
+        "amount": 275
       },
       "schedule": {
         "kind": "membership",
@@ -1892,12 +1902,13 @@
       "travelMin": 30,
       "url": "https://clayworksoncolumbia.org",
       "cost": {
-        "kind": "unknown",
-        "why": "not-checked"
+        "kind": "fixed",
+        "amount": 500
       },
       "schedule": {
-        "kind": "irregular",
-        "note": "Classes, workshops, and memberships; check site."
+        "kind": "session",
+        "weeks": 10,
+        "note": "10-week classes"
       },
       "access": [
         "membership"
@@ -1917,8 +1928,9 @@
       "travelMin": 45,
       "url": "https://potterswheelny.com",
       "cost": {
-        "kind": "unknown",
-        "why": "not-checked"
+        "kind": "range",
+        "min": 400,
+        "max": 450
       },
       "schedule": {
         "kind": "irregular",
