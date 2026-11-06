@@ -174,40 +174,6 @@
     {
       "kind": "new",
       "draft": {
-        "name": "Chez Bushwick",
-        "url": "https://www.chezbushwick.net/",
-        "what": "",
-        "disciplines": [],
-        "neighborhood": "Brooklyn",
-        "borough": "brooklyn",
-        "travelMin": null,
-        "cost": {
-          "kind": "fixed",
-          "amount": 8
-        },
-        "schedule": {
-          "kind": "irregular",
-          "note": "Check site for class terms."
-        },
-        "access": [
-          "enroll-ahead"
-        ]
-      },
-      "method": "pattern",
-      "confidence": "low",
-      "evidence": [
-        {
-          "url": "https://www.chezbushwick.net/schedule",
-          "quote": "Chez Bushwick is currently accepting bookings for $8 Dance Rehearsals subsidized in partnership with N"
-        }
-      ],
-      "firstSeen": "2026-11-05",
-      "lastSeen": "2026-11-05",
-      "id": "bcde0011"
-    },
-    {
-      "kind": "new",
-      "draft": {
         "name": "Dieu Donné",
         "url": "https://www.dieudonne.org/",
         "what": "",

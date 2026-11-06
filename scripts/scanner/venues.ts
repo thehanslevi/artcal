@@ -424,11 +424,13 @@ export const VENUES: Venue[] = [
     fetch: "playwright",
   },
   {
+    // Moved to Industry City: its own site gives 33 35th St B528, and so does
+    // its class booking widget. The name kept "Gowanus".
     name: "Gowanus Print Lab",
     url: "https://www.gowanusprintlab.com/",
     category: "making",
     defaultMode: "make",
-    whereTemplate: "Gowanus Print Lab, 232 3rd St, Gowanus",
+    whereTemplate: "Gowanus Print Lab, 33 35th St, Sunset Park",
     fetch: "playwright",
   },
   {
