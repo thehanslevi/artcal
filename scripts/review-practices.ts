@@ -7,6 +7,11 @@
 //                                                       you opened the site just
 //                                                       now; verifiedOn moves too
 //   npx tsx scripts/review-practices.ts accept <id> --verified --set what="..."
+//
+// A new venue's draft can be corrected as it's accepted. --set takes: name,
+// what, neighborhood, borough, url, disciplines (comma list), travelMin,
+// access (comma list), and cost, written as you'd say it:
+//   --set cost=90   580-620   250/mo   90/session   "75-675 sliding"   free
 //   npx tsx scripts/review-practices.ts reject <id> [why]
 //
 // Rejected proposals stay rejected, so the same wrong guess doesn't return weekly.
@@ -27,6 +32,17 @@ interface ProposalsFile {
   perVenue?: Record<string, { status: string; detail?: string }>;
 }
 
+/**
+ * Today where the reviewer is. toISOString() is UTC, so an evening review in New
+ * York was stamping tomorrow's date, and verifiedOn is a claim about the day a
+ * person opened the site.
+ */
+function localDate(): string {
+  const d = new Date();
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+}
+
 function loadJson<T>(path: string, fallback: T): T {
   try {
     return JSON.parse(readFileSync(path, "utf8")) as T;
@@ -44,7 +60,7 @@ const decisions = loadJson<Record<string, { decision: string; on: string; why?: 
 function saveDecision(p: Proposal, decision: "accepted" | "rejected", why?: string): void {
   decisions[p.id] = {
     decision,
-    on: new Date().toISOString().slice(0, 10),
+    on: localDate(),
     ...(why ? { why } : {}),
   };
   writeFileSync(DECISIONS_PATH, JSON.stringify(decisions, null, 2) + "\n");
@@ -140,7 +156,7 @@ function parseFlags(args: string[]): { verified: boolean; set: Record<string, st
 function accept(id: string | undefined, args: string[]): void {
   const p = find(id);
   const before = readFileSync(PRACTICES_PATH, "utf8");
-  const today = new Date().toISOString().slice(0, 10);
+  const today = localDate();
   try {
     const { verified, set } = parseFlags(args);
     const next = applyProposal(JSON.parse(before) as PracticesData, p, {

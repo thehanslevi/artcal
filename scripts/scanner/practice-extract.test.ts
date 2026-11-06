@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { Practice, PracticesData } from "../../src/types/practice.ts";
-import { applyProposal } from "./practice-apply.ts";
+import { applyProposal, parseCost } from "./practice-apply.ts";
 import {
   extractPrices,
   parseLlmReading,
@@ -607,5 +607,47 @@ test("a new row can't duplicate a host already in the Directory", () => {
   assert.throws(
     () => applyProposal(DATA, dupe, { verifiedOn: "2026-11-04", set: { what: "x" } }),
     /already has a row/,
+  );
+});
+
+// Drafts from the first run: Loop of the Loom came in at $629 (a spinning
+// course) when the entry price is a $90 intro; Brooklyn Craft Company came in
+// at $20-$350 where the $20 is open sewing hours.
+test("a reviewer can state the cost as they read it on the page", () => {
+  assert.deepEqual(parseCost("free"), { kind: "free" });
+  assert.deepEqual(parseCost("90"), { kind: "fixed", amount: 90 });
+  assert.deepEqual(parseCost("$1,945"), { kind: "fixed", amount: 1945 });
+  assert.deepEqual(parseCost("580-620"), { kind: "range", min: 580, max: 620 });
+  assert.deepEqual(parseCost("250/mo"), { kind: "per-month", amount: 250 });
+  assert.deepEqual(parseCost("90/session"), { kind: "per-session", amount: 90 });
+  assert.deepEqual(parseCost("75-675 sliding"), { kind: "sliding", min: 75, max: 675 });
+  assert.throws(() => parseCost("cheap"), /can't read cost/);
+  assert.throws(() => parseCost("620-580"), /low to high/);
+  assert.throws(() => parseCost("90/year"), /can't read cost/);
+});
+
+test("accepting a new venue can correct its draft's cost and access", () => {
+  const next = applyProposal(DATA, newProposal(), {
+    verifiedOn: "2026-11-04",
+    set: { what: "Saori weaving.", cost: "90/session", access: "enroll-ahead, drop-in" },
+  });
+  const row = next.practices.at(-1)!;
+  assert.deepEqual(row.cost, { kind: "per-session", amount: 90 });
+  assert.deepEqual(row.access, ["enroll-ahead", "drop-in"]);
+  // An accented name still gets a whole id.
+  const donne = newProposal();
+  if (donne.kind === "new") donne.draft.name = "Dieu Donné";
+  assert.equal(
+    applyProposal(DATA, donne, { verifiedOn: "2026-11-04", set: { what: "Papermaking." } }).practices.at(-1)!.id,
+    "dieu-donne",
+  );
+  // It is still a new row: it needs a person's date and a person's description.
+  assert.throws(
+    () => applyProposal(DATA, newProposal(), { set: { what: "x", cost: "90" } }),
+    /--verified/,
+  );
+  assert.throws(
+    () => applyProposal(DATA, newProposal(), { verifiedOn: "2026-11-04", set: { what: "x", access: "walk-in" } }),
+    /access is a comma list/,
   );
 });

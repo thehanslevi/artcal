@@ -121,5 +121,20 @@
     "decision": "rejected",
     "on": "2026-11-06",
     "why": "that sliding scale is for two specific classes; regular classes are $775 for a 12-week semester"
+  },
+  "defa8c27": {
+    "decision": "rejected",
+    "on": "2026-11-05",
+    "why": "classes are paused until 2027"
+  },
+  "9885de74": {
+    "decision": "rejected",
+    "on": "2026-11-05",
+    "why": "a museum's drop-in studio and youth programs, not an adult practice"
+  },
+  "5948af30": {
+    "decision": "rejected",
+    "on": "2026-11-05",
+    "why": "paid fellowships for ages 18 to 26, not open enrollment"
   }
 }
