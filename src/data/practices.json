@@ -199,8 +199,9 @@
       "travelMin": 40,
       "url": "https://mannycantor.org/art/art-classes/ceramics/",
       "cost": {
-        "kind": "fixed",
-        "amount": 435
+        "kind": "range",
+        "min": 445,
+        "max": 540
       },
       "schedule": {
         "kind": "session",
