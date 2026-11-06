@@ -12718,7 +12718,7 @@
         {
           "day": "Sun",
           "date": "Sep 27",
-          "event": "Saree: Memory, Politics, & Inheritance",
+          "event": "CANCELLED: Saree: Memory, Politics, & Inheritance",
           "where": "Flux IV, Long Island City",
           "cost": "TBD",
           "category": "community",
@@ -12726,7 +12726,7 @@
           "mode": "make",
           "start": "14:00",
           "end": "17:00",
-          "note": null,
+          "note": "Cancelled due to coastal flooding.",
           "url": "https://www.fluxfactory.org/event/saree-memory-politics-inheritance/",
           "venue": "Flux IV",
           "neighborhood": "Long Island City",
@@ -13506,24 +13506,6 @@
         {
           "day": "Sun",
           "date": "Oct 4",
-          "event": "Jessica Pavone String Ensemble",
-          "where": "Flux IV",
-          "cost": "TBD",
-          "category": "community",
-          "flag": null,
-          "mode": "witness",
-          "start": "19:00",
-          "end": "23:00",
-          "note": null,
-          "url": "https://www.fluxfactory.org/event/jessica-pavone-string-ensemble/",
-          "venue": "Flux IV",
-          "neighborhood": null,
-          "address": null,
-          "uid": "e_4150618b1d9e"
-        },
-        {
-          "day": "Sun",
-          "date": "Oct 4",
           "event": "Open Studio: Printmaking",
           "where": "Manhattan Graphics Center",
           "cost": "FREE",
@@ -13591,7 +13573,11 @@
           "venue": "Flux IV",
           "neighborhood": null,
           "address": null,
-          "uid": "e_f386adfd5311"
+          "uid": "e_f386adfd5311",
+          "aliases": [
+            "e_4150618b1d9e",
+            "Oct 4|Jessica Pavone String Ensemble"
+          ]
         },
         {
           "day": "Sun",
