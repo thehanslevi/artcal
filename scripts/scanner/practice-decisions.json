@@ -78,5 +78,35 @@
   "8952a122": {
     "decision": "accepted",
     "on": "2026-11-06"
+  },
+  "ad5e763d": {
+    "decision": "rejected",
+    "on": "2026-11-06",
+    "why": "\"Visits by Appointment\" is not a membership"
+  },
+  "3654de51": {
+    "decision": "rejected",
+    "on": "2026-11-06",
+    "why": "a promo code ($20 OFF), not a price"
+  },
+  "7a764708": {
+    "decision": "rejected",
+    "on": "2026-11-06",
+    "why": "mixes a screen-reclaim rate card with workshop prices"
+  },
+  "4c3a145d": {
+    "decision": "rejected",
+    "on": "2026-11-06",
+    "why": "children's Suzuki lessons; the row is the adult Jazz Lab"
+  },
+  "709384a5": {
+    "decision": "rejected",
+    "on": "2026-11-06",
+    "why": "a day pass from the shop page; the row is 6-week workshops"
+  },
+  "9a76ef85": {
+    "decision": "rejected",
+    "on": "2026-11-06",
+    "why": "one class teaser, too thin for a row covering courses"
   }
 }
