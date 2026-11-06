@@ -215,11 +215,6 @@ export function isAffordable(p: Practice): boolean {
   );
 }
 
-/** Brooklyn and Lower Manhattan are easy; Midtown is a trip. */
-export function isNearby(p: Practice, maxMin = 25): boolean {
-  return p.travelMin !== null && p.travelMin <= maxMin;
-}
-
 const DAY_MS = 86_400_000;
 
 /**

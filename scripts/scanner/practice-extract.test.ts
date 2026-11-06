@@ -29,7 +29,6 @@ const ROW: Practice = {
   disciplines: ["ceramics"],
   neighborhood: "Bushwick",
   borough: "brooklyn",
-  travelMin: 20,
   url: "https://example.org",
   cost: { kind: "unknown", why: "not-checked" },
   schedule: { kind: "irregular", note: "Check site." },
@@ -582,7 +581,6 @@ const newProposal = (): Proposal => ({
     disciplines: ["printmaking"],
     neighborhood: "Gowanus",
     borough: "brooklyn",
-    travelMin: null,
     cost: { kind: "fixed", amount: 480 },
     schedule: { kind: "irregular", note: "Check site." },
     access: ["enroll-ahead"],
@@ -603,11 +601,11 @@ test("a new row needs the facts no scraper should guess", () => {
 test("a new row lands complete, flagged as unconfirmed", () => {
   const next = applyProposal(DATA, newProposal(), {
     verifiedOn: "2026-11-04",
-    set: { what: "Letterpress classes.", travelMin: "25" },
+    set: { what: "Letterpress classes.", neighborhood: "Red Hook" },
   });
   const row = next.practices.at(-1)!;
   assert.equal(row.id, "new-print-shop");
-  assert.equal(row.travelMin, 25);
+  assert.equal(row.neighborhood, "Red Hook");
   assert.match(row.caveat ?? "", /need confirming/);
 });
 

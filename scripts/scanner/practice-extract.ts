@@ -54,7 +54,6 @@ export interface PracticeDraft {
   disciplines: Discipline[];
   neighborhood: string;
   borough: Borough | null;
-  travelMin: number | null;
   cost: Cost;
   schedule: Schedule;
   access: Access[];
@@ -581,7 +580,6 @@ export function draftFromVenue(
     disciplines: guessDiscipline(venue.name, text),
     neighborhood,
     borough,
-    travelMin: null,
     cost: { kind: "unknown", why: "not-checked" },
     schedule: { kind: "irregular", note: "Check site for class terms." },
     access: ["enroll-ahead"],

@@ -11,7 +11,6 @@
       ],
       "neighborhood": "Bed-Stuy",
       "borough": "brooklyn",
-      "travelMin": 10,
       "url": "https://www.artshackbrooklyn.org/studio/upcoming",
       "cost": {
         "kind": "unknown",
@@ -40,7 +39,6 @@
       ],
       "neighborhood": "South Slope",
       "borough": "brooklyn",
-      "travelMin": 25,
       "url": "https://gasworksnyc.com/pages/wheel",
       "cost": {
         "kind": "fixed",
@@ -68,7 +66,6 @@
       ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
-      "travelMin": 20,
       "url": "https://www.bushwickceramics.com/availableclasses",
       "cost": {
         "kind": "unknown",
@@ -94,7 +91,6 @@
       ],
       "neighborhood": "Prospect Heights",
       "borough": "brooklyn",
-      "travelMin": 10,
       "url": "https://bklynclay.com/classes",
       "cost": {
         "kind": "fixed",
@@ -122,7 +118,6 @@
       ],
       "neighborhood": "Williamsburg + Greenpoint",
       "borough": "brooklyn",
-      "travelMin": 30,
       "url": "https://choplet.com",
       "cost": {
         "kind": "unknown",
@@ -147,7 +142,6 @@
       ],
       "neighborhood": "Navy Yard",
       "borough": "brooklyn",
-      "travelMin": 25,
       "url": "https://www.brooklynclayindustries.com/classes",
       "cost": {
         "kind": "per-session",
@@ -172,7 +166,6 @@
       ],
       "neighborhood": "Gowanus",
       "borough": "brooklyn",
-      "travelMin": 25,
       "url": "https://powerhousearts.org/community-ceramics-studio",
       "cost": {
         "kind": "per-month",
@@ -196,7 +189,6 @@
       ],
       "neighborhood": "Lower East Side",
       "borough": "manhattan",
-      "travelMin": 40,
       "url": "https://mannycantor.org/art/art-classes/ceramics/",
       "cost": {
         "kind": "range",
@@ -224,7 +216,6 @@
       ],
       "neighborhood": "Ridgewood",
       "borough": "queens",
-      "travelMin": 40,
       "url": "https://www.scratchceramics.com",
       "cost": {
         "kind": "range",
@@ -251,7 +242,6 @@
       ],
       "neighborhood": "Washington Heights",
       "borough": "manhattan",
-      "travelMin": 65,
       "url": "https://www.uptown-clay.com/adult-wheel-booking-page",
       "cost": {
         "kind": "per-month",
@@ -276,7 +266,6 @@
       ],
       "neighborhood": "Gowanus",
       "borough": "brooklyn",
-      "travelMin": 25,
       "url": "https://powerhousearts.org/mgc-community-print-studio",
       "cost": {
         "kind": "unknown",
@@ -301,13 +290,12 @@
     {
       "id": "shoestring-press",
       "name": "Shoestring Press",
-      "what": "Membership print shop five minutes from home. Screenprint, etching, litho, relief. Master printer Lane Sell.",
+      "what": "Membership print shop. Screenprint, etching, litho, relief. Master printer Lane Sell.",
       "disciplines": [
         "printmaking"
       ],
       "neighborhood": "Crown Heights",
       "borough": "brooklyn",
-      "travelMin": 5,
       "url": "https://shoestring.press",
       "cost": {
         "kind": "per-month",
@@ -323,7 +311,7 @@
         "enroll-ahead"
       ],
       "verifiedOn": "2026-07-06",
-      "caveat": "Visit by appointment. Email info@shoestringpressny.com. 640 Classon Ave, between Bergen and Dean."
+      "caveat": "Visit by appointment. Email info@shoestringpressny.com."
     },
     {
       "id": "rbpmw",
@@ -334,7 +322,6 @@
       ],
       "neighborhood": "Midtown West",
       "borough": "manhattan",
-      "travelMin": 45,
       "url": "https://www.rbpmw-efanyc.org/classes",
       "cost": {
         "kind": "range",
@@ -361,7 +348,6 @@
       ],
       "neighborhood": "Lower East Side",
       "borough": "manhattan",
-      "travelMin": 40,
       "url": "https://www.printshop.org/classes-workshops",
       "cost": {
         "kind": "range",
@@ -387,7 +373,6 @@
       ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
-      "travelMin": 20,
       "url": "https://bushwickprintlab.org/services/workshops/",
       "cost": {
         "kind": "unknown",
@@ -412,7 +397,6 @@
       ],
       "neighborhood": "East Village",
       "borough": "manhattan",
-      "travelMin": 40,
       "url": "https://www.worksinprogressnyc.org/classes",
       "cost": {
         "kind": "unknown",
@@ -438,7 +422,6 @@
       ],
       "neighborhood": "Corona",
       "borough": "queens",
-      "travelMin": 50,
       "url": "https://mobileprintpower.com/workshops.php",
       "cost": {
         "kind": "free"
@@ -471,7 +454,6 @@
       ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
-      "travelMin": 15,
       "url": "https://secretrisoclub.com",
       "cost": {
         "kind": "range",
@@ -501,7 +483,6 @@
       ],
       "neighborhood": "DUMBO",
       "borough": "brooklyn",
-      "travelMin": 25,
       "url": "https://luckyrisograph.press",
       "cost": {
         "kind": "unknown",
@@ -526,7 +507,6 @@
       ],
       "neighborhood": "Flatiron",
       "borough": "manhattan",
-      "travelMin": 45,
       "url": "https://centerforbookarts.org/classes",
       "cost": {
         "kind": "range",
@@ -554,7 +534,6 @@
       ],
       "neighborhood": "Gowanus",
       "borough": "brooklyn",
-      "travelMin": 22,
       "url": "https://textileartscenter.com/adult-classes/class-calendar/",
       "cost": {
         "kind": "range",
@@ -582,7 +561,6 @@
       ],
       "neighborhood": "Fort Greene",
       "borough": "brooklyn",
-      "travelMin": 15,
       "url": "https://urbanglass.org/classes",
       "cost": {
         "kind": "unknown",
@@ -609,7 +587,6 @@
       ],
       "neighborhood": "Windsor Terrace",
       "borough": "brooklyn",
-      "travelMin": 30,
       "url": "https://brooklynglass.com/education/classes/",
       "cost": {
         "kind": "unknown",
@@ -634,7 +611,6 @@
       ],
       "neighborhood": "Park Slope",
       "borough": "brooklyn",
-      "travelMin": 20,
       "url": "https://makeville.com",
       "cost": {
         "kind": "unknown",
@@ -661,7 +637,6 @@
       ],
       "neighborhood": "Industry City",
       "borough": "brooklyn",
-      "travelMin": 40,
       "url": "https://craftsmanave.com",
       "cost": {
         "kind": "range",
@@ -687,7 +662,6 @@
       ],
       "neighborhood": "Brooklyn Army Terminal",
       "borough": "brooklyn",
-      "travelMin": 38,
       "url": "https://www.makerspace.nyc/classes",
       "cost": {
         "kind": "per-month",
@@ -716,7 +690,6 @@
       ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
-      "travelMin": 18,
       "url": "https://brooklynspark.com",
       "cost": {
         "kind": "per-month",
@@ -745,7 +718,6 @@
       ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
-      "travelMin": 18,
       "url": "https://www.bushwickcommunitydarkroom.com",
       "cost": {
         "kind": "per-month",
@@ -779,7 +751,6 @@
       ],
       "neighborhood": "Gowanus",
       "borough": "brooklyn",
-      "travelMin": 25,
       "url": "https://www.gowanusdarkroom.com/classes",
       "cost": {
         "kind": "per-session",
@@ -805,7 +776,6 @@
       ],
       "neighborhood": "Murray Hill",
       "borough": "manhattan",
-      "travelMin": 45,
       "url": "https://www.penumbrafoundation.org/workshops/",
       "cost": {
         "kind": "unknown",
@@ -831,7 +801,6 @@
       ],
       "neighborhood": "Lower East Side",
       "borough": "manhattan",
-      "travelMin": 40,
       "url": "https://www.icp.org/school/courses-and-workshops",
       "cost": {
         "kind": "unknown",
@@ -861,7 +830,6 @@
       ],
       "neighborhood": "Long Island City",
       "borough": "queens",
-      "travelMin": 40,
       "url": "https://www.alterworkstudios.com/purchase",
       "cost": {
         "kind": "per-month",
@@ -878,7 +846,7 @@
         "membership"
       ],
       "verifiedOn": "2026-07-06",
-      "caveat": "Free class via 3 hr/week studio assistant work exchange: tina@alterworkstudios.com. Address is 40-20 22nd St; CourseHorse's 30-09 35th Ave listing is wrong."
+      "caveat": "Free class via 3 hr/week studio assistant work exchange: tina@alterworkstudios.com. CourseHorse lists the wrong address; use the one on the studio's site."
     },
     {
       "id": "mono-no-aware",
@@ -889,7 +857,6 @@
       ],
       "neighborhood": "Downtown Brooklyn",
       "borough": "brooklyn",
-      "travelMin": 20,
       "url": "http://mononoawarefilm.com/community-workshops",
       "cost": {
         "kind": "sliding",
@@ -923,7 +890,6 @@
       ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
-      "travelMin": 18,
       "url": "https://www.millenniumfilm.org",
       "cost": {
         "kind": "fixed",
@@ -949,7 +915,6 @@
       ],
       "neighborhood": "SoHo",
       "borough": "manhattan",
-      "travelMin": 40,
       "url": "https://343labs.com/collections/nyc-courses",
       "cost": {
         "kind": "range",
@@ -975,7 +940,6 @@
       ],
       "neighborhood": "Park Slope",
       "borough": "brooklyn",
-      "travelMin": 20,
       "url": "https://bkcm.org/summer",
       "cost": {
         "kind": "unknown",
@@ -1002,7 +966,6 @@
       ],
       "neighborhood": "Gowanus",
       "borough": "brooklyn",
-      "travelMin": 20,
       "url": "https://creativemusic.org/workshops-2026/",
       "cost": {
         "kind": "sliding",
@@ -1031,7 +994,6 @@
       ],
       "neighborhood": "Red Hook",
       "borough": "brooklyn",
-      "travelMin": 35,
       "url": "https://pioneerworks.org/classes",
       "cost": {
         "kind": "free"
@@ -1058,7 +1020,6 @@
       ],
       "neighborhood": "Lower East Side",
       "borough": "manhattan",
-      "travelMin": 40,
       "url": "https://sfpc.study",
       "cost": {
         "kind": "range",
@@ -1087,7 +1048,6 @@
       ],
       "neighborhood": "Boerum Hill",
       "borough": "brooklyn",
-      "travelMin": 15,
       "url": "https://www.nycresistor.com/event/",
       "cost": {
         "kind": "range",
@@ -1121,7 +1081,6 @@
       ],
       "neighborhood": "Park Slope",
       "borough": "brooklyn",
-      "travelMin": 20,
       "url": "https://interferencearchive.org/what-we-do/events/",
       "cost": {
         "kind": "free"
@@ -1146,7 +1105,6 @@
       ],
       "neighborhood": "Park Slope",
       "borough": "brooklyn",
-      "travelMin": 20,
       "url": "https://booklyn.org/programs/",
       "cost": {
         "kind": "fixed",
@@ -1170,7 +1128,6 @@
       ],
       "neighborhood": "Crown Heights (Eastern Pkwy branch)",
       "borough": "brooklyn",
-      "travelMin": 10,
       "url": "https://nywriterscoalition.org",
       "cost": {
         "kind": "free"
@@ -1187,7 +1144,7 @@
         "drop-in"
       ],
       "verifiedOn": "2026-07-06",
-      "caveat": "Runs at 40+ sites citywide. The Eastern Parkway branch is walking distance; the Grand Army Plaza session is Mondays 3-5pm, bilingual."
+      "caveat": "Runs at 40+ sites citywide. The Grand Army Plaza session is Mondays 3-5pm, bilingual."
     },
     {
       "id": "brooklyn-poets",
@@ -1198,7 +1155,6 @@
       ],
       "neighborhood": "Brooklyn (hybrid)",
       "borough": "brooklyn",
-      "travelMin": null,
       "url": "https://brooklynpoets.org/community-groups",
       "cost": {
         "kind": "free"
@@ -1228,7 +1184,6 @@
       ],
       "neighborhood": "Boerum Hill",
       "borough": "brooklyn",
-      "travelMin": 15,
       "url": "https://centerforfiction.org/writing-workshops/",
       "cost": {
         "kind": "unknown",
@@ -1255,7 +1210,6 @@
       ],
       "neighborhood": "Crown Heights",
       "borough": "brooklyn",
-      "travelMin": 5,
       "url": "https://www.belladonnaseries.org",
       "cost": {
         "kind": "sliding",
@@ -1271,7 +1225,7 @@
         "enroll-ahead"
       ],
       "verifiedOn": "2026-07-06",
-      "caveat": "925 Bergen St #405, walking distance. NOTAFLOF: no one turned away for lack of funds."
+      "caveat": "NOTAFLOF: no one turned away for lack of funds."
     },
     {
       "id": "gotham-writers",
@@ -1282,7 +1236,6 @@
       ],
       "neighborhood": "Flatiron",
       "borough": "manhattan",
-      "travelMin": 40,
       "url": "https://www.writingclasses.com",
       "cost": {
         "kind": "unknown",
@@ -1309,7 +1262,6 @@
       ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
-      "travelMin": 13,
       "url": "https://wondrousnyc.com",
       "cost": {
         "kind": "unknown",
@@ -1338,7 +1290,6 @@
       ],
       "neighborhood": "Midtown",
       "borough": "manhattan",
-      "travelMin": 45,
       "url": "https://ailey.org/classes",
       "cost": {
         "kind": "per-session",
@@ -1370,7 +1321,6 @@
       ],
       "neighborhood": "Long Island City",
       "borough": "queens",
-      "travelMin": 28,
       "url": "https://moversbodega.com",
       "cost": {
         "kind": "fixed",
@@ -1405,7 +1355,6 @@
       ],
       "neighborhood": "Crown Heights (Dean St. Playground)",
       "borough": "brooklyn",
-      "travelMin": 10,
       "url": "https://piaocapoeira.com",
       "cost": {
         "kind": "unknown",
@@ -1424,7 +1373,7 @@
         "drop-in"
       ],
       "verifiedOn": "2026-07-14",
-      "caveat": "CORRECTED Jul 14: the site lists Mon/Wed/Fri 7:40-9:00pm at Dean St. Playground, not 6:30-8pm at the Co-op School. Org address is 644 Gates Ave; classes are at the playground. Prices are not published and the previously-noted free trial is unconfirmed. Call (917) 224-1209."
+      "caveat": "CORRECTED Jul 14: the site lists Mon/Wed/Fri 7:40-9:00pm at Dean St. Playground, not 6:30-8pm at the Co-op School. Prices are not published and the previously-noted free trial is unconfirmed. Call (917) 224-1209."
     },
     {
       "id": "humanist-project",
@@ -1435,7 +1384,6 @@
       ],
       "neighborhood": "Houghton Hall, Manhattan",
       "borough": "manhattan",
-      "travelMin": 45,
       "url": "https://www.thehumanistproject.org",
       "cost": {
         "kind": "fixed",
@@ -1469,7 +1417,6 @@
       ],
       "neighborhood": "Clinton Hill",
       "borough": "brooklyn",
-      "travelMin": 10,
       "url": "https://jackny.org",
       "cost": {
         "kind": "unknown",
@@ -1483,7 +1430,7 @@
         "contact-first"
       ],
       "verifiedOn": "2026-07-06",
-      "caveat": "One C-train stop from Crown Heights. Rehearsal rental is NYSCA-subsidized and applies to artistic projects; confirm the rate at rentals@jackny.org."
+      "caveat": "Rehearsal rental is NYSCA-subsidized and applies to artistic projects; confirm the rate at rentals@jackny.org."
     },
     {
       "id": "bushwick-starr",
@@ -1494,7 +1441,6 @@
       ],
       "neighborhood": "Bushwick",
       "borough": "brooklyn",
-      "travelMin": 18,
       "url": "https://thebushwickstarr.org",
       "cost": {
         "kind": "free"
@@ -1526,7 +1472,6 @@
       ],
       "neighborhood": "Manhattan",
       "borough": "manhattan",
-      "travelMin": 40,
       "url": "https://www.tonyc.nyc/public_workshops",
       "cost": {
         "kind": "sliding",
@@ -1559,7 +1504,6 @@
       ],
       "neighborhood": "Judson Memorial Church",
       "borough": "manhattan",
-      "travelMin": 40,
       "url": "https://www.fireensemble.com",
       "cost": {
         "kind": "free"
@@ -1594,7 +1538,6 @@
       ],
       "neighborhood": "Carroll Gardens",
       "borough": "brooklyn",
-      "travelMin": 25,
       "url": "https://www.nycsacredharp.com/nycsingings",
       "cost": {
         "kind": "free"
@@ -1610,7 +1553,7 @@
         "drop-in"
       ],
       "verifiedOn": "2026-07-06",
-      "caveat": "St. Paul's Episcopal, 199 Carroll St. Free, pass the hat. A 250-year-old participatory form with consent structure built into the democracy of it."
+      "caveat": "St. Paul's Episcopal. Free, pass the hat. A 250-year-old participatory form with consent structure built into the democracy of it."
     },
     {
       "id": "brooklynite-choir",
@@ -1621,7 +1564,6 @@
       ],
       "neighborhood": "Brooklyn",
       "borough": "brooklyn",
-      "travelMin": null,
       "url": "https://nychoirproject.com/brooklynite-choir",
       "cost": {
         "kind": "per-session",
@@ -1652,7 +1594,6 @@
       ],
       "neighborhood": "Long Island City",
       "borough": "queens",
-      "travelMin": 40,
       "url": "https://www.fluxfactory.org",
       "cost": {
         "kind": "free"
@@ -1677,7 +1618,6 @@
       ],
       "neighborhood": "Midtown West",
       "borough": "manhattan",
-      "travelMin": 45,
       "url": "https://www.artstudentsleague.org",
       "cost": {
         "kind": "unknown",
@@ -1702,7 +1642,6 @@
       ],
       "neighborhood": "Long Island City",
       "borough": "queens",
-      "travelMin": 40,
       "url": "https://www.materialsforthearts.org/education-center/",
       "cost": {
         "kind": "free"
@@ -1731,7 +1670,6 @@
       ],
       "neighborhood": "Lower East Side",
       "borough": "manhattan",
-      "travelMin": 40,
       "url": "https://www.abronsartscenter.org/education/group-classes",
       "cost": {
         "kind": "range",
@@ -1761,7 +1699,6 @@
       ],
       "neighborhood": "East Harlem",
       "borough": "manhattan",
-      "travelMin": 55,
       "url": "https://tallerboricua.org/rtpw-printmaking-workshop/",
       "cost": {
         "kind": "unknown",
@@ -1775,7 +1712,7 @@
         "contact-first"
       ],
       "verifiedOn": "2026-07-06",
-      "caveat": "No public enrollment schedule. Contact info@tallerboricua.org. Gallery at 1680 Lexington is open Tue-Sat.",
+      "caveat": "No public enrollment schedule. Contact info@tallerboricua.org. Gallery is open Tue-Sat.",
       "availability": {
         "status": "unknown",
         "note": "No public enrollment schedule; access is through the collective."
@@ -1792,7 +1729,6 @@
       ],
       "neighborhood": "West Farms",
       "borough": "bronx",
-      "travelMin": 68,
       "url": "https://www.bronxriverart.org/education-adult-classes",
       "cost": {
         "kind": "per-session",
@@ -1808,7 +1744,7 @@
         "enroll-ahead"
       ],
       "verifiedOn": "2026-07-06",
-      "caveat": "Fee waivers and scholarships available. Roughly 60-75 minutes from Crown Heights."
+      "caveat": "Fee waivers and scholarships available."
     },
     {
       "id": "art-lab-snug-harbor",
@@ -1824,7 +1760,6 @@
       ],
       "neighborhood": "Snug Harbor",
       "borough": "staten-island",
-      "travelMin": 90,
       "url": "https://artlabsi.com/art-classes/",
       "cost": {
         "kind": "range",
@@ -1839,8 +1774,7 @@
       "access": [
         "enroll-ahead"
       ],
-      "verifiedOn": "2026-07-06",
-      "caveat": "90 minutes from Crown Heights. Listed for completeness, not as a realistic option."
+      "verifiedOn": "2026-07-06"
     },
     {
       "id": "mugi-pottery",
@@ -1851,7 +1785,6 @@
       ],
       "neighborhood": "Upper West Side",
       "borough": "manhattan",
-      "travelMin": 45,
       "url": "https://mugipottery.com",
       "cost": {
         "kind": "unknown",
@@ -1876,7 +1809,6 @@
       ],
       "neighborhood": "Ridgewood",
       "borough": "queens",
-      "travelMin": 25,
       "url": "https://myrtlesclayhouse.com",
       "cost": {
         "kind": "per-month",
@@ -1901,7 +1833,6 @@
       ],
       "neighborhood": "Columbia Waterfront",
       "borough": "brooklyn",
-      "travelMin": 30,
       "url": "https://clayworksoncolumbia.org",
       "cost": {
         "kind": "fixed",
@@ -1927,7 +1858,6 @@
       ],
       "neighborhood": "Kew Gardens",
       "borough": "queens",
-      "travelMin": 45,
       "url": "https://potterswheelny.com",
       "cost": {
         "kind": "range",
@@ -1953,7 +1883,6 @@
       ],
       "neighborhood": "Prospect Heights",
       "borough": "brooklyn",
-      "travelMin": 10,
       "url": "https://www.bkmetalworks.com/classes",
       "cost": {
         "kind": "range",
@@ -1979,7 +1908,6 @@
       ],
       "neighborhood": "Long Island City",
       "borough": "queens",
-      "travelMin": 40,
       "url": "https://brickhouseny.com/pages/classes-overview",
       "cost": {
         "kind": "range",
@@ -2004,7 +1932,6 @@
       ],
       "neighborhood": "Greenpoint",
       "borough": "brooklyn",
-      "travelMin": 35,
       "url": "https://www.brooklyncraftcompany.com/collections/all-workshops",
       "cost": {
         "kind": "range",
@@ -2030,7 +1957,6 @@
       ],
       "neighborhood": "East Williamsburg",
       "borough": "brooklyn",
-      "travelMin": 30,
       "url": "https://brooklynshoespace.com/classes",
       "cost": {
         "kind": "range",
@@ -2056,7 +1982,6 @@
       ],
       "neighborhood": "Brooklyn Navy Yard",
       "borough": "brooklyn",
-      "travelMin": 25,
       "url": "https://www.dieudonne.org/educational-events",
       "cost": {
         "kind": "range",
@@ -2082,7 +2007,6 @@
       ],
       "neighborhood": "Upper East Side",
       "borough": "manhattan",
-      "travelMin": 50,
       "url": "https://loopoftheloom.com/collections/weaving-classes",
       "cost": {
         "kind": "per-session",
@@ -2107,7 +2031,6 @@
       ],
       "neighborhood": "Astoria",
       "borough": "queens",
-      "travelMin": 50,
       "url": "https://mostlygoodstudios.com/calendar",
       "cost": {
         "kind": "unknown",
@@ -2134,7 +2057,6 @@
       ],
       "neighborhood": "Sunset Park",
       "borough": "brooklyn",
-      "travelMin": 40,
       "url": "https://www.gowanusprintlab.com/classes.html",
       "cost": {
         "kind": "fixed",

@@ -3,7 +3,7 @@
     "name": "Bushwick Community Darkroom",
     "category": "making",
     "mode": "make",
-    "description": "Photo darkroom · 334 Himrod St, Bushwick · ~15 min from Crown Heights",
+    "description": "Photo darkroom · Bushwick",
     "note": "Public open hours Tues–Sat 12–8pm. Rolling workshops (Intro to Camera, Cyanotype, Winol alt-process).",
     "url": "https://www.bushwickcommunitydarkroom.com/"
   },
@@ -11,7 +11,7 @@
     "name": "Gowanus Darkroom",
     "category": "making",
     "mode": "make",
-    "description": "Photo darkroom · 119 8th St, Gowanus · ~12 min by bike",
+    "description": "Photo darkroom · Gowanus",
     "note": "$12/hr rental. Monthly group critique — $5 to show, free to attend. Email to RSVP.",
     "url": "https://www.gowanusdarkroom.com/"
   },
@@ -19,7 +19,7 @@
     "name": "Shoestring Press",
     "category": "making",
     "mode": "make",
-    "description": "Community print shop · 640 Classon Ave, Crown Heights/Bed-Stuy border · walkable",
+    "description": "Community print shop · Crown Heights/Bed-Stuy border",
     "note": "Screenprinting, etching, litho, relief. Tiered monthly membership. Classes on rotating weekends.",
     "url": "https://www.shoestring.press/"
   },
@@ -27,7 +27,7 @@
     "name": "Interference Archive",
     "category": "community",
     "mode": "both",
-    "description": "Activist archive + volunteer collective · 314 7th St, Park Slope · ~15 min",
+    "description": "Activist archive + volunteer collective · Park Slope",
     "note": "Open Thu–Sun. Volunteer Collections Work Parties; monthly Zine Club, Fiber Friends. Occasional workshops. Free.",
     "url": "https://interferencearchive.org/"
   },
@@ -35,7 +35,7 @@
     "name": "Pioneer Works Synth Library",
     "category": "sound",
     "mode": "make",
-    "description": "Free instrument access · 604 Van Brunt St, Red Hook",
+    "description": "Free instrument access · Red Hook",
     "note": "Free hands-on time with modular synths, patch bays, wave generators. No gear required. Confirm hours before going.",
     "url": "https://pioneerworks.org"
   },
@@ -43,7 +43,7 @@
     "name": "Harvestworks · Outside Linear Time",
     "category": "tech",
     "mode": "both",
-    "description": "Art & tech exhibition + weekend performances · Nolan Park Bldg 10a, Governors Island",
+    "description": "Art & tech exhibition + weekend performances · Governors Island",
     "note": "Runs through Aug 23. Open Sat/Sun 11am–5pm. Free entry. TIP masterclasses rotate.",
     "url": "https://www.harvestworks.org/"
   },
@@ -51,7 +51,7 @@
     "name": "LiveCode.NYC",
     "category": "tech",
     "mode": "make",
-    "description": "Live-coding collective · monthly meetups at BPL Central, 10 Grand Army Pl · walkable",
+    "description": "Live-coding collective · monthly meetups at BPL Central",
     "note": "Bring a laptop + headphones. Hydra, Orca, TidalCycles hack sessions. Free. 10th Anniversary Algorave Jul 18.",
     "url": "https://livecode.nyc/events.html"
   },
@@ -59,7 +59,7 @@
     "name": "JACK",
     "category": "theatre",
     "mode": "both",
-    "description": "Storefront performance venue · 20 Putnam Ave, Clinton Hill · ~10 min",
+    "description": "Storefront performance venue · Clinton Hill",
     "note": "Independent rehearsal space at $10/hr — cheapest in Brooklyn. Also hosts shows. Venue for Exponential Fest 2027.",
     "url": "https://jackny.org/"
   },
@@ -67,7 +67,7 @@
     "name": "The Bushwick Starr",
     "category": "theatre",
     "mode": "both",
-    "description": "Independent theater · Eldert St, Bushwick · ~15 min",
+    "description": "Independent theater · Bushwick",
     "note": "Aug 1 Bazaar + Aug 17–28 Theater Camp (kids). Fall mainstage from Oct. Occasional community workshops.",
     "url": "https://www.thebushwickstarr.org/"
   },
@@ -83,7 +83,7 @@
     "name": "The Brick / Brick Aux",
     "category": "theatre",
     "mode": "witness",
-    "description": "Storefront experimental theater · 579 + 628 Metropolitan Ave, Williamsburg · G train ~20 min",
+    "description": "Storefront experimental theater · Williamsburg",
     "note": "Radical, counter-cultural performance. Tickets typically $25–45. Also a venue for Exponential Fest 2027.",
     "url": "https://www.bricktheater.com/"
   },
@@ -91,7 +91,7 @@
     "name": "The Tank",
     "category": "theatre",
     "mode": "witness",
-    "description": "New-work incubator · 312 W 36th St, Midtown West",
+    "description": "New-work incubator · Midtown West",
     "note": "20+ shows a month. Cheap tickets, tiny room, experimental everything. Residencies for developing work. Check their calendar page.",
     "url": "https://thetanknyc.org/calendar"
   },
@@ -99,7 +99,7 @@
     "name": "HERE Arts Center",
     "category": "theatre",
     "mode": "witness",
-    "description": "Independent multi-disciplinary venue · 145 6th Ave, Manhattan",
+    "description": "Independent multi-disciplinary venue · Manhattan",
     "note": "Long runs by solo performers, hybrid + puppet + music-theater. 2026/27 season 'Choose Wonder' starts September.",
     "url": "https://here.org/shows/"
   },
@@ -107,7 +107,7 @@
     "name": "La MaMa Experimental Theatre Club",
     "category": "theatre",
     "mode": "both",
-    "description": "Downtown avant-garde institution · 66 E 4th St, East Village",
+    "description": "Downtown avant-garde institution · East Village",
     "note": "Ellen Stewart Theatre + Community Arts Space + Great Jones Studios. Cheap tickets, radical work. Calendar on OvationTix.",
     "url": "https://www.lamama.org/whats-on"
   },
@@ -115,7 +115,7 @@
     "name": "Joe's Pub",
     "category": "sound",
     "mode": "witness",
-    "description": "Cabaret + song at The Public Theater · 425 Lafayette, Manhattan",
+    "description": "Cabaret + song at The Public Theater · Manhattan",
     "note": "Nightly cabaret, spoken word, experimental music. Ticket prices vary; some cheap seats.",
     "url": "https://publictheater.org/joes-pub"
   },
@@ -131,7 +131,7 @@
     "name": "National Sawdust",
     "category": "sound",
     "mode": "witness",
-    "description": "New-music venue · 80 N 6th St, Williamsburg",
+    "description": "New-music venue · Williamsburg",
     "note": "Contemporary classical, opera, experimental music. Ticket prices vary.",
     "url": "https://nationalsawdust.org/calendar"
   },
@@ -139,7 +139,7 @@
     "name": "Brooklyn Art Haus",
     "category": "theatre",
     "mode": "both",
-    "description": "Multi-genre performance + incubator · 25 Marcy Ave, Williamsburg",
+    "description": "Multi-genre performance + incubator · Williamsburg",
     "note": "Comedy, singer-songwriter (FOLKUS), circus, EdFest previews, drag. Cheap tickets, dense weekly programming.",
     "url": "https://www.bkarthaus.com/shows-events"
   },
@@ -147,7 +147,7 @@
     "name": "LIFE WORLD",
     "category": "theatre",
     "mode": "witness",
-    "description": "Experimental performance + community space · 563 Johnson Ave, Bushwick",
+    "description": "Experimental performance + community space · Bushwick",
     "note": "Multimedia art, indie animation screenings, queer independent theater, cabaret, community dinners. $20-ish or donation.",
     "url": "https://cometolifeworld.com/"
   },
@@ -155,7 +155,7 @@
     "name": "Loading Dock Theatre",
     "category": "theatre",
     "mode": "witness",
-    "description": "Playwright-run company · 170 Tillary St, Downtown Brooklyn",
+    "description": "Playwright-run company · Downtown Brooklyn",
     "note": "Emotional, character-driven plays with experimental edge. Current: The Trojans. Small runs. Exponential Fest 2027 venue.",
     "url": "https://www.loadingdocktheatre.org/shows/"
   },
@@ -179,7 +179,7 @@
     "name": "New York Live Arts",
     "category": "dance",
     "mode": "witness",
-    "description": "Bill T. Jones' home + presenting venue · 219 W 19th St, Chelsea",
+    "description": "Bill T. Jones' home + presenting venue · Chelsea",
     "note": "Experimental dance + performance. Fall 2026 season Sept–Nov. Ticket prices vary.",
     "url": "https://newyorklivearts.org/calendar/"
   },
@@ -195,7 +195,7 @@
     "name": "Dixon Place",
     "category": "theatre",
     "mode": "witness",
-    "description": "Experimental + LGBTQ+ performance · 161A Chrystie St, LES",
+    "description": "Experimental + LGBTQ+ performance · LES",
     "note": "34th annual HOT Festival every July. Cabaret, queer variety, works-in-progress.",
     "url": "https://dixonplace.org/"
   },
@@ -203,7 +203,7 @@
     "name": "Danspace Project",
     "category": "dance",
     "mode": "witness",
-    "description": "Experimental dance in a church · St. Mark's, 131 E 10th St",
+    "description": "Experimental dance in a church · St. Mark's",
     "note": "Curated experimental dance. Sanctuary space. Prices typically $20–35.",
     "url": "https://danspaceproject.org/calendar/"
   },
@@ -211,7 +211,7 @@
     "name": "Abrons Arts Center",
     "category": "theatre",
     "mode": "both",
-    "description": "Henry Street Settlement's arts wing · 466 Grand St, LES",
+    "description": "Henry Street Settlement's arts wing · LES",
     "note": "Performance + exhibitions + community. Free Summer in the Plaza (Jul–Aug), Fall Festival (Oct), programming through Dec.",
     "url": "https://www.abronsartscenter.org/performing-arts"
   },
@@ -227,7 +227,7 @@
     "name": "Ars Nova",
     "category": "theatre",
     "mode": "witness",
-    "description": "New-work theater + music · 511 W 54th St, Hell's Kitchen",
+    "description": "New-work theater + music · Hell's Kitchen",
     "note": "ANT Fest (August), Showgasm, new plays + musicals. Cheap tickets.",
     "url": "https://arsnovanyc.com/whats-on/"
   },
@@ -235,7 +235,7 @@
     "name": "BAM (Brooklyn Academy of Music)",
     "category": "theatre",
     "mode": "witness",
-    "description": "Institutional avant-garde · Harvey Theater + Opera House + Fisher · 30 Lafayette Ave, Fort Greene",
+    "description": "Institutional avant-garde · Harvey Theater + Opera House + Fisher · Fort Greene",
     "note": "Major fall season (Ford/Hill, Hewa Rwanda, Einstein on the Beach 50th, etc). Free PRELUDE outdoor Oct 13–15. Rose Cinemas film series year-round.",
     "url": "https://www.bam.org/"
   },
@@ -243,7 +243,7 @@
     "name": "Baryshnikov Arts Center",
     "category": "dance",
     "mode": "witness",
-    "description": "Curated dance + performance venue · 450 W 37th St, Manhattan",
+    "description": "Curated dance + performance venue · Manhattan",
     "note": "Dense fall season Sep–Nov. Rare performances (Laurie Anderson at Fall Fête Oct 5, Merce Cunningham legacy Nov).",
     "url": "https://baryshnikovarts.org/"
   },
@@ -283,7 +283,7 @@
     "name": "Judson Memorial Church",
     "category": "community",
     "mode": "both",
-    "description": "Progressive church + arts space · 55 Washington Square South",
+    "description": "Progressive church + arts space · Washington Square",
     "note": "Home to Summer Sings (Mondays), Gaia One-Day Choir, McNally Jackson book talks. Judson Weekend annual retreat.",
     "url": "https://www.judson.org/calendar"
   },
@@ -299,7 +299,7 @@
     "name": "Wendy's Subway",
     "category": "literature",
     "mode": "both",
-    "description": "Reading room + writing space + publisher · Bushwick/Ridgewood border · ~20 min",
+    "description": "Reading room + writing space + publisher · Bushwick/Ridgewood border",
     "note": "Bi-Weekly Writing Night is the ongoing anchor (Thursdays 7–8:30pm). Occasional workshops + readings. Sliding scale.",
     "url": "https://www.wendyssubway.com/programs"
   },
@@ -307,7 +307,7 @@
     "name": "The Poetry Project",
     "category": "literature",
     "mode": "both",
-    "description": "Avant-garde reading + writing space · 131 E 10th St, East Village",
+    "description": "Avant-garde reading + writing space · East Village",
     "note": "Summer Learning workshops sliding-scale. Reading series Mon/Wed/Thu/Fri in fall. Free membership tiers.",
     "url": "https://www.poetryproject.org/events"
   },
@@ -315,7 +315,7 @@
     "name": "Spectacle Theater",
     "category": "film",
     "mode": "both",
-    "description": "Collective-run micro-cinema · 124 S 3rd St, Williamsburg · G train ~25 min",
+    "description": "Collective-run micro-cinema · Williamsburg",
     "note": "$10 screenings 7 days a week — overlooked films, midnight programming, live performance. Join the collective to program, translate, host.",
     "url": "https://www.spectacletheater.com/"
   },
@@ -323,7 +323,7 @@
     "name": "Millennium Film Workshop",
     "category": "film",
     "mode": "both",
-    "description": "Experimental cinema hub · 167 Wilson Ave, Bushwick",
+    "description": "Experimental cinema hub · Bushwick",
     "note": "Weekly screenings + monthly Open Screenings (bring films <20 min). Works in Progress last Sunday of each month.",
     "url": "https://www.millenniumfilm.org/calendar"
   },
@@ -331,7 +331,7 @@
     "name": "Makeville Studio",
     "category": "making",
     "mode": "make",
-    "description": "Community woodshop · 119 8th St, Gowanus · ~12 min by bike",
+    "description": "Community woodshop · Gowanus",
     "note": "NYC Spoon Club meets monthly on Mondays 6–10pm, $10 sliding. Shop Share sessions periodic.",
     "url": "https://makeville.com/events"
   },
@@ -339,7 +339,7 @@
     "name": "Brooklyn Meetinghouse Community Dinner",
     "category": "community",
     "mode": "make",
-    "description": "Volunteer cooking + serving · 110 Schermerhorn, Downtown Brooklyn · ~15 min",
+    "description": "Volunteer cooking + serving · Downtown Brooklyn",
     "note": "One Sunday afternoon per month. Free. Bring apron + towel. Expanding to weekly meals in 2026.",
     "url": "https://nycquakers.org/blog/brooklyns-community-dinner-looking-to-expand"
   },
@@ -347,7 +347,7 @@
     "name": "Brooklyn Zen Center",
     "category": "community",
     "mode": "make",
-    "description": "Soto Zen sangha · Cobble Hill · ~15–20 min by bike",
+    "description": "Soto Zen sangha · Cobble Hill",
     "note": "Daily zazen (donation), weekly Dhamma of Love & Justice course, monthly sanghas. Sliding scale.",
     "url": "https://www.brooklynzen.org/"
   },
@@ -355,7 +355,7 @@
     "name": "Fire Ensemble",
     "category": "sound",
     "mode": "make",
-    "description": "Intergenerational choir, BIPOC + queer-centered · rehearses Judson Memorial Church · ~20 min",
+    "description": "Intergenerational choir, BIPOC + queer-centered · rehearses Judson Memorial Church",
     "note": "Spring 2026 ran Apr 6–June (Mondays 6–8pm). Between sessions now; fall 2026 TBD. Fall RSVP submitted.",
     "url": "https://www.fireensemble.com/choir-form"
   },
@@ -363,7 +363,7 @@
     "name": "NYC Resistor",
     "category": "sound",
     "mode": "make",
-    "description": "Hacker collective · 87 3rd Ave, Boerum Hill · ~15 min",
+    "description": "Hacker collective · Boerum Hill",
     "note": "Monthly Synthesizer Night — pay-what-you-wish ($8 suggested). Bring your synth or come empty-handed to jam. Hardware Reincarnation workshops rotate.",
     "url": "https://www.nycresistor.com/calendar/"
   },
@@ -371,7 +371,7 @@
     "name": "Mover's Bodega",
     "category": "dance",
     "mode": "make",
-    "description": "Street-dance studio · Long Island City · G train ~25–30 min",
+    "description": "Street-dance studio · Long Island City",
     "note": "House, waacking, breaking, hip hop, popping, jersey club. $20 single class, $55/3, $108/6. Schedule at sutrapro.com/modega.",
     "url": "https://moversbodega.com/"
   },
@@ -379,7 +379,7 @@
     "name": "Film Forum",
     "category": "film",
     "mode": "witness",
-    "description": "Independent + repertory cinema · 209 W Houston, West Village",
+    "description": "Independent + repertory cinema · West Village",
     "note": "$12 member / $18 general. Dense weekly programming — new releases, restorations, retrospectives. Massive Coppola retrospective Aug 21–Sep 10.",
     "url": "https://www.filmforum.org/now-playing"
   },
@@ -387,7 +387,7 @@
     "name": "Anthology Film Archives",
     "category": "film",
     "mode": "witness",
-    "description": "Avant-garde + experimental cinema · 32 2nd Ave, East Village",
+    "description": "Avant-garde + experimental cinema · East Village",
     "note": "Deep-cut avant-garde, 35mm/16mm archival programming. Frequent series. Cheap tickets.",
     "url": "https://anthologyfilmarchives.org/calendar"
   },
@@ -395,7 +395,7 @@
     "name": "Metrograph",
     "category": "film",
     "mode": "witness",
-    "description": "Repertory arthouse · 7 Ludlow St, LES",
+    "description": "Repertory arthouse · LES",
     "note": "Rep + first-run. Curated series. Calendar publishes ~1 month out.",
     "url": "https://metrograph.com/"
   },
@@ -411,7 +411,7 @@
     "name": "New York Theatre Workshop",
     "category": "theatre",
     "mode": "witness",
-    "description": "Downtown new-work incubator · 79 E 4th St, East Village",
+    "description": "Downtown new-work incubator · East Village",
     "note": "2026/27 fall: Basquiat (Sep 9–Oct 4), Wild Rose musical (Nov 24–Jan 10).",
     "url": "https://www.nytw.org/2026-27-season/"
   },
@@ -435,7 +435,7 @@
     "name": "Vineyard Theatre",
     "category": "theatre",
     "mode": "witness",
-    "description": "Off-Broadway new work · 108 E 15th St, Union Square",
+    "description": "Off-Broadway new work · Union Square",
     "note": "Development-oriented. Season announced yearly.",
     "url": "https://vineyardtheatre.org/showsevents/"
   },
@@ -443,7 +443,7 @@
     "name": "Signature Theatre",
     "category": "theatre",
     "mode": "witness",
-    "description": "Playwright-focused residencies · 480 W 42nd St, Hell's Kitchen",
+    "description": "Playwright-focused residencies · Hell's Kitchen",
     "note": "Curated resident-playwright seasons. Cheap tickets first 3 weeks of each run.",
     "url": "https://www.signaturetheatre.org/"
   },
@@ -451,7 +451,7 @@
     "name": "Playwrights Horizons",
     "category": "theatre",
     "mode": "witness",
-    "description": "New American plays · 416 W 42nd St, Theater Row",
+    "description": "New American plays · Theater Row",
     "note": "2026/27 season: Degenerates, ripple/wave, HOLE!, Wold Meteor, Annunciation, Feast of Rabbits. Dates TBA.",
     "url": "https://www.playwrightshorizons.org/shows/"
   },
@@ -459,7 +459,7 @@
     "name": "ISSUE Project Room",
     "category": "sound",
     "mode": "witness",
-    "description": "Experimental music + performance · 22 Boerum Pl, Downtown Brooklyn · ~15 min",
+    "description": "Experimental music + performance · Downtown Brooklyn",
     "note": "Deep-listen experimental music. Suzanne Fiol Curatorial Fellowship, Artist-in-Residence program. Small hall, curated.",
     "url": "https://issueprojectroom.org/calendar"
   },
@@ -468,7 +468,7 @@
     "category": "film",
     "mode": "witness",
     "description": "Dinner + drinks cinema · Prospect Park + Williamsburg locations",
-    "note": "First-run + special series (Nitecap, brunch, midnight). Both branches accessible.",
+    "note": "First-run + special series (Nitecap, brunch, midnight).",
     "url": "https://nitehawkcinema.com/"
   },
   {
@@ -491,7 +491,7 @@
     "name": "Whitney Museum",
     "category": "making",
     "mode": "witness",
-    "description": "American art museum · 99 Gansevoort, Meatpacking",
+    "description": "American art museum · Meatpacking",
     "note": "Free Friday Nights (5–10pm) — free admission + programming. Currently: Whitney Biennial 2026. Regular performance + film in the theater.",
     "url": "https://whitney.org/events"
   },
@@ -499,7 +499,7 @@
     "name": "New Museum",
     "category": "making",
     "mode": "witness",
-    "description": "Contemporary art · 235 Bowery, LES",
+    "description": "Contemporary art · LES",
     "note": "Performance series + New INC incubator. Reopening after renovation; check calendar for programming.",
     "url": "https://www.newmuseum.org/calendar"
   },
@@ -547,7 +547,7 @@
     "name": "The Arts Center at Governors Island (LMCC)",
     "category": "theatre",
     "mode": "both",
-    "description": "40,000 sq ft residency + presentation venue · Building 110, Governors Island",
+    "description": "40,000 sq ft residency + presentation venue · Governors Island",
     "note": "Adaptive-reuse of an 1870s munitions warehouse. Year-round residencies + summer public program (talks, workshops, Take Care Series). All events free.",
     "url": "https://lmcc.net/lmcc-arts-center-at-governors-island/"
   },
@@ -563,7 +563,7 @@
     "name": "DADA",
     "category": "sound",
     "mode": "witness",
-    "description": "Artist-owned music + art bar · 6047 Myrtle Ave, Ridgewood",
+    "description": "Artist-owned music + art bar · Ridgewood",
     "note": "Jazz, DJs, burlesque, vinyl sets, tarot readings. Espresso bar + garden by day, program by night.",
     "url": "https://dadabar.nyc/program"
   },
@@ -571,7 +571,7 @@
     "name": "SUPR OMEN",
     "category": "theatre",
     "mode": "both",
-    "description": "New interdisciplinary space · 1 Knickerbocker Ave, Brooklyn",
+    "description": "New interdisciplinary space · Brooklyn",
     "note": "Opened Jan 31 2026. 1,000 sq ft rehearsal + performance space. Two monthly programs: experimental live arts (2nd Thu), emerging dance (4th Thu). Membership open.",
     "url": "https://supromen.com/events/"
   },
@@ -579,7 +579,7 @@
     "name": "Francis Kite Club",
     "category": "sound",
     "mode": "witness",
-    "description": "Bar + social club + event space · 40 Loisaida Ave (Ave C), LES",
+    "description": "Bar + social club + event space · LES",
     "note": "Live music, punk, art galas, birthdays. Cocktails with names like 'Annie's Sprinkles.' Open Wed–Sun eve.",
     "url": "https://www.franciskiteclub.com/"
   },
@@ -587,7 +587,7 @@
     "name": "The Windjammer",
     "category": "sound",
     "mode": "witness",
-    "description": "Neighborhood bar with arts programming · 552 Grandview Ave, Ridgewood",
+    "description": "Neighborhood bar with arts programming · Ridgewood",
     "note": "Programming via Footlight Presents: open mics, workshops, live music, dance, theatre. Star Trek pinball + pool table.",
     "url": "https://www.footlightunderground.com/"
   },
@@ -603,7 +603,7 @@
     "name": "Performance Space New York",
     "category": "theatre",
     "mode": "both",
-    "description": "Avant-garde downtown institution · 150 First Ave at 9th St, East Village",
+    "description": "Avant-garde downtown institution · East Village",
     "note": "Founded 1980 as PS 122 in an abandoned school. Queer, radical, formal-experimental. Full theatre season + open workshops.",
     "url": "https://performancespacenewyork.org/"
   },
@@ -619,7 +619,7 @@
     "name": "FourOneOne",
     "category": "theatre",
     "mode": "both",
-    "description": "Nonprofit performance space + residency · 411 Kent Ave, Williamsburg",
+    "description": "Nonprofit performance space + residency · Williamsburg",
     "note": "Performance rooted in community histories from South Asia, Caribbean, East Asia, N. Africa, Latin America, Chicago South Side, the Bronx. Space closed for renovation until March 2027; programming continues in partnerships.",
     "url": "https://www.fouroneoneprojects.org/about"
   },
@@ -627,7 +627,7 @@
     "name": "Delight Factory",
     "category": "community",
     "mode": "both",
-    "description": "Art gallery + event space · 303 Saratoga Ave, Ocean Hill",
+    "description": "Art gallery + event space · Ocean Hill",
     "note": "Sprung dance floor, sound system, instruments (piano, guitars, hand drums). Hosts storytelling, dinners, meetings for worship, dance parties, jams. Opened 2021.",
     "url": "https://www.delightfactorynyc.com/events"
   },
@@ -635,7 +635,7 @@
     "name": "Museum of Reclaimed Urban Space (MoRUS)",
     "category": "community",
     "mode": "witness",
-    "description": "Grassroots community history museum · 155 Ave C, LES",
+    "description": "Grassroots community history museum · LES",
     "note": "Documents squats, community gardens, and grassroots movements of the LES. Free/donation. Public programming + exhibitions.",
     "url": "https://www.morusnyc.org/"
   },
@@ -659,7 +659,7 @@
     "name": "Sleepwalk",
     "category": "sound",
     "mode": "witness",
-    "description": "Music + burlesque + variety lounge · 251 Bushwick Ave, East Williamsburg",
+    "description": "Music + burlesque + variety lounge · East Williamsburg",
     "note": "70-cap intimate room, 1920s Shanghai / NY glam-rock decor. Live music + DJ + variety nightly. Opened 2022.",
     "url": "https://sleepwalk.nyc/events"
   },
@@ -667,7 +667,7 @@
     "name": "e-flux",
     "category": "making",
     "mode": "witness",
-    "description": "Art journal + physical space · 172 Classon Ave, Brooklyn",
+    "description": "Art journal + physical space · Brooklyn",
     "note": "Screenings, talks, lectures, exhibitions. Longform theory-forward programming from a major international art publication.",
     "url": "https://www.e-flux.com/live/"
   },
@@ -683,7 +683,7 @@
     "name": "Prime Produce",
     "category": "community",
     "mode": "both",
-    "description": "Cooperative co-working + event space · 424 W 54th St, Hell's Kitchen",
+    "description": "Cooperative co-working + event space · Hell's Kitchen",
     "note": "~7,000 sq ft standalone building. Hosts Cybernetics Library. Symposiums, exhibitions, performances, dinners. Membership co-op.",
     "url": "https://www.primeproduce.coop/"
   },
@@ -691,7 +691,7 @@
     "name": "Brooklyn Peace Center",
     "category": "community",
     "mode": "both",
-    "description": "Interreligious community + arts hub · 23 Marcus Garvey Blvd, Bed-Stuy",
+    "description": "Interreligious community + arts hub · Bed-Stuy",
     "note": "Founded 1891 as Beth Shalom. Sanctuary hall + fellowship + community room. Concerts, sound baths, workshops, celebrations. Peace Cafe on site.",
     "url": "https://brooklynpeace.center/"
   },
@@ -699,7 +699,7 @@
     "name": "Soho Playhouse",
     "category": "theatre",
     "mode": "witness",
-    "description": "Off-Broadway venue · 15 Vandam St, Hudson Square",
+    "description": "Off-Broadway venue · Hudson Square",
     "note": "Cabaret + solo + off-Broadway plays. Hosts the annual Fringe Encore Series.",
     "url": "https://sohoplayhouse.com/"
   },
@@ -707,7 +707,7 @@
     "name": "Atlantic Theater Company",
     "category": "theatre",
     "mode": "witness",
-    "description": "New American plays · Linda Gross Theater + Stage 2 · 336 W 20th St, Chelsea",
+    "description": "New American plays · Linda Gross Theater + Stage 2 · Chelsea",
     "note": "Founded by David Mamet + William H. Macy. Consistently sharp new-work programming. Full mainstage + Stage 2 for developing work.",
     "url": "https://atlantictheater.org/"
   },
@@ -715,7 +715,7 @@
     "name": "ERF Gallery",
     "category": "making",
     "mode": "both",
-    "description": "Artist-studio + rotating exhibitions · 349 Suydam St + 94 Bogart St, Brooklyn",
+    "description": "Artist-studio + rotating exhibitions · Brooklyn",
     "note": "Private artist-studio community with 24/7 access, screenprint lab, photo studio. Gallery hosts residents + invited artists.",
     "url": "https://www.erf.nyc/galleries"
   },
@@ -731,7 +731,7 @@
     "name": "FRIGID NY (Under St. Marks)",
     "category": "theatre",
     "mode": "both",
-    "description": "Experimental theater + festivals · 94 St. Marks Place, East Village",
+    "description": "Experimental theater + festivals · East Village",
     "note": "45-seat basement black-box, experimental since the 70s. FRIGID Fest + 7 other annual festivals, monthly programming, artist residency. Left Kraine Theater in 2023.",
     "url": "https://frigid.nyc/"
   }

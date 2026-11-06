@@ -10,7 +10,6 @@ import {
   formatSchedule,
   formatLastChecked,
   isAffordable,
-  isNearby,
   isStale,
 } from "../lib/practices";
 import { today } from "../lib/dates";
@@ -65,7 +64,6 @@ export function Directory() {
   const now = useMemo(() => today(), []);
   const [discipline, setDiscipline] = useState<DisciplineFilter>("all");
   const [affordableOnly, setAffordableOnly] = useState(false);
-  const [nearbyOnly, setNearbyOnly] = useState(false);
   const [thisWeekOnly, setThisWeekOnly] = useState(false);
 
   const thisWeekIds = useMemo(
@@ -78,15 +76,9 @@ export function Directory() {
       (p) => discipline === "all" || p.disciplines.includes(discipline),
     )
       .filter((p) => !affordableOnly || isAffordable(p))
-      .filter((p) => !nearbyOnly || isNearby(p))
       .filter((p) => !thisWeekOnly || thisWeekIds.has(p.id))
-      .sort((a, b) => {
-        // Closest first; unmeasured travel sinks to the bottom.
-        const at = a.travelMin ?? 999;
-        const bt = b.travelMin ?? 999;
-        return at - bt || a.name.localeCompare(b.name);
-      });
-  }, [discipline, affordableOnly, nearbyOnly, thisWeekOnly, thisWeekIds]);
+      .sort((a, b) => a.name.localeCompare(b.name));
+  }, [discipline, affordableOnly, thisWeekOnly, thisWeekIds]);
 
   const counts = useMemo(() => {
     const c = new Map<Discipline, number>();
@@ -145,18 +137,6 @@ export function Directory() {
             title="Free, sliding scale, scholarship, or work-study"
           >
             Money isn’t a barrier
-          </button>
-          <button
-            type="button"
-            className={`dir-toggle${nearbyOnly ? " active" : ""}`}
-            onClick={() => {
-              setNearbyOnly((v) => !v);
-              track("filter", { kind: "nearby" });
-            }}
-            aria-pressed={nearbyOnly}
-            title="Within 25 minutes of Crown Heights"
-          >
-            Close to home
           </button>
           <button
             type="button"
@@ -225,9 +205,6 @@ function PracticeRow({
         <div className="dir-what">{p.what}</div>
         <div className="dir-meta">
           {p.neighborhood}
-          {p.travelMin !== null ? (
-            <span className="dir-travel"> · ~{p.travelMin} min</span>
-          ) : null}
           {cost ? <span className="dir-cost"> · {cost}</span> : null}
           {gap ? <span className="dir-gap"> · {gap}</span> : null}
         </div>
