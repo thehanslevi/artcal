@@ -1954,7 +1954,7 @@
       ],
       "neighborhood": "Prospect Heights",
       "borough": "brooklyn",
-      "travelMin": null,
+      "travelMin": 10,
       "url": "https://www.bkmetalworks.com/classes",
       "cost": {
         "kind": "range",
@@ -1980,7 +1980,7 @@
       ],
       "neighborhood": "Long Island City",
       "borough": "queens",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://brickhouseny.com/pages/classes-overview",
       "cost": {
         "kind": "range",
@@ -2006,7 +2006,7 @@
       ],
       "neighborhood": "Greenpoint",
       "borough": "brooklyn",
-      "travelMin": null,
+      "travelMin": 35,
       "url": "https://www.brooklyncraftcompany.com/collections/all-workshops",
       "cost": {
         "kind": "range",
@@ -2033,7 +2033,7 @@
       ],
       "neighborhood": "East Williamsburg",
       "borough": "brooklyn",
-      "travelMin": null,
+      "travelMin": 30,
       "url": "https://brooklynshoespace.com/classes",
       "cost": {
         "kind": "range",
@@ -2060,7 +2060,7 @@
       ],
       "neighborhood": "Brooklyn Navy Yard",
       "borough": "brooklyn",
-      "travelMin": null,
+      "travelMin": 25,
       "url": "https://www.dieudonne.org/educational-events",
       "cost": {
         "kind": "range",
@@ -2087,7 +2087,7 @@
       ],
       "neighborhood": "Upper East Side",
       "borough": "manhattan",
-      "travelMin": null,
+      "travelMin": 50,
       "url": "https://loopoftheloom.com/collections/weaving-classes",
       "cost": {
         "kind": "per-session",
@@ -2113,7 +2113,7 @@
       ],
       "neighborhood": "Astoria",
       "borough": "queens",
-      "travelMin": null,
+      "travelMin": 50,
       "url": "https://mostlygoodstudios.com/calendar",
       "cost": {
         "kind": "unknown",
@@ -2139,7 +2139,7 @@
       ],
       "neighborhood": "Sunset Park",
       "borough": "brooklyn",
-      "travelMin": null,
+      "travelMin": 40,
       "url": "https://www.gowanusprintlab.com/classes.html",
       "cost": {
         "kind": "fixed",
