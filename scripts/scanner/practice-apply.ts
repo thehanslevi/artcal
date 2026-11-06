@@ -108,9 +108,6 @@ function completeDraft(
       case "disciplines":
         out.disciplines = v.split(",").map((d) => d.trim()) as Discipline[];
         break;
-      case "travelMin":
-        out.travelMin = v === "null" ? null : Number(v);
-        break;
       case "cost":
         out.cost = parseCost(v);
         break;
@@ -164,7 +161,6 @@ export function applyProposal(
       disciplines: d.disciplines,
       neighborhood: d.neighborhood,
       borough: d.borough!,
-      travelMin: d.travelMin,
       url: d.url,
       cost: d.cost,
       schedule: d.schedule,

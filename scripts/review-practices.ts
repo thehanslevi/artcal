@@ -9,8 +9,8 @@
 //   npx tsx scripts/review-practices.ts accept <id> --verified --set what="..."
 //
 // A new venue's draft can be corrected as it's accepted. --set takes: name,
-// what, neighborhood, borough, url, disciplines (comma list), travelMin,
-// access (comma list), and cost, written as you'd say it:
+// what, neighborhood, borough, url, disciplines (comma list), access (comma
+// list), and cost, written as you'd say it:
 //   --set cost=90   580-620   250/mo   90/session   "75-675 sliding"   free
 //   npx tsx scripts/review-practices.ts reject <id> [why]
 //

@@ -72,8 +72,11 @@ for (const p of data.practices) {
   for (const a of p.access ?? []) {
     if (!ACCESS.includes(a)) err(id, `bad access: ${a}`);
   }
-  if (p.travelMin !== null && (typeof p.travelMin !== "number" || p.travelMin < 0)) {
-    err(id, `bad travelMin: ${p.travelMin}`);
+  // Rows say where a venue is, never how far it is from anyone's home.
+  if ("travelMin" in p) err(id, "travelMin was removed; drop the field");
+  const prose = [p.what, p.caveat, p.neighborhood].filter(Boolean).join(" ");
+  if (/from home|from crown heights|walking distance|walkable|by bike|\bmin(?:ute)?s? from\b/i.test(prose)) {
+    err(id, "says how far the venue is from home; name the neighborhood and stop there");
   }
 
   const c = p.cost;

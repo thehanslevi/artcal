@@ -140,11 +140,6 @@ export interface Practice {
   disciplines: Discipline[];
   neighborhood: string;
   borough: Borough;
-  /**
-   * Approximate door-to-door minutes from Crown Heights. Always an estimate,
-   * never a measurement. Null when there is no fixed address to estimate from.
-   */
-  travelMin: number | null;
   url: string;
   cost: Cost;
   schedule: Schedule;

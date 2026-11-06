@@ -39,7 +39,6 @@
         ],
         "neighborhood": "Queens",
         "borough": "queens",
-        "travelMin": null,
         "cost": {
           "kind": "fixed",
           "amount": 350
