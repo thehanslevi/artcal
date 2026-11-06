@@ -30,6 +30,7 @@ import { matchesTab } from "./lib/tab";
 import { Calendar } from "./components/Calendar";
 import { ExportButton } from "./components/ExportButton";
 import { FilterBar, computeCategoryCounts } from "./components/FilterBar";
+import { isPast, parseEventDate, today } from "./lib/dates";
 import { Spaces } from "./components/Spaces";
 import { SubscribePanel } from "./components/SubscribePanel";
 import { SubmitPanel } from "./components/SubmitPanel";
@@ -79,6 +80,7 @@ function App() {
   const [subscribeOpen, setSubscribeOpen] = useState(false);
   const [submitOpen, setSubmitOpen] = useState(false);
   const [weekendOnly, setWeekendOnly] = useState(false);
+  const [showPast, setShowPast] = useState(false);
   const [isCurator, setIsCurator] = useState(false);
   const [notes, setNotes] = useState<PickNotes>({});
   const uploadTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -256,20 +258,32 @@ function App() {
     }
   }, [passphrase]);
 
+  // The counts describe what the calendar is listing. It hides events that
+  // have happened unless "Show past" is on, so the counts do too. They used to
+  // add up everything stored since July: "Making 176" over a list of 34.
+  const listed = useMemo(() => {
+    const now = today();
+    return ALL_EVENTS.filter((e) => {
+      if (showPast) return true;
+      const d = parseEventDate(e.date);
+      return !d || !isPast(d, now);
+    });
+  }, [showPast]);
+
   const counts = useMemo(() => {
-    const scoped = ALL_EVENTS.filter((e) => matchesTab(tab, e.mode))
+    const scoped = listed.filter((e) => matchesTab(tab, e.mode))
       .filter((e) => !picksOnly || picks.has(pickId(e)))
       .filter((e) => !freeOnly || isFree(e));
     return computeCategoryCounts(scoped);
-  }, [tab, picks, picksOnly, freeOnly]);
+  }, [listed, tab, picks, picksOnly, freeOnly]);
 
   const pickCount = picks.size;
   const freeCount = useMemo(
     () =>
-      ALL_EVENTS.filter((e) => matchesTab(tab, e.mode))
+      listed.filter((e) => matchesTab(tab, e.mode))
         .filter((e) => !picksOnly || picks.has(pickId(e)))
         .filter(isFree).length,
-    [tab, picks, picksOnly],
+    [listed, tab, picks, picksOnly],
   );
 
   return (
@@ -405,6 +419,8 @@ function App() {
         picksOnly={picksOnly}
         freeOnly={freeOnly}
         weekendOnly={weekendOnly}
+        showPast={showPast}
+        onToggleShowPast={() => setShowPast((s) => !s)}
         onTogglePick={togglePick}
         isCurator={isCurator}
         notes={notes}

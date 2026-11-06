@@ -41,7 +41,7 @@
       "neighborhood": "South Slope",
       "borough": "brooklyn",
       "travelMin": 25,
-      "url": "https://gasworksnyc.com/collections",
+      "url": "https://gasworksnyc.com/pages/wheel",
       "cost": {
         "kind": "fixed",
         "amount": 775
@@ -558,8 +558,8 @@
       "url": "https://textileartscenter.com/adult-classes/class-calendar/",
       "cost": {
         "kind": "range",
-        "min": 60,
-        "max": 120
+        "min": 90,
+        "max": 535
       },
       "schedule": {
         "kind": "session",
@@ -1061,8 +1061,9 @@
       "travelMin": 40,
       "url": "https://sfpc.study",
       "cost": {
-        "kind": "fixed",
-        "amount": 300
+        "kind": "range",
+        "min": 750,
+        "max": 1200
       },
       "schedule": {
         "kind": "irregular",
@@ -1340,9 +1341,8 @@
       "travelMin": 45,
       "url": "https://ailey.org/classes",
       "cost": {
-        "kind": "range",
-        "min": 18,
-        "max": 22
+        "kind": "per-session",
+        "amount": 26
       },
       "schedule": {
         "kind": "weekly",
@@ -1795,9 +1795,8 @@
       "travelMin": 68,
       "url": "https://www.bronxriverart.org/education-adult-classes",
       "cost": {
-        "kind": "range",
-        "min": 250,
-        "max": 400
+        "kind": "per-session",
+        "amount": 30
       },
       "schedule": {
         "kind": "session",
@@ -1994,8 +1993,7 @@
       "access": [
         "enroll-ahead"
       ],
-      "verifiedOn": "2026-11-05",
-      "caveat": "Scaffolded 2026-11-05 from the studio site; cost, schedule, and access need confirming."
+      "verifiedOn": "2026-11-05"
     },
     {
       "id": "brooklyn-craft-company",
@@ -2021,8 +2019,7 @@
         "enroll-ahead",
         "drop-in"
       ],
-      "verifiedOn": "2026-11-05",
-      "caveat": "Scaffolded 2026-11-05 from the studio site; cost, schedule, and access need confirming."
+      "verifiedOn": "2026-11-05"
     },
     {
       "id": "brooklyn-shoe-space",
@@ -2048,8 +2045,7 @@
         "enroll-ahead",
         "membership"
       ],
-      "verifiedOn": "2026-11-05",
-      "caveat": "Scaffolded 2026-11-05 from the studio site; cost, schedule, and access need confirming."
+      "verifiedOn": "2026-11-05"
     },
     {
       "id": "dieu-donne",
@@ -2075,8 +2071,7 @@
         "enroll-ahead",
         "scholarship"
       ],
-      "verifiedOn": "2026-11-05",
-      "caveat": "Scaffolded 2026-11-05 from the studio site; cost, schedule, and access need confirming."
+      "verifiedOn": "2026-11-05"
     },
     {
       "id": "loop-of-the-loom",
@@ -2101,8 +2096,7 @@
         "enroll-ahead",
         "drop-in"
       ],
-      "verifiedOn": "2026-11-05",
-      "caveat": "Scaffolded 2026-11-05 from the studio site; cost, schedule, and access need confirming."
+      "verifiedOn": "2026-11-05"
     },
     {
       "id": "mostly-good-studios",
@@ -2120,8 +2114,9 @@
         "why": "not-checked"
       },
       "schedule": {
-        "kind": "irregular",
-        "note": "Check site for class terms."
+        "kind": "session",
+        "weeks": 6,
+        "note": "6-week handbuilding course; open studio Monday, Tuesday and Saturday"
       },
       "access": [
         "enroll-ahead",
@@ -2146,14 +2141,14 @@
         "amount": 450
       },
       "schedule": {
-        "kind": "irregular",
-        "note": "Check site for class terms."
+        "kind": "session",
+        "weeks": 4,
+        "note": "4-week Screen Printing 101"
       },
       "access": [
         "enroll-ahead"
       ],
-      "verifiedOn": "2026-11-05",
-      "caveat": "Scaffolded 2026-11-05 from the studio site; cost, schedule, and access need confirming."
+      "verifiedOn": "2026-11-05"
     }
   ]
 }

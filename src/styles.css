@@ -1330,10 +1330,8 @@ a:hover {
   font-size: 10px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--danger-text, var(--text-2));
+  color: var(--text-2);
   margin-top: 6px;
-  padding-left: 9px;
-  border-left: 2px solid currentColor;
 }
 
 .directory-filters {

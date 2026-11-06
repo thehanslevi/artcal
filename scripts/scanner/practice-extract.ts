@@ -1007,3 +1007,31 @@ export function planReading(
   if (canAsk) return "ask";
   return saved ? "stale" : "skip";
 }
+
+/** Today where this is running. toISOString() is UTC, which is tomorrow in an
+ *  American evening, and a check date is a claim about a day. */
+export function localDate(d: Date = new Date()): string {
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+}
+
+/**
+ * Does the venue's site still say what the row says?
+ *
+ * What a machine can honestly check: the site loaded, and where the row gives a
+ * price, that figure is still printed on it somewhere. A row with no price to
+ * compare (unknown, free) passes on the site loading. It does not re-read the
+ * description or the schedule; that is still a person's job, and a failed check
+ * is how a row gets back in front of one.
+ */
+export function checkRow(row: Practice, pages: Page[]): "ok" | "price-not-found" {
+  const figures = amountsOf(row.cost);
+  if (!figures.length) return "ok";
+  const text = pages.map((p) => p.text).join("\n").replace(/,/g, "");
+  const shown = figures.some((f) =>
+    // Not followed by more of a number: "$5000" and "$500.50" aren't $500, but
+    // "costs $500." at the end of a sentence is.
+    new RegExp(`\\$\\s?${f}(?:\\.00)?(?!\\d|\\.\\d)`).test(text),
+  );
+  return shown ? "ok" : "price-not-found";
+}

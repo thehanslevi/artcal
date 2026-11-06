@@ -236,3 +236,28 @@ export interface CommitmentsData {
   season: string;
   commitments: Commitment[];
 }
+
+/** What the weekly scrape found when it read a row's own site. */
+export type CheckResult = "ok" | "price-not-found" | "blocked" | "dead" | "unreachable";
+
+export interface RowCheck {
+  /** Last date the check passed: the site loaded and the row's price was on it. */
+  ok?: string;
+  /** Date of the most recent attempt, and what it found. */
+  last: string;
+  result: CheckResult;
+}
+
+/**
+ * Automated checks, one per Directory row, written by discover-practices.ts.
+ *
+ * A row counts as checked on the newer of its `verifiedOn` (a person) and its
+ * `ok` date here (the scrape). The two are kept apart on purpose: this file is
+ * the machine's, practices.json is hand-maintained, and neither overwrites the
+ * other. A passed check means the venue's site loaded and, where the row gives
+ * a price, that figure is still on the site. It does not re-read descriptions.
+ */
+export interface PracticeChecks {
+  ranAt: string;
+  rows: Record<string, RowCheck>;
+}

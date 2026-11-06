@@ -3,7 +3,9 @@ import assert from "node:assert/strict";
 import type { Practice, PracticesData } from "../../src/types/practice.ts";
 import { applyProposal, parseCost } from "./practice-apply.ts";
 import {
+  checkRow,
   extractPrices,
+  localDate,
   parseLlmReading,
   pickOfferLinks,
   planReading,
@@ -658,4 +660,32 @@ test("accepting a new venue can correct its draft's cost and access", () => {
     () => applyProposal(DATA, newProposal(), { verifiedOn: "2026-11-04", set: { what: "x", access: "walk-in" } }),
     /access is a comma list/,
   );
+});
+
+test("a row passes its check when its price is still on the site", () => {
+  const priced: Practice = { ...ROW, cost: { kind: "fixed", amount: 775 } };
+  assert.equal(checkRow(priced, page("The cost of most classes will be $775 plus tax.")), "ok");
+  assert.equal(checkRow(priced, page("Classes are $1,775 this term.")), "price-not-found");
+  assert.equal(checkRow(priced, page("Classes are $7750.")), "price-not-found");
+  assert.equal(checkRow(priced, page("Now $800.")), "price-not-found");
+  // A price that ends a sentence is still the price. The first run of this
+  // check failed Clayworks on "A 10 week session costs $500."
+  assert.equal(checkRow(priced, page("A 12 week semester costs $775.")), "ok");
+  assert.equal(checkRow(priced, page("Now $775.50 with tax.")), "price-not-found");
+  // Either end of a range is enough: the page may list only one class today.
+  const range: Practice = { ...ROW, cost: { kind: "range", min: 445, max: 540 } };
+  assert.equal(checkRow(range, page("Cost: $540.00")), "ok");
+  // A thousands separator on the page doesn't hide the figure.
+  const big: Practice = { ...ROW, cost: { kind: "fixed", amount: 1945 } };
+  assert.equal(checkRow(big, page("From $1,945 USD")), "ok");
+});
+
+test("a row with no price to compare passes on its site loading", () => {
+  assert.equal(checkRow(ROW, page("Welcome.")), "ok");
+  assert.equal(checkRow({ ...ROW, cost: { kind: "free" } }, page("Welcome.")), "ok");
+});
+
+test("a check date is the local day, not UTC's", () => {
+  // 8pm on Nov 5 in New York is already Nov 6 in UTC.
+  assert.equal(localDate(new Date(2026, 10, 5, 20, 0)), "2026-11-05");
 });

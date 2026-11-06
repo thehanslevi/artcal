@@ -8,7 +8,7 @@ import {
   formatCost,
   formatCostGap,
   formatSchedule,
-  formatVerified,
+  formatLastChecked,
   isAffordable,
   isNearby,
   isStale,
@@ -271,9 +271,7 @@ function PracticeRow({
         ) : null}
         {p.caveat ? <div className="dir-caveat">{p.caveat}</div> : null}
         {stale ? (
-          <div className="dir-stale">
-            Suspect: {formatVerified(p, now)}. Reconfirm before relying on this.
-          </div>
+          <div className="dir-stale">{formatLastChecked(p, now)}</div>
         ) : null}
       </div>
     </li>

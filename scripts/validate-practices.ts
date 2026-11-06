@@ -13,6 +13,7 @@ import type {
   Borough,
   Discipline,
   Practice,
+  PracticeChecks,
   UnknownCostReason,
   Weekday,
 } from "../src/types/practice.ts";
@@ -144,6 +145,27 @@ if (!isIso(data.lastChecked)) {
   errors.push(
     `lastChecked (${data.lastChecked}) is older than lastVerified (${data.lastVerified})`,
   );
+}
+
+// practice-checks.json is the scrape's, and the site trusts it for "last
+// checked". A check can't name a row that isn't there, claim a pass in the
+// future, or claim one newer than the run that made it.
+const checks = JSON.parse(
+  readFileSync(resolve("src/data/practice-checks.json"), "utf8"),
+) as PracticeChecks;
+const rowIds = new Set(data.practices.map((p) => p.id));
+const todayIso = new Date(Date.now() + 86_400_000).toISOString().slice(0, 10);
+for (const [id, c] of Object.entries(checks.rows ?? {})) {
+  if (!rowIds.has(id)) errors.push(`practice-checks: ${id} is not a Directory row`);
+  if (!isIso(c.last)) errors.push(`practice-checks: ${id}.last must be YYYY-MM-DD`);
+  if (c.ok !== undefined) {
+    if (!isIso(c.ok)) errors.push(`practice-checks: ${id}.ok must be YYYY-MM-DD`);
+    else if (c.ok > c.last) errors.push(`practice-checks: ${id}.ok is after its last attempt`);
+    else if (c.ok > todayIso) errors.push(`practice-checks: ${id}.ok is in the future`);
+  }
+  if (c.result === "ok" && c.ok !== c.last) {
+    errors.push(`practice-checks: ${id} passed on ${c.last} but ok says ${c.ok}`);
+  }
 }
 
 if (errors.length) {
