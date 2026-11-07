@@ -11,12 +11,22 @@
  *   - a "feat." list:             "WordHack feat. A, B and C"      → "WordHack"
  *   - a presenter in front:       "x TEM present: A, B, C"         → "A, B, C"
  *   - a genre label in front:     "JAZZ - Joel Viera Trio"         → "Joel Viera Trio"
+ *   - a course counter on the end: "Hand Building Course Fall Session Week 5"
+ *                                                                  → "Hand Building Course"
+ *   - shouting:                   "PICKLING PARTY"                 → "Pickling Party"
  *
  * What stays: a subtitle ("Film Series: The Films of Barbara Loden",
  * "Narcisa Hirsch: Graffiti, Film & Political Gesture"), a teacher ("Relief
  * Printmaking with Anat Keinan"), a proper name that happens to carry a number
  * ("The 25th Annual Putnam County Spelling Bee"), and a film opening ("REMAKE
  * — Ross McElwee opens").
+ *
+ * Nothing is in all caps unless it's a name. A title of two or more words
+ * written entirely in capitals is the venue shouting and goes to title case;
+ * a single shouted word ("UMORA", "SOUNDWRDS") and a shouted word inside a
+ * mixed-case title ("MIKE's Young World", "BRIC Celebrate Brooklyn!:
+ * CARRTOONS") are taken to be names and left alone, as are acronyms (DJ, NYC,
+ * B&W) and roman numerals.
  *
  * The one judgement call: a series that runs many nights keeps its headliner,
  * so six nights of "BRIC Celebrate Brooklyn!" don't all read the same:
@@ -59,6 +69,15 @@ const TRAILING_DATE = new RegExp(
 const TRAILING_YEAR = new RegExp(`\\s+${YEAR}\\s*$`);
 /** "x TEM present:", "Lord Debacle Presents:", "Bar Laika presents": who, not what. */
 const PRESENTER = /^(?:\S+\s+){1,5}?presents?:?\s+/i;
+/**
+ * "Fall Session Week 5", "(2 of 3)", "Day 1 - 3", "Private Class Day 4, 5 & 6":
+ * where a course has got to. The date field says that. "Night 2", "Part 1"
+ * and "Vol. 4" name different programmes and stay.
+ */
+const COURSE_COUNTER = new RegExp(
+  `\\s*(?:[-–—:,]\\s*)?(?:${SEASON}\\s+(?:session|term|cycle)\\s*)?(?:week|session|class|day|lesson|module)\\s*#?\\d+(?:\\s*(?:[-–&,]|and|to)\\s*\\d+)*(?:\\s+of\\s+\\d+)?\\s*$|\\s*\\(\\d+\\s+of\\s+\\d+\\)\\s*$`,
+  "i",
+);
 /** A film opening or closing is one title, whatever punctuation it carries. */
 const OPENING = /\s(?:opens|closes)(?:\s\(\w+\))?$/i;
 
@@ -111,6 +130,7 @@ export function tidyTitle(raw: string, ctx: TitleContext = {}): string {
 
   t = t.replace(EDITION_PAREN, "").replace(SHOWTIME_PAREN, "").replace(LINEUP_PAREN, "");
   t = t.replace(TRAILING_DATE, "").replace(TRAILING_YEAR, "");
+  t = t.replace(COURSE_COUNTER, "").replace(COURSE_COUNTER, "");
   t = t.replace(new RegExp(`\\s+(?:${DASH}|:|\\|)\\s*$`), "").trim();
 
   if (OPENING.test(t)) return t || raw.trim();
@@ -135,8 +155,39 @@ export function tidyTitle(raw: string, ctx: TitleContext = {}): string {
     if (feat && feat[1]!.length >= 3) t = feat[1]!.trim();
   }
 
-  t = t.replace(/\s+/g, " ").trim();
+  t = unshout(t.replace(/\s+/g, " ").trim());
   return t || raw.trim();
+}
+
+const KEEP_CAPS = new Set([
+  "DJ", "DJS", "MC", "VJ", "TV", "NYC", "NY", "LA", "UK", "USA", "US", "LES", "BAM",
+  "DADA", "LPR", "NYU", "AI", "VR", "AR", "3D", "2D", "B&W", "R&B", "Q&A", "DIY",
+  "BYOB", "BYOT", "EP", "LP", "CD", "VHS", "VCR", "OK", "RSVP", "NYE", "GIF",
+]);
+const SMALL = new Set([
+  "a", "an", "the", "and", "or", "but", "nor", "of", "to", "in", "on", "at", "by",
+  "for", "with", "from", "vs", "via", "as",
+]);
+
+/** "PICKLING PARTY" → "Pickling Party". Only a whole title in capitals. */
+function unshout(t: string): string {
+  const letters = t.replace(/[^A-Za-z]/g, "");
+  if (letters.length < 4 || letters !== letters.toUpperCase()) return t;
+  if (t.split(/[\s/]+/).filter((w) => /[A-Za-z]/.test(w)).length < 2) return t;
+  let afterBreak = true;
+  return t
+    .split(/(\s+)/)
+    .map((tok) => {
+      if (/^\s+$/.test(tok)) return tok;
+      const word = tok.replace(/[^A-Za-z0-9&.']/g, "");
+      let out: string;
+      if (KEEP_CAPS.has(word) || /^[IVXL]+$/.test(word)) out = tok;
+      else if (!afterBreak && SMALL.has(word.toLowerCase())) out = tok.toLowerCase();
+      else out = tok.toLowerCase().replace(/(^|[-/("“'])([a-z])/g, (_, b, c) => b + c.toUpperCase());
+      afterBreak = /[:—–.!?]$/.test(tok) || /\($/.test(tok);
+      return out;
+    })
+    .join("");
 }
 
 /**
