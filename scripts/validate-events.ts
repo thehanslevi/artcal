@@ -8,6 +8,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import type { CalEvent, EventsData } from "../src/types.ts";
+import { seriesPrefixes, tidyTitle } from "../src/lib/title.ts";
 
 const data = JSON.parse(
   readFileSync(resolve("src/data/events.json"), "utf8"),
@@ -36,6 +37,15 @@ for (const e of all) {
     errors.push(`${label(e)}: title repeats its venue "${e.venue}"`);
   }
   if (!e.venue) warnings.push(`${label(e)}: no venue field`);
+}
+
+// The title is the name of the thing, not its billing (src/lib/title.ts). The
+// scanner applies the rule on the way in; a hand edit has to follow it too.
+// `npm run events:tidy` rewrites every title that doesn't.
+const series = seriesPrefixes(all.map((e) => e.event));
+for (const e of all) {
+  const tidy = tidyTitle(e.event, { series });
+  if (tidy !== e.event) errors.push(`${label(e)}: title should read "${tidy}"`);
 }
 
 // Display string: a street address in `where` makes rows unscannable.

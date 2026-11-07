@@ -3,6 +3,7 @@ import type { CalEvent, EventsData, Week } from "../../src/types";
 import { findDuplicateOf } from "./dedupe";
 import { cleanText } from "../../src/lib/entities";
 import { parseVenue, stripVenuePrefix } from "../../src/lib/venue";
+import { seriesPrefixes, tidyTitle } from "../../src/lib/title";
 
 /**
  * Opaque and permanent. Never derive a uid from date, title, or venue: the
@@ -72,6 +73,12 @@ export function mergeIntoEvents(
 ): MergeResult {
   const weeks = [...existing.weeks];
   const skippedDuplicates: MergeResult["skippedDuplicates"] = [];
+  // Which prefixes name a series is a question about the whole file, stored
+  // and incoming together.
+  const series = seriesPrefixes([
+    ...weeks.flatMap((w) => w.events.map((e) => e.event)),
+    ...accepted.map((e) => e.event),
+  ]);
 
   for (const event of accepted) {
     const d = parseEventDate(event.date, year);
@@ -118,7 +125,7 @@ export function mergeIntoEvents(
     const parts = parseVenue(cleanText(event.where));
     const normalized: CalEvent = {
       ...event,
-      event: stripVenuePrefix(cleanText(event.event), parts.venue),
+      event: tidyTitle(stripVenuePrefix(cleanText(event.event), parts.venue), { series }),
       note: typeof event.note === "string" ? cleanText(event.note) || null : event.note,
       where: parts.where,
       venue: parts.venue,
