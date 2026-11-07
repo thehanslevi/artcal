@@ -98,6 +98,34 @@ test("applying the rule twice changes nothing", () => {
   }
 });
 
+test("a course counter on the end comes off; a programme number stays", () => {
+  assert.equal(tidyTitle("HAND BUILDING COURSE FALL SESSION WEEK 5"), "Hand Building Course");
+  assert.equal(tidyTitle("HANDBUILDING COURSE SUMMER SESSION WEEK 6"), "Handbuilding Course");
+  assert.equal(tidyTitle("Producing Fundamentals (2 of 3)"), "Producing Fundamentals");
+  assert.equal(tidyTitle("6-Day Intensive Shoemaking Workshop Day 4 - 6"), "6-Day Intensive Shoemaking Workshop");
+  assert.equal(tidyTitle("6-Day Intensive Shoemaking Workshop Private Class Day 4, 5 & 6"), "6-Day Intensive Shoemaking Workshop Private Class");
+  assert.equal(tidyTitle("2-day Simple Sneaker Class day 1 of 2"), "2-day Simple Sneaker Class");
+  same("No Fun Night 1");
+  same("Smash Bash Vol. 26");
+  same("adaku, part 2 (dance/theater)");
+  same("Jessica Cook (Night 1) — Roulette Commission");
+});
+
+test("nothing is in all caps unless it's a name", () => {
+  assert.equal(tidyTitle("PICKLING PARTY"), "Pickling Party");
+  assert.equal(tidyTitle("WHAT A WORLD, WHAT A WORLD"), "What a World, What a World");
+  assert.equal(tidyTitle("TOUHOU RAVE BUT IT’S ALSO A CHAINSMOKER CAT RAVE!"), "Touhou Rave but It’s Also a Chainsmoker Cat Rave!");
+  assert.equal(tidyTitle("KRAMER/FAUCI"), "Kramer/Fauci");
+  assert.equal(tidyTitle("SHIBUYA69: ANNIVERSARY"), "Shibuya69: Anniversary");
+  assert.equal(tidyTitle("FORT90 TV"), "Fort90 TV");
+  assert.equal(tidyTitle("NIGHT OF THE LIVING SOUND @ DADA"), "Night of the Living Sound @ DADA");
+  same("UMORA");
+  same("SOUNDWRDS");
+  same("MIKE's Young World");
+  same("BRIC Celebrate Brooklyn!: CARRTOONS");
+  same("Intro to Darkroom Printing (B&W Film)");
+});
+
 test("a title never tidies away to nothing", () => {
   assert.equal(tidyTitle("2026"), "2026");
   assert.equal(tidyTitle("   "), "");
