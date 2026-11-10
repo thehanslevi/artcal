@@ -89,12 +89,35 @@ function isEventType(t: unknown): boolean {
   return false;
 }
 
+/**
+ * An aggregator's venue page (DoNYC's /venues/la-mama-etc) also lists shows at
+ * other venues, each tagged with its own location id. Taking every event on the
+ * page as ours put Gwar at the Palladium and Lord Huron at Kings Theatre into
+ * La MaMa's listings. When we know the aggregator's slug for this venue, an
+ * event whose location names a different one is not ours.
+ */
+export function atOtherVenue(location: unknown, venue: Pick<Venue, "url" | "altSources">): boolean {
+  const ref =
+    typeof location === "object" && location !== null
+      ? [(location as Record<string, unknown>)["@id"], (location as Record<string, unknown>)["url"]]
+          .filter((v): v is string => typeof v === "string")
+          .join(" ")
+      : "";
+  const slug = ref.match(/\/venues\/([a-z0-9-]+)/i)?.[1]?.toLowerCase();
+  if (!slug) return false;
+  const ours = [venue.url, ...(venue.altSources ?? []).map((a) => a.url)]
+    .map((u) => u.match(/\/venues\/([a-z0-9-]+)/i)?.[1]?.toLowerCase())
+    .filter((s): s is string => Boolean(s));
+  return ours.length > 0 && !ours.includes(slug);
+}
+
 function toCalEvent(
   raw: JsonLdEvent,
   venue: Venue,
   today: Date,
 ): CalEvent | null {
   if (!raw.name || !raw.startDate) return null;
+  if (atOtherVenue(raw.location, venue)) return null;
   const s = parseIsoToNY(raw.startDate);
   if (!s) return null;
   const start = new Date(s.y, s.mo, s.d);

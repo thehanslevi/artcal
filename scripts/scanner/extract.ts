@@ -170,9 +170,35 @@ ${html.slice(0, 14000)}`;
   for (const raw of parsed.events) {
     const event = normalize(raw, venue);
     if (!event) continue;
+    event.url = groundUrl(event.url, html, url);
     candidates.push({ event, venue, sourceHtml: html, source: "llm" });
   }
   return candidates;
+}
+
+/**
+ * The model writes the event's link itself, and it will invent a plausible
+ * one: brooklynpoets.org/workshops/art-fall26, bedlam.org/events/2026/11/15/…,
+ * metrograph.com/film/earth/. Each 404'd on the live site. Keep the model's
+ * link only when that link is on the page it read; otherwise link to the page.
+ */
+export function groundUrl(candidate: string | null, html: string, pageUrl: string): string {
+  if (!candidate) return pageUrl;
+  const key = (u: string): string | null => {
+    try {
+      const x = new URL(u, pageUrl);
+      return (x.hostname.replace(/^www\./, "") + x.pathname.replace(/\/+$/, "")).toLowerCase();
+    } catch {
+      return null;
+    }
+  };
+  const want = key(candidate);
+  if (!want) return pageUrl;
+  if (want === key(pageUrl)) return candidate;
+  for (const m of html.matchAll(/href\s*=\s*["']([^"'#]+)/gi)) {
+    if (key(m[1]!.replace(/&amp;/g, "&")) === want) return candidate;
+  }
+  return pageUrl;
 }
 
 const DETAIL_LINK_RE =

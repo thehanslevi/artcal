@@ -39,6 +39,18 @@ for (const e of all) {
   if (!e.venue) warnings.push(`${label(e)}: no venue field`);
 }
 
+// A person took these off the calendar; one coming back means a scan or a merge
+// ignored scripts/scanner/removed-events.json.
+try {
+  const removed = JSON.parse(readFileSync(resolve("scripts/scanner/removed-events.json"), "utf8")) as (CalEvent & { why?: string })[];
+  for (const r of removed) {
+    if (!r.why) errors.push(`removed-events.json: ${r.uid} has no reason`);
+    if (uids.has(r.uid)) errors.push(`${label(r)}: was removed (${r.why}) but is back in events.json`);
+  }
+} catch {
+  // No removals recorded yet.
+}
+
 // The title is the name of the thing, not its billing (src/lib/title.ts). The
 // scanner applies the rule on the way in; a hand edit has to follow it too.
 // `npm run events:tidy` rewrites every title that doesn't.
