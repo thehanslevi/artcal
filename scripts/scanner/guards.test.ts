@@ -38,8 +38,17 @@ test("an event a person removed doesn't come back", () => {
   const r = gate({ event: ev({ uid: undefined as unknown as string }), venue: {} as never, sourceHtml: html, source: "llm" });
   assert.equal(r.pass, false);
   assert.match(r.reason ?? "", /removed by a person: not on the site/);
-  const other = gate({ event: ev({ date: "Dec 18", day: "Fri" }), venue: {} as never, sourceHtml: "Darkroom Orientation Dec 18", source: "llm" });
+  const other = gate({ event: ev({ date: "Dec 18", day: "Fri" }), venue: {} as never, sourceHtml: "Thu Dec 18 · Darkroom Orientation" + " menu about contact".repeat(20), source: "llm" });
   assert.equal(other.pass, true);
+});
+
+test("a model's event needs its title and date together on the page", () => {
+  const gate = makeGateRunner({ weeks: [] } as unknown as EventsData, "2026-11-10", 2026);
+  const pad = " menu about contact".repeat(20);
+  const apart = "Darkroom orientation is required for new members." + " x".repeat(700) + " Open house Dec 17" + pad;
+  const together = "Thu Dec 17 · 7:00 PM · Darkroom Orientation · $40" + pad;
+  assert.equal(gate({ event: ev({}), venue: {} as never, sourceHtml: apart, source: "llm" }).reason, "title and date aren't together on the page");
+  assert.deepEqual(gate({ event: ev({}), venue: {} as never, sourceHtml: together, source: "llm" }), { pass: true });
 });
 
 test("children's and teens' programmes stay off", () => {

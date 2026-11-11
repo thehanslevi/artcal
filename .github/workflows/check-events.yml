@@ -1,0 +1,69 @@
+name: Check events
+
+# Reads every upcoming listing's own page and takes down the ones that aren't
+# there: a dead link, or a page that doesn't list the event on that date, two
+# checks in a row (scripts/check-events.ts). Runs right after each Sunday scan,
+# so a bad scrape is caught within days, and again on Wednesdays, so a
+# cancellation or a moved date doesn't sit on the calendar all week.
+on:
+  workflow_run:
+    workflows: ["Scan events"]
+    types: [completed]
+  schedule:
+    - cron: "0 12 * * 3"  # Wednesdays 12:00 UTC (~7/8am ET)
+  workflow_dispatch:
+
+concurrency:
+  group: check-events
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Read every upcoming listing's page
+        run: npx tsx scripts/check-events.ts
+        timeout-minutes: 30
+
+      - name: Commit removals
+        run: |
+          git config user.name  "calendar-scanner[bot]"
+          git config user.email "calendar-scanner@users.noreply.github.com"
+          cp scripts/scanner/event-checks.json /tmp/event-checks.json
+          REMOVED=$(node -e "console.log(require('/tmp/event-checks.json').remove.length)")
+          # Replay this run's decisions onto the latest main, so a scan or a
+          # hand edit that landed meanwhile is never overwritten.
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/event-checks.json scripts/scanner/event-checks.json
+            npx tsx scripts/check-events.ts --apply
+            npx tsx scripts/validate-events.ts
+            git add src/data/events.json scripts/scanner/removed-events.json scripts/scanner/event-checks.json
+            if git diff --staged --quiet; then echo "No changes."; exit 0; fi
+            git commit -m "Check events: $REMOVED removed"
+            if git push; then exit 0; fi
+            echo "Push attempt $i failed (main moved); retrying onto new main..."
+          done
+          echo "Could not push after 5 attempts."
+          exit 1

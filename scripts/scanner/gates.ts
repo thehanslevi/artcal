@@ -1,6 +1,7 @@
 import type { CalEvent, EventsData } from "../../src/types";
 import type { Candidate } from "./extract";
 import { findDuplicateOf, canonicalDate } from "./dedupe";
+import { judgeListing } from "./listing-check";
 
 // Art Cal is an adults' making/witnessing calendar. Children's programming
 // (story times, "Art for Tots", toddler classes) is a whole separate world and
@@ -203,6 +204,17 @@ export function makeGateRunner(
       const hits = titleTokensForOverlap.filter((t) => html.includes(t)).length;
       const ratio = hits / titleTokensForOverlap.length;
       if (ratio < 0.5) return fail("title tokens missing from source");
+    }
+
+    // A model's reading has to be a listing on this page: the title and the
+    // date together, not each somewhere. "Darkroom Orientation" on Dec 17
+    // passed the two checks above against a homepage that mentions
+    // orientations and, elsewhere, a date; it was never scheduled.
+    if (
+      candidate.source === "llm" &&
+      judgeListing(event, { status: 200, text: sourceHtml }, { year, daysAway: 0, sharedPage: false }) !== "ok"
+    ) {
+      return fail("title and date aren't together on the page");
     }
 
     // Times sanity

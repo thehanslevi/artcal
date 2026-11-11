@@ -25,6 +25,7 @@ import type { Proposal } from "./scanner/practice-extract.ts";
 const PRACTICES_PATH = resolve("src/data/practices.json");
 const OUT_PATH = resolve("scripts/scanner/practice-proposals.json");
 const DECISIONS_PATH = resolve("scripts/scanner/practice-decisions.json");
+const CHECKS_PATH = resolve("src/data/practice-checks.json");
 
 interface ProposalsFile {
   ranAt?: string;
@@ -134,6 +135,25 @@ function markdown(): void {
             ? "certificate error"
             : "no answer";
     lines.push(`Couldn't load: ${broken.map(([k, v]) => `${k} (${reason(v)})`).join(", ")}`, "");
+  }
+  // Rows the weekly check couldn't confirm. Each one shows "Last checked …" on
+  // the site until it passes again, so it needs a person: fix the row's link
+  // or price, or take the row out.
+  const checks = loadJson<{ rows: Record<string, { ok?: string; result: string }> }>(CHECKS_PATH, { rows: {} });
+  const practices = loadJson<PracticesData>(PRACTICES_PATH, { practices: [] } as unknown as PracticesData).practices;
+  const why: Record<string, string> = {
+    unreachable: "site down",
+    blocked: "site blocks the check; open it in a browser",
+    "price-not-found": "listed price isn't on the site",
+  };
+  const failing = Object.entries(checks.rows).filter(([, c]) => c.result !== "ok");
+  if (failing.length) {
+    lines.push(`**${failing.length}** Directory rows didn't pass this week's check:`, "");
+    for (const [id, c] of failing) {
+      const name = practices.find((x) => x.id === id)?.name ?? id;
+      lines.push(`- ${name}: ${why[c.result] ?? c.result}${c.ok ? ` (last passed ${c.ok})` : " (never passed)"}`);
+    }
+    lines.push("");
   }
   lines.push("Review locally: `npm run practices:review`");
   console.log(lines.join("\n"));

@@ -57,6 +57,9 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             npx tsx scripts/reconcile-scan.ts
+            # Never push a calendar that fails its own rules (titles, removed
+            # events, ids). A failure here leaves main as it was.
+            npx tsx scripts/validate-events.ts
             git add src/data/events.json scripts/scanner/candidates-review.json scripts/scanner/last-run.json scripts/scanner/scan-state.json
             if git diff --staged --quiet; then
               echo "No changes to commit."

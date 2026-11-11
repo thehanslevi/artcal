@@ -77,7 +77,7 @@ A scheduled GitHub Action (`scripts/scan-events.ts`) sweeps the venue list in `s
 4. **Platform parsers:** server-rendered Squarespace event lists and WordPress "The Events Calendar" markup.
 5. **LLM extraction:** last resort for JS-rendered venues with no structured data.
 
-Every candidate passes gates (real future date present in source, title tokens present, valid category/mode) and a fuzzy dedupe check; dense performance runs collapse to one opening-night entry.
+Every candidate passes gates (real future date present in source, title tokens present, valid category/mode) and a fuzzy dedupe check; dense performance runs collapse to one opening-night entry. An LLM reading also has to show the title and the date together on the page, and keeps its link only if that link is on the page it read. Anything in `scripts/scanner/removed-events.json` is rejected, so a listing taken down stays down.
 
 ### No-pay LLM setup
 
@@ -89,6 +89,25 @@ Step 5 uses whichever free API key is present, preferring the largest free tier.
 - `OPENAI_COMPAT_BASE_URL` + `OPENAI_COMPAT_API_KEY` (+ optional `OPENAI_COMPAT_MODEL`): any OpenAI-compatible endpoint (OpenRouter, Together, …).
 
 With no key set, steps 1–4 still run, so feed/JSON-LD/CMS venues keep updating for free.
+
+## Keeping it accurate
+
+Four scheduled jobs keep what's listed true. Each one fixes what it safely can and puts the rest in front of a person.
+
+| When | Job | What it does |
+|---|---|---|
+| Sunday | Scan events | Adds new events. Won't push a calendar that fails `validate-events.ts`. |
+| After each scan, and Wednesday | Check events | Opens every upcoming listing's own page. Two checks in a row with the page gone, or not listing that event on that date, and the listing comes down into `removed-events.json` with the reason. Stops itself if more than a quarter fail at once (that's an outage, not bad listings). Sets "Last verified" when it has read everything. |
+| Monday | Refresh practices | Confirms every Directory link still answers; sets the Directory's "Updated" date. |
+| Thursday | Discover practices | Reads every Directory row's site, checks its listed price is still there, proposes changes, and opens the "Directory proposals" issue with every row that didn't pass. |
+
+**When the "Directory proposals" issue is open:** run `npm run practices:review`. Accept or reject each proposal. For a row that didn't pass, open its site: fix the link or price, or take the row out. A row stays marked "Last checked …" on the site until it passes again.
+
+**To take an event down by hand:** move it from `src/data/events.json` into `scripts/scanner/removed-events.json` with a `why`. Deleting it alone isn't enough; the next scan would find it again.
+
+**After changing the title rule** (`src/lib/title.ts`): `npm run events:tidy`, then read the changes before committing.
+
+`npm run lint` checks all of it: titles, removed events, Directory dates and fields, and the tests.
 
 ## Editing
 
