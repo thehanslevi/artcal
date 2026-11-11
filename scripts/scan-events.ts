@@ -51,7 +51,13 @@ async function main(): Promise<void> {
   const todayISO = now.toISOString().slice(0, 10);
   const year = now.getFullYear();
 
-  const runGate = makeGateRunner(events, todayISO, year);
+  let removed: CalEvent[] = [];
+  try {
+    removed = JSON.parse(readFileSync(resolve("scripts/scanner/removed-events.json"), "utf8")) as CalEvent[];
+  } catch {
+    // No removals recorded yet.
+  }
+  const runGate = makeGateRunner(events, todayISO, year, removed);
   const accepted: CalEvent[] = [];
   const rejected: Rejection[] = [];
   const perVenue: Record<

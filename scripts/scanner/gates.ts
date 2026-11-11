@@ -1,12 +1,13 @@
 import type { CalEvent, EventsData } from "../../src/types";
 import type { Candidate } from "./extract";
 import { findDuplicateOf, canonicalDate } from "./dedupe";
+import { judgeListing } from "./listing-check";
 
 // Art Cal is an adults' making/witnessing calendar. Children's programming
 // (story times, "Art for Tots", toddler classes) is a whole separate world and
 // was never the point, so it's rejected at the gate rather than scrubbed later.
 const KIDS_RE =
-  /\b(kids?|tots?|toddlers?|babies|baby|preschool|pre-?k|nursery|children'?s?|story ?time|ages?\s*\d|for teens|little ones)\b/i;
+  /\b(kids?|tots?|toddlers?|babies|baby|preschool|pre-?k|nursery|children'?s?|story ?time|ages?\s*\d|for teens|little ones|munchkins?|socrateens|teens?)\b/i;
 
 // Art Cal is about being in an NYC room. Anything you watch or attend from home
 // — a stream, a livestream, a webinar, a virtual class, a TV special — is gated.
@@ -96,8 +97,14 @@ export function makeGateRunner(
   existing: EventsData,
   todayISO: string,
   year: number,
+  /**
+   * Events a person took off the calendar (scripts/scanner/removed-events.json).
+   * Without this, next Sunday's scan finds the same page and puts them back.
+   */
+  removed: CalEvent[] = [],
 ) {
   const dateIndex = buildDateIndex(existing);
+  const removedIndex = buildDateIndex({ weeks: [{ label: "removed", events: removed }] } as EventsData);
   const today = new Date(todayISO);
 
   return function runGates(candidate: Candidate): GateResult {
@@ -133,6 +140,9 @@ export function makeGateRunner(
 
     // Duplicate check: venue-stripped title similarity + venue/start-time
     // matching (see scanner/dedupe.ts). Catches "Venue: Title" vs "Title".
+    const gone = findDuplicateOf(event, removedIndex.get(canonicalDate(event.date)) ?? []);
+    if (gone) return fail(`removed by a person: ${(gone as CalEvent & { why?: string }).why ?? "see removed-events.json"}`);
+
     const existingOnDate = dateIndex.get(canonicalDate(event.date)) ?? [];
     const dup = findDuplicateOf(event, existingOnDate);
     if (dup) {
@@ -194,6 +204,17 @@ export function makeGateRunner(
       const hits = titleTokensForOverlap.filter((t) => html.includes(t)).length;
       const ratio = hits / titleTokensForOverlap.length;
       if (ratio < 0.5) return fail("title tokens missing from source");
+    }
+
+    // A model's reading has to be a listing on this page: the title and the
+    // date together, not each somewhere. "Darkroom Orientation" on Dec 17
+    // passed the two checks above against a homepage that mentions
+    // orientations and, elsewhere, a date; it was never scheduled.
+    if (
+      candidate.source === "llm" &&
+      judgeListing(event, { status: 200, text: sourceHtml }, { year, daysAway: 0, sharedPage: false }) !== "ok"
+    ) {
+      return fail("title and date aren't together on the page");
     }
 
     // Times sanity

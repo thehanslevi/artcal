@@ -93,7 +93,10 @@ jobs:
             const existing = open.find(i => !i.pull_request && i.title.startsWith(title));
 
             // Nothing to review: stay quiet, and close what's no longer true.
-            if (count === 0) {
+            // Rows failing the check count as something to review.
+            const checks = JSON.parse(fs.readFileSync(process.cwd() + '/src/data/practice-checks.json', 'utf8'));
+            const failing = Object.values(checks.rows).filter(r => r.result !== 'ok').length;
+            if (count === 0 && failing === 0) {
               if (existing) {
                 await github.rest.issues.update({
                   owner: context.repo.owner, repo: context.repo.repo,
@@ -103,7 +106,7 @@ jobs:
               return;
             }
             const body = execSync('npx tsx scripts/review-practices.ts --md').toString();
-            const fields = { title: `${title}: ${count} to review`, body };
+            const fields = { title: `${title}: ${count + failing} to review`, body };
             if (existing) {
               await github.rest.issues.update({
                 owner: context.repo.owner, repo: context.repo.repo,
