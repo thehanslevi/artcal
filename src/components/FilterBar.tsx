@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import type { Category, CategoryFilter } from "../types";
 
 interface Props {
@@ -19,8 +20,31 @@ const OPTIONS: { value: CategoryFilter; label: string }[] = [
 ];
 
 export function FilterBar({ active, onChange, counts }: Props) {
+  // On a phone the pills scroll sideways inside the bar. A fade at the edge
+  // that has more shows there's more; it goes when you reach the end.
+  const ref = useRef<HTMLDivElement>(null);
+  const [more, setMore] = useState({ left: false, right: false });
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const update = () => {
+      const left = el.scrollLeft > 2;
+      const right = el.scrollLeft + el.clientWidth < el.scrollWidth - 2;
+      setMore((m) => (m.left === left && m.right === right ? m : { left, right }));
+    };
+    update();
+    el.addEventListener("scroll", update, { passive: true });
+    const ro = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(update);
+    ro?.observe(el);
+    return () => {
+      el.removeEventListener("scroll", update);
+      ro?.disconnect();
+    };
+  }, [counts]);
+
   return (
-    <div className="filter-bar" role="tablist" aria-label="Category filter">
+    <div className="filter-bar-wrap">
+    <div className="filter-bar" ref={ref} role="tablist" aria-label="Category filter">
       {OPTIONS.map((opt) => {
         const count = counts ? counts[opt.value] : undefined;
         if (opt.value !== "all" && count === 0) return null;
@@ -40,6 +64,9 @@ export function FilterBar({ active, onChange, counts }: Props) {
           </button>
         );
       })}
+    </div>
+      {more.left ? <span className="filter-fade filter-fade-left" aria-hidden="true" /> : null}
+      {more.right ? <span className="filter-fade filter-fade-right" aria-hidden="true" /> : null}
     </div>
   );
 }
