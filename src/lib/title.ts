@@ -5,6 +5,7 @@
  *
  *   - the year and season:        "M³ Festival 2026"               → "M³ Festival"
  *   - an edition in parentheses:  "… (5th annual)"                 → "…"
+ *   - a premiere tag in brackets: "Daily Diversions (World Premiere)" → "Daily Diversions"
  *   - a date on the end:          "… - October 18th, 2026"         → "…"
  *   - showtimes in parentheses:   "… (2 sets EVERY SUNDAY @ 10:30)" → "…"
  *   - the line-up after its name: "Transatlantik II: A, B & C"     → "Transatlantik II"
@@ -19,7 +20,11 @@
  * "Narcisa Hirsch: Graffiti, Film & Political Gesture"), a teacher ("Relief
  * Printmaking with Anat Keinan"), a proper name that happens to carry a number
  * ("The 25th Annual Putnam County Spelling Bee"), and a film opening ("REMAKE
- * — Ross McElwee opens").
+ * — Ross McElwee opens"). A premiere that is the event itself stays: "Record
+ * Premiere Celebration", "with the NYC premiere of Songs of the Earth".
+ *
+ * A slur keeps its first letter and loses the rest to stars ("Field N*****"):
+ * the event keeps its name and its link, and the page doesn't print the word.
  *
  * Nothing is in all caps unless it's a name. A title of two or more words
  * written entirely in capitals is the venue shouting and goes to title case;
@@ -58,6 +63,14 @@ const EDITION_PAREN = new RegExp(
 /** "(2 sets EVERY SUNDAY @ 10:30 & 11:30AM)", "(Doors 7pm)". */
 const SHOWTIME_PAREN =
   /\s*\([^()]*(?:\d\s*(?:am|pm)\b|\d:\d\d|\bevery\s+(?:sun|mon|tue|wed|thu|fri|sat)|\bdoors\b)[^()]*\)/gi;
+/**
+ * "(World Premiere)", "(NYC premiere)", "[U.S. Premiere]", "(Premiere)": where
+ * a show is first seen is billing. Only a tag in brackets, and only a place or
+ * nothing before "premiere": "(Album Premiere)" says what the night is.
+ */
+const PREMIERE_SCOPE =
+  "(?:world|u\\.?s\\.?(?:a\\.?)?|american|north\\s+american|new\\s+york(?:\\s+city)?|ny|nyc|east\\s+coast|west\\s+coast|international|european|brooklyn|local|national|global)";
+const PREMIERE_PAREN = new RegExp(`\\s*[([](?:${PREMIERE_SCOPE}\\s+)?premi[eè]re!?[)\\]]`, "gi");
 /** "(feat. A, B and C)", "(w/ A)": a line-up in parentheses. */
 const LINEUP_PAREN = /\s*\((?:feat\.?|ft\.?|featuring|w\/)\s[^()]*\)/gi;
 /** " - July 6", " - October 18th, 2026", " – Nov 2026": a date on the end. */
@@ -128,12 +141,16 @@ function headliner(rest: string): string {
 export function tidyTitle(raw: string, ctx: TitleContext = {}): string {
   let t = raw.replace(/\s+/g, " ").trim();
 
-  t = t.replace(EDITION_PAREN, "").replace(SHOWTIME_PAREN, "").replace(LINEUP_PAREN, "");
+  t = t
+    .replace(EDITION_PAREN, "")
+    .replace(PREMIERE_PAREN, "")
+    .replace(SHOWTIME_PAREN, "")
+    .replace(LINEUP_PAREN, "");
   t = t.replace(TRAILING_DATE, "").replace(TRAILING_YEAR, "");
   t = t.replace(COURSE_COUNTER, "").replace(COURSE_COUNTER, "");
   t = t.replace(new RegExp(`\\s+(?:${DASH}|:|\\|)\\s*$`), "").trim();
 
-  if (OPENING.test(t)) return t || raw.trim();
+  if (OPENING.test(t)) return mask(t) || mask(raw.trim());
 
   // "x TEM present: A, B, C" → "A, B, C". The presenter is not the event.
   const presented = t.replace(PRESENTER, "");
@@ -155,8 +172,16 @@ export function tidyTitle(raw: string, ctx: TitleContext = {}): string {
     if (feat && feat[1]!.length >= 3) t = feat[1]!.trim();
   }
 
-  t = unshout(t.replace(/\s+/g, " ").trim());
-  return t || raw.trim();
+  t = mask(unshout(t.replace(/\s+/g, " ").trim()));
+  return t || mask(raw.trim());
+}
+
+/** Slurs the page never prints. Add to this list rather than editing a title by hand. */
+const SLUR = /\bnigg(?:a|er)[sz]?\b/gi;
+
+/** The first letter, then a star for each letter after it. */
+function mask(t: string): string {
+  return t.replace(SLUR, (w) => w.charAt(0) + "*".repeat(w.length - 1));
 }
 
 const KEEP_CAPS = new Set([

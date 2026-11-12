@@ -130,3 +130,26 @@ test("a title never tidies away to nothing", () => {
   assert.equal(tidyTitle("2026"), "2026");
   assert.equal(tidyTitle("   "), "");
 });
+
+test("a premiere tag in brackets comes off; a premiere that is the event stays", () => {
+  assert.equal(tidyTitle("Cherrie Yu — Daily Diversions (World Premiere)"), "Cherrie Yu — Daily Diversions");
+  assert.equal(tidyTitle("John Zorn's Alea Iacta Est (World Premiere)"), "John Zorn's Alea Iacta Est");
+  assert.equal(tidyTitle("Ghost Light (NYC premiere)"), "Ghost Light");
+  assert.equal(tidyTitle("Ghost Light [U.S. Premiere]"), "Ghost Light");
+  assert.equal(tidyTitle("Ghost Light (North American Premiere!)"), "Ghost Light");
+  assert.equal(tidyTitle("Ghost Light (New York City Premiere)"), "Ghost Light");
+  assert.equal(tidyTitle("Ghost Light (Premiere)"), "Ghost Light");
+  assert.equal(tidyTitle("GHOST LIGHT (WORLD PREMIERE)"), "Ghost Light");
+  same("Morley — Meditations on The Gift of Awe Record Premiere Celebration");
+  same('Climate Week Evening Celebration with the NYC premiere of "Songs of the Earth"');
+  same("Ghost Light (Album Premiere)");
+  same("Premiere Night");
+});
+
+test("a slur keeps its first letter and loses the rest", () => {
+  assert.equal(tidyTitle("Field Niggas"), "Field N*****");
+  assert.equal(tidyTitle("FIELD NIGGAS"), "Field N*****");
+  assert.equal(tidyTitle("Field N*****"), "Field N*****");
+  same("Niger Delta Stories");
+  same("Snigger");
+});

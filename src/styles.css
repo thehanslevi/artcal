@@ -1697,13 +1697,15 @@ a:hover {
   }
 }
 
-/* Event row — index style */
+/* Event row — index style. The right padding keeps the price, the category
+   pill and the ★ flag clear of the star, which sits in the top right corner
+   (30px wide, 6px in). Phones put the pill under the title instead. */
 .event-row {
   display: grid;
   grid-template-columns: 82px 1fr auto auto auto;
   gap: 14px;
   align-items: start;
-  padding: 14px 4px 14px 20px;
+  padding: 14px 44px 14px 20px;
   background: transparent;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
