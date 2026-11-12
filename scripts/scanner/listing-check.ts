@@ -9,6 +9,7 @@
 // here is that the title and the date appear together, as a listing would show
 // them.
 import type { CalEvent } from "../../src/types";
+import { comparableTitle } from "../../src/lib/title";
 
 const MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
 const FULL = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
@@ -17,7 +18,9 @@ const FULL = ["january", "february", "march", "april", "may", "june", "july", "a
 export const NEAR = 600;
 
 export function plainText(s: string): string {
-  return s
+  // A stored title may be masked ("N*****4Life") where the page spells the
+  // word out; both read the same once compared this way.
+  return comparableTitle(s)
     .replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, " ")
     .replace(/<[^>]+>/g, " ")
     .replace(/&nbsp;|&#160;/g, " ")

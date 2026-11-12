@@ -168,8 +168,10 @@ test("a masked title tidies the same the second time", () => {
     const once = tidyTitle(raw);
     assert.equal(tidyTitle(once), once, raw);
   }
-  assert.equal(tidyTitle("UMORA Niggas"), "UMORA N*****");
-  assert.equal(tidyTitle("MF DOOM: Niggas"), "MF DOOM: N*****");
+  // The masked letters read as capitals, every pass: a title whose other
+  // words are all in capitals is taken as shouting.
+  assert.equal(tidyTitle("UMORA Niggas"), "Umora N*****");
+  assert.equal(tidyTitle("Field Niggas Live"), "Field N***** Live");
 });
 
 test("every stored title tidies the same the second time", () => {
@@ -221,11 +223,55 @@ test("the word run into another is masked and tidies the same twice", () => {
 test("a series named with the word is one series, stored or freshly scraped", () => {
   const titles = ["N***** Night: Ali Trio", "N***** Night: Bo Band", "Niggas Night: Dee Trio + Eli Band"];
   const series = seriesPrefixes(titles);
-  assert.ok(series.has("N***** Night"));
+  assert.equal(series.size, 1);
   assert.equal(tidyTitle("Niggas Night: Dee Trio + Eli Band", { series }), "N***** Night: Dee Trio");
 });
 
 test("only the mask's stars read as letters", () => {
   assert.equal(comparableTitle("**SOLD OUT** Wheel Throwing"), "**SOLD OUT** Wheel Throwing");
   assert.equal(comparableTitle("Sh*t Show"), "Sh*t Show");
+});
+
+test("the rule reads the same text on a second pass, whatever was taken off", () => {
+  for (const raw of [
+    "PICKLING PARTY feat. Field Niggas",
+    "TRANSATLANTIK II: Field Niggas, Ali Trio & Bo Band",
+    "Field Niggas present: PICKLING PARTY",
+    "MOVIE NIGHT (Niggadoors)",
+    "PICKLING PARTY feat. N*****",
+    "FIELD NiggA",
+    "Nigg (2026)as",
+    "Nigg (World Premiere)as",
+    "Ni (Doors 7pm)GGUH! closes",
+    "Ghost Light 2026 - (World Premiere)",
+    "Ghost Light 2026 | [World Premiere]",
+    "Ghost Light (Summer 2026 [World Premiere])",
+    "Ghost Light: (World Premiere)",
+    "NIGGASQUAD LIVE",
+    "NIGGAHOUSE PARTY",
+  ]) {
+    const once = tidyTitle(raw);
+    assert.equal(tidyTitle(once), once, raw);
+    assert.equal(hasSlur(once), false, raw);
+  }
+  assert.equal(tidyTitle("Ghost Light 2026 - (World Premiere)"), "Ghost Light");
+  assert.equal(tidyTitle("Ghost Light (Summer 2026 [World Premiere])"), "Ghost Light");
+  assert.equal(tidyTitle("Ghost Light: (World Premiere)"), "Ghost Light");
+  assert.equal(tidyTitle("Movie Night (Niggadoors)"), "Movie Night (N****doors)");
+});
+
+test("a venue's own masked word is read as main read it", () => {
+  assert.equal(tidyTitle("FIELD N***** LIVE"), "Field N***** Live");
+  assert.equal(tidyTitle("UMORA N*****"), "Umora N*****");
+  assert.equal(tidyTitle("Field N***"), "Field N***");
+});
+
+test("the -er spelling joined on is masked; snigger is not", () => {
+  assert.equal(tidyTitle("#BossNiggers"), "#BossN******");
+  assert.equal(tidyTitle("ClassNigger Live"), "ClassN***** Live");
+  same("Snigger");
+  assert.equal(tidyTitle("SNIGGERING CROWDS"), "Sniggering Crowds");
+  same("sniggers");
+  assert.equal(tidyTitle("NIGGASQUAD LIVE"), "N****squad Live");
+  assert.equal(comparableTitle("NIGGASQUAD LIVE").toLowerCase(), comparableTitle("NiggaSquad Live").toLowerCase());
 });

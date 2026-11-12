@@ -138,25 +138,39 @@ function headliner(rest: string): string {
     .trim();
 }
 
+/** " -", " |", ":" left on the end once what followed is gone. */
+const TRAILING_SEPARATOR = new RegExp(`(?:\\s+(?:${DASH}|\\|)|\\s*:)\\s*$`);
+
+/**
+ * Brackets, dates, years and counters off the end, until nothing more comes
+ * off: taking "(World Premiere)" off "Ghost Light 2026 - (World Premiere)"
+ * leaves a year that has to go too.
+ */
+function stripBilling(t: string): string {
+  for (let i = 0; i < 4; i++) {
+    const before = t;
+    t = t
+      .replace(EDITION_PAREN, "")
+      .replace(PREMIERE_PAREN, "")
+      .replace(SHOWTIME_PAREN, "")
+      .replace(LINEUP_PAREN, "");
+    t = t.replace(TRAILING_DATE, "").replace(TRAILING_YEAR, "");
+    t = t.replace(COURSE_COUNTER, "").replace(COURSE_COUNTER, "");
+    t = t.replace(TRAILING_SEPARATOR, "").trim();
+    if (t === before) break;
+  }
+  return t;
+}
+
 export function tidyTitle(raw: string, ctx: TitleContext = {}): string {
-  let t = raw.replace(/\s+/g, " ").trim();
+  // Every rule below reads a masked word as a word of capitals ("NXXXXX"),
+  // whether it arrives spelled out or already masked, so a second pass reads
+  // exactly what the first did. It goes back to stars at the very end.
+  let t = hide(raw.replace(/\s+/g, " ").trim());
 
-  // Mask first, so every rule below reads the same text on a second pass.
-  // Stars hide whether the word was written in lower case, which unshout
-  // needs to know, so that's noted before the letters go.
-  const hidesLower = hidesLowerCase(t);
-  t = mask(t);
+  t = stripBilling(t);
 
-  t = t
-    .replace(EDITION_PAREN, "")
-    .replace(PREMIERE_PAREN, "")
-    .replace(SHOWTIME_PAREN, "")
-    .replace(LINEUP_PAREN, "");
-  t = t.replace(TRAILING_DATE, "").replace(TRAILING_YEAR, "");
-  t = t.replace(COURSE_COUNTER, "").replace(COURSE_COUNTER, "");
-  t = t.replace(new RegExp(`\\s+(?:${DASH}|:|\\|)\\s*$`), "").trim();
-
-  if (OPENING.test(t)) return t || mask(raw.trim());
+  if (OPENING.test(t)) return show(t) || mask(raw.trim());
 
   // "x TEM present: A, B, C" → "A, B, C". The presenter is not the event.
   const presented = t.replace(PRESENTER, "");
@@ -178,51 +192,61 @@ export function tidyTitle(raw: string, ctx: TitleContext = {}): string {
     if (feat && feat[1]!.length >= 3) t = feat[1]!.trim();
   }
 
-  t = unshout(t.replace(/\s+/g, " ").trim(), hidesLower);
-  return t || mask(raw.trim());
+  // hide() again: taking a bracket out of the middle of a word can join it up.
+  t = unshout(hide(t.replace(/\s+/g, " ").trim()));
+  return show(t) || mask(raw.trim());
 }
 
 /**
  * Slurs the page never prints. Add to this list rather than editing a title by
  * hand. It also catches the word run into another ("Niggaz4Life", "Niggerati",
- * "#BossNiggas") but not "snigger", "niggardly" or "niggle".
+ * "#BossNiggers"). A trailing s, z or h counts only at the end of the word, so
+ * "NiggaSquad" and "NIGGASQUAD" both keep "Squad". "snigger", "niggardly" and
+ * "niggle" are left alone.
  */
-const SLUR = /nigg(?:ah|uh|a(?!rd))[sz]?|(?<!s)nigger[sz]?/gi;
-/** What mask() leaves: the first letter and four or more stars. */
-const MASKED = /[Nn]\*{4,}/;
-
-/** The first letter, then a star for each letter after it. */
-function mask(t: string): string {
-  return t.replace(SLUR, (w) => {
-    // "NiggaHouse": the capital starts the next word, so it isn't masked.
-    const core = /[a-z][A-Z]$/.test(w) ? w.slice(0, -1) : w;
-    return core.charAt(0) + "*".repeat(core.length - 1) + w.slice(core.length);
-  });
-}
+const SLUR =
+  /(s?)(nigg(?:[au]h(?=[sz]?(?![a-z]))|a(?!rd))(?:[sz](?![a-z]))?|nigger(?:[sz](?![a-z]))?)/gi;
+/** A word the page has masked: the first letter and four or more stars. */
+const MASKED = /([Nn])\*{4,}/g;
+/** The same word while the rules work on it: the first letter and capital X's. */
+const HIDDEN = /([Nn])[Xx]{4,}/g;
 
 /**
- * True when a word about to be masked has lower-case letters, or the title
- * already carries a masked word: either way its case is hidden, so the title
- * can't be known to be all capitals.
+ * The slur, or a word already masked, as its first letter and capital X's.
+ * "Snigger" and "SNIGGER" keep their letters; "BossNiggers" doesn't.
  */
-function hidesLowerCase(t: string): boolean {
-  if (MASKED.test(t)) return true;
-  return [...t.matchAll(SLUR)].some(([w]) => w !== w.toUpperCase());
+function hide(t: string): string {
+  return t
+    .replace(SLUR, (m, s: string, w: string) => {
+      if (s && /^nigger/i.test(w) && !(s === "s" && w.charAt(0) === "N")) return m;
+      return s + w.charAt(0) + "X".repeat(w.length - 1);
+    })
+    .replace(MASKED, (m, n: string) => n + "X".repeat(m.length - 1));
+}
+
+/** Back to stars: the first letter, then a star for each letter after it. */
+function show(t: string): string {
+  return hide(t).replace(HIDDEN, (m, n: string) => n + "*".repeat(m.length - 1));
+}
+
+/** The text with every slur masked. */
+function mask(t: string): string {
+  return show(t);
 }
 
 /** True when the text carries a word the page masks: an event link's address, say. */
 export function hasSlur(s: string): boolean {
-  return mask(s) !== s;
+  return hide(s.replace(MASKED, "")) !== s.replace(MASKED, "");
 }
 
 /**
- * A title as the duplicate checks compare it. A stored title is masked and a
- * freshly scraped one isn't, so both are masked here and the stars read as
- * letters: "Field Niggas" from the venue and "Field N*****" in events.json
- * come out the same, word for word.
+ * A title (or a page's text) as the duplicate and listing checks compare it.
+ * A stored title is masked and a freshly scraped one isn't, so both read the
+ * masked word as the same word of letters: "Field Niggas" from the venue and
+ * "Field N*****" in events.json come out the same, word for word.
  */
 export function comparableTitle(s: string): string {
-  return mask(s).replace(new RegExp(MASKED.source, "g"), (m) => m.charAt(0) + "x".repeat(m.length - 1));
+  return hide(s);
 }
 
 const KEEP_CAPS = new Set([
@@ -235,12 +259,8 @@ const SMALL = new Set([
   "for", "with", "from", "vs", "via", "as",
 ]);
 
-/**
- * "PICKLING PARTY" → "Pickling Party". Only a whole title in capitals. A masked
- * word whose letters were in lower case ("UMORA N*****") means it wasn't.
- */
-function unshout(t: string, hidesLower = false): string {
-  if (hidesLower) return t;
+/** "PICKLING PARTY" → "Pickling Party". Only a whole title in capitals. */
+function unshout(t: string): string {
   const letters = t.replace(/[^A-Za-z]/g, "");
   if (letters.length < 4 || letters !== letters.toUpperCase()) return t;
   if (t.split(/[\s/]+/).filter((w) => /[A-Za-z]/.test(w)).length < 2) return t;
@@ -268,8 +288,9 @@ function unshout(t: string, hidesLower = false): string {
 export function seriesPrefixes(titles: Iterable<string>): Set<string> {
   const seen = new Map<string, Set<string>>();
   for (const title of titles) {
-    // Masked, so a stored "N***** Night" and a fresh scrape share one head.
-    const m = mask(title).match(/^(.+?):\s+(.+)$/);
+    // Read as tidyTitle reads it, so a stored "N***** Night" and a fresh
+    // scrape share one head.
+    const m = hide(title).match(/^(.+?):\s+(.+)$/);
     if (!m) continue;
     const [, head, rest] = m as [string, string, string];
     if (!seen.has(head)) seen.set(head, new Set());
