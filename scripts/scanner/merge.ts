@@ -4,6 +4,8 @@ import { findDuplicateOf } from "./dedupe";
 import { cleanText } from "../../src/lib/entities";
 import { parseVenue, stripVenuePrefix } from "../../src/lib/venue";
 import { seriesPrefixes, tidyTitle } from "../../src/lib/title";
+import { isPublicNote } from "../../src/lib/notes";
+import { saysMidnight } from "../../src/lib/dates";
 
 /**
  * Opaque and permanent. Never derive a uid from date, title, or venue: the
@@ -126,12 +128,16 @@ export function mergeIntoEvents(
     const normalized: CalEvent = {
       ...event,
       event: tidyTitle(stripVenuePrefix(cleanText(event.event), parts.venue), { series }),
-      note: typeof event.note === "string" ? cleanText(event.note) || null : event.note,
+      note: typeof event.note === "string" && isPublicNote(cleanText(event.note)) ? cleanText(event.note) : null,
       where: parts.where,
       venue: parts.venue,
       neighborhood: parts.neighborhood,
       address: parts.address,
     };
+    if (normalized.start === "00:00" && !saysMidnight(normalized.event, normalized.note)) {
+      normalized.start = null;
+      normalized.end = null;
+    }
     const withUid: CalEvent = normalized.uid
       ? normalized
       : { ...normalized, uid: newUid() };

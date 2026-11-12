@@ -1,4 +1,5 @@
 import type { CalEvent } from "../types";
+import { isPublicNote } from "./notes";
 import { parseEventDate } from "./dates";
 
 function pad(n: number): string {
@@ -132,7 +133,7 @@ function slug(s: string): string {
 /** The description every calendar entry carries: the feeds and both single-event routes. */
 function describe(e: CalEvent): string {
   const parts: string[] = [];
-  if (e.note) parts.push(e.note);
+  if (isPublicNote(e.note)) parts.push(e.note);
   // "TBD" is what the old site printed when it didn't know the price. It told
   // the reader nothing, so say nothing.
   if (e.cost && e.cost.trim().toUpperCase() !== "TBD") {

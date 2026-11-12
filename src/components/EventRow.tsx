@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react";
+import { isPublicNote } from "../lib/notes";
 import type { CalEvent } from "../types";
 import { formatDaysUntil } from "../lib/dates";
 import { formatCost } from "../lib/cost";
@@ -197,7 +198,7 @@ export function EventRow({
         <div className="event-where">{event.where}</div>
         {/* Upcoming only: notes on past events were never reviewed for the
             public and some are private planning ("Tickets bought."). */}
-        {event.note && !past ? (
+        {isPublicNote(event.note) && !past ? (
           <div className="event-note" title={event.note}>
             {event.note}
           </div>

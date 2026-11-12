@@ -18,7 +18,7 @@
       },
       "schedule": {
         "kind": "session",
-        "weeks": 7,
+        "weeks": 6,
         "note": "6-8 week sessions year-round plus weekend one-offs"
       },
       "access": [
@@ -342,7 +342,7 @@
       "disciplines": [
         "printmaking"
       ],
-      "neighborhood": "Lower East Side",
+      "neighborhood": "Garment District",
       "borough": "manhattan",
       "url": "https://www.printshop.org/classes-workshops",
       "cost": {
@@ -434,10 +434,9 @@
         "contact-first"
       ],
       "verifiedOn": "2026-07-14",
-      "caveat": "Email info@mobileprintpower.com to join. Site was unreachable on Jul 14 and Nov 12.",
       "availability": {
         "status": "unknown",
-        "note": "Their site did not resolve on Jul 14 or Nov 12. The Tuesday workshop may still run; email info@mobileprintpower.com to confirm."
+        "note": "Their site has been down since July. The Tuesday workshop may still run; email info@mobileprintpower.com to check."
       }
     },
     {
@@ -1366,7 +1365,7 @@
         "drop-in"
       ],
       "verifiedOn": "2026-07-14",
-      "caveat": "Adult and teen classes are Mon/Wed/Fri 6:30-8pm and Sat 11am-noon at the Co-op School in Bed-Stuy. $30/class or $120/month; semesters from $799. If you're new to capoeira, code FIRSTCLASS takes $20 off your first class. Call (917) 224-1209."
+      "caveat": "Adults and teens. Also Sat 11am–12pm. Classes are at the Co-op School. $120/month, or semesters from $799. New to capoeira: code FIRSTCLASS takes $20 off your first class. Call (917) 224-1209."
     },
     {
       "id": "humanist-project",
@@ -1426,7 +1425,7 @@
     {
       "id": "bushwick-starr",
       "name": "The Bushwick Starr",
-      "what": "Free community workshops in August, part of Summers at the Starr.",
+      "what": "Free community workshops every August (Summers at the Starr).",
       "disciplines": [
         "theatre"
       ],
@@ -1445,10 +1444,10 @@
         "enroll-ahead"
       ],
       "verifiedOn": "2026-07-06",
-      "caveat": "Summers at the Starr runs free community workshops in August. In 2026 those were body mapping (movement, text, drawing) and a devising workshop on sound and memory. 2027 dates not yet posted.",
+      "caveat": "2026's were body mapping (movement, text, drawing) and a devising workshop on sound and memory.",
       "availability": {
         "status": "dormant",
-        "note": "Summers at the Starr runs in August; 2027 dates not yet posted.",
+        "note": "2027 dates not posted yet.",
         "resumes": "2027-08",
         "resumesEstimated": true
       }
@@ -1510,10 +1509,10 @@
         "contact-first"
       ],
       "verifiedOn": "2026-07-06",
-      "caveat": "Fall 2026 session ended in October; next session not posted yet. RSVP now at fireensemble.com/choir-form. Correct site is fireensemble.com, NOT singforhope.org.",
+      "caveat": "RSVP for the next session at fireensemble.com/choir-form.",
       "availability": {
         "status": "dormant",
-        "note": "Fall 2026 session ended in October. Next session not posted yet. The ensemble runs spring and fall sessions."
+        "note": "Fall 2026 ended in October. The next session isn't posted; they run spring and fall."
       }
     },
     {
