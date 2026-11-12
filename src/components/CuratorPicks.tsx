@@ -1,18 +1,17 @@
 import { useEffect, useMemo, useState } from "react";
-import eventsData from "../data/events.json";
-import type { CalEvent, EventsData, TabMode } from "../types";
+import type { CalEvent, TabMode } from "../types";
 import { matchesTab } from "../lib/tab";
 import { isPast, parseEventDate, today } from "../lib/dates";
 import { formatCost } from "../lib/cost";
+import { CURRENT_EVENTS } from "../lib/events";
 import { buildPickIndex, pickId } from "../lib/picks";
 import { CURATOR_HASH } from "../lib/curator";
 import { fetchByHash, type PickNotes } from "../lib/sync";
 
-const data = eventsData as EventsData;
-const ALL: CalEvent[] = data.weeks.flatMap((w) => w.events as CalEvent[]);
-// Indexed by every identity an event answers to, so a pick starred before a
-// rename or a dedupe merge still resolves here.
-const BY_ID = buildPickIndex(ALL);
+// Don't miss only lists what's ahead, so the events from this week on cover
+// it. Indexed by every identity an event answers to, so a pick starred before
+// a rename or a dedupe merge still resolves here.
+const BY_ID = buildPickIndex(CURRENT_EVENTS);
 
 // The editorial lede: the events the CURATOR has starred (under the shared
 // curator passphrase, synced to Supabase — the same identity that powers the

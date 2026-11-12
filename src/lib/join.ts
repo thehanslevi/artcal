@@ -1,12 +1,8 @@
-import eventsData from "../data/events.json";
-import type { CalEvent, EventsData } from "../types";
+import type { CalEvent } from "../types";
 import type { Practice } from "../types/practice";
 import { isPast, parseEventDate } from "./dates";
+import { CURRENT_EVENTS } from "./events";
 import { hostOf, isAggregator } from "./host";
-
-const ALL: CalEvent[] = (eventsData as EventsData).weeks.flatMap(
-  (w) => w.events as CalEvent[],
-);
 
 /**
  * The bridge between the two models.
@@ -40,9 +36,12 @@ function matchesVenue(p: Practice, e: CalEvent): boolean {
   return venue.includes(name) || name.includes(venue);
 }
 
-/** Upcoming dated making sessions at this venue, soonest first. */
+/**
+ * Upcoming dated making sessions at this venue, soonest first. Only upcoming
+ * ones count, so the events from this week on are all it needs.
+ */
 export function datedSessionsFor(p: Practice, now: Date): CalEvent[] {
-  return ALL.filter((e) => e.mode === "make" && matchesVenue(p, e))
+  return CURRENT_EVENTS.filter((e) => e.mode === "make" && matchesVenue(p, e))
     .map((e) => ({ e, d: parseEventDate(e.date) }))
     .filter((x) => x.d && !isPast(x.d, now))
     .sort((a, b) => a.d!.getTime() - b.d!.getTime())
