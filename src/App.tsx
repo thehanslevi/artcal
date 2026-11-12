@@ -40,6 +40,7 @@ import { Spaces } from "./components/Spaces";
 import { SubscribePanel } from "./components/SubscribePanel";
 import { SubmitPanel } from "./components/SubmitPanel";
 import { CuratorPicks } from "./components/CuratorPicks";
+import { StartingSoon } from "./components/StartingSoon";
 import { Directory } from "./components/Directory";
 import { PRACTICES_CHECKED } from "./lib/practices";
 import { track } from "./lib/usage";
@@ -413,6 +414,7 @@ function App() {
       <main className="zone zone-main">
         <div className="zone-inner">
       <CuratorPicks tab={tab} />
+      {view === "making" ? <StartingSoon /> : null}
       <div className="filter-row">
         <FilterBar active={filter} onChange={setFilter} counts={counts} />
         <button
