@@ -2486,3 +2486,84 @@ a:hover {
     box-shadow: none;
   }
 }
+
+/* Countdown chips say "in 3 months" now. A long one wraps inside the date
+   column instead of running into the title; on a phone the chip is a size
+   down so "yesterday" still fits the 60px column on one line.
+
+   Touch screens: every control is at least 44px tall to tap. A fine pointer
+   keeps the sizes above. */
+.event-day .countdown {
+  width: fit-content;
+  max-width: 100%;
+  padding: 1px 6px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .event-day .countdown {
+    padding: 1px 4px;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+}
+
+@media (pointer: coarse) {
+  .subscribe-badge,
+  .sync-badge,
+  .view-btn,
+  .filter-btn,
+  .picks-toggle,
+  .free-toggle,
+  .weekend-toggle,
+  .export-btn,
+  .week-nav-btn,
+  .week-nav-select,
+  .mini-toggle,
+  .dir-chip,
+  .dir-toggle,
+  .spaces-toggle,
+  .subscribe-copy-btn,
+  .subscribe-create-btn,
+  .subscribe-medium-btn,
+  .sync-input,
+  .sync-save-btn,
+  .sync-secondary-btn,
+  .submit-copy-btn,
+  .curator-note-input {
+    min-height: 44px;
+  }
+
+  .week-nav-btn {
+    min-width: 44px;
+  }
+
+  .subscribe-help summary,
+  .submit-mailto {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  /* Buttons set in a line of text keep their place in it, and an invisible
+     area around each takes the tap. The star stays the same size that way. */
+  .howto-link,
+  .about-submit-link,
+  .footer-submit-btn {
+    position: relative;
+  }
+
+  .howto-link::after,
+  .about-submit-link::after,
+  .footer-submit-btn::after {
+    content: "";
+    position: absolute;
+    inset: -15px 0;
+  }
+
+  .pick-btn::after {
+    content: "";
+    position: absolute;
+    inset: -9px -7px;
+  }
+}
