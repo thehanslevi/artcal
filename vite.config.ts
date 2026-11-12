@@ -2,15 +2,24 @@ import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { defineConfig, normalizePath, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
-import { groupEventsIntoWeeks, isPastWeek, parseEventDate } from './src/lib/dates.ts'
+import { parseEventDate } from './src/lib/dates.ts'
 import type { CalEvent, EventsData } from './src/types.ts'
 
-// The page ships with the events from the start of this week on. Everything
-// older is its own chunk, fetched the first time someone turns on "Show past"
-// (src/lib/events.ts). Most of events.json is in the past, and most visits
-// never ask for it. Scripts and the .ics feeds still read events.json whole.
+// The page ships with the events from two weeks before this week's Monday on.
+// Everything older is its own chunk, fetched the first time someone turns on
+// "Show past" (src/lib/events.ts). Most of events.json is in the past, and most
+// visits never ask for it. Scripts and the .ics feeds still read events.json
+// whole.
 const CURRENT_ID = 'virtual:events-current'
 const PAST_ID = 'virtual:events-past'
+
+/**
+ * Days before this week's Monday that ship with the page. Starting soon
+ * (src/lib/starting.ts) reads the 14 days before a class to tell one starting
+ * from one already running, so those days have to be there for every class in
+ * its window. A multiple of 7, so weeks stay whole.
+ */
+export const HISTORY_DAYS = 14
 
 interface Split {
   current: CalEvent[]
@@ -27,18 +36,20 @@ function earliestDateAnywhere(): Date {
   return new Date(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate())
 }
 
-function splitEvents(data: EventsData, from: Date): Split {
+export function splitEvents(data: EventsData, from: Date): Split {
   const all = data.weeks.flatMap((w) => w.events)
-  // Whole weeks, grouped the way the calendar groups them, so a week is never
-  // half in one chunk. The first week that isn't over starts the current one.
-  const firstOpen = groupEventsIntoWeeks(all).find((w) => !isPastWeek(w, from))
+  // Whole weeks, Monday to Sunday as the calendar groups them, so a week is
+  // never half in one chunk. The current one starts HISTORY_DAYS before the
+  // Monday of the week `from` is in.
+  const monday = from.getDate() - ((from.getDay() + 6) % 7)
+  const cutoff = new Date(from.getFullYear(), from.getMonth(), monday - HISTORY_DAYS)
   const current: CalEvent[] = []
   const past: CalEvent[] = []
   for (const e of all) {
     const d = parseEventDate(e.date)
     // App.tsx lists an event with no readable date as upcoming, so it ships
     // with the page.
-    if (d && (!firstOpen || d < firstOpen.start)) past.push(e)
+    if (d && d < cutoff) past.push(e)
     else current.push(e)
   }
 
