@@ -162,8 +162,23 @@ function stripBilling(t: string): string {
   return t;
 }
 
+/**
+ * The rule, applied until the title stops changing. Each step only takes text
+ * away or brings capitals down, once, so this settles in a pass or two; a
+ * title the rule has already tidied comes back as it is.
+ */
 export function tidyTitle(raw: string, ctx: TitleContext = {}): string {
-  // Every rule below reads a masked word as a word of capitals ("NXXXXX"),
+  let t = tidyOnce(raw, ctx);
+  for (let i = 0; i < 5; i++) {
+    const next = tidyOnce(t, ctx);
+    if (next === t) break;
+    t = next;
+  }
+  return t;
+}
+
+function tidyOnce(raw: string, ctx: TitleContext): string {
+  // Every rule below reads a masked word as a word of capitals ("NQQQQQ"),
   // whether it arrives spelled out or already masked, so a second pass reads
   // exactly what the first did. It goes back to stars at the very end.
   let t = hide(raw.replace(/\s+/g, " ").trim());
@@ -200,28 +215,33 @@ export function tidyTitle(raw: string, ctx: TitleContext = {}): string {
 /**
  * Slurs the page never prints. Add to this list rather than editing a title by
  * hand. It also catches the word run into another ("Niggaz4Life", "Niggerati",
- * "#BossNiggers"). A trailing s, z or h counts only at the end of the word, so
- * "NiggaSquad" and "NIGGASQUAD" both keep "Squad". "snigger", "niggardly" and
- * "niggle" are left alone.
+ * "#BossNiggers", "NigguhSquad"). A trailing s or z, and the h of "-ah", count
+ * only at the end of the word, so "NiggaSquad" and "NIGGASQUAD" both keep
+ * "Squad". "snigger" at the start of a word, "niggardly" and "niggle" are left
+ * alone. The first group is an s that starts a word, for "snigger".
  */
 const SLUR =
-  /(s?)(nigg(?:[au]h(?=[sz]?(?![a-z]))|a(?!rd))(?:[sz](?![a-z]))?|nigger(?:[sz](?![a-z]))?)/gi;
+  /((?<![a-z])s)?(nigg(?:uh|ah(?=[sz]?(?![a-z]))|a(?!rd))(?:[sz](?![a-z]))?|nigger(?:[sz](?![a-z]))?)/gi;
 /** A word the page has masked: the first letter and four or more stars. */
 const MASKED = /([Nn])\*{4,}/g;
-/** The same word while the rules work on it: the first letter and capital X's. */
-const HIDDEN = /([Nn])[Xx]{4,}/g;
-
 /**
- * The slur, or a word already masked, as its first letter and capital X's.
- * "Snigger" and "SNIGGER" keep their letters; "BossNiggers" doesn't.
+ * The same word while the rules work on it: the first letter and Q's. Real
+ * titles never put four Q's after an N, so nothing else turns into stars.
  */
+const HIDDEN = /([Nn])[Qq]{4,}/g;
+
+/** "snigger", "Snigger", "SNIGGER": the real word, spelled the ways it is. */
+function isSnigger(s: string, w: string): boolean {
+  return /^nigger/i.test(w) && (w.charAt(0) === "n" || (s === "S" && w === w.toUpperCase()));
+}
+
+/** The slur, or a word already masked, as its first letter and capital Q's. */
 function hide(t: string): string {
   return t
-    .replace(SLUR, (m, s: string, w: string) => {
-      if (s && /^nigger/i.test(w) && !(s === "s" && w.charAt(0) === "N")) return m;
-      return s + w.charAt(0) + "X".repeat(w.length - 1);
-    })
-    .replace(MASKED, (m, n: string) => n + "X".repeat(m.length - 1));
+    .replace(SLUR, (m, s: string | undefined, w: string) =>
+      s && isSnigger(s, w) ? m : (s ?? "") + w.charAt(0) + "Q".repeat(w.length - 1),
+    )
+    .replace(MASKED, (m, n: string) => n + "Q".repeat(m.length - 1));
 }
 
 /** Back to stars: the first letter, then a star for each letter after it. */

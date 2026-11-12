@@ -275,3 +275,23 @@ test("the -er spelling joined on is masked; snigger is not", () => {
   assert.equal(tidyTitle("NIGGASQUAD LIVE"), "N****squad Live");
   assert.equal(comparableTitle("NIGGASQUAD LIVE").toLowerCase(), comparableTitle("NiggaSquad Live").toLowerCase());
 });
+
+test("every spelling run into another word is masked; ordinary x's are not", () => {
+  assert.equal(tidyTitle("NigguhSquad"), "N*****Squad");
+  assert.equal(tidyTitle("RealNigguhsLive"), "RealN*****sLive");
+  assert.equal(tidyTitle("#BOSSNiggers"), "#BOSSN******");
+  assert.equal(tidyTitle("SNiggers Night"), "SN****** Night");
+  assert.equal(tidyTitle("BOSSNIGGERS PARTY"), "Bossn****** Party");
+  same("Snigger");
+  same("SNIGGER");
+  for (const t of ["Lynxxxxx Night", "Jinxxxxx!", "NXXXX Party", "Room NXXXXXXX", "Annxxxxx Building Jazz"]) same(t);
+  assert.equal(tidyTitle("NiggaXXL Tour"), "N****XXL Tour");
+});
+
+test("a colon left by the line-up step comes off on the first pass", () => {
+  for (const raw of ["Show:: Royel Otis + Ax", "Jazz Night:: A, B and more", "Show 2026:: Royel Otis + Ax"]) {
+    const once = tidyTitle(raw);
+    assert.equal(tidyTitle(once), once, raw);
+  }
+  assert.equal(tidyTitle("Show:: Royel Otis + Ax"), "Show");
+});

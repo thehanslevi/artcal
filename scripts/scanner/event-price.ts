@@ -22,6 +22,7 @@
 // gets its own page instead, when the calendar links to one that shows the
 // event on its date before it turns to other sessions.
 import type { CalEvent } from "../../src/types.ts";
+import { comparableTitle } from "../../src/lib/title.ts";
 import { datePositions, judgeListing, plainText, showsEvent, wordsIn, type ListingResult, type PageRead } from "./listing-check.ts";
 
 export interface PriceRead {
@@ -50,7 +51,10 @@ interface Text {
 }
 
 function prepare(text: string): Text {
-  const raw = text
+  // Read the way the title words are (see plainText): a masked stored title
+  // still finds the word the page spells out. Same length, so raw and low
+  // stay aligned.
+  const raw = comparableTitle(text)
     .replace(/\r/g, "")
     .replace(/[^\S\n]+/g, " ")
     .replace(/ ?\n\s*/g, "\n")
