@@ -141,6 +141,12 @@ function headliner(rest: string): string {
 export function tidyTitle(raw: string, ctx: TitleContext = {}): string {
   let t = raw.replace(/\s+/g, " ").trim();
 
+  // Mask first, so every rule below reads the same text on a second pass.
+  // Stars hide whether the word was written in lower case, which unshout
+  // needs to know, so that's noted before the letters go.
+  const hidesLower = hidesLowerCase(t);
+  t = mask(t);
+
   t = t
     .replace(EDITION_PAREN, "")
     .replace(PREMIERE_PAREN, "")
@@ -150,7 +156,7 @@ export function tidyTitle(raw: string, ctx: TitleContext = {}): string {
   t = t.replace(COURSE_COUNTER, "").replace(COURSE_COUNTER, "");
   t = t.replace(new RegExp(`\\s+(?:${DASH}|:|\\|)\\s*$`), "").trim();
 
-  if (OPENING.test(t)) return mask(t) || mask(raw.trim());
+  if (OPENING.test(t)) return t || mask(raw.trim());
 
   // "x TEM present: A, B, C" → "A, B, C". The presenter is not the event.
   const presented = t.replace(PRESENTER, "");
@@ -172,20 +178,36 @@ export function tidyTitle(raw: string, ctx: TitleContext = {}): string {
     if (feat && feat[1]!.length >= 3) t = feat[1]!.trim();
   }
 
-  t = mask(unshout(t.replace(/\s+/g, " ").trim()));
+  t = unshout(t.replace(/\s+/g, " ").trim(), hidesLower);
   return t || mask(raw.trim());
 }
 
 /**
  * Slurs the page never prints. Add to this list rather than editing a title by
  * hand. It also catches the word run into another ("Niggaz4Life", "Niggerati",
- * "FieldNiggas") but not "snigger" or "niggardly".
+ * "#BossNiggas") but not "snigger", "niggardly" or "niggle".
  */
-const SLUR = /(?<!s)nigg(?:ah|uh|er|a(?!rd))[sz]?/gi;
+const SLUR = /nigg(?:ah|uh|a(?!rd))[sz]?|(?<!s)nigger[sz]?/gi;
+/** What mask() leaves: the first letter and four or more stars. */
+const MASKED = /[Nn]\*{4,}/;
 
 /** The first letter, then a star for each letter after it. */
 function mask(t: string): string {
-  return t.replace(SLUR, (w) => w.charAt(0) + "*".repeat(w.length - 1));
+  return t.replace(SLUR, (w) => {
+    // "NiggaHouse": the capital starts the next word, so it isn't masked.
+    const core = /[a-z][A-Z]$/.test(w) ? w.slice(0, -1) : w;
+    return core.charAt(0) + "*".repeat(core.length - 1) + w.slice(core.length);
+  });
+}
+
+/**
+ * True when a word about to be masked has lower-case letters, or the title
+ * already carries a masked word: either way its case is hidden, so the title
+ * can't be known to be all capitals.
+ */
+function hidesLowerCase(t: string): boolean {
+  if (MASKED.test(t)) return true;
+  return [...t.matchAll(SLUR)].some(([w]) => w !== w.toUpperCase());
 }
 
 /** True when the text carries a word the page masks: an event link's address, say. */
@@ -200,7 +222,7 @@ export function hasSlur(s: string): boolean {
  * come out the same, word for word.
  */
 export function comparableTitle(s: string): string {
-  return mask(s).replace(/\*/g, "x");
+  return mask(s).replace(new RegExp(MASKED.source, "g"), (m) => m.charAt(0) + "x".repeat(m.length - 1));
 }
 
 const KEEP_CAPS = new Set([
@@ -213,12 +235,12 @@ const SMALL = new Set([
   "for", "with", "from", "vs", "via", "as",
 ]);
 
-/** "PICKLING PARTY" → "Pickling Party". Only a whole title in capitals. */
-function unshout(t: string): string {
-  // A masked word ("N*****") hides its letters, so the title can't be known to
-  // be all capitals. Leaving it alone keeps the rule giving the same answer on
-  // a second pass, after the first pass masked a lower-case word.
-  if (/[A-Za-z]\*/.test(t)) return t;
+/**
+ * "PICKLING PARTY" → "Pickling Party". Only a whole title in capitals. A masked
+ * word whose letters were in lower case ("UMORA N*****") means it wasn't.
+ */
+function unshout(t: string, hidesLower = false): string {
+  if (hidesLower) return t;
   const letters = t.replace(/[^A-Za-z]/g, "");
   if (letters.length < 4 || letters !== letters.toUpperCase()) return t;
   if (t.split(/[\s/]+/).filter((w) => /[A-Za-z]/.test(w)).length < 2) return t;
@@ -246,7 +268,8 @@ function unshout(t: string): string {
 export function seriesPrefixes(titles: Iterable<string>): Set<string> {
   const seen = new Map<string, Set<string>>();
   for (const title of titles) {
-    const m = title.match(/^(.+?):\s+(.+)$/);
+    // Masked, so a stored "N***** Night" and a fresh scrape share one head.
+    const m = mask(title).match(/^(.+?):\s+(.+)$/);
     if (!m) continue;
     const [, head, rest] = m as [string, string, string];
     if (!seen.has(head)) seen.set(head, new Set());

@@ -188,3 +188,44 @@ test("hasSlur and comparableTitle", () => {
   assert.equal(comparableTitle("Field Niggas"), comparableTitle("Field N*****"));
   assert.equal(comparableTitle("Relief Printmaking"), "Relief Printmaking");
 });
+
+test("a venue's own stars don't stop a shouted title being fixed", () => {
+  assert.equal(tidyTitle("SH*T SHOW COMEDY"), "Sh*t Show Comedy");
+  assert.equal(tidyTitle("WHAT THE F*** IS ART"), "What the F*** Is Art");
+  assert.equal(
+    tidyTitle("HOW TO LIVE & MAKE ART IN THESE F**KED-UP TIMES"),
+    "How to Live & Make Art in These F**ked-Up Times",
+  );
+});
+
+test("the word run into another is masked and tidies the same twice", () => {
+  assert.equal(tidyTitle("NiggaHouse"), "N****House");
+  assert.equal(tidyTitle("NiggaSquad Live"), "N****Squad Live");
+  assert.equal(tidyTitle("#BossNiggas"), "#BossN*****");
+  assert.equal(tidyTitle("ThisIsNiggas"), "ThisIsN*****");
+  for (const raw of [
+    "Show: Niggaband, Foo",
+    "The Fest: NiggaDJ, Foo",
+    "Movie Night (Niggadoors)",
+    "Niggaz4Life: Ice Trio, Ren Band",
+    "x TEM present: Niggaband, Foo + Bar",
+    "JAZZ - Niggatrio (World Premiere)",
+    "NIGGAZ4LIFE LISTENING PARTY (5th annual)",
+  ]) {
+    const once = tidyTitle(raw);
+    assert.equal(tidyTitle(once), once, raw);
+    assert.equal(hasSlur(once), false, raw);
+  }
+});
+
+test("a series named with the word is one series, stored or freshly scraped", () => {
+  const titles = ["N***** Night: Ali Trio", "N***** Night: Bo Band", "Niggas Night: Dee Trio + Eli Band"];
+  const series = seriesPrefixes(titles);
+  assert.ok(series.has("N***** Night"));
+  assert.equal(tidyTitle("Niggas Night: Dee Trio + Eli Band", { series }), "N***** Night: Dee Trio");
+});
+
+test("only the mask's stars read as letters", () => {
+  assert.equal(comparableTitle("**SOLD OUT** Wheel Throwing"), "**SOLD OUT** Wheel Throwing");
+  assert.equal(comparableTitle("Sh*t Show"), "Sh*t Show");
+});

@@ -2649,6 +2649,9 @@ a:hover {
     grid-column: 2;
     grid-row: 2;
     padding-top: 4px;
+    /* Under the title, lined up with it, and as wide as the column. */
+    max-width: none;
+    text-align: start;
   }
 
   .pill {

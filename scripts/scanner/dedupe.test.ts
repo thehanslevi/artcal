@@ -76,3 +76,9 @@ test("a raw scrape matches its masked stored title", () => {
   assert.ok(isLikelyDuplicate(ev({ event: "The Nigga", where }), ev({ event: "The N****", where })));
   assert.ok(!isLikelyDuplicate(ev({ event: "Niggas", where, start: "19:00" }), ev({ event: "Remake", where, start: "19:00" })));
 });
+
+test("a decorated title still matches its plain spelling", () => {
+  const where = "Choplet Ceramic Studio";
+  assert.ok(isLikelyDuplicate(ev({ event: "**SOLD OUT** Wheel Throwing", where }), ev({ event: "SOLD OUT: Wheel Throwing", where })));
+  assert.ok(isLikelyDuplicate(ev({ event: "*FREE* Open Studio", where }), ev({ event: "FREE Open Studio", where })));
+});
