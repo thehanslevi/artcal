@@ -15,9 +15,32 @@
 // network problem or a redesign, not 25% of the calendar being wrong.
 // Removals go to scripts/scanner/removed-events.json with the reason, which
 // the scan's gate reads so the same event isn't scraped back in.
+//
+// The same reads fill in what a listing is missing (scanner/event-price.ts): a
+// price for one still at TBD, when its page states one, and the event's own
+// page for one whose link is a venue's calendar or a page shared with other
+// events. Fills are kept in event-checks.json with the words the price came
+// from, and --apply replays them too, onto listings still at TBD or still on
+// the old link. A listing its own page shows on its date counts as checked,
+// whatever the calendar it was linked to says.
+//
+// A fill someone puts back by hand (the price back to TBD, the link back to
+// the calendar) is a decision: it goes under `declined` and isn't made again.
+// Taking an entry out of `declined` lets the check make that fill again.
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import type { CalEvent, EventsData } from "../src/types.ts";
+import {
+  directLinks,
+  isTbd,
+  listingUrls,
+  planFill,
+  sortFills,
+  type Declined,
+  type Fill,
+  type Made,
+  type PageReadWithLinks,
+} from "./scanner/event-price.ts";
 import { closeBrowser, renderPage } from "./scanner/fetchers.ts";
 import { judgeListing, type ListingResult } from "./scanner/listing-check.ts";
 
@@ -29,11 +52,19 @@ const FLOOR = 0.25;
 const POOL = 4;
 
 interface CheckRow { last: string; result: ListingResult; strikes: number }
+/** A price or an own-page link the run found; `replaces` is the link it was found on. */
+interface FillRow extends Fill { replaces?: string }
 interface ChecksFile {
   ranAt: string;
   rows: Record<string, CheckRow>;
   /** Decided by the last full run; --apply replays these onto a fresh main. */
   remove: { uid: string; why: string }[];
+  /** Found by the last full run; --apply replays these too. */
+  fill?: FillRow[];
+  /** Fills made by earlier runs, kept so a hand undo of one can be seen. */
+  filled?: Made[];
+  /** Fills undone by hand, which the check won't make again. */
+  declined?: Declined[];
   /** Set when the run read every listing and stayed under the floor. */
   verifiedOn?: string;
 }
@@ -73,17 +104,41 @@ function applyRemovals(list: { uid: string; why: string }[], on: string): number
   return n;
 }
 
+/**
+ * A price for a listing still at TBD, and its own page for a listing still on
+ * the link the run read. A hand edit made since then stays.
+ */
+function applyFills(list: FillRow[]): number {
+  if (!list.length) return 0;
+  const data = load<EventsData>(EVENTS, { lastVerified: "", weeks: [] });
+  const byUid = new Map(list.map((f) => [f.uid, f]));
+  let n = 0;
+  for (const e of data.weeks.flatMap((w) => w.events)) {
+    const f = byUid.get(e.uid);
+    if (!f) continue;
+    const cost = f.cost && isTbd(e.cost);
+    const url = f.url && f.replaces && e.url === f.replaces;
+    if (cost) e.cost = f.cost!;
+    if (url) e.url = f.url!;
+    if (cost || url) n += 1;
+  }
+  if (n) writeFileSync(EVENTS, JSON.stringify(data, null, 2) + "\n");
+  return n;
+}
+
 const args = process.argv.slice(2);
 const today = new Date();
 today.setHours(0, 0, 0, 0);
 const on = localDate(today);
 
 /**
- * Take down what the run decided, and if every listing was read, say the
- * calendar was verified today: that's what the Happenings footer shows.
+ * Take down what the run decided, fill in what it found, and if every listing
+ * was read, say the calendar was verified today: that's what the Happenings
+ * footer shows.
  */
-function applyChecks(checks: ChecksFile): number {
-  const n = applyRemovals(checks.remove, on);
+function applyChecks(checks: ChecksFile): { removed: number; filled: number } {
+  const removed = applyRemovals(checks.remove, on);
+  const filled = applyFills(checks.fill ?? []);
   if (checks.verifiedOn) {
     const data = load<EventsData>(EVENTS, { lastVerified: "", weeks: [] });
     if (!data.lastVerified || data.lastVerified < checks.verifiedOn) {
@@ -91,12 +146,13 @@ function applyChecks(checks: ChecksFile): number {
       writeFileSync(EVENTS, JSON.stringify(data, null, 2) + "\n");
     }
   }
-  return n;
+  return { removed, filled };
 }
 
 if (args.includes("--apply")) {
   const checks = load<ChecksFile>(CHECKS, { ranAt: "", rows: {}, remove: [] });
-  console.log(`Applied ${applyChecks(checks)} removal(s) from the last check.`);
+  const { removed, filled } = applyChecks(checks);
+  console.log(`Applied ${removed} removal(s) and ${filled} fill(s) from the last check.`);
   process.exit(0);
 }
 
@@ -112,33 +168,73 @@ const byUrl = new Map<string, CalEvent[]>();
 for (const { e } of upcoming) if (e.url) byUrl.set(e.url, [...(byUrl.get(e.url) ?? []), e]);
 
 console.log(`Checking ${upcoming.length} upcoming listings on ${byUrl.size} pages...`);
-const pages = new Map<string, { status: number; text: string; url: string }>();
-const urls = [...byUrl.keys()];
-let next = 0;
-await Promise.all(
-  Array.from({ length: POOL }, async () => {
-    while (next < urls.length) {
-      const url = urls[next++]!;
-      const p = await renderPage(url);
-      pages.set(url, { status: p.status, text: p.text, url: p.url });
-    }
-  }),
-);
+const pages = new Map<string, PageReadWithLinks>();
+async function read(urls: string[]): Promise<void> {
+  let next = 0;
+  await Promise.all(
+    Array.from({ length: POOL }, async () => {
+      while (next < urls.length) {
+        const url = urls[next++]!;
+        const p = await renderPage(url);
+        pages.set(url, { status: p.status, text: p.text, url: p.url, links: p.links });
+      }
+    }),
+  );
+}
+await read([...byUrl.keys()]);
+
+// A calendar or a page shared by several events: read the event pages it links
+// to, for each listing's own page and price.
+const listing = listingUrls(upcoming.map(({ e }) => e));
+const linked = new Set<string>();
+for (const { e } of upcoming) {
+  const page = e.url && listing.has(e.url) ? pages.get(e.url) : undefined;
+  if (!page?.links) continue;
+  for (const url of directLinks(e, page.links, page.url || e.url!)) if (!pages.has(url)) linked.add(url);
+}
+if (linked.size) {
+  console.log(`Reading ${linked.size} event pages linked from listing pages...`);
+  await read([...linked]);
+}
 await Promise.race([closeBrowser(), new Promise((r) => setTimeout(r, 10_000))]);
+
+// Fills earlier runs made that someone has since put back by hand.
+const made = sortFills([...(prior.filled ?? []), ...(prior.fill ?? [])], upcoming.map(({ e }) => e), prior.declined ?? []);
+const declined = made.declined;
 
 const rows: Record<string, CheckRow> = {};
 const remove: { uid: string; why: string }[] = [];
 const tally: Record<string, number> = {};
 const failing: string[] = [];
+const fill: FillRow[] = [];
+const found: string[] = [];
 for (const { e, day } of upcoming) {
   const page = e.url ? pages.get(e.url) : undefined;
-  const result: ListingResult = page
-    ? judgeListing(e, page, {
-        year: day.getFullYear(),
-        daysAway: Math.round((day.getTime() - today.getTime()) / 86_400_000),
-        sharedPage: (byUrl.get(e.url!)?.length ?? 0) > 1,
-      })
+  const daysAway = Math.round((day.getTime() - today.getTime()) / 86_400_000);
+  let result: ListingResult = page
+    ? judgeListing(e, page, { year: day.getFullYear(), daysAway, sharedPage: (byUrl.get(e.url!)?.length ?? 0) > 1 })
     : "unconfirmed";
+  // Listings at TBD, or linked to a calendar: what the same reads say about them.
+  if (e.url && (isTbd(e.cost) || listing.has(e.url))) {
+    const no = declined.filter((d) => d.uid === e.uid);
+    const plan = planFill(e, {
+      page,
+      result,
+      listing: listing.has(e.url),
+      reads: pages,
+      year: day.getFullYear(),
+      daysAway,
+      declined: { cost: no.some((d) => d.cost), url: no.some((d) => d.url) },
+    });
+    if (plan.cost || plan.url) {
+      fill.push({ uid: e.uid, cost: plan.cost, url: plan.url, replaces: plan.url ? e.url : undefined, quote: plan.quote, page: plan.page });
+      const parts = [plan.cost && `${plan.cost}, from "${plan.quote}"`, plan.url && `link ${plan.url}`].filter(Boolean);
+      found.push(`${e.date} ${e.event}: ${parts.join("; ")}`);
+    }
+    // Its own page shows it on its date: that's this run's check of it, and
+    // the fill moves its link there.
+    if (plan.url) result = "ok";
+  }
   tally[result] = (tally[result] ?? 0) + 1;
   const was = prior.rows[e.uid]?.strikes ?? 0;
   const strikes = result === "ok" ? 0 : result === "dead" || result === "unconfirmed" ? was + 1 : was;
@@ -162,13 +258,22 @@ const failShare = judged ? ((tally.dead ?? 0) + (tally.unconfirmed ?? 0)) / judg
 console.log(Object.entries(tally).map(([k, v]) => `${k} ${v}`).join(" · "));
 for (const f of failing) console.log("  " + f);
 
+if (fill.length) {
+  console.log(`Found ${fill.filter((f) => f.cost).length} price(s) and ${fill.filter((f) => f.url).length} event page(s):`);
+  for (const f of found) console.log("  " + f);
+}
+if (declined.length) {
+  console.log(`Leaving ${declined.length} fill(s) undone by hand:`);
+  for (const d of declined) console.log(`  ${d.uid}: ${[d.cost, d.url].filter(Boolean).join("; ")}`);
+}
+
 const overFloor = failShare > FLOOR;
 if (overFloor) {
   console.warn(`${Math.round(failShare * 100)}% failed, over the ${FLOOR * 100}% floor: removing nothing this run.`);
   remove.length = 0;
 }
 if (dry) {
-  console.log(`Dry run: would remove ${remove.length}.`);
+  console.log(`Dry run: would remove ${remove.length} and fill ${fill.length}.`);
   for (const r of remove) console.log(`  ${r.uid}: ${r.why}`);
   process.exit(0);
 }
@@ -176,8 +281,12 @@ const checks: ChecksFile = {
   ranAt: new Date().toISOString(),
   rows,
   remove,
+  fill,
+  filled: made.filled,
+  declined,
   ...(overFloor ? {} : { verifiedOn: on }),
 };
 writeFileSync(CHECKS, JSON.stringify(checks, null, 2) + "\n");
-console.log(`Removed ${applyChecks(checks)}.`);
+const { removed, filled } = applyChecks(checks);
+console.log(`Removed ${removed}. Filled ${filled}.`);
 process.exit(0);

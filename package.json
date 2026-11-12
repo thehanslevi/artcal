@@ -16,7 +16,8 @@
     "usage": "tsx scripts/usage-report.ts",
     "audit:modes": "tsx scripts/audit-modes.ts",
     "test": "node --import tsx --test \"src/**/*.test.ts\" \"scripts/**/*.test.ts\"",
-    "events:tidy": "tsx scripts/tidy-titles.ts"
+    "events:tidy": "tsx scripts/tidy-titles.ts",
+    "events:prices": "tsx scripts/fill-costs.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",

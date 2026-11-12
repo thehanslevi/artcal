@@ -55,3 +55,13 @@ test("venues' other ways of writing a date", () => {
   assert.equal(judgeListing({ event: "BAILEN: SWIM!!! At Your Own Risk Tour", date: "Nov 11" }, page(tomorrow), { ...opts, daysAway: 1 }), "ok");
   assert.equal(judgeListing({ event: "BAILEN: SWIM!!! At Your Own Risk Tour", date: "Nov 11" }, page(tomorrow), { ...opts, daysAway: 9 }), "unconfirmed");
 });
+
+test("a title word inside a longer word isn't the title", () => {
+  assert.equal(judgeListing({ event: "Open Mic", date: "Nov 20" }, page("Fri 11/20 7pm — Opening Reception: Winter Group Show"), opts), "unconfirmed");
+  assert.equal(judgeListing({ event: "Isla", date: "Nov 20" }, page("Fri 11/20 8pm — Island Ceramics Pop-Up"), opts), "unconfirmed");
+  // A plural, or two of its words run together, still count.
+  assert.equal(judgeListing({ event: "Open Studio", date: "Nov 20" }, page("Fri 11/20 6pm — Open Studios"), opts), "ok");
+  // worksinprogressnyc.org writes "Silk Screen" as "Silkscreen".
+  const wip = "Introduction to Silkscreen\n$150.00\n\nWe supply basic tees and totes.\n\nDate:\nSeptember 26\nOctober 17\nNovember 14";
+  assert.equal(judgeListing({ event: "Introduction to Silk Screen", date: "Nov 14" }, page(wip), opts), "ok");
+});

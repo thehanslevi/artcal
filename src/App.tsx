@@ -1,12 +1,17 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import eventsData from "./data/events.json";
 import type {
   CalEvent,
   CategoryFilter,
-  EventsData,
   TabMode,
 } from "./types";
 import { isFree } from "./lib/cost";
+import {
+  CURRENT_EVENTS,
+  LAST_VERIFIED,
+  PAST_COUNT,
+  loadPastEvents,
+  type PastStatus,
+} from "./lib/events";
 import {
   buildPickIndex,
   canonicalizePicks,
@@ -35,6 +40,7 @@ import { Spaces } from "./components/Spaces";
 import { SubscribePanel } from "./components/SubscribePanel";
 import { SubmitPanel } from "./components/SubmitPanel";
 import { CuratorPicks } from "./components/CuratorPicks";
+import { StartingSoon } from "./components/StartingSoon";
 import { Directory } from "./components/Directory";
 import { PRACTICES_CHECKED } from "./lib/practices";
 import { track } from "./lib/usage";
@@ -46,11 +52,11 @@ import { SyncPanel, type SyncStatus } from "./components/SyncPanel";
 //   Witnessing — dated events (events.json). Scraped, because shows publish dates.
 type View = "making" | "witnessing";
 
-const data = eventsData as EventsData;
-const ALL_EVENTS: CalEvent[] = data.weeks.flatMap((w) => w.events as CalEvent[]);
 // Every identity an event answers to. Stored picks resolve through this, so a
 // star saved before a rename or a merge upgrades itself instead of dangling.
-const PICK_INDEX = buildPickIndex(ALL_EVENTS);
+// It covers the page's events (two weeks before this Monday on) until "Show
+// past" loads the rest; a pick it can't resolve yet is kept as saved.
+const CURRENT_PICK_INDEX = buildPickIndex(CURRENT_EVENTS);
 
 const UPLOAD_DEBOUNCE_MS = 1500;
 
@@ -73,14 +79,19 @@ function App() {
   const [picksOnly, setPicksOnly] = useState(false);
   const [freeOnly, setFreeOnly] = useState(false);
   const [picks, setPicks] = useState<Set<string>>(() =>
-    canonicalizePicks(loadPicks(), PICK_INDEX),
+    canonicalizePicks(loadPicks(), CURRENT_PICK_INDEX),
   );
+  // Swapped for an index of every event once the past loads.
+  const pickIndex = useRef(CURRENT_PICK_INDEX);
   const [passphrase, setPassphrase] = useState<string | null>(() => loadPassphrase());
   const [syncStatus, setSyncStatus] = useState<SyncStatus>({ kind: "idle" });
   const [subscribeOpen, setSubscribeOpen] = useState(false);
   const [submitOpen, setSubmitOpen] = useState(false);
   const [weekendOnly, setWeekendOnly] = useState(false);
   const [showPast, setShowPast] = useState(false);
+  // The older events, once "Show past" has downloaded them.
+  const [pastEvents, setPastEvents] = useState<CalEvent[] | null>(null);
+  const [pastStatus, setPastStatus] = useState<PastStatus>("idle");
   const [isCurator, setIsCurator] = useState(false);
   const [notes, setNotes] = useState<PickNotes>({});
   const uploadTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -145,11 +156,11 @@ function App() {
           // this browser's casual local stars into it — remote is authoritative.
           // Don't miss then shows ONLY events deliberately starred as curator.
           skipNextUpload.current = true;
-          setPicks(canonicalizePicks(remote ?? [], PICK_INDEX));
+          setPicks(canonicalizePicks(remote ?? [], pickIndex.current));
         } else if (remote && remote.length > 0) {
           const merged = canonicalizePicks(
             [...loadPicks(), ...remote],
-            PICK_INDEX,
+            pickIndex.current,
           );
           skipNextUpload.current = true;
           setPicks(merged);
@@ -237,7 +248,7 @@ function App() {
         // Curator: remote is authoritative; don't push local stars up (see the
         // passphrase sync effect above).
         skipNextUpload.current = true;
-        setPicks(canonicalizePicks(remote ?? [], PICK_INDEX));
+        setPicks(canonicalizePicks(remote ?? [], pickIndex.current));
         setSyncStatus({ kind: "synced", at: new Date() });
         return;
       }
@@ -258,17 +269,57 @@ function App() {
     }
   }, [passphrase]);
 
+  // The first "Show past" downloads the older weeks, then shows them. After
+  // that it only flips.
+  const handleToggleShowPast = useCallback(() => {
+    if (pastEvents || PAST_COUNT === 0) {
+      setShowPast((s) => !s);
+      return;
+    }
+    if (pastStatus === "loading") return;
+    // A browser won't fetch a module again after it failed once, so the fix
+    // is a fresh page. The usual cause is a deploy since this page loaded,
+    // which replaced the file.
+    if (pastStatus === "failed") {
+      window.location.reload();
+      return;
+    }
+    setPastStatus("loading");
+    loadPastEvents().then(
+      (past) => {
+        const index = buildPickIndex([...past, ...CURRENT_EVENTS]);
+        pickIndex.current = index;
+        // A star saved under a past event's old title or a merged duplicate
+        // resolves now that the event is here.
+        setPicks((s) => {
+          const next = canonicalizePicks(s, index);
+          const same = next.size === s.size && [...next].every((id) => s.has(id));
+          return same ? s : next;
+        });
+        setPastEvents(past);
+        setPastStatus("idle");
+        setShowPast(true);
+      },
+      () => setPastStatus("failed"),
+    );
+  }, [pastEvents, pastStatus]);
+
+  const allEvents = useMemo(
+    () => (pastEvents ? [...pastEvents, ...CURRENT_EVENTS] : CURRENT_EVENTS),
+    [pastEvents],
+  );
+
   // The counts describe what the calendar is listing. It hides events that
   // have happened unless "Show past" is on, so the counts do too. They used to
   // add up everything stored since July: "Making 176" over a list of 34.
   const listed = useMemo(() => {
     const now = today();
-    return ALL_EVENTS.filter((e) => {
+    return allEvents.filter((e) => {
       if (showPast) return true;
       const d = parseEventDate(e.date);
       return !d || !isPast(d, now);
     });
-  }, [showPast]);
+  }, [allEvents, showPast]);
 
   const counts = useMemo(() => {
     const scoped = listed.filter((e) => matchesTab(tab, e.mode))
@@ -363,6 +414,7 @@ function App() {
       <main className="zone zone-main">
         <div className="zone-inner">
       <CuratorPicks tab={tab} />
+      {view === "making" ? <StartingSoon /> : null}
       <div className="filter-row">
         <FilterBar active={filter} onChange={setFilter} counts={counts} />
         <button
@@ -414,6 +466,7 @@ function App() {
         />
       </div>
       <Calendar
+        events={allEvents}
         filter={filter}
         tab={tab}
         picks={picks}
@@ -421,7 +474,9 @@ function App() {
         freeOnly={freeOnly}
         weekendOnly={weekendOnly}
         showPast={showPast}
-        onToggleShowPast={() => setShowPast((s) => !s)}
+        pastStatus={pastStatus}
+        pastLoaded={pastEvents !== null}
+        onToggleShowPast={handleToggleShowPast}
         onTogglePick={togglePick}
         isCurator={isCurator}
         notes={notes}
@@ -448,7 +503,7 @@ function App() {
               >
                 Share what you want to see or what you're working on
               </button>{" "}
-              and I'll include it here and in the newsletter.
+              and I'll include it here.
             </p>
           </div>
           {/* On Making, the Directory is the venue list; two would compete. */}
@@ -459,7 +514,7 @@ function App() {
             <span>
               {view === "making"
                 ? `Updated ${PRACTICES_CHECKED}`
-                : `Last verified ${data.lastVerified}`}
+                : `Last verified ${LAST_VERIFIED}`}
             </span>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import eventsData from "../data/events.json";
-import type { CalEvent, CategoryFilter, EventsData, TabMode } from "../types";
+import type { CalEvent, CategoryFilter, TabMode } from "../types";
 import {
   daysUntil as daysUntilFn,
   groupEventsIntoWeeks,
@@ -12,20 +11,19 @@ import {
   today,
 } from "../lib/dates";
 import { isFree } from "../lib/cost";
-import { pickId } from "../lib/picks";
+import { PAST_COUNT, type PastStatus } from "../lib/events";
+import { buildPickIndex, pickId } from "../lib/picks";
+import { showPastFinds } from "../lib/show-past";
 import { matchesTab } from "../lib/tab";
 import { EventRow } from "./EventRow";
 import { WeekSummary } from "./WeekSummary";
 
-const data = eventsData as EventsData;
-
-// Weeks are derived from event dates (Monday-start), not the raw buckets in
-// events.json, which can overlap or misfile events.
-const WEEKS = groupEventsIntoWeeks(
-  data.weeks.flatMap((w) => w.events as CalEvent[]),
-);
-
 interface Props {
+  /**
+   * From two weeks before this week's Monday on, plus the older events once
+   * "Show past" has loaded them.
+   */
+  events: CalEvent[];
   filter: CategoryFilter;
   tab: TabMode;
   picks: Set<string>;
@@ -34,6 +32,10 @@ interface Props {
   weekendOnly: boolean;
   /** Owned by App, so the filter counts can match what is listed here. */
   showPast: boolean;
+  /** The past download "Show past" starts, if it's under way or failed. */
+  pastStatus: PastStatus;
+  /** Whether that download has come, so `events` holds every event. */
+  pastLoaded: boolean;
   onToggleShowPast: () => void;
   onTogglePick: (id: string) => void;
   isCurator?: boolean;
@@ -51,6 +53,7 @@ interface EnrichedWeek {
 }
 
 export function Calendar({
+  events,
   filter,
   tab,
   picks,
@@ -58,6 +61,8 @@ export function Calendar({
   freeOnly,
   weekendOnly,
   showPast,
+  pastStatus,
+  pastLoaded,
   onToggleShowPast,
   onTogglePick,
   isCurator = false,
@@ -67,6 +72,11 @@ export function Calendar({
   const [viewMode, setViewMode] = useState<"single" | "all">("single");
   const [userWeekIndex, setUserWeekIndex] = useState<number | null>(null);
   const now = useMemo(() => today(), []);
+  // Weeks are derived from event dates (Monday-start), not the raw buckets in
+  // events.json, which can overlap or misfile events.
+  const weeks = useMemo(() => groupEventsIntoWeeks(events), [events]);
+  // Every id a loaded event answers to, to tell which picks are here.
+  const loadedIds = useMemo(() => buildPickIndex(events), [events]);
 
   // Reset user selection when filters change
   useEffect(() => {
@@ -98,7 +108,7 @@ export function Calendar({
         return d ? isThisWeekend(d, now) : false;
       });
 
-  const enrichedWeeks: EnrichedWeek[] = WEEKS.map((week) => {
+  const enrichedWeeks: EnrichedWeek[] = weeks.map((week) => {
     const range = { start: week.start, end: week.end };
     const past = isPastWeek(range, now);
     const current = isCurrentWeek(range, now);
@@ -112,16 +122,27 @@ export function Calendar({
     return true;
   });
 
-  // Is there anything "Show past" would bring back under these filters? This
+  // Is there anything "Show past" would bring back (lib/show-past)? The check
   // has to look past the hiding above. It used to ask whether a past week had
   // visible events, which the hiding had already emptied, so the answer was
   // always no and the button never appeared.
-  const anyPast = WEEKS.some((week) =>
-    visibleFor(week.events, tab, true).some((e) => {
-      const d = parseEventDate(e.date);
-      return d !== null && isPast(d, now);
-    }),
-  );
+  const anyPast = showPastFinds({
+    matching: visibleFor(events, tab, true),
+    now,
+    pastLoaded,
+    pastCount: PAST_COUNT,
+    weekendOnly,
+    picksOnly,
+    picks,
+    loadedIds,
+  });
+  const pastLabel = showPast
+    ? "Hide past"
+    : pastStatus === "loading"
+      ? "Loading…"
+      : pastStatus === "failed"
+        ? "Reload to show past"
+        : "Show past";
 
   if (shownWeeks.length === 0) {
     return (
@@ -216,8 +237,9 @@ export function Calendar({
               type="button"
               className="mini-toggle"
               onClick={onToggleShowPast}
+              aria-disabled={pastStatus === "loading" || undefined}
             >
-              {showPast ? "Hide past" : "Show past"}
+              {pastLabel}
             </button>
           ) : null}
         </div>

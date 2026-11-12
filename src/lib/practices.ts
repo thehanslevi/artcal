@@ -141,16 +141,69 @@ const NTH_LABEL: Record<string, string> = {
   "-1": "last",
 };
 
+// Monday first, like the calendar's weeks: Sat and Sun sit together at the end.
+const WEEK: Weekday[] = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+
+/** "Tue–Sat", "Mon/Wed/Fri", "Weekdays". Three days or more in a row make a range. */
+function formatDays(days: Weekday[]): string {
+  const idx = [...new Set(days)]
+    .map((d) => WEEK.indexOf(d))
+    .sort((a, b) => a - b);
+  const key = idx.join("");
+  if (key === "01234") return "Weekdays";
+  if (key === "56") return "Weekends";
+  const parts: string[] = [];
+  for (let i = 0; i < idx.length; ) {
+    let j = i;
+    while (j + 1 < idx.length && idx[j + 1] === idx[j]! + 1) j++;
+    const run = idx.slice(i, j + 1).map((n) => DAY_LABEL[WEEK[n]!]);
+    parts.push(run.length >= 3 ? `${run[0]}–${run[run.length - 1]}` : run.join("/"));
+    i = j + 1;
+  }
+  return parts.join("/");
+}
+
+function clock(h: number, m: string): { time: string; half: "am" | "pm" } {
+  const h12 = h % 12 === 0 ? 12 : h % 12;
+  return { time: m === "00" ? `${h12}` : `${h12}:${m}`, half: h < 12 ? "am" : "pm" };
+}
+
+/**
+ * The calendar's way of writing time: "19:00-22:00" is "7–10pm", "18:30" is
+ * "6:30pm", noon is "12pm". Words like "evenings" pass through.
+ */
+function formatTimes(t: string): string {
+  return t.replace(
+    /\b(\d{1,2}):(\d{2})(?:\s*[-–]\s*(\d{1,2}):(\d{2}))?\b/g,
+    (whole, h1: string, m1: string, h2?: string, m2?: string) => {
+      if (Number(h1) > 23 || (h2 !== undefined && Number(h2) > 23)) return whole;
+      const a = clock(Number(h1), m1);
+      if (h2 === undefined || m2 === undefined) return a.time + a.half;
+      const b = clock(Number(h2), m2);
+      return a.half === b.half
+        ? `${a.time}–${b.time}${b.half}`
+        : `${a.time}${a.half}–${b.time}${b.half}`;
+    },
+  );
+}
+
 export function formatSchedule(s: Schedule): string {
   switch (s.kind) {
     case "weekly": {
-      const days = s.days.map((d) => DAY_LABEL[d]).join("/");
-      return s.time ? `${days}, ${s.time}` : days;
+      const days = formatDays(s.days);
+      if (!s.time) return days;
+      if (days === "Weekdays" && s.time === "evenings") return "Weeknights";
+      const time = formatTimes(s.time);
+      // "Fri 15:00, Sat 12:00" names its own days, so they aren't said twice.
+      const named = new Set(s.time.match(/\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\b/g));
+      const own = new Set(s.days.map((d) => DAY_LABEL[d]));
+      if (named.size === own.size && [...own].every((d) => named.has(d))) return time;
+      return `${days}, ${time}`;
     }
     case "monthly-nth": {
       const nth = NTH_LABEL[String(s.nth)] ?? `${s.nth}th`;
       const base = `${nth} ${DAY_LABEL[s.day]}s`;
-      return s.time ? `${base}, ${s.time}` : base;
+      return s.time ? `${base}, ${formatTimes(s.time)}` : base;
     }
     case "session":
       return `${s.weeks}-week session`;

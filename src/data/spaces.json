@@ -40,11 +40,11 @@
     "url": "https://pioneerworks.org"
   },
   {
-    "name": "Harvestworks · Outside Linear Time",
+    "name": "Harvestworks",
     "category": "tech",
     "mode": "both",
-    "description": "Art & tech exhibition + weekend performances · Governors Island",
-    "note": "Runs through Aug 23. Open Sat/Sun 11am–5pm. Free entry. TIP masterclasses rotate.",
+    "description": "Art and tech center · Governors Island",
+    "note": "Open Sat/Sun 11am–5pm, May–Oct. Free. TIP masterclasses rotate.",
     "url": "https://www.harvestworks.org/"
   },
   {
@@ -52,7 +52,7 @@
     "category": "tech",
     "mode": "make",
     "description": "Live-coding collective · monthly meetups at BPL Central",
-    "note": "Bring a laptop + headphones. Hydra, Orca, TidalCycles hack sessions. Free. 10th Anniversary Algorave Jul 18.",
+    "note": "Bring a laptop + headphones. Hydra, Orca, TidalCycles hack sessions. Free. One Sunday a month, 1:30–4:30pm.",
     "url": "https://livecode.nyc/events.html"
   },
   {
@@ -68,7 +68,7 @@
     "category": "theatre",
     "mode": "both",
     "description": "Independent theater · Bushwick",
-    "note": "Aug 1 Bazaar + Aug 17–28 Theater Camp (kids). Fall mainstage from Oct. Occasional community workshops.",
+    "note": "Saturday kids' theater class (Pre-K–8th, sliding scale) through Dec 19. Free play readings Nov 30–Dec 9. Next mainstage Feb 2027. Occasional community workshops.",
     "url": "https://www.thebushwickstarr.org/"
   },
   {
@@ -76,7 +76,7 @@
     "category": "theatre",
     "mode": "both",
     "description": "Experimental theater · Doxsee Theater, Sunset Park",
-    "note": "TMT Laboratory Sept–Oct; TMT Hosts + Institute + Young Artists tracks year-round. Fall 2026 season TBA. Venue for Exponential Fest 2027.",
+    "note": "TMT Laboratory Sept–Oct; TMT Hosts + Institute + Young Artists tracks year-round. 2026/27 season 'Nonsense': Project 251, a new play by David Herskovits, in March 2027. Venue for Exponential Fest 2027.",
     "url": "https://www.targetmargin.org/"
   },
   {
@@ -100,7 +100,7 @@
     "category": "theatre",
     "mode": "witness",
     "description": "Independent multi-disciplinary venue · Manhattan",
-    "note": "Long runs by solo performers, hybrid + puppet + music-theater. 2026/27 season 'Choose Wonder' starts September.",
+    "note": "Long runs by solo performers, hybrid + puppet + music-theater. 2026/27 season 'Choose Wonder': Arias with a Twist through Dec 20, Puppetopia Apr 7–18.",
     "url": "https://here.org/shows/"
   },
   {
@@ -236,7 +236,7 @@
     "category": "theatre",
     "mode": "witness",
     "description": "Institutional avant-garde · Harvey Theater + Opera House + Fisher · Fort Greene",
-    "note": "Major fall season (Ford/Hill, Hewa Rwanda, Einstein on the Beach 50th, etc). Free PRELUDE outdoor Oct 13–15. Rose Cinemas film series year-round.",
+    "note": "Next Wave through Dec (La Distance, Einstein on the Beach 50th Nov 19–21, etc). Winter/Spring 2027 season (Pina Bausch's Vollmond, DanceAfrica 50, BAM Free Music series). Rose Cinemas film series year-round.",
     "url": "https://www.bam.org/"
   },
   {
@@ -244,7 +244,7 @@
     "category": "dance",
     "mode": "witness",
     "description": "Curated dance + performance venue · Manhattan",
-    "note": "Dense fall season Sep–Nov. Rare performances (Laurie Anderson at Fall Fête Oct 5, Merce Cunningham legacy Nov).",
+    "note": "Dense fall season Sep–Dec. Rare performances (Merce Cunningham legacy Nov 19–21, Isadora Duncan revivals May 13–15).",
     "url": "https://baryshnikovarts.org/"
   },
   {
@@ -292,7 +292,7 @@
     "category": "theatre",
     "mode": "witness",
     "description": "New American plays · SUMMERWORKS annual at The Wild Project · Lower East Side",
-    "note": "SUMMERWORKS 2026 (past): May 14 – Jun 30. Fall/winter programming TBA. Watch for the next SUMMERWORKS.",
+    "note": "SUMMERWORKS 2026 (past): May 14 – Jun 30. WINTERWORKS in January, dates TBA. The Family Dog returns Feb 9 – Mar 6, 2027 at New York Theatre Workshop. Open call for a $15,000 playwriting commission, free to apply, until Feb 15, 2027. Watch for the next SUMMERWORKS.",
     "url": "https://www.clubbedthumb.org/"
   },
   {
@@ -356,7 +356,7 @@
     "category": "sound",
     "mode": "make",
     "description": "Intergenerational choir, BIPOC + queer-centered · rehearses Judson Memorial Church",
-    "note": "Spring 2026 ran Apr 6–June (Mondays 6–8pm). Between sessions now; fall 2026 TBD. Fall RSVP submitted.",
+    "note": "Fall 2026 ran Sept 14–Oct (Mondays 6–8pm). Between sessions now; next session TBD.",
     "url": "https://www.fireensemble.com/choir-form"
   },
   {
@@ -380,7 +380,7 @@
     "category": "film",
     "mode": "witness",
     "description": "Independent + repertory cinema · West Village",
-    "note": "$12 member / $18 general. Dense weekly programming — new releases, restorations, retrospectives. Massive Coppola retrospective Aug 21–Sep 10.",
+    "note": "$12 member / $18 general. Dense weekly programming — new releases, restorations, retrospectives. Rossellini retrospective Nov 20–Dec 10.",
     "url": "https://www.filmforum.org/now-playing"
   },
   {
@@ -412,7 +412,7 @@
     "category": "theatre",
     "mode": "witness",
     "description": "Downtown new-work incubator · East Village",
-    "note": "2026/27 fall: Basquiat (Sep 9–Oct 4), Wild Rose musical (Nov 24–Jan 10).",
+    "note": "2026/27: Wild Rose musical (Nov 24–Jan 10), The Grief Eater Near North Bender (Jan 21–Mar 21, at the Laura Pels Theatre), Blood Be Sweet (Apr 21–May 30).",
     "url": "https://www.nytw.org/2026-27-season/"
   },
   {
@@ -476,7 +476,7 @@
     "category": "making",
     "mode": "both",
     "description": "Free outdoor sculpture park + programming · Astoria waterfront",
-    "note": "Free daily 9am–sunset. Free yoga (through Sep 27), sunset meditation (through Aug 27), outdoor performances, kayaking. Homecoming: Chakaia Booker on view through Apr 2027.",
+    "note": "Free daily 9am–sunset. Programs run Apr–Oct. 2026 had free Sunday yoga (Jun–Sep), Tuesday sunset meditation (May–Aug), outdoor performances, kayaking (Aug 1). 2027 season TBA. Homecoming: Chakaia Booker on view through Apr 2027.",
     "url": "https://socratessculpturepark.org/"
   },
   {

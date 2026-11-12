@@ -1,4 +1,6 @@
+import { listingTimes } from "../../src/lib/dates.ts";
 import { decodeHtmlEntities } from "../../src/lib/entities.ts";
+import { tidyTitle } from "../../src/lib/title.ts";
 import type { CalEvent } from "../../src/types";
 import { classifyEvent } from "./classify.ts";
 import type { Venue } from "./venues";
@@ -125,16 +127,20 @@ function toCalEvent(
 
   const day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][start.getDay()];
   const date = `${MONTH_NAMES[s.mo]} ${s.d}`;
-  const startTime = s.hh !== null ? `${s.hh}:${s.mm}` : null;
+  const title = cleanTitle(raw.name, venue.name);
   const e = raw.endDate ? parseIsoToNY(raw.endDate) : null;
   // Only keep an end time if it's the same calendar day (no cross-midnight).
-  const endTime =
+  // An all-day listing comes as T00:00 and stays date-only. Midnight is read
+  // from the title as it will be stored, which is the one lint checks.
+  const times = listingTimes(
+    s.hh !== null ? `${s.hh}:${s.mm}` : null,
     e && e.hh !== null && e.y === s.y && e.mo === s.mo && e.d === s.d
       ? `${e.hh}:${e.mm}`
-      : null;
+      : null,
+    tidyTitle(title),
+  );
 
   const cost = extractCost(raw.offers);
-  const title = cleanTitle(raw.name, venue.name);
   const { mode, category } = classifyEvent(
     title,
     venue.defaultMode,
@@ -150,8 +156,8 @@ function toCalEvent(
     category,
     flag: null,
     mode,
-    start: startTime,
-    end: endTime,
+    start: times.start,
+    end: times.end,
     note: null,
     url: raw.url ?? venue.url,
   };

@@ -67,10 +67,26 @@ function urlHasDate(url: string, date: string, year: number): boolean {
   return mi >= 0 && new RegExp(`/${year}/0?${mi + 1}/0?${d}(?:/|$)`).test(url);
 }
 
+const hasWord = (text: string, word: string) => new RegExp(`(?<![a-z0-9])${word}(?:e?s)?(?![a-z0-9])`).test(text);
+
+/**
+ * The title's words that the text writes as words of their own (or plurals of
+ * them), or run together with the next one ("Silk Screen" in "Silkscreen"):
+ * "isla" isn't in "island", nor "open" in "opening".
+ */
+export function wordsIn(words: string[], text: string): Set<string> {
+  const found = new Set(words.filter((w) => hasWord(text, w)));
+  for (let i = 0; i + 1 < words.length; i++) {
+    if (hasWord(text, words[i]! + words[i + 1]!)) found.add(words[i]!).add(words[i + 1]!);
+  }
+  return found;
+}
+
 /** Share of the title's words found in this stretch of text. */
 function titleShare(words: string[], text: string): number {
   if (!words.length) return 1;
-  return words.filter((w) => text.includes(w)).length / words.length;
+  const found = wordsIn(words, text);
+  return words.filter((w) => found.has(w)).length / words.length;
 }
 
 export type ListingResult = "ok" | "dead" | "unconfirmed" | "unreachable" | "too-early";
@@ -106,13 +122,23 @@ export function judgeListing(
   if (/page (?:not|can.?t be) found|we couldn.?t find the page|nothing (?:was )?found|404 error/.test(text.slice(0, 600))) {
     return "dead";
   }
-  const words = titleWords(e.event);
-  // An event page whose own address carries the date, and that names the event.
-  if (page.url && urlHasDate(page.url, e.date, opts.year) && titleShare(words, text) >= 0.8) return "ok";
-  for (const at of datePositions(text, e.date, opts.year, opts.daysAway)) {
-    const near = text.slice(Math.max(0, at - NEAR), at + NEAR);
-    if (titleShare(words, near) >= 0.6) return "ok";
-  }
+  if (showsEvent(e, text, { ...opts, url: page.url })) return "ok";
   if (opts.sharedPage && opts.daysAway > 21) return "too-early";
   return "unconfirmed";
+}
+
+/** The title and the date together in this (flattened) text, or an address that carries the date. */
+export function showsEvent(
+  e: Pick<CalEvent, "event" | "date">,
+  text: string,
+  opts: { year: number; daysAway: number; url?: string },
+): boolean {
+  const words = titleWords(e.event);
+  // An event page whose own address carries the date, and that names the event.
+  if (opts.url && urlHasDate(opts.url, e.date, opts.year) && titleShare(words, text) >= 0.8) return true;
+  for (const at of datePositions(text, e.date, opts.year, opts.daysAway)) {
+    const near = text.slice(Math.max(0, at - NEAR), at + NEAR);
+    if (titleShare(words, near) >= 0.6) return true;
+  }
+  return false;
 }

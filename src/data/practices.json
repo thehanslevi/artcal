@@ -13,13 +13,13 @@
       "borough": "brooklyn",
       "url": "https://www.artshackbrooklyn.org/studio/upcoming",
       "cost": {
-        "kind": "unknown",
-        "why": "not-published"
+        "kind": "fixed",
+        "amount": 480
       },
       "schedule": {
         "kind": "session",
-        "weeks": 5,
-        "note": "5-week summer sessions plus weekend one-offs"
+        "weeks": 6,
+        "note": "6-8 week sessions year-round plus weekend one-offs"
       },
       "access": [
         "free",
@@ -28,7 +28,7 @@
         "enroll-ahead"
       ],
       "verifiedOn": "2026-07-14",
-      "caveat": "Prices are not published; email info@artshackbrooklyn.org. Free community days run year-round. Work-study is 50% off. Full scholarships for Black and Brown applicants; fall apps open Jul 28."
+      "caveat": "A 6-week class is $480, plus $35 for clay and firing. One-off intro to wheel throwing is $60. Free community days run year-round. Work-study is 50% off. Full scholarships for Black and Brown applicants."
     },
     {
       "id": "gasworks",
@@ -273,7 +273,7 @@
       },
       "schedule": {
         "kind": "irregular",
-        "note": "Semester-based; summer/fall not posted as of Jul 6"
+        "note": "Summer, fall, and spring semesters; one-day to 12-week classes"
       },
       "access": [
         "sliding-scale",
@@ -281,11 +281,7 @@
         "enroll-ahead"
       ],
       "verifiedOn": "2026-07-06",
-      "caveat": "No posted semester since June 23. Email mgc@powerhousearts.org.",
-      "availability": {
-        "status": "unknown",
-        "note": "No posted summer or fall semester since June 23."
-      }
+      "caveat": "Email mgc@powerhousearts.org."
     },
     {
       "id": "shoestring-press",
@@ -346,7 +342,7 @@
       "disciplines": [
         "printmaking"
       ],
-      "neighborhood": "Lower East Side",
+      "neighborhood": "Garment District",
       "borough": "manhattan",
       "url": "https://www.printshop.org/classes-workshops",
       "cost": {
@@ -438,10 +434,9 @@
         "contact-first"
       ],
       "verifiedOn": "2026-07-14",
-      "caveat": "Weekly workshop at Centro Corona, Tuesdays 7-9pm. Email info@mobileprintpower.com to join. Site was unreachable on Jul 14.",
       "availability": {
         "status": "unknown",
-        "note": "Their site did not resolve on Jul 14. The Tuesday workshop may still run; email info@mobileprintpower.com to confirm."
+        "note": "Their site has been down since July. The Tuesday workshop may still run; email info@mobileprintpower.com to check."
       }
     },
     {
@@ -865,7 +860,7 @@
       },
       "schedule": {
         "kind": "irregular",
-        "note": "Workshops on rotation. Closed all of August; September is the beginner slate"
+        "note": "Workshops on rotation. Closed all of August"
       },
       "access": [
         "sliding-scale",
@@ -874,11 +869,8 @@
       "verifiedOn": "2026-07-06",
       "caveat": "Every workshop ends in a free public screening. Stock, processing, cameras, and editing are included.",
       "availability": {
-        "status": "running",
-        "darkMonths": [
-          8
-        ],
-        "note": "Closed July 3 and all of August. September is the beginner slate."
+        "status": "dormant",
+        "note": "No public workshops after Nov 12 this year. The lab closes for the year Nov 20, ahead of its 20th-anniversary festival, Dec 2-14. No 2027 dates posted yet."
       }
     },
     {
@@ -1347,18 +1339,18 @@
     {
       "id": "capoeira-luanda",
       "name": "Capoeira Luanda Brooklyn",
-      "what": "Capoeira Angola with Professor Pião, Mestre Jelon lineage from Bahia. Movement, music, song, and ritual are inseparable in the form.",
+      "what": "Capoeira Regional with ContraMestre Pião, Mestre Jelon lineage from Bahia. Movement, music, song, and ritual are inseparable in the form.",
       "disciplines": [
         "dance",
         "sound",
         "community"
       ],
-      "neighborhood": "Crown Heights (Dean St. Playground)",
+      "neighborhood": "Bed-Stuy",
       "borough": "brooklyn",
       "url": "https://piaocapoeira.com",
       "cost": {
-        "kind": "unknown",
-        "why": "not-published"
+        "kind": "per-session",
+        "amount": 30
       },
       "schedule": {
         "kind": "weekly",
@@ -1367,13 +1359,13 @@
           "wed",
           "fri"
         ],
-        "time": "19:40-21:00"
+        "time": "18:30-20:00"
       },
       "access": [
         "drop-in"
       ],
       "verifiedOn": "2026-07-14",
-      "caveat": "CORRECTED Jul 14: the site lists Mon/Wed/Fri 7:40-9:00pm at Dean St. Playground, not 6:30-8pm at the Co-op School. Prices are not published and the previously-noted free trial is unconfirmed. Call (917) 224-1209."
+      "caveat": "Adults and teens. Also Sat 11am–12pm. Classes are at the Co-op School. $120/month, or semesters from $799. New to capoeira: code FIRSTCLASS takes $20 off your first class. Call (917) 224-1209."
     },
     {
       "id": "humanist-project",
@@ -1433,7 +1425,7 @@
     {
       "id": "bushwick-starr",
       "name": "The Bushwick Starr",
-      "what": "Free community workshops in August: Creating Performance (devised work), bilingual storytelling.",
+      "what": "Free community workshops every August (Summers at the Starr).",
       "disciplines": [
         "theatre"
       ],
@@ -1452,11 +1444,11 @@
         "enroll-ahead"
       ],
       "verifiedOn": "2026-07-06",
-      "caveat": "Summers at the Starr runs free community workshops in August, including devised-performance and bilingual storytelling. Specific dates not yet posted.",
+      "caveat": "2026's were body mapping (movement, text, drawing) and a devising workshop on sound and memory.",
       "availability": {
         "status": "dormant",
-        "note": "Summers at the Starr runs in August; specific dates not yet posted.",
-        "resumes": "2026-08",
+        "note": "2027 dates not posted yet.",
+        "resumes": "2027-08",
         "resumesEstimated": true
       }
     },
@@ -1478,19 +1470,18 @@
       },
       "schedule": {
         "kind": "session",
-        "weeks": 6,
-        "note": "Level 1 training, roughly twice a year: 4 sessions online/in-person plus 2 in person"
+        "weeks": 2,
+        "note": "Level 1 training: 2 evening sessions on Zoom, then 3 in person, Friday to Sunday"
       },
       "access": [
         "sliding-scale",
         "enroll-ahead"
       ],
       "verifiedOn": "2026-07-06",
-      "caveat": "Sliding scale by financial means; no institutional affiliation required. Shorter intro workshops run $35-80. The most directly relevant facilitation practice in the city for participatory work.",
+      "caveat": "Sliding scale by financial means; no institutional affiliation required.",
       "availability": {
-        "status": "waitlist",
-        "note": "Level 1 training runs roughly twice a year. Waitlist for the fall 2026 cohort.",
-        "resumes": "2026-09"
+        "status": "dormant",
+        "note": "Fall 2026 Level 1 ran in October; no next date posted. Level 2, for people who have facilitated Theatre of the Oppressed before, runs Tuesdays Nov 17 to Dec 1. Free hour-long Zoom sessions, open to newcomers, run monthly through December."
       }
     },
     {
@@ -1518,12 +1509,10 @@
         "contact-first"
       ],
       "verifiedOn": "2026-07-06",
-      "caveat": "Spring session ended in June; summer is the gap. Fall session TBD, likely September. RSVP now at fireensemble.com/choir-form. Correct site is fireensemble.com, NOT singforhope.org.",
+      "caveat": "RSVP for the next session at fireensemble.com/choir-form.",
       "availability": {
         "status": "dormant",
-        "note": "Spring 2026 session ended in June. The ensemble runs spring and fall sessions; summer is the gap.",
-        "resumes": "2026-09",
-        "resumesEstimated": true
+        "note": "Fall 2026 ended in October. The next session isn't posted; they run spring and fall."
       }
     },
     {
@@ -1576,11 +1565,10 @@
         "enroll-ahead"
       ],
       "verifiedOn": "2026-07-06",
-      "caveat": "Currently full; on the waitlist. Fall cycle likely opens August.",
+      "caveat": "Join the waitlist at nychoirproject.com/waitlist for the next cycle.",
       "availability": {
         "status": "waitlist",
-        "note": "Currently full. Fall cycle likely opens in August.",
-        "resumes": "2026-09"
+        "note": "Full for the Fall/Winter 2026-27 cycle. Rehearsals run to Feb 10; next cycle's dates aren't posted."
       }
     },
     {
@@ -1677,7 +1665,7 @@
       "schedule": {
         "kind": "session",
         "weeks": 11,
-        "note": "Fall ceramics Sep 16 - Dec 2, 2026"
+        "note": "Fall ceramics Sep 16 - Dec 2, 2026; spring classes start Jan 11, 2027"
       },
       "access": [
         "free",

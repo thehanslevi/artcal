@@ -1140,6 +1140,7 @@ a:hover {
 /* Filter bar */
 .filter-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   align-items: flex-start;
   margin-bottom: 16px;
@@ -1152,8 +1153,12 @@ a:hover {
   padding: 8px 0;
 }
 
+/* The category bar keeps room for its pills; when the buttons beside it would
+   squeeze it into a column (tablets, narrow windows), they move to the next
+   line instead. */
 .filter-row .filter-bar {
-  flex: 1;
+  flex: 1 1 420px;
+  min-width: 0;
   margin-bottom: 0;
   position: static;
 }
@@ -1693,6 +1698,150 @@ a:hover {
 .event-row.cat-literature { border-left-color: var(--literature); }
 .event-row.cat-community { border-left-color: var(--community); }
 
+/* The event's own note, one muted line under the venue (full text on hover) */
+.event-note {
+  color: var(--text-3);
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* "+ Cal": add one event to your own calendar. Bottom right, under the star,
+   where the row already has empty space, so no row gets taller. */
+.addcal {
+  position: absolute;
+  right: 6px;
+  bottom: 14px;
+}
+.addcal-btn {
+  display: block;
+  padding: 0;
+  background: none;
+  border: none;
+  font: inherit;
+  color: var(--text-2);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+/* Set like the category pill, outlined instead of filled */
+.addcal-label {
+  display: block;
+  width: max-content;
+  padding: 1px 8px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.addcal-btn[aria-expanded="true"] .addcal-label {
+  background: var(--text-1);
+  border-color: var(--text-1);
+  color: var(--bg);
+}
+@media (hover: hover) {
+  .addcal-btn:hover .addcal-label {
+    background: var(--text-1);
+    border-color: var(--text-1);
+    color: var(--bg);
+  }
+  .addcal-option:hover {
+    background: var(--surface-2);
+  }
+}
+.addcal-btn:focus-visible {
+  outline: none;
+}
+.addcal-btn:focus-visible .addcal-label {
+  outline: 2px solid var(--accent-3);
+  outline-offset: 2px;
+}
+.addcal-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  /* Over the rows below it, under the sticky filter row (z-index 10). */
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  background: var(--bg);
+  border: 1px solid var(--text-1);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  font-family: var(--font-body);
+  letter-spacing: normal;
+  text-transform: none;
+}
+.addcal-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.3;
+  color: var(--text-1);
+  text-align: left;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.addcal-option + .addcal-option {
+  border-top: 1px solid var(--border);
+}
+/* Outranks the global a:hover pink, so both options behave alike */
+.addcal-option:hover {
+  color: var(--text-1);
+}
+.addcal-option:focus-visible {
+  background: var(--surface-2);
+  outline: 2px solid var(--accent-3);
+  outline-offset: -2px;
+}
+/* Phones: the left column, level with the category pill (row 3 of the phone
+   grid below), which is empty space there too. */
+@media (max-width: 640px) {
+  .addcal {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    grid-column: 1;
+    grid-row: 3;
+    align-self: center;
+  }
+  .addcal-menu {
+    right: auto;
+    left: 0;
+  }
+}
+/* Touch: a 44px target without making the row any taller */
+@media (pointer: coarse) {
+  .addcal-btn {
+    min-width: 44px;
+    min-height: 44px;
+    margin: -12px -8px;
+    padding: 12px 8px;
+  }
+  .addcal-option {
+    min-height: 44px;
+  }
+}
+@media print {
+  .addcal {
+    display: none;
+  }
+}
+
 .event-day {
   font-family: var(--font-mono);
   font-size: 12px;
@@ -2157,6 +2306,113 @@ a:hover {
   }
 }
 
+/* "Starting soon": classes and series to sign up for before they begin.
+   The Don't miss layout, on white so the two boxes don't read as one, and
+   without the star, which marks a pick. */
+.starting {
+  border: 1px solid var(--text-1);
+  background: var(--bg);
+  padding: 16px 18px 18px;
+  margin: 0 0 22px;
+}
+
+.starting-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  color: var(--text-1);
+}
+
+.starting-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.starting-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 14px;
+  align-items: baseline;
+  padding-left: 10px;
+  border-left: 4px solid var(--border-strong);
+}
+.starting-item.cat-sound { border-left-color: var(--sound); }
+.starting-item.cat-dance { border-left-color: var(--dance); }
+.starting-item.cat-film { border-left-color: var(--film); }
+.starting-item.cat-tech { border-left-color: var(--tech); }
+.starting-item.cat-making { border-left-color: var(--making); }
+.starting-item.cat-theatre { border-left-color: var(--theatre); }
+.starting-item.cat-literature { border-left-color: var(--literature); }
+.starting-item.cat-community { border-left-color: var(--community); }
+
+.starting-when {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-1);
+  padding-top: 3px;
+  white-space: nowrap;
+}
+
+.starting-what {
+  font-family: var(--font-display);
+  font-stretch: 80%;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--text-1);
+}
+.starting-what a {
+  color: inherit;
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+}
+.starting-what a:hover {
+  color: var(--accent-2);
+}
+
+.starting-meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-top: 5px;
+}
+
+.starting-price {
+  color: var(--text-2);
+}
+
+/* The Directory's availability chip. */
+.starting-tag {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  padding: 1px 6px;
+  border: 1px dashed var(--border-strong);
+  border-radius: 2px;
+  color: var(--text-3);
+}
+
+@media (max-width: 640px) {
+  .starting-item {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+  .starting-what {
+    font-size: 18px;
+  }
+}
+
 /* Empty state */
 .empty-state {
   padding: 40px 20px;
@@ -2484,5 +2740,122 @@ a:hover {
   .decisions {
     break-inside: avoid;
     box-shadow: none;
+  }
+}
+
+/* Countdown chips say "in 3 months" now. A long one wraps inside the date
+   column instead of running into the title; on a phone the chip is a size
+   down so "yesterday" still fits the 60px column on one line.
+
+   Touch screens: every control is at least 44px tall to tap. A fine pointer
+   keeps the sizes above. */
+.event-day .countdown {
+  width: fit-content;
+  max-width: 100%;
+  padding: 1px 6px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .event-day .countdown {
+    padding: 1px 4px;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+}
+
+@media (pointer: coarse) {
+  .subscribe-badge,
+  .sync-badge,
+  .view-btn,
+  .filter-btn,
+  .picks-toggle,
+  .free-toggle,
+  .weekend-toggle,
+  .export-btn,
+  .week-nav-btn,
+  .week-nav-select,
+  .mini-toggle,
+  .dir-chip,
+  .dir-toggle,
+  .spaces-toggle,
+  .subscribe-copy-btn,
+  .subscribe-create-btn,
+  .subscribe-medium-btn,
+  .sync-input,
+  .sync-save-btn,
+  .sync-secondary-btn,
+  .submit-copy-btn,
+  .curator-note-input {
+    min-height: 44px;
+  }
+
+  .week-nav-btn {
+    min-width: 44px;
+  }
+
+  .subscribe-help summary,
+  .submit-mailto {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  /* Buttons set in a line of text keep their place in it, and an invisible
+     area around each takes the tap. The star stays the same size that way. */
+  .howto-link,
+  .about-submit-link,
+  .footer-submit-btn {
+    position: relative;
+  }
+
+  .howto-link::after,
+  .about-submit-link::after,
+  .footer-submit-btn::after {
+    content: "";
+    position: absolute;
+    inset: -15px 0;
+  }
+
+  .pick-btn::after {
+    content: "";
+    position: absolute;
+    inset: -9px -7px;
+  }
+}
+
+/* Phones. The filter row wraps instead of stacking one button per line, so
+   the sticky block stays short, and the category bar fills its own line and
+   scrolls inside itself instead of widening the page. The date column is wide
+   enough for "in 2 days" on one line, titles stay clear of the star's tap
+   area, and notes wrap: there's no hover to read the rest. */
+@media (max-width: 640px) {
+  .filter-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-row .filter-bar {
+    flex: 1 1 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .event-row {
+    grid-template-columns: 66px 1fr;
+  }
+  .event-day .countdown {
+    padding: 1px 2px;
+  }
+  .event-title {
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 640px), (hover: none) {
+  .event-note {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 }

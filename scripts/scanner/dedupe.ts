@@ -201,11 +201,14 @@ export function collapseRuns(
     const ordered = [...refs].sort((a, b) => a.t - b.t);
     const keep = ordered[0]!;
     const last = ordered[ordered.length - 1]!;
-    const runNote = `Runs through ${last.e.date} (${uniqueDays.length} dates)`;
+    const [fm, fd] = keep.e.date.split(/\s+/);
+    const [lm, ld] = last.e.date.split(/\s+/);
+    const runNote = fm === lm ? `Runs ${fm} ${fd}–${ld}.` : `Runs ${keep.e.date}–${last.e.date}.`;
     // Idempotent: a collapsed run gets re-scraped and re-collapsed on later
     // scans, so replace any prior "Runs through …" note rather than append.
     const priorNote = (keep.e.note ?? "")
       .replace(/\s*·?\s*Runs through [^·]*\(\d+ dates\)/g, "")
+      .replace(/\s*·?\s*Runs [A-Z][a-z]{2} \d+–(?:[A-Z][a-z]{2} )?\d+\./g, "")
       .trim();
     keep.e.note = priorNote ? `${priorNote} · ${runNote}` : runNote;
     for (const r of ordered.slice(1)) {

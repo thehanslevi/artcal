@@ -54,7 +54,7 @@ Flag (pick one or null):
 - "decide" if the event is imminent and requires a decision
 - null (default)
 
-For each event: fill day, date, event title verbatim, where (fall back to venue's provided location if none in source), cost ("FREE" / "$X" / "$X-Y" / "TBD"), category, mode, start/end HH:MM or null, short note (or null), url (canonical event URL or fall back to venue page).`;
+For each event: fill day, date, event title verbatim, where (fall back to venue's provided location if none in source), cost ("FREE" / "$X" / "$X-Y" / "TBD"), category, mode, start/end HH:MM or null, note (null unless it adds a plain fact the other fields don't show, e.g. "Runs Nov 12–14." or "With Evan Bellantone."; never the venue's blurb, a plot summary, exclamation marks, or words like rare, landmark, world premiere), url (canonical event URL or fall back to venue page).`;
 
 export async function extractFromVenue(
   venue: Venue,
