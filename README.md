@@ -101,6 +101,8 @@ Four scheduled jobs keep what's listed true. Each one fixes what it safely can a
 | Monday | Refresh practices | Confirms every Directory link still answers; sets the Directory's "Updated" date. |
 | Thursday | Discover practices | Reads every Directory row's site, checks its listed price is still there, proposes changes, and opens the "Directory proposals" issue with every row that didn't pass. |
 
+**Prices and links:** Check events fills in the price of a listing still at TBD when its page states one, and replaces a link to a venue's calendar with the event's own page. `npm run events:prices` does the same on demand.
+
 **When the "Directory proposals" issue is open:** run `npm run practices:review`. Accept or reject each proposal. For a row that didn't pass, open its site: fix the link or price, or take the row out. A row stays marked "Last checked …" on the site until it passes again.
 
 **To take an event down by hand:** move it from `src/data/events.json` into `scripts/scanner/removed-events.json` with a `why`. Deleting it alone isn't enough; the next scan would find it again.
