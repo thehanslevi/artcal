@@ -1148,19 +1148,47 @@ a:hover {
   top: 0;
   z-index: 10;
   background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(10px);
+  /* Prefixed first: the minifier keeps the last of the pair, and Chrome reads
+     only the unprefixed one (the build had been shipping Safari's alone, so
+     Chrome and Android drew no blur and titles showed through). */
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   padding: 8px 0;
 }
 
 /* The category bar keeps room for its pills; when the buttons beside it would
    squeeze it into a column (tablets, narrow windows), they move to the next
    line instead. */
-.filter-row .filter-bar {
+.filter-row .filter-bar-wrap {
   flex: 1 1 420px;
   min-width: 0;
+}
+.filter-row .filter-bar {
   margin-bottom: 0;
   position: static;
+}
+
+.filter-bar-wrap {
+  position: relative;
+}
+/* Shown only at an edge with more pills past it (FilterBar measures). Inside
+   the bar's border, so the border stays whole. */
+.filter-fade {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  width: 40px;
+  pointer-events: none;
+}
+.filter-fade-right {
+  right: 1px;
+  border-radius: 0 19px 19px 0;
+  background: linear-gradient(to right, transparent, var(--page) 80%);
+}
+.filter-fade-left {
+  left: 1px;
+  border-radius: 19px 0 0 19px;
+  background: linear-gradient(to left, transparent, var(--page) 80%);
 }
 
 .export-btn {
@@ -2835,7 +2863,7 @@ a:hover {
     flex-wrap: wrap;
     align-items: center;
   }
-  .filter-row .filter-bar {
+  .filter-row .filter-bar-wrap {
     flex: 1 1 100%;
     min-width: 0;
     max-width: 100%;

@@ -415,6 +415,9 @@ function App() {
         <div className="zone-inner">
       <CuratorPicks tab={tab} />
       {view === "making" ? <StartingSoon /> : null}
+      {/* The filter row sticks while the calendar scrolls under it and lets go
+          where the calendar ends: its filters don't apply to the Directory. */}
+      <div className="calendar-scope">
       <div className="filter-row">
         <FilterBar active={filter} onChange={setFilter} counts={counts} />
         <button
@@ -482,6 +485,7 @@ function App() {
         notes={notes}
         onSetNote={handleSetNote}
       />
+      </div>
       {/* The directory sits under Practice's dated list: what's scheduled
           first, then where to look. */}
       {view === "making" ? <Directory /> : null}
