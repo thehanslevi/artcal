@@ -448,7 +448,7 @@ function App() {
               >
                 Share what you want to see or what you're working on
               </button>{" "}
-              and I'll include it here and in the newsletter.
+              and I'll include it here.
             </p>
           </div>
           {/* On Making, the Directory is the venue list; two would compete. */}

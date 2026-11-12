@@ -42,7 +42,7 @@ export function SubmitPanel({ open, onOpenChange }: Props) {
           <p className="submit-copy">
             Share something you want to see, or something you're making. Email
             the details — what, when, where, cost, link — and I'll add worthy
-            ones here and in the newsletter.
+            ones here.
           </p>
           <div className="submit-email-row">
             <code className="submit-email">{EMAIL}</code>
