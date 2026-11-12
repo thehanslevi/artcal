@@ -29,6 +29,10 @@ import { formatCost as formatRowCost } from "./practices";
  * the same venue in the 14 days before it, which means the class is running.
  * "Intensive" on its own isn't a signal: every multi-day intensive in the data
  * says how many days, and the one that doesn't is a one-day workshop.
+ *
+ * That last check needs the 14 days before every session in the window, so the
+ * events passed in have to start at least 14 days before today. The page's do:
+ * vite.config.ts ships the two weeks before this week's Monday with it.
  */
 
 /** How far ahead the strip looks, in days. */
@@ -38,27 +42,6 @@ export const MAX_ITEMS = 5;
 export const LOOKBACK_DAYS = 14;
 /** Sessions of one class are at most a week apart. Fortnightly is a drop-in night. */
 const RUN_GAP_DAYS = 7;
-/**
- * The page carries events from Monday of the current week on (lib/events), so
- * the 14 days before a session are often only partly loaded, and a course in
- * week six looks like a course starting. Mostly Good's Hand Building Course on
- * Nov 15 is one: its first five Sundays are in the past chunk.
- *
- * Three ways round it, strongest first:
- *   - A listing that says how many sessions it has, with all of them ahead
- *     ("Part of a 6-week series", six Tuesdays listed), starts on the first.
- *   - A listing that gives a length and appears once ("8-day boot class") is
- *     the whole class in one row. It counts once a week before it is loaded,
- *     enough to see the last session of a weekly class listed session by
- *     session, which would look the same.
- *   - Anything else needs all 14 days before it loaded.
- * Measured on every day from Jul 13 to Nov 12, against the full history: no
- * session shown that the full history calls under way. The cost is the other
- * way: a class listed session by session, or a bare "course", drops out in the
- * week or two before it starts. Shipping the two weeks before Monday with the
- * page (vite.config.ts) would end that, and nothing here would need to change.
- */
-const SINGLE_LISTING_SEEN = 7;
 
 export type StartReason =
   /** Says it's session 1: "(S1 of 4)". */
@@ -99,14 +82,15 @@ export interface StartingMiss {
 }
 
 export interface StartingInput {
-  /** Dated events. On the page, CURRENT_EVENTS: this week on. */
+  /**
+   * Dated events, complete from at least LOOKBACK_DAYS before today. On the
+   * page, CURRENT_EVENTS: from two weeks before this week's Monday on.
+   */
   events: CalEvent[];
   practices: Practice[];
   /** The make events at a row's venue. On the page, lib/join's datedSessionsFor. */
   eventsAt: (p: Practice) => CalEvent[];
   today: Date;
-  /** First date `events` is complete from. Defaults to the earliest event in it. */
-  coveredFrom?: Date;
 }
 
 const DAY = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -123,10 +107,6 @@ export function startsLabel(d: Date): string {
 
 // 2 to 16, in figures or words. "30 days" in a note is a refund policy.
 const N = "(?:[2-9]|1[0-6]|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)";
-const WORD_NUMBER: Record<string, number> = {
-  two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7,
-  eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12,
-};
 /** "6-week", "Two-day", "3-session", "10 weeks". Not "7 days a week". */
 const LENGTH = new RegExp(
   `\\b(${N})[-\\s](day|night|week|session|part|weekend)s?\\b(?!\\s+(?:a|per)\\s+week)`,
@@ -149,22 +129,6 @@ const DROP_IN = /\bdrop[-\s]?in\b|\bopen studios?\b/i;
 const RECURRING = /\b(?:bi-?weekly|weekly|monthly)\b/i;
 /** Booked by one person or a group, and listed anyway. Titles only. */
 const PRIVATE = /\bprivate\b/i;
-/** A session row of something longer: "Part of a 6-week series." */
-const PART_OF = /\bpart of\b/i;
-
-/** How many sessions a listing says it has, and whether they're a week apart. */
-function statedSessions(text: string): { n: number; weekly: boolean } | null {
-  const w = WEEKDAYS.exec(text);
-  if (w) return { n: toNumber(w[1]!), weekly: true };
-  const l = LENGTH.exec(text);
-  // A weekend is one or two days; the count can't be checked.
-  if (!l || /weekend/i.test(l[2]!)) return null;
-  return { n: toNumber(l[1]!), weekly: /week/i.test(l[2]!) };
-}
-
-function toNumber(s: string): number {
-  return WORD_NUMBER[s.toLowerCase()] ?? Number(s);
-}
 
 /** Venue fields that hold a city or a street rather than a place. */
 const NOT_A_VENUE = /^(?:ny|nyc|new york|brooklyn|manhattan|queens|bronx|the bronx|staten island)$/i;
@@ -209,27 +173,11 @@ function sameListing(a: CalEvent, b: CalEvent): boolean {
   return !a.start || !b.start || a.start === b.start;
 }
 
-/** The listing names N sessions and exactly N are ahead, a week apart at most. */
-function allSessionsAhead(s: Session, later: Session[]): boolean {
-  const stated = statedSessions(s.text);
-  if (!stated) return false;
-  const chain = [s];
-  for (const o of later) {
-    const gap = daysBetween(chain[chain.length - 1]!.d, o.d);
-    if (gap === 0 || !sameListing(s.e, o.e)) continue;
-    if (gap > RUN_GAP_DAYS) break;
-    chain.push(o);
-  }
-  if (chain.length !== stated.n) return false;
-  return !stated.weekly || daysBetween(s.d, chain[chain.length - 1]!.d) >= 7 * (stated.n - 1);
-}
-
 /** What makes a session in the window a start, or why it isn't one. */
 function judgeSession(
   s: Session,
   sessions: Session[],
   rowOf: Map<CalEvent, Practice>,
-  coveredFrom: Date,
 ): { reason: StartReason } | { why: string } {
   const title = s.e.event;
   const length = LENGTH.test(s.text) || WEEKDAYS.test(s.text) || LONGER.test(s.text);
@@ -251,33 +199,26 @@ function judgeSession(
   if (before) return { why: `already running (also ${before.e.date})` };
   const later = siblings.filter((o) => gap(o) > 0);
 
-  // Days before this session that the events cover.
-  const seen = Math.max(0, daysBetween(coveredFrom, s.d));
-  const unseen = { why: `the ${LOOKBACK_DAYS} days before it aren't loaded` };
-  const bySession =
-    later.some((o) => gap(o) <= LOOKBACK_DAYS) || PART_OF.test(s.e.note ?? "");
-
-  if (length) {
-    if (allSessionsAhead(s, later)) return { reason: "length" };
-    const needed = bySession ? LOOKBACK_DAYS : SINGLE_LISTING_SEEN;
-    return seen >= needed ? { reason: "length" } : unseen;
-  }
-  if (FORMAT.test(title)) return seen >= LOOKBACK_DAYS ? { reason: "format" } : unseen;
+  if (length) return { reason: "length" };
+  if (FORMAT.test(title)) return { reason: "format" };
   const again = later.some((o) => gap(o) <= RUN_GAP_DAYS && sameListing(s.e, o.e));
   if (again) {
     // A free weekly program is a drop-in (Studio Sundays).
     if (isFree(s.e)) return { why: "free and weekly: a drop-in" };
-    return seen >= LOOKBACK_DAYS ? { reason: "run" } : unseen;
+    return { reason: "run" };
   }
   return { why: "one session" };
 }
 
 function eventItem(s: Session, row: Practice | undefined, reason: StartReason): StartingItem {
   const e = s.e;
-  // A Directory row's name and neighborhood are kept by hand. A scraped venue
-  // can be a street address ("144 Montague Street") or a city ("NY").
+  // A Directory row's name is kept by hand. A scraped venue can be a street
+  // address ("144 Montague Street") or a city ("NY"). The event's own
+  // neighborhood comes first: it's where this class meets, and a row can be
+  // named for where the place used to be (Lower East Side Printshop is in the
+  // Garment District).
   const venue = row ? row.name : placeOrNull(e.venue ?? e.where.split(/[·,]/)[0]);
-  const hood = placeOrNull(row ? row.neighborhood : e.neighborhood);
+  const hood = placeOrNull(e.neighborhood) ?? placeOrNull(row?.neighborhood);
   return {
     key: e.uid,
     what: e.event,
@@ -346,11 +287,9 @@ export function judgeStarting(input: StartingInput): {
   for (const [e, rows] of claims) if (rows.length === 1) rowOf.set(e, rows[0]!);
 
   const sessions: Session[] = [];
-  let earliest: Date | null = null;
   for (const e of events) {
     const d = parseEventDate(e.date);
     if (!d) continue;
-    if (!earliest || d < earliest) earliest = d;
     if (e.mode !== "make") continue;
     sessions.push({
       e,
@@ -359,7 +298,6 @@ export function judgeStarting(input: StartingInput): {
       text: `${e.event} ${e.note ?? ""}`,
     });
   }
-  const coveredFrom = input.coveredFrom ?? earliest ?? today;
 
   const items: StartingItem[] = [];
   const misses: StartingMiss[] = [];
@@ -368,7 +306,7 @@ export function judgeStarting(input: StartingInput): {
   for (const s of sessions) {
     const days = daysBetween(today, s.d);
     if (days < 0 || days > WINDOW_DAYS) continue;
-    const verdict = judgeSession(s, sessions, rowOf, coveredFrom);
+    const verdict = judgeSession(s, sessions, rowOf);
     if ("why" in verdict) {
       misses.push({ what: s.e.event, date: s.e.date, why: verdict.why });
       continue;

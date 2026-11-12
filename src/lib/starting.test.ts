@@ -1,15 +1,18 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import type { CalEvent } from "../types";
+import type { CalEvent, EventsData } from "../types";
 import type { Practice } from "../types/practice";
-import { judgeStarting, startingSoon, type StartingInput } from "./starting";
+import { HISTORY_DAYS, splitEvents } from "../../vite.config";
+import eventsJson from "../data/events.json";
+import { hostOf, isAggregator } from "./host";
+import { PRACTICES } from "./practices";
+import { LOOKBACK_DAYS, judgeStarting, startingSoon, type StartingInput } from "./starting";
 
-// Fixtures only. src/lib/events.ts reads the build's virtual modules, which
-// Node can't load, so nothing here touches it or events.json.
+// Fixtures, until the replay at the end, which splits events.json the way the
+// build does (vite.config.ts). src/lib/events.ts reads the build's virtual
+// modules, which Node can't load, so nothing here imports it.
 
 const TODAY = new Date(2026, 10, 12); // Thu Nov 12, 2026
-const MONDAY = new Date(2026, 10, 9); // where the page's events begin
-const LONG_AGO = new Date(2026, 6, 1); // full history
 
 let uid = 0;
 function ev(partial: Partial<CalEvent> & { date: string; event: string }): CalEvent {
@@ -58,7 +61,6 @@ function input(
     practices: [],
     eventsAt: (p) => events.filter((e) => e.url && new URL(e.url).host === new URL(p.url).host),
     today: TODAY,
-    coveredFrom: LONG_AGO,
     ...more,
   };
 }
@@ -115,28 +117,7 @@ test("a course already running is left out, and so is its last session", () => {
   assert.equal(why(i, "Hand Building Course", "Nov 15"), "already running (also Nov 8)");
 });
 
-test("when the weeks before aren't loaded, a course's last session isn't taken for its first", () => {
-  // The page holds this week on. Mostly Good's Nov 15 session was week six.
-  const visible = [ev({ date: "Nov 15", event: "Hand Building Course", start: "10:00" })];
-  const i = input(visible, { coveredFrom: MONDAY });
-  assert.deepEqual(whats(i), []);
-  assert.equal(why(i, "Hand Building Course"), "the 14 days before it aren't loaded");
-  // With two weeks of history loaded and nothing in them, it's a start.
-  assert.deepEqual(whats(input(visible, { coveredFrom: new Date(2026, 9, 31) })), [
-    "Hand Building Course",
-  ]);
-});
-
-test("a listing that names its length and appears once needs a week before it loaded", () => {
-  const boot = [ev({ date: "Nov 21", event: "8-day boot class" })];
-  // Loaded from Mon Nov 16: five days before it, not enough to rule out a
-  // weekly class listed session by session.
-  assert.deepEqual(whats(input(boot, { coveredFrom: new Date(2026, 10, 16) })), []);
-  // Loaded from Mon Nov 9: twelve days.
-  assert.deepEqual(whats(input(boot, { coveredFrom: MONDAY })), ["8-day boot class"]);
-});
-
-test("a series with all its stated sessions ahead starts on the first, history or not", () => {
+test("a series listed session by session starts on its first", () => {
   const tuesdays = ["Nov 17", "Nov 24", "Dec 1", "Dec 8", "Dec 15", "Dec 22"].map((date) =>
     ev({
       date,
@@ -146,13 +127,11 @@ test("a series with all its stated sessions ahead starts on the first, history o
       note: "Part of a 6-week series. See URL for full details.",
     }),
   );
-  const i = input(tuesdays, { coveredFrom: new Date(2026, 10, 16) });
+  const i = input(tuesdays);
   const items = startingSoon(i);
   assert.equal(items.length, 1);
   assert.equal(items[0]?.when, "Starts Tue Nov 17");
   assert.equal(why(i, "Poetry & the Body", "Nov 24"), "already running (also Nov 17)");
-  // Five of six: the first may be in the past chunk.
-  assert.deepEqual(whats(input(tuesdays.slice(1), { coveredFrom: new Date(2026, 10, 23) })), []);
 });
 
 test("a paid title repeated within a week from one listing is a run; its first session starts it", () => {
@@ -270,6 +249,38 @@ test("a Directory row lends its name and neighborhood, and groups its sessions h
   );
 });
 
+test("the event's own neighborhood comes before its Directory row's", () => {
+  // The row is named for where the Printshop was. Its classes meet in the
+  // Garment District.
+  const lesp = row({
+    id: "les-printshop",
+    name: "Lower East Side Printshop",
+    neighborhood: "Lower East Side",
+    url: "https://www.printshop.org/classes-workshops",
+  });
+  const weekend = ["Aug 8", "Aug 9"].map((date) =>
+    ev({
+      date,
+      event: "Chine-Collé Weekend Workshop with Alejandra Arias Sevilla",
+      where: "Lower East Side Printshop, Garment District",
+      venue: "Lower East Side Printshop",
+      neighborhood: "Garment District",
+      url: "https://printshop.org/classes-workshops/chine-colle-workshop-with-alejandra-arias-sevilla",
+      start: "12:00",
+      cost: "$160",
+    }),
+  );
+  // lib/join matches them: printshop.org is www.printshop.org.
+  const eventsAt = (p: Practice) => (p === lesp ? weekend : []);
+  const items = startingSoon(
+    input(weekend, { practices: [lesp], eventsAt, today: new Date(2026, 6, 31) }),
+  );
+  assert.deepEqual(
+    items.map((x) => [x.venue, x.neighborhood, x.when]),
+    [["Lower East Side Printshop", "Garment District", "Starts Sat Aug 8"]],
+  );
+});
+
 test("when two Directory rows share a site, the event keeps its own venue", () => {
   const clay = row({
     id: "powerhouse-ceramics",
@@ -381,4 +392,79 @@ test("at most five, soonest first; nothing qualifying means nothing", () => {
 
 test("witness events never count", () => {
   assert.deepEqual(whats(input([ev({ date: "Nov 14", event: "3-day Festival", mode: "witness" })])), []);
+});
+
+// The page ships the events from two weeks before this week's Monday on
+// (vite.config.ts), so the 14 days before every session in the window are there.
+
+test("the page carries the two weeks before this Monday, in whole weeks", () => {
+  assert.ok(HISTORY_DAYS >= LOOKBACK_DAYS);
+  assert.equal(HISTORY_DAYS % 7, 0);
+  const dates = ["Oct 25", "Oct 26", "Nov 1", "Nov 2", "Nov 12", "TBA"];
+  const data: EventsData = {
+    lastVerified: "2026-11-12",
+    weeks: [{ label: "", events: dates.map((date) => ev({ date, event: date })) }],
+  };
+  const page = (from: Date) => splitEvents(data, from).current.map((e) => e.date);
+  // Thursday and Sunday of the week of Mon Nov 9: from Mon Oct 26.
+  assert.deepEqual(page(new Date(2026, 10, 12)), ["Oct 26", "Nov 1", "Nov 2", "Nov 12", "TBA"]);
+  assert.deepEqual(page(new Date(2026, 10, 15)), ["Oct 26", "Nov 1", "Nov 2", "Nov 12", "TBA"]);
+  // Monday Nov 16: from Mon Nov 2.
+  assert.deepEqual(page(new Date(2026, 10, 16)), ["Nov 2", "Nov 12", "TBA"]);
+});
+
+test("a course's last session isn't taken for its first on the page", () => {
+  // Mostly Good's Hand Building Course: Nov 15 was week six.
+  const sundays = ["Oct 11", "Oct 18", "Oct 25", "Nov 1", "Nov 8", "Nov 15"].map((date) =>
+    ev({ date, event: "Hand Building Course", venue: "Mostly Good Studios", start: "10:00" }),
+  );
+  const data: EventsData = { lastVerified: "2026-11-12", weeks: [{ label: "", events: sundays }] };
+  const i = input(splitEvents(data, TODAY).current);
+  assert.deepEqual(whats(i), []);
+  assert.equal(why(i, "Hand Building Course", "Nov 15"), "already running (also Nov 8)");
+});
+
+// lib/join's matchesVenue. join.ts reads the build's modules, which can't load here.
+function matchesVenue(p: Practice, e: CalEvent): boolean {
+  const ph = hostOf(p.url);
+  const eh = hostOf(e.url);
+  if (ph && eh && !isAggregator(eh) && !isAggregator(ph)) return ph === eh;
+  const name = p.name.toLowerCase();
+  const venue = (e.venue ?? "").toLowerCase().trim();
+  if (!venue) return false;
+  if (name.length <= 5) return venue === name;
+  return venue.includes(name) || name.includes(venue);
+}
+
+test("replayed on every day from Jul 13 to Dec 26, the page lists what the full history does", () => {
+  const data = eventsJson as EventsData;
+  const all = data.weeks.flatMap((w) => w.events);
+  // Matched once: a row and an event match or don't, whatever else is loaded.
+  const at = new Map(
+    PRACTICES.map((p) => [p, all.filter((e) => e.mode === "make" && matchesVenue(p, e))]),
+  );
+  const judge = (events: CalEvent[], today: Date) => {
+    const here = new Set(events);
+    return judgeStarting({
+      events,
+      practices: PRACTICES,
+      eventsAt: (p) => at.get(p)!.filter((e) => here.has(e)),
+      today,
+    }).items.map((x) => `${x.what} (${x.when})`);
+  };
+  let listed = 0;
+  const wrong: string[] = [];
+  for (let n = 0; ; n++) {
+    const day = new Date(2026, 6, 13 + n);
+    if (day > new Date(2026, 11, 26)) break;
+    // Built that day, so the page starts where that build's would.
+    const page = judge(splitEvents(data, day).current, day);
+    const full = judge(all, day);
+    listed += full.length;
+    const on = `${day.getMonth() + 1}/${day.getDate()}`;
+    for (const x of full) if (!page.includes(x)) wrong.push(`${on}: dropped ${x}`);
+    for (const x of page) if (!full.includes(x)) wrong.push(`${on}: under way, listed anyway: ${x}`);
+  }
+  assert.ok(listed > 0, "nothing to compare");
+  assert.deepEqual(wrong.slice(0, 10), []);
 });
