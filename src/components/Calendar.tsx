@@ -12,13 +12,17 @@ import {
 } from "../lib/dates";
 import { isFree } from "../lib/cost";
 import { PAST_COUNT, type PastStatus } from "../lib/events";
-import { pickId } from "../lib/picks";
+import { buildPickIndex, pickId } from "../lib/picks";
+import { showPastFinds } from "../lib/show-past";
 import { matchesTab } from "../lib/tab";
 import { EventRow } from "./EventRow";
 import { WeekSummary } from "./WeekSummary";
 
 interface Props {
-  /** This week on, plus the past once "Show past" has loaded it. */
+  /**
+   * From two weeks before this week's Monday on, plus the older events once
+   * "Show past" has loaded them.
+   */
   events: CalEvent[];
   filter: CategoryFilter;
   tab: TabMode;
@@ -30,6 +34,8 @@ interface Props {
   showPast: boolean;
   /** The past download "Show past" starts, if it's under way or failed. */
   pastStatus: PastStatus;
+  /** Whether that download has come, so `events` holds every event. */
+  pastLoaded: boolean;
   onToggleShowPast: () => void;
   onTogglePick: (id: string) => void;
   isCurator?: boolean;
@@ -56,6 +62,7 @@ export function Calendar({
   weekendOnly,
   showPast,
   pastStatus,
+  pastLoaded,
   onToggleShowPast,
   onTogglePick,
   isCurator = false,
@@ -68,6 +75,8 @@ export function Calendar({
   // Weeks are derived from event dates (Monday-start), not the raw buckets in
   // events.json, which can overlap or misfile events.
   const weeks = useMemo(() => groupEventsIntoWeeks(events), [events]);
+  // Every id a loaded event answers to, to tell which picks are here.
+  const loadedIds = useMemo(() => buildPickIndex(events), [events]);
 
   // Reset user selection when filters change
   useEffect(() => {
@@ -113,20 +122,20 @@ export function Calendar({
     return true;
   });
 
-  // Is there anything "Show past" would bring back? The earlier weeks aren't
-  // downloaded until it's pressed, so the button shows whenever they exist.
-  // Otherwise check this week's past days under the filters. That check has
-  // to look past the hiding above. It used to ask whether a past week had
+  // Is there anything "Show past" would bring back (lib/show-past)? The check
+  // has to look past the hiding above. It used to ask whether a past week had
   // visible events, which the hiding had already emptied, so the answer was
   // always no and the button never appeared.
-  const anyPast =
-    PAST_COUNT > 0 ||
-    weeks.some((week) =>
-      visibleFor(week.events, tab, true).some((e) => {
-        const d = parseEventDate(e.date);
-        return d !== null && isPast(d, now);
-      }),
-    );
+  const anyPast = showPastFinds({
+    matching: visibleFor(events, tab, true),
+    now,
+    pastLoaded,
+    pastCount: PAST_COUNT,
+    weekendOnly,
+    picksOnly,
+    picks,
+    loadedIds,
+  });
   const pastLabel = showPast
     ? "Hide past"
     : pastStatus === "loading"

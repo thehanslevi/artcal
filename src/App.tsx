@@ -54,8 +54,8 @@ type View = "making" | "witnessing";
 
 // Every identity an event answers to. Stored picks resolve through this, so a
 // star saved before a rename or a merge upgrades itself instead of dangling.
-// It covers this week on until "Show past" loads the rest; a pick it can't
-// resolve yet is kept as saved.
+// It covers the page's events (two weeks before this Monday on) until "Show
+// past" loads the rest; a pick it can't resolve yet is kept as saved.
 const CURRENT_PICK_INDEX = buildPickIndex(CURRENT_EVENTS);
 
 const UPLOAD_DEBOUNCE_MS = 1500;
@@ -89,7 +89,7 @@ function App() {
   const [submitOpen, setSubmitOpen] = useState(false);
   const [weekendOnly, setWeekendOnly] = useState(false);
   const [showPast, setShowPast] = useState(false);
-  // Events before this week, once "Show past" has downloaded them.
+  // The older events, once "Show past" has downloaded them.
   const [pastEvents, setPastEvents] = useState<CalEvent[] | null>(null);
   const [pastStatus, setPastStatus] = useState<PastStatus>("idle");
   const [isCurator, setIsCurator] = useState(false);
@@ -269,8 +269,8 @@ function App() {
     }
   }, [passphrase]);
 
-  // The first "Show past" downloads the weeks before this one, then shows
-  // them. After that it only flips.
+  // The first "Show past" downloads the older weeks, then shows them. After
+  // that it only flips.
   const handleToggleShowPast = useCallback(() => {
     if (pastEvents || PAST_COUNT === 0) {
       setShowPast((s) => !s);
@@ -475,6 +475,7 @@ function App() {
         weekendOnly={weekendOnly}
         showPast={showPast}
         pastStatus={pastStatus}
+        pastLoaded={pastEvents !== null}
         onToggleShowPast={handleToggleShowPast}
         onTogglePick={togglePick}
         isCurator={isCurator}
