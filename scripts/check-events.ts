@@ -21,11 +21,26 @@
 // page for one whose link is a venue's calendar or a page shared with other
 // events. Fills are kept in event-checks.json with the words the price came
 // from, and --apply replays them too, onto listings still at TBD or still on
-// the old link.
+// the old link. A listing its own page shows on its date counts as checked,
+// whatever the calendar it was linked to says.
+//
+// A fill someone puts back by hand (the price back to TBD, the link back to
+// the calendar) is a decision: it goes under `declined` and isn't made again.
+// Taking an entry out of `declined` lets the check make that fill again.
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import type { CalEvent, EventsData } from "../src/types.ts";
-import { directLinks, isTbd, listingUrls, planFill, type Fill, type PageReadWithLinks } from "./scanner/event-price.ts";
+import {
+  directLinks,
+  isTbd,
+  listingUrls,
+  planFill,
+  sortFills,
+  type Declined,
+  type Fill,
+  type Made,
+  type PageReadWithLinks,
+} from "./scanner/event-price.ts";
 import { closeBrowser, renderPage } from "./scanner/fetchers.ts";
 import { judgeListing, type ListingResult } from "./scanner/listing-check.ts";
 
@@ -46,6 +61,10 @@ interface ChecksFile {
   remove: { uid: string; why: string }[];
   /** Found by the last full run; --apply replays these too. */
   fill?: FillRow[];
+  /** Fills made by earlier runs, kept so a hand undo of one can be seen. */
+  filled?: Made[];
+  /** Fills undone by hand, which the check won't make again. */
+  declined?: Declined[];
   /** Set when the run read every listing and stayed under the floor. */
   verifiedOn?: string;
 }
@@ -179,19 +198,43 @@ if (linked.size) {
 }
 await Promise.race([closeBrowser(), new Promise((r) => setTimeout(r, 10_000))]);
 
+// Fills earlier runs made that someone has since put back by hand.
+const made = sortFills([...(prior.filled ?? []), ...(prior.fill ?? [])], upcoming.map(({ e }) => e), prior.declined ?? []);
+const declined = made.declined;
+
 const rows: Record<string, CheckRow> = {};
 const remove: { uid: string; why: string }[] = [];
 const tally: Record<string, number> = {};
 const failing: string[] = [];
+const fill: FillRow[] = [];
+const found: string[] = [];
 for (const { e, day } of upcoming) {
   const page = e.url ? pages.get(e.url) : undefined;
-  const result: ListingResult = page
-    ? judgeListing(e, page, {
-        year: day.getFullYear(),
-        daysAway: Math.round((day.getTime() - today.getTime()) / 86_400_000),
-        sharedPage: (byUrl.get(e.url!)?.length ?? 0) > 1,
-      })
+  const daysAway = Math.round((day.getTime() - today.getTime()) / 86_400_000);
+  let result: ListingResult = page
+    ? judgeListing(e, page, { year: day.getFullYear(), daysAway, sharedPage: (byUrl.get(e.url!)?.length ?? 0) > 1 })
     : "unconfirmed";
+  // Listings at TBD, or linked to a calendar: what the same reads say about them.
+  if (e.url && (isTbd(e.cost) || listing.has(e.url))) {
+    const no = declined.filter((d) => d.uid === e.uid);
+    const plan = planFill(e, {
+      page,
+      result,
+      listing: listing.has(e.url),
+      reads: pages,
+      year: day.getFullYear(),
+      daysAway,
+      declined: { cost: no.some((d) => d.cost), url: no.some((d) => d.url) },
+    });
+    if (plan.cost || plan.url) {
+      fill.push({ uid: e.uid, cost: plan.cost, url: plan.url, replaces: plan.url ? e.url : undefined, quote: plan.quote, page: plan.page });
+      const parts = [plan.cost && `${plan.cost}, from "${plan.quote}"`, plan.url && `link ${plan.url}`].filter(Boolean);
+      found.push(`${e.date} ${e.event}: ${parts.join("; ")}`);
+    }
+    // Its own page shows it on its date: that's this run's check of it, and
+    // the fill moves its link there.
+    if (plan.url) result = "ok";
+  }
   tally[result] = (tally[result] ?? 0) + 1;
   const was = prior.rows[e.uid]?.strikes ?? 0;
   const strikes = result === "ok" ? 0 : result === "dead" || result === "unconfirmed" ? was + 1 : was;
@@ -215,27 +258,13 @@ const failShare = judged ? ((tally.dead ?? 0) + (tally.unconfirmed ?? 0)) / judg
 console.log(Object.entries(tally).map(([k, v]) => `${k} ${v}`).join(" · "));
 for (const f of failing) console.log("  " + f);
 
-// Listings at TBD, or linked to a calendar: what the same reads say about them.
-const fill: FillRow[] = [];
-const found: string[] = [];
-for (const { e, day } of upcoming) {
-  if (!e.url || !(isTbd(e.cost) || listing.has(e.url))) continue;
-  const plan = planFill(e, {
-    page: pages.get(e.url),
-    result: rows[e.uid]!.result,
-    listing: listing.has(e.url),
-    reads: pages,
-    year: day.getFullYear(),
-    daysAway: Math.round((day.getTime() - today.getTime()) / 86_400_000),
-  });
-  if (!plan.cost && !plan.url) continue;
-  fill.push({ uid: e.uid, cost: plan.cost, url: plan.url, replaces: plan.url ? e.url : undefined, quote: plan.quote, page: plan.page });
-  const parts = [plan.cost && `${plan.cost}, from "${plan.quote}"`, plan.url && `link ${plan.url}`].filter(Boolean);
-  found.push(`${e.date} ${e.event}: ${parts.join("; ")}`);
-}
 if (fill.length) {
   console.log(`Found ${fill.filter((f) => f.cost).length} price(s) and ${fill.filter((f) => f.url).length} event page(s):`);
   for (const f of found) console.log("  " + f);
+}
+if (declined.length) {
+  console.log(`Leaving ${declined.length} fill(s) undone by hand:`);
+  for (const d of declined) console.log(`  ${d.uid}: ${[d.cost, d.url].filter(Boolean).join("; ")}`);
 }
 
 const overFloor = failShare > FLOOR;
@@ -253,6 +282,8 @@ const checks: ChecksFile = {
   rows,
   remove,
   fill,
+  filled: made.filled,
+  declined,
   ...(overFloor ? {} : { verifiedOn: on }),
 };
 writeFileSync(CHECKS, JSON.stringify(checks, null, 2) + "\n");
