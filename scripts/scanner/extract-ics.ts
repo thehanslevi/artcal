@@ -1,4 +1,6 @@
+import { listingTimes } from "../../src/lib/dates.ts";
 import { decodeHtmlEntities } from "../../src/lib/entities.ts";
+import { tidyTitle } from "../../src/lib/title.ts";
 import type { CalEvent } from "../../src/types";
 import { classifyEvent } from "./classify.ts";
 import type { Candidate } from "./extract";
@@ -154,6 +156,8 @@ export async function extractFromIcs(
 
     const end = parseDt(v["DTEND"]);
     const sameDayEnd = end && end.y === start.y && end.m === start.m && end.d === start.d;
+    // A feed can send an all-day event as T000000 instead of VALUE=DATE.
+    const times = listingTimes(start.hhmm, sameDayEnd ? end.hhmm : null, tidyTitle(summary));
     const description = v["DESCRIPTION"] ? unescapeText(v["DESCRIPTION"].value) : "";
     const location = v["LOCATION"] ? unescapeText(v["LOCATION"].value) : "";
     const url = v["URL"]?.value.trim() || venue.url;
@@ -173,8 +177,8 @@ export async function extractFromIcs(
       category,
       flag: null,
       mode,
-      start: start.hhmm,
-      end: sameDayEnd ? end.hhmm : null,
+      start: times.start,
+      end: times.end,
       note: null,
       url,
     };

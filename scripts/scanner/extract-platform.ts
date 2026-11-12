@@ -1,4 +1,6 @@
+import { listingTimes } from "../../src/lib/dates.ts";
 import { decodeHtmlEntities } from "../../src/lib/entities.ts";
+import { tidyTitle } from "../../src/lib/title.ts";
 import type { CalEvent } from "../../src/types";
 import type { Venue } from "./venues";
 import { classifyEvent } from "./classify.ts";
@@ -51,7 +53,8 @@ function toEvent(p: Parsed, venue: Venue): CalEvent {
     category,
     flag: null,
     mode,
-    start: p.hhmm,
+    // A datetime of T00:00 is a listing with no time, not a midnight start.
+    start: listingTimes(p.hhmm, null, tidyTitle(p.title)).start,
     end: null,
     note: null,
     url: p.href ?? venue.url,

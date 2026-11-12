@@ -8,6 +8,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import type { CalEvent, EventsData } from "../src/types.ts";
+import { saysMidnight } from "../src/lib/dates.ts";
 import { seriesPrefixes, tidyTitle } from "../src/lib/title.ts";
 
 const data = JSON.parse(
@@ -74,6 +75,18 @@ for (const e of all) {
     if (typeof v === "string" && /&[a-z]+;|&#\d+;|<\/?[a-z]+>/i.test(v)) {
       errors.push(`${label(e)}: unescaped markup in ${f}`);
     }
+  }
+}
+
+// Times: venue calendars store a listing with no time, or an all-day one, as
+// T00:00, and the site printed "12am" on a Saturday workshop that starts at 9.
+// The scanner drops those (listingTimes in src/lib/dates.ts); a hand edit has
+// to as well.
+for (const e of all) {
+  if (e.start === "00:00" && !saysMidnight(e.event, e.note)) {
+    errors.push(
+      `${label(e)}: start 00:00 shows as 12am. If the listing gives no time, set start and end to null; if it starts at midnight, say so in the title or note`,
+    );
   }
 }
 

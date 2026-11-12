@@ -63,19 +63,49 @@ export function isThisWeekend(target: Date, from: Date = today()): boolean {
   return t === sat.getTime() || t === sun.getTime();
 }
 
+// Words, not "2d" or "3mo": the chip is set in capitals, and "IN 2D" read as
+// "2D".
 export function formatDaysUntil(days: number): string {
   if (days < 0) {
     const abs = Math.abs(days);
     if (abs === 1) return "yesterday";
-    if (abs < 7) return `${abs}d ago`;
-    if (abs < 30) return `${Math.round(abs / 7)}w ago`;
+    if (abs < 7) return `${abs} days ago`;
+    if (abs < 30) return `${count(Math.round(abs / 7), "week")} ago`;
     return "past";
   }
   if (days === 0) return "today";
   if (days === 1) return "tomorrow";
-  if (days < 7) return `in ${days}d`;
-  if (days < 30) return `in ${Math.round(days / 7)}w`;
-  return `in ${Math.round(days / 30)}mo`;
+  if (days < 7) return `in ${days} days`;
+  if (days < 30) return `in ${count(Math.round(days / 7), "week")}`;
+  return `in ${count(Math.round(days / 30), "month")}`;
+}
+
+function count(n: number, unit: string): string {
+  return `${n} ${unit}${n === 1 ? "" : "s"}`;
+}
+
+// Venue calendars store a listing with no time, or an all-day one, as T00:00
+// (The Events Calendar writes 00:00:00 to 23:59:59), and the site printed
+// "12am" on a Saturday workshop that starts at 9. A real midnight start says
+// so in its title or note.
+const SAYS_MIDNIGHT = /\bmidnight\b|\blate[\s-]?night\b|\b12(?::00)?\s?a\.?m\b/i;
+
+export function saysMidnight(...texts: (string | null | undefined)[]): boolean {
+  return texts.some((t) => typeof t === "string" && SAYS_MIDNIGHT.test(t));
+}
+
+/**
+ * The times a scraped listing keeps. "00:00" that nothing calls midnight is a
+ * date-only or all-day listing: no start, and so no end. validate-events.ts
+ * holds events.json to the same rule.
+ */
+export function listingTimes(
+  start: string | null,
+  end: string | null,
+  title: string,
+): { start: string | null; end: string | null } {
+  if (start === "00:00" && !saysMidnight(title)) return { start: null, end: null };
+  return { start, end };
 }
 
 // A week label like "Jul 6–12" or "Aug 24–30" or "Aug 10–23" or spans month like "Jul 27–Aug 2".
