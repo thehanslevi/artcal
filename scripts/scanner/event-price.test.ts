@@ -3,7 +3,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import type { CalEvent } from "../../src/types.ts";
-import { cleanUrl, directLinks, findPrice, isIndexUrl, listingUrls, planFill } from "./event-price.ts";
+import { cleanUrl, directLinks, findPrice, isIndexUrl, listingUrls, planFill, sortFills } from "./event-price.ts";
 
 const ownPage = { year: 2026, daysAway: 5, ownPage: true };
 const listingPage = { year: 2026, daysAway: 5, ownPage: false };
@@ -87,7 +87,8 @@ test("membership and patron prices on the same page don't count", () => {
     "TICKET INFORMATION\nTickets start at $25\nPlease note: All single ticket online and phone orders are subject to a $3 facility fee and an $8 handling fee per ticket.\n";
   const support =
     "SUPPORT BAM\nMEMBERSHIP\nBAM Membership ($100+)\n\nBAM Membership ($100+)\nUnlock exclusive savings on performances and films with a BAM Membership. From ticket discounts to priority access and special events, it’s your license to experience more for less.\nJOIN\nSUPPORT\nBAM Patrons ($2,500+)\n\nBAM Patrons ($2,500+)\nPriority access to premium seats, personalized ticket services, exclusive invitations, and more.";
-  assert.equal(cost("La Distance (theater) opens", "Nov 18", header + tickets + support), "$25");
+  // "Start at" is the cheapest seat, not the price.
+  assert.equal(cost("La Distance (theater) opens", "Nov 18", header + tickets + support), "From $25");
   assert.equal(cost("La Distance (theater) opens", "Nov 18", header + support), null);
 });
 
@@ -128,6 +129,34 @@ test("a ticket site's 'today' is the event's date", () => {
   assert.equal(cost("Diles que no me maten", "Nov 12", donyc, { ...ownPage, daysAway: 0 }), "$32.27");
 });
 
+test("a starting price is written as one", () => {
+  // bam.org/music/2026/einstein-on-the-beach-50
+  const einstein = "Einstein on the Beach — 50th Anniversary Concert\nNOV 19—22, 2026\nTICKET INFORMATION\nTickets start at $65\n";
+  assert.equal(cost("Einstein on the Beach — 50th Anniversary Concert (Philip Glass)", "Nov 19", einstein), "From $65");
+  const from = "Pataphysics 022\nSaturday, November 21, 2026\n8:00 PM  11:00 PM\nTickets from $20\n";
+  assert.equal(cost("Pataphysics 022", "Nov 21", from), "From $20");
+});
+
+test("an age limit or a closing time after a dash isn't the top of a range", () => {
+  // donyc.com/events/2026/11/12/diles-que-no-me-maten-tickets, with the age after a dash
+  const age = "LPR Presents: Diles que no me maten\nTODAY | 8 PM\nNational Sawdust\nAdd to calendar +\nTickets: $20 – 21+\nOn sale";
+  assert.equal(cost("Diles que no me maten", "Nov 12", age, { ...ownPage, daysAway: 0 }), "$20");
+  const late = "Pataphysics 022\nSaturday, November 21, 2026\nAdmission: $5 - 10pm till close";
+  assert.equal(cost("Pataphysics 022", "Nov 21", late), "$5");
+  // A real range still reads as one.
+  assert.equal(cost("Pataphysics 022", "Nov 21", "Pataphysics 022\nSaturday, November 21, 2026\nAdmission: $10 - 15"), "$10–15");
+});
+
+test("add-ons, gifts and memberships in other words aren't the price", () => {
+  const head = "Pataphysics 022\nSaturday, November 21, 2026\n8:00 PM  11:00 PM\n";
+  assert.equal(cost("Pataphysics 022", "Nov 21", head + "Add on a guest for $10"), null);
+  assert.equal(cost("Pataphysics 022", "Nov 21", head + "Donations of $50 or more get a tote"), null);
+  assert.equal(cost("Pataphysics 022", "Nov 21", head + "Become a sustaining member for $60 a season"), null);
+  assert.equal(cost("Pataphysics 022", "Nov 21", head + "Join as a member: $75"), null);
+  // A donation asked at the door still is one.
+  assert.equal(cost("Pataphysics 022", "Nov 21", head + "Suggested donation $10"), "$10 suggested");
+});
+
 const link = (text: string, href: string) => ({ text, href });
 
 test("a listing page's link to the event's own page", () => {
@@ -153,6 +182,35 @@ test("a listing page's link to the event's own page", () => {
   const bam = [link("Theater\n La Distance\n Nov 18—29, 2", "https://www.bam.org/theater/2026/la-distance?utm_source=home#tickets")];
   assert.deepEqual(directLinks({ event: "La Distance (theater) opens", date: "Nov 18" }, bam, "https://www.bam.org/"), [
     "https://www.bam.org/theater/2026/la-distance",
+  ]);
+});
+
+test("a link's title words are whole words, and the link is mostly the title", () => {
+  const venue = "https://venue.org/calendar/";
+  const at = (path: string) => `https://venue.org/events/${path}`;
+  const links = [
+    link("Opening Reception: Winter Group Show", at("opening-reception")),
+    link("Open Call for Artists", at("open-call")),
+    link("Open Mic Night", at("open-mic")),
+    link("Island Ceramics Pop-Up", at("island")),
+  ];
+  assert.deepEqual(directLinks({ event: "Open Mic", date: "Nov 20" }, links, venue), [at("open-mic")]);
+  assert.deepEqual(directLinks({ event: "Isla", date: "Nov 20" }, links, venue), []);
+  // noguchi.org/museum/calendar/: our title without the venue's subtitle.
+  const noguchi = [link("Open Studio: Play with Paper", "https://www.noguchi.org/museum/calendar/event/2026-11-15-1100-open-studio-play-with-paper/")];
+  assert.deepEqual(directLinks({ event: "Open Studio", date: "Nov 15" }, noguchi, "https://www.noguchi.org/museum/calendar/"), [
+    "https://www.noguchi.org/museum/calendar/event/2026-11-15-1100-open-studio-play-with-paper/",
+  ]);
+  // brooklynshoespace.com/schedule: a card runs its end time into the title.
+  const shoes = [
+    link("Thu 19 Nov9:00 AM – 4:00 PMSquare Toe Slipper Making: One-day Comfort & Craft Wo", "https://brooklynshoespace.com/classes/square-toe-slipper-making-one-day-comfort-craft-workshop"),
+    link("Mon 21, Tue 22 Dec10:00 AM – 5:00 PMPattern Making Class", "https://brooklynshoespace.com/classes/pattern-making-class"),
+  ];
+  assert.deepEqual(directLinks({ event: "Square Toe Slipper Making", date: "Nov 19" }, shoes, "https://brooklynshoespace.com/schedule"), [
+    "https://brooklynshoespace.com/classes/square-toe-slipper-making-one-day-comfort-craft-workshop",
+  ]);
+  assert.deepEqual(directLinks({ event: "Pattern Making Class", date: "Dec 21" }, shoes, "https://brooklynshoespace.com/schedule"), [
+    "https://brooklynshoespace.com/classes/pattern-making-class",
   ]);
 });
 
@@ -201,4 +259,87 @@ test("planFill: a calendar's link to the event's page gives its link and price",
   const none = planFill(e, { page: calendar, result: "ok", listing: true, reads: new Map(), year: 2026, daysAway: 9 });
   assert.equal(none.cost, undefined);
   assert.match(none.why ?? "", /no price/);
+  // A calendar that no longer shows it, while its own page does: the own page
+  // is found all the same, and check-events counts that as the listing's check.
+  const moved = planFill(e, { page: calendar, result: "unconfirmed", listing: true, reads, year: 2026, daysAway: 9 });
+  assert.equal(moved.url, "https://www.delightfactorynyc.com/events/pataphysics022");
+  // Fills someone undid by hand aren't looked for again.
+  const no = planFill(e, { page: calendar, result: "ok", listing: true, reads, year: 2026, daysAway: 9, declined: { cost: true, url: true } });
+  assert.equal(no.url, undefined);
+  assert.equal(no.cost, undefined);
+});
+
+// mostlygoodstudios.com/calendar/handbuilding-course-…: each session's page
+// ends on the sessions either side of it.
+const studioNav = "SKIP TO CONTENT\nHome\nCalendar\nShop\nStudio Membership\nPrivate Events & Lessons\nAbout\nContact\nFAQ\nLogin\n0\nBack to All Events\n";
+const studioAbout =
+  "\n10:00 AM  11:00 AM\n\nOver 6 weeks, learn and explore various hand building methods like slab building, coiling, pinching, and modeling.\n\nREGISTER\n";
+const week4 = `${studioNav}HAND BUILDING COURSE FALL SESSION WEEK 4\nSunday, November 1, 2026${studioAbout}Previous\nOctober 30\nVERY ANGRY WOMEN\nNext\nNovember 8\nHAND BUILDING COURSE FALL SESSION WEEK 5\n SIGN UP\n\n920 35th Avenue Astoria NY, 11106`;
+const week5 = `${studioNav}HAND BUILDING COURSE FALL SESSION WEEK 5\nSunday, November 8, 2026${studioAbout}Previous\nNovember 1\nHAND BUILDING COURSE FALL SESSION WEEK 4\nNext\nNovember 12\nCeramic Slumber Party - TWILIGHT\n SIGN UP\n\n920 35th Avenue Astoria NY, 11106`;
+
+test("planFill: a session's page isn't the next session's, though it names it at the bottom", () => {
+  const e = {
+    uid: "e_2", date: "Nov 8", day: "Sun", event: "Hand Building Course", where: "Mostly Good Studios", cost: "$40",
+    category: "making", flag: null, mode: "make", start: null, end: null, note: null,
+    url: "https://www.mostlygoodstudios.com/calendar",
+  } satisfies CalEvent;
+  const base = "https://www.mostlygoodstudios.com/calendar/handbuilding-course-week-1-xc9lc-4lwz7-ty5fa-byxjd-g4e6x-973s3-wnshb-zndwg-r5yr7";
+  const calendar = {
+    status: 200,
+    url: "https://www.mostlygoodstudios.com/calendar",
+    text: "November 2026\nSU\tMO\tTU\tWE\tTH\tFR\tSA\n1\nHAND BUILDING COURSE FALL SESSION WEEK 4\n10:00 AM – 11:00 AM\n\t2\t3\t4\t5\t6\t7\n8\nHAND BUILDING COURSE FALL SESSION WEEK 5\n10:00 AM – 11:00 AM\n\t9\t10\t11\t12".padEnd(240, " "),
+    links: [link("HAND BUILDING COURSE FALL SESSION WEEK 4", base), link("HAND BUILDING COURSE FALL SESSION WEEK 5", `${base}-wcl5l`)],
+  };
+  const ctx = { page: calendar, result: "ok" as const, listing: true, year: 2026, daysAway: 5 };
+  assert.equal(planFill(e, { ...ctx, reads: new Map([[base, { status: 200, text: week4 }], [`${base}-wcl5l`, { status: 200, text: week5 }]]) }).url, `${base}-wcl5l`);
+  // Week 4's page alone shows week 5 only in its closing links: not its page.
+  assert.equal(planFill(e, { ...ctx, reads: new Map([[base, { status: 200, text: week4 }]]) }).url, undefined);
+  // On the first session of a run there's only "Next".
+  const first = week4.replace("Previous\nOctober 30\nVERY ANGRY WOMEN\n", "");
+  assert.equal(planFill(e, { ...ctx, reads: new Map([[base, { status: 200, text: first }]]) }).url, undefined);
+});
+
+test("planFill: of two pages that show it, the one about that date", () => {
+  // brooklynshoespace.com: the class page lists every date; the schedule page is one session's.
+  const e = {
+    uid: "e_3", date: "Dec 7", day: "Mon", event: "Introduction to Shoe Making", where: "Brooklyn Shoe Space", cost: "$95",
+    category: "making", flag: null, mode: "make", start: null, end: null, note: null,
+    url: "https://brooklynshoespace.com/schedule",
+  } satisfies CalEvent;
+  const classPage = "https://brooklynshoespace.com/classes/2-hour-introduction-to-shoe-making";
+  const session = "https://brooklynshoespace.com/schedule/2026/dec/intro-shoe-making";
+  const calendar = {
+    status: 200,
+    url: "https://brooklynshoespace.com/schedule",
+    text: "Mon 7 Dec 6:00 PM – 8:00 PM 2-hour Introduction to Shoe Making".padEnd(240, " "),
+    links: [link("2-hour Introduction to Shoe Making", classPage), link("2-hour Introduction to Shoe Making", session)],
+  };
+  const shoes =
+    "2-hour Introduction to Shoe Making\n\nThis 2-hour session covers how shoes are built. Tuition is $100.\n\nDates & booking\n\nNovember 12, 2026\n\n6:00 PM – 8:00 PM\n\nFull · $95\n\nDecember 7, 2026\n\n6:00 PM – 8:00 PM\n\n2 spots remaining · $95\n\nBook" + " menu about contact".repeat(12);
+  const one = "Schedule/2-hour Introduction to Shoe Making\n2-hour Introduction to Shoe Making\n\nMon 7 Dec 2026 · 6:00 PM – 8:00 PM · Brooklyn Shoe Space\n\nBook this class" + " menu about contact".repeat(12);
+  const reads = new Map([[classPage, { status: 200, text: shoes }], [session, { status: 200, text: one }]]);
+  assert.equal(planFill(e, { page: calendar, result: "ok", listing: true, reads, year: 2026, daysAway: 25 }).url, session);
+});
+
+test("sortFills: a fill put back by hand is turned down, and stays turned down", () => {
+  const made = [
+    { uid: "a", cost: "$20" },
+    { uid: "b", url: "https://v.org/events/b", replaces: "https://v.org/calendar" },
+    { uid: "c", cost: "$15", url: "https://v.org/events/c", replaces: "https://v.org/calendar" },
+    { uid: "gone", cost: "$5" },
+  ];
+  const events = [
+    { uid: "a", cost: "TBD", url: "https://v.org/events/a" },
+    { uid: "b", cost: "$10", url: "https://v.org/calendar" },
+    { uid: "c", cost: "$15", url: "https://v.org/events/c" },
+    { uid: "d", cost: "TBD", url: "https://v.org/calendar" },
+  ];
+  const first = sortFills(made, events, [{ uid: "d", cost: "$30" }, { uid: "past", cost: "$1" }]);
+  assert.deepEqual(first.declined, [{ uid: "d", cost: "$30" }, { uid: "a", cost: "$20" }, { uid: "b", url: "https://v.org/events/b" }]);
+  assert.deepEqual(first.filled, [{ uid: "c", cost: "$15", url: "https://v.org/events/c", replaces: "https://v.org/calendar" }]);
+  // The next run carries both lists as they are.
+  const next = sortFills(first.filled, events, first.declined);
+  assert.deepEqual(next, first);
+  // Taking an entry out of `declined` lets the fill be made again.
+  assert.deepEqual(sortFills(first.filled, events, []).declined, []);
 });

@@ -14,14 +14,15 @@
 //   after the event's title, date or start time.
 // - Memberships, donations to the venue, merch, deposits, add-on, materials and
 //   service fees, "$20 off", gift cards and rentals don't count.
+// - "Tickets start at $25" is written "From $25", and "$20 – 21+" is $20.
 // - "Free" means free admission, free with RSVP, no cover and the like. Free
 //   jazz and free writing don't count, and neither does a free event next door.
 //
 // A listing whose link is a venue's calendar or a page shared by other events
 // gets its own page instead, when the calendar links to one that shows the
-// event on its date.
+// event on its date before it turns to other sessions.
 import type { CalEvent } from "../../src/types.ts";
-import { datePositions, judgeListing, plainText, type ListingResult, type PageRead } from "./listing-check.ts";
+import { datePositions, judgeListing, plainText, showsEvent, wordsIn, type ListingResult, type PageRead } from "./listing-check.ts";
 
 export interface PriceRead {
   /** As events.json writes it: "$25", "$10–12", "FREE", "$10 suggested", "Sliding scale". */
@@ -70,7 +71,7 @@ function titleWords(title: string): string[] {
 }
 
 function share(words: string[], text: string): number {
-  return words.length ? words.filter((w) => text.includes(w)).length / words.length : 0;
+  return words.length ? wordsIn(words, text).size / words.length : 0;
 }
 
 /** Where the title is written: most of its words, about as close together as in the title. */
@@ -246,15 +247,32 @@ function stretches(t: Text, titles: [number, number][], own: [number, number][],
   return out;
 }
 
-/** Where an event's own page turns to other events: "Other upcoming classes", "Earlier Event". */
+/**
+ * Where an event's own page turns to other events: "Other upcoming classes",
+ * "Earlier Event", and Squarespace's closing "Previous / date / title / Next /
+ * date / title", which has only "Next" on the first event of a run.
+ */
 const ELSEWHERE =
-  /\n(?:keep exploring|other upcoming|you (?:may|might) also like|related (?:events|content|classes|programs)|more from\b|more events|upcoming events|see the full calendar|similar (?:events|classes)|earlier event|later event|previous\n|event navigation|« ?all events)/gi;
+  /\n(?:keep exploring|other upcoming|you (?:may|might) also like|related (?:events|content|classes|programs)|more from\b|more events|upcoming events|see the full calendar|similar (?:events|classes)|earlier event|later event|previous\n|next\n|event navigation|« ?all events)/gi;
+
+/** The end of a page about one event: where it turns to other events, after `from`. */
+function turnAt(t: Text, from: number): number {
+  const turn = [...t.raw.matchAll(ELSEWHERE)].find((x) => x.index > from);
+  return turn ? turn.index : t.low.length;
+}
+
+/** Where a page about one event starts on it: its title or its date, whichever comes first. */
+function startOn(titles: [number, number][], own: [number, number][]): number {
+  const first = Math.min(titles[0]?.[0] ?? Infinity, own[0]?.[0] ?? Infinity);
+  return Number.isFinite(first) ? first : 0;
+}
 
 // ---------------------------------------------------------------------------
 // Prices
 
+// A range's top is a price, not an age or a time: "$20 – 21+" and "$15 - 10pm" are $20 and $15.
 const MONEY =
-  /\$ ?(\d{1,3}(?:,\d{3})+|\d+)(?:\.(\d\d))?(?!\d)(?: ?(?:[-–—]|to) ?\$? ?(\d{1,3}(?:,\d{3})+|\d+)(?:\.(\d\d))?(?![\d:]))?/g;
+  /\$ ?(\d{1,3}(?:,\d{3})+|\d+)(?:\.(\d\d))?(?!\d)(?: ?(?:[-–—]|to) ?\$? ?(\d{1,3}(?:,\d{3})+|\d+)(?:\.(\d\d))?(?![\d:]| ?(?:\+|am\b|pm\b|a\.m\.|p\.m\.|yrs?\b|years?\b|and (?:up|over|older)\b)))?/g;
 
 /** Words that make a price what a ticket, entry or class costs. */
 const TICKET =
@@ -263,15 +281,23 @@ const TICKET =
 /** A donation asked of those who come, rather than of the venue's supporters. */
 const SUGGESTED =
   /\b(?:suggested|recommended|by donation|donation at the door|pay[- ]what[- ]you[- ](?:can|wish|want)|pwy[cw]|sliding[- ]?scale|sliding)\b/;
+/** A donation that isn't asked at the door: "donations of $100 or more", "donating $50". */
+const GIFT = /\b(?:donat(?:es?|ed|ing|ions?)|gifts? of)\b/;
+/** "Tickets start at $25": the lowest price, not the price. */
+const STARTING = /\b(?:start(?:s|ing)?(?: at| from)?|from|as low as)\s*:?\s*$/;
 
 /** Prices that aren't for getting in: tested in the words around each one. */
 const NOT_ENTRY = new RegExp(
   [
-    "memberships?", "become a member", "dues", "patrons?", "donors?", "sponsors?", "benefactors?",
+    "memberships?", "becom\\w* an? (?:member|patron|supporter|sustainer|friend)\\w*", "dues", "patrons?", "donors?",
+    "sponsors?", "benefactors?", "supporters?", "sustainers?", "sustaining", "renew(?:al|als|s)?",
+    "contribut(?:e|es|ion|ions)",
+    "join\\w* (?:as an? |the |our )?(?:member|patron|friend|circle|club|society)\\w*",
+    "members? (?:level|tier|benefits?|perks?|program)s?",
     "per (?:month|year|week|hour|night)", "monthly", "annual(?:ly)?", "yearly", "subscri\\w*", "donate",
     "tax[- ]deductible", "make a (?:gift|donation)", "support (?:us|our|the)", "gift ?cards?", "gift certificates?",
     "merch\\w*", "t-?shirts?", "hoodies?", "posters?", "vinyl", "records?", "albums?", "books?", "deposits?",
-    "add-?ons?", "materials?", "supplies", "kits?", "handling", "surcharge", "off", "discount\\w*", "promo\\w*",
+    "add[- ]?ons?", "upgrades?", "optional", "materials?", "supplies", "kits?", "handling", "surcharge", "off", "discount\\w*", "promo\\w*",
     "coupons?", "codes?", "save", "savings", "rent\\w*", "hourly", "private", "scholarships?", "grants?", "awards?",
     "prizes?", "raised", "goal", "budget", "fund\\w*", "salary", "stipend", "honorari\\w*", "worth", "value",
     "minimum", "drinks?", "beers?", "wine", "cocktails?", "food", "snacks?", "tips?", "parking", "shipping",
@@ -306,6 +332,8 @@ interface Seen {
   hi: number;
   at: number;
   end: number;
+  /** "Tickets start at $25". */
+  starting?: boolean;
 }
 
 const amount = (whole: string, cents?: string) => Number(whole.replace(/,/g, "")) + (cents ? Number(cents) / 100 : 0);
@@ -358,10 +386,7 @@ function evidence(e: Pick<CalEvent, "event" | "date">, t: Text, opts: PriceOpts)
   let zones: Stretch[];
   if (opts.ownPage) {
     // The whole page, up to where it turns to other events.
-    const first = Math.min(titles[0]?.[0] ?? Infinity, own[0]?.[0] ?? Infinity);
-    const from = Number.isFinite(first) ? first : 0;
-    const turn = [...t.raw.matchAll(ELSEWHERE)].find((x) => x.index > from);
-    zones = [{ from: 0, to: turn ? turn.index : t.low.length }];
+    zones = [{ from: 0, to: turnAt(t, startOn(titles, own)) }];
   } else {
     zones = stretches(t, titles, own, all);
   }
@@ -412,9 +437,10 @@ function evidence(e: Pick<CalEvent, "event" | "date">, t: Text, opts: PriceOpts)
     const near = masked(`${prepare(heading).low} | ${before} | ${after}`, words);
     if (NOT_ENTRY.test(near) || /\+ ?$/.test(before)) return;
     const suggested = SUGGESTED.test(near);
+    if (!suggested && GIFT.test(near)) return;
     if (!suggested && !TICKET.test(near) && !besideHeading(at)) return;
     const kind = !suggested ? "paid" : /sliding|pay|pwy/.test(near) ? "sliding" : "suggested";
-    seen.push({ kind, lo, hi, at, end });
+    seen.push({ kind, lo, hi, at, end, starting: STARTING.test(before) });
   });
 
   for (const re of FREE_SAID) {
@@ -473,6 +499,8 @@ export function findPrice(e: Pick<CalEvent, "event" | "date">, text: string, opt
   const hi = Math.max(...pool.map((s) => s.hi));
   if (lo <= 0 || hi > lo * 8) return null;
   const range = lo === hi ? `$${dollars(lo)}` : `$${dollars(lo)}–${dollars(hi)}`;
+  // src/lib/cost.ts shows "From $25" as it's written.
+  if (paid.some((s) => s.starting)) return { cost: `From $${dollars(lo)}`, quote };
   if (paid.length) return { cost: range, quote };
   return { cost: asked.some((s) => s.kind === "sliding") ? `${range} sliding scale` : `${range} suggested`, quote };
 }
@@ -539,13 +567,11 @@ export function listingUrls(events: Pick<CalEvent, "event" | "url">[]): Set<stri
   return new Set([...titles].filter(([url, set]) => set.size > 1 || isIndexUrl(url)).map(([url]) => url));
 }
 
-/** Title words to look for in a link: "(World Premiere)", "(theater)" and "… opens" are ours, not the venue's. */
-function linkWordSets(title: string): string[][] {
+/** The title as a venue would write it: "(World Premiere)", "(theater)", "… opens" and "— Roulette Commission" are ours. */
+function linkTitles(title: string): string[] {
   const base = title.replace(/\([^()\d]*\)/g, " ").replace(/\bopens\s*$/i, " ");
-  const sets = [titleWords(base)];
   const head = base.split(/\s+[—–|]\s+/)[0]!;
-  if (head !== base && titleWords(head).length >= 2) sets.push(titleWords(head));
-  return sets.filter((s) => s.length);
+  return head !== base && titleWords(head).length >= 2 ? [base, head] : [base];
 }
 
 export interface Link {
@@ -553,10 +579,30 @@ export interface Link {
   text: string;
 }
 
+/** Words in a link's text that don't say which event it is: days, months, "View event". */
+const LINK_FILLER =
+  /^(?:(?:mon|tues?|wed(?:nes)?|thu(?:rs?)?|fri|sat(?:ur)?|sun)(?:day)?s?|january|february|march|april|june|july|august|sept(?:ember)?|october|november|december|today|tonight|tomorrow|tickets?|events?|view|more|info|details|book|register|rsvp|learn|read|here|sold|waitlist)$/;
+
+/**
+ * The link says little but the title: at least half its words are the
+ * title's, or it gives the whole title and then a subtitle ("Open Studio: Play
+ * with Paper"). "Open Call for Artists" isn't "Open Mic", though "open" is in it.
+ */
+function mostlyTitle(text: string, title: string): boolean {
+  const said = titleWords(text.replace(/([a-z])(?=\d)|(\d)(?=[a-z])/g, "$1$2 ")).filter((w) => !LINK_FILLER.test(w));
+  const own = new Set(titleWords(title));
+  if (!said.length || said.filter((w) => own.has(w)).length / said.length >= 0.5) return true;
+  return linkTitles(title).some((t) => {
+    const runs = plainText(t).split(/[^a-z0-9]+/).filter(Boolean);
+    return runs.length >= 2 && new RegExp(`(?<![a-z0-9])${runs.join("[^a-z0-9]+")}(?![a-z0-9])`).test(text);
+  });
+}
+
 /**
  * Links on a listing page to pages of the same site whose text carries the
- * event's title (80% of its words, and every number in it: "Night 2" isn't
- * "Night 1"), the ones that also give its date first, at most `max`.
+ * event's title (80% of its words as whole words, every number in it: "Night
+ * 2" isn't "Night 1", and little else), the ones that also give its date
+ * first, at most `max`.
  */
 export function directLinks(e: Pick<CalEvent, "event" | "date">, links: Link[], pageUrl: string, max = 3): string[] {
   let host: string;
@@ -565,7 +611,9 @@ export function directLinks(e: Pick<CalEvent, "event" | "date">, links: Link[], 
   } catch {
     return [];
   }
-  const sets = linkWordSets(e.event);
+  const sets = linkTitles(e.event)
+    .map(titleWords)
+    .filter((s) => s.length);
   const title = prepare(e.event).low;
   const numbers = title.match(/\d+/g) ?? [];
   const [mon, dayStr] = e.date.trim().split(/\s+/);
@@ -583,8 +631,9 @@ export function directLinks(e: Pick<CalEvent, "event" | "date">, links: Link[], 
     if (/\.(?:pdf|ics|jpe?g|png|gif|webp|zip)$/i.test(u.pathname) || u.searchParams.has("format")) continue;
     const href = cleanUrl(u.toString());
     if (samePage(href, pageUrl) || isIndexUrl(href) || dated.includes(href) || undated.includes(href)) continue;
-    const text = prepare(l.text).low;
-    if (!sets.some((s) => share(s, text) >= 0.8)) continue;
+    // Card text runs a time into the title after it: "6:00 PMCard Holder".
+    const text = prepare(l.text.replace(/(\d ?[AaPp]\.?[Mm]\.?)(?=[A-Z\d])/g, "$1 ")).low;
+    if (!sets.some((s) => share(s, text) >= 0.8) || !mostlyTitle(text, e.event)) continue;
     const runs = new Set(text.match(/\d+/g) ?? []);
     if (!numbers.every((n) => runs.has(n))) continue;
     // Someone else's booking of the same class.
@@ -618,6 +667,22 @@ export interface Fill {
 export const isTbd = (cost: string) => !cost.trim() || cost.trim().toUpperCase() === "TBD";
 
 /**
+ * A page linked as the event's own, cut where it turns to other events (a
+ * Squarespace page ends on the dates and titles of the sessions either side),
+ * and whether the first date it gives is this event's.
+ */
+function ownPart(e: Pick<CalEvent, "event" | "date">, text: string, opts: PriceOpts): { text: string; dated: boolean } {
+  const t = prepare(text);
+  const all = dateMentions(t.low);
+  const own = ownDates(t.low, e.date, opts, all);
+  const to = turnAt(t, startOn(titleSpans(t.low, titleWords(e.event), e.event), own));
+  const first = all.find((x) => x.at < to);
+  const [mon, dayStr] = e.date.trim().split(/\s+/);
+  const key = dayKey(MONTHS.indexOf((mon ?? "").toLowerCase().slice(0, 3)), Number(dayStr));
+  return { text: t.raw.slice(0, to), dated: !!first && first.from <= key && key <= first.to };
+}
+
+/**
  * What to change about one upcoming listing, from the pages this run read:
  * `page` is its link, `result` what judgeListing made of it, `reads` every
  * page read for direct links. `why` says what's still missing, and why.
@@ -631,21 +696,26 @@ export function planFill(
     reads: Map<string, PageReadWithLinks>;
     year: number;
     daysAway: number;
+    /** Fills someone undid by hand for this listing: don't look for that again. */
+    declined?: { cost?: boolean; url?: boolean };
   },
 ): Fill & { why?: string } {
   const opts = { year: ctx.year, daysAway: ctx.daysAway };
-  const links = ctx.listing && ctx.page?.links && e.url ? directLinks(e, ctx.page.links, ctx.page.url || e.url) : [];
-  let own: { url: string; page: PageReadWithLinks } | undefined;
+  const links =
+    ctx.listing && ctx.page?.links && e.url && !ctx.declined?.url ? directLinks(e, ctx.page.links, ctx.page.url || e.url) : [];
+  // Every linked page that shows it on its date, read only up to where it turns
+  // to other sessions; the one whose own date is this one's comes first.
+  const shown: { url: string; page: PageReadWithLinks; dated: boolean }[] = [];
   for (const url of links) {
     const p = ctx.reads.get(url);
-    if (p?.status === 200 && judgeListing(e, p, { ...opts, sharedPage: false }) === "ok") {
-      own = { url, page: p };
-      break;
-    }
+    if (p?.status !== 200 || judgeListing(e, p, { ...opts, sharedPage: false }) !== "ok") continue;
+    const part = ownPart(e, p.text, opts);
+    if (showsEvent(e, plainText(part.text), { ...opts, url: p.url })) shown.push({ url, page: p, dated: part.dated });
   }
+  const own = shown.find((s) => s.dated) ?? shown[0];
   const fill: Fill = { uid: e.uid };
   if (own) fill.url = own.url;
-  if (isTbd(e.cost)) {
+  if (isTbd(e.cost) && !ctx.declined?.cost) {
     const tries: { page: PageReadWithLinks; ownPage: boolean; at: string }[] = [];
     if (own) tries.push({ page: own.page, ownPage: true, at: own.url });
     if (ctx.page && ctx.result === "ok") tries.push({ page: ctx.page, ownPage: !ctx.listing, at: e.url ?? "" });
@@ -657,9 +727,65 @@ export function planFill(
       }
     }
   }
-  const needPrice = isTbd(e.cost) && !fill.cost;
-  if (!needPrice && (fill.url || !ctx.listing)) return fill;
+  const needPrice = isTbd(e.cost) && !fill.cost && !ctx.declined?.cost;
+  if (!needPrice && (fill.url || !ctx.listing || ctx.declined?.url)) return fill;
   return { ...fill, why: missing(ctx, links, !!own, needPrice) };
+}
+
+/** A fill a run made; `replaces` is the link the event's own page took the place of. */
+export interface Made {
+  uid: string;
+  cost?: string;
+  url?: string;
+  replaces?: string;
+}
+
+/** A fill someone undid by hand, with what they turned down. */
+export interface Declined {
+  uid: string;
+  cost?: string;
+  url?: string;
+}
+
+/**
+ * Sort earlier runs' fills against the listings as they are now. A price back
+ * at TBD, or a link back on the one it replaced, was undone by hand: that's a
+ * decision, so it joins `declined` and the check doesn't make it again. The
+ * rest stay on record. Only listings still in `events` are kept.
+ */
+export function sortFills(
+  made: Made[],
+  events: Pick<CalEvent, "uid" | "cost" | "url">[],
+  declined: Declined[],
+): { filled: Made[]; declined: Declined[] } {
+  const byUid = new Map(events.map((e) => [e.uid, e]));
+  const out = declined.filter((d) => byUid.has(d.uid)).map((d) => ({ ...d }));
+  const record = new Map<string, Made>();
+  for (const m of made) {
+    if (!byUid.has(m.uid)) continue;
+    const r = record.get(m.uid) ?? { uid: m.uid };
+    if (m.cost) r.cost = m.cost;
+    if (m.url) Object.assign(r, { url: m.url, replaces: m.replaces });
+    record.set(m.uid, r);
+  }
+  const turnDown = (uid: string, field: "cost" | "url", value: string) => {
+    let d = out.find((x) => x.uid === uid);
+    if (!d) out.push((d = { uid }));
+    d[field] ??= value;
+  };
+  for (const r of record.values()) {
+    const e = byUid.get(r.uid)!;
+    if (r.cost && isTbd(e.cost)) {
+      turnDown(r.uid, "cost", r.cost);
+      delete r.cost;
+    }
+    if (r.url && r.replaces && e.url === r.replaces) {
+      turnDown(r.uid, "url", r.url);
+      delete r.url;
+      delete r.replaces;
+    }
+  }
+  return { filled: [...record.values()].filter((r) => r.cost || r.url), declined: out };
 }
 
 function missing(
