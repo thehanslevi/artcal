@@ -2,6 +2,7 @@ import type { CalEvent, EventsData } from "../../src/types";
 import type { Candidate } from "./extract";
 import { findDuplicateOf, canonicalDate } from "./dedupe";
 import { judgeListing } from "./listing-check";
+import { comparableTitle } from "../../src/lib/title";
 
 // Art Cal is an adults' making/witnessing calendar. Children's programming
 // (story times, "Art for Tots", toddler classes) is a whole separate world and
@@ -30,7 +31,7 @@ const SIMILARITY_THRESHOLD = 0.5;
 
 function titleTokens(title: string): Set<string> {
   return new Set(
-    title
+    comparableTitle(title)
       .toLowerCase()
       .replace(/[^a-z0-9 ]+/g, " ")
       .split(/\s+/)

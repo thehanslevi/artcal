@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { test } from "node:test";
-import { seriesPrefixes, tidyTitle } from "./title.ts";
+import type { EventsData } from "../types";
+import { comparableTitle, hasSlur, seriesPrefixes, tidyTitle } from "./title.ts";
 
 const same = (t: string) => assert.equal(tidyTitle(t), t);
 
@@ -150,6 +152,39 @@ test("a slur keeps its first letter and loses the rest", () => {
   assert.equal(tidyTitle("Field Niggas"), "Field N*****");
   assert.equal(tidyTitle("FIELD NIGGAS"), "Field N*****");
   assert.equal(tidyTitle("Field N*****"), "Field N*****");
+  assert.equal(tidyTitle("Niggaz4Life at 35"), "N*****4Life at 35");
+  assert.equal(tidyTitle("Niggerati Manor: A Harlem Walk"), "N*****ati Manor: A Harlem Walk");
+  assert.equal(tidyTitle("#FieldNiggas"), "#FieldN*****");
+  assert.equal(tidyTitle("Niggahs and Nigguh"), "N****** and N*****");
   same("Niger Delta Stories");
   same("Snigger");
+  same("Sniggering in the Back Row");
+  same("A Niggardly Feast");
+  same("Nigg Bay");
+});
+
+test("a masked title tidies the same the second time", () => {
+  for (const raw of ["UMORA Niggas", "FIELD Niggas", "MF DOOM: Niggas", "FIELD NIGGAS", "DJ NIGGAS", "Niggas"]) {
+    const once = tidyTitle(raw);
+    assert.equal(tidyTitle(once), once, raw);
+  }
+  assert.equal(tidyTitle("UMORA Niggas"), "UMORA N*****");
+  assert.equal(tidyTitle("MF DOOM: Niggas"), "MF DOOM: N*****");
+});
+
+test("every stored title tidies the same the second time", () => {
+  const data = JSON.parse(readFileSync("src/data/events.json", "utf8")) as EventsData;
+  const titles = data.weeks.flatMap((w) => w.events.map((e) => e.event));
+  const series = seriesPrefixes(titles);
+  for (const t of titles) {
+    const once = tidyTitle(t, { series });
+    assert.equal(tidyTitle(once, { series }), once, t);
+  }
+});
+
+test("hasSlur and comparableTitle", () => {
+  assert.equal(hasSlur("https://uniondocs.org/event/field-niggas-2026-11-12/"), true);
+  assert.equal(hasSlur("https://uniondocs.org/event/remake-2026-11-14/"), false);
+  assert.equal(comparableTitle("Field Niggas"), comparableTitle("Field N*****"));
+  assert.equal(comparableTitle("Relief Printmaking"), "Relief Printmaking");
 });

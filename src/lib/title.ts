@@ -176,12 +176,31 @@ export function tidyTitle(raw: string, ctx: TitleContext = {}): string {
   return t || mask(raw.trim());
 }
 
-/** Slurs the page never prints. Add to this list rather than editing a title by hand. */
-const SLUR = /\bnigg(?:a|er)[sz]?\b/gi;
+/**
+ * Slurs the page never prints. Add to this list rather than editing a title by
+ * hand. It also catches the word run into another ("Niggaz4Life", "Niggerati",
+ * "FieldNiggas") but not "snigger" or "niggardly".
+ */
+const SLUR = /(?<!s)nigg(?:ah|uh|er|a(?!rd))[sz]?/gi;
 
 /** The first letter, then a star for each letter after it. */
 function mask(t: string): string {
   return t.replace(SLUR, (w) => w.charAt(0) + "*".repeat(w.length - 1));
+}
+
+/** True when the text carries a word the page masks: an event link's address, say. */
+export function hasSlur(s: string): boolean {
+  return mask(s) !== s;
+}
+
+/**
+ * A title as the duplicate checks compare it. A stored title is masked and a
+ * freshly scraped one isn't, so both are masked here and the stars read as
+ * letters: "Field Niggas" from the venue and "Field N*****" in events.json
+ * come out the same, word for word.
+ */
+export function comparableTitle(s: string): string {
+  return mask(s).replace(/\*/g, "x");
 }
 
 const KEEP_CAPS = new Set([
@@ -196,6 +215,10 @@ const SMALL = new Set([
 
 /** "PICKLING PARTY" → "Pickling Party". Only a whole title in capitals. */
 function unshout(t: string): string {
+  // A masked word ("N*****") hides its letters, so the title can't be known to
+  // be all capitals. Leaving it alone keeps the rule giving the same answer on
+  // a second pass, after the first pass masked a lower-case word.
+  if (/[A-Za-z]\*/.test(t)) return t;
   const letters = t.replace(/[^A-Za-z]/g, "");
   if (letters.length < 4 || letters !== letters.toUpperCase()) return t;
   if (t.split(/[\s/]+/).filter((w) => /[A-Za-z]/.test(w)).length < 2) return t;

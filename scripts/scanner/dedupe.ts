@@ -1,4 +1,5 @@
 import type { CalEvent, EventsData } from "../../src/types";
+import { comparableTitle } from "../../src/lib/title";
 
 // Fuzzy duplicate detection shared by the scanner gates, the merge step,
 // and scripts/dedupe-events.ts. Two entries are "likely the same event"
@@ -12,7 +13,8 @@ const STOP_WORDS = new Set([
 ]);
 
 function norm(s: string | null | undefined): string {
-  return (s ?? "")
+  // Masked the way a stored title is, so a raw scrape still matches it.
+  return comparableTitle(s ?? "")
     .toLowerCase()
     .replace(/&[a-z]+;|&#\d+;/g, " ") // stray HTML entities from scrapes
     .replace(/[^a-z0-9 ]+/g, " ")

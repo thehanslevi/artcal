@@ -2492,11 +2492,16 @@ a:hover {
   margin-top: 2px;
 }
 
+/* A price stays on one line up to about "Sliding scale"; a longer one
+   ("$510 (3-week) Members // $560 (3-week) Non-members") wraps instead of
+   pushing into the title. */
 .event-cost {
   font-weight: 600;
   font-size: 13px;
   color: var(--paid);
-  white-space: nowrap;
+  max-width: 9.5em;
+  text-align: right;
+  overflow-wrap: break-word;
   padding-top: 2px;
 }
 
