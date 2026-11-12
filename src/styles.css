@@ -1697,13 +1697,15 @@ a:hover {
   }
 }
 
-/* Event row — index style */
+/* Event row — index style. The right padding keeps the price, the category
+   pill and the ★ flag clear of the star, which sits in the top right corner
+   (30px wide, 6px in). Phones put the pill under the title instead. */
 .event-row {
   display: grid;
   grid-template-columns: 82px 1fr auto auto auto;
   gap: 14px;
   align-items: start;
-  padding: 14px 4px 14px 20px;
+  padding: 14px 44px 14px 20px;
   background: transparent;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
@@ -2490,11 +2492,16 @@ a:hover {
   margin-top: 2px;
 }
 
+/* A price stays on one line up to about "Sliding scale"; a longer one
+   ("$510 (3-week) Members // $560 (3-week) Non-members") wraps instead of
+   pushing into the title. */
 .event-cost {
   font-weight: 600;
   font-size: 13px;
   color: var(--paid);
-  white-space: nowrap;
+  max-width: 9.5em;
+  text-align: right;
+  overflow-wrap: break-word;
   padding-top: 2px;
 }
 
@@ -2642,6 +2649,9 @@ a:hover {
     grid-column: 2;
     grid-row: 2;
     padding-top: 4px;
+    /* Under the title, lined up with it, and as wide as the column. */
+    max-width: none;
+    text-align: start;
   }
 
   .pill {

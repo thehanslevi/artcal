@@ -64,3 +64,21 @@ test("two unrelated classes at the same time on one listing url do NOT merge", (
   const b = ev({ date: "Sep 19", start: "18:00", event: "Handbuilding Basics", where: "Studio", url: MONO, mode: "make" });
   assert.equal(isLikelyDuplicate(a, b), false);
 });
+
+// A stored title is masked ("Field N*****") and a fresh scrape isn't. They're
+// the same event, with or without a start time, and even when the masked word
+// is the whole title.
+test("a raw scrape matches its masked stored title", () => {
+  const where = "UnionDocs, Ridgewood";
+  const url = "https://uniondocs.org/event/field-niggas-2026-11-12/";
+  assert.ok(isLikelyDuplicate(ev({ event: "Field Niggas", where }), ev({ event: "Field N*****", where })));
+  assert.ok(isLikelyDuplicate(ev({ event: "Niggas", where, url }), ev({ event: "N*****", where, url })));
+  assert.ok(isLikelyDuplicate(ev({ event: "The Nigga", where }), ev({ event: "The N****", where })));
+  assert.ok(!isLikelyDuplicate(ev({ event: "Niggas", where, start: "19:00" }), ev({ event: "Remake", where, start: "19:00" })));
+});
+
+test("a decorated title still matches its plain spelling", () => {
+  const where = "Choplet Ceramic Studio";
+  assert.ok(isLikelyDuplicate(ev({ event: "**SOLD OUT** Wheel Throwing", where }), ev({ event: "SOLD OUT: Wheel Throwing", where })));
+  assert.ok(isLikelyDuplicate(ev({ event: "*FREE* Open Studio", where }), ev({ event: "FREE Open Studio", where })));
+});

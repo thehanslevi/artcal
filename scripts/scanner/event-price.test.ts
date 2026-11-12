@@ -343,3 +343,10 @@ test("sortFills: a fill put back by hand is turned down, and stays turned down",
   // Taking an entry out of `declined` lets the fill be made again.
   assert.deepEqual(sortFills(first.filled, events, []).declined, []);
 });
+
+// The stored title is masked; the venue's listing spells the word out. The
+// price beside it is still the event's price.
+test("a masked title finds its price on a page that spells the word out", () => {
+  const listing = "Thursday, November 12, 2026 7:30 PM\nField Niggas\nA screening and conversation. Tickets $12\nFriday, November 13, 2026 7:00 PM\nRemake\nTickets $15";
+  assert.equal(findPrice({ event: "Field N*****", date: "Nov 12" }, listing, { ...listingPage, daysAway: 0 })?.cost ?? null, "$12");
+});

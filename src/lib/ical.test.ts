@@ -230,3 +230,14 @@ test("the file is named after the event", () => {
   assert.equal(eventFilename(ev()), "fay-victor-black-poems.ics");
   assert.equal(eventFilename(ev({ event: "☆☆☆" })), "event.ics");
 });
+
+// The title masks the word; a link whose address spells it out would print it
+// back in every calendar app, so it stays off the entry.
+test("a link that carries a masked word stays off the calendar entry", () => {
+  const e = ev({ event: "Field N*****", url: "https://uniondocs.org/event/field-niggas-2026-11-12/" });
+  const ics = buildEventICal(e);
+  assert.ok(!/nigg/i.test(unfold(ics)));
+  assert.equal(prop(ics, "URL"), undefined);
+  assert.ok(!/nigg/i.test(decodeURIComponent(googleCalendarUrl(e)!)));
+  assert.ok(prop(buildEventICal(ev()), "URL"));
+});

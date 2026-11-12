@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { test } from "node:test";
-import { seriesPrefixes, tidyTitle } from "./title.ts";
+import type { EventsData } from "../types";
+import { comparableTitle, hasSlur, seriesPrefixes, tidyTitle } from "./title.ts";
 
 const same = (t: string) => assert.equal(tidyTitle(t), t);
 
@@ -129,4 +131,167 @@ test("nothing is in all caps unless it's a name", () => {
 test("a title never tidies away to nothing", () => {
   assert.equal(tidyTitle("2026"), "2026");
   assert.equal(tidyTitle("   "), "");
+});
+
+test("a premiere tag in brackets comes off; a premiere that is the event stays", () => {
+  assert.equal(tidyTitle("Cherrie Yu — Daily Diversions (World Premiere)"), "Cherrie Yu — Daily Diversions");
+  assert.equal(tidyTitle("John Zorn's Alea Iacta Est (World Premiere)"), "John Zorn's Alea Iacta Est");
+  assert.equal(tidyTitle("Ghost Light (NYC premiere)"), "Ghost Light");
+  assert.equal(tidyTitle("Ghost Light [U.S. Premiere]"), "Ghost Light");
+  assert.equal(tidyTitle("Ghost Light (North American Premiere!)"), "Ghost Light");
+  assert.equal(tidyTitle("Ghost Light (New York City Premiere)"), "Ghost Light");
+  assert.equal(tidyTitle("Ghost Light (Premiere)"), "Ghost Light");
+  assert.equal(tidyTitle("GHOST LIGHT (WORLD PREMIERE)"), "Ghost Light");
+  same("Morley — Meditations on The Gift of Awe Record Premiere Celebration");
+  same('Climate Week Evening Celebration with the NYC premiere of "Songs of the Earth"');
+  same("Ghost Light (Album Premiere)");
+  same("Premiere Night");
+});
+
+test("a slur keeps its first letter and loses the rest", () => {
+  assert.equal(tidyTitle("Field Niggas"), "Field N*****");
+  assert.equal(tidyTitle("FIELD NIGGAS"), "Field N*****");
+  assert.equal(tidyTitle("Field N*****"), "Field N*****");
+  assert.equal(tidyTitle("Niggaz4Life at 35"), "N*****4Life at 35");
+  assert.equal(tidyTitle("Niggerati Manor: A Harlem Walk"), "N*****ati Manor: A Harlem Walk");
+  assert.equal(tidyTitle("#FieldNiggas"), "#FieldN*****");
+  assert.equal(tidyTitle("Niggahs and Nigguh"), "N****** and N*****");
+  same("Niger Delta Stories");
+  same("Snigger");
+  same("Sniggering in the Back Row");
+  same("A Niggardly Feast");
+  same("Nigg Bay");
+});
+
+test("a masked title tidies the same the second time", () => {
+  for (const raw of ["UMORA Niggas", "FIELD Niggas", "MF DOOM: Niggas", "FIELD NIGGAS", "DJ NIGGAS", "Niggas"]) {
+    const once = tidyTitle(raw);
+    assert.equal(tidyTitle(once), once, raw);
+  }
+  // The masked letters read as capitals, every pass: a title whose other
+  // words are all in capitals is taken as shouting.
+  assert.equal(tidyTitle("UMORA Niggas"), "Umora N*****");
+  assert.equal(tidyTitle("Field Niggas Live"), "Field N***** Live");
+});
+
+test("every stored title tidies the same the second time", () => {
+  const data = JSON.parse(readFileSync("src/data/events.json", "utf8")) as EventsData;
+  const titles = data.weeks.flatMap((w) => w.events.map((e) => e.event));
+  const series = seriesPrefixes(titles);
+  for (const t of titles) {
+    const once = tidyTitle(t, { series });
+    assert.equal(tidyTitle(once, { series }), once, t);
+  }
+});
+
+test("hasSlur and comparableTitle", () => {
+  assert.equal(hasSlur("https://uniondocs.org/event/field-niggas-2026-11-12/"), true);
+  assert.equal(hasSlur("https://uniondocs.org/event/remake-2026-11-14/"), false);
+  assert.equal(comparableTitle("Field Niggas"), comparableTitle("Field N*****"));
+  assert.equal(comparableTitle("Relief Printmaking"), "Relief Printmaking");
+});
+
+test("a venue's own stars don't stop a shouted title being fixed", () => {
+  assert.equal(tidyTitle("SH*T SHOW COMEDY"), "Sh*t Show Comedy");
+  assert.equal(tidyTitle("WHAT THE F*** IS ART"), "What the F*** Is Art");
+  assert.equal(
+    tidyTitle("HOW TO LIVE & MAKE ART IN THESE F**KED-UP TIMES"),
+    "How to Live & Make Art in These F**ked-Up Times",
+  );
+});
+
+test("the word run into another is masked and tidies the same twice", () => {
+  assert.equal(tidyTitle("NiggaHouse"), "N****House");
+  assert.equal(tidyTitle("NiggaSquad Live"), "N****Squad Live");
+  assert.equal(tidyTitle("#BossNiggas"), "#BossN*****");
+  assert.equal(tidyTitle("ThisIsNiggas"), "ThisIsN*****");
+  for (const raw of [
+    "Show: Niggaband, Foo",
+    "The Fest: NiggaDJ, Foo",
+    "Movie Night (Niggadoors)",
+    "Niggaz4Life: Ice Trio, Ren Band",
+    "x TEM present: Niggaband, Foo + Bar",
+    "JAZZ - Niggatrio (World Premiere)",
+    "NIGGAZ4LIFE LISTENING PARTY (5th annual)",
+  ]) {
+    const once = tidyTitle(raw);
+    assert.equal(tidyTitle(once), once, raw);
+    assert.equal(hasSlur(once), false, raw);
+  }
+});
+
+test("a series named with the word is one series, stored or freshly scraped", () => {
+  const titles = ["N***** Night: Ali Trio", "N***** Night: Bo Band", "Niggas Night: Dee Trio + Eli Band"];
+  const series = seriesPrefixes(titles);
+  assert.equal(series.size, 1);
+  assert.equal(tidyTitle("Niggas Night: Dee Trio + Eli Band", { series }), "N***** Night: Dee Trio");
+});
+
+test("only the mask's stars read as letters", () => {
+  assert.equal(comparableTitle("**SOLD OUT** Wheel Throwing"), "**SOLD OUT** Wheel Throwing");
+  assert.equal(comparableTitle("Sh*t Show"), "Sh*t Show");
+});
+
+test("the rule reads the same text on a second pass, whatever was taken off", () => {
+  for (const raw of [
+    "PICKLING PARTY feat. Field Niggas",
+    "TRANSATLANTIK II: Field Niggas, Ali Trio & Bo Band",
+    "Field Niggas present: PICKLING PARTY",
+    "MOVIE NIGHT (Niggadoors)",
+    "PICKLING PARTY feat. N*****",
+    "FIELD NiggA",
+    "Nigg (2026)as",
+    "Nigg (World Premiere)as",
+    "Ni (Doors 7pm)GGUH! closes",
+    "Ghost Light 2026 - (World Premiere)",
+    "Ghost Light 2026 | [World Premiere]",
+    "Ghost Light (Summer 2026 [World Premiere])",
+    "Ghost Light: (World Premiere)",
+    "NIGGASQUAD LIVE",
+    "NIGGAHOUSE PARTY",
+  ]) {
+    const once = tidyTitle(raw);
+    assert.equal(tidyTitle(once), once, raw);
+    assert.equal(hasSlur(once), false, raw);
+  }
+  assert.equal(tidyTitle("Ghost Light 2026 - (World Premiere)"), "Ghost Light");
+  assert.equal(tidyTitle("Ghost Light (Summer 2026 [World Premiere])"), "Ghost Light");
+  assert.equal(tidyTitle("Ghost Light: (World Premiere)"), "Ghost Light");
+  assert.equal(tidyTitle("Movie Night (Niggadoors)"), "Movie Night (N****doors)");
+});
+
+test("a venue's own masked word is read as main read it", () => {
+  assert.equal(tidyTitle("FIELD N***** LIVE"), "Field N***** Live");
+  assert.equal(tidyTitle("UMORA N*****"), "Umora N*****");
+  assert.equal(tidyTitle("Field N***"), "Field N***");
+});
+
+test("the -er spelling joined on is masked; snigger is not", () => {
+  assert.equal(tidyTitle("#BossNiggers"), "#BossN******");
+  assert.equal(tidyTitle("ClassNigger Live"), "ClassN***** Live");
+  same("Snigger");
+  assert.equal(tidyTitle("SNIGGERING CROWDS"), "Sniggering Crowds");
+  same("sniggers");
+  assert.equal(tidyTitle("NIGGASQUAD LIVE"), "N****squad Live");
+  assert.equal(comparableTitle("NIGGASQUAD LIVE").toLowerCase(), comparableTitle("NiggaSquad Live").toLowerCase());
+});
+
+test("every spelling run into another word is masked; ordinary x's are not", () => {
+  assert.equal(tidyTitle("NigguhSquad"), "N*****Squad");
+  assert.equal(tidyTitle("RealNigguhsLive"), "RealN*****sLive");
+  assert.equal(tidyTitle("#BOSSNiggers"), "#BOSSN******");
+  assert.equal(tidyTitle("SNiggers Night"), "SN****** Night");
+  assert.equal(tidyTitle("BOSSNIGGERS PARTY"), "Bossn****** Party");
+  same("Snigger");
+  same("SNIGGER");
+  for (const t of ["Lynxxxxx Night", "Jinxxxxx!", "NXXXX Party", "Room NXXXXXXX", "Annxxxxx Building Jazz"]) same(t);
+  assert.equal(tidyTitle("NiggaXXL Tour"), "N****XXL Tour");
+});
+
+test("a colon left by the line-up step comes off on the first pass", () => {
+  for (const raw of ["Show:: Royel Otis + Ax", "Jazz Night:: A, B and more", "Show 2026:: Royel Otis + Ax"]) {
+    const once = tidyTitle(raw);
+    assert.equal(tidyTitle(once), once, raw);
+  }
+  assert.equal(tidyTitle("Show:: Royel Otis + Ax"), "Show");
 });

@@ -5,6 +5,7 @@
  *
  *   - the year and season:        "M³ Festival 2026"               → "M³ Festival"
  *   - an edition in parentheses:  "… (5th annual)"                 → "…"
+ *   - a premiere tag in brackets: "Daily Diversions (World Premiere)" → "Daily Diversions"
  *   - a date on the end:          "… - October 18th, 2026"         → "…"
  *   - showtimes in parentheses:   "… (2 sets EVERY SUNDAY @ 10:30)" → "…"
  *   - the line-up after its name: "Transatlantik II: A, B & C"     → "Transatlantik II"
@@ -19,7 +20,11 @@
  * "Narcisa Hirsch: Graffiti, Film & Political Gesture"), a teacher ("Relief
  * Printmaking with Anat Keinan"), a proper name that happens to carry a number
  * ("The 25th Annual Putnam County Spelling Bee"), and a film opening ("REMAKE
- * — Ross McElwee opens").
+ * — Ross McElwee opens"). A premiere that is the event itself stays: "Record
+ * Premiere Celebration", "with the NYC premiere of Songs of the Earth".
+ *
+ * A slur keeps its first letter and loses the rest to stars ("Field N*****"):
+ * the event keeps its name and its link, and the page doesn't print the word.
  *
  * Nothing is in all caps unless it's a name. A title of two or more words
  * written entirely in capitals is the venue shouting and goes to title case;
@@ -58,6 +63,14 @@ const EDITION_PAREN = new RegExp(
 /** "(2 sets EVERY SUNDAY @ 10:30 & 11:30AM)", "(Doors 7pm)". */
 const SHOWTIME_PAREN =
   /\s*\([^()]*(?:\d\s*(?:am|pm)\b|\d:\d\d|\bevery\s+(?:sun|mon|tue|wed|thu|fri|sat)|\bdoors\b)[^()]*\)/gi;
+/**
+ * "(World Premiere)", "(NYC premiere)", "[U.S. Premiere]", "(Premiere)": where
+ * a show is first seen is billing. Only a tag in brackets, and only a place or
+ * nothing before "premiere": "(Album Premiere)" says what the night is.
+ */
+const PREMIERE_SCOPE =
+  "(?:world|u\\.?s\\.?(?:a\\.?)?|american|north\\s+american|new\\s+york(?:\\s+city)?|ny|nyc|east\\s+coast|west\\s+coast|international|european|brooklyn|local|national|global)";
+const PREMIERE_PAREN = new RegExp(`\\s*[([](?:${PREMIERE_SCOPE}\\s+)?premi[eè]re!?[)\\]]`, "gi");
 /** "(feat. A, B and C)", "(w/ A)": a line-up in parentheses. */
 const LINEUP_PAREN = /\s*\((?:feat\.?|ft\.?|featuring|w\/)\s[^()]*\)/gi;
 /** " - July 6", " - October 18th, 2026", " – Nov 2026": a date on the end. */
@@ -125,15 +138,54 @@ function headliner(rest: string): string {
     .trim();
 }
 
+/** " -", " |", ":" left on the end once what followed is gone. */
+const TRAILING_SEPARATOR = new RegExp(`(?:\\s+(?:${DASH}|\\|)|\\s*:)\\s*$`);
+
+/**
+ * Brackets, dates, years and counters off the end, until nothing more comes
+ * off: taking "(World Premiere)" off "Ghost Light 2026 - (World Premiere)"
+ * leaves a year that has to go too.
+ */
+function stripBilling(t: string): string {
+  for (let i = 0; i < 4; i++) {
+    const before = t;
+    t = t
+      .replace(EDITION_PAREN, "")
+      .replace(PREMIERE_PAREN, "")
+      .replace(SHOWTIME_PAREN, "")
+      .replace(LINEUP_PAREN, "");
+    t = t.replace(TRAILING_DATE, "").replace(TRAILING_YEAR, "");
+    t = t.replace(COURSE_COUNTER, "").replace(COURSE_COUNTER, "");
+    t = t.replace(TRAILING_SEPARATOR, "").trim();
+    if (t === before) break;
+  }
+  return t;
+}
+
+/**
+ * The rule, applied until the title stops changing. Each step only takes text
+ * away or brings capitals down, once, so this settles in a pass or two; a
+ * title the rule has already tidied comes back as it is.
+ */
 export function tidyTitle(raw: string, ctx: TitleContext = {}): string {
-  let t = raw.replace(/\s+/g, " ").trim();
+  let t = tidyOnce(raw, ctx);
+  for (let i = 0; i < 5; i++) {
+    const next = tidyOnce(t, ctx);
+    if (next === t) break;
+    t = next;
+  }
+  return t;
+}
 
-  t = t.replace(EDITION_PAREN, "").replace(SHOWTIME_PAREN, "").replace(LINEUP_PAREN, "");
-  t = t.replace(TRAILING_DATE, "").replace(TRAILING_YEAR, "");
-  t = t.replace(COURSE_COUNTER, "").replace(COURSE_COUNTER, "");
-  t = t.replace(new RegExp(`\\s+(?:${DASH}|:|\\|)\\s*$`), "").trim();
+function tidyOnce(raw: string, ctx: TitleContext): string {
+  // Every rule below reads a masked word as a word of capitals ("NQQQQQ"),
+  // whether it arrives spelled out or already masked, so a second pass reads
+  // exactly what the first did. It goes back to stars at the very end.
+  let t = hide(raw.replace(/\s+/g, " ").trim());
 
-  if (OPENING.test(t)) return t || raw.trim();
+  t = stripBilling(t);
+
+  if (OPENING.test(t)) return show(t) || mask(raw.trim());
 
   // "x TEM present: A, B, C" → "A, B, C". The presenter is not the event.
   const presented = t.replace(PRESENTER, "");
@@ -155,8 +207,66 @@ export function tidyTitle(raw: string, ctx: TitleContext = {}): string {
     if (feat && feat[1]!.length >= 3) t = feat[1]!.trim();
   }
 
-  t = unshout(t.replace(/\s+/g, " ").trim());
-  return t || raw.trim();
+  // hide() again: taking a bracket out of the middle of a word can join it up.
+  t = unshout(hide(t.replace(/\s+/g, " ").trim()));
+  return show(t) || mask(raw.trim());
+}
+
+/**
+ * Slurs the page never prints. Add to this list rather than editing a title by
+ * hand. It also catches the word run into another ("Niggaz4Life", "Niggerati",
+ * "#BossNiggers", "NigguhSquad"). A trailing s or z, and the h of "-ah", count
+ * only at the end of the word, so "NiggaSquad" and "NIGGASQUAD" both keep
+ * "Squad". "snigger" at the start of a word, "niggardly" and "niggle" are left
+ * alone. The first group is an s that starts a word, for "snigger".
+ */
+const SLUR =
+  /((?<![a-z])s)?(nigg(?:uh|ah(?=[sz]?(?![a-z]))|a(?!rd))(?:[sz](?![a-z]))?|nigger(?:[sz](?![a-z]))?)/gi;
+/** A word the page has masked: the first letter and four or more stars. */
+const MASKED = /([Nn])\*{4,}/g;
+/**
+ * The same word while the rules work on it: the first letter and Q's. Real
+ * titles never put four Q's after an N, so nothing else turns into stars.
+ */
+const HIDDEN = /([Nn])[Qq]{4,}/g;
+
+/** "snigger", "Snigger", "SNIGGER": the real word, spelled the ways it is. */
+function isSnigger(s: string, w: string): boolean {
+  return /^nigger/i.test(w) && (w.charAt(0) === "n" || (s === "S" && w === w.toUpperCase()));
+}
+
+/** The slur, or a word already masked, as its first letter and capital Q's. */
+function hide(t: string): string {
+  return t
+    .replace(SLUR, (m, s: string | undefined, w: string) =>
+      s && isSnigger(s, w) ? m : (s ?? "") + w.charAt(0) + "Q".repeat(w.length - 1),
+    )
+    .replace(MASKED, (m, n: string) => n + "Q".repeat(m.length - 1));
+}
+
+/** Back to stars: the first letter, then a star for each letter after it. */
+function show(t: string): string {
+  return hide(t).replace(HIDDEN, (m, n: string) => n + "*".repeat(m.length - 1));
+}
+
+/** The text with every slur masked. */
+function mask(t: string): string {
+  return show(t);
+}
+
+/** True when the text carries a word the page masks: an event link's address, say. */
+export function hasSlur(s: string): boolean {
+  return hide(s.replace(MASKED, "")) !== s.replace(MASKED, "");
+}
+
+/**
+ * A title (or a page's text) as the duplicate and listing checks compare it.
+ * A stored title is masked and a freshly scraped one isn't, so both read the
+ * masked word as the same word of letters: "Field Niggas" from the venue and
+ * "Field N*****" in events.json come out the same, word for word.
+ */
+export function comparableTitle(s: string): string {
+  return hide(s);
 }
 
 const KEEP_CAPS = new Set([
@@ -198,7 +308,9 @@ function unshout(t: string): string {
 export function seriesPrefixes(titles: Iterable<string>): Set<string> {
   const seen = new Map<string, Set<string>>();
   for (const title of titles) {
-    const m = title.match(/^(.+?):\s+(.+)$/);
+    // Read as tidyTitle reads it, so a stored "N***** Night" and a fresh
+    // scrape share one head.
+    const m = hide(title).match(/^(.+?):\s+(.+)$/);
     if (!m) continue;
     const [, head, rest] = m as [string, string, string];
     if (!seen.has(head)) seen.set(head, new Set());

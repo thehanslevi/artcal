@@ -1,6 +1,7 @@
 import type { CalEvent } from "../types";
 import { isPublicNote } from "./notes";
 import { parseEventDate } from "./dates";
+import { hasSlur } from "./title";
 
 function pad(n: number): string {
   return String(n).padStart(2, "0");
@@ -143,8 +144,10 @@ function describe(e: CalEvent): string {
   // The link goes in the description because that is the only place every
   // client shows it. Google Calendar ignores the URL property outright; Apple
   // tucks it in a field that's easy to miss. Both auto-link description text.
-  // URL: is still emitted in the feeds for clients that do use it.
-  if (e.url) parts.push("", e.url);
+  // URL: is still emitted in the feeds for clients that do use it. A link
+  // whose address carries a word the title masks stays off: calendars print
+  // the address as text.
+  if (e.url && !hasSlur(e.url)) parts.push("", e.url);
   return parts.join("\n");
 }
 
@@ -219,7 +222,7 @@ export function buildICal(
     lines.push(`SUMMARY:${escapeText(e.event)}`);
     lines.push(`LOCATION:${escapeText(e.where)}`);
     lines.push(`DESCRIPTION:${escapeText(describe(e))}`);
-    if (e.url) lines.push(`URL:${e.url}`);
+    if (e.url && !hasSlur(e.url)) lines.push(`URL:${e.url}`);
     lines.push("END:VEVENT");
   }
   lines.push("END:VCALENDAR");

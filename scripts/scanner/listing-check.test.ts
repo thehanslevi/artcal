@@ -65,3 +65,14 @@ test("a title word inside a longer word isn't the title", () => {
   const wip = "Introduction to Silkscreen\n$150.00\n\nWe supply basic tees and totes.\n\nDate:\nSeptember 26\nOctober 17\nNovember 14";
   assert.equal(judgeListing({ event: "Introduction to Silk Screen", date: "Nov 14" }, page(wip), opts), "ok");
 });
+
+// A stored title is masked where the venue's page spells the word out. The
+// weekly check has to find it anyway, or it takes a real listing down.
+test("a masked title is found on a page that spells the word out", () => {
+  const listing = (title: string) => page(`Friday, November 20, 2026 7:00 PM ${title} at the venue`);
+  assert.equal(judgeListing({ event: "N*****4Life at 35", date: "Nov 20" }, listing("Niggaz4Life at 35"), opts), "ok");
+  assert.equal(judgeListing({ event: "N****House Party", date: "Nov 20" }, listing("NiggaHouse Party"), opts), "ok");
+  assert.equal(judgeListing({ event: "#BossN*****", date: "Nov 20" }, listing("#BossNiggas"), opts), "ok");
+  assert.equal(judgeListing({ event: "N****Squad Live", date: "Nov 20" }, listing("NIGGASQUAD LIVE"), opts), "ok");
+  assert.equal(judgeListing({ event: "Field N*****", date: "Nov 20" }, listing("Field Niggas"), opts), "ok");
+});
