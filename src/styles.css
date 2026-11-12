@@ -1140,6 +1140,7 @@ a:hover {
 /* Filter bar */
 .filter-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   align-items: flex-start;
   margin-bottom: 16px;
@@ -1152,8 +1153,12 @@ a:hover {
   padding: 8px 0;
 }
 
+/* The category bar keeps room for its pills; when the buttons beside it would
+   squeeze it into a column (tablets, narrow windows), they move to the next
+   line instead. */
 .filter-row .filter-bar {
-  flex: 1;
+  flex: 1 1 420px;
+  min-width: 0;
   margin-bottom: 0;
   position: static;
 }
