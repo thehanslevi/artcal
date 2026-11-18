@@ -1,5 +1,5 @@
 {
-  "lastVerified": "2026-11-15",
+  "lastVerified": "2026-11-18",
   "weeks": [
     {
       "label": "Jul 5–11",
@@ -21454,24 +21454,6 @@
           "neighborhood": null,
           "address": "16 Jones Street",
           "uid": "e_22c660170263"
-        },
-        {
-          "day": "Sun",
-          "date": "Dec 06",
-          "event": "The 2026 La MaMa Moves! Dance Festival",
-          "where": "La MaMa",
-          "cost": "TBD",
-          "category": "dance",
-          "flag": null,
-          "mode": "witness",
-          "start": null,
-          "end": null,
-          "note": null,
-          "url": "https://www.lamama.org/whats-on",
-          "venue": "La MaMa",
-          "neighborhood": null,
-          "address": null,
-          "uid": "e_1398337d4cd6"
         },
         {
           "day": "Sun",

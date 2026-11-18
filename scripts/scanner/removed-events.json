@@ -758,5 +758,25 @@
     "uid": "e_f0cf8d61fca2",
     "why": "Its La MaMa page is gone; La MaMa's Nov 27 opening is A View from the Bridge",
     "removedOn": "2026-11-10"
+  },
+  {
+    "day": "Sun",
+    "date": "Dec 06",
+    "event": "The 2026 La MaMa Moves! Dance Festival",
+    "where": "La MaMa",
+    "cost": "TBD",
+    "category": "dance",
+    "flag": null,
+    "mode": "witness",
+    "start": null,
+    "end": null,
+    "note": null,
+    "url": "https://www.lamama.org/whats-on",
+    "venue": "La MaMa",
+    "neighborhood": null,
+    "address": null,
+    "uid": "e_1398337d4cd6",
+    "why": "Its page didn't list it on that date on 2 checks in a row (last 2026-11-18)",
+    "removedOn": "2026-11-18"
   }
 ]
