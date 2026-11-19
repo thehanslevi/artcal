@@ -18,9 +18,9 @@
     "raw": "[\n  {\n    \"what\": \"Bushwick Print Lab is pleased to offer workshop opportunities for individuals and groups of all ages.\",\n    \"cost\": {\n      \"kind\": \"range\",\n      \"min\": 200,\n      \"max\": 500,\n      \"quote\": \"1 person: $200\\n2 people: $300\\n3 people: $375\\n4 people: $450\\n\\n1 person: $300\\n2 people: $500\"\n    },\n    \"schedule\": {\n      \"kind\": \"session\",\n      \"note\": \"Keep in mind we need a week\\u2019s time to arrange and schedule classes so please plan ahead!\",\n      \"quote\": \"Keep in mind we need a week\\u2019s time to arrange and schedule classes so please plan ahead!\"\n    },\n    \"access\": [\n      {\n        \"kind\": \"enroll-ahead\",\n        \"quote\": \"Beginners are required to take a workshop in order to rent personal print time in our studio.\"\n      },\n      {\n        \"kind\": \"contact-first\",\n        \"quote\": \"Email workshops@bushwickprintlab.org for more information or to schedule a group class or event!\"\n      }\n    ]\n  },\n  {\n    \"what\": \"Bushwick Print Lab is pleased to offer silkscreening on paper, canvas, apparel, totes, and a wide range of materials.\",\n    \"cost\": null,\n    \"schedule\": {\n      \"kind\": \"membership\",\n      \"note\": \"Our standard turnaround time is 10-14 business days from date of finalized quote and receipt of a 50% deposit. Rush jobs may require a fee.\",\n      \"quote\": \"Our standard turnaround time is 10-14 business days from date of finalized quote and receipt of a 50% deposit. Rush jobs may require a fee.\"\n    },\n    \"access\": [\n      {\n        \"kind\": \"contact-first\",\n        \"quote\": \"Please inquire about our rates using the Request a Quote tabs for flatstock, apparel, or custom production.\"\n      }\n    ]\n  },\n  {\n    \"what\": \"At Bushwick Print Lab we offer a range of screen processing services.\",\n    \"cost\": {\n      \"kind\": \"range\",\n      \"min\": 10,\n      \"max\": 110,\n      \"quote\": \"LAB Coat & Expose\\t$15\\t$20\\t$25\\t$30\\t$45\\t$60\\t$80\\nLAB Reclaim, Coat & Expose\\t$20\\t$25\\t$31\\t$40\\t$55\\t$75\\t$95\\nLAB Haze, Reclaim,Coat & Expose\\t$25\\t$30\\t$45\\t$50\\t$65\\t$90\\t$110\\nLAB Reclaim Only\\t$10\\t$15\\t$20\\t$25\\t$30\\t$50\\t$80\"\n    },\n    \"schedule\": {\n      \"kind\": \"session\",\n      \"note\": \"Normal turnaround time for screen processing is 2-3 days. Rush jobs can sometimes be accommodated for an additional fee of $25 for same day, or $15 for next day.\",\n      \"quote\": \"Normal turnaround time for screen processing is 2-3 days. Rush jobs can sometimes be accommodated for an additional fee of $25 for same day, or $15 for next day.\"\n    },\n    \"access\": [\n      {\n        \"kind\": \"contact-first\",\n        \"quote\": \"Click here to request a quote for screen services \\u2013 Make me a screen\"\n      }\n    ]\n  }\n]"
   },
   "secret-riso-club": {
-    "hash": "afb96ffa3b24da39",
-    "at": "2026-11-12T19:46:23.314Z",
-    "raw": "{\n  \"cost\": [\n    {\n      \"kind\": \"per-month\",\n      \"amount\": 80,\n      \"quote\": \"$80/month\"\n    },\n    {\n      \"kind\": \"per-month\",\n      \"amount\": 50,\n      \"quote\": \"$50/month\"\n    },\n    {\n      \"kind\": \"per-month\",\n      \"amount\": 50,\n      \"quote\": \"$50/month\"\n    }\n  ],\n  \"schedule\": [\n    {\n      \"kind\": \"membership\",\n      \"note\": \"Flash Printing: Every Wednesday and Sunday by appointment or drop-in.\",\n      \"quote\": \"Flash Printing:\\nEvery Wednesday and Sunday by appointment or drop-in.\"\n    }\n  ],\n  \"access\": [\n    {\n      \"kind\": \"membership\",\n      \"quote\": \"We offer monthly & yearly memberships to our print shop and host regular public programs and events.\"\n    },\n    {\n      \"kind\": \"membership\",\n      \"quote\": \"Sign Up Here\"\n    },\n    {\n      \"kind\": \"membership\",\n      \"quote\": \"Sign Up Here\"\n    },\n    {\n      \"kind\": \"membership\",\n      \"quote\": \"Sign Up Here\"\n    },\n    {\n      \"kind\": \"drop-in\",\n      \"quote\": \"by appointment or drop-in.\"\n    }\n  ],\n  \"what\": \"Secret Riso Club is an artist-run space that fosters a creative practice at the intersection of art—design—learning—publishing—printing—activism and community building.\"\n}"
+    "hash": "8985e9b12878f321",
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"cost\": [\n    {\n      \"kind\": \"per-month\",\n      \"amount\": 80,\n      \"quote\": \"$80/month\"\n    },\n    {\n      \"kind\": \"per-month\",\n      \"amount\": 50,\n      \"quote\": \"$50/month\"\n    },\n    {\n      \"kind\": \"per-month\",\n      \"amount\": 50,\n      \"quote\": \"$50/month\"\n    }\n  ],\n  \"schedule\": [\n    {\n      \"kind\": \"membership\",\n      \"note\": \"Flash Printing: Every Wednesday and Sunday by appointment or drop-in.\",\n      \"quote\": \"Flash Printing: Every Wednesday and Sunday by appointment or drop-in.\"\n    }\n  ],\n  \"access\": [\n    {\n      \"kind\": \"membership\",\n      \"quote\": \"We offer monthly & yearly memberships to our print shop and host regular public programs and events.\"\n    },\n    {\n      \"kind\": \"drop-in\",\n      \"quote\": \"Flash Printing: Every Wednesday and Sunday by appointment or drop-in.\"\n    }\n  ],\n  \"what\": \"Secret Riso Club is an artist-run space that fosters a creative practice at the intersection of art—design—learning—publishing—printing—activism and community building.\"\n}"
   },
   "lucky-risograph": {
     "hash": "6c867851ba8da584",
@@ -82,36 +82,42 @@
     "raw": "{\n  \"cost\": {\n    \"kind\": \"sliding\",\n    \"min\": 0,\n    \"max\": 1200,\n    \"quote\": \"$1200 Or pay $600, $300, or $0 with scholarship\"\n  },\n  \"schedule\": {\n    \"kind\": \"session\",\n    \"weeks\": 10,\n    \"note\": \"Section 1: Sundays, 3:00 \\u2013 6:00pm ET January 17, 2027 to March 21, 2027 Section 2: Wednesdays, 6:30 \\u2013 9:30pm ET January 20, 2027 to March 24, 2027\",\n    \"quote\": \"Section 1: Sundays, 3:00 \\u2013 6:00pm ET\\nJanuary 17, 2027 to March 21, 2027\\nSection 2: Wednesdays, 6:30 \\u2013 9:30pm ET\\nJanuary 20, 2027 to March 24, 2027\"\n  },\n  \"access\": [\n    {\n      \"kind\": \"scholarship\",\n      \"quote\": \"Or pay $600, $300, or $0 with scholarship\"\n    }\n  ],\n  \"what\": \"The School for Poetic Computation is an experimental school in New York City and online supporting interdisciplinary study in art, code, hardware and critical theory.\"\n}"
   },
   "interference-archive": {
-    "hash": "b34ace3ad348ba2a",
-    "at": "2026-11-05T16:24:31.148Z"
+    "hash": "f80b59e55071510c",
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"cost\": null,\n  \"schedule\": {\n    \"kind\": \"monthly-nth\",\n    \"nth\": 2,\n    \"day\": \"wed\",\n    \"time\": \"7:00 PM - 8:00 PM\",\n    \"quote\": \"Join Collections Management working group for our monthly meeting\"\n  },\n  \"access\": null,\n  \"what\": \"We will be discussing new donation requests, ongoing cataloging projects, and issues in the archive’s collections.\"\n}"
   },
   "center-for-fiction": {
     "hash": "3664b797c80f8b81",
     "at": "2026-11-05T16:24:31.148Z"
   },
   "belladonna": {
-    "hash": "45bb3f4b8a091e72",
-    "at": "2026-11-05T16:24:31.148Z"
+    "hash": "ae4e5c09eb47acdf",
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"cost\": null,\n  \"schedule\": null,\n  \"access\": null,\n  \"what\": null\n}"
   },
   "gotham-writers": {
-    "hash": "d8d46779e3cf7bc2",
-    "at": "2026-11-05T16:24:31.148Z"
+    "hash": "62ce9b79fea32206",
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"what\": \"Gotham Writers Workshop is a creative home where writers develop their craft and come together in the spirit of discovery and fellowship.\",\n  \"cost\": [\n    {\n      \"kind\": \"free\",\n      \"quote\": \"We also offer free events in NYC (and on Zoom).\"\n    }\n  ],\n  \"schedule\": [\n    {\n      \"kind\": \"session\",\n      \"note\": \"Online classes happen asynchronously and advance week-by-week, with various session lengths including 4-week, 6-week, and 10-week options.\",\n      \"quote\": \"The Online classes happen asynchronously—not in “real time.” You can participate in class any time, day or night, but the classes advance week-by-week, and certain things should be accomplished within that week-long session. ... Level I 10-week Workshops, 6-week Classes, Intensives ... Creative Writing 101 (6-week Class) ... Hit Send: Publishing Short Nonfiction (4-week Class)\"\n    }\n  ],\n  \"access\": [\n    {\n      \"kind\": \"scholarship\",\n      \"quote\": \"Scholarships for Writers of Color are available to all people of color who aspire to improve their writing skills, either in the fields of creative writing or elsewhere.\"\n    },\n    {\n      \"kind\": \"free\",\n      \"quote\": \"We also offer free events in NYC (and on Zoom).\"\n    }\n  ]\n}"
   },
   "capoeira-luanda": {
     "hash": "56a3c100e888e1ee",
     "at": "2026-11-05T16:24:31.148Z"
   },
   "jack": {
-    "hash": "b17d6e5f380a1529",
-    "at": "2026-11-05T16:24:31.148Z"
+    "hash": "33ed54f79ee60af1",
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"cost\": null,\n  \"schedule\": null,\n  \"access\": [],\n  \"what\": null\n}"
   },
   "bushwick-starr": {
     "hash": "97619628ec0ffb54",
-    "at": "2026-11-05T16:24:31.148Z"
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"cost\": {\n    \"kind\": \"sliding\",\n    \"min\": null,\n    \"max\": null,\n    \"quote\": \"sliding scale\"\n  },\n  \"schedule\": {\n    \"kind\": \"weekly\",\n    \"days\": [\"sat\"],\n    \"time\": null,\n    \"quote\": \"Weekly Saturday morning theater games classes\"\n  },\n  \"access\": {\n    \"sliding-scale\": \"sliding scale\"\n  },\n  \"what\": null\n}"
   },
   "art-students-league": {
-    "hash": "bd391a78cb55dc57",
-    "at": "2026-11-05T16:24:31.148Z"
+    "hash": "4cb1690e883383b4",
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"cost\": null,\n  \"schedule\": null,\n  \"access\": null,\n  \"what\": null\n}"
   },
   "flux-factory": {
     "hash": "493bd4a92fe6357f",
@@ -119,27 +125,31 @@
   },
   "taller-boricua": {
     "hash": "a800bc23253c1643",
-    "at": "2026-11-05T16:24:31.148Z"
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"cost\": null,\n  \"schedule\": null,\n  \"access\": [\n    {\n      \"kind\": \"contact-first\",\n      \"quote\": \"Visits by Appointment\"\n    }\n  ],\n  \"what\": null\n}"
   },
   "mfta": {
-    "hash": "ee2249227407f467",
-    "at": "2026-11-05T16:24:31.148Z"
+    "hash": "3731208e224f3788",
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"cost\": {\n    \"kind\": \"fixed\",\n    \"amount\": 240,\n    \"quote\": \"$240.00\"\n  },\n  \"schedule\": null,\n  \"access\": [\n    {\n      \"kind\": \"enroll-ahead\",\n      \"quote\": \"Simply sign up for the course on the MFTA website.\"\n    },\n    {\n      \"kind\": \"free\",\n      \"quote\": \"We have a limited amount of funding for free field trips.\"\n    },\n    {\n      \"kind\": \"contact-first\",\n      \"quote\": \"To learn more, please submit a residency request, and we will contact you to discuss options.\"\n    }\n  ],\n  \"what\": \"Learn new techniques in art making and upcycling to develop your teaching practice.\"\n}"
   },
   "art-lab-snug-harbor": {
     "hash": "cf1f9cfbdd942163",
     "at": "2026-11-05T16:24:31.148Z"
   },
   "mugi-pottery": {
-    "hash": "1d2b669afc851c77",
-    "at": "2026-11-05T16:24:31.148Z"
+    "hash": "196ba6789cf97497",
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"cost\": null,\n  \"schedule\": {\n    \"kind\": \"session\",\n    \"weeks\": 8,\n    \"note\": \"LENGTH OF SESSION DEPENDS ON THE MUGI CALENDAR\",\n    \"quote\": \"Winter - 1/5-3/1/2026 - 8 weeks\"\n  },\n  \"access\": {\n    \"enroll-ahead\": \"When registering for a pottery class, please choose the class day and time that fits your schedule for the entire session.\"\n  },\n  \"what\": \"All adult pottery classes focus on wheel-throwing techniques and accommodate skill levels from a total beginner to very advanced pottery veteran.\"\n}"
   },
   "clayworks-on-columbia": {
     "hash": "daf253bb86e42291",
     "at": "2026-11-05T16:24:31.148Z"
   },
   "potters-wheel-nyc": {
-    "hash": "4d6d4bec7be4bc87",
-    "at": "2026-11-05T16:24:31.148Z"
+    "hash": "122566875754f7c5",
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"cost\": {\n    \"kind\": \"range\",\n    \"min\": 400,\n    \"max\": 450,\n    \"quote\": \"Our courses are $450 for each session, and our Independent Artist courses are $400 per session.\"\n  },\n  \"schedule\": {\n    \"kind\": \"session\",\n    \"weeks\": 7,\n    \"note\": \"Please refer to our studio calendar to see when your chosen class will meet.\",\n    \"quote\": \"Each session runs for 7 weeks. Please refer to our studio calendar to see when your chosen class will meet.\"\n  },\n  \"access\": [\n    {\n      \"enroll-ahead\": \"YOU MUST BE A CURRENTLY REGISTERED STUDENT IN ONE OF OUR COURSES TO UTILIZE OUR WORKSHOP TIME.\"\n    }\n  ],\n  \"what\": \"Adult sessions consist of seven three-hour long classes in hand building or wheel throwing.\"\n}"
   },
   "myrtles-clayhouse": {
     "hash": "4b100231109f8dbb",
@@ -151,23 +161,27 @@
   },
   "new:mercurystore.com": {
     "hash": "9dcf40f2cf3c5ca8",
-    "at": "2026-11-05T17:05:02.643Z"
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"cost\": null,\n  \"schedule\": {\n    \"kind\": \"session\",\n    \"weeks\": 1,\n    \"note\": \"Monday to Friday\",\n    \"quote\": \"Projects are one-week long (Monday to Friday)\"\n  },\n  \"access\": [\n    {\n      \"kind\": \"enroll-ahead\",\n      \"quote\": \"The application process for Projects is a closed one and consists of a meeting and application in that order.\"\n    },\n    {\n      \"kind\": \"contact-first\",\n      \"quote\": \"The application process for Projects is a closed one and consists of a meeting and application in that order.\"\n    }\n  ],\n  \"what\": \"Project residencies support early development of an artistic idea or premise.\"\n}"
   },
   "new:gowanusprintlab.com": {
     "hash": "8a738b9e99a89d0a",
     "at": "2026-11-05T17:05:02.643Z"
   },
   "new:recessart.org": {
-    "hash": "dae506b8b06dde68",
-    "at": "2026-11-05T17:05:02.643Z"
+    "hash": "cd59ca7015b41e4d",
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"cost\": null,\n  \"schedule\": {\n    \"kind\": \"session\",\n    \"weeks\": 6,\n    \"note\": \"2 hours a week for 6 weeks, case by case, Multiple cycles Winter-Spring\",\n    \"quote\": \"2 hours a week for 6 weeks, case by case\\nMultiple cycles Winter-Spring\"\n  },\n  \"access\": {\n    \"contact-first\": \"Open only by referral\"\n  },\n  \"what\": \"The curriculum empowers young people to take charge of their own life story and envision a future through art.\"\n}"
   },
   "new:powrplnt.org": {
     "hash": "5107b810b9836721",
-    "at": "2026-11-05T17:05:02.643Z"
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"cost\": {\n    \"kind\": \"sliding\",\n    \"min\": null,\n    \"max\": null,\n    \"quote\": \"POWRPLNT offers sliding scale courses\"\n  },\n  \"schedule\": {\n    \"kind\": \"session\",\n    \"weeks\": null,\n    \"note\": \"Attend - Join one of our many virtual workshops from anywhere in the world. Learn More\",\n    \"quote\": \"Attend - Join one of our many virtual workshops from anywhere in the world.\"\n  },\n  \"access\": [\n    {\n      \"kind\": \"sliding-scale\",\n      \"quote\": \"POWRPLNT offers sliding scale courses\"\n    },\n    {\n      \"kind\": \"volunteer\",\n      \"quote\": \"Volunteer - Collaborate with us or lead your own workshop. Reach out at programs@powrplnt.org\"\n    }\n  ],\n  \"what\": \"POWRPLNT is a nonprofit organization, operating since 2013, whose goal is to connect traditional arts education with digital innovation.\"\n}"
   },
   "new:genspace.org": {
-    "hash": "ef86bea2a937ffd9",
-    "at": "2026-11-05T17:05:02.643Z"
+    "hash": "c8aa2d3b87f6add6",
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"cost\": null,\n  \"schedule\": {\n    \"kind\": \"session\",\n    \"weeks\": null,\n    \"note\": \"Genspace classes are paused until 2027 while we rethink our education programming. We're still running special workshops and community events, so check back here, follow our newsletter, or see our public programs here.\",\n    \"quote\": \"Genspace classes are paused until 2027 while we rethink our education programming.\"\n  },\n  \"access\": {\n    \"kind\": \"free\",\n    \"quote\": \"This free to attend workshop is open to residents of New York State\"\n  },\n  \"what\": \"Genspace's mission is to foster a safe and inclusive community where all people can experientially learn, boldly create, and meaningfully grow with the life sciences.\"\n}"
   },
   "dieu-donne": {
     "hash": "e2ec995cba65f734",
@@ -257,5 +271,10 @@
   "new:movingimage.org": {
     "hash": "2885170782aa3c3e",
     "at": "2026-11-12T19:46:23.314Z"
+  },
+  "new:wendyssubway.com": {
+    "hash": "3d94637ef63f2265",
+    "at": "2026-11-19T20:23:57.169Z",
+    "raw": "{\n  \"cost\": null,\n  \"schedule\": null,\n  \"access\": [\n    {\n      \"kind\": \"membership\",\n      \"quote\": \"Member Workshop\"\n    }\n  ],\n  \"what\": null\n}"
   }
 }

@@ -1,379 +1,379 @@
 {
-  "ranAt": "2026-11-12T19:46:23.314Z",
+  "ranAt": "2026-11-19T20:23:57.169Z",
   "rows": {
     "artshack": {
       "ok": "2026-11-10",
-      "last": "2026-11-12",
+      "last": "2026-11-19",
       "result": "price-not-found"
     },
     "gasworks": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "bushwick-ceramics": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "bklyn-clay": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "choplet": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "brooklyn-clay-industries": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "scratch-ceramics": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "powerhouse-ceramics": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "manny-cantor": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
-      "result": "ok"
-    },
-    "mgc": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "shoestring-press": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "uptown-clay": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
-    "les-printshop": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+    "mgc": {
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "rbpmw": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "bushwick-print-lab": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
+      "result": "ok"
+    },
+    "les-printshop": {
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "mobile-print-power": {
-      "last": "2026-11-12",
-      "result": "unreachable"
+      "last": "2026-11-19",
+      "result": "dead"
     },
     "works-in-progress": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "secret-riso-club": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
-    "center-for-book-arts": {
-      "last": "2026-11-12",
-      "result": "price-not-found"
-    },
     "lucky-risograph": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "textile-arts-center": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
+    },
+    "center-for-book-arts": {
+      "last": "2026-11-19",
+      "result": "price-not-found"
     },
     "makeville": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
-      "result": "ok"
-    },
-    "brooklyn-glass": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "urbanglass": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
+      "result": "ok"
+    },
+    "brooklyn-glass": {
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "craftsman-ave": {
-      "last": "2026-11-12",
+      "last": "2026-11-19",
       "result": "blocked"
     },
-    "makerspace-nyc": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
-      "result": "ok"
-    },
     "brooklyn-spark": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
-    "gowanus-darkroom": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+    "makerspace-nyc": {
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "penumbra": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
+      "result": "ok"
+    },
+    "gowanus-darkroom": {
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "bushwick-darkroom": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
-    },
-    "alterwork": {
-      "last": "2026-11-12",
-      "result": "price-not-found"
     },
     "mono-no-aware": {
       "ok": "2026-11-12",
-      "last": "2026-11-12",
-      "result": "ok"
+      "last": "2026-11-19",
+      "result": "price-not-found"
+    },
+    "alterwork": {
+      "last": "2026-11-19",
+      "result": "price-not-found"
     },
     "icp": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "millennium-film": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "bkcm": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "343-labs": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "creative-music-studio": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "sfpc": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "pioneer-works": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
-      "result": "ok"
-    },
-    "booklyn": {
-      "last": "2026-11-12",
-      "result": "blocked"
-    },
-    "nyc-resistor": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "interference-archive": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
+      "result": "ok"
+    },
+    "booklyn": {
+      "last": "2026-11-19",
+      "result": "blocked"
+    },
+    "nyc-resistor": {
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "nywc": {
-      "last": "2026-11-12",
+      "last": "2026-11-19",
       "result": "unreachable"
-    },
-    "brooklyn-poets": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
-      "result": "ok"
     },
     "center-for-fiction": {
       "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "last": "2026-11-19",
+      "result": "blocked"
+    },
+    "brooklyn-poets": {
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "wondrous": {
-      "last": "2026-11-12",
+      "last": "2026-11-19",
       "result": "unreachable"
     },
     "belladonna": {
-      "last": "2026-11-12",
+      "last": "2026-11-19",
       "result": "price-not-found"
     },
     "gotham-writers": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "movers-bodega": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "capoeira-luanda": {
       "ok": "2026-11-10",
-      "last": "2026-11-12",
+      "last": "2026-11-19",
       "result": "price-not-found"
     },
     "ailey-extension": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "humanist-project": {
-      "last": "2026-11-12",
+      "last": "2026-11-19",
       "result": "blocked"
     },
     "jack": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "bushwick-starr": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "sacred-harp": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "fire-ensemble": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "tonyc": {
       "ok": "2026-11-10",
-      "last": "2026-11-12",
+      "last": "2026-11-19",
       "result": "blocked"
     },
     "brooklynite-choir": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
-      "result": "ok"
-    },
-    "art-students-league": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "flux-factory": {
       "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "last": "2026-11-19",
+      "result": "unreachable"
+    },
+    "art-students-league": {
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "taller-boricua": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "mfta": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "abrons": {
-      "last": "2026-11-12",
+      "last": "2026-11-19",
       "result": "price-not-found"
-    },
-    "art-lab-snug-harbor": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
-      "result": "ok"
     },
     "brac": {
       "ok": "2026-11-12",
-      "last": "2026-11-12",
-      "result": "ok"
+      "last": "2026-11-19",
+      "result": "price-not-found"
     },
     "mugi-pottery": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
+      "result": "ok"
+    },
+    "art-lab-snug-harbor": {
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "clayworks-on-columbia": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "potters-wheel-nyc": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "myrtles-clayhouse": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "brooklyn-metal-works": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "brickhouse-ceramic-art-center": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "brooklyn-craft-company": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "dieu-donne": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "brooklyn-shoe-space": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "loop-of-the-loom": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     },
     "gowanus-print-lab": {
       "ok": "2026-11-10",
-      "last": "2026-11-12",
+      "last": "2026-11-19",
       "result": "blocked"
     },
     "mostly-good-studios": {
-      "ok": "2026-11-12",
-      "last": "2026-11-12",
+      "ok": "2026-11-19",
+      "last": "2026-11-19",
       "result": "ok"
     }
   }

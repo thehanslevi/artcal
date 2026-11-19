@@ -1,6 +1,35 @@
 {
-  "ranAt": "2026-11-12T19:46:23.314Z",
+  "ranAt": "2026-11-19T20:23:57.169Z",
   "proposals": [
+    {
+      "kind": "update",
+      "practiceId": "bushwick-starr",
+      "name": "The Bushwick Starr",
+      "method": "llm",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.thebushwickstarr.org/",
+          "quote": "Weekly Saturday morning theater games classes"
+        }
+      ],
+      "current": {
+        "kind": "irregular",
+        "note": "Summers at the Starr, August"
+      },
+      "change": {
+        "field": "schedule",
+        "proposed": {
+          "kind": "weekly",
+          "days": [
+            "sat"
+          ]
+        }
+      },
+      "firstSeen": "2026-11-19",
+      "lastSeen": "2026-11-19",
+      "id": "b668db96"
+    },
     {
       "kind": "update",
       "practiceId": "choplet",
@@ -25,8 +54,36 @@
         }
       },
       "firstSeen": "2026-11-10",
-      "lastSeen": "2026-11-12",
+      "lastSeen": "2026-11-19",
       "id": "7260139f"
+    },
+    {
+      "kind": "update",
+      "practiceId": "gowanus-darkroom",
+      "name": "Gowanus Darkroom",
+      "method": "pattern",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.gowanusdarkroom.com/classes",
+          "quote": "This 6 week course will teach you all the basics of film and darkroo"
+        }
+      ],
+      "current": {
+        "kind": "irregular",
+        "note": "$12/hr rental; workshops on rotation; monthly critique"
+      },
+      "change": {
+        "field": "schedule",
+        "proposed": {
+          "kind": "session",
+          "weeks": 6,
+          "note": "6-week classes"
+        }
+      },
+      "firstSeen": "2026-11-19",
+      "lastSeen": "2026-11-19",
+      "id": "f6e2bf28"
     },
     {
       "kind": "update",
@@ -52,8 +109,64 @@
         }
       },
       "firstSeen": "2026-11-12",
-      "lastSeen": "2026-11-12",
+      "lastSeen": "2026-11-19",
       "id": "d1c33bdb"
+    },
+    {
+      "kind": "update",
+      "practiceId": "mugi-pottery",
+      "name": "Mugi Pottery",
+      "method": "llm",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.mugipottery.com/adults",
+          "quote": "Winter - 1/5-3/1/2026 - 8 weeks"
+        }
+      ],
+      "current": {
+        "kind": "irregular",
+        "note": "Classes and studio space; check site for the term calendar."
+      },
+      "change": {
+        "field": "schedule",
+        "proposed": {
+          "kind": "session",
+          "weeks": 8,
+          "note": "8-week classes"
+        }
+      },
+      "firstSeen": "2026-11-19",
+      "lastSeen": "2026-11-19",
+      "id": "aea713f3"
+    },
+    {
+      "kind": "update",
+      "practiceId": "potters-wheel-nyc",
+      "name": "The Potter’s Wheel",
+      "method": "llm",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "url": "https://www.potterswheelny.com/our-courses",
+          "quote": "Each session runs for 7 weeks. Please refer to our studio calendar to see when your chosen class will meet."
+        }
+      ],
+      "current": {
+        "kind": "irregular",
+        "note": "Teaching studio; check site for class terms."
+      },
+      "change": {
+        "field": "schedule",
+        "proposed": {
+          "kind": "session",
+          "weeks": 7,
+          "note": "7-week classes"
+        }
+      },
+      "firstSeen": "2026-11-19",
+      "lastSeen": "2026-11-19",
+      "id": "6320814a"
     },
     {
       "kind": "update",
@@ -78,8 +191,35 @@
         }
       },
       "firstSeen": "2026-11-12",
-      "lastSeen": "2026-11-12",
+      "lastSeen": "2026-11-19",
       "id": "d8ce0591"
+    },
+    {
+      "kind": "update",
+      "practiceId": "icp",
+      "name": "International Center of Photography",
+      "method": "pattern",
+      "confidence": "low",
+      "evidence": [
+        {
+          "url": "https://www.icp.org/content/classic-model-11-analog-photo-booth",
+          "quote": "$7"
+        }
+      ],
+      "current": {
+        "kind": "unknown",
+        "why": "not-checked"
+      },
+      "change": {
+        "field": "cost",
+        "proposed": {
+          "kind": "fixed",
+          "amount": 7
+        }
+      },
+      "firstSeen": "2026-11-19",
+      "lastSeen": "2026-11-19",
+      "id": "7817b5eb"
     },
     {
       "kind": "new",
@@ -118,7 +258,7 @@
         }
       ],
       "firstSeen": "2026-11-05",
-      "lastSeen": "2026-11-12",
+      "lastSeen": "2026-11-19",
       "id": "9609a694"
     },
     {
@@ -139,7 +279,8 @@
           "note": "Membership."
         },
         "access": [
-          "enroll-ahead"
+          "enroll-ahead",
+          "scholarship"
         ]
       },
       "method": "llm",
@@ -148,11 +289,15 @@
         {
           "url": "https://www.manhattangraphicscenter.org/",
           "quote": "Memberships Now Available"
+        },
+        {
+          "url": "https://www.manhattangraphicscenter.org/faq",
+          "quote": "Please see our Fellowships page manhattangraphicscenter.org/scholarships"
         }
       ],
       "suggestedWhat": "MGC Community Print Studio supports the learning and practice of fine art printmaking.",
       "firstSeen": "2026-11-12",
-      "lastSeen": "2026-11-12",
+      "lastSeen": "2026-11-19",
       "id": "7525ada6"
     },
     {
@@ -188,7 +333,7 @@
       ],
       "suggestedWhat": "The Studio Museum in Harlem is the nexus for artists of African descent locally, nationally, and internationally.",
       "firstSeen": "2026-11-12",
-      "lastSeen": "2026-11-12",
+      "lastSeen": "2026-11-19",
       "id": "e54c8eaf"
     }
   ],
@@ -210,7 +355,7 @@
     "bushwick-ceramics": {
       "status": "read",
       "pages": 4,
-      "prices": 9,
+      "prices": 8,
       "proposals": 0,
       "llm": "skipped"
     },
@@ -257,13 +402,6 @@
       "proposals": 0,
       "costStillShown": true
     },
-    "mgc": {
-      "status": "read",
-      "pages": 3,
-      "prices": 0,
-      "proposals": 0,
-      "llm": "skipped"
-    },
     "shoestring-press": {
       "status": "read",
       "pages": 4,
@@ -274,18 +412,16 @@
     "uptown-clay": {
       "status": "read",
       "pages": 4,
-      "prices": 5,
+      "prices": 6,
       "proposals": 0,
       "costStillShown": true
     },
-    "les-printshop": {
+    "mgc": {
       "status": "read",
       "pages": 4,
-      "prices": 5,
+      "prices": 0,
       "proposals": 0,
-      "llm": "used",
-      "discarded": 0,
-      "costStillShown": true
+      "llm": "skipped"
     },
     "rbpmw": {
       "status": "read",
@@ -299,19 +435,28 @@
       "pages": 4,
       "prices": 24,
       "proposals": 0,
-      "llm": "used",
+      "llm": "unchanged",
       "discarded": 0
     },
+    "les-printshop": {
+      "status": "read",
+      "pages": 4,
+      "prices": 5,
+      "proposals": 0,
+      "llm": "unchanged",
+      "discarded": 0,
+      "costStillShown": true
+    },
     "mobile-print-power": {
-      "status": "unreachable",
+      "status": "dead",
       "pages": 0,
       "prices": 0,
       "proposals": 0,
-      "detail": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://mobileprintpower.com/workshops.php\nCall log:\n  - navigating to \"https:/"
+      "detail": "HTTP 404"
     },
     "works-in-progress": {
       "status": "read",
-      "pages": 2,
+      "pages": 1,
       "prices": 0,
       "proposals": 0,
       "llm": "skipped"
@@ -322,22 +467,15 @@
       "prices": 3,
       "proposals": 0,
       "llm": "used",
-      "discarded": 7,
+      "discarded": 4,
       "costStillShown": true
-    },
-    "center-for-book-arts": {
-      "status": "read",
-      "pages": 2,
-      "prices": 1,
-      "proposals": 0,
-      "costStillShown": false
     },
     "lucky-risograph": {
       "status": "read",
       "pages": 2,
       "prices": 0,
       "proposals": 0,
-      "llm": "used",
+      "llm": "stale",
       "discarded": 1
     },
     "textile-arts-center": {
@@ -347,29 +485,36 @@
       "proposals": 0,
       "costStillShown": true
     },
+    "center-for-book-arts": {
+      "status": "read",
+      "pages": 2,
+      "prices": 1,
+      "proposals": 0,
+      "costStillShown": false
+    },
     "makeville": {
       "status": "read",
       "pages": 4,
       "prices": 0,
       "proposals": 1,
-      "llm": "used",
+      "llm": "stale",
       "discarded": 3
-    },
-    "brooklyn-glass": {
-      "status": "read",
-      "pages": 4,
-      "prices": 1,
-      "proposals": 0,
-      "llm": "used",
-      "discarded": 4
     },
     "urbanglass": {
       "status": "read",
       "pages": 4,
       "prices": 0,
       "proposals": 1,
-      "llm": "used",
+      "llm": "stale",
       "discarded": 2
+    },
+    "brooklyn-glass": {
+      "status": "read",
+      "pages": 4,
+      "prices": 1,
+      "proposals": 0,
+      "llm": "stale",
+      "discarded": 4
     },
     "craftsman-ave": {
       "status": "blocked",
@@ -378,13 +523,6 @@
       "proposals": 0,
       "detail": "HTTP 403"
     },
-    "makerspace-nyc": {
-      "status": "read",
-      "pages": 3,
-      "prices": 4,
-      "proposals": 0,
-      "costStillShown": true
-    },
     "brooklyn-spark": {
       "status": "read",
       "pages": 2,
@@ -392,28 +530,44 @@
       "proposals": 0,
       "costStillShown": true
     },
-    "gowanus-darkroom": {
+    "makerspace-nyc": {
       "status": "read",
-      "pages": 4,
-      "prices": 24,
+      "pages": 3,
+      "prices": 4,
       "proposals": 0,
-      "llm": "used",
-      "discarded": 6,
       "costStillShown": true
     },
     "penumbra": {
       "status": "read",
       "pages": 4,
-      "prices": 14,
+      "prices": 16,
       "proposals": 0,
-      "llm": "used",
+      "llm": "stale",
       "discarded": 0
+    },
+    "gowanus-darkroom": {
+      "status": "read",
+      "pages": 4,
+      "prices": 24,
+      "proposals": 1,
+      "llm": "stale",
+      "discarded": 6,
+      "costStillShown": true
     },
     "bushwick-darkroom": {
       "status": "read",
       "pages": 4,
       "prices": 7,
       "proposals": 0,
+      "costStillShown": false
+    },
+    "mono-no-aware": {
+      "status": "read",
+      "pages": 2,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "stale",
+      "discarded": 0,
       "costStillShown": false
     },
     "alterwork": {
@@ -423,21 +577,12 @@
       "proposals": 0,
       "costStillShown": false
     },
-    "mono-no-aware": {
-      "status": "read",
-      "pages": 4,
-      "prices": 8,
-      "proposals": 0,
-      "llm": "used",
-      "discarded": 0,
-      "costStillShown": true
-    },
     "icp": {
       "status": "read",
       "pages": 4,
-      "prices": 0,
-      "proposals": 0,
-      "llm": "used",
+      "prices": 1,
+      "proposals": 1,
+      "llm": "stale",
       "discarded": 0
     },
     "millennium-film": {
@@ -452,13 +597,13 @@
       "pages": 4,
       "prices": 8,
       "proposals": 0,
-      "llm": "used",
+      "llm": "stale",
       "discarded": 0
     },
     "343-labs": {
       "status": "read",
       "pages": 4,
-      "prices": 34,
+      "prices": 29,
       "proposals": 0,
       "costStillShown": true
     },
@@ -467,7 +612,7 @@
       "pages": 3,
       "prices": 3,
       "proposals": 0,
-      "llm": "used",
+      "llm": "unchanged",
       "discarded": 0,
       "costStillShown": true
     },
@@ -476,7 +621,7 @@
       "pages": 4,
       "prices": 3,
       "proposals": 0,
-      "llm": "used",
+      "llm": "stale",
       "discarded": 2,
       "costStillShown": true
     },
@@ -485,6 +630,14 @@
       "pages": 4,
       "prices": 0,
       "proposals": 0
+    },
+    "interference-archive": {
+      "status": "read",
+      "pages": 1,
+      "prices": 0,
+      "proposals": 0,
+      "llm": "used",
+      "discarded": 1
     },
     "booklyn": {
       "status": "blocked",
@@ -500,13 +653,6 @@
       "proposals": 0,
       "costStillShown": false
     },
-    "interference-archive": {
-      "status": "read",
-      "pages": 1,
-      "prices": 0,
-      "proposals": 0,
-      "llm": "skipped"
-    },
     "nywc": {
       "status": "unreachable",
       "pages": 0,
@@ -514,18 +660,18 @@
       "proposals": 0,
       "detail": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://nywriterscoalition.org/\nCall log:\n  - navigating to \"https://nywritersc"
     },
+    "center-for-fiction": {
+      "status": "blocked",
+      "pages": 0,
+      "prices": 0,
+      "proposals": 0,
+      "detail": "HTTP 403"
+    },
     "brooklyn-poets": {
       "status": "read",
       "pages": 4,
       "prices": 0,
       "proposals": 0
-    },
-    "center-for-fiction": {
-      "status": "read",
-      "pages": 2,
-      "prices": 1,
-      "proposals": 0,
-      "llm": "skipped"
     },
     "wondrous": {
       "status": "unreachable",
@@ -539,7 +685,8 @@
       "pages": 1,
       "prices": 0,
       "proposals": 0,
-      "llm": "skipped",
+      "llm": "used",
+      "discarded": 0,
       "costStillShown": false
     },
     "gotham-writers": {
@@ -547,12 +694,13 @@
       "pages": 4,
       "prices": 0,
       "proposals": 0,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 4
     },
     "movers-bodega": {
       "status": "read",
       "pages": 3,
-      "prices": 14,
+      "prices": 13,
       "proposals": 0,
       "costStillShown": true
     },
@@ -582,14 +730,16 @@
       "pages": 1,
       "prices": 0,
       "proposals": 0,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 0
     },
     "bushwick-starr": {
       "status": "read",
       "pages": 2,
       "prices": 0,
-      "proposals": 0,
-      "llm": "skipped"
+      "proposals": 1,
+      "llm": "used",
+      "discarded": 1
     },
     "sacred-harp": {
       "status": "read",
@@ -617,33 +767,36 @@
       "proposals": 0,
       "costStillShown": true
     },
+    "flux-factory": {
+      "status": "unreachable",
+      "pages": 0,
+      "prices": 0,
+      "proposals": 0,
+      "detail": "page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://www.fluxfactory.org/\", waiting until \"domconte"
+    },
     "art-students-league": {
       "status": "read",
       "pages": 3,
       "prices": 0,
       "proposals": 0,
-      "llm": "skipped"
-    },
-    "flux-factory": {
-      "status": "read",
-      "pages": 3,
-      "prices": 0,
-      "proposals": 0,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 0
     },
     "taller-boricua": {
       "status": "read",
       "pages": 1,
       "prices": 0,
       "proposals": 0,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 1
     },
     "mfta": {
       "status": "read",
       "pages": 2,
-      "prices": 1,
+      "prices": 2,
       "proposals": 0,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 3
     },
     "abrons": {
       "status": "read",
@@ -652,26 +805,27 @@
       "proposals": 0,
       "costStillShown": false
     },
+    "brac": {
+      "status": "read",
+      "pages": 4,
+      "prices": 0,
+      "proposals": 0,
+      "costStillShown": false
+    },
+    "mugi-pottery": {
+      "status": "read",
+      "pages": 3,
+      "prices": 0,
+      "proposals": 1,
+      "llm": "used",
+      "discarded": 0
+    },
     "art-lab-snug-harbor": {
       "status": "read",
       "pages": 4,
       "prices": 15,
       "proposals": 0,
       "costStillShown": true
-    },
-    "brac": {
-      "status": "read",
-      "pages": 4,
-      "prices": 6,
-      "proposals": 0,
-      "costStillShown": true
-    },
-    "mugi-pottery": {
-      "status": "read",
-      "pages": 3,
-      "prices": 0,
-      "proposals": 0,
-      "llm": "skipped"
     },
     "clayworks-on-columbia": {
       "status": "read",
@@ -684,8 +838,9 @@
       "status": "read",
       "pages": 4,
       "prices": 3,
-      "proposals": 0,
-      "llm": "skipped",
+      "proposals": 1,
+      "llm": "used",
+      "discarded": 1,
       "costStillShown": true
     },
     "myrtles-clayhouse": {
@@ -704,16 +859,16 @@
     },
     "brickhouse-ceramic-art-center": {
       "status": "read",
-      "pages": 2,
-      "prices": 1,
+      "pages": 3,
+      "prices": 11,
       "proposals": 0,
       "llm": "skipped",
       "costStillShown": true
     },
     "brooklyn-craft-company": {
       "status": "read",
-      "pages": 2,
-      "prices": 16,
+      "pages": 4,
+      "prices": 17,
       "proposals": 0,
       "llm": "skipped",
       "costStillShown": true
@@ -723,7 +878,7 @@
       "pages": 4,
       "prices": 2,
       "proposals": 0,
-      "llm": "used",
+      "llm": "stale",
       "discarded": 6,
       "costStillShown": true
     },
@@ -732,7 +887,7 @@
       "pages": 4,
       "prices": 13,
       "proposals": 0,
-      "llm": "used",
+      "llm": "stale",
       "discarded": 5,
       "costStillShown": true
     },
@@ -741,7 +896,7 @@
       "pages": 4,
       "prices": 18,
       "proposals": 0,
-      "llm": "used",
+      "llm": "unchanged",
       "discarded": 1,
       "costStillShown": true
     },
@@ -752,34 +907,36 @@
       "proposals": 0,
       "detail": "HTTP 403"
     },
-    "mostly-good-studios": {
+    "new:wendyssubway.com": {
       "status": "read",
       "pages": 4,
       "prices": 0,
       "proposals": 0,
       "llm": "used",
-      "discarded": 3
+      "discarded": 1
     },
-    "new:wendyssubway.com": {
-      "status": "unreachable",
-      "pages": 0,
+    "mostly-good-studios": {
+      "status": "read",
+      "pages": 4,
       "prices": 0,
       "proposals": 0,
-      "detail": "page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://www.wendyssubway.com/programs\", waiting until "
+      "llm": "stale",
+      "discarded": 3
     },
     "new:mercurystore.com": {
       "status": "read",
       "pages": 1,
       "prices": 0,
       "proposals": 0,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 3
     },
     "new:chezbushwick.net": {
       "status": "read",
       "pages": 3,
       "prices": 1,
       "proposals": 0,
-      "llm": "used",
+      "llm": "unchanged",
       "discarded": 1
     },
     "new:recessart.org": {
@@ -787,21 +944,23 @@
       "pages": 4,
       "prices": 0,
       "proposals": 0,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 1
     },
     "new:powrplnt.org": {
       "status": "read",
       "pages": 2,
       "prices": 0,
       "proposals": 0,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 4
     },
     "new:manhattangraphicscenter.org": {
       "status": "read",
       "pages": 2,
       "prices": 0,
       "proposals": 1,
-      "llm": "used",
+      "llm": "stale",
       "discarded": 1
     },
     "new:genspace.org": {
@@ -809,38 +968,38 @@
       "pages": 4,
       "prices": 0,
       "proposals": 0,
-      "llm": "skipped"
+      "llm": "used",
+      "discarded": 1
     },
     "new:thearm.org": {
       "status": "read",
       "pages": 1,
       "prices": 0,
       "proposals": 0,
-      "llm": "used",
+      "llm": "unchanged",
       "discarded": 1
-    },
-    "new:harvestworks.org": {
-      "status": "read",
-      "pages": 4,
-      "prices": 0,
-      "proposals": 0,
-      "llm": "used",
-      "discarded": 0
     },
     "new:dctvny.org": {
       "status": "read",
       "pages": 3,
       "prices": 0,
       "proposals": 0,
-      "llm": "used",
+      "llm": "stale",
       "discarded": 1
+    },
+    "new:harvestworks.org": {
+      "status": "unreachable",
+      "pages": 0,
+      "prices": 0,
+      "proposals": 0,
+      "detail": "page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://www.harvestworks.org/\", waiting until \"domcont"
     },
     "new:bluestockings.com": {
       "status": "read",
       "pages": 1,
       "prices": 0,
       "proposals": 0,
-      "llm": "used",
+      "llm": "unchanged",
       "discarded": 1
     },
     "new:fatcatfablab.org": {
@@ -848,7 +1007,7 @@
       "pages": 1,
       "prices": 0,
       "proposals": 0,
-      "llm": "used",
+      "llm": "unchanged",
       "discarded": 1
     },
     "new:jcal.org": {
@@ -856,7 +1015,7 @@
       "pages": 4,
       "prices": 1,
       "proposals": 1,
-      "llm": "used",
+      "llm": "unchanged",
       "discarded": 3
     },
     "new:hackmanhattan.com": {
@@ -864,7 +1023,7 @@
       "pages": 1,
       "prices": 0,
       "proposals": 0,
-      "llm": "used",
+      "llm": "unchanged",
       "discarded": 0
     },
     "new:noguchi.org": {
@@ -872,7 +1031,7 @@
       "pages": 4,
       "prices": 0,
       "proposals": 0,
-      "llm": "used",
+      "llm": "stale",
       "discarded": 0
     },
     "new:socratessculpturepark.org": {
@@ -880,7 +1039,7 @@
       "pages": 3,
       "prices": 0,
       "proposals": 0,
-      "llm": "used",
+      "llm": "stale",
       "discarded": 0
     },
     "new:wordupbooks.com": {
@@ -895,7 +1054,7 @@
       "pages": 4,
       "prices": 0,
       "proposals": 0,
-      "llm": "used",
+      "llm": "stale",
       "discarded": 0
     },
     "new:studiomuseum.org": {
@@ -903,7 +1062,7 @@
       "pages": 4,
       "prices": 0,
       "proposals": 1,
-      "llm": "used",
+      "llm": "stale",
       "discarded": 3
     },
     "new:wearebkc.com": {
@@ -918,8 +1077,7 @@
       "pages": 4,
       "prices": 0,
       "proposals": 0,
-      "llm": "used",
-      "discarded": 0
+      "llm": "skipped"
     }
   }
 }
