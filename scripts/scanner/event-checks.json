@@ -1,420 +1,439 @@
 {
-  "ranAt": "2026-11-18T20:18:40.565Z",
+  "ranAt": "2026-11-22T19:17:09.848Z",
   "rows": {
-    "e_eaa3d38b29c6": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_73cf775f9326": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_6bba90fde3d4": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_0d2bfed829b6": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_70798ddfa929": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_6e53c0358e5a": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_9bcef56353a0": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_7497736ac76e": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_bc40a06f53ef": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_46e581a25871": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_8e448f77e65b": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_f0bc8da52fc8": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_d4dfd9158315": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_eb22d3e63067": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_bc2c4b082f3b": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_bf320b4ef1a0": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_9d08033c51b6": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_ea38b8a31b33": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_2de4f86f1066": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_dcad5116d598": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_cd8723ef253f": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_75fd3e35b981": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_64ee0298cc9d": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_1f871f90946b": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_6379bfad0656": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_930234d5d547": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_24e707b33ce7": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_f329a9dd7f7f": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_1ed7dcec478e": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_00d94e0afe5c": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_2d776a22e7d5": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_bfa6de6683b4": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_fa5c179a1b23": {
-      "last": "2026-11-18",
-      "result": "dead",
-      "strikes": 1
-    },
-    "e_c75976663fc7": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_9ca0cb925d6a": {
-      "last": "2026-11-18",
-      "result": "unconfirmed",
-      "strikes": 1
-    },
-    "e_7832e504e0f5": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_95b279e3e366": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_f31aa82f7185": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_bcbea1c64030": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_4851a6a625e1": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_2fd1da121a91": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_f1dcb948fda1": {
-      "last": "2026-11-18",
-      "result": "ok",
-      "strikes": 0
-    },
     "e_902306c0f49c": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_5470f6c3aaab": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_eb210a5152d9": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_fa23e7863942": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_2dd9de52033f": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_0fa8b4a69e35": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_4f1a6d9de5a4": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_2bb9c4adc476": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_5c9bb7791d51": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_c800e37d6a50": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_a8b91f04d506": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_cbbfd0b222a8": {
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_8305cf4fcf53": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_8078ad7ca323": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_a40675294e74": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_9530cde2104e": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_793fc3b5cb68": {
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_b052967479a1": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_4dc59ff07b90": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_de88e9a4743d": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_0986fb781d35": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_3958cba3f0b1": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_db04b7be3965": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_7a6dfb789f82": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_8d1ad177e749": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_62608d758cdf": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_95dca56ee478": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_89e425101647": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_ca04ca30963f": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_0c2010bec59f": {
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_1082d277f462": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
+    "e_bdcb2f2a3308": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_68d0fde45c84": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_b2e9ad5340fe": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_7ea5a7c32345": {
+      "last": "2026-11-22",
+      "result": "unconfirmed",
+      "strikes": 1
+    },
     "e_30b4da7d5592": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_bb7d1cbe1322": {
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_b33cb6a1f090": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_f73b68f5b5bd": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_b3166665b207": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_7b39713337de": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_c71aaab9398c": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_ac82eaa90e5d": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_b817e9d3bc47": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_f6159aa31e97": {
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_32f73e62b50a": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_3f2ee45da456": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_f8eecebfd086": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_dba22a8d4068": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_fa10f04dd978": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_6837efdc7d75": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_389e49d09c1f": {
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_f783c7b27c56": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_22c660170263": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
-    "e_1398337d4cd6": {
-      "last": "2026-11-18",
-      "result": "unconfirmed",
-      "strikes": 2
-    },
     "e_31917a7a375c": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_a45fc9a9fba1": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_bda23d706bd1": {
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_16ae07b3bfa2": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_4812b36a0526": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_76a13d6311b2": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_791739cee41e": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_de4dd969b9fc": {
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_dd789af79787": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_e2f249f47318": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_2ccae32a6241": {
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_8dda4629ced9": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_c4d223153c8c": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_29e88e522ec6": {
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_0ccdc6551ea5": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_dba865770b18": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_e55ae8145f61": {
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_1f4c53c26198": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_33d23d5fa6f5": {
+      "last": "2026-11-22",
+      "result": "ok",
+      "strikes": 0
+    },
+    "e_3170449e35a6": {
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     },
     "e_a15ef58cd5b1": {
-      "last": "2026-11-18",
+      "last": "2026-11-22",
       "result": "ok",
       "strikes": 0
     }
   },
-  "remove": [
+  "remove": [],
+  "fill": [
     {
-      "uid": "e_1398337d4cd6",
-      "why": "Its page didn't list it on that date on 2 checks in a row (last 2026-11-18)"
+      "uid": "e_4f1a6d9de5a4",
+      "url": "https://www.wonderville.nyc/events/flapo-the-flash-laptop-and-phone-orchestra-11-22-26",
+      "replaces": "https://wonderville.nyc/events"
+    },
+    {
+      "uid": "e_2bb9c4adc476",
+      "url": "https://www.wonderville.nyc/events/sonosphere-11-22-26",
+      "replaces": "https://wonderville.nyc/events"
+    },
+    {
+      "uid": "e_5c9bb7791d51",
+      "url": "https://www.wonderville.nyc/events/sunday-social-11-22-26",
+      "replaces": "https://wonderville.nyc/events"
+    },
+    {
+      "uid": "e_c800e37d6a50",
+      "cost": "$50–60",
+      "url": "https://roulette.org/event/henry-threadgill-zooid-cut-you-where-you-was/",
+      "replaces": "https://roulette.org/calendar/",
+      "quote": "8:00 pm $55 advance$60 doors$50 STUDENT/SENIOR (w/ ID, SENIOR 65+ - advance and",
+      "page": "https://roulette.org/event/henry-threadgill-zooid-cut-you-where-you-was/"
+    },
+    {
+      "uid": "e_8078ad7ca323",
+      "url": "https://www.wonderville.nyc/events/the-fort90-broadcast-system-presents-fort90-tv-11-23-26",
+      "replaces": "https://wonderville.nyc/events"
+    },
+    {
+      "uid": "e_a40675294e74",
+      "url": "https://www.wonderville.nyc/events/weebs-anonymous-a-drag-open-set-for-weebs-11-23-26",
+      "replaces": "https://wonderville.nyc/events"
+    },
+    {
+      "uid": "e_3958cba3f0b1",
+      "url": "https://www.wonderville.nyc/events/playtest-11-24-26",
+      "replaces": "https://wonderville.nyc/events"
+    },
+    {
+      "uid": "e_95dca56ee478",
+      "url": "https://www.wonderville.nyc/events/kq-open-hive-night-11-25-26",
+      "replaces": "https://wonderville.nyc/events"
+    },
+    {
+      "uid": "e_b2e9ad5340fe",
+      "url": "https://www.wonderville.nyc/events/the-donut-lounge-11-28-26",
+      "replaces": "https://wonderville.nyc/events"
+    },
+    {
+      "uid": "e_bda23d706bd1",
+      "url": "https://www.delightfactorynyc.com/events/the-first-frost-fairy-themed-figure-drawing",
+      "replaces": "https://www.delightfactorynyc.com/events"
     }
   ],
-  "fill": [],
   "filled": [
-    {
-      "uid": "e_bc40a06f53ef",
-      "url": "https://www.wonderville.nyc/events/kq-open-hive-night-11-18-26",
-      "replaces": "https://wonderville.nyc/events"
-    },
-    {
-      "uid": "e_bfa6de6683b4",
-      "cost": "$10–20 suggested",
-      "url": "https://www.wonderville.nyc/events/club-massive-jungle-is-hardcore-11-20-26",
-      "replaces": "https://wonderville.nyc/events"
-    },
-    {
-      "uid": "e_4851a6a625e1",
-      "url": "https://www.wonderville.nyc/events/rhythm-rave-11-21-26",
-      "replaces": "https://wonderville.nyc/events"
-    },
-    {
-      "uid": "e_f1dcb948fda1",
-      "cost": "$63.48–73.48"
-    },
     {
       "uid": "e_fa23e7863942",
       "cost": "$63.48–73.48"
@@ -425,5 +444,5 @@
     }
   ],
   "declined": [],
-  "verifiedOn": "2026-11-18"
+  "verifiedOn": "2026-11-22"
 }
