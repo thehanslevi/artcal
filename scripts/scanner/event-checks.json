@@ -1,421 +1,268 @@
 {
-  "ranAt": "2026-11-22T19:17:09.848Z",
+  "ranAt": "2026-11-25T21:29:27.748Z",
   "rows": {
-    "e_902306c0f49c": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_5470f6c3aaab": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_eb210a5152d9": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_fa23e7863942": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_2dd9de52033f": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_0fa8b4a69e35": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_4f1a6d9de5a4": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_2bb9c4adc476": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_5c9bb7791d51": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_c800e37d6a50": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_a8b91f04d506": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_cbbfd0b222a8": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_8305cf4fcf53": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_8078ad7ca323": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_a40675294e74": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_9530cde2104e": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_793fc3b5cb68": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_b052967479a1": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_4dc59ff07b90": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_de88e9a4743d": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_0986fb781d35": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_3958cba3f0b1": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_db04b7be3965": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_7a6dfb789f82": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
-    "e_8d1ad177e749": {
-      "last": "2026-11-22",
-      "result": "ok",
-      "strikes": 0
-    },
     "e_62608d758cdf": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_95dca56ee478": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_89e425101647": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_ca04ca30963f": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_0c2010bec59f": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_1082d277f462": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_bdcb2f2a3308": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_68d0fde45c84": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_b2e9ad5340fe": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_7ea5a7c32345": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "unconfirmed",
-      "strikes": 1
+      "strikes": 2
     },
     "e_30b4da7d5592": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_bb7d1cbe1322": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_b33cb6a1f090": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_f73b68f5b5bd": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_b3166665b207": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_7b39713337de": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_c71aaab9398c": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_ac82eaa90e5d": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_b817e9d3bc47": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_f6159aa31e97": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_32f73e62b50a": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_3f2ee45da456": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_f8eecebfd086": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_dba22a8d4068": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_fa10f04dd978": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_6837efdc7d75": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_389e49d09c1f": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_f783c7b27c56": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_22c660170263": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_31917a7a375c": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_a45fc9a9fba1": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_bda23d706bd1": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_16ae07b3bfa2": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_4812b36a0526": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_76a13d6311b2": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_791739cee41e": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_de4dd969b9fc": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_dd789af79787": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_e2f249f47318": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_2ccae32a6241": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_8dda4629ced9": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_c4d223153c8c": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_29e88e522ec6": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_0ccdc6551ea5": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_dba865770b18": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_e55ae8145f61": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_1f4c53c26198": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_33d23d5fa6f5": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_3170449e35a6": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     },
     "e_a15ef58cd5b1": {
-      "last": "2026-11-22",
+      "last": "2026-11-25",
       "result": "ok",
       "strikes": 0
     }
   },
-  "remove": [],
-  "fill": [
+  "remove": [
     {
-      "uid": "e_4f1a6d9de5a4",
-      "url": "https://www.wonderville.nyc/events/flapo-the-flash-laptop-and-phone-orchestra-11-22-26",
-      "replaces": "https://wonderville.nyc/events"
-    },
+      "uid": "e_7ea5a7c32345",
+      "why": "Its page didn't list it on that date on 2 checks in a row (last 2026-11-25)"
+    }
+  ],
+  "fill": [],
+  "filled": [
     {
-      "uid": "e_2bb9c4adc476",
-      "url": "https://www.wonderville.nyc/events/sonosphere-11-22-26",
-      "replaces": "https://wonderville.nyc/events"
-    },
-    {
-      "uid": "e_5c9bb7791d51",
-      "url": "https://www.wonderville.nyc/events/sunday-social-11-22-26",
-      "replaces": "https://wonderville.nyc/events"
-    },
-    {
-      "uid": "e_c800e37d6a50",
-      "cost": "$50–60",
-      "url": "https://roulette.org/event/henry-threadgill-zooid-cut-you-where-you-was/",
-      "replaces": "https://roulette.org/calendar/",
-      "quote": "8:00 pm $55 advance$60 doors$50 STUDENT/SENIOR (w/ ID, SENIOR 65+ - advance and",
-      "page": "https://roulette.org/event/henry-threadgill-zooid-cut-you-where-you-was/"
-    },
-    {
-      "uid": "e_8078ad7ca323",
-      "url": "https://www.wonderville.nyc/events/the-fort90-broadcast-system-presents-fort90-tv-11-23-26",
-      "replaces": "https://wonderville.nyc/events"
-    },
-    {
-      "uid": "e_a40675294e74",
-      "url": "https://www.wonderville.nyc/events/weebs-anonymous-a-drag-open-set-for-weebs-11-23-26",
-      "replaces": "https://wonderville.nyc/events"
-    },
-    {
-      "uid": "e_3958cba3f0b1",
-      "url": "https://www.wonderville.nyc/events/playtest-11-24-26",
-      "replaces": "https://wonderville.nyc/events"
+      "uid": "e_31917a7a375c",
+      "cost": "$30"
     },
     {
       "uid": "e_95dca56ee478",
@@ -433,16 +280,6 @@
       "replaces": "https://www.delightfactorynyc.com/events"
     }
   ],
-  "filled": [
-    {
-      "uid": "e_fa23e7863942",
-      "cost": "$63.48–73.48"
-    },
-    {
-      "uid": "e_31917a7a375c",
-      "cost": "$30"
-    }
-  ],
   "declined": [],
-  "verifiedOn": "2026-11-22"
+  "verifiedOn": "2026-11-25"
 }

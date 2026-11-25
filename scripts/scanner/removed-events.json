@@ -778,5 +778,25 @@
     "uid": "e_1398337d4cd6",
     "why": "Its page didn't list it on that date on 2 checks in a row (last 2026-11-18)",
     "removedOn": "2026-11-18"
+  },
+  {
+    "day": "Sat",
+    "date": "Nov 28",
+    "event": "Failed Film Festival 5",
+    "where": "Brooklyn Art Haus, Williamsburg",
+    "cost": "TBD",
+    "category": "film",
+    "flag": null,
+    "mode": "witness",
+    "start": null,
+    "end": null,
+    "note": "Runs Nov 28–29.",
+    "url": "https://www.eventbrite.com/e/failed-film-festival-5-tickets-2004404574038?aff=oddtdtcreator",
+    "venue": "Brooklyn Art Haus",
+    "neighborhood": "Williamsburg",
+    "address": "25 Marcy Ave",
+    "uid": "e_7ea5a7c32345",
+    "why": "Its page didn't list it on that date on 2 checks in a row (last 2026-11-25)",
+    "removedOn": "2026-11-25"
   }
 ]
