@@ -29,3 +29,6 @@ creative-pursuit-log.md
 
 # Scanner run result — reconciled by CI, not committed
 scripts/scanner/.scan-result.json
+
+_to_delete/
+newsletter-signup-*

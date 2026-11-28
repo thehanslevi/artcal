@@ -39,6 +39,19 @@
       type="font/woff2"
       crossorigin
     />
+    <script>
+      // Resolve the theme before first paint so there's no light/dark flash.
+      (function () {
+        try {
+          var m = localStorage.getItem("artcal-theme") || "system";
+          var dark =
+            m === "dark" ||
+            (m === "system" &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.dataset.theme = dark ? "dark" : "light";
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

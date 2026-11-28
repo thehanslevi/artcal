@@ -19,6 +19,7 @@
   --text-3: rgba(0, 0, 0, 0.48);
   --border: rgba(0, 0, 0, 0.2);
   --border-strong: rgba(0, 0, 0, 0.5);
+  --row-divider: rgba(0, 0, 0, 0.12);
   --accent: #ff3c00;     /* riso orange (SRC shop button) */
   --accent-2: #ff48b0;   /* fluorescent pink */
   --accent-3: #0022ff;   /* electric blue (SRC h2 link) */
@@ -74,6 +75,54 @@
     sans-serif;
   --font-display: "Junicode", "Iowan Old Style", Georgia, serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+
+/* Dark mode — attribute-driven so a forced choice (the header toggle) beats the
+   OS setting. A small inline script in index.html sets data-theme="dark|light"
+   before first paint, and useTheme keeps it in sync with the system when in Auto
+   mode. The riso inks (category colors) stay fluorescent; only the paper ground,
+   ink text, surfaces and hairlines flip. The footer zone keeps its own local
+   dark tokens (already dark), so it's left untouched. */
+:root[data-theme="dark"] {
+    --page: #0f0f11;
+    --bg: #17171b;
+    --surface: #1d1d21;
+    --surface-2: #292930;
+    --text-1: #f3f2ef;
+    --text-2: rgba(255, 255, 255, 0.72);
+    --text-3: rgba(255, 255, 255, 0.46);
+    --border: rgba(255, 255, 255, 0.16);
+    --border-strong: rgba(255, 255, 255, 0.42);
+    --row-divider: rgba(255, 255, 255, 0.1);
+    --accent-soft: rgba(255, 60, 0, 0.22);
+
+    /* Zone grounds */
+    --zone-grey: #161619;
+    --zone-pink: #1e1420;
+
+    /* Legible-on-dark text for the tinted badges + stronger tint fills */
+    --sound-text: #7f95ff;
+    --dance-text: #ff77c2;
+    --film-text: #b98bff;
+    --tech-text: #35e08a;
+    --making-text: #ff7a4d;
+    --theatre-text: #ffe94d;
+    --literature-text: #ff6b6b;
+    --community-text: #2fe6d3;
+    --tech-bg: rgba(15, 212, 99, 0.2);
+    --dance-bg: rgba(255, 72, 176, 0.2);
+
+    /* Status badges */
+    --warn-text: #f2d84a;
+    --warn-bg: rgba(255, 232, 0, 0.16);
+    --danger-text: #ff6b6b;
+    --danger-bg: rgba(255, 46, 46, 0.14);
+    --pro-text: #b98bff;
+    --pro-bg: rgba(140, 26, 255, 0.16);
+
+    /* Semantic */
+    --free: #23c483;
+    --paid: #f3f2ef;
 }
 
 * {
@@ -259,8 +308,8 @@ body {
   left: 0;
   z-index: 30;
   width: 320px;
-  background: #fff;
-  border: 1px solid #000;
+  background: var(--bg);
+  border: 1px solid var(--text-1);
   padding: 14px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
   text-transform: none;
@@ -381,6 +430,38 @@ a:hover {
   gap: 8px;
   align-items: center;
   flex-wrap: wrap;
+}
+
+/* Theme toggle — matches the subscribe/sync pills; cycles Auto / Light / Dark */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  color: var(--text-1);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--text-1);
+  border-color: var(--text-1);
+  color: var(--bg);
+}
+
+.theme-toggle-icon {
+  font-size: 13px;
+  line-height: 1;
 }
 
 /* Sync panel */
@@ -1138,6 +1219,75 @@ a:hover {
 }
 
 /* Filter bar */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding: 8px 14px;
+  background: var(--page);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.search-box:focus-within {
+  border-color: var(--text-1);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.search-icon {
+  font-size: 18px;
+  line-height: 1;
+  color: var(--text-3);
+  transform: rotate(-45deg);
+}
+
+.search-input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-1);
+  outline: none;
+  padding: 2px 0;
+}
+
+.search-input::placeholder {
+  color: var(--text-3);
+}
+
+/* Hide the browser's native clear affordance; we render our own. */
+.search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.search-clear {
+  border: none;
+  background: var(--surface-2);
+  color: var(--text-2);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  font-size: 15px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex: 0 0 auto;
+}
+
+.search-clear:hover {
+  background: var(--text-1);
+  color: var(--bg);
+}
+
 .filter-row {
   display: flex;
   gap: 8px;
@@ -1672,10 +1822,12 @@ a:hover {
   grid-template-columns: 82px 1fr auto auto auto;
   gap: 14px;
   align-items: start;
-  padding: 14px 4px 14px 20px;
+  /* Right gutter reserved for the pick-star so it never collides with the
+     category pill (see .pick-btn). */
+  padding: 14px 44px 14px 20px;
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid var(--row-divider);
   border-left: 4px solid transparent;
   border-radius: 0;
   margin-bottom: 0;
@@ -1905,8 +2057,10 @@ a:hover {
 /* Pick button */
 .pick-btn {
   position: absolute;
-  top: 6px;
-  right: 6px;
+  /* Live in the row's right gutter, vertically centered — clear of the pill. */
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
   background: none;
   border: none;
   color: var(--text-3);
@@ -1915,6 +2069,10 @@ a:hover {
   line-height: 1;
   padding: 4px 6px;
   border-radius: 999px;
+  transition: color 0.12s ease, background 0.12s ease, transform 0.12s ease;
+}
+.pick-btn:active {
+  transform: translateY(-50%) scale(0.86);
 }
 .pick-btn:hover {
   color: var(--dance);
@@ -2342,7 +2500,8 @@ a:hover {
   .event-row {
     grid-template-columns: 60px 1fr;
     gap: 6px 10px;
-    padding: 10px;
+    /* Keep the right gutter for the pick-star on mobile too. */
+    padding: 10px 40px 10px 10px;
   }
 
   .event-day {
@@ -2487,4 +2646,20 @@ a:hover {
     break-inside: avoid;
     box-shadow: none;
   }
+}
+
+/* Dark-mode element overrides (custom-property overrides live in the
+   :root[data-theme="dark"] block near the top). */
+:root[data-theme="dark"] .zone-main {
+  background: linear-gradient(
+    180deg,
+    #17171b 0px,
+    var(--page) 420px,
+    var(--page) calc(100% - 520px),
+    var(--zone-pink) 100%
+  );
+}
+/* Sticky filter bar's frosted background is hardcoded white; darken it. */
+:root[data-theme="dark"] .filter-row {
+  background: rgba(15, 15, 17, 0.72);
 }

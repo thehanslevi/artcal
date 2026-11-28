@@ -27,11 +27,13 @@ import {
 } from "./lib/sync";
 import { CURATOR_HASH } from "./lib/curator";
 import { matchesTab } from "./lib/tab";
+import { matchesQuery } from "./lib/search";
 import { Calendar } from "./components/Calendar";
 import { ExportButton } from "./components/ExportButton";
 import { FilterBar, computeCategoryCounts } from "./components/FilterBar";
 import { Spaces } from "./components/Spaces";
 import { SubscribePanel } from "./components/SubscribePanel";
+import { ThemeToggle } from "./components/ThemeToggle";
 import { SubmitPanel } from "./components/SubmitPanel";
 import { CuratorPicks } from "./components/CuratorPicks";
 import { Directory } from "./components/Directory";
@@ -69,6 +71,7 @@ function App() {
   // Practice its own dated list is what makes the clean split safe.
   const tab: TabMode = view === "making" ? "practice" : "attend";
   const [filter, setFilter] = useState<CategoryFilter>("all");
+  const [query, setQuery] = useState("");
   const [picksOnly, setPicksOnly] = useState(false);
   const [freeOnly, setFreeOnly] = useState(false);
   const [picks, setPicks] = useState<Set<string>>(() =>
@@ -258,18 +261,20 @@ function App() {
 
   const counts = useMemo(() => {
     const scoped = ALL_EVENTS.filter((e) => matchesTab(tab, e.mode))
+      .filter((e) => matchesQuery(e, query))
       .filter((e) => !picksOnly || picks.has(pickId(e)))
       .filter((e) => !freeOnly || isFree(e));
     return computeCategoryCounts(scoped);
-  }, [tab, picks, picksOnly, freeOnly]);
+  }, [tab, picks, picksOnly, freeOnly, query]);
 
   const pickCount = picks.size;
   const freeCount = useMemo(
     () =>
       ALL_EVENTS.filter((e) => matchesTab(tab, e.mode))
+        .filter((e) => matchesQuery(e, query))
         .filter((e) => !picksOnly || picks.has(pickId(e)))
         .filter(isFree).length,
-    [tab, picks, picksOnly],
+    [tab, picks, picksOnly, query],
   );
 
   return (
@@ -286,6 +291,7 @@ function App() {
               </p>
             </div>
             <div className="header-actions">
+              <ThemeToggle />
               <SubscribePanel
                 open={subscribeOpen}
                 onOpenChange={setSubscribeOpen}
@@ -349,6 +355,27 @@ function App() {
       <main className="zone zone-main">
         <div className="zone-inner">
       <CuratorPicks tab={tab} />
+      <div className="search-box">
+        <span className="search-icon" aria-hidden="true">⌕</span>
+        <input
+          type="search"
+          className="search-input"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search events, venues, neighborhoods…"
+          aria-label="Search events"
+        />
+        {query ? (
+          <button
+            type="button"
+            className="search-clear"
+            onClick={() => setQuery("")}
+            aria-label="Clear search"
+          >
+            ×
+          </button>
+        ) : null}
+      </div>
       <div className="filter-row">
         <FilterBar active={filter} onChange={setFilter} counts={counts} />
         <button
@@ -405,6 +432,7 @@ function App() {
         picksOnly={picksOnly}
         freeOnly={freeOnly}
         weekendOnly={weekendOnly}
+        query={query}
         onTogglePick={togglePick}
         isCurator={isCurator}
         notes={notes}

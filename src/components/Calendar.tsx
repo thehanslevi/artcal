@@ -14,6 +14,7 @@ import {
 import { isFree } from "../lib/cost";
 import { pickId } from "../lib/picks";
 import { matchesTab } from "../lib/tab";
+import { matchesQuery } from "../lib/search";
 import { EventRow } from "./EventRow";
 import { WeekSummary } from "./WeekSummary";
 
@@ -32,6 +33,7 @@ interface Props {
   picksOnly: boolean;
   freeOnly: boolean;
   weekendOnly: boolean;
+  query: string;
   onTogglePick: (id: string) => void;
   isCurator?: boolean;
   notes?: Record<string, string>;
@@ -54,6 +56,7 @@ export function Calendar({
   picksOnly,
   freeOnly,
   weekendOnly,
+  query,
   onTogglePick,
   isCurator = false,
   notes = {},
@@ -67,7 +70,7 @@ export function Calendar({
   // Reset user selection when filters change
   useEffect(() => {
     setUserWeekIndex(null);
-  }, [filter, tab, picksOnly, freeOnly, weekendOnly]);
+  }, [filter, tab, picksOnly, freeOnly, weekendOnly, query]);
 
   // Apply all active filters to a week's events under a given tab. Kept as a
   // function so the focused week can be re-filtered with a widened tab when a
@@ -76,6 +79,7 @@ export function Calendar({
     events
       .filter((e) => filter === "all" || e.category === filter)
       .filter((e) => matchesTab(effTab, e.mode))
+      .filter((e) => matchesQuery(e, query))
       .filter((e) => !picksOnly || picks.has(pickId(e)))
       .filter((e) => !freeOnly || isFree(e))
       .filter((e) => {
